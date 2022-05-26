@@ -1,0 +1,169 @@
+
+≠ee.hitsa.ois.service.PracticeEnterpriseService#enterpriseContacts(Lee/hitsa/ois/service/security/HoisUserDetails;Lee/hitsa/ois/domain/enterprise/Enterprise;)Ljava/util/List;°
+îD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/PracticeEnterpriseService.java„
+ „
+(."1*¨1
+1°
+îD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/PracticeEnterpriseService.java‰
+= ‰
+(Qú
+ô
+°
+îD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/PracticeEnterpriseService.java‰
+= Â
+(I
+%0java.lang.String"__concat*
+from enterprise e *97
+5join enterprise_school es on es.enterprise_id = e.id ¥
+±
+°
+îD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/PracticeEnterpriseService.java‰
+= Ê
+(_
+%1java.lang.String"__concat*
+
+%0java.lang.String*OM
+Kleft join enterprise_school_person esp on esp.enterprise_school_id = es.id ˇ¸
+°
+îD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/PracticeEnterpriseService.java‰
+' ‰
+(<-
+%2'ee.hitsa.ois.util.JpaNativeQueryBuilder"'ee.hitsa.ois.util.JpaNativeQueryBuilderΩ
+∫
+°
+îD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/PracticeEnterpriseService.java‰
+# Ê
+(`
+%3"Cee.hitsa.ois.util.JpaNativeQueryBuilder#<init>(Ljava/lang/String;)V*/
+-
+%2'ee.hitsa.ois.util.JpaNativeQueryBuilder*
+
+%1java.lang.String∞≠
+¢
+îD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/PracticeEnterpriseService.java‰
+# Ê
+(Ñ-
+%4'ee.hitsa.ois.util.JpaNativeQueryBuilder"jee.hitsa.ois.util.JpaNativeQueryBuilder#sort([Ljava/lang/String;)Lee/hitsa/ois/util/JpaNativeQueryBuilder;*/
+-
+%2'ee.hitsa.ois.util.JpaNativeQueryBuilder*
+esp.firstname, esp.lastname2sort([Ljava/lang/String;)é
+ã
+¢
+îD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/PracticeEnterpriseService.java‰
+ Ê
+(Ö-
+qb'ee.hitsa.ois.util.JpaNativeQueryBuilder"__id*/
+-
+%4'ee.hitsa.ois.util.JpaNativeQueryBuilderˆ
+Û
+°
+îD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/PracticeEnterpriseService.javaÁ
+4 Á
+(P
+%5java.lang.Long"Zee.hitsa.ois.util.EntityUtil#getId(Lee/hitsa/ois/domain/BaseEntityWithId;)Ljava/lang/Long;* "
+ee.hitsa.ois.util.EntityUtil*9
+7
+
+enterprise)ee.hitsa.ois.domain.enterprise.Enterprise—Œ
+°
+îD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/PracticeEnterpriseService.javaÁ
+ Á
+(Q
+
+%6void"oee.hitsa.ois.util.JpaNativeQueryBuilder#requiredCriteria(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Long;)V*/
+-
+qb'ee.hitsa.ois.util.JpaNativeQueryBuilder*
+e.id = :esId*
+esId*
+
+%5java.lang.Long2FrequiredCriteria(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Long;)“œ
+°
+îD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/PracticeEnterpriseService.javaË
+D Ë
+(V
+%7java.lang.Long"Kee.hitsa.ois.service.security.HoisUserDetails#getSchoolId()Ljava/lang/Long;*7
+5
+user-ee.hitsa.ois.service.security.HoisUserDetails2getSchoolId()·ﬁ
+°
+îD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/PracticeEnterpriseService.javaË
+ Ë
+(W
+
+%8void"oee.hitsa.ois.util.JpaNativeQueryBuilder#requiredCriteria(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Long;)V*/
+-
+qb'ee.hitsa.ois.util.JpaNativeQueryBuilder*
+es.school_id = :schoolId*
+
+schoolId*
+
+%7java.lang.Long2FrequiredCriteria(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Long;)‡›
+°
+îD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/PracticeEnterpriseService.javaÈ
+ È
+(*
+
+%9void"Cee.hitsa.ois.util.JpaNativeQueryBuilder#filter(Ljava/lang/String;)V*/
+-
+qb'ee.hitsa.ois.util.JpaNativeQueryBuilder*
+esp.is_contact = true2filter(Ljava/lang/String;)ë
+é
+°
+îD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/PracticeEnterpriseService.javaÍ
+c Í
+(e&
+%10javax.persistence.EntityManager"__id*:*80
+.ee.hitsa.ois.service.PracticeEnterpriseService"
+em°û
+°
+îD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/PracticeEnterpriseService.javaÍ
+ Í
+(f
+%11javax.persistence.Query"|ee.hitsa.ois.util.JpaNativeQueryBuilder#select(Ljava/lang/String;Ljavax/persistence/EntityManager;)Ljavax/persistence/Query;*/
+-
+qb'ee.hitsa.ois.util.JpaNativeQueryBuilder*B@
+>concat(esp.firstname, ' ', esp.lastname), esp.email, esp.phone*(
+&
+%10javax.persistence.EntityManager2;select(Ljava/lang/String;Ljavax/persistence/EntityManager;)™ß
+°
+îD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/PracticeEnterpriseService.javaÍ
+ Í
+(v
+%12java.util.List"7javax.persistence.Query#getResultList()Ljava/util/List;* 
+
+%11javax.persistence.Query2getResultList()ﬁ
+€
+°
+îD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/PracticeEnterpriseService.javaÍ
+ Í
+(w
+datajava.util.List"__id*
+
+%12java.util.List§
+°
+°
+îD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/PracticeEnterpriseService.javaÎ
+' Ò
+(	"
+%13java.util.function.Function"__declareFunction*DB
+@__sonar_lambda_40$ee.hitsa.ois.service.PracticeEnterpriseServiceê
+ç
+°
+îD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/PracticeEnterpriseService.javaÎ
+ Ò
+(
+%22java.util.List"nee.hitsa.ois.util.StreamUtil#toMappedList(Ljava/util/function/Function;Ljava/util/Collection;)Ljava/util/List;* "
+ee.hitsa.ois.util.StreamUtil*$
+"
+%13java.util.function.Function*
+
+datajava.util.List"Ω
+°
+îD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/PracticeEnterpriseService.javaÎ
+ Ò
+(
+
+%22java.util.List:5
+user-ee.hitsa.ois.service.security.HoisUserDetails:7
+
+enterprise)ee.hitsa.ois.domain.enterprise.EnterpriseB20
+.ee.hitsa.ois.service.PracticeEnterpriseService

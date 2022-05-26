@@ -1,0 +1,344 @@
+
+áee.hitsa.ois.service.AutocompleteService#stipendAvailableStudents(Lee/hitsa/ois/service/security/HoisUserDetails;Lee/hitsa/ois/domain/scholarship/ScholarshipTerm;Lee/hitsa/ois/web/commandobject/SearchCommand;)Ljava/util/List;›
+ŽD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/AutocompleteService.javaÙ$ Ù(<"6*Ÿ
+2›
+ŽD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/AutocompleteService.javaõ õ(ÏÌ
+›
+ŽD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/AutocompleteService.javaö! ö(4
+%33java.lang.Long"Lee.hitsa.ois.service.security.HoisUserDetails#getTeacherId()Ljava/lang/Long;*7
+5
+user-ee.hitsa.ois.service.security.HoisUserDetails2getTeacherId()¤¡
+›
+ŽD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/AutocompleteService.javaõ ö(5
+%34void"oee.hitsa.ois.util.JpaNativeQueryBuilder#requiredCriteria(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Long;)V*/
+-
+qb'ee.hitsa.ois.util.JpaNativeQueryBuilder*b`
+^s.student_group_id in (select sg2.id from student_group sg2 where sg2.teacher_id = :teacherId)*
+	teacherId*
+
+%33java.lang.Long2FrequiredCriteria(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Long;)*
+1*ß
+3›
+ŽD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/AutocompleteService.javaô ô(³°
+›
+ŽD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/AutocompleteService.javaô ô(
+%32boolean":ee.hitsa.ois.service.security.HoisUserDetails#isTeacher()Z*7
+5
+user-ee.hitsa.ois.service.security.HoisUserDetails2isTeacher()*
+2
+1*À
+
+4›
+ŽD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/AutocompleteService.javaï ï(¬
+©
+›
+ŽD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/AutocompleteService.javaï ð(N
+%28java.lang.String"__concat**(
+&exists (select c.id from curriculum c *:8
+6join curriculum_version cv on cv.curriculum_id = c.id ‹
+ˆ
+›
+ŽD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/AutocompleteService.javaï ñ(>
+%29java.lang.String"__concat*
+
+%28java.lang.String**(
+&where cv.id = s.curriculum_version_id ü
+ù
+›
+ŽD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/AutocompleteService.javaï ò(/
+%30java.lang.String"__concat*
+
+%29java.lang.String*
+and c.is_higher = true)ÛØ
+›
+ŽD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/AutocompleteService.javaï ò(0
+%31void"Cee.hitsa.ois.util.JpaNativeQueryBuilder#filter(Ljava/lang/String;)V*/
+-
+qb'ee.hitsa.ois.util.JpaNativeQueryBuilder*
+
+%30java.lang.String2filter(Ljava/lang/String;)*
+3*Á
+
+5›
+ŽD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/AutocompleteService.javaê ê(¬
+©
+›
+ŽD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/AutocompleteService.javaê ë(N
+%24java.lang.String"__concat**(
+&exists (select c.id from curriculum c *:8
+6join curriculum_version cv on cv.curriculum_id = c.id ‹
+ˆ
+›
+ŽD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/AutocompleteService.javaê ì(>
+%25java.lang.String"__concat*
+
+%24java.lang.String**(
+&where cv.id = s.curriculum_version_id ý
+ú
+›
+ŽD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/AutocompleteService.javaê í(0
+%26java.lang.String"__concat*
+
+%25java.lang.String*
+and c.is_higher = false)ÛØ
+›
+ŽD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/AutocompleteService.javaê í(1
+%27void"Cee.hitsa.ois.util.JpaNativeQueryBuilder#filter(Ljava/lang/String;)V*/
+-
+qb'ee.hitsa.ois.util.JpaNativeQueryBuilder*
+
+%26java.lang.String2filter(Ljava/lang/String;)*
+3*”F
+6›
+ŽD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/AutocompleteService.javaÛ= Û(N‚
+ÿ
+›
+ŽD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/AutocompleteService.javaÛ= Ü(8
+%0java.lang.String"__concat*
+from student s *(&
+$join person p on s.person_id = p.id –
+“
+›
+ŽD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/AutocompleteService.javaÛ= Ý(G
+%1java.lang.String"__concat*
+
+%0java.lang.String*75
+3join student_group sg on sg.id = s.student_group_idùö
+›
+ŽD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/AutocompleteService.javaÛ' Û(<-
+%2'ee.hitsa.ois.util.JpaNativeQueryBuilder"'ee.hitsa.ois.util.JpaNativeQueryBuilder·
+´
+›
+ŽD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/AutocompleteService.javaÛ# Ý(H
+%3"Cee.hitsa.ois.util.JpaNativeQueryBuilder#<init>(Ljava/lang/String;)V*/
+-
+%2'ee.hitsa.ois.util.JpaNativeQueryBuilder*
+
+%1java.lang.String©¦
+›
+ŽD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/AutocompleteService.javaÛ# Þ(2-
+%4'ee.hitsa.ois.util.JpaNativeQueryBuilder"jee.hitsa.ois.util.JpaNativeQueryBuilder#sort([Ljava/lang/String;)Lee/hitsa/ois/util/JpaNativeQueryBuilder;*/
+-
+%2'ee.hitsa.ois.util.JpaNativeQueryBuilder*
+
+p.lastname*
+p.firstname2sort([Ljava/lang/String;)‡
+„
+›
+ŽD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/AutocompleteService.javaÛ Þ(3-
+qb'ee.hitsa.ois.util.JpaNativeQueryBuilder"__id*/
+-
+%4'ee.hitsa.ois.util.JpaNativeQueryBuilderòï
+›
+ŽD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/AutocompleteService.javaàT à(d'
+%5!ee.hitsa.ois.domain.school.School"^ee.hitsa.ois.domain.scholarship.ScholarshipTerm#getSchool()Lee/hitsa/ois/domain/school/School;*9
+7
+term/ee.hitsa.ois.domain.scholarship.ScholarshipTerm2getSchool()à
+Ý
+›
+ŽD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/AutocompleteService.javaàC à(e
+%6java.lang.Long"Zee.hitsa.ois.util.EntityUtil#getId(Lee/hitsa/ois/domain/BaseEntityWithId;)Ljava/lang/Long;* "
+ee.hitsa.ois.util.EntityUtil*)
+'
+%5!ee.hitsa.ois.domain.school.SchoolÚ×
+›
+ŽD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/AutocompleteService.javaà à(f
+
+%7void"oee.hitsa.ois.util.JpaNativeQueryBuilder#requiredCriteria(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Long;)V*/
+-
+qb'ee.hitsa.ois.util.JpaNativeQueryBuilder*
+s.school_id = :schoolId*
+
+schoolId*
+
+%6java.lang.Long2FrequiredCriteria(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Long;)‘
+Ž
+›
+ŽD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/AutocompleteService.javaá â(L
+%8java.util.List"<java.util.Arrays#asList([Ljava/lang/Object;)Ljava/util/List;*"
+java.util.Arrays*
+p.firstname*
+
+p.lastname*$"
+ p.firstname || ' ' || p.lastname*=;
+9concat(p.firstname, ' ', p.lastname, ' (', p.idcode, ')')ÈÅ
+›
+ŽD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/AutocompleteService.javaâV â(f
+%9java.lang.String"Hee.hitsa.ois.web.commandobject.SearchCommand#getName()Ljava/lang/String;*8
+6
+lookup,ee.hitsa.ois.web.commandobject.SearchCommand2	getName()ÔÑ
+›
+ŽD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/AutocompleteService.javaá â(g
+%10void"oee.hitsa.ois.util.JpaNativeQueryBuilder#optionalContains(Ljava/util/List;Ljava/lang/String;Ljava/lang/String;)V*/
+-
+qb'ee.hitsa.ois.util.JpaNativeQueryBuilder*
+
+%8java.util.List*
+name*
+
+%9java.lang.String2FoptionalContains(Ljava/util/List;Ljava/lang/String;Ljava/lang/String;)Æ
+Ã
+›
+ŽD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/AutocompleteService.javaãL ã(o
+%11java.util.List"__id*
+""ñî
+›
+ŽD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/AutocompleteService.javaã ã(p
+%12void"uee.hitsa.ois.util.JpaNativeQueryBuilder#requiredCriteria(Ljava/lang/String;Ljava/lang/String;Ljava/util/Collection;)V*/
+-
+qb'ee.hitsa.ois.util.JpaNativeQueryBuilder*!
+s.status_code in :statusCodes*
+statusCodes*
+
+%11java.util.List2LrequiredCriteria(Ljava/lang/String;Ljava/lang/String;Ljava/util/Collection;)Ö
+Ó
+›
+ŽD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/AutocompleteService.javaäf ä(y%
+%13ee.hitsa.ois.enums.StudentType"__id*
+""×
+Ô
+œ
+ŽD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/AutocompleteService.javaä{ ä(Ž%
+%14ee.hitsa.ois.enums.StudentType"__id*
+""õ
+ò
+œ
+ŽD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/AutocompleteService.javaäR ä(
+%15java.util.List"Hee.hitsa.ois.util.EnumUtil#toNameList([Ljava/lang/Enum;)Ljava/util/List;*"
+ee.hitsa.ois.util.EnumUtil*'
+%
+%13ee.hitsa.ois.enums.StudentType*'
+%
+%14ee.hitsa.ois.enums.StudentTypeøõ
+œ
+ŽD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/AutocompleteService.javaä ä(
+%16void"uee.hitsa.ois.util.JpaNativeQueryBuilder#requiredCriteria(Ljava/lang/String;Ljava/lang/String;Ljava/util/Collection;)V*/
+-
+qb'ee.hitsa.ois.util.JpaNativeQueryBuilder*&$
+"s.type_code not in (:studentTypes)*
+studentTypes*
+
+%15java.util.List2LrequiredCriteria(Ljava/lang/String;Ljava/lang/String;Ljava/util/Collection;)Å
+Â
+›
+ŽD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/AutocompleteService.javaå æ(A
+%17java.lang.String"__concat*TR
+Pnot exists (select 1 from scholarship_application sa where sa.student_id = s.id *)'
+%and sa.scholarship_term_id = :termId)º·
+›
+ŽD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/AutocompleteService.javaæM æ(Y
+%18java.lang.Long"<ee.hitsa.ois.domain.BaseEntityWithId#getId()Ljava/lang/Long;*9
+7
+term/ee.hitsa.ois.domain.scholarship.ScholarshipTerm2getId()ØÕ
+›
+ŽD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/AutocompleteService.javaå æ(Z
+%19void"oee.hitsa.ois.util.JpaNativeQueryBuilder#requiredCriteria(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Long;)V*/
+-
+qb'ee.hitsa.ois.util.JpaNativeQueryBuilder*
+
+%17java.lang.String*
+
+termId*
+
+%18java.lang.Long2FrequiredCriteria(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Long;)éæ
+›
+ŽD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/AutocompleteService.javaè- è(;%
+%20ee.hitsa.ois.domain.Classifier"Yee.hitsa.ois.domain.scholarship.ScholarshipTerm#getType()Lee/hitsa/ois/domain/Classifier;*9
+7
+term/ee.hitsa.ois.domain.scholarship.ScholarshipTerm2	getType()ß
+Ü
+›
+ŽD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/AutocompleteService.javaè è(<
+%21java.lang.String"Xee.hitsa.ois.util.EntityUtil#getCode(Lee/hitsa/ois/domain/Classifier;)Ljava/lang/String;* "
+ee.hitsa.ois.util.EntityUtil*'
+%
+%20ee.hitsa.ois.domain.Classifierà
+Ý
+›
+ŽD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/AutocompleteService.javaè è(=
+termTypejava.lang.String"__id*
+
+%21java.lang.StringÆ
+Ã
+›
+ŽD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/AutocompleteService.javaé é("
+%22java.util.List"__id*
+""¶³
+›
+ŽD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/AutocompleteService.javaé é(5
+%23boolean",java.util.List#contains(Ljava/lang/Object;)Z*
+
+%22java.util.List*
+
+termTypejava.lang.String2contains(Ljava/lang/Object;)*
+4
+5*ÿ
+1›
+ŽD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/AutocompleteService.javaù ù(@ï
+ì
+›
+ŽD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/AutocompleteService.javaù ù(A
+selectjava.lang.String"__id**(
+&s.id, p.firstname, p.lastname, sg.code…
+‚
+›
+ŽD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/AutocompleteService.javaú) ú(+&
+%35javax.persistence.EntityManager"__id*4*2*
+(ee.hitsa.ois.service.AutocompleteService"
+emõò
+›
+ŽD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/AutocompleteService.javaú ú(,
+%36javax.persistence.Query"|ee.hitsa.ois.util.JpaNativeQueryBuilder#select(Ljava/lang/String;Ljavax/persistence/EntityManager;)Ljavax/persistence/Query;*/
+-
+qb'ee.hitsa.ois.util.JpaNativeQueryBuilder*
+
+selectjava.lang.String*(
+&
+%35javax.persistence.EntityManager2;select(Ljava/lang/String;Ljavax/persistence/EntityManager;)»
+¸
+›
+ŽD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/AutocompleteService.javaú; ú(]
+
+%37int"__id*
+""ÆÃ
+›
+ŽD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/AutocompleteService.javaú ú(^
+%38javax.persistence.Query"Ajavax.persistence.Query#setMaxResults(I)Ljavax/persistence/Query;* 
+
+%36javax.persistence.Query*
+
+
+%37int2setMaxResults(I)¤¡
+›
+ŽD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/AutocompleteService.javaú ú(n
+%39java.util.List"7javax.persistence.Query#getResultList()Ljava/util/List;* 
+
+%38javax.persistence.Query2getResultList()Ø
+Õ
+›
+ŽD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/AutocompleteService.javaú ú(o
+datajava.util.List"__id*
+
+%39java.util.List™
+–
+›
+ŽD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/AutocompleteService.javaû' þ(	"
+%40java.util.function.Function"__declareFunction*?=
+;__sonar_lambda_113$ee.hitsa.ois.service.AutocompleteServiceŠ
+‡
+›
+ŽD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/AutocompleteService.javaû þ(
+%50java.util.List"nee.hitsa.ois.util.StreamUtil#toMappedList(Ljava/util/function/Function;Ljava/util/Collection;)Ljava/util/List;* "
+ee.hitsa.ois.util.StreamUtil*$
+"
+%40java.util.function.Function*
+
+datajava.util.List"·
+›
+ŽD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/AutocompleteService.javaû þ(
+
+%50java.util.List:5
+user-ee.hitsa.ois.service.security.HoisUserDetails:7
+term/ee.hitsa.ois.domain.scholarship.ScholarshipTerm:6
+lookup,ee.hitsa.ois.web.commandobject.SearchCommandB,*
+(ee.hitsa.ois.service.AutocompleteService

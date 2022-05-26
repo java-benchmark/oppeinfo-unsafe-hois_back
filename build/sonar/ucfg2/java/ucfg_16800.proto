@@ -1,0 +1,715 @@
+
+Âee.hitsa.ois.service.StudentRepresentativeService#createApplication(Lee/hitsa/ois/service/security/HoisUserDetails;Lee/hitsa/ois/web/commandobject/student/StudentRepresentativeApplicationForm;)V¤
+—D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/StudentRepresentativeService.java« «(!"17*ì
+
+13¤
+—D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/StudentRepresentativeService.javaÂ Â(­
+ª
+¤
+—D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/StudentRepresentativeService.javaÂ- Â(c#
+%33java.util.function.Predicate"__declareFunction*IG
+E__sonar_lambda_1923$ee.hitsa.ois.service.StudentRepresentativeService›
+˜
+¤
+—D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/StudentRepresentativeService.javaÂ Â(n
+%35java.util.List"qee.hitsa.ois.util.StreamUtil#toFilteredList(Ljava/util/function/Predicate;Ljava/util/Collection;)Ljava/util/List;* "
+ee.hitsa.ois.util.StreamUtil*%
+#
+%33java.util.function.Predicate*
+
+studentsjava.util.Listå
+â
+¤
+—D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/StudentRepresentativeService.javaÂ Â(n
+studentsjava.util.List"__id*
+
+%35java.util.Listþû
+¤
+—D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/StudentRepresentativeService.javaÃ Ã(
+%36boolean"java.util.List#isEmpty()Z*
+
+studentsjava.util.List2	isEmpty()*
+11
+12*»
+14¤
+—D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/StudentRepresentativeService.java¾0 ¾(^—”
+¤
+—D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/StudentRepresentativeService.java¾ ¾(/8
+%311ee.hitsa.ois.validation.ValidationFailedException"1ee.hitsa.ois.validation.ValidationFailedExceptionî
+ë
+¤
+—D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/StudentRepresentativeService.java¾ ¾(_
+%32"Mee.hitsa.ois.validation.ValidationFailedException#<init>(Ljava/lang/String;)V*:
+8
+%311ee.hitsa.ois.validation.ValidationFailedException*0.
+,student.representative.alreadyrepresentative*
+0*è(
+15¤
+—D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/StudentRepresentativeService.java· ·(—
+”
+¤
+—D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/StudentRepresentativeService.java· ·(&
+%16javax.persistence.EntityManager"__id*=*;3
+1ee.hitsa.ois.service.StudentRepresentativeService"
+emåâ
+¥
+—D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/StudentRepresentativeService.java· ·(“
+%17javax.persistence.Query"^javax.persistence.EntityManager#createNativeQuery(Ljava/lang/String;)Ljavax/persistence/Query;*(
+&
+%16javax.persistence.EntityManager*ge
+cselect sr.student_id from student_representative sr where sr.student_id in ?1 and sr.person_id = ?22%createNativeQuery(Ljava/lang/String;)ù
+ö
+¤
+—D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/StudentRepresentativeService.java¸! ¸(R
+%18java.util.List"nee.hitsa.ois.util.StreamUtil#toMappedList(Ljava/util/function/Function;Ljava/util/Collection;)Ljava/util/List;* "
+ee.hitsa.ois.util.StreamUtil*
+""*
+
+studentsjava.util.List‚ÿ
+¤
+—D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/StudentRepresentativeService.java· ¸(S
+%19javax.persistence.Query"Rjavax.persistence.Query#setParameter(ILjava/lang/Object;)Ljavax/persistence/Query;* 
+
+%17javax.persistence.Query*2*
+
+%18java.util.List2!setParameter(ILjava/lang/Object;)°­
+¤
+—D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/StudentRepresentativeService.java¹! ¹(/
+%20java.lang.Long"<ee.hitsa.ois.domain.BaseEntityWithId#getId()Ljava/lang/Long;*&
+$
+personee.hitsa.ois.domain.Person2getId()‚ÿ
+¤
+—D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/StudentRepresentativeService.java· ¹(0
+%21javax.persistence.Query"Rjavax.persistence.Query#setParameter(ILjava/lang/Object;)Ljavax/persistence/Query;* 
+
+%19javax.persistence.Query*2*
+
+%20java.lang.Long2!setParameter(ILjava/lang/Object;)­ª
+¤
+—D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/StudentRepresentativeService.java· º( 
+%22java.util.List"7javax.persistence.Query#getResultList()Ljava/util/List;* 
+
+%21javax.persistence.Query2getResultList()â
+ß
+¤
+—D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/StudentRepresentativeService.java· º(!
+reprsjava.util.List"__id*
+
+%22java.util.List¬
+©
+¤
+—D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/StudentRepresentativeService.java»9 »(P"
+%23java.util.function.Function"__declareFunction*IG
+E__sonar_lambda_1921$ee.hitsa.ois.service.StudentRepresentativeService‘
+Ž
+¤
+—D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/StudentRepresentativeService.java»" »(X
+%25java.util.Set"lee.hitsa.ois.util.StreamUtil#toMappedSet(Ljava/util/function/Function;Ljava/util/Collection;)Ljava/util/Set;* "
+ee.hitsa.ois.util.StreamUtil*$
+"
+%23java.util.function.Function*
+
+reprsjava.util.Listè
+å
+¤
+—D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/StudentRepresentativeService.java» »(Y
+existingReprsjava.util.Set"__id*
+
+%25java.util.Set­
+ª
+¤
+—D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/StudentRepresentativeService.java¼- ¼(T#
+%26java.util.function.Predicate"__declareFunction*IG
+E__sonar_lambda_1922$ee.hitsa.ois.service.StudentRepresentativeService|
+z
+
+__unknown_file (6
+#
+%26java.util.function.Predicate"
+existingReprs"__id* 
+
+existingReprsjava.util.Set›
+˜
+¤
+—D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/StudentRepresentativeService.java¼ ¼(_
+%29java.util.List"qee.hitsa.ois.util.StreamUtil#toFilteredList(Ljava/util/function/Predicate;Ljava/util/Collection;)Ljava/util/List;* "
+ee.hitsa.ois.util.StreamUtil*%
+#
+%26java.util.function.Predicate*
+
+studentsjava.util.Listå
+â
+¤
+—D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/StudentRepresentativeService.java¼ ¼(_
+studentsjava.util.List"__id*
+
+%29java.util.Listþû
+¤
+—D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/StudentRepresentativeService.java½ ½(
+%30boolean"java.util.List#isEmpty()Z*
+
+studentsjava.util.List2	isEmpty()*
+13
+14*µ
+16¤
+—D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/StudentRepresentativeService.java³0 ³(X—”
+¤
+—D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/StudentRepresentativeService.java³ ³(/8
+%141ee.hitsa.ois.validation.ValidationFailedException"1ee.hitsa.ois.validation.ValidationFailedExceptionè
+å
+¤
+—D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/StudentRepresentativeService.java³ ³(Y
+%15"Mee.hitsa.ois.validation.ValidationFailedException#<init>(Ljava/lang/String;)V*:
+8
+%141ee.hitsa.ois.validation.ValidationFailedException**(
+&student.representative.studentnotfound*
+0*¿'
+17¤
+—D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/StudentRepresentativeService.java­ ­("ÕÒ
+¤
+—D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/StudentRepresentativeService.java­. ­(@
+%0java.lang.Long"Kee.hitsa.ois.service.security.HoisUserDetails#getPersonId()Ljava/lang/Long;*7
+5
+user-ee.hitsa.ois.service.security.HoisUserDetails2getPersonId()«
+¨
+¤
+—D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/StudentRepresentativeService.java­B ­(a!
+%1java.util.function.Function"__declareFunction*IG
+E__sonar_lambda_1919$ee.hitsa.ois.service.StudentRepresentativeService¤
+¡
+
+__unknown_file (H
+!
+%1java.util.function.Function"#
+!StudentRepresentativeService.this"__id*53
+1ee.hitsa.ois.service.StudentRepresentativeService«
+¨
+¤
+—D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/StudentRepresentativeService.java­c ­(i!
+%4java.util.function.Function"__declareFunction*IG
+E__sonar_lambda_1920$ee.hitsa.ois.service.StudentRepresentativeServiceÚ
+×
+¤
+—D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/StudentRepresentativeService.java­ ­(j 
+%5ee.hitsa.ois.domain.Person"‡ee.hitsa.ois.util.EntityUtil#withEntity(Ljava/lang/Object;Ljava/util/function/Function;Ljava/util/function/Function;)Ljava/lang/Object;* "
+ee.hitsa.ois.util.EntityUtil*
+
+%0java.lang.Long*#
+!
+%1java.util.function.Function*#
+!
+%4java.util.function.Functionú
+÷
+¤
+—D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/StudentRepresentativeService.java­ ­(k$
+personee.hitsa.ois.domain.Person"__id*"
+ 
+%5ee.hitsa.ois.domain.Person–
+“
+¤
+—D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/StudentRepresentativeService.java°! °(#%
+%6javax.persistence.EntityManager"__id*=*;3
+1ee.hitsa.ois.service.StudentRepresentativeService"
+emòï
+¥
+—D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/StudentRepresentativeService.java°! °(Œ"
+%7javax.persistence.TypedQuery"njavax.persistence.EntityManager#createQuery(Ljava/lang/String;Ljava/lang/Class;)Ljavax/persistence/TypedQuery;*'
+%
+%6javax.persistence.EntityManager*NL
+Jselect s from Student s where s.person.idcode = ?1 and s.status.code in ?2*
+""20createQuery(Ljava/lang/String;Ljava/lang/Class;)Ÿœ
+¤
+—D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/StudentRepresentativeService.java±! ±(8
+%8java.lang.String"pee.hitsa.ois.web.commandobject.student.StudentRepresentativeApplicationForm#getStudentIdcode()Ljava/lang/String;*U
+S
+formKee.hitsa.ois.web.commandobject.student.StudentRepresentativeApplicationForm2getStudentIdcode()•’
+¤
+—D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/StudentRepresentativeService.java°! ±(9"
+%9javax.persistence.TypedQuery"\javax.persistence.TypedQuery#setParameter(ILjava/lang/Object;)Ljavax/persistence/TypedQuery;*$
+"
+%7javax.persistence.TypedQuery*2*
+
+%8java.lang.String2!setParameter(ILjava/lang/Object;)Ï
+Ì
+¤
+—D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/StudentRepresentativeService.java±J ±(m
+%10java.util.List"__id*
+""•’
+¤
+—D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/StudentRepresentativeService.java°! ±(n#
+%11javax.persistence.TypedQuery"\javax.persistence.TypedQuery#setParameter(ILjava/lang/Object;)Ljavax/persistence/TypedQuery;*$
+"
+%9javax.persistence.TypedQuery*2*
+
+%10java.util.List2!setParameter(ILjava/lang/Object;)·´
+¤
+—D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/StudentRepresentativeService.java°! ±(~
+%12java.util.List"<javax.persistence.TypedQuery#getResultList()Ljava/util/List;*%
+#
+%11javax.persistence.TypedQuery2getResultList()å
+â
+¤
+—D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/StudentRepresentativeService.java° ±(
+studentsjava.util.List"__id*
+
+%12java.util.Listþû
+¤
+—D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/StudentRepresentativeService.java² ²(
+%13boolean"java.util.List#isEmpty()Z*
+
+studentsjava.util.List2	isEmpty()*
+15
+16*Ä
+0 "¼
+¤
+—D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/StudentRepresentativeService.javað ð(
+implicit return*¬
+1¤
+—D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/StudentRepresentativeService.javaé é(è
+å
+¤
+—D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/StudentRepresentativeService.javaé é(.
+student#ee.hitsa.ois.domain.student.Student"__id*
+""Œ
+‰
+¤
+—D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/StudentRepresentativeService.javaé é(.
+student#ee.hitsa.ois.domain.student.Student"
+__arrayGet*
+
+studentsjava.util.List*
+""*
+3
+0*û
+2¤
+—D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/StudentRepresentativeService.javaìk ì(r­ª
+¤
+—D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/StudentRepresentativeService.javaìC ì(jC
+%86<ee.hitsa.ois.message.StudentRepresentativeApplicationCreated"<ee.hitsa.ois.message.StudentRepresentativeApplicationCreated—
+”
+¤
+—D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/StudentRepresentativeService.javaì? ì(s
+%87"kee.hitsa.ois.message.StudentRepresentativeApplicationCreated#<init>(Lee/hitsa/ois/domain/student/Student;)V*E
+C
+%86<ee.hitsa.ois.message.StudentRepresentativeApplicationCreated*0
+.
+student#ee.hitsa.ois.domain.student.Student½
+º
+¤
+—D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/StudentRepresentativeService.javaì ì(tD
+data<ee.hitsa.ois.message.StudentRepresentativeApplicationCreated"__id*E
+C
+%86<ee.hitsa.ois.message.StudentRepresentativeApplicationCreated¹
+¶
+¤
+—D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/StudentRepresentativeService.javaí í('3
+%88,ee.hitsa.ois.service.AutomaticMessageService"__id*R*P3
+1ee.hitsa.ois.service.StudentRepresentativeService"
+automaticMessageServiceß
+Ü
+¤
+—D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/StudentRepresentativeService.javaíB í(i%
+%89ee.hitsa.ois.enums.MessageType"__id*
+""¡ž
+¤
+—D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/StudentRepresentativeService.javaí í(x
+%90void"žee.hitsa.ois.service.AutomaticMessageService#sendMessageToSchoolAdmins(Lee/hitsa/ois/enums/MessageType;Lee/hitsa/ois/domain/school/School;Ljava/lang/Object;)V*5
+3
+%88,ee.hitsa.ois.service.AutomaticMessageService*'
+%
+%89ee.hitsa.ois.enums.MessageType*-
++
+school!ee.hitsa.ois.domain.school.School*F
+D
+data<ee.hitsa.ois.message.StudentRepresentativeApplicationCreated2psendMessageToSchoolAdmins(Lee/hitsa/ois/enums/MessageType;Lee/hitsa/ois/domain/school/School;Ljava/lang/Object;)*
+1*
+3¤
+—D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/StudentRepresentativeService.javaê ê(#çä
+¤
+—D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/StudentRepresentativeService.javaê ê(/(
+%83!ee.hitsa.ois.domain.school.School"Ree.hitsa.ois.domain.student.Student#getSchool()Lee/hitsa/ois/domain/school/School;*0
+.
+student#ee.hitsa.ois.domain.student.Student2getSchool()‰
+†
+¤
+—D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/StudentRepresentativeService.javaê ê(0+
+school!ee.hitsa.ois.domain.school.School"__id**
+(
+%83!ee.hitsa.ois.domain.school.Schoolî
+ë
+¤
+—D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/StudentRepresentativeService.javaë ë(5
+%84java.lang.Long"Zee.hitsa.ois.util.EntityUtil#getId(Lee/hitsa/ois/domain/BaseEntityWithId;)Ljava/lang/Long;* "
+ee.hitsa.ois.util.EntityUtil*-
++
+school!ee.hitsa.ois.domain.school.School
+þ
+¤
+—D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/StudentRepresentativeService.javaë ë(6
+%85boolean"
+__arrayAdd*
+
+	schoolIdsjava.util.Set*: *
+
+%84java.lang.Long*
+2
+1*á
+5¤
+—D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/StudentRepresentativeService.javaè è(-×Ô
+¤
+—D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/StudentRepresentativeService.javaè" è(+
+%81java.util.HashSet"java.util.HashSetê
+ç
+¤
+—D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/StudentRepresentativeService.javaè è(-
+%82"java.util.HashSet#<init>()V*
+
+%81java.util.HashSetè
+å
+¤
+—D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/StudentRepresentativeService.javaè è(.
+	schoolIdsjava.util.Set"__id*
+
+%81java.util.HashSet*
+1*¬
+6¤
+—D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/StudentRepresentativeService.javaÝ Ý(è
+å
+¤
+—D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/StudentRepresentativeService.javaÝ Ý(.
+student#ee.hitsa.ois.domain.student.Student"__id*
+""Œ
+‰
+¤
+—D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/StudentRepresentativeService.javaÝ Ý(.
+student#ee.hitsa.ois.domain.student.Student"
+__arrayGet*
+
+studentsjava.util.List*
+""*
+5
+7*Ñ
+7¤
+—D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/StudentRepresentativeService.javaÞ; Þ(a­ª
+¤
+—D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/StudentRepresentativeService.javaÞ? Þ(_C
+%73<ee.hitsa.ois.domain.student.StudentRepresentativeApplication"<ee.hitsa.ois.domain.student.StudentRepresentativeApplicationÀ
+½
+¤
+—D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/StudentRepresentativeService.javaÞ; Þ(a
+%74"Fee.hitsa.ois.domain.student.StudentRepresentativeApplication#<init>()V*E
+C
+%73<ee.hitsa.ois.domain.student.StudentRepresentativeApplicationÄ
+Á
+¤
+—D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/StudentRepresentativeService.javaÞ Þ(bK
+application<ee.hitsa.ois.domain.student.StudentRepresentativeApplication"__id*E
+C
+%73<ee.hitsa.ois.domain.student.StudentRepresentativeApplicationÜÙ
+¤
+—D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/StudentRepresentativeService.javaß ß(+
+%75void"oee.hitsa.ois.domain.student.StudentRepresentativeApplication#setStudent(Lee/hitsa/ois/domain/student/Student;)V*M
+K
+application<ee.hitsa.ois.domain.student.StudentRepresentativeApplication*0
+.
+student#ee.hitsa.ois.domain.student.Student21setStudent(Lee/hitsa/ois/domain/student/Student;)¾»
+¤
+—D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/StudentRepresentativeService.javaà à()
+%76void"eee.hitsa.ois.domain.student.StudentRepresentativeApplication#setPerson(Lee/hitsa/ois/domain/Person;)V*M
+K
+application<ee.hitsa.ois.domain.student.StudentRepresentativeApplication*&
+$
+personee.hitsa.ois.domain.Person2'setPerson(Lee/hitsa/ois/domain/Person;)ÊÇ
+¤
+—D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/StudentRepresentativeService.javaá á()
+%77void"iee.hitsa.ois.domain.student.StudentRepresentativeApplication#setStatus(Lee/hitsa/ois/domain/Classifier;)V*M
+K
+application<ee.hitsa.ois.domain.student.StudentRepresentativeApplication**
+(
+statusee.hitsa.ois.domain.Classifier2+setStatus(Lee/hitsa/ois/domain/Classifier;)ÐÍ
+¤
+—D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/StudentRepresentativeService.javaâ â(-
+%78void"kee.hitsa.ois.domain.student.StudentRepresentativeApplication#setRelation(Lee/hitsa/ois/domain/Classifier;)V*M
+K
+application<ee.hitsa.ois.domain.student.StudentRepresentativeApplication*,
+*
+relationee.hitsa.ois.domain.Classifier2-setRelation(Lee/hitsa/ois/domain/Classifier;)—
+”
+¤
+—D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/StudentRepresentativeService.javaã ã(&
+%79javax.persistence.EntityManager"__id*=*;3
+1ee.hitsa.ois.service.StudentRepresentativeService"
+em‹ˆ
+¤
+—D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/StudentRepresentativeService.javaã ã(#
+%80void"<javax.persistence.EntityManager#persist(Ljava/lang/Object;)V*(
+&
+%79javax.persistence.EntityManager*M
+K
+application<ee.hitsa.ois.domain.student.StudentRepresentativeApplication2persist(Ljava/lang/Object;)*
+6*ó+
+9¤
+—D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/StudentRepresentativeService.javaÖ Ö(
+¤
+—D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/StudentRepresentativeService.javaÖ Ö('
+%60java.lang.String"hee.hitsa.ois.web.commandobject.student.StudentRepresentativeApplicationForm#getPhone()Ljava/lang/String;*U
+S
+formKee.hitsa.ois.web.commandobject.student.StudentRepresentativeApplicationForm2
+getPhone()ÒÏ
+¤
+—D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/StudentRepresentativeService.javaÖ Ö((
+%61void"8ee.hitsa.ois.domain.Person#setPhone(Ljava/lang/String;)V*&
+$
+personee.hitsa.ois.domain.Person*
+
+%60java.lang.String2setPhone(Ljava/lang/String;)
+¤
+—D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/StudentRepresentativeService.java× ×('
+%62java.lang.String"hee.hitsa.ois.web.commandobject.student.StudentRepresentativeApplicationForm#getEmail()Ljava/lang/String;*U
+S
+formKee.hitsa.ois.web.commandobject.student.StudentRepresentativeApplicationForm2
+getEmail()ÒÏ
+¤
+—D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/StudentRepresentativeService.java× ×((
+%63void"8ee.hitsa.ois.domain.Person#setEmail(Ljava/lang/String;)V*&
+$
+personee.hitsa.ois.domain.Person*
+
+%62java.lang.String2setEmail(Ljava/lang/String;)—
+”
+¤
+—D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/StudentRepresentativeService.javaØ) Ø(+&
+%64javax.persistence.EntityManager"__id*=*;3
+1ee.hitsa.ois.service.StudentRepresentativeService"
+emÔ
+Ñ
+¤
+—D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/StudentRepresentativeService.javaØ Ø(,!
+%65ee.hitsa.ois.domain.Person"ee.hitsa.ois.util.EntityUtil#save(Lee/hitsa/ois/domain/BaseEntityWithId;Ljavax/persistence/EntityManager;)Lee/hitsa/ois/domain/BaseEntityWithId;* "
+ee.hitsa.ois.util.EntityUtil*&
+$
+personee.hitsa.ois.domain.Person*(
+&
+%64javax.persistence.EntityManagerû
+ø
+¤
+—D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/StudentRepresentativeService.javaØ Ø(,$
+personee.hitsa.ois.domain.Person"__id*#
+!
+%65ee.hitsa.ois.domain.Person—
+”
+¤
+—D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/StudentRepresentativeService.javaÛ Û(&
+%66javax.persistence.EntityManager"__id*=*;3
+1ee.hitsa.ois.service.StudentRepresentativeService"
+emú
+÷
+¤
+—D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/StudentRepresentativeService.javaÛ> Û(X@
+%679ee.hitsa.ois.enums.StudentRepresentativeApplicationStatus"__id*
+""¸µ
+¤
+—D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/StudentRepresentativeService.javaÛ> Û(_
+%68java.lang.String"'java.lang.Enum#name()Ljava/lang/String;*B
+@
+%679ee.hitsa.ois.enums.StudentRepresentativeApplicationStatus2name()¶³
+¤
+—D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/StudentRepresentativeService.javaÛ Û(`%
+%69ee.hitsa.ois.domain.Classifier"cjavax.persistence.EntityManager#getReference(Ljava/lang/Class;Ljava/lang/Object;)Ljava/lang/Object;*(
+&
+%66javax.persistence.EntityManager*
+""*
+
+%68java.lang.String21getReference(Ljava/lang/Class;Ljava/lang/Object;)ƒ
+€
+¤
+—D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/StudentRepresentativeService.javaÛ Û(a(
+statusee.hitsa.ois.domain.Classifier"__id*'
+%
+%69ee.hitsa.ois.domain.Classifier—
+”
+¤
+—D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/StudentRepresentativeService.javaÜ Ü( &
+%70javax.persistence.EntityManager"__id*=*;3
+1ee.hitsa.ois.service.StudentRepresentativeService"
+em–“
+¤
+—D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/StudentRepresentativeService.javaÜ@ Ü(R
+%71java.lang.String"kee.hitsa.ois.web.commandobject.student.StudentRepresentativeApplicationForm#getRelation()Ljava/lang/String;*U
+S
+formKee.hitsa.ois.web.commandobject.student.StudentRepresentativeApplicationForm2getRelation()¶³
+¤
+—D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/StudentRepresentativeService.javaÜ Ü(S%
+%72ee.hitsa.ois.domain.Classifier"cjavax.persistence.EntityManager#getReference(Ljava/lang/Class;Ljava/lang/Object;)Ljava/lang/Object;*(
+&
+%70javax.persistence.EntityManager*
+""*
+
+%71java.lang.String21getReference(Ljava/lang/Class;Ljava/lang/Object;)…
+‚
+¤
+—D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/StudentRepresentativeService.javaÜ Ü(T*
+relationee.hitsa.ois.domain.Classifier"__id*'
+%
+%72ee.hitsa.ois.domain.Classifier*
+6*¸
+10¤
+—D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/StudentRepresentativeService.javaÒ0 Ò([—”
+¤
+—D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/StudentRepresentativeService.javaÒ Ò(/8
+%581ee.hitsa.ois.validation.ValidationFailedException"1ee.hitsa.ois.validation.ValidationFailedExceptionë
+è
+¤
+—D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/StudentRepresentativeService.javaÒ Ò(\
+%59"Mee.hitsa.ois.validation.ValidationFailedException#<init>(Ljava/lang/String;)V*:
+8
+%581ee.hitsa.ois.validation.ValidationFailedException*-+
+)student.representative.alreadyapplication*
+0*º2
+11¤
+—D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/StudentRepresentativeService.javaÈ È(—
+”
+¤
+—D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/StudentRepresentativeService.javaÈ È(&
+%39javax.persistence.EntityManager"__id*=*;3
+1ee.hitsa.ois.service.StudentRepresentativeService"
+emå
+â
+¤
+—D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/StudentRepresentativeService.javaÈ, É(_
+%40java.lang.String"__concat*EC
+Aselect sra.student_id from student_representative_application sra*OM
+K where sra.student_id in ?1 and sra.person_id = ?2 and sra.status_code = ?3–“
+¤
+—D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/StudentRepresentativeService.javaÈ É(`
+%41javax.persistence.Query"^javax.persistence.EntityManager#createNativeQuery(Ljava/lang/String;)Ljavax/persistence/Query;*(
+&
+%39javax.persistence.EntityManager*
+
+%40java.lang.String2%createNativeQuery(Ljava/lang/String;)ù
+ö
+¤
+—D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/StudentRepresentativeService.javaÊ! Ê(R
+%42java.util.List"nee.hitsa.ois.util.StreamUtil#toMappedList(Ljava/util/function/Function;Ljava/util/Collection;)Ljava/util/List;* "
+ee.hitsa.ois.util.StreamUtil*
+""*
+
+studentsjava.util.List‚ÿ
+¤
+—D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/StudentRepresentativeService.javaÈ Ê(S
+%43javax.persistence.Query"Rjavax.persistence.Query#setParameter(ILjava/lang/Object;)Ljavax/persistence/Query;* 
+
+%41javax.persistence.Query*2*
+
+%42java.util.List2!setParameter(ILjava/lang/Object;)°­
+¤
+—D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/StudentRepresentativeService.javaË! Ë(/
+%44java.lang.Long"<ee.hitsa.ois.domain.BaseEntityWithId#getId()Ljava/lang/Long;*&
+$
+personee.hitsa.ois.domain.Person2getId()‚ÿ
+¤
+—D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/StudentRepresentativeService.javaÈ Ë(0
+%45javax.persistence.Query"Rjavax.persistence.Query#setParameter(ILjava/lang/Object;)Ljavax/persistence/Query;* 
+
+%43javax.persistence.Query*2*
+
+%44java.lang.Long2!setParameter(ILjava/lang/Object;)ú
+÷
+¤
+—D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/StudentRepresentativeService.javaÌ! Ì(b@
+%469ee.hitsa.ois.enums.StudentRepresentativeApplicationStatus"__id*
+""¸µ
+¤
+—D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/StudentRepresentativeService.javaÌ! Ì(i
+%47java.lang.String"'java.lang.Enum#name()Ljava/lang/String;*B
+@
+%469ee.hitsa.ois.enums.StudentRepresentativeApplicationStatus2name()„
+¤
+—D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/StudentRepresentativeService.javaÈ Ì(j
+%48javax.persistence.Query"Rjavax.persistence.Query#setParameter(ILjava/lang/Object;)Ljavax/persistence/Query;* 
+
+%45javax.persistence.Query*2*
+
+%47java.lang.String2!setParameter(ILjava/lang/Object;)­ª
+¤
+—D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/StudentRepresentativeService.javaÈ Í( 
+%49java.util.List"7javax.persistence.Query#getResultList()Ljava/util/List;* 
+
+%48javax.persistence.Query2getResultList()á
+Þ
+¤
+—D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/StudentRepresentativeService.javaÈ Í(!
+appsjava.util.List"__id*
+
+%49java.util.List¬
+©
+¤
+—D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/StudentRepresentativeService.javaÏ8 Ï(O"
+%50java.util.function.Function"__declareFunction*IG
+E__sonar_lambda_1924$ee.hitsa.ois.service.StudentRepresentativeService
+
+¤
+—D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/StudentRepresentativeService.javaÏ! Ï(V
+%52java.util.Set"lee.hitsa.ois.util.StreamUtil#toMappedSet(Ljava/util/function/Function;Ljava/util/Collection;)Ljava/util/Set;* "
+ee.hitsa.ois.util.StreamUtil*$
+"
+%50java.util.function.Function*
+
+appsjava.util.Listç
+ä
+¤
+—D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/StudentRepresentativeService.javaÏ Ï(W
+existingAppsjava.util.Set"__id*
+
+%52java.util.Set­
+ª
+¤
+—D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/StudentRepresentativeService.javaÐ- Ð(S#
+%53java.util.function.Predicate"__declareFunction*IG
+E__sonar_lambda_1925$ee.hitsa.ois.service.StudentRepresentativeServicez
+x
+
+__unknown_file (5
+#
+%53java.util.function.Predicate"
+existingApps"__id*
+
+existingAppsjava.util.Set›
+˜
+¤
+—D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/StudentRepresentativeService.javaÐ Ð(^
+%56java.util.List"qee.hitsa.ois.util.StreamUtil#toFilteredList(Ljava/util/function/Predicate;Ljava/util/Collection;)Ljava/util/List;* "
+ee.hitsa.ois.util.StreamUtil*%
+#
+%53java.util.function.Predicate*
+
+studentsjava.util.Listå
+â
+¤
+—D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/StudentRepresentativeService.javaÐ Ð(^
+studentsjava.util.List"__id*
+
+%56java.util.Listþû
+¤
+—D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/StudentRepresentativeService.javaÑ Ñ(
+%57boolean"java.util.List#isEmpty()Z*
+
+studentsjava.util.List2	isEmpty()*
+9
+10*·
+12¤
+—D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/StudentRepresentativeService.javaÄ0 Ä(Z—”
+¤
+—D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/StudentRepresentativeService.javaÄ Ä(/8
+%371ee.hitsa.ois.validation.ValidationFailedException"1ee.hitsa.ois.validation.ValidationFailedExceptionê
+ç
+¤
+—D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/StudentRepresentativeService.javaÄ Ä([
+%38"Mee.hitsa.ois.validation.ValidationFailedException#<init>(Ljava/lang/String;)V*:
+8
+%371ee.hitsa.ois.validation.ValidationFailedException*,*
+(student.representative.application.adult*
+0:5
+user-ee.hitsa.ois.service.security.HoisUserDetails:S
+formKee.hitsa.ois.web.commandobject.student.StudentRepresentativeApplicationFormB53
+1ee.hitsa.ois.service.StudentRepresentativeService

@@ -1,0 +1,124 @@
+
+¼ee.hitsa.ois.service.PracticeEnterpriseService#sameCountryAndCode(Lee/hitsa/ois/web/dto/enterprise/EnterpriseRegCodeCheckDto;)Lee/hitsa/ois/web/dto/enterprise/EnterpriseRegCodeResponseDto;¡
+”D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/PracticeEnterpriseService.java¡( ¡(:"3*ì
+2¡
+”D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/PracticeEnterpriseService.java© ©(ÅÂ
+¡
+”D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/PracticeEnterpriseService.java© ©(c
+%12void"[ee.hitsa.ois.web.dto.enterprise.EnterpriseRegCodeResponseDto#setStatus(Ljava/lang/String;)V*T
+R
+enterpriseResponse<ee.hitsa.ois.web.dto.enterprise.EnterpriseRegCodeResponseDto*=;
+9Sama registrikoodi ja riigiga ettevÃƒÂµte on juba olemas.2setStatus(Ljava/lang/String;)"ú
+¡
+”D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/PracticeEnterpriseService.javaª ª(&T
+R
+enterpriseResponse<ee.hitsa.ois.web.dto.enterprise.EnterpriseRegCodeResponseDto*Ì+
+3¡
+”D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/PracticeEnterpriseService.java¢O ¢(dÿü
+¡
+”D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/PracticeEnterpriseService.java¢9 ¢(N-
+%0'ee.hitsa.ois.util.JpaNativeQueryBuilder"'ee.hitsa.ois.util.JpaNativeQueryBuilder¼
+¹
+¡
+”D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/PracticeEnterpriseService.java¢5 ¢(e
+%1"Cee.hitsa.ois.util.JpaNativeQueryBuilder#<init>(Ljava/lang/String;)V*/
+-
+%0'ee.hitsa.ois.util.JpaNativeQueryBuilder*
+from enterprise en Ÿ
+œ
+¡
+”D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/PracticeEnterpriseService.java¢ ¢(f?
+enterpriseCountQuery'ee.hitsa.ois.util.JpaNativeQueryBuilder"__id*/
+-
+%0'ee.hitsa.ois.util.JpaNativeQueryBuilderöó
+¡
+”D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/PracticeEnterpriseService.java£T £(o
+%2java.lang.String"Xee.hitsa.ois.web.dto.enterprise.EnterpriseRegCodeCheckDto#getRegCode()Ljava/lang/String;*M
+K
+enterpriseForm9ee.hitsa.ois.web.dto.enterprise.EnterpriseRegCodeCheckDto2getRegCode()öó
+¡
+”D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/PracticeEnterpriseService.java£ £(p
+
+%3void"qee.hitsa.ois.util.JpaNativeQueryBuilder#requiredCriteria(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V*A
+?
+enterpriseCountQuery'ee.hitsa.ois.util.JpaNativeQueryBuilder*
+en.reg_code = :regCode*	
+regCode*
+
+%2java.lang.String2HrequiredCriteria(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)öó
+¡
+”D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/PracticeEnterpriseService.java¤` ¤({
+%4java.lang.String"Xee.hitsa.ois.web.dto.enterprise.EnterpriseRegCodeCheckDto#getCountry()Ljava/lang/String;*M
+K
+enterpriseForm9ee.hitsa.ois.web.dto.enterprise.EnterpriseRegCodeCheckDto2getCountry()‚ÿ
+¡
+”D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/PracticeEnterpriseService.java¤ ¤(|
+
+%5void"qee.hitsa.ois.util.JpaNativeQueryBuilder#requiredCriteria(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V*A
+?
+enterpriseCountQuery'ee.hitsa.ois.util.JpaNativeQueryBuilder*" 
+en.country_code = :countryCode*
+countryCode*
+
+%4java.lang.String2HrequiredCriteria(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ù
+Ö
+¡
+”D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/PracticeEnterpriseService.java¥ ¥(%
+selectCountjava.lang.String"__id*	
+en.id
+
+¡
+”D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/PracticeEnterpriseService.java¦G ¦(I%
+%6javax.persistence.EntityManager"__id*:*80
+.ee.hitsa.ois.service.PracticeEnterpriseService"
+em
+¡
+”D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/PracticeEnterpriseService.java¦ ¦(J
+%7javax.persistence.Query"|ee.hitsa.ois.util.JpaNativeQueryBuilder#select(Ljava/lang/String;Ljavax/persistence/EntityManager;)Ljavax/persistence/Query;*A
+?
+enterpriseCountQuery'ee.hitsa.ois.util.JpaNativeQueryBuilder*!
+
+selectCountjava.lang.String*'
+%
+%6javax.persistence.EntityManager2;select(Ljava/lang/String;Ljavax/persistence/EntityManager;)¨¥
+¡
+”D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/PracticeEnterpriseService.java¦ ¦(Z
+%8java.util.List"7javax.persistence.Query#getResultList()Ljava/util/List;*
+
+%7javax.persistence.Query2getResultList()ä
+á
+¡
+”D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/PracticeEnterpriseService.java¦ ¦([
+enterprisesjava.util.List"__id*
+
+%8java.util.List©¦
+¡
+”D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/PracticeEnterpriseService.java§> §(ZB
+%9<ee.hitsa.ois.web.dto.enterprise.EnterpriseRegCodeResponseDto"<ee.hitsa.ois.web.dto.enterprise.EnterpriseRegCodeResponseDto¼
+¹
+¡
+”D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/PracticeEnterpriseService.java§: §(\
+%10"Fee.hitsa.ois.web.dto.enterprise.EnterpriseRegCodeResponseDto#<init>()V*D
+B
+%9<ee.hitsa.ois.web.dto.enterprise.EnterpriseRegCodeResponseDtoÇ
+Ä
+¡
+”D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/PracticeEnterpriseService.java§ §(]R
+enterpriseResponse<ee.hitsa.ois.web.dto.enterprise.EnterpriseRegCodeResponseDto"__id*D
+B
+%9<ee.hitsa.ois.web.dto.enterprise.EnterpriseRegCodeResponseDtoþû
+¡
+”D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/PracticeEnterpriseService.java¨ ¨(!
+%11boolean"java.util.List#isEmpty()Z*
+
+enterprisesjava.util.List2	isEmpty()*
+2
+1*¤
+1¡
+”D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/PracticeEnterpriseService.java¬ ¬(!"ú
+¡
+”D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/PracticeEnterpriseService.java¬ ¬("T
+R
+enterpriseResponse<ee.hitsa.ois.web.dto.enterprise.EnterpriseRegCodeResponseDto:K
+enterpriseForm9ee.hitsa.ois.web.dto.enterprise.EnterpriseRegCodeCheckDtoB20
+.ee.hitsa.ois.service.PracticeEnterpriseService

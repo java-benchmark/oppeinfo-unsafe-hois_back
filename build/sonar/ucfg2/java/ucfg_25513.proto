@@ -1,0 +1,139 @@
+
+~ee.hitsa.ois.service.HigherProtocolService#studentsWithNewerProtocols(Lee/hitsa/ois/domain/protocol/Protocol;)Ljava/util/List;ù
+êD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/HigherProtocolService.javañ ñ(1"1*Ç2
+1ù
+êD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/HigherProtocolService.javaó= ó(Oì
+ê
+ù
+êD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/HigherProtocolService.javaó= ò(F
+%0java.lang.String"__concat*
+from protocol p *64
+2join protocol_student ps on ps.protocol_id = p.id ö
+ó
+ù
+êD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/HigherProtocolService.javaó= ô(I
+%1java.lang.String"__concat*
+
+%0java.lang.String*97
+5join protocol_hdata hdata on p.id = hdata.protocol_id˚¯
+ù
+êD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/HigherProtocolService.javaó' ó(<-
+%2'ee.hitsa.ois.util.JpaNativeQueryBuilder"'ee.hitsa.ois.util.JpaNativeQueryBuilderπ
+∂
+ù
+êD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/HigherProtocolService.javaó# ô(J
+%3"Cee.hitsa.ois.util.JpaNativeQueryBuilder#<init>(Ljava/lang/String;)V*/
+-
+%2'ee.hitsa.ois.util.JpaNativeQueryBuilder*
+
+%1java.lang.Stringâ
+Ü
+ù
+êD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/HigherProtocolService.javaó ô(K-
+qb'ee.hitsa.ois.util.JpaNativeQueryBuilder"__id*/
+-
+%2'ee.hitsa.ois.util.JpaNativeQueryBuilderÏ
+È
+ù
+êD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/HigherProtocolService.javaö@ ö(Z
+%4java.lang.Long"Zee.hitsa.ois.util.EntityUtil#getId(Lee/hitsa/ois/domain/BaseEntityWithId;)Ljava/lang/Long;* "
+ee.hitsa.ois.util.EntityUtil*3
+1
+protocol%ee.hitsa.ois.domain.protocol.ProtocolŸ÷
+ù
+êD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/HigherProtocolService.javaö ö([
+
+%5void"oee.hitsa.ois.util.JpaNativeQueryBuilder#requiredCriteria(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Long;)V*/
+-
+qb'ee.hitsa.ois.util.JpaNativeQueryBuilder*
+p.id = :protocolId*
+
+protocolId*
+
+%4java.lang.Long2FrequiredCriteria(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Long;)®
+•
+ù
+êD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/HigherProtocolService.javaú ù(I
+%6java.lang.String"__concat*&$
+"exists (select 1 from protocol p2 *97
+5join protocol_student ps2 on ps2.protocol_id = p2.id û
+õ
+ù
+êD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/HigherProtocolService.javaú û(M
+%7java.lang.String"__concat*
+
+%6java.lang.String*=;
+9join protocol_hdata hdata2 on p2.id = hdata2.protocol_id º
+π
+ù
+êD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/HigherProtocolService.javaú ü(k
+%8java.lang.String"__concat*
+
+%7java.lang.String*[Y
+Wwhere p.id < p2.id and (hdata.subject_study_period_id = hdata2.subject_study_period_id ¥
+±
+ù
+êD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/HigherProtocolService.javaú †(c
+%9java.lang.String"__concat*
+
+%8java.lang.String*SQ
+Oor hdata.curriculum_version_hmodule_id = hdata2.curriculum_version_hmodule_id) â
+Ü
+ù
+êD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/HigherProtocolService.javaú °(7
+%10java.lang.String"__concat*
+
+%9java.lang.String*'%
+#and ps.student_id = ps2.student_id)›⁄
+ù
+êD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/HigherProtocolService.javaú °(8
+%11void"Cee.hitsa.ois.util.JpaNativeQueryBuilder#filter(Ljava/lang/String;)V*/
+-
+qb'ee.hitsa.ois.util.JpaNativeQueryBuilder*
+
+%10java.lang.String2filter(Ljava/lang/String;)â
+Ü
+ù
+êD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/HigherProtocolService.java£2 £(4&
+%12javax.persistence.EntityManager"__id*6*4,
+*ee.hitsa.ois.service.HigherProtocolService"
+emÏÈ
+ù
+êD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/HigherProtocolService.java£ £(5
+%13javax.persistence.Query"|ee.hitsa.ois.util.JpaNativeQueryBuilder#select(Ljava/lang/String;Ljavax/persistence/EntityManager;)Ljavax/persistence/Query;*/
+-
+qb'ee.hitsa.ois.util.JpaNativeQueryBuilder*
+ps.student_id*(
+&
+%12javax.persistence.EntityManager2;select(Ljava/lang/String;Ljavax/persistence/EntityManager;)¶£
+ù
+êD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/HigherProtocolService.java£ £(E
+%14java.util.List"7javax.persistence.Query#getResultList()Ljava/util/List;* 
+
+%13javax.persistence.Query2getResultList()⁄
+◊
+ù
+êD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/HigherProtocolService.java£ £(F
+datajava.util.List"__id*
+
+%14java.util.Listû
+õ
+ù
+êD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/HigherProtocolService.java§' §(>"
+%15java.util.function.Function"__declareFunction*B@
+>__sonar_lambda_2738$ee.hitsa.ois.service.HigherProtocolServiceå
+â
+ù
+êD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/HigherProtocolService.java§ §(E
+%17java.util.List"nee.hitsa.ois.util.StreamUtil#toMappedList(Ljava/util/function/Function;Ljava/util/Collection;)Ljava/util/List;* "
+ee.hitsa.ois.util.StreamUtil*$
+"
+%15java.util.function.Function*
+
+datajava.util.List"π
+ù
+êD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/HigherProtocolService.java§ §(F
+
+%17java.util.List:1
+protocol%ee.hitsa.ois.domain.protocol.ProtocolB.,
+*ee.hitsa.ois.service.HigherProtocolService

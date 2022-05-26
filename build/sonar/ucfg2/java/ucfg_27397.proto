@@ -1,0 +1,406 @@
+
+’ee.hitsa.ois.web.StudyMaterialController#create(Lee/hitsa/ois/service/security/HoisUserDetails;Lee/hitsa/ois/web/commandobject/studymaterial/StudyMaterialForm;)Lee/hitsa/ois/web/dto/studymaterial/StudyMaterialDto;ô
+éD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/web/StudyMaterialController.javaw w(""startingBlock*’$
+2õ
+éD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/web/StudyMaterialController.javaÑ Ñ( Ö
+Ç
+õ
+éD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/web/StudyMaterialController.javaÑ Ñ( &
+%13javax.persistence.EntityManager"__id*4*2*
+(ee.hitsa.ois.web.StudyMaterialController"
+emıÚ
+õ
+éD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/web/StudyMaterialController.javaÑ= Ñ(V
+%14java.lang.Long"[ee.hitsa.ois.web.commandobject.studymaterial.StudyMaterialForm#getJournal()Ljava/lang/Long;*P
+N
+materialForm>ee.hitsa.ois.web.commandobject.studymaterial.StudyMaterialForm2getJournal()≤Ø
+õ
+éD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/web/StudyMaterialController.javaÑ Ñ(W,
+%15%ee.hitsa.ois.domain.timetable.Journal"cjavax.persistence.EntityManager#getReference(Ljava/lang/Class;Ljava/lang/Object;)Ljava/lang/Object;*(
+&
+%13javax.persistence.EntityManager*
+""*
+
+%14java.lang.Long21getReference(Ljava/lang/Class;Ljava/lang/Object;)â
+Ü
+õ
+éD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/web/StudyMaterialController.javaÑ Ñ(X0
+journal%ee.hitsa.ois.domain.timetable.Journal"__id*.
+,
+%15%ee.hitsa.ois.domain.timetable.Journal‰
+·
+õ
+éD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/web/StudyMaterialController.javaÜ Ü(G
+%16void"óee.hitsa.ois.util.StudyMaterialUserRights#assertCanEditJournal(Lee/hitsa/ois/service/security/HoisUserDetails;Lee/hitsa/ois/domain/timetable/Journal;)V*-"+
+)ee.hitsa.ois.util.StudyMaterialUserRights*7
+5
+user-ee.hitsa.ois.service.security.HoisUserDetails*2
+0
+journal%ee.hitsa.ois.domain.timetable.Journal°
+û
+õ
+éD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/web/StudyMaterialController.javaá% á(90
+%17)ee.hitsa.ois.service.StudyMaterialService"__id*F*D*
+(ee.hitsa.ois.web.StudyMaterialController"
+studyMaterialServiceáÑ
+õ
+éD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/web/StudyMaterialController.javaá% á(l6
+%18/ee.hitsa.ois.domain.studymaterial.StudyMaterial"àee.hitsa.ois.service.StudyMaterialService#createJournalMaterial(Lee/hitsa/ois/service/security/HoisUserDetails;Lee/hitsa/ois/web/commandobject/studymaterial/StudyMaterialForm;Lee/hitsa/ois/domain/timetable/Journal;)Lee/hitsa/ois/domain/studymaterial/StudyMaterial;*2
+0
+%17)ee.hitsa.ois.service.StudyMaterialService*7
+5
+user-ee.hitsa.ois.service.security.HoisUserDetails*P
+N
+materialForm>ee.hitsa.ois.web.commandobject.studymaterial.StudyMaterialForm*2
+0
+journal%ee.hitsa.ois.domain.timetable.Journal2≠createJournalMaterial(Lee/hitsa/ois/service/security/HoisUserDetails;Lee/hitsa/ois/web/commandobject/studymaterial/StudyMaterialForm;Lee/hitsa/ois/domain/timetable/Journal;)û
+õ
+õ
+éD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/web/StudyMaterialController.javaá á(m;
+material/ee.hitsa.ois.domain.studymaterial.StudyMaterial"__id*8
+6
+%18/ee.hitsa.ois.domain.studymaterial.StudyMaterial°
+û
+õ
+éD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/web/StudyMaterialController.javaà à('0
+%19)ee.hitsa.ois.service.StudyMaterialService"__id*F*D*
+(ee.hitsa.ois.web.StudyMaterialController"
+studyMaterialService∑¥
+õ
+éD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/web/StudyMaterialController.javaà à(;:
+%203ee.hitsa.ois.web.dto.studymaterial.StudyMaterialDto"ƒee.hitsa.ois.service.StudyMaterialService#get(Lee/hitsa/ois/service/security/HoisUserDetails;Lee/hitsa/ois/domain/studymaterial/StudyMaterial;)Lee/hitsa/ois/web/dto/studymaterial/StudyMaterialDto;*2
+0
+%19)ee.hitsa.ois.service.StudyMaterialService*7
+5
+user-ee.hitsa.ois.service.security.HoisUserDetails*=
+;
+material/ee.hitsa.ois.domain.studymaterial.StudyMaterial2eget(Lee/hitsa/ois/service/security/HoisUserDetails;Lee/hitsa/ois/domain/studymaterial/StudyMaterial;)"‹
+õ
+éD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/web/StudyMaterialController.javaà à(<<
+:
+%203ee.hitsa.ois.web.dto.studymaterial.StudyMaterialDto*°
+3õ
+éD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/web/StudyMaterialController.javaÉ É(ıÚ
+õ
+éD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/web/StudyMaterialController.javaÉ É(,
+%12java.lang.Long"[ee.hitsa.ois.web.commandobject.studymaterial.StudyMaterialForm#getJournal()Ljava/lang/Long;*P
+N
+materialForm>ee.hitsa.ois.web.commandobject.studymaterial.StudyMaterialForm2getJournal()*
+2
+1*∑(
+startingBlockô
+éD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/web/StudyMaterialController.javaw" w(l§
+°
+ô
+éD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/web/StudyMaterialController.javav v(
+%23"
+__annotate*75
+3org.springframework.web.bind.annotation.PostMapping*7
+5
+user-ee.hitsa.ois.service.security.HoisUserDetailsÌ
+Í
+ô
+éD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/web/StudyMaterialController.javaw3 w(75
+user-ee.hitsa.ois.service.security.HoisUserDetails"__annotation*
+
+%23è
+å
+
+__unknown_file (
+%24"__id*c*a
+N
+materialForm>ee.hitsa.ois.web.commandobject.studymaterial.StudyMaterialForm"
+descriptionEtà
+Ö
+
+__unknown_file (
+%25"__id*\*Z
+N
+materialForm>ee.hitsa.ois.web.commandobject.studymaterial.StudyMaterialForm"
+nameEtâ
+Ü
+
+__unknown_file (
+%26"__id*]*[
+N
+materialForm>ee.hitsa.ois.web.commandobject.studymaterial.StudyMaterialForm"	
+oisFileä
+á
+
+__unknown_file (
+%27"__id*^*\
+N
+materialForm>ee.hitsa.ois.web.commandobject.studymaterial.StudyMaterialForm"
+
+typeCodeÖ
+Ç
+
+__unknown_file (
+%28"__id*Y*W
+N
+materialForm>ee.hitsa.ois.web.commandobject.studymaterial.StudyMaterialForm"
+url◊
+‘
+ô
+éD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/web/StudyMaterialController.javaw9 w(?
+%29"
+__annotate*
+javax.validation.Valid*
+
+%26Ù
+Ò
+ô
+éD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/web/StudyMaterialController.javaw@ w(L
+%30"
+__annotate*75
+3org.springframework.web.bind.annotation.RequestBody*
+
+%26ú
+ô
+ô
+éD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/web/StudyMaterialController.javaw_ w(k[
+N
+materialForm>ee.hitsa.ois.web.commandobject.studymaterial.StudyMaterialForm"	
+oisFile"__annotation*
+
+%29*
+
+%30◊
+‘
+ô
+éD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/web/StudyMaterialController.javaw9 w(?
+%31"
+__annotate*
+javax.validation.Valid*
+
+%24Ù
+Ò
+ô
+éD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/web/StudyMaterialController.javaw@ w(L
+%32"
+__annotate*75
+3org.springframework.web.bind.annotation.RequestBody*
+
+%24¢
+ü
+ô
+éD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/web/StudyMaterialController.javaw_ w(ka
+N
+materialForm>ee.hitsa.ois.web.commandobject.studymaterial.StudyMaterialForm"
+descriptionEt"__annotation*
+
+%31*
+
+%32◊
+‘
+ô
+éD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/web/StudyMaterialController.javaw9 w(?
+%33"
+__annotate*
+javax.validation.Valid*
+
+%25Ù
+Ò
+ô
+éD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/web/StudyMaterialController.javaw@ w(L
+%34"
+__annotate*75
+3org.springframework.web.bind.annotation.RequestBody*
+
+%25õ
+ò
+ô
+éD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/web/StudyMaterialController.javaw_ w(kZ
+N
+materialForm>ee.hitsa.ois.web.commandobject.studymaterial.StudyMaterialForm"
+nameEt"__annotation*
+
+%33*
+
+%34◊
+‘
+ô
+éD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/web/StudyMaterialController.javaw9 w(?
+%35"
+__annotate*
+javax.validation.Valid*
+
+%28Ù
+Ò
+ô
+éD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/web/StudyMaterialController.javaw@ w(L
+%36"
+__annotate*75
+3org.springframework.web.bind.annotation.RequestBody*
+
+%28ò
+ï
+ô
+éD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/web/StudyMaterialController.javaw_ w(kW
+N
+materialForm>ee.hitsa.ois.web.commandobject.studymaterial.StudyMaterialForm"
+url"__annotation*
+
+%35*
+
+%36◊
+‘
+ô
+éD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/web/StudyMaterialController.javaw9 w(?
+%37"
+__annotate*
+javax.validation.Valid*
+
+%27Ù
+Ò
+ô
+éD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/web/StudyMaterialController.javaw@ w(L
+%38"
+__annotate*75
+3org.springframework.web.bind.annotation.RequestBody*
+
+%27ù
+ö
+ô
+éD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/web/StudyMaterialController.javaw_ w(k\
+N
+materialForm>ee.hitsa.ois.web.commandobject.studymaterial.StudyMaterialForm"
+
+typeCode"__annotation*
+
+%37*
+
+%38*
+7*ª&
+4ô
+éD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/web/StudyMaterialController.java|4 |(6Ç
+ˇ
+ô
+éD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/web/StudyMaterialController.java|4 |(6%
+%4javax.persistence.EntityManager"__id*4*2*
+(ee.hitsa.ois.web.StudyMaterialController"
+emàÖ
+ô
+éD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/web/StudyMaterialController.java} }(8
+%5java.lang.Long"fee.hitsa.ois.web.commandobject.studymaterial.StudyMaterialForm#getSubjectStudyPeriod()Ljava/lang/Long;*P
+N
+materialForm>ee.hitsa.ois.web.commandobject.studymaterial.StudyMaterialForm2getSubjectStudyPeriod()¬ø
+ô
+éD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/web/StudyMaterialController.java|4 }(9@
+%6:ee.hitsa.ois.domain.subject.studyperiod.SubjectStudyPeriod"cjavax.persistence.EntityManager#getReference(Ljava/lang/Class;Ljava/lang/Object;)Ljava/lang/Object;*'
+%
+%4javax.persistence.EntityManager*
+""*
+
+%5java.lang.Long21getReference(Ljava/lang/Class;Ljava/lang/Object;)ª
+∏
+ô
+éD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/web/StudyMaterialController.java| }(:P
+subjectStudyPeriod:ee.hitsa.ois.domain.subject.studyperiod.SubjectStudyPeriod"__id*B
+@
+%6:ee.hitsa.ois.domain.subject.studyperiod.SubjectStudyPeriodû
+õ
+ô
+éD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/web/StudyMaterialController.java (W
+%7boolean"±ee.hitsa.ois.util.StudyMaterialUserRights#canEditSubjectStudyPeriod(Lee/hitsa/ois/service/security/HoisUserDetails;Lee/hitsa/ois/domain/subject/studyperiod/SubjectStudyPeriod;)Z*-"+
+)ee.hitsa.ois.util.StudyMaterialUserRights*7
+5
+user-ee.hitsa.ois.service.security.HoisUserDetails*R
+P
+subjectStudyPeriod:ee.hitsa.ois.domain.subject.studyperiod.SubjectStudyPeriod†
+ù
+õ
+éD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/web/StudyMaterialController.javaÄ% Ä(9/
+%8)ee.hitsa.ois.service.StudyMaterialService"__id*F*D*
+(ee.hitsa.ois.web.StudyMaterialController"
+studyMaterialServiceÂ‚
+õ
+éD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/web/StudyMaterialController.javaÄ% Å('5
+%9/ee.hitsa.ois.domain.studymaterial.StudyMaterial"®ee.hitsa.ois.service.StudyMaterialService#createSubjectStudyPeriodMaterial(Lee/hitsa/ois/service/security/HoisUserDetails;Lee/hitsa/ois/web/commandobject/studymaterial/StudyMaterialForm;Lee/hitsa/ois/domain/subject/studyperiod/SubjectStudyPeriod;)Lee/hitsa/ois/domain/studymaterial/StudyMaterial;*1
+/
+%8)ee.hitsa.ois.service.StudyMaterialService*7
+5
+user-ee.hitsa.ois.service.security.HoisUserDetails*P
+N
+materialForm>ee.hitsa.ois.web.commandobject.studymaterial.StudyMaterialForm*R
+P
+subjectStudyPeriod:ee.hitsa.ois.domain.subject.studyperiod.SubjectStudyPeriod2ÕcreateSubjectStudyPeriodMaterial(Lee/hitsa/ois/service/security/HoisUserDetails;Lee/hitsa/ois/web/commandobject/studymaterial/StudyMaterialForm;Lee/hitsa/ois/domain/subject/studyperiod/SubjectStudyPeriod;)ù
+ö
+õ
+éD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/web/StudyMaterialController.javaÄ Å((;
+material/ee.hitsa.ois.domain.studymaterial.StudyMaterial"__id*7
+5
+%9/ee.hitsa.ois.domain.studymaterial.StudyMaterial°
+û
+õ
+éD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/web/StudyMaterialController.javaÇ Ç('0
+%10)ee.hitsa.ois.service.StudyMaterialService"__id*F*D*
+(ee.hitsa.ois.web.StudyMaterialController"
+studyMaterialService∑¥
+õ
+éD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/web/StudyMaterialController.javaÇ Ç(;:
+%113ee.hitsa.ois.web.dto.studymaterial.StudyMaterialDto"ƒee.hitsa.ois.service.StudyMaterialService#get(Lee/hitsa/ois/service/security/HoisUserDetails;Lee/hitsa/ois/domain/studymaterial/StudyMaterial;)Lee/hitsa/ois/web/dto/studymaterial/StudyMaterialDto;*2
+0
+%10)ee.hitsa.ois.service.StudyMaterialService*7
+5
+user-ee.hitsa.ois.service.security.HoisUserDetails*=
+;
+material/ee.hitsa.ois.domain.studymaterial.StudyMaterial2eget(Lee/hitsa/ois/service/security/HoisUserDetails;Lee/hitsa/ois/domain/studymaterial/StudyMaterial;)"‹
+õ
+éD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/web/StudyMaterialController.javaÇ Ç(<<
+:
+%113ee.hitsa.ois.web.dto.studymaterial.StudyMaterialDto*≤
+5ô
+éD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/web/StudyMaterialController.java{ {(àÖ
+ô
+éD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/web/StudyMaterialController.java{ {(0
+%3java.lang.Long"fee.hitsa.ois.web.commandobject.studymaterial.StudyMaterialForm#getSubjectStudyPeriod()Ljava/lang/Long;*P
+N
+materialForm>ee.hitsa.ois.web.commandobject.studymaterial.StudyMaterialForm2getSubjectStudyPeriod()*
+3
+4*á
+6ô
+éD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/web/StudyMaterialController.javay y(Ã…
+ô
+éD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/web/StudyMaterialController.javay$ y(7
+%1java.lang.Long"Lee.hitsa.ois.service.security.HoisUserDetails#getTeacherId()Ljava/lang/Long;*7
+5
+user-ee.hitsa.ois.service.security.HoisUserDetails2getTeacherId()ëé
+ô
+éD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/web/StudyMaterialController.javay y(8
+
+%2void"\ee.hitsa.ois.web.commandobject.studymaterial.StudyMaterialForm#setTeacher(Ljava/lang/Long;)V*P
+N
+materialForm>ee.hitsa.ois.web.commandobject.studymaterial.StudyMaterialForm*
+
+%1java.lang.Long2setTeacher(Ljava/lang/Long;)*
+5*⁄
+7ô
+éD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/web/StudyMaterialController.javax x(∞≠
+ô
+éD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/web/StudyMaterialController.javax x(
+%0boolean":ee.hitsa.ois.service.security.HoisUserDetails#isTeacher()Z*7
+5
+user-ee.hitsa.ois.service.security.HoisUserDetails2isTeacher()*
+5
+6*ª
+0 "≥
+õ
+éD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/web/StudyMaterialController.javaå å(
+implicit return*î
+1õ
+éD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/web/StudyMaterialController.javaä/ ä(Zäá
+õ
+éD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/web/StudyMaterialController.javaä ä(.6
+%21/ee.hitsa.ois.exception.AssertionFailedException"/ee.hitsa.ois.exception.AssertionFailedExceptionﬁ
+€
+õ
+éD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/web/StudyMaterialController.javaä ä([
+%22"Kee.hitsa.ois.exception.AssertionFailedException#<init>(Ljava/lang/String;)V*8
+6
+%21/ee.hitsa.ois.exception.AssertionFailedException*-+
+)No subjectStudyPeriod or journal ID given*
+0:5
+user-ee.hitsa.ois.service.security.HoisUserDetails:N
+materialForm>ee.hitsa.ois.web.commandobject.studymaterial.StudyMaterialFormB,*
+(ee.hitsa.ois.web.StudyMaterialController

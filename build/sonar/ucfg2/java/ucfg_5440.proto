@@ -1,0 +1,100 @@
+
+ëee.hitsa.ois.service.StudentGroupYearTransferService#mismatching(Lee/hitsa/ois/service/security/HoisUserDetails;Ljava/lang/Long;)Ljava/util/List;ß
+öD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/StudentGroupYearTransferService.java« «('"1*≤%
+1ß
+öD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/StudentGroupYearTransferService.java» »(”
+–
+ß
+öD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/StudentGroupYearTransferService.java» »( K
+%0Eee.hitsa.ois.domain.studentgroupyeartransfer.StudentGroupYearTransfer"»ee.hitsa.ois.service.StudentGroupYearTransferService#transferLog(Lee/hitsa/ois/service/security/HoisUserDetails;Ljava/lang/Long;)Lee/hitsa/ois/domain/studentgroupyeartransfer/StudentGroupYearTransfer;*86
+4ee.hitsa.ois.service.StudentGroupYearTransferService*7
+5
+user-ee.hitsa.ois.service.security.HoisUserDetails*
+
+logIdjava.lang.Longú
+ô
+ß
+öD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/StudentGroupYearTransferService.java… …(%
+%1javax.persistence.EntityManager"__id*@*>6
+4ee.hitsa.ois.service.StudentGroupYearTransferService"
+emπ
+∂
+ß
+öD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/StudentGroupYearTransferService.java….  (?
+%2java.lang.String"__concat*75
+3select p.firstname, p.lastname, sgytl.mismatch_code*/-
++ from student_group_year_transfer_log sgytlô
+ñ
+ß
+öD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/StudentGroupYearTransferService.java…. À(>
+%3java.lang.String"__concat*
+
+%2java.lang.String*.,
+* join student s on s.id = sgytl.student_idì
+ê
+ß
+öD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/StudentGroupYearTransferService.java…. Ã(8
+%4java.lang.String"__concat*
+
+%3java.lang.String*(&
+$ join person p on p.id = s.person_idΩ
+∫
+ß
+öD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/StudentGroupYearTransferService.java…. Õ(b
+%5java.lang.String"__concat*
+
+%4java.lang.String*RP
+N where sgytl.student_group_year_transfer_id = ?1 and sgytl.is_matching = falseê
+ç
+ß
+öD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/StudentGroupYearTransferService.java…. Œ(5
+%6java.lang.String"__concat*
+
+%5java.lang.String*%#
+! order by p.firstname, p.lastnameñì
+ß
+öD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/StudentGroupYearTransferService.java… Œ(6
+%7javax.persistence.Query"^javax.persistence.EntityManager#createNativeQuery(Ljava/lang/String;)Ljavax/persistence/Query;*'
+%
+%1javax.persistence.EntityManager*
+
+%6java.lang.String2%createNativeQuery(Ljava/lang/String;)ÖÇ
+ß
+öD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/StudentGroupYearTransferService.java… œ('
+%8javax.persistence.Query"Rjavax.persistence.Query#setParameter(ILjava/lang/Object;)Ljavax/persistence/Query;*
+
+%7javax.persistence.Query*2*
+
+logIdjava.lang.Long2!setParameter(ILjava/lang/Object;)Æ´
+ß
+öD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/StudentGroupYearTransferService.java… –( 
+%9java.util.List"7javax.persistence.Query#getResultList()Ljava/util/List;*
+
+%8javax.persistence.Query2getResultList()Â
+‚
+ß
+öD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/StudentGroupYearTransferService.java… –(!
+resultjava.util.List"__id*
+
+%9java.util.List±
+Æ
+ß
+öD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/StudentGroupYearTransferService.java—' ÷(	"
+%10java.util.function.Function"__declareFunction*KI
+G__sonar_lambda_756$ee.hitsa.ois.service.StudentGroupYearTransferServiceò
+ï
+ß
+öD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/StudentGroupYearTransferService.java— ÷(
+%19java.util.List"nee.hitsa.ois.util.StreamUtil#toMappedList(Ljava/util/function/Function;Ljava/util/Collection;)Ljava/util/List;* "
+ee.hitsa.ois.util.StreamUtil*$
+"
+%10java.util.function.Function*
+
+resultjava.util.List"√
+ß
+öD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/StudentGroupYearTransferService.java— ÷(
+
+%19java.util.List:5
+user-ee.hitsa.ois.service.security.HoisUserDetails:
+logIdjava.lang.LongB86
+4ee.hitsa.ois.service.StudentGroupYearTransferService

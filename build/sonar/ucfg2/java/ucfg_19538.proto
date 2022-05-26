@@ -1,0 +1,61 @@
+
+Wee.hitsa.ois.service.AbstractProtocolService#generateProtocolNumber()Ljava/lang/String;ù
+íD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/AbstractProtocolService.javaA A(+"1*≈
+1ù
+íD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/AbstractProtocolService.javaB B(ä
+á
+ù
+íD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/AbstractProtocolService.javaB B(%
+%0javax.persistence.EntityManager"__id*8*6.
+,ee.hitsa.ois.service.AbstractProtocolService"
+em†ù
+ù
+íD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/AbstractProtocolService.javaB B(R
+%1javax.persistence.Query"^javax.persistence.EntityManager#createNativeQuery(Ljava/lang/String;)Ljavax/persistence/Query;*'
+%
+%0javax.persistence.EntityManager*,*
+(select nextval('public.protocol_id_seq')2%createNativeQuery(Ljava/lang/String;)Ë
+Â
+ù
+íD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/AbstractProtocolService.javaB B(S
+qjavax.persistence.Query"__id*
+
+%1javax.persistence.Queryá
+Ñ
+ù
+íD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/AbstractProtocolService.javaC# C(2
+%2java.time.LocalDate".java.time.LocalDate#now()Ljava/time/LocalDate;*"
+java.time.LocalDate…
+∆
+ù
+íD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/AbstractProtocolService.javaC C(3
+%3java.lang.String"Nee.hitsa.ois.util.DateUtils#shortYear(Ljava/time/LocalDate;)Ljava/lang/String;*"
+ee.hitsa.ois.util.DateUtils*
+
+%2java.time.LocalDate´®
+ù
+íD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/AbstractProtocolService.javaCL C(_
+%4java.lang.Object";javax.persistence.Query#getSingleResult()Ljava/lang/Object;*
+
+qjavax.persistence.Query2getSingleResult()«
+ƒ
+ù
+íD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/AbstractProtocolService.javaC6 C(`
+%5java.lang.String"Pjava.lang.String#format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;*"
+java.lang.String*
+%04d*
+
+%4java.lang.Object˘
+ˆ
+ù
+íD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/AbstractProtocolService.javaC C(`
+%6java.lang.String"__concat*
+
+%3java.lang.String*
+
+%5java.lang.String"∫
+ù
+íD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/AbstractProtocolService.javaC C(a
+
+%6java.lang.StringB0.
+,ee.hitsa.ois.service.AbstractProtocolService

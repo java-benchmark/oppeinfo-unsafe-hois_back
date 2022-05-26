@@ -1,0 +1,86 @@
+
+vee.hitsa.ois.service.sais.SaisApplicationService#directiveStudentsWithSaisApplication(Ljava/util/List;)Ljava/util/Map;£
+–D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/sais/SaisApplicationService.javaˆ ˆ(@"1*Â"
+1£
+–D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/sais/SaisApplicationService.java‰ ‰(”
+‘
+£
+–D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/sais/SaisApplicationService.java‰ ‰(%
+%0javax.persistence.EntityManager"__id*<*:2
+0ee.hitsa.ois.service.sais.SaisApplicationService"
+emÒ
+Ï
+£
+–D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/sais/SaisApplicationService.java‰, Š(H
+%1java.lang.String"__concat*IG
+Eselect ds.sais_application_id, ds.id from directive_student ds where *:8
+6ds.sais_application_id in (?1) and ds.canceled = false’
+£
+–D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/sais/SaisApplicationService.java‰ Š(I
+%2javax.persistence.Query"^javax.persistence.EntityManager#createNativeQuery(Ljava/lang/String;)Ljavax/persistence/Query;*'
+%
+%0javax.persistence.EntityManager*
+
+%1java.lang.String2%createNativeQuery(Ljava/lang/String;)Ž‹
+£
+–D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/sais/SaisApplicationService.java‰ ‹(0
+%3javax.persistence.Query"Rjavax.persistence.Query#setParameter(ILjava/lang/Object;)Ljavax/persistence/Query;*
+
+%2javax.persistence.Query*2*&
+$
+saisApplicationIdsjava.util.List2!setParameter(ILjava/lang/Object;)ª§
+£
+–D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/sais/SaisApplicationService.java‰ Œ(
+%4java.util.List"7javax.persistence.Query#getResultList()Ljava/util/List;*
+
+%3javax.persistence.Query2getResultList()ß
+Ü
+£
+–D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/sais/SaisApplicationService.java‰ Œ(
+datajava.util.List"__id*
+
+%4java.util.List¤¡
+£
+–D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/sais/SaisApplicationService.java (
+%5java.util.stream.Stream"6java.util.Collection#stream()Ljava/util/stream/Stream;*
+
+datajava.util.List2stream()©
+¦
+£
+–D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/sais/SaisApplicationService.java6 (M!
+%6java.util.function.Function"__declareFunction*HF
+D__sonar_lambda_2886$ee.hitsa.ois.service.sais.SaisApplicationService©
+¦
+£
+–D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/sais/SaisApplicationService.javaO (f!
+%8java.util.function.Function"__declareFunction*HF
+D__sonar_lambda_2887$ee.hitsa.ois.service.sais.SaisApplicationService°
+­
+£
+–D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/sais/SaisApplicationService.javah (s(
+%10!java.util.function.BinaryOperator"__declareFunction*HF
+D__sonar_lambda_2888$ee.hitsa.ois.service.sais.SaisApplicationService‚
+ÿ
+£
+–D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/sais/SaisApplicationService.java% (t!
+%11java.util.stream.Collector"œjava.util.stream.Collectors#toMap(Ljava/util/function/Function;Ljava/util/function/Function;Ljava/util/function/BinaryOperator;)Ljava/util/stream/Collector;*"
+java.util.stream.Collectors*#
+!
+%6java.util.function.Function*#
+!
+%8java.util.function.Function**
+(
+%10!java.util.function.BinaryOperatorýú
+£
+–D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/sais/SaisApplicationService.java (u
+%12java.util.Map"Ojava.util.stream.Stream#collect(Ljava/util/stream/Collector;)Ljava/lang/Object;*
+
+%5java.util.stream.Stream*#
+!
+%11java.util.stream.Collector2%collect(Ljava/util/stream/Collector;)"¾
+£
+–D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/sais/SaisApplicationService.java (v
+
+%12java.util.Map:$
+saisApplicationIdsjava.util.ListB42
+0ee.hitsa.ois.service.sais.SaisApplicationService

@@ -1,0 +1,115 @@
+
+~ee.hitsa.ois.service.StudentResultHigherService#higherChangeableModules(Lee/hitsa/ois/domain/student/Student;)Ljava/util/List;¢
+ïD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/StudentResultHigherService.javaÕ( Õ(?"1*˙+
+1¢
+ïD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/StudentResultHigherService.javaŒ Œ(í
+è
+¢
+ïD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/StudentResultHigherService.javaŒ Œ(%
+%0javax.persistence.EntityManager"__id*;*91
+/ee.hitsa.ois.service.StudentResultHigherService"
+emª
+∏
+£
+ïD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/StudentResultHigherService.javaŒ' œ(ñ
+%1java.lang.String"__concat*ca
+_select shr.id, cvh.id curriculum_version_hmodule_id, shr.subject_name_et, shr.subject_name_en, *àÖ
+Çshr.subject_code, shr.credits, shr.grade_code, shr.grade, shr.grade_date, coalesce(shrm.is_optional, shr.is_optional) is_optional â
+Ü
+¢
+ïD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/StudentResultHigherService.javaŒ' –(3
+%2java.lang.String"__concat*
+
+%1java.lang.String*#!
+from student_higher_result shr ¿
+Ω
+¢
+ïD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/StudentResultHigherService.javaŒ' —(j
+%3java.lang.String"__concat*
+
+%2java.lang.String*ZX
+Vleft join student_higher_result_module shrm on shrm.student_higher_result_id = shr.id Û
+
+£
+ïD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/StudentResultHigherService.javaŒ' “(ô
+%4java.lang.String"__concat*
+
+%3java.lang.String*ãà
+Öleft join curriculum_version_hmodule cvh on cvh.id = coalesce(shrm.curriculum_version_hmodule_id, shr.curriculum_version_hmodule_id) Â
+‚
+£
+ïD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/StudentResultHigherService.javaŒ' ”(é
+%5java.lang.String"__concat*
+
+%4java.lang.String*~|
+zwhere student_id = ?1 and (cvh.id is null or cvh.type_code not in (?2)) and shr.is_active = true and shr.is_module = falseíè
+£
+ïD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/StudentResultHigherService.javaŒ ”(è
+%6javax.persistence.Query"^javax.persistence.EntityManager#createNativeQuery(Ljava/lang/String;)Ljavax/persistence/Query;*'
+%
+%0javax.persistence.EntityManager*
+
+%5java.lang.String2%createNativeQuery(Ljava/lang/String;)Ó
+Î
+£
+ïD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/StudentResultHigherService.javaŒ ”(ê
+qjavax.persistence.Query"__id*
+
+%6javax.persistence.QueryÓ
+Î
+¢
+ïD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/StudentResultHigherService.java‘ ‘(3
+%7java.lang.Long"Zee.hitsa.ois.util.EntityUtil#getId(Lee/hitsa/ois/domain/BaseEntityWithId;)Ljava/lang/Long;* "
+ee.hitsa.ois.util.EntityUtil*0
+.
+student#ee.hitsa.ois.domain.student.Student¸˘
+¢
+ïD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/StudentResultHigherService.java‘ ‘(4
+%8javax.persistence.Query"Rjavax.persistence.Query#setParameter(ILjava/lang/Object;)Ljavax/persistence/Query;*
+
+qjavax.persistence.Query*2*
+
+%7java.lang.Long2!setParameter(ILjava/lang/Object;)Ã
+…
+¢
+ïD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/StudentResultHigherService.java’ ’(8
+%9java.util.List"__id*
+""˝˙
+¢
+ïD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/StudentResultHigherService.java’ ’(9
+%10javax.persistence.Query"Rjavax.persistence.Query#setParameter(ILjava/lang/Object;)Ljavax/persistence/Query;*
+
+qjavax.persistence.Query*2*
+
+%9java.util.List2!setParameter(ILjava/lang/Object;)©¶
+¢
+ïD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/StudentResultHigherService.java÷ ÷((
+%11java.util.List"7javax.persistence.Query#getResultList()Ljava/util/List;*
+
+qjavax.persistence.Query2getResultList()ﬂ
+‹
+¢
+ïD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/StudentResultHigherService.java÷ ÷()
+datajava.util.List"__id*
+
+%11java.util.Listß
+§
+¢
+ïD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/StudentResultHigherService.javaÿ' ⁄(k"
+%12java.util.function.Function"__declareFunction*FD
+B__sonar_lambda_499$ee.hitsa.ois.service.StudentResultHigherServiceë
+é
+¢
+ïD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/StudentResultHigherService.javaÿ ⁄(r
+%25java.util.List"nee.hitsa.ois.util.StreamUtil#toMappedList(Ljava/util/function/Function;Ljava/util/Collection;)Ljava/util/List;* "
+ee.hitsa.ois.util.StreamUtil*$
+"
+%12java.util.function.Function*
+
+datajava.util.List"æ
+¢
+ïD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/StudentResultHigherService.javaÿ ⁄(s
+
+%25java.util.List:.
+student#ee.hitsa.ois.domain.student.StudentB31
+/ee.hitsa.ois.service.StudentResultHigherService

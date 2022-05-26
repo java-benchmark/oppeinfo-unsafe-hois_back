@@ -1,0 +1,150 @@
+
+åee.hitsa.ois.service.DeclarationService#getNextStudyPeriodIfOpenDeclarationPeriod(Ljava/lang/Long;)Lee/hitsa/ois/web/dto/AutocompleteResult;ö
+çD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/DeclarationService.java˝ ˝(G"10*⁄
+2ö
+çD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/DeclarationService.javaâ â(%É
+Ä
+ö
+çD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/DeclarationService.javaâ1 â(3&
+%10javax.persistence.EntityManager"__id*3*1)
+'ee.hitsa.ois.service.DeclarationService"
+emµ≤
+ö
+çD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/DeclarationService.javaâ1 â(b&
+%11ee.hitsa.ois.domain.StudyPeriod"cjavax.persistence.EntityManager#getReference(Ljava/lang/Class;Ljava/lang/Object;)Ljava/lang/Object;*(
+&
+%10javax.persistence.EntityManager*
+""*!
+
+studyPeriodIdjava.lang.Long21getReference(Ljava/lang/Class;Ljava/lang/Object;)ß
+§
+ö
+çD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/DeclarationService.javaâ â(c.
+%12'ee.hitsa.ois.web.dto.AutocompleteResult"~ee.hitsa.ois.web.dto.AutocompleteResult#ofWithYear(Lee/hitsa/ois/domain/StudyPeriod;)Lee/hitsa/ois/web/dto/AutocompleteResult;*+")
+'ee.hitsa.ois.web.dto.AutocompleteResult*(
+&
+%11ee.hitsa.ois.domain.StudyPeriod"œ
+ö
+çD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/DeclarationService.javaâ â(d0
+.
+%12'ee.hitsa.ois.web.dto.AutocompleteResult*¯
+3ö
+çD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/DeclarationService.javaà4 à(?€ÿ
+ö
+çD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/DeclarationService.javaà4 à(H
+%8java.time.LocalDateTime"Uee.hitsa.ois.web.commandobject.StudyPeriodEventForm#getEnd()Ljava/time/LocalDateTime;*9
+7
+declaration(ee.hitsa.ois.web.dto.StudyPeriodEventDto2getEnd()ÔÏ
+ö
+çD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/DeclarationService.javaà4 à(V
+%9boolean"Ijava.time.LocalDateTime#isBefore(Ljava/time/chrono/ChronoLocalDateTime;)Z*
+
+%8java.time.LocalDateTime* 
+
+nowjava.time.LocalDateTime20isBefore(Ljava/time/chrono/ChronoLocalDateTime;)*
+2
+1*Ü
+4ö
+çD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/DeclarationService.javaà à(€ÿ
+ö
+çD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/DeclarationService.javaà à('
+%7java.time.LocalDateTime"Uee.hitsa.ois.web.commandobject.StudyPeriodEventForm#getEnd()Ljava/time/LocalDateTime;*9
+7
+declaration(ee.hitsa.ois.web.dto.StudyPeriodEventDto2getEnd()*
+3
+1*˙
+5ö
+çD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/DeclarationService.javaá/ á(:ﬂ‹
+ö
+çD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/DeclarationService.javaá/ á(E
+%5java.time.LocalDateTime"Wee.hitsa.ois.web.commandobject.StudyPeriodEventForm#getStart()Ljava/time/LocalDateTime;*9
+7
+declaration(ee.hitsa.ois.web.dto.StudyPeriodEventDto2
+getStart()ÌÍ
+ö
+çD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/DeclarationService.javaá/ á(R
+%6boolean"Hjava.time.LocalDateTime#isAfter(Ljava/time/chrono/ChronoLocalDateTime;)Z*
+
+%5java.time.LocalDateTime* 
+
+nowjava.time.LocalDateTime2/isAfter(Ljava/time/chrono/ChronoLocalDateTime;)*
+4
+1*ã
+6ö
+çD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/DeclarationService.javaÜ Ü()î
+ë
+ö
+çD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/DeclarationService.javaÜ Ü(/
+%3java.time.LocalDateTime"6java.time.LocalDateTime#now()Ljava/time/LocalDateTime;*"
+java.time.LocalDateTimeÁ
+‰
+ö
+çD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/DeclarationService.javaÜ Ü(0
+nowjava.time.LocalDateTime"__id*
+
+%3java.time.LocalDateTimeﬂ‹
+ö
+çD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/DeclarationService.javaá á("
+%4java.time.LocalDateTime"Wee.hitsa.ois.web.commandobject.StudyPeriodEventForm#getStart()Ljava/time/LocalDateTime;*9
+7
+declaration(ee.hitsa.ois.web.dto.StudyPeriodEventDto2
+getStart()*
+5
+1*»
+7ö
+çD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/DeclarationService.javaÑ Ñ("•
+ö
+çD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/DeclarationService.javaÑ Ñ(
+""*Á
+8ö
+çD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/DeclarationService.javaÇ* Ç(K®
+•
+ö
+çD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/DeclarationService.javaÇ* Ç(Z.
+%2(ee.hitsa.ois.web.dto.StudyPeriodEventDto"Öee.hitsa.ois.service.DeclarationService#getDeclarationPeriodByStudyPeriod(Ljava/lang/Long;)Lee/hitsa/ois/web/dto/StudyPeriodEventDto;*+)
+'ee.hitsa.ois.service.DeclarationService*!
+
+studyPeriodIdjava.lang.Longë
+é
+ö
+çD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/DeclarationService.javaÇ Ç([7
+declaration(ee.hitsa.ois.web.dto.StudyPeriodEventDto"__id*0
+.
+%2(ee.hitsa.ois.web.dto.StudyPeriodEventDto*
+6
+7*»
+9ö
+çD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/DeclarationService.javaÄ Ä("•
+ö
+çD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/DeclarationService.javaÄ Ä(
+""*¨
+10ö
+çD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/DeclarationService.java˛ ˛(-ñ
+ì
+ö
+çD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/DeclarationService.java˛ ˛(-+
+%0%ee.hitsa.ois.service.StudyYearService"__id*A*?)
+'ee.hitsa.ois.service.DeclarationService"
+studyYearServiceÖÇ
+ö
+çD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/DeclarationService.java˛ ˛(J
+%1java.lang.Long"Zee.hitsa.ois.service.StudyYearService#getNextStudyPeriod(Ljava/lang/Long;)Ljava/lang/Long;*-
++
+%0%ee.hitsa.ois.service.StudyYearService*
+
+schoolIdjava.lang.Long2$getNextStudyPeriod(Ljava/lang/Long;)ﬂ
+‹
+ö
+çD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/DeclarationService.java˛ ˛(K
+studyPeriodIdjava.lang.Long"__id*
+
+%1java.lang.Long*
+8
+9*»
+1ö
+çD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/DeclarationService.javaã ã("•
+ö
+çD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/DeclarationService.javaã ã(
+"":
+schoolIdjava.lang.LongB+)
+'ee.hitsa.ois.service.DeclarationService

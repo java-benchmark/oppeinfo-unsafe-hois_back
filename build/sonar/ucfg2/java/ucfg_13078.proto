@@ -1,0 +1,175 @@
+
+±ee.hitsa.ois.service.GradingSchemaService#areStudyYearsUnique(Lee/hitsa/ois/domain/gradingschema/GradingSchema;Lee/hitsa/ois/web/commandobject/gradingschema/GradingSchemaForm;)Zú
+èD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/GradingSchemaService.javaØ Ø(&"1*‹H
+1ú
+èD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/GradingSchemaService.java∞= ∞(V™
+ß
+ú
+èD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/GradingSchemaService.java∞= ±(U
+%0java.lang.String"__concat*
+from grading_schema gs *GE
+Cjoin grading_schema_study_year gsy on gsy.grading_schema_id = gs.id˙˜
+ú
+èD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/GradingSchemaService.java∞' ∞(<-
+%1'ee.hitsa.ois.util.JpaNativeQueryBuilder"'ee.hitsa.ois.util.JpaNativeQueryBuilder∏
+µ
+ú
+èD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/GradingSchemaService.java∞# ±(V
+%2"Cee.hitsa.ois.util.JpaNativeQueryBuilder#<init>(Ljava/lang/String;)V*/
+-
+%1'ee.hitsa.ois.util.JpaNativeQueryBuilder*
+
+%0java.lang.Stringà
+Ö
+ú
+èD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/GradingSchemaService.java∞ ±(W-
+qb'ee.hitsa.ois.util.JpaNativeQueryBuilder"__id*/
+-
+%1'ee.hitsa.ois.util.JpaNativeQueryBuilder√¿
+ú
+èD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/GradingSchemaService.java≥L ≥(a
+%3java.lang.Long"<ee.hitsa.ois.domain.BaseEntityWithId#getId()Ljava/lang/Long;*B
+@
+gradingSchema/ee.hitsa.ois.domain.gradingschema.GradingSchema2getId()‰·
+ú
+èD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/GradingSchemaService.java≥ ≥(b
+
+%4void"oee.hitsa.ois.util.JpaNativeQueryBuilder#optionalCriteria(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Long;)V*/
+-
+qb'ee.hitsa.ois.util.JpaNativeQueryBuilder*
+gs.id != :gradingSchemaId*
+gradingSchemaId*
+
+%3java.lang.Long2FoptionalCriteria(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Long;)¸˘
+ú
+èD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/GradingSchemaService.java¥U ¥(n'
+%5!ee.hitsa.ois.domain.school.School"^ee.hitsa.ois.domain.gradingschema.GradingSchema#getSchool()Lee/hitsa/ois/domain/school/School;*B
+@
+gradingSchema/ee.hitsa.ois.domain.gradingschema.GradingSchema2getSchool()·
+ﬁ
+ú
+èD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/GradingSchemaService.java¥D ¥(o
+%6java.lang.Long"Zee.hitsa.ois.util.EntityUtil#getId(Lee/hitsa/ois/domain/BaseEntityWithId;)Ljava/lang/Long;* "
+ee.hitsa.ois.util.EntityUtil*)
+'
+%5!ee.hitsa.ois.domain.school.School‹Ÿ
+ú
+èD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/GradingSchemaService.java¥ ¥(p
+
+%7void"oee.hitsa.ois.util.JpaNativeQueryBuilder#requiredCriteria(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Long;)V*/
+-
+qb'ee.hitsa.ois.util.JpaNativeQueryBuilder*
+gs.school_id = :schoolId*
+
+schoolId*
+
+%6java.lang.Long2FrequiredCriteria(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Long;)ËÂ
+ú
+èD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/GradingSchemaService.javaµP µ(o
+%8java.lang.Boolean"Tee.hitsa.ois.domain.gradingschema.GradingSchema#getIsVocational()Ljava/lang/Boolean;*B
+@
+gradingSchema/ee.hitsa.ois.domain.gradingschema.GradingSchema2getIsVocational()ÒÓ
+ú
+èD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/GradingSchemaService.javaµ µ(p
+
+%9void"ree.hitsa.ois.util.JpaNativeQueryBuilder#requiredCriteria(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Boolean;)V*/
+-
+qb'ee.hitsa.ois.util.JpaNativeQueryBuilder*$"
+ gs.is_vocational = :isVocational*
+isVocational*
+
+%8java.lang.Boolean2IrequiredCriteria(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Boolean;)·ﬁ
+ú
+èD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/GradingSchemaService.java∂D ∂(_
+%10java.lang.Boolean"Pee.hitsa.ois.domain.gradingschema.GradingSchema#getIsHigher()Ljava/lang/Boolean;*B
+@
+gradingSchema/ee.hitsa.ois.domain.gradingschema.GradingSchema2getIsHigher()Á‰
+ú
+èD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/GradingSchemaService.java∂ ∂(`
+%11void"ree.hitsa.ois.util.JpaNativeQueryBuilder#requiredCriteria(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Boolean;)V*/
+-
+qb'ee.hitsa.ois.util.JpaNativeQueryBuilder*
+gs.is_higher = :isHigher*
+
+isHigher*
+
+%10java.lang.Boolean2IrequiredCriteria(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Boolean;)ﬂ‹
+ú
+èD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/GradingSchemaService.java∑A ∑([
+%12java.lang.Boolean"Oee.hitsa.ois.domain.gradingschema.GradingSchema#getIsBasic()Ljava/lang/Boolean;*B
+@
+gradingSchema/ee.hitsa.ois.domain.gradingschema.GradingSchema2getIsBasic()‰·
+ú
+èD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/GradingSchemaService.java∑ ∑(\
+%13void"ree.hitsa.ois.util.JpaNativeQueryBuilder#requiredCriteria(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Boolean;)V*/
+-
+qb'ee.hitsa.ois.util.JpaNativeQueryBuilder*
+gs.is_basic = :isBasic*	
+isBasic*
+
+%12java.lang.Boolean2IrequiredCriteria(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Boolean;)Á‰
+ú
+èD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/GradingSchemaService.java∏M ∏(k
+%14java.lang.Boolean"See.hitsa.ois.domain.gradingschema.GradingSchema#getIsSecondary()Ljava/lang/Boolean;*B
+@
+gradingSchema/ee.hitsa.ois.domain.gradingschema.GradingSchema2getIsSecondary()Ì
+ú
+èD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/GradingSchemaService.java∏ ∏(l
+%15void"ree.hitsa.ois.util.JpaNativeQueryBuilder#requiredCriteria(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Boolean;)V*/
+-
+qb'ee.hitsa.ois.util.JpaNativeQueryBuilder*" 
+gs.is_secondary = :isSecondary*
+isSecondary*
+
+%14java.lang.Boolean2IrequiredCriteria(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Boolean;)ÙÒ
+ú
+èD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/GradingSchemaService.javaπT π(h
+%16java.util.List"^ee.hitsa.ois.web.commandobject.gradingschema.GradingSchemaForm#getStudyYears()Ljava/util/List;*H
+F
+form>ee.hitsa.ois.web.commandobject.gradingschema.GradingSchemaForm2getStudyYears()˙˜
+ú
+èD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/GradingSchemaService.javaπ π(i
+%17void"uee.hitsa.ois.util.JpaNativeQueryBuilder#requiredCriteria(Ljava/lang/String;Ljava/lang/String;Ljava/util/Collection;)V*/
+-
+qb'ee.hitsa.ois.util.JpaNativeQueryBuilder*(&
+$gsy.study_year_id in (:studyYearIds)*
+studyYearIds*
+
+%16java.util.List2LrequiredCriteria(Ljava/lang/String;Ljava/lang/String;Ljava/util/Collection;)á
+Ñ
+ú
+èD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/GradingSchemaService.javaª+ ª(-&
+%18javax.persistence.EntityManager"__id*5*3+
+)ee.hitsa.ois.service.GradingSchemaService"
+em‰·
+ú
+èD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/GradingSchemaService.javaª ª(.
+%19javax.persistence.Query"|ee.hitsa.ois.util.JpaNativeQueryBuilder#select(Ljava/lang/String;Ljavax/persistence/EntityManager;)Ljavax/persistence/Query;*/
+-
+qb'ee.hitsa.ois.util.JpaNativeQueryBuilder*
+
+gsy.id*(
+&
+%18javax.persistence.EntityManager2;select(Ljava/lang/String;Ljavax/persistence/EntityManager;)•¢
+ú
+èD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/GradingSchemaService.javaª ª(>
+%20java.util.List"7javax.persistence.Query#getResultList()Ljava/util/List;* 
+
+%19javax.persistence.Query2getResultList()Ÿ
+÷
+ú
+èD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/GradingSchemaService.javaª ª(?
+datajava.util.List"__id*
+
+%20java.util.ListÚÔ
+ú
+èD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/GradingSchemaService.javaº º(
+%21boolean"java.util.List#isEmpty()Z*
+
+datajava.util.List2	isEmpty()"ß
+ú
+èD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/GradingSchemaService.javaº º(
+"":@
+gradingSchema/ee.hitsa.ois.domain.gradingschema.GradingSchema:F
+form>ee.hitsa.ois.web.commandobject.gradingschema.GradingSchemaFormB-+
+)ee.hitsa.ois.service.GradingSchemaService

@@ -1,0 +1,159 @@
+
+∞ee.hitsa.ois.service.StudentCardService#search(Lee/hitsa/ois/service/security/HoisUserDetails;Lee/hitsa/ois/web/commandobject/student/StudentCardSearchCommand;)Ljava/util/List;ò
+çD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/StudentCardService.java`' `(-"1*˙9
+1ò
+çD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/StudentCardService.javaa= a(Nˇ
+¸
+ò
+çD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/StudentCardService.javaa= b(8
+%0java.lang.String"__concat*
+from student s *(&
+$join person p on p.id = s.person_id ò
+ï
+ò
+çD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/StudentCardService.javaa= c(L
+%1java.lang.String"__concat*
+
+%0java.lang.String*<:
+8left join student_group sg on sg.id = s.student_group_idˆÛ
+ò
+çD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/StudentCardService.javaa' a(<-
+%2'ee.hitsa.ois.util.JpaNativeQueryBuilder"'ee.hitsa.ois.util.JpaNativeQueryBuilder¥
+±
+ò
+çD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/StudentCardService.javaa# c(M
+%3"Cee.hitsa.ois.util.JpaNativeQueryBuilder#<init>(Ljava/lang/String;)V*/
+-
+%2'ee.hitsa.ois.util.JpaNativeQueryBuilder*
+
+%1java.lang.StringÑ
+Å
+ò
+çD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/StudentCardService.javaa c(N-
+qb'ee.hitsa.ois.util.JpaNativeQueryBuilder"__id*/
+-
+%2'ee.hitsa.ois.util.JpaNativeQueryBuilder‚
+ﬂ
+ò
+çD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/StudentCardService.javad d("4
+%4.org.springframework.data.domain.Sort$Direction"__id*
+""‚
+ﬂ
+ò
+çD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/StudentCardService.javad d(&4
+%5.org.springframework.data.domain.Sort$Direction"__id*
+""Ì
+ò
+çD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/StudentCardService.javad d(*
+%6$org.springframework.data.domain.Sort"$org.springframework.data.domain.Sortö
+ó
+ò
+çD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/StudentCardService.javad d(B
+%7"qorg.springframework.data.domain.Sort#<init>(Lorg/springframework/data/domain/Sort$Direction;[Ljava/lang/String;)V*,
+*
+%6$org.springframework.data.domain.Sort*6
+4
+%5.org.springframework.data.domain.Sort$Direction*
+p.lastname, p.firstnameŸ÷
+ò
+çD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/StudentCardService.javad d(C-
+%8'ee.hitsa.ois.util.JpaNativeQueryBuilder"}ee.hitsa.ois.util.JpaNativeQueryBuilder#sort(Lorg/springframework/data/domain/Sort;)Lee/hitsa/ois/util/JpaNativeQueryBuilder;*/
+-
+qb'ee.hitsa.ois.util.JpaNativeQueryBuilder*,
+*
+%6$org.springframework.data.domain.Sort2,sort(Lorg/springframework/data/domain/Sort;)Ë
+Â
+ò
+çD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/StudentCardService.javae e(-
+
+%9void"’ee.hitsa.ois.service.StudentCardService#setSearchCriteria(Lee/hitsa/ois/util/JpaNativeQueryBuilder;Lee/hitsa/ois/service/security/HoisUserDetails;Lee/hitsa/ois/web/commandobject/student/StudentCardSearchCommand;)V*+")
+'ee.hitsa.ois.service.StudentCardService*/
+-
+qb'ee.hitsa.ois.util.JpaNativeQueryBuilder*7
+5
+user-ee.hitsa.ois.service.security.HoisUserDetails*M
+K
+criteria?ee.hitsa.ois.web.commandobject.student.StudentCardSearchCommandó
+î
+ò
+çD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/StudentCardService.javaf4 f(E-
+%10&ee.hitsa.ois.service.ClassifierService"__id*B*@)
+'ee.hitsa.ois.service.StudentCardService"
+classifierServiceâÜ
+ò
+çD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/StudentCardService.javaf$ f(37
+%110ee.hitsa.ois.util.ClassifierUtil$ClassifierCache"0ee.hitsa.ois.util.ClassifierUtil$ClassifierCacheı
+Ú
+ò
+çD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/StudentCardService.javaf  f(F
+%12"bee.hitsa.ois.util.ClassifierUtil$ClassifierCache#<init>(Lee/hitsa/ois/service/ClassifierService;)V*9
+7
+%110ee.hitsa.ois.util.ClassifierUtil$ClassifierCache*/
+-
+%10&ee.hitsa.ois.service.ClassifierServiceö
+ó
+ò
+çD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/StudentCardService.javaf f(G9
+cache0ee.hitsa.ois.util.ClassifierUtil$ClassifierCache"__id*9
+7
+%110ee.hitsa.ois.util.ClassifierUtil$ClassifierCache≈
+¬
+ò
+çD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/StudentCardService.javah$ h(1
+%13java.lang.String"__id*
+""Å
+˛
+ò
+çD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/StudentCardService.javah3 h(5&
+%14javax.persistence.EntityManager"__id*3*1)
+'ee.hitsa.ois.service.StudentCardService"
+emÔÏ
+ò
+çD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/StudentCardService.javah h(6
+%15javax.persistence.Query"|ee.hitsa.ois.util.JpaNativeQueryBuilder#select(Ljava/lang/String;Ljavax/persistence/EntityManager;)Ljavax/persistence/Query;*/
+-
+qb'ee.hitsa.ois.util.JpaNativeQueryBuilder*
+
+%13java.lang.String*(
+&
+%14javax.persistence.EntityManager2;select(Ljava/lang/String;Ljavax/persistence/EntityManager;)°û
+ò
+çD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/StudentCardService.javah h(F
+%16java.util.List"7javax.persistence.Query#getResultList()Ljava/util/List;* 
+
+%15javax.persistence.Query2getResultList()ÿ
+’
+ò
+çD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/StudentCardService.javah h(G
+resultsjava.util.List"__id*
+
+%16java.util.Listñ
+ì
+ò
+çD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/StudentCardService.javai' k(	"
+%17java.util.function.Function"__declareFunction*?=
+;__sonar_lambda_1789$ee.hitsa.ois.service.StudentCardServiceè
+å
+
+__unknown_file (-
+"
+%17java.util.function.Function"
+cache"__id*;
+9
+cache0ee.hitsa.ois.util.ClassifierUtil$ClassifierCacheä
+á
+ò
+çD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/StudentCardService.javai k(
+%21java.util.List"nee.hitsa.ois.util.StreamUtil#toMappedList(Ljava/util/function/Function;Ljava/util/Collection;)Ljava/util/List;* "
+ee.hitsa.ois.util.StreamUtil*$
+"
+%17java.util.function.Function*
+
+resultsjava.util.List"¥
+ò
+çD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/StudentCardService.javai k(
+
+%21java.util.List:5
+user-ee.hitsa.ois.service.security.HoisUserDetails:K
+criteria?ee.hitsa.ois.web.commandobject.student.StudentCardSearchCommandB+)
+'ee.hitsa.ois.service.StudentCardService

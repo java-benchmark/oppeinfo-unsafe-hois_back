@@ -1,0 +1,96 @@
+
+∆ee.hitsa.ois.web.ReportController#educationalSuccess(Lee/hitsa/ois/service/security/HoisUserDetails;Lee/hitsa/ois/web/commandobject/StudentAutocompleteCommand;)Lorg/springframework/data/domain/Page;î
+áD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/web/ReportController.java”$ ”(6"startingBlock*€	
+startingBlockî
+áD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/web/ReportController.java”6 ”(où
+ö
+î
+áD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/web/ReportController.java“ “(8
+%8"
+__annotate*64
+2org.springframework.web.bind.annotation.GetMapping*7
+5
+user-ee.hitsa.ois.service.security.HoisUserDetailsÁ
+‰
+î
+áD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/web/ReportController.java”G ”(K5
+user-ee.hitsa.ois.service.security.HoisUserDetails"__annotation*
+
+%8´
+®
+î
+áD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/web/ReportController.java“ “(8
+%9"
+__annotate*64
+2org.springframework.web.bind.annotation.GetMapping*E
+C
+lookup9ee.hitsa.ois.web.commandobject.StudentAutocompleteCommandı
+Ú
+î
+áD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/web/ReportController.java”h ”(nC
+lookup9ee.hitsa.ois.web.commandobject.StudentAutocompleteCommand"__annotation*
+
+%9*
+1*ˇ
+1î
+áD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/web/ReportController.java‘ ‘(Õ
+ 
+î
+áD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/web/ReportController.java‘; ‘(M#
+%0ee.hitsa.ois.enums.Permission"__id*
+""”
+–
+î
+áD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/web/ReportController.java‘O ‘(q)
+%1#ee.hitsa.ois.enums.PermissionObject"__id*
+""ä
+á
+î
+áD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/web/ReportController.java‘ ‘(r
+
+%2void"¥ee.hitsa.ois.util.UserUtil#assertIsSchoolAdminOrLeadingTeacher(Lee/hitsa/ois/service/security/HoisUserDetails;Lee/hitsa/ois/enums/Permission;Lee/hitsa/ois/enums/PermissionObject;)V*"
+ee.hitsa.ois.util.UserUtil*7
+5
+user-ee.hitsa.ois.service.security.HoisUserDetails*%
+#
+%0ee.hitsa.ois.enums.Permission*+
+)
+%1#ee.hitsa.ois.enums.PermissionObjectØ
+¨
+î
+áD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/web/ReportController.java’ ’(D:
+%34ee.hitsa.ois.service.EducationalSuccessReportService"__id*Q*O#
+!ee.hitsa.ois.web.ReportController"(
+&educationalSuccessTeacherReportService≈¬
+î
+áD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/web/ReportController.java’N ’(`
+%4java.lang.Long"Kee.hitsa.ois.service.security.HoisUserDetails#getSchoolId()Ljava/lang/Long;*7
+5
+user-ee.hitsa.ois.service.security.HoisUserDetails2getSchoolId()¡æ
+î
+áD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/web/ReportController.java’ ’(i
+%5java.util.List"öee.hitsa.ois.service.EducationalSuccessReportService#students(Ljava/lang/Long;Lee/hitsa/ois/web/commandobject/StudentAutocompleteCommand;)Ljava/util/List;*<
+:
+%34ee.hitsa.ois.service.EducationalSuccessReportService*
+
+%4java.lang.Long*E
+C
+lookup9ee.hitsa.ois.web.commandobject.StudentAutocompleteCommand2Ustudents(Ljava/lang/Long;Lee/hitsa/ois/web/commandobject/StudentAutocompleteCommand;)ÙÒ
+î
+áD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/web/ReportController.java’ ’(.
+%6(org.springframework.data.domain.PageImpl"(org.springframework.data.domain.PageImplÆ
+´
+î
+áD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/web/ReportController.java’ ’(j
+%7"Borg.springframework.data.domain.PageImpl#<init>(Ljava/util/List;)V*0
+.
+%6(org.springframework.data.domain.PageImpl*
+
+%5java.util.List"…
+î
+áD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/web/ReportController.java’ ’(k0
+.
+%6(org.springframework.data.domain.PageImpl:5
+user-ee.hitsa.ois.service.security.HoisUserDetails:C
+lookup9ee.hitsa.ois.web.commandobject.StudentAutocompleteCommandB%#
+!ee.hitsa.ois.web.ReportController

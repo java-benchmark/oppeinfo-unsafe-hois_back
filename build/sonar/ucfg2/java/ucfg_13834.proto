@@ -1,0 +1,262 @@
+
+xee.hitsa.ois.service.ApelApplicationService#finishedAbroadStudies(Lee/hitsa/ois/domain/student/Student;)Ljava/util/List;ž
+‘D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/ApelApplicationService.javaê& ê(;"1*æc
+1ž
+‘D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/ApelApplicationService.javaë= ë(X–
+“
+ž
+‘D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/ApelApplicationService.javaë= ì(?
+%0java.lang.String"__concat*
+from directive_student ds*/-
++ join directive d on d.id = ds.directive_id•
+’
+ž
+‘D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/ApelApplicationService.javaë= í(C
+%1java.lang.String"__concat*
+
+%0java.lang.String*31
+/ join application a on a.id = ds.application_id­
+ª
+ž
+‘D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/ApelApplicationService.javaë= î([
+%2java.lang.String"__concat*
+
+%1java.lang.String*KI
+G left join application_planned_subject aps on aps.application_id = a.id»
+¸
+ž
+‘D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/ApelApplicationService.javaë= ï(i
+%3java.lang.String"__concat*
+
+%2java.lang.String*YW
+U left join apel_application_record aar on aar.application_planned_subject_id = aps.id°
+­
+ž
+‘D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/ApelApplicationService.javaë= ð(^
+%4java.lang.String"__concat*
+
+%3java.lang.String*NL
+J left join study_period sp_start on sp_start.id = ds.study_period_start_idª
+§
+ž
+‘D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/ApelApplicationService.javaë= ñ(X
+%5java.lang.String"__concat*
+
+%4java.lang.String*HF
+D left join study_period sp_end on sp_end.id = ds.study_period_end_idÅ
+Â
+ž
+‘D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/ApelApplicationService.javaë= ò(s
+%6java.lang.String"__concat*
+
+%5java.lang.String*ca
+_ left join (directive_student ds_katk join directive d_katk on d_katk.id = ds_katk.directive_id»
+¸
+ž
+‘D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/ApelApplicationService.javaë= ó(m
+%7java.lang.String"__concat*
+
+%6java.lang.String*YW
+U and d_katk.type_code = :katkDirectiveType and d_katk.status_code = :directiveStatus)«
+¨
+ž
+‘D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/ApelApplicationService.javaë= ô(]
+%8java.lang.String"__concat*
+
+%7java.lang.String*IG
+E on ds_katk.directive_student_id = ds.id and ds_katk.canceled = falseüù
+ž
+‘D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/ApelApplicationService.javaë' ë(<-
+%9'ee.hitsa.ois.util.JpaNativeQueryBuilder"'ee.hitsa.ois.util.JpaNativeQueryBuilder»
+¸
+ž
+‘D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/ApelApplicationService.javaë# ô(^
+%10"Cee.hitsa.ois.util.JpaNativeQueryBuilder#<init>(Ljava/lang/String;)V*/
+-
+%9'ee.hitsa.ois.util.JpaNativeQueryBuilder*
+
+%8java.lang.StringŠ
+‡
+ž
+‘D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/ApelApplicationService.javaë ô(_-
+qb'ee.hitsa.ois.util.JpaNativeQueryBuilder"__id*/
+-
+%9'ee.hitsa.ois.util.JpaNativeQueryBuilder´±
+ž
+‘D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/ApelApplicationService.javaõG õ(V
+%11java.lang.Long"<ee.hitsa.ois.domain.BaseEntityWithId#getId()Ljava/lang/Long;*0
+.
+student#ee.hitsa.ois.domain.student.Student2getId()ãà
+ž
+‘D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/ApelApplicationService.javaõ õ(W
+%12void"oee.hitsa.ois.util.JpaNativeQueryBuilder#requiredCriteria(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Long;)V*/
+-
+qb'ee.hitsa.ois.util.JpaNativeQueryBuilder*
+ds.student_id = :studentId*
+	studentId*
+
+%11java.lang.Long2FrequiredCriteria(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Long;)‰
+†
+ž
+‘D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/ApelApplicationService.java÷ ÷((
+%13java.time.LocalDate".java.time.LocalDate#now()Ljava/time/LocalDate;*"
+java.time.LocalDate—”
+ž
+‘D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/ApelApplicationService.javaö ÷()
+%14void"tee.hitsa.ois.util.JpaNativeQueryBuilder#requiredCriteria(Ljava/lang/String;Ljava/lang/String;Ljava/time/LocalDate;)V*/
+-
+qb'ee.hitsa.ois.util.JpaNativeQueryBuilder*GE
+Ccoalesce(ds_katk.start_date, sp_end.end_date, ds.end_date) < :today*	
+today*
+
+%13java.time.LocalDate2KrequiredCriteria(Ljava/lang/String;Ljava/lang/String;Ljava/time/LocalDate;)Û
+Ø
+ž
+‘D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/ApelApplicationService.javaøM ø(i'
+%15 ee.hitsa.ois.enums.DirectiveType"__id*
+""ûø
+ž
+‘D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/ApelApplicationService.javaø ø(j
+%16void"oee.hitsa.ois.util.JpaNativeQueryBuilder#requiredCriteria(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Enum;)V*/
+-
+qb'ee.hitsa.ois.util.JpaNativeQueryBuilder* 
+d.type_code = :directiveType*
+directiveType*)
+'
+%15 ee.hitsa.ois.enums.DirectiveType2FrequiredCriteria(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Enum;)Ý
+Ú
+ž
+‘D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/ApelApplicationService.javaú ú(;)
+%17"ee.hitsa.ois.enums.DirectiveStatus"__id*
+""›˜
+ž
+‘D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/ApelApplicationService.javaù ú(<
+%18void"oee.hitsa.ois.util.JpaNativeQueryBuilder#requiredCriteria(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Enum;)V*/
+-
+qb'ee.hitsa.ois.util.JpaNativeQueryBuilder*<:
+8d.status_code = :directiveStatus and ds.canceled = false*
+directiveStatus*+
+)
+%17"ee.hitsa.ois.enums.DirectiveStatus2FrequiredCriteria(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Enum;)åâ
+ž
+‘D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/ApelApplicationService.javaû û(1
+%19void"Cee.hitsa.ois.util.JpaNativeQueryBuilder#filter(Ljava/lang/String;)V*/
+-
+qb'ee.hitsa.ois.util.JpaNativeQueryBuilder* 
+a.apel_school_id is not null2filter(Ljava/lang/String;)Û
+Ø
+ž
+‘D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/ApelApplicationService.javaü* ü(J'
+%20 ee.hitsa.ois.enums.DirectiveType"__id*
+""™–
+ž
+‘D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/ApelApplicationService.javaü* ü(Q
+%21java.lang.String"'java.lang.Enum#name()Ljava/lang/String;*)
+'
+%20 ee.hitsa.ois.enums.DirectiveType2name()Ÿœ
+ž
+‘D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/ApelApplicationService.javaü ü(R
+%22void"Xee.hitsa.ois.util.JpaNativeQueryBuilder#parameter(Ljava/lang/String;Ljava/lang/Object;)V*/
+-
+qb'ee.hitsa.ois.util.JpaNativeQueryBuilder*
+katkDirectiveType*
+
+%21java.lang.String2/parameter(Ljava/lang/String;Ljava/lang/Object;)ã
+à
+ž
+‘D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/ApelApplicationService.javaý# ý(G/
+%23(ee.hitsa.ois.enums.ApelApplicationStatus"__id*
+""¡ž
+ž
+‘D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/ApelApplicationService.javaý# ý(N
+%24java.lang.String"'java.lang.Enum#name()Ljava/lang/String;*1
+/
+%23(ee.hitsa.ois.enums.ApelApplicationStatus2name()˜•
+ž
+‘D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/ApelApplicationService.javaý ý(O
+%25void"Xee.hitsa.ois.util.JpaNativeQueryBuilder#parameter(Ljava/lang/String;Ljava/lang/Object;)V*/
+-
+qb'ee.hitsa.ois.util.JpaNativeQueryBuilder*
+
+apelStatus*
+
+%24java.lang.String2/parameter(Ljava/lang/String;Ljava/lang/Object;)ê
+ç
+ž
+‘D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/ApelApplicationService.javaÿ! €	(Y
+%26java.lang.String"__concat*VT
+Ra.id a_id, aps.id aps_id, coalesce(sp_start.start_date, ds.start_date) start_date,*IG
+E coalesce(ds_katk.start_date, sp_end.end_date, ds.end_date) end_date,¡
+ž
+ž
+‘D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/ApelApplicationService.javaÿ! 	(M
+%27java.lang.String"__concat*
+
+%26java.lang.String*=;
+9 exists (select aar2.id from apel_application_record aar2§
+¤
+ž
+‘D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/ApelApplicationService.javaÿ! ‚	(S
+%28java.lang.String"__concat*
+
+%27java.lang.String*CA
+? join apel_application aa2 on aa2.id = aar2.apel_application_idÎ
+Ë
+ž
+‘D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/ApelApplicationService.javaÿ! ƒ	(z
+%29java.lang.String"__concat*
+
+%28java.lang.String*jh
+f where aar2.application_planned_subject_id = aps.id and aa2.status_code != :apelStatus) as transferred‹
+ˆ
+ž
+‘D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/ApelApplicationService.javaƒ	| ƒ	(~&
+%30javax.persistence.EntityManager"__id*7*5-
++ee.hitsa.ois.service.ApelApplicationService"
+emõò
+ž
+‘D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/ApelApplicationService.javaÿ ƒ	(
+%31javax.persistence.Query"|ee.hitsa.ois.util.JpaNativeQueryBuilder#select(Ljava/lang/String;Ljavax/persistence/EntityManager;)Ljavax/persistence/Query;*/
+-
+qb'ee.hitsa.ois.util.JpaNativeQueryBuilder*
+
+%29java.lang.String*(
+&
+%30javax.persistence.EntityManager2;select(Ljava/lang/String;Ljavax/persistence/EntityManager;)§¤
+ž
+‘D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/ApelApplicationService.javaÿ „	( 
+%32java.util.List"7javax.persistence.Query#getResultList()Ljava/util/List;* 
+
+%31javax.persistence.Query2getResultList()Û
+Ø
+ž
+‘D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/ApelApplicationService.javaÿ „	(!
+datajava.util.List"__id*
+
+%32java.util.List 
+
+ž
+‘D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/ApelApplicationService.java…	L †	(l"
+%33java.util.function.Function"__declareFunction*CA
+?__sonar_lambda_1760$ee.hitsa.ois.service.ApelApplicationService
+Š
+ž
+‘D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/ApelApplicationService.java…	4 †	(s
+%41java.util.List"nee.hitsa.ois.util.StreamUtil#toMappedList(Ljava/util/function/Function;Ljava/util/Collection;)Ljava/util/List;* "
+ee.hitsa.ois.util.StreamUtil*$
+"
+%33java.util.function.Function*
+
+datajava.util.Listæ
+ã
+ž
+‘D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/ApelApplicationService.java…	 †	(t!
+plannedSubjectsjava.util.List"__id*
+
+%41java.util.List"Æ
+ž
+‘D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/ApelApplicationService.java‡	 ‡	(#
+!
+plannedSubjectsjava.util.List:.
+student#ee.hitsa.ois.domain.student.StudentB/-
++ee.hitsa.ois.service.ApelApplicationService

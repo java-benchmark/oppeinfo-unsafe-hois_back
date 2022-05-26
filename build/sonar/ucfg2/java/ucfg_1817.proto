@@ -1,0 +1,132 @@
+
+bee.hitsa.ois.service.TeacherDetailLoadService#journalStudentGroups(Ljava/util/Set;)Ljava/util/Map; 
+“D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/TeacherDetailLoadService.javaÈ	# È	(7"1*²0
+1 
+“D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/TeacherDetailLoadService.javaÉ	 É	(Ž
+‹
+ 
+“D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/TeacherDetailLoadService.javaÉ	 É	(%
+%0javax.persistence.EntityManager"__id*9*7/
+-ee.hitsa.ois.service.TeacherDetailLoadService"
+em¯
+¬
+ 
+“D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/TeacherDetailLoadService.javaÉ	, Ê	(L
+%1java.lang.String"__concat*'%
+#select j.id, sg.code from journal j*<:
+8 join journal_omodule_theme jot on jot.journal_id = j.idª
+§
+ 
+“D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/TeacherDetailLoadService.javaÉ	, Ë	(V
+%2java.lang.String"__concat*
+
+%1java.lang.String*FD
+B join lesson_plan_module lpm on jot.lesson_plan_module_id = lpm.idš
+—
+ 
+“D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/TeacherDetailLoadService.javaÉ	, Ì	(F
+%3java.lang.String"__concat*
+
+%2java.lang.String*64
+2 join lesson_plan lp on lpm.lesson_plan_id = lp.id
+š
+ 
+“D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/TeacherDetailLoadService.javaÉ	, Í	(I
+%4java.lang.String"__concat*
+
+%3java.lang.String*97
+5 join student_group sg on lp.student_group_id = sg.id„
+
+ 
+“D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/TeacherDetailLoadService.javaÉ	, Î	(0
+%5java.lang.String"__concat*
+
+%4java.lang.String* 
+ where j.id in (:journalIds)Œ
+ 
+“D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/TeacherDetailLoadService.javaÉ	 Î	(1
+%6javax.persistence.Query"^javax.persistence.EntityManager#createNativeQuery(Ljava/lang/String;)Ljavax/persistence/Query;*'
+%
+%0javax.persistence.EntityManager*
+
+%5java.lang.String2%createNativeQuery(Ljava/lang/String;)®«
+ 
+“D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/TeacherDetailLoadService.javaÉ	 Ï	(7
+%7javax.persistence.Query"cjavax.persistence.Query#setParameter(Ljava/lang/String;Ljava/lang/Object;)Ljavax/persistence/Query;*
+
+%6javax.persistence.Query*
+
+journalIds*
+
+
+journalIdsjava.util.Set22setParameter(Ljava/lang/String;Ljava/lang/Object;)§¤
+ 
+“D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/TeacherDetailLoadService.javaÉ	 Ð	( 
+%8java.util.List"7javax.persistence.Query#getResultList()Ljava/util/List;*
+
+%7javax.persistence.Query2getResultList()Ü
+Ù
+ 
+“D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/TeacherDetailLoadService.javaÉ	 Ð	(!
+datajava.util.List"__id*
+
+%8java.util.ListÅ
+Â
+ 
+“D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/TeacherDetailLoadService.javaÑ	 Ñ	(,
+%9java.util.List"Kee.hitsa.ois.util.StreamUtil#nullSafeList(Ljava/util/List;)Ljava/util/List;* "
+ee.hitsa.ois.util.StreamUtil*
+
+datajava.util.List 
+ 
+“D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/TeacherDetailLoadService.javaÑ	 Ñ	(5
+%10java.util.stream.Stream"6java.util.Collection#stream()Ljava/util/stream/Stream;*
+
+%9java.util.List2stream()£
+ 
+ 
+“D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/TeacherDetailLoadService.javaÑ	T Ñ	(k"
+%11java.util.function.Function"__declareFunction*DB
+@__sonar_lambda_252$ee.hitsa.ois.service.TeacherDetailLoadService£
+ 
+ 
+“D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/TeacherDetailLoadService.javaÒ	# Ò	(<"
+%13java.util.function.Function"__declareFunction*DB
+@__sonar_lambda_253$ee.hitsa.ois.service.TeacherDetailLoadService«
+¨
+ 
+“D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/TeacherDetailLoadService.javaÒ	> Ò	(P!
+%15java.util.stream.Collector"?java.util.stream.Collectors#toSet()Ljava/util/stream/Collector;*"
+java.util.stream.Collectors±
+®
+ 
+“D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/TeacherDetailLoadService.javaÒ	 Ò	(Q!
+%16java.util.stream.Collector"zjava.util.stream.Collectors#mapping(Ljava/util/function/Function;Ljava/util/stream/Collector;)Ljava/util/stream/Collector;*"
+java.util.stream.Collectors*$
+"
+%13java.util.function.Function*#
+!
+%15java.util.stream.Collector´
+±
+ 
+“D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/TeacherDetailLoadService.javaÑ	> Ò	(R!
+%17java.util.stream.Collector"}java.util.stream.Collectors#groupingBy(Ljava/util/function/Function;Ljava/util/stream/Collector;)Ljava/util/stream/Collector;*"
+java.util.stream.Collectors*$
+"
+%11java.util.function.Function*#
+!
+%16java.util.stream.Collectorûø
+ 
+“D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/TeacherDetailLoadService.javaÑ	 Ò	(S
+%18java.util.Map"Ojava.util.stream.Stream#collect(Ljava/util/stream/Collector;)Ljava/lang/Object;* 
+
+%10java.util.stream.Stream*#
+!
+%17java.util.stream.Collector2%collect(Ljava/util/stream/Collector;)"»
+ 
+“D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/TeacherDetailLoadService.javaÑ	 Ò	(T
+
+%18java.util.Map:
+
+journalIdsjava.util.SetB1/
+-ee.hitsa.ois.service.TeacherDetailLoadService

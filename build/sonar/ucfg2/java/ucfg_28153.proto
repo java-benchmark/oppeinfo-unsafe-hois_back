@@ -1,0 +1,93 @@
+
+êee.hitsa.ois.service.JobService#findExecutableJobsForStudent(Lee/hitsa/ois/domain/student/Student;[Lee/hitsa/ois/enums/JobType;)Ljava/util/List;í
+ÖD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/JobService.java’ ’(1"1*Ü$
+1í
+ÖD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/JobService.java÷! ÷()¡
+æ
+í
+ÖD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/JobService.java÷! ÷(;
+%0java.util.List"Hee.hitsa.ois.util.EnumUtil#toNameList([Ljava/lang/Enum;)Ljava/util/List;*"
+ee.hitsa.ois.util.EnumUtil*'
+%
+typesee.hitsa.ois.enums.JobType[]”
+–
+í
+ÖD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/JobService.java÷ ÷(<
+	typeNamesjava.util.List"__id*
+
+%0java.util.ListÚ
+Ô
+í
+ÖD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/JobService.java◊ ◊(%
+%1javax.persistence.EntityManager"__id*+*)!
+ee.hitsa.ois.service.JobService"
+emôñ
+ì
+ÖD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/JobService.java◊ ◊(¨"
+%2javax.persistence.TypedQuery"njavax.persistence.EntityManager#createQuery(Ljava/lang/String;Ljava/lang/Class;)Ljavax/persistence/TypedQuery;*'
+%
+%1javax.persistence.EntityManager*ÜÉ
+Äselect j from Job j where j.status.code = ?1 and j.type.code in ?2 and j.jobTime <= ?3 and j.student.id = ?4 order by j.inserted*
+""20createQuery(Ljava/lang/String;Ljava/lang/Class;) 
+«
+í
+ÖD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/JobService.javaÿ ÿ(8"
+%3ee.hitsa.ois.enums.JobStatus"__id*
+""áÑ
+í
+ÖD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/JobService.javaÿ ÿ(?
+%4java.lang.String"'java.lang.Enum#name()Ljava/lang/String;*$
+"
+%3ee.hitsa.ois.enums.JobStatus2name()ÉÄ
+í
+ÖD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/JobService.java◊ ÿ(@"
+%5javax.persistence.TypedQuery"\javax.persistence.TypedQuery#setParameter(ILjava/lang/Object;)Ljavax/persistence/TypedQuery;*$
+"
+%2javax.persistence.TypedQuery*2*
+
+%4java.lang.String2!setParameter(ILjava/lang/Object;)àÖ
+í
+ÖD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/JobService.java◊ Ÿ('"
+%6javax.persistence.TypedQuery"\javax.persistence.TypedQuery#setParameter(ILjava/lang/Object;)Ljavax/persistence/TypedQuery;*$
+"
+%5javax.persistence.TypedQuery*2*
+
+	typeNamesjava.util.List2!setParameter(ILjava/lang/Object;)å
+â
+í
+ÖD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/JobService.java⁄ ⁄(0
+%7java.time.LocalDateTime"6java.time.LocalDateTime#now()Ljava/time/LocalDateTime;*"
+java.time.LocalDateTimeäá
+í
+ÖD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/JobService.java◊ ⁄(1"
+%8javax.persistence.TypedQuery"\javax.persistence.TypedQuery#setParameter(ILjava/lang/Object;)Ljavax/persistence/TypedQuery;*$
+"
+%6javax.persistence.TypedQuery*2*
+
+%7java.time.LocalDateTime2!setParameter(ILjava/lang/Object;)ﬁ
+€
+í
+ÖD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/JobService.java€ €(6
+%9java.lang.Long"Zee.hitsa.ois.util.EntityUtil#getId(Lee/hitsa/ois/domain/BaseEntityWithId;)Ljava/lang/Long;* "
+ee.hitsa.ois.util.EntityUtil*0
+.
+student#ee.hitsa.ois.domain.student.StudentÇˇ
+í
+ÖD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/JobService.java◊ €(7#
+%10javax.persistence.TypedQuery"\javax.persistence.TypedQuery#setParameter(ILjava/lang/Object;)Ljavax/persistence/TypedQuery;*$
+"
+%8javax.persistence.TypedQuery*2*
+
+%9java.lang.Long2!setParameter(ILjava/lang/Object;)•¢
+í
+ÖD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/JobService.java◊ ‹(
+%11java.util.List"<javax.persistence.TypedQuery#getResultList()Ljava/util/List;*%
+#
+%10javax.persistence.TypedQuery2getResultList()"Æ
+í
+ÖD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/JobService.java◊ ‹(
+
+%11java.util.List:.
+student#ee.hitsa.ois.domain.student.Student:%
+typesee.hitsa.ois.enums.JobType[]B#!
+ee.hitsa.ois.service.JobService

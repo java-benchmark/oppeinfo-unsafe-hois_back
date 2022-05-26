@@ -1,0 +1,543 @@
+
+√ee.hitsa.ois.service.HigherProtocolService#create(Lee/hitsa/ois/service/security/HoisUserDetails;Lee/hitsa/ois/web/commandobject/HigherProtocolCreateForm;)Lee/hitsa/ois/web/dto/HigherProtocolDto;ù
+êD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/HigherProtocolService.javaµ µ(#"5*¨;
+2ù
+êD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/HigherProtocolService.javaÃ Ã(!â
+Ü
+ù
+êD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/HigherProtocolService.javaÃ Ã(!&
+%44javax.persistence.EntityManager"__id*6*4,
+*ee.hitsa.ois.service.HigherProtocolService"
+emÒ
+Ó
+ù
+êD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/HigherProtocolService.javaÃ4 Õ(p
+%45java.lang.String"__concat*OM
+Kselect d.student_id, sspes.id from subject_study_period_exam_student sspes *XV
+Tjoin subject_study_period_exam sspe on sspes.subject_study_period_exam_id = sspe.id ´
+®
+ù
+êD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/HigherProtocolService.javaÃ4 Œ(`
+%46java.lang.String"__concat*
+
+%45java.lang.String*HF
+Djoin declaration_subject ds on sspes.declaration_subject_id = ds.id ñ
+ì
+ù
+êD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/HigherProtocolService.javaÃ4 œ(K
+%47java.lang.String"__concat*
+
+%46java.lang.String*31
+/join declaration d on ds.declaration_id = d.id •
+¢
+ù
+êD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/HigherProtocolService.javaÃ4 –(Z
+%48java.lang.String"__concat*
+
+%47java.lang.String*B@
+>where sspe.type_code = ?1 and ds.subject_study_period_id = ?2 ◊
+‘
+û
+êD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/HigherProtocolService.javaÃ4 —(ã
+%49java.lang.String"__concat*
+
+%48java.lang.String*sq
+oand not exists (select ps.id from protocol_student ps where ps.subject_study_period_exam_student_id = sspes.id)êç
+û
+êD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/HigherProtocolService.javaÃ —(å
+%50javax.persistence.Query"^javax.persistence.EntityManager#createNativeQuery(Ljava/lang/String;)Ljavax/persistence/Query;*(
+&
+%44javax.persistence.EntityManager*
+
+%49java.lang.String2%createNativeQuery(Ljava/lang/String;)’
+“
+ù
+êD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/HigherProtocolService.java“% “(8"
+%51ee.hitsa.ois.enums.ExamType"__id*
+""ìê
+ù
+êD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/HigherProtocolService.java“% “(?
+%52java.lang.String"'java.lang.Enum#name()Ljava/lang/String;*$
+"
+%51ee.hitsa.ois.enums.ExamType2name()˝˙
+ù
+êD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/HigherProtocolService.javaÃ “(@
+%53javax.persistence.Query"Rjavax.persistence.Query#setParameter(ILjava/lang/Object;)Ljavax/persistence/Query;* 
+
+%50javax.persistence.Query*2*
+
+%52java.lang.String2!setParameter(ILjava/lang/Object;)æª
+ù
+êD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/HigherProtocolService.java”6 ”([A
+%54:ee.hitsa.ois.domain.subject.studyperiod.SubjectStudyPeriod"~ee.hitsa.ois.domain.protocol.ProtocolHdata#getSubjectStudyPeriod()Lee/hitsa/ois/domain/subject/studyperiod/SubjectStudyPeriod;*=
+;
+protocolHData*ee.hitsa.ois.domain.protocol.ProtocolHdata2getSubjectStudyPeriod()˝
+˙
+ù
+êD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/HigherProtocolService.java”% ”(\
+%55java.lang.Long"Zee.hitsa.ois.util.EntityUtil#getId(Lee/hitsa/ois/domain/BaseEntityWithId;)Ljava/lang/Long;* "
+ee.hitsa.ois.util.EntityUtil*C
+A
+%54:ee.hitsa.ois.domain.subject.studyperiod.SubjectStudyPeriod˚¯
+ù
+êD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/HigherProtocolService.javaÃ ”(]
+%56javax.persistence.Query"Rjavax.persistence.Query#setParameter(ILjava/lang/Object;)Ljavax/persistence/Query;* 
+
+%53javax.persistence.Query*2*
+
+%55java.lang.Long2!setParameter(ILjava/lang/Object;)¶£
+ù
+êD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/HigherProtocolService.javaÃ ‘($
+%57java.util.List"7javax.persistence.Query#getResultList()Ljava/util/List;* 
+
+%56javax.persistence.Query2getResultList()⁄
+◊
+ù
+êD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/HigherProtocolService.javaÃ ‘(%
+datajava.util.List"__id*
+
+%57java.util.Listüú
+ù
+êD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/HigherProtocolService.java’ ’(
+%58java.util.stream.Stream"6java.util.Collection#stream()Ljava/util/stream/Stream;*
+
+datajava.util.List2stream()û
+õ
+ù
+êD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/HigherProtocolService.java’7 ’(N"
+%59java.util.function.Function"__declareFunction*B@
+>__sonar_lambda_2724$ee.hitsa.ois.service.HigherProtocolServiceû
+õ
+ù
+êD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/HigherProtocolService.java’P ’(g"
+%61java.util.function.Function"__declareFunction*B@
+>__sonar_lambda_2725$ee.hitsa.ois.service.HigherProtocolService§
+°
+ù
+êD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/HigherProtocolService.java’i ’(t(
+%63!java.util.function.BinaryOperator"__declareFunction*B@
+>__sonar_lambda_2726$ee.hitsa.ois.service.HigherProtocolServiceü
+ú
+û
+êD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/HigherProtocolService.java’v ’(ç"
+%64java.util.function.Supplier"__declareFunction*B@
+>__sonar_lambda_2727$ee.hitsa.ois.service.HigherProtocolServiceÑ
+Å
+
+__unknown_file (9
+"
+%64java.util.function.Supplier"
+examRegistrations"__id*$
+"
+examRegistrationsjava.util.Map¬
+ø
+û
+êD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/HigherProtocolService.java’& ’(é!
+%65java.util.stream.Collector"πjava.util.stream.Collectors#toMap(Ljava/util/function/Function;Ljava/util/function/Function;Ljava/util/function/BinaryOperator;Ljava/util/function/Supplier;)Ljava/util/stream/Collector;*"
+java.util.stream.Collectors*$
+"
+%59java.util.function.Function*$
+"
+%61java.util.function.Function**
+(
+%63!java.util.function.BinaryOperator*$
+"
+%64java.util.function.Supplier˘ˆ
+û
+êD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/HigherProtocolService.java’ ’(è
+%66java.util.Map"Ojava.util.stream.Stream#collect(Ljava/util/stream/Collector;)Ljava/lang/Object;* 
+
+%58java.util.stream.Stream*#
+!
+%65java.util.stream.Collector2%collect(Ljava/util/stream/Collector;)*
+1*ˇ
+3ù
+êD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/HigherProtocolService.java    (.Ÿ
+÷
+ù
+êD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/HigherProtocolService.java 6  (T&
+%41ee.hitsa.ois.enums.ProtocolType"__id*
+""ÍÁ
+ù
+êD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/HigherProtocolService.java V  (m%
+%42ee.hitsa.ois.domain.Classifier"Tee.hitsa.ois.domain.protocol.ProtocolHdata#getType()Lee/hitsa/ois/domain/Classifier;*=
+;
+protocolHData*ee.hitsa.ois.domain.protocol.ProtocolHdata2	getType()à
+Ö
+ù
+êD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/HigherProtocolService.java    (n
+%43boolean"Zee.hitsa.ois.util.ClassifierUtil#equals(Ljava/lang/Enum;Lee/hitsa/ois/domain/Classifier;)Z*$""
+ ee.hitsa.ois.util.ClassifierUtil*(
+&
+%41ee.hitsa.ois.enums.ProtocolType*'
+%
+%42ee.hitsa.ois.domain.Classifier*
+2
+1*•
+4ù
+êD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/HigherProtocolService.java…" …(,˜Ù
+ù
+êD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/HigherProtocolService.java…" …(6
+%40boolean"java.util.Set#isEmpty()Z*
+
+
+studentIdsjava.util.Set2	isEmpty()*
+3
+1*ïw
+5ù
+êD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/HigherProtocolService.java∂ ∂(*˜Ù
+ù
+êD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/HigherProtocolService.java∂  ∂((+
+%0%ee.hitsa.ois.domain.protocol.Protocol"%ee.hitsa.ois.domain.protocol.Protocolâ
+Ü
+ù
+êD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/HigherProtocolService.java∂ ∂(*
+%1"/ee.hitsa.ois.domain.protocol.Protocol#<init>()V*-
++
+%0%ee.hitsa.ois.domain.protocol.Protocolã
+à
+ù
+êD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/HigherProtocolService.java∂ ∂(+1
+protocol%ee.hitsa.ois.domain.protocol.Protocol"__id*-
++
+%0%ee.hitsa.ois.domain.protocol.Protocol 
+«
+ù
+êD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/HigherProtocolService.java∑ ∑()
+%2java.lang.Boolean"__id*
+""ËÂ
+ù
+êD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/HigherProtocolService.java∑ ∑(*
+
+%3void"Fee.hitsa.ois.domain.protocol.Protocol#setIsFinal(Ljava/lang/Boolean;)V*3
+1
+protocol%ee.hitsa.ois.domain.protocol.Protocol*
+
+%2java.lang.Boolean2setIsFinal(Ljava/lang/Boolean;) 
+«
+ù
+êD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/HigherProtocolService.java∏! ∏(.
+%4java.lang.Boolean"__id*
+""ÚÔ
+ù
+êD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/HigherProtocolService.java∏ ∏(/
+
+%5void"Kee.hitsa.ois.domain.protocol.Protocol#setIsVocational(Ljava/lang/Boolean;)V*3
+1
+protocol%ee.hitsa.ois.domain.protocol.Protocol*
+
+%4java.lang.Boolean2$setIsVocational(Ljava/lang/Boolean;)ﬁ€
+ù
+êD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/HigherProtocolService.javaπ π(7
+%6java.lang.String"Wee.hitsa.ois.service.AbstractProtocolService#generateProtocolNumber()Ljava/lang/String;*.,
+*ee.hitsa.ois.service.HigherProtocolService2generateProtocolNumber()ÎË
+ù
+êD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/HigherProtocolService.javaπ π(8
+
+%7void"Hee.hitsa.ois.domain.protocol.Protocol#setProtocolNr(Ljava/lang/String;)V*3
+1
+protocol%ee.hitsa.ois.domain.protocol.Protocol*
+
+%6java.lang.String2!setProtocolNr(Ljava/lang/String;)à
+Ö
+ù
+êD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/HigherProtocolService.java∫ ∫(%
+%8javax.persistence.EntityManager"__id*6*4,
+*ee.hitsa.ois.service.HigherProtocolService"
+emŒÀ
+ù
+êD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/HigherProtocolService.java∫9 ∫(K
+%9java.lang.Long"Kee.hitsa.ois.service.security.HoisUserDetails#getSchoolId()Ljava/lang/Long;*7
+5
+user-ee.hitsa.ois.service.security.HoisUserDetails2getSchoolId()Æ´
+ù
+êD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/HigherProtocolService.java∫ ∫(L(
+%10!ee.hitsa.ois.domain.school.School"cjavax.persistence.EntityManager#getReference(Ljava/lang/Class;Ljava/lang/Object;)Ljava/lang/Object;*'
+%
+%8javax.persistence.EntityManager*
+""*
+
+%9java.lang.Long21getReference(Ljava/lang/Class;Ljava/lang/Object;)òï
+ù
+êD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/HigherProtocolService.java∫ ∫(M
+%11void"Uee.hitsa.ois.domain.protocol.Protocol#setSchool(Lee/hitsa/ois/domain/school/School;)V*3
+1
+protocol%ee.hitsa.ois.domain.protocol.Protocol**
+(
+%10!ee.hitsa.ois.domain.school.School2.setSchool(Lee/hitsa/ois/domain/school/School;)â
+Ü
+ù
+êD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/HigherProtocolService.javaª ª(&
+%12javax.persistence.EntityManager"__id*6*4,
+*ee.hitsa.ois.service.HigherProtocolService"
+em€
+ÿ
+ù
+êD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/HigherProtocolService.javaª= ª(_(
+%13!ee.hitsa.ois.enums.ProtocolStatus"__id*
+""ôñ
+ù
+êD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/HigherProtocolService.javaª= ª(f
+%14java.lang.String"'java.lang.Enum#name()Ljava/lang/String;**
+(
+%13!ee.hitsa.ois.enums.ProtocolStatus2name()Ø¨
+ù
+êD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/HigherProtocolService.javaª ª(g%
+%15ee.hitsa.ois.domain.Classifier"cjavax.persistence.EntityManager#getReference(Ljava/lang/Class;Ljava/lang/Object;)Ljava/lang/Object;*(
+&
+%12javax.persistence.EntityManager*
+""*
+
+%14java.lang.String21getReference(Ljava/lang/Class;Ljava/lang/Object;)èå
+ù
+êD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/HigherProtocolService.javaª ª(h
+%16void"Ree.hitsa.ois.domain.protocol.Protocol#setStatus(Lee/hitsa/ois/domain/Classifier;)V*3
+1
+protocol%ee.hitsa.ois.domain.protocol.Protocol*'
+%
+%15ee.hitsa.ois.domain.Classifier2+setStatus(Lee/hitsa/ois/domain/Classifier;)Çˇ
+ù
+êD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/HigherProtocolService.javaΩ* Ω(71
+%17*ee.hitsa.ois.domain.protocol.ProtocolHdata"*ee.hitsa.ois.domain.protocol.ProtocolHdataï
+í
+ù
+êD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/HigherProtocolService.javaΩ& Ω(9
+%18"4ee.hitsa.ois.domain.protocol.ProtocolHdata#<init>()V*3
+1
+%17*ee.hitsa.ois.domain.protocol.ProtocolHdataõ
+ò
+ù
+êD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/HigherProtocolService.javaΩ Ω(:;
+protocolHData*ee.hitsa.ois.domain.protocol.ProtocolHdata"__id*3
+1
+%17*ee.hitsa.ois.domain.protocol.ProtocolHdataâ
+Ü
+ù
+êD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/HigherProtocolService.javaæ æ( &
+%19javax.persistence.EntityManager"__id*6*4,
+*ee.hitsa.ois.service.HigherProtocolService"
+emÔÏ
+ù
+êD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/HigherProtocolService.javaæ@ æ(V
+%20java.lang.String"[ee.hitsa.ois.web.commandobject.HigherProtocolCreateForm#getProtocolType()Ljava/lang/String;*A
+?
+form7ee.hitsa.ois.web.commandobject.HigherProtocolCreateForm2getProtocolType()Ø¨
+ù
+êD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/HigherProtocolService.javaæ æ(W%
+%21ee.hitsa.ois.domain.Classifier"cjavax.persistence.EntityManager#getReference(Ljava/lang/Class;Ljava/lang/Object;)Ljava/lang/Object;*(
+&
+%19javax.persistence.EntityManager*
+""*
+
+%20java.lang.String21getReference(Ljava/lang/Class;Ljava/lang/Object;)öó
+ù
+êD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/HigherProtocolService.javaæ æ(X
+%22void"Uee.hitsa.ois.domain.protocol.ProtocolHdata#setType(Lee/hitsa/ois/domain/Classifier;)V*=
+;
+protocolHData*ee.hitsa.ois.domain.protocol.ProtocolHdata*'
+%
+%21ee.hitsa.ois.domain.Classifier2)setType(Lee/hitsa/ois/domain/Classifier;)˜Ù
+ù
+êD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/HigherProtocolService.java¿ ¿(,
+%23java.lang.Long"_ee.hitsa.ois.web.commandobject.HigherProtocolCreateForm#getSubjectStudyPeriod()Ljava/lang/Long;*A
+?
+form7ee.hitsa.ois.web.commandobject.HigherProtocolCreateForm2getSubjectStudyPeriod()â
+Ü
+ù
+êD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/HigherProtocolService.java¿. ¿(0&
+%24javax.persistence.EntityManager"__id*6*4,
+*ee.hitsa.ois.service.HigherProtocolService"
+emÎ
+Ë
+ù
+êD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/HigherProtocolService.javaø, ¿(1A
+%25:ee.hitsa.ois.domain.subject.studyperiod.SubjectStudyPeriod"ïee.hitsa.ois.util.EntityUtil#getOptionalOne(Ljava/lang/Class;Ljava/lang/Long;Ljavax/persistence/EntityManager;)Lee/hitsa/ois/domain/BaseEntityWithId;* "
+ee.hitsa.ois.util.EntityUtil*
+""*
+
+%23java.lang.Long*(
+&
+%24javax.persistence.EntityManageräá
+ù
+êD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/HigherProtocolService.javaø ¿(2
+%26void"ee.hitsa.ois.domain.protocol.ProtocolHdata#setSubjectStudyPeriod(Lee/hitsa/ois/domain/subject/studyperiod/SubjectStudyPeriod;)V*=
+;
+protocolHData*ee.hitsa.ois.domain.protocol.ProtocolHdata*C
+A
+%25:ee.hitsa.ois.domain.subject.studyperiod.SubjectStudyPeriod2SsetSubjectStudyPeriod(Lee/hitsa/ois/domain/subject/studyperiod/SubjectStudyPeriod;)ÉÄ
+ù
+êD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/HigherProtocolService.java¬ ¬(2
+%27java.lang.Long"eee.hitsa.ois.web.commandobject.HigherProtocolCreateForm#getCurriculumVersionHmodule()Ljava/lang/Long;*A
+?
+form7ee.hitsa.ois.web.commandobject.HigherProtocolCreateForm2getCurriculumVersionHmodule()â
+Ü
+ù
+êD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/HigherProtocolService.java¬4 ¬(6&
+%28javax.persistence.EntityManager"__id*6*4,
+*ee.hitsa.ois.service.HigherProtocolService"
+emÌ
+Í
+ù
+êD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/HigherProtocolService.java¡2 ¬(7C
+%29<ee.hitsa.ois.domain.curriculum.CurriculumVersionHigherModule"ïee.hitsa.ois.util.EntityUtil#getOptionalOne(Ljava/lang/Class;Ljava/lang/Long;Ljavax/persistence/EntityManager;)Lee/hitsa/ois/domain/BaseEntityWithId;* "
+ee.hitsa.ois.util.EntityUtil*
+""*
+
+%27java.lang.Long*(
+&
+%28javax.persistence.EntityManagerùö
+ù
+êD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/HigherProtocolService.java¡ ¬(8
+%30void"áee.hitsa.ois.domain.protocol.ProtocolHdata#setCurriculumVersionHmodule(Lee/hitsa/ois/domain/curriculum/CurriculumVersionHigherModule;)V*=
+;
+protocolHData*ee.hitsa.ois.domain.protocol.ProtocolHdata*E
+C
+%29<ee.hitsa.ois.domain.curriculum.CurriculumVersionHigherModule2[setCurriculumVersionHmodule(Lee/hitsa/ois/domain/curriculum/CurriculumVersionHigherModule;)·ﬁ
+ù
+êD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/HigherProtocolService.java√J √([
+%31java.lang.Long"Tee.hitsa.ois.web.commandobject.HigherProtocolCreateForm#getTeacher()Ljava/lang/Long;*A
+?
+form7ee.hitsa.ois.web.commandobject.HigherProtocolCreateForm2getTeacher()â
+Ü
+ù
+êD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/HigherProtocolService.java√] √(_&
+%32javax.persistence.EntityManager"__id*6*4,
+*ee.hitsa.ois.service.HigherProtocolService"
+em‘
+—
+ù
+êD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/HigherProtocolService.java√! √(`*
+%33#ee.hitsa.ois.domain.teacher.Teacher"ïee.hitsa.ois.util.EntityUtil#getOptionalOne(Ljava/lang/Class;Ljava/lang/Long;Ljavax/persistence/EntityManager;)Lee/hitsa/ois/domain/BaseEntityWithId;* "
+ee.hitsa.ois.util.EntityUtil*
+""*
+
+%31java.lang.Long*(
+&
+%32javax.persistence.EntityManagerØ¨
+ù
+êD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/HigherProtocolService.java√ √(a
+%34void"]ee.hitsa.ois.domain.protocol.ProtocolHdata#setTeacher(Lee/hitsa/ois/domain/teacher/Teacher;)V*=
+;
+protocolHData*ee.hitsa.ois.domain.protocol.ProtocolHdata*,
+*
+%33#ee.hitsa.ois.domain.teacher.Teacher21setTeacher(Lee/hitsa/ois/domain/teacher/Teacher;)ºπ
+ù
+êD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/HigherProtocolService.javaƒ ƒ(+
+%35void"`ee.hitsa.ois.domain.protocol.ProtocolHdata#setProtocol(Lee/hitsa/ois/domain/protocol/Protocol;)V*=
+;
+protocolHData*ee.hitsa.ois.domain.protocol.ProtocolHdata*3
+1
+protocol%ee.hitsa.ois.domain.protocol.Protocol24setProtocol(Lee/hitsa/ois/domain/protocol/Protocol;)À»
+ù
+êD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/HigherProtocolService.java≈ ≈(0
+%36void"eee.hitsa.ois.domain.protocol.Protocol#setProtocolHdata(Lee/hitsa/ois/domain/protocol/ProtocolHdata;)V*3
+1
+protocol%ee.hitsa.ois.domain.protocol.Protocol*=
+;
+protocolHData*ee.hitsa.ois.domain.protocol.ProtocolHdata2>setProtocolHdata(Lee/hitsa/ois/domain/protocol/ProtocolHdata;)–Õ
+ù
+êD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/HigherProtocolService.java«0 «(9
+%37java.util.HashMap"java.util.HashMap„
+‡
+ù
+êD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/HigherProtocolService.java«, «(;
+%38"java.util.HashMap#<init>()V*
+
+%37java.util.HashMapÈ
+Ê
+ù
+êD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/HigherProtocolService.java« «(<"
+examRegistrationsjava.util.Map"__id*
+
+%37java.util.HashMap·ﬁ
+ù
+êD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/HigherProtocolService.java» »(1
+%39java.util.Set"Tee.hitsa.ois.web.commandobject.HigherProtocolCreateForm#getStudents()Ljava/util/Set;*A
+?
+form7ee.hitsa.ois.web.commandobject.HigherProtocolCreateForm2getStudents()ﬁ
+€
+ù
+êD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/HigherProtocolService.java» »(2
+
+studentIdsjava.util.Set"__id*
+
+%39java.util.Set*
+4
+1*¸
+1ù
+êD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/HigherProtocolService.javaÿ ÿ(û
+õ
+ù
+êD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/HigherProtocolService.javaÿ= ‡(	"
+%67java.util.function.Function"__declareFunction*B@
+>__sonar_lambda_2728$ee.hitsa.ois.service.HigherProtocolServiceä
+á
+
+__unknown_file (0
+"
+%67java.util.function.Function"
+
+protocol"__id*3
+1
+protocol%ee.hitsa.ois.domain.protocol.ProtocolÑ
+Å
+
+__unknown_file (9
+"
+%67java.util.function.Function"
+examRegistrations"__id*$
+"
+examRegistrationsjava.util.Mapó
+î
+
+__unknown_file (B
+"
+%67java.util.function.Function"
+HigherProtocolService.this"__id*.,
+*ee.hitsa.ois.service.HigherProtocolServiceë
+é
+ù
+êD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/HigherProtocolService.javaÿ% ‡(
+%78java.util.List"nee.hitsa.ois.util.StreamUtil#toMappedList(Ljava/util/function/Function;Ljava/util/Collection;)Ljava/util/List;* "
+ee.hitsa.ois.util.StreamUtil*$
+"
+%67java.util.function.Function*
+
+
+studentIdsjava.util.SetÛ
+ù
+êD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/HigherProtocolService.javaÿ ‡(
+%79void"Lee.hitsa.ois.domain.protocol.Protocol#setProtocolStudents(Ljava/util/List;)V*3
+1
+protocol%ee.hitsa.ois.domain.protocol.Protocol*
+
+%78java.util.List2%setProtocolStudents(Ljava/util/List;)â
+Ü
+ù
+êD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/HigherProtocolService.java‚H ‚(J&
+%80javax.persistence.EntityManager"__id*6*4,
+*ee.hitsa.ois.service.HigherProtocolService"
+emÂ
+‚
+ù
+êD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/HigherProtocolService.java‚. ‚(K,
+%81%ee.hitsa.ois.domain.protocol.Protocol"êee.hitsa.ois.util.EntityUtil#save(Lee/hitsa/ois/domain/BaseEntityWithId;Ljavax/persistence/EntityManager;)Lee/hitsa/ois/domain/BaseEntityWithId;* "
+ee.hitsa.ois.util.EntityUtil*3
+1
+protocol%ee.hitsa.ois.domain.protocol.Protocol*(
+&
+%80javax.persistence.EntityManagerµ
+≤
+ù
+êD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/HigherProtocolService.java‚ ‚(L-
+%82&ee.hitsa.ois.web.dto.HigherProtocolDto"Ñee.hitsa.ois.web.dto.HigherProtocolDto#ofWithIdOnly(Lee/hitsa/ois/domain/protocol/Protocol;)Lee/hitsa/ois/web/dto/HigherProtocolDto;**"(
+&ee.hitsa.ois.web.dto.HigherProtocolDto*.
+,
+%81%ee.hitsa.ois.domain.protocol.Protocol"—
+ù
+êD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/HigherProtocolService.java‚ ‚(M/
+-
+%82&ee.hitsa.ois.web.dto.HigherProtocolDto:5
+user-ee.hitsa.ois.service.security.HoisUserDetails:?
+form7ee.hitsa.ois.web.commandobject.HigherProtocolCreateFormB.,
+*ee.hitsa.ois.service.HigherProtocolService

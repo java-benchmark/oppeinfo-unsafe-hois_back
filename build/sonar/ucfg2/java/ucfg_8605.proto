@@ -1,0 +1,129 @@
+
+çee.hitsa.ois.service.DocumentService#supplementDirectives(Lee/hitsa/ois/service/security/HoisUserDetails;Ljava/lang/Boolean;)Ljava/util/List;ó
+äD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/DocumentService.javaå å(2"1*á-
+1ó
+äD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/DocumentService.javaç= ç(OıÚ
+ó
+äD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/DocumentService.javaç' ç(<-
+%0'ee.hitsa.ois.util.JpaNativeQueryBuilder"'ee.hitsa.ois.util.JpaNativeQueryBuilderØ
+¨
+ó
+äD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/DocumentService.javaç# ç(P
+%1"Cee.hitsa.ois.util.JpaNativeQueryBuilder#<init>(Ljava/lang/String;)V*/
+-
+%0'ee.hitsa.ois.util.JpaNativeQueryBuilder*
+from directive dÉ
+Ä
+ó
+äD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/DocumentService.javaç ç(Q-
+qb'ee.hitsa.ois.util.JpaNativeQueryBuilder"__id*/
+-
+%0'ee.hitsa.ois.util.JpaNativeQueryBuilderÖ
+Ç
+ó
+äD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/DocumentService.javaé é(-
+
+%2void"§ee.hitsa.ois.service.DocumentService#directiveCriteria(Lee/hitsa/ois/util/JpaNativeQueryBuilder;Lee/hitsa/ois/service/security/HoisUserDetails;Ljava/lang/Boolean;)V*("&
+$ee.hitsa.ois.service.DocumentService*/
+-
+qb'ee.hitsa.ois.util.JpaNativeQueryBuilder*7
+5
+user-ee.hitsa.ois.service.security.HoisUserDetails*
+
+isHigherjava.lang.Boolean≈
+¬
+ó
+äD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/DocumentService.javaè ê(c
+%3java.lang.String"__concat*/-
++(exists (select 1 from directive_student ds*SQ
+O join diploma dip on ds.student_id = dip.student_id and dip.directive_id = d.idõ
+ò
+ó
+äD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/DocumentService.javaè ë(P
+%4java.lang.String"__concat*
+
+%3java.lang.String*@>
+< left join diploma_supplement sup on sup.diploma_id = dip.idÉ
+Ä
+ò
+äD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/DocumentService.javaè í(¥
+%5java.lang.String"__concat*
+
+%4java.lang.String*¶£
+† where ds.directive_id = d.id and ds.canceled = false and coalesce(sup.status_code,'LOPUDOK_STAATUS_K') = :supstatus and dip.status_code != 'LOPUDOK_STAATUS_C')Î
+Ë
+ó
+äD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/DocumentService.javaè ì( 
+%6java.lang.String"__concat*
+
+%5java.lang.String*
+ or exists (Ç
+ˇ
+ó
+äD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/DocumentService.javaè î(7
+%7java.lang.String"__concat*
+
+%6java.lang.String*'%
+# select 1 from directive_student ds’
+“
+ò
+äD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/DocumentService.javaè ï(â
+%8java.lang.String"__concat*
+
+%7java.lang.String*yw
+u join diploma_supplement def_sup on def_sup.id = ds.diploma_supplement_id or def_sup.id = ds.diploma_supplement_en_id≤
+Ø
+ó
+äD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/DocumentService.javaè ñ(g
+%9java.lang.String"__concat*
+
+%8java.lang.String*WU
+S left join diploma_supplement sup_dup on sup_dup.diploma_supplement_id = def_sup.idï
+í
+ó
+äD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/DocumentService.javaè ó(I
+%10java.lang.String"__concat*
+
+%9java.lang.String*97
+5 where ds.directive_id = d.id and ds.canceled = false°
+û
+ó
+äD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/DocumentService.javaè ò(T
+%11java.lang.String"__concat*
+
+%10java.lang.String*DB
+@ and coalesce(sup_dup.status_code, :supstatus) in (:supstatus)))’
+“
+ó
+äD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/DocumentService.javaô ô(=(
+%12!ee.hitsa.ois.enums.DocumentStatus"__id*
+""ìê
+ó
+äD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/DocumentService.javaô ô(D
+%13java.lang.String"'java.lang.Enum#name()Ljava/lang/String;**
+(
+%12!ee.hitsa.ois.enums.DocumentStatus2name()›⁄
+ó
+äD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/DocumentService.javaè ô(E
+%14void"qee.hitsa.ois.util.JpaNativeQueryBuilder#requiredCriteria(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V*/
+-
+qb'ee.hitsa.ois.util.JpaNativeQueryBuilder*
+
+%11java.lang.String*
+	supstatus*
+
+%13java.lang.String2HrequiredCriteria(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)É
+Ä
+ó
+äD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/DocumentService.javaö ö(%
+%15java.util.List"ree.hitsa.ois.service.DocumentService#toDirectiveDtoList(Lee/hitsa/ois/util/JpaNativeQueryBuilder;)Ljava/util/List;*(&
+$ee.hitsa.ois.service.DocumentService*/
+-
+qb'ee.hitsa.ois.util.JpaNativeQueryBuilder"≥
+ó
+äD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/DocumentService.javaö ö(&
+
+%15java.util.List:5
+user-ee.hitsa.ois.service.security.HoisUserDetails:
+isHigherjava.lang.BooleanB(&
+$ee.hitsa.ois.service.DocumentService

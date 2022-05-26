@@ -1,0 +1,619 @@
+
+∆ee.hitsa.ois.web.ContractController#save(Lee/hitsa/ois/service/security/HoisUserDetails;Lee/hitsa/ois/domain/Contract;Lee/hitsa/ois/web/commandobject/ContractForm;)Lee/hitsa/ois/web/dto/ContractDto;ñ
+âD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/web/ContractController.javaÄ Ä("startingBlock*ê
+2ñ
+âD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/web/ContractController.javaÜ0 Ü(aàÖ
+ñ
+âD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/web/ContractController.javaÜ Ü(/7
+%81ee.hitsa.ois.validation.ValidationFailedException"1ee.hitsa.ois.validation.ValidationFailedException·
+ﬁ
+ñ
+âD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/web/ContractController.javaÜ Ü(b
+%9"Mee.hitsa.ois.validation.ValidationFailedException#<init>(Ljava/lang/String;)V*9
+7
+%81ee.hitsa.ois.validation.ValidationFailedException*31
+/contract.messages.updatingOnlyAllowedForStatusS*
+0*ˆ
+3ñ
+âD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/web/ContractController.javaÉ É(—Œ
+ñ
+âD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/web/ContractController.javaÉ; É(P)
+%0#ee.hitsa.ois.domain.student.Student"Nee.hitsa.ois.domain.Contract#getStudent()Lee/hitsa/ois/domain/student/Student;**
+(
+contractee.hitsa.ois.domain.Contract2getStudent()”–
+ñ
+âD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/web/ContractController.javaÉ; É(\'
+%1!ee.hitsa.ois.domain.school.School"Ree.hitsa.ois.domain.student.Student#getSchool()Lee/hitsa/ois/domain/school/School;*+
+)
+%0#ee.hitsa.ois.domain.student.Student2getSchool()œ
+Ã
+ñ
+âD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/web/ContractController.javaÉ^ É(p#
+%2ee.hitsa.ois.enums.Permission"__id*
+""’
+“
+ñ
+âD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/web/ContractController.javaÑ Ñ(2)
+%3#ee.hitsa.ois.enums.PermissionObject"__id*
+""⁄
+◊
+ñ
+âD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/web/ContractController.javaÉ Ñ(3
+
+%4void"◊ee.hitsa.ois.util.UserUtil#assertIsSchoolAdminOrLeadingTeacher(Lee/hitsa/ois/service/security/HoisUserDetails;Lee/hitsa/ois/domain/school/School;Lee/hitsa/ois/enums/Permission;Lee/hitsa/ois/enums/PermissionObject;)V*"
+ee.hitsa.ois.util.UserUtil*7
+5
+user-ee.hitsa.ois.service.security.HoisUserDetails*)
+'
+%1!ee.hitsa.ois.domain.school.School*%
+#
+%2ee.hitsa.ois.enums.Permission*+
+)
+%3#ee.hitsa.ois.enums.PermissionObject”
+–
+ñ
+âD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/web/ContractController.javaÖ# Ö(B'
+%5!ee.hitsa.ois.enums.ContractStatus"__id*
+""≈¬
+ñ
+âD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/web/ContractController.javaÖD Ö(X$
+%6ee.hitsa.ois.domain.Classifier"Hee.hitsa.ois.domain.Contract#getStatus()Lee/hitsa/ois/domain/Classifier;**
+(
+contractee.hitsa.ois.domain.Contract2getStatus()Ä
+˝
+ñ
+âD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/web/ContractController.javaÖ Ö(Y
+%7boolean"Zee.hitsa.ois.util.ClassifierUtil#equals(Ljava/lang/Enum;Lee/hitsa/ois/domain/Classifier;)Z*$""
+ ee.hitsa.ois.util.ClassifierUtil*)
+'
+%5!ee.hitsa.ois.enums.ContractStatus*&
+$
+%6ee.hitsa.ois.domain.Classifier*
+2
+1*Âh
+startingBlockñ
+âD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/web/ContractController.javaÄ Ç(:û
+õ
+î
+âD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/web/ContractController.java (
+%13"
+__annotate*64
+2org.springframework.web.bind.annotation.PutMapping*7
+5
+user-ee.hitsa.ois.service.security.HoisUserDetailsÍ
+Á
+ñ
+âD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/web/ContractController.javaÄ, Ä(05
+user-ee.hitsa.ois.service.security.HoisUserDetails"__annotation*
+
+%13ë
+é
+î
+âD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/web/ContractController.java (
+%14"
+__annotate*64
+2org.springframework.web.bind.annotation.PutMapping**
+(
+contractee.hitsa.ois.domain.ContractÜ
+É
+ñ
+âD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/web/ContractController.javaÅ Å(;
+%15"
+__annotate*)'
+%ee.hitsa.ois.util.WithVersionedEntity**
+(
+contractee.hitsa.ois.domain.ContractÊ
+„
+ñ
+âD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/web/ContractController.javaÅE Å(M(
+contractee.hitsa.ois.domain.Contract"__annotation*
+
+%14*
+
+%15Ä
+~
+
+__unknown_file (
+%16"__id*U*S
+;
+contractForm+ee.hitsa.ois.web.commandobject.ContractForm"
+contactPersonEmail
+}
+
+__unknown_file (
+%17"__id*T*R
+;
+contractForm+ee.hitsa.ois.web.commandobject.ContractForm"
+contactPersonNameÄ
+~
+
+__unknown_file (
+%18"__id*U*S
+;
+contractForm+ee.hitsa.ois.web.commandobject.ContractForm"
+contactPersonPhoneu
+s
+
+__unknown_file (
+%19"__id*J*H
+;
+contractForm+ee.hitsa.ois.web.commandobject.ContractForm"	
+endDatex
+v
+
+__unknown_file (
+%20"__id*M*K
+;
+contractForm+ee.hitsa.ois.web.commandobject.ContractForm"
+
+enterprise|
+z
+
+__unknown_file (
+%21"__id*Q*O
+;
+contractForm+ee.hitsa.ois.web.commandobject.ContractForm"
+moduleSubjects}
+{
+
+__unknown_file (
+%22"__id*R*P
+;
+contractForm+ee.hitsa.ois.web.commandobject.ContractForm"
+otherSupervisor{
+y
+
+__unknown_file (
+%23"__id*P*N
+;
+contractForm+ee.hitsa.ois.web.commandobject.ContractForm"
+practicePlacez
+x
+
+__unknown_file (
+%24"__id*O*M
+;
+contractForm+ee.hitsa.ois.web.commandobject.ContractForm"
+practicePlanw
+u
+
+__unknown_file (
+%25"__id*L*J
+;
+contractForm+ee.hitsa.ois.web.commandobject.ContractForm"
+	startDateu
+s
+
+__unknown_file (
+%26"__id*J*H
+;
+contractForm+ee.hitsa.ois.web.commandobject.ContractForm"	
+studentv
+t
+
+__unknown_file (
+%27"__id*K*I
+;
+contractForm+ee.hitsa.ois.web.commandobject.ContractForm"
+
+studentsy
+w
+
+__unknown_file (
+%28"__id*N*L
+;
+contractForm+ee.hitsa.ois.web.commandobject.ContractForm"
+supervisorsu
+s
+
+__unknown_file (
+%29"__id*J*H
+;
+contractForm+ee.hitsa.ois.web.commandobject.ContractForm"	
+teacher‘
+—
+ñ
+âD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/web/ContractController.javaÇ Ç(
+%30"
+__annotate*
+javax.validation.Valid*
+
+%25Ò
+Ó
+ñ
+âD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/web/ContractController.javaÇ Ç(
+%31"
+__annotate*75
+3org.springframework.web.bind.annotation.RequestBody*
+
+%25à
+Ö
+ñ
+âD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/web/ContractController.javaÇ- Ç(9J
+;
+contractForm+ee.hitsa.ois.web.commandobject.ContractForm"
+	startDate"__annotation*
+
+%30*
+
+%31‘
+—
+ñ
+âD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/web/ContractController.javaÇ Ç(
+%32"
+__annotate*
+javax.validation.Valid*
+
+%28Ò
+Ó
+ñ
+âD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/web/ContractController.javaÇ Ç(
+%33"
+__annotate*75
+3org.springframework.web.bind.annotation.RequestBody*
+
+%28ä
+á
+ñ
+âD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/web/ContractController.javaÇ- Ç(9L
+;
+contractForm+ee.hitsa.ois.web.commandobject.ContractForm"
+supervisors"__annotation*
+
+%32*
+
+%33‘
+—
+ñ
+âD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/web/ContractController.javaÇ Ç(
+%34"
+__annotate*
+javax.validation.Valid*
+
+%26Ò
+Ó
+ñ
+âD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/web/ContractController.javaÇ Ç(
+%35"
+__annotate*75
+3org.springframework.web.bind.annotation.RequestBody*
+
+%26Ü
+É
+ñ
+âD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/web/ContractController.javaÇ- Ç(9H
+;
+contractForm+ee.hitsa.ois.web.commandobject.ContractForm"	
+student"__annotation*
+
+%34*
+
+%35‘
+—
+ñ
+âD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/web/ContractController.javaÇ Ç(
+%36"
+__annotate*
+javax.validation.Valid*
+
+%16Ò
+Ó
+ñ
+âD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/web/ContractController.javaÇ Ç(
+%37"
+__annotate*75
+3org.springframework.web.bind.annotation.RequestBody*
+
+%16ë
+é
+ñ
+âD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/web/ContractController.javaÇ- Ç(9S
+;
+contractForm+ee.hitsa.ois.web.commandobject.ContractForm"
+contactPersonEmail"__annotation*
+
+%36*
+
+%37‘
+—
+ñ
+âD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/web/ContractController.javaÇ Ç(
+%38"
+__annotate*
+javax.validation.Valid*
+
+%17Ò
+Ó
+ñ
+âD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/web/ContractController.javaÇ Ç(
+%39"
+__annotate*75
+3org.springframework.web.bind.annotation.RequestBody*
+
+%17ê
+ç
+ñ
+âD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/web/ContractController.javaÇ- Ç(9R
+;
+contractForm+ee.hitsa.ois.web.commandobject.ContractForm"
+contactPersonName"__annotation*
+
+%38*
+
+%39‘
+—
+ñ
+âD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/web/ContractController.javaÇ Ç(
+%40"
+__annotate*
+javax.validation.Valid*
+
+%21Ò
+Ó
+ñ
+âD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/web/ContractController.javaÇ Ç(
+%41"
+__annotate*75
+3org.springframework.web.bind.annotation.RequestBody*
+
+%21ç
+ä
+ñ
+âD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/web/ContractController.javaÇ- Ç(9O
+;
+contractForm+ee.hitsa.ois.web.commandobject.ContractForm"
+moduleSubjects"__annotation*
+
+%40*
+
+%41‘
+—
+ñ
+âD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/web/ContractController.javaÇ Ç(
+%42"
+__annotate*
+javax.validation.Valid*
+
+%23Ò
+Ó
+ñ
+âD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/web/ContractController.javaÇ Ç(
+%43"
+__annotate*75
+3org.springframework.web.bind.annotation.RequestBody*
+
+%23å
+â
+ñ
+âD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/web/ContractController.javaÇ- Ç(9N
+;
+contractForm+ee.hitsa.ois.web.commandobject.ContractForm"
+practicePlace"__annotation*
+
+%42*
+
+%43‘
+—
+ñ
+âD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/web/ContractController.javaÇ Ç(
+%44"
+__annotate*
+javax.validation.Valid*
+
+%20Ò
+Ó
+ñ
+âD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/web/ContractController.javaÇ Ç(
+%45"
+__annotate*75
+3org.springframework.web.bind.annotation.RequestBody*
+
+%20â
+Ü
+ñ
+âD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/web/ContractController.javaÇ- Ç(9K
+;
+contractForm+ee.hitsa.ois.web.commandobject.ContractForm"
+
+enterprise"__annotation*
+
+%44*
+
+%45‘
+—
+ñ
+âD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/web/ContractController.javaÇ Ç(
+%46"
+__annotate*
+javax.validation.Valid*
+
+%22Ò
+Ó
+ñ
+âD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/web/ContractController.javaÇ Ç(
+%47"
+__annotate*75
+3org.springframework.web.bind.annotation.RequestBody*
+
+%22é
+ã
+ñ
+âD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/web/ContractController.javaÇ- Ç(9P
+;
+contractForm+ee.hitsa.ois.web.commandobject.ContractForm"
+otherSupervisor"__annotation*
+
+%46*
+
+%47‘
+—
+ñ
+âD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/web/ContractController.javaÇ Ç(
+%48"
+__annotate*
+javax.validation.Valid*
+
+%27Ò
+Ó
+ñ
+âD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/web/ContractController.javaÇ Ç(
+%49"
+__annotate*75
+3org.springframework.web.bind.annotation.RequestBody*
+
+%27á
+Ñ
+ñ
+âD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/web/ContractController.javaÇ- Ç(9I
+;
+contractForm+ee.hitsa.ois.web.commandobject.ContractForm"
+
+students"__annotation*
+
+%48*
+
+%49‘
+—
+ñ
+âD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/web/ContractController.javaÇ Ç(
+%50"
+__annotate*
+javax.validation.Valid*
+
+%18Ò
+Ó
+ñ
+âD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/web/ContractController.javaÇ Ç(
+%51"
+__annotate*75
+3org.springframework.web.bind.annotation.RequestBody*
+
+%18ë
+é
+ñ
+âD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/web/ContractController.javaÇ- Ç(9S
+;
+contractForm+ee.hitsa.ois.web.commandobject.ContractForm"
+contactPersonPhone"__annotation*
+
+%50*
+
+%51‘
+—
+ñ
+âD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/web/ContractController.javaÇ Ç(
+%52"
+__annotate*
+javax.validation.Valid*
+
+%24Ò
+Ó
+ñ
+âD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/web/ContractController.javaÇ Ç(
+%53"
+__annotate*75
+3org.springframework.web.bind.annotation.RequestBody*
+
+%24ã
+à
+ñ
+âD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/web/ContractController.javaÇ- Ç(9M
+;
+contractForm+ee.hitsa.ois.web.commandobject.ContractForm"
+practicePlan"__annotation*
+
+%52*
+
+%53‘
+—
+ñ
+âD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/web/ContractController.javaÇ Ç(
+%54"
+__annotate*
+javax.validation.Valid*
+
+%29Ò
+Ó
+ñ
+âD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/web/ContractController.javaÇ Ç(
+%55"
+__annotate*75
+3org.springframework.web.bind.annotation.RequestBody*
+
+%29Ü
+É
+ñ
+âD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/web/ContractController.javaÇ- Ç(9H
+;
+contractForm+ee.hitsa.ois.web.commandobject.ContractForm"	
+teacher"__annotation*
+
+%54*
+
+%55‘
+—
+ñ
+âD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/web/ContractController.javaÇ Ç(
+%56"
+__annotate*
+javax.validation.Valid*
+
+%19Ò
+Ó
+ñ
+âD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/web/ContractController.javaÇ Ç(
+%57"
+__annotate*75
+3org.springframework.web.bind.annotation.RequestBody*
+
+%19Ü
+É
+ñ
+âD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/web/ContractController.javaÇ- Ç(9H
+;
+contractForm+ee.hitsa.ois.web.commandobject.ContractForm"	
+endDate"__annotation*
+
+%56*
+
+%57*
+3*∂
+0 "Æ
+ñ
+âD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/web/ContractController.javaâ â(
+implicit return*ì
+1ñ
+âD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/web/ContractController.javaà à(ç
+ä
+ñ
+âD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/web/ContractController.javaà à((+
+%10$ee.hitsa.ois.service.ContractService"__id*<*:%
+#ee.hitsa.ois.web.ContractController"
+contractService›⁄
+ñ
+âD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/web/ContractController.javaà à(K#
+%11ee.hitsa.ois.domain.Contract"√ee.hitsa.ois.service.ContractService#save(Lee/hitsa/ois/service/security/HoisUserDetails;Lee/hitsa/ois/domain/Contract;Lee/hitsa/ois/web/commandobject/ContractForm;)Lee/hitsa/ois/domain/Contract;*-
++
+%10$ee.hitsa.ois.service.ContractService*7
+5
+user-ee.hitsa.ois.service.security.HoisUserDetails**
+(
+contractee.hitsa.ois.domain.Contract*=
+;
+contractForm+ee.hitsa.ois.web.commandobject.ContractForm2Äsave(Lee/hitsa/ois/service/security/HoisUserDetails;Lee/hitsa/ois/domain/Contract;Lee/hitsa/ois/web/commandobject/ContractForm;)Ω∫
+ñ
+âD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/web/ContractController.javaà à(L'
+%12 ee.hitsa.ois.web.dto.ContractDto"òee.hitsa.ois.web.ContractController#get(Lee/hitsa/ois/service/security/HoisUserDetails;Lee/hitsa/ois/domain/Contract;)Lee/hitsa/ois/web/dto/ContractDto;*'%
+#ee.hitsa.ois.web.ContractController*7
+5
+user-ee.hitsa.ois.service.security.HoisUserDetails*%
+#
+%11ee.hitsa.ois.domain.Contract2Rget(Lee/hitsa/ois/service/security/HoisUserDetails;Lee/hitsa/ois/domain/Contract;)"ƒ
+ñ
+âD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/web/ContractController.javaà à(M)
+'
+%12 ee.hitsa.ois.web.dto.ContractDto:5
+user-ee.hitsa.ois.service.security.HoisUserDetails:(
+contractee.hitsa.ois.domain.Contract:;
+contractForm+ee.hitsa.ois.web.commandobject.ContractFormB'%
+#ee.hitsa.ois.web.ContractController

@@ -1,0 +1,80 @@
+
+vee.hitsa.ois.service.DocumentService#getSupplementForms(Ljava/lang/Long;Lee/hitsa/ois/enums/FormType;)Ljava/util/List;ó
+äD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/DocumentService.javaõ õ()"1*•
+1ó
+äD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/DocumentService.javaú ú(¸
+˘
+ó
+äD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/DocumentService.javaú ú(%
+%0javax.persistence.EntityManager"__id*0*.&
+$ee.hitsa.ois.service.DocumentService"
+em◊
+‘
+ó
+äD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/DocumentService.javaú ù(r
+%1java.lang.String"__concat*20
+.select dsf.form from DiplomaSupplementForm dsf*b`
+^ where dsf.diplomaSupplement.id = ?1 and dsf.form.type.code = ?2 and dsf.form.status.code = ?3˘
+ˆ
+ó
+äD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/DocumentService.javaú û(.
+%2java.lang.String"__concat*
+
+%1java.lang.String*
+ order by dsf.form.numeralÆ´
+ó
+äD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/DocumentService.javaú û(;"
+%3javax.persistence.TypedQuery"njavax.persistence.EntityManager#createQuery(Ljava/lang/String;Ljava/lang/Class;)Ljavax/persistence/TypedQuery;*'
+%
+%0javax.persistence.EntityManager*
+
+%2java.lang.String*
+""20createQuery(Ljava/lang/String;Ljava/lang/Class;)êç
+ó
+äD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/DocumentService.javaú ü(."
+%4javax.persistence.TypedQuery"\javax.persistence.TypedQuery#setParameter(ILjava/lang/Object;)Ljavax/persistence/TypedQuery;*$
+"
+%3javax.persistence.TypedQuery*2* 
+
+supplementIdjava.lang.Long2!setParameter(ILjava/lang/Object;)ëé
+ó
+äD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/DocumentService.java†! †(0
+%5java.lang.String"'java.lang.Enum#name()Ljava/lang/String;*)
+'
+formTypeee.hitsa.ois.enums.FormType2name()àÖ
+ó
+äD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/DocumentService.javaú †(1"
+%6javax.persistence.TypedQuery"\javax.persistence.TypedQuery#setParameter(ILjava/lang/Object;)Ljavax/persistence/TypedQuery;*$
+"
+%4javax.persistence.TypedQuery*2*
+
+%5java.lang.String2!setParameter(ILjava/lang/Object;)–
+Õ
+ó
+äD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/DocumentService.java°! °(B#
+%7ee.hitsa.ois.enums.FormStatus"__id*
+""çä
+ó
+äD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/DocumentService.java°! °(I
+%8java.lang.String"'java.lang.Enum#name()Ljava/lang/String;*%
+#
+%7ee.hitsa.ois.enums.FormStatus2name()àÖ
+ó
+äD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/DocumentService.javaú °(J"
+%9javax.persistence.TypedQuery"\javax.persistence.TypedQuery#setParameter(ILjava/lang/Object;)Ljavax/persistence/TypedQuery;*$
+"
+%6javax.persistence.TypedQuery*2*
+
+%8java.lang.String2!setParameter(ILjava/lang/Object;)©¶
+ó
+äD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/DocumentService.javaú ¢( 
+%10java.util.List"<javax.persistence.TypedQuery#getResultList()Ljava/util/List;*$
+"
+%9javax.persistence.TypedQuery2getResultList()"≥
+ó
+äD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/DocumentService.javaú ¢(!
+
+%10java.util.List:
+supplementIdjava.lang.Long:'
+formTypeee.hitsa.ois.enums.FormTypeB(&
+$ee.hitsa.ois.service.DocumentService

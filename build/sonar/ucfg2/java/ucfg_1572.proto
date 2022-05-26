@@ -1,0 +1,712 @@
+
+◊ee.hitsa.ois.service.StudentService#save(Lee/hitsa/ois/service/security/HoisUserDetails;Lee/hitsa/ois/domain/student/Student;Lee/hitsa/ois/web/commandobject/student/StudentForm;)Lee/hitsa/ois/domain/student/Student;ñ
+âD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/StudentService.java• •("28*¸
+13ñ
+âD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/StudentService.java√ √(ö
+ó
+ñ
+âD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/StudentService.java√/ √(C3
+%32,ee.hitsa.ois.repository.ClassifierRepository"__id*A*?%
+#ee.hitsa.ois.service.StudentService"
+classifierRepositoryñ
+ì
+ó
+âD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/StudentService.java√ √(ô*
+%33#ee.hitsa.ois.domain.student.Student"¢ee.hitsa.ois.util.EntityUtil#bindToEntity(Ljava/lang/Object;Ljava/lang/Object;Lee/hitsa/ois/repository/ClassifierRepository;[Ljava/lang/String;)Ljava/lang/Object;* "
+ee.hitsa.ois.util.EntityUtil*<
+:
+form2ee.hitsa.ois.web.commandobject.student.StudentForm*0
+.
+student#ee.hitsa.ois.domain.student.Student*5
+3
+%32,ee.hitsa.ois.repository.ClassifierRepository*
+
+person*
+curriculumSpeciality*
+specialNeeds*
+specialNeed*
+studentLanguagesúô
+ñ
+âD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/StudentService.javaƒ( ƒ(F.
+%34'ee.hitsa.ois.web.dto.AutocompleteResult"uee.hitsa.ois.web.commandobject.student.StudentForm#getCurriculumSpeciality()Lee/hitsa/ois/web/dto/AutocompleteResult;*<
+:
+form2ee.hitsa.ois.web.commandobject.student.StudentForm2getCurriculumSpeciality()*
+11
+12*Ù
+24ñ
+âD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/StudentService.javaÆ Æ(1òï
+ñ
+âD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/StudentService.javaÆ Æ(A
+%13void"Üee.hitsa.ois.service.StudentService#removePhotoFromStudentHistory(Lee/hitsa/ois/domain/student/Student;Lee/hitsa/ois/domain/OisFile;)V*'%
+#ee.hitsa.ois.service.StudentService*0
+.
+student#ee.hitsa.ois.domain.student.Student*&
+$
+photoee.hitsa.ois.domain.OisFile2aremovePhotoFromStudentHistory(Lee/hitsa/ois/domain/student/Student;Lee/hitsa/ois/domain/OisFile;)ﬁ€
+ñ
+âD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/StudentService.javaØ Ø(*
+%14void"Pee.hitsa.ois.domain.student.StudentBase#setPhoto(Lee/hitsa/ois/domain/OisFile;)V*0
+.
+student#ee.hitsa.ois.domain.student.Student*
+""2'setPhoto(Lee/hitsa/ois/domain/OisFile;)˚
+¯
+ñ
+âD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/StudentService.java∞ ∞(&
+%15javax.persistence.EntityManager"__id*/*-%
+#ee.hitsa.ois.service.StudentService"
+em‘—
+ñ
+âD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/StudentService.java∞ ∞($
+%16void";javax.persistence.EntityManager#remove(Ljava/lang/Object;)V*(
+&
+%15javax.persistence.EntityManager*&
+$
+photoee.hitsa.ois.domain.OisFile2remove(Ljava/lang/Object;)*
+19*è
+14ñ
+âD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/StudentService.javaø ø(ﬁ€
+ñ
+âD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/StudentService.javaø$ ø(:
+%29java.lang.String"Vee.hitsa.ois.web.commandobject.student.StudentForm#getOtherContact()Ljava/lang/String;*<
+:
+form2ee.hitsa.ois.web.commandobject.student.StudentForm2getOtherContact()Â‚
+ñ
+âD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/StudentService.javaø ø(;
+%30void"Hee.hitsa.ois.domain.student.Student#setOtherContact(Ljava/lang/String;)V*0
+.
+student#ee.hitsa.ois.domain.student.Student*
+
+%29java.lang.String2#setOtherContact(Ljava/lang/String;)‹Ÿ
+ñ
+âD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/StudentService.java¿ ¿(+*
+%31#ee.hitsa.ois.domain.student.Student"ee.hitsa.ois.service.StudentService#saveWithHistory(Lee/hitsa/ois/domain/student/Student;)Lee/hitsa/ois/domain/student/Student;*'%
+#ee.hitsa.ois.service.StudentService*0
+.
+student#ee.hitsa.ois.domain.student.Student26saveWithHistory(Lee/hitsa/ois/domain/student/Student;)"«
+ñ
+âD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/StudentService.java¿ ¿(,,
+*
+%31#ee.hitsa.ois.domain.student.Student*‘
+26ñ
+âD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/StudentService.java´ ´(#ŒÀ
+ñ
+âD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/StudentService.java´ ´(.!
+%9ee.hitsa.ois.domain.OisFile"Oee.hitsa.ois.domain.student.StudentBase#getPhoto()Lee/hitsa/ois/domain/OisFile;*0
+.
+student#ee.hitsa.ois.domain.student.Student2
+getPhoto()Ì
+Í
+ñ
+âD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/StudentService.java´ ´(/$
+photoee.hitsa.ois.domain.OisFile"__id*#
+!
+%9ee.hitsa.ois.domain.OisFileƒ
+¡
+ñ
+âD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/StudentService.java¨ ¨(
+%10java.lang.Boolean"__id*
+""ÏÈ
+ñ
+âD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/StudentService.java¨$ ¨(@
+%11java.lang.Boolean"]ee.hitsa.ois.web.commandobject.student.StudentForm#getDeleteCurrentPhoto()Ljava/lang/Boolean;*<
+:
+form2ee.hitsa.ois.web.commandobject.student.StudentForm2getDeleteCurrentPhoto()Ø¨
+ñ
+âD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/StudentService.java¨ ¨(A
+%12boolean"-java.lang.Boolean#equals(Ljava/lang/Object;)Z*
+
+%10java.lang.Boolean*
+
+%11java.lang.Boolean2equals(Ljava/lang/Object;)*
+24
+19
+23*Î
+16ñ
+âD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/StudentService.javaΩ Ω(¡
+æ
+ñ
+âD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/StudentService.javaΩ Ω(@
+%28boolean"áee.hitsa.ois.util.UserUtil#isStudentGroupTeacher(Lee/hitsa/ois/service/security/HoisUserDetails;Lee/hitsa/ois/domain/student/Student;)Z*"
+ee.hitsa.ois.util.UserUtil*7
+5
+user-ee.hitsa.ois.service.security.HoisUserDetails*0
+.
+student#ee.hitsa.ois.domain.student.Student*
+13
+14*Ö
+27ñ
+âD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/StudentService.java™! ™(,€
+ÿ
+ñ
+âD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/StudentService.java™! ™(I
+%8boolean"Yee.hitsa.ois.util.StudentUtil#canStudentEditPhoto(Lee/hitsa/ois/domain/student/Student;)Z*!"
+ee.hitsa.ois.util.StudentUtil*0
+.
+student#ee.hitsa.ois.domain.student.Student*
+26
+19*î
+28ñ
+âD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/StudentService.java¶ ¶(∫∑
+ñ
+âD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/StudentService.java¶+ ¶(;J
+%0Dee.hitsa.ois.web.commandobject.student.StudentForm$StudentPersonForm"Ñee.hitsa.ois.web.commandobject.student.StudentForm#getPerson()Lee/hitsa/ois/web/commandobject/student/StudentForm$StudentPersonForm;*<
+:
+form2ee.hitsa.ois.web.commandobject.student.StudentForm2getPerson() «
+ñ
+âD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/StudentService.java¶= ¶(P 
+%1ee.hitsa.ois.domain.Person"Kee.hitsa.ois.domain.student.Student#getPerson()Lee/hitsa/ois/domain/Person;*0
+.
+student#ee.hitsa.ois.domain.student.Student2getPerson()ô
+ñ
+ñ
+âD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/StudentService.java¶R ¶(f2
+%2,ee.hitsa.ois.repository.ClassifierRepository"__id*A*?%
+#ee.hitsa.ois.service.StudentService"
+classifierRepository≠
+™
+ñ
+âD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/StudentService.java¶ ¶(g 
+%3ee.hitsa.ois.domain.Person"¢ee.hitsa.ois.util.EntityUtil#bindToEntity(Ljava/lang/Object;Ljava/lang/Object;Lee/hitsa/ois/repository/ClassifierRepository;[Ljava/lang/String;)Ljava/lang/Object;* "
+ee.hitsa.ois.util.EntityUtil*L
+J
+%0Dee.hitsa.ois.web.commandobject.student.StudentForm$StudentPersonForm*"
+ 
+%1ee.hitsa.ois.domain.Person*4
+2
+%2,ee.hitsa.ois.repository.ClassifierRepositoryÁ
+‰
+ñ
+âD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/StudentService.java¶ ¶(h
+pee.hitsa.ois.domain.Person"__id*"
+ 
+%3ee.hitsa.ois.domain.Personª
+∏
+ñ
+âD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/StudentService.javaß ß(&
+
+%4void"Lee.hitsa.ois.util.PersonUtil#conditionalClean(Lee/hitsa/ois/domain/Person;)V* "
+ee.hitsa.ois.util.PersonUtil*!
+
+pee.hitsa.ois.domain.Person˙
+˜
+ñ
+âD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/StudentService.java® ®(%
+%5javax.persistence.EntityManager"__id*/*-%
+#ee.hitsa.ois.service.StudentService"
+emø
+º
+ñ
+âD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/StudentService.java® ®( 
+%6ee.hitsa.ois.domain.Person"êee.hitsa.ois.util.EntityUtil#save(Lee/hitsa/ois/domain/BaseEntityWithId;Ljavax/persistence/EntityManager;)Lee/hitsa/ois/domain/BaseEntityWithId;* "
+ee.hitsa.ois.util.EntityUtil*!
+
+pee.hitsa.ois.domain.Person*'
+%
+%5javax.persistence.EntityManager≠™
+ñ
+âD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/StudentService.java™ ™(
+%7boolean":ee.hitsa.ois.service.security.HoisUserDetails#isStudent()Z*7
+5
+user-ee.hitsa.ois.service.security.HoisUserDetails2isStudent()*
+26
+27*Í
+18ñ
+âD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/StudentService.javaºC º(Kº
+π
+ñ
+âD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/StudentService.javaºC º(k
+%27boolean"Çee.hitsa.ois.util.UserUtil#isLeadingTeacher(Lee/hitsa/ois/service/security/HoisUserDetails;Lee/hitsa/ois/domain/student/Student;)Z*"
+ee.hitsa.ois.util.UserUtil*7
+5
+user-ee.hitsa.ois.service.security.HoisUserDetails*0
+.
+student#ee.hitsa.ois.domain.student.Student*
+13
+14
+16*æ
+19ñ
+âD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/StudentService.javaº º(Ÿ÷
+ñ
+âD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/StudentService.javaº+ º(>(
+%25!ee.hitsa.ois.domain.school.School"Ree.hitsa.ois.domain.student.Student#getSchool()Lee/hitsa/ois/domain/school/School;*0
+.
+student#ee.hitsa.ois.domain.student.Student2getSchool()∞
+≠
+ñ
+âD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/StudentService.javaº º(?
+%26boolean"}ee.hitsa.ois.util.UserUtil#isSchoolAdmin(Lee/hitsa/ois/service/security/HoisUserDetails;Lee/hitsa/ois/domain/school/School;)Z*"
+ee.hitsa.ois.util.UserUtil*7
+5
+user-ee.hitsa.ois.service.security.HoisUserDetails**
+(
+%25!ee.hitsa.ois.domain.school.School*
+13
+14
+16
+18*∂
+0 "Æ
+ñ
+âD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/StudentService.javaÏ Ï(
+implicit return*«
+1ñ
+âD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/StudentService.javaÎ Î(›⁄
+ñ
+âD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/StudentService.javaÎ Î('+
+%110#ee.hitsa.ois.domain.student.Student"ee.hitsa.ois.service.StudentService#saveWithHistory(Lee/hitsa/ois/domain/student/Student;)Lee/hitsa/ois/domain/student/Student;*'%
+#ee.hitsa.ois.service.StudentService*0
+.
+student#ee.hitsa.ois.domain.student.Student26saveWithHistory(Lee/hitsa/ois/domain/student/Student;)"»
+ñ
+âD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/StudentService.javaÎ Î((-
++
+%110#ee.hitsa.ois.domain.student.Student*ñ
+2ñ
+âD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/StudentService.javaË0 Ë(aäá
+ñ
+âD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/StudentService.javaË Ë(/9
+%1081ee.hitsa.ois.validation.ValidationFailedException"1ee.hitsa.ois.validation.ValidationFailedExceptionÂ
+‚
+ñ
+âD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/StudentService.javaË Ë(b
+%109"Mee.hitsa.ois.validation.ValidationFailedException#<init>(Ljava/lang/String;)V*;
+9
+%1081ee.hitsa.ois.validation.ValidationFailedException*31
+/student.error.nominalStudyEndIsBeforeStudyStart*
+0*î
+3ñ
+âD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/StudentService.javaÁ= Á(LÌÍ
+ñ
+âD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/StudentService.javaÁ= Á(a
+%107boolean"Ajava.time.LocalDate#isBefore(Ljava/time/chrono/ChronoLocalDate;)Z*(
+&
+nominalStudyEndjava.time.LocalDate*#
+!
+
+studyStartjava.time.LocalDate2,isBefore(Ljava/time/chrono/ChronoLocalDate;)*
+2
+1*õ
+
+5ñ
+âD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/StudentService.javaÂ Â(& «
+ñ
+âD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/StudentService.javaÂ Â(6
+%105java.time.LocalDate"Lee.hitsa.ois.domain.student.StudentBase#getStudyStart()Ljava/time/LocalDate;*0
+.
+student#ee.hitsa.ois.domain.student.Student2getStudyStart()‰
+·
+ñ
+âD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/StudentService.javaÂ Â(7!
+
+studyStartjava.time.LocalDate"__id*
+
+%105java.time.LocalDate‘—
+ñ
+âD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/StudentService.javaÊ$ Ê(@
+%106java.time.LocalDate"Qee.hitsa.ois.domain.student.StudentBase#getNominalStudyEnd()Ljava/time/LocalDate;*0
+.
+student#ee.hitsa.ois.domain.student.Student2getNominalStudyEnd()È
+Ê
+ñ
+âD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/StudentService.javaÊ Ê(A&
+nominalStudyEndjava.time.LocalDate"__id*
+
+%106java.time.LocalDate*
+3
+1*—
+6ñ
+âD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/StudentService.java‰" ‰(,Ñ
+Å
+ñ
+âD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/StudentService.java‰" ‰(,'
+%103ee.hitsa.ois.service.JobService"__id*7*5%
+#ee.hitsa.ois.service.StudentService"
+
+jobService¶£
+ñ
+âD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/StudentService.java‰" ‰(L
+%104void"^ee.hitsa.ois.service.JobService#studentLanguageUpdated(Lee/hitsa/ois/domain/student/Student;)V*)
+'
+%103ee.hitsa.ois.service.JobService*0
+.
+student#ee.hitsa.ois.domain.student.Student2=studentLanguageUpdated(Lee/hitsa/ois/domain/student/Student;)*
+5*„<
+7ñ
+âD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/StudentService.java« …(ãà
+ñ
+âD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/StudentService.java« …(
+%50void"Vee.hitsa.ois.domain.student.StudentBase#setLanguage(Lee/hitsa/ois/domain/Classifier;)V*0
+.
+student#ee.hitsa.ois.domain.student.Student*'
+%
+%45ee.hitsa.ois.domain.Classifier2-setLanguage(Lee/hitsa/ois/domain/Classifier;)øº
+ñ
+âD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/StudentService.java (  (A
+%51java.util.List"Eee.hitsa.ois.domain.student.Student#getSpecialNeeds()Ljava/util/List;*0
+.
+student#ee.hitsa.ois.domain.student.Student2getSpecialNeeds()è
+å
+ñ
+âD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/StudentService.java C  (x"
+%52java.util.function.Function"__declareFunction*:8
+6__sonar_lambda_152$ee.hitsa.ois.service.StudentService⁄◊
+ñ
+âD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/StudentService.javaÀ À("
+%55java.util.List"Tee.hitsa.ois.web.commandobject.student.StudentForm#getSpecialNeeds()Ljava/util/List;*<
+:
+form2ee.hitsa.ois.web.commandobject.student.StudentForm2getSpecialNeeds()è
+å
+ñ
+âD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/StudentService.javaÀ$ À(>"
+%56java.util.function.Function"__declareFunction*:8
+6__sonar_lambda_153$ee.hitsa.ois.service.StudentServiceè
+å
+ñ
+âD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/StudentService.javaÀ@ –("
+%57java.util.function.Function"__declareFunction*:8
+6__sonar_lambda_154$ee.hitsa.ois.service.StudentServiceÜ
+É
+
+__unknown_file (/
+"
+%57java.util.function.Function"	
+student"__id*0
+.
+student#ee.hitsa.ois.domain.student.Studentâ
+Ü
+
+__unknown_file (;
+"
+%57java.util.function.Function"
+StudentService.this"__id*'%
+#ee.hitsa.ois.service.StudentService¨
+©
+ñ
+âD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/StudentService.java  –(
+%64boolean"∑ee.hitsa.ois.util.EntityUtil#bindEntityCollection(Ljava/util/Collection;Ljava/util/function/Function;Ljava/util/Collection;Ljava/util/function/Function;Ljava/util/function/Function;)Z* "
+ee.hitsa.ois.util.EntityUtil*
+
+%51java.util.List*$
+"
+%52java.util.function.Function*
+
+%55java.util.List*$
+"
+%56java.util.function.Function*$
+"
+%57java.util.function.Function˘ˆ
+ñ
+âD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/StudentService.java—+ —(80
+%65)java.util.concurrent.atomic.AtomicBoolean")java.util.concurrent.atomic.AtomicBooleanë
+é
+ñ
+âD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/StudentService.java—' —(?
+%66"4java.util.concurrent.atomic.AtomicBoolean#<init>(Z)V*2
+0
+%65)java.util.concurrent.atomic.AtomicBoolean*2 ì
+ê
+ñ
+âD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/StudentService.java— —(@;
+updateRequired)java.util.concurrent.atomic.AtomicBoolean"__id*2
+0
+%65)java.util.concurrent.atomic.AtomicBoolean«ƒ
+ñ
+âD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/StudentService.java“( “(E
+%67java.util.List"Iee.hitsa.ois.domain.student.Student#getStudentLanguages()Ljava/util/List;*0
+.
+student#ee.hitsa.ois.domain.student.Student2getStudentLanguages()è
+å
+ñ
+âD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/StudentService.java“G “(m"
+%68java.util.function.Function"__declareFunction*:8
+6__sonar_lambda_155$ee.hitsa.ois.service.StudentService‚ﬂ
+ñ
+âD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/StudentService.java” ”(*
+%70java.util.List"Xee.hitsa.ois.web.commandobject.student.StudentForm#getStudentLanguages()Ljava/util/List;*<
+:
+form2ee.hitsa.ois.web.commandobject.student.StudentForm2getStudentLanguages()è
+å
+ñ
+âD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/StudentService.java”, ”(@"
+%71java.util.function.Function"__declareFunction*:8
+6__sonar_lambda_156$ee.hitsa.ois.service.StudentServiceè
+å
+ñ
+âD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/StudentService.java‘ €("
+%73java.util.function.Function"__declareFunction*:8
+6__sonar_lambda_157$ee.hitsa.ois.service.StudentServiceÜ
+É
+
+__unknown_file (/
+"
+%73java.util.function.Function"	
+student"__id*0
+.
+student#ee.hitsa.ois.domain.student.Studentö
+ó
+
+__unknown_file (6
+"
+%73java.util.function.Function"
+updateRequired"__id*=
+;
+updateRequired)java.util.concurrent.atomic.AtomicBooleanâ
+Ü
+
+__unknown_file (;
+"
+%73java.util.function.Function"
+StudentService.this"__id*'%
+#ee.hitsa.ois.service.StudentServiceë
+é
+ñ
+âD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/StudentService.java€ ‡($
+%86java.util.function.BiConsumer"__declareFunction*:8
+6__sonar_lambda_158$ee.hitsa.ois.service.StudentServiceú
+ô
+
+__unknown_file (8
+$
+%86java.util.function.BiConsumer"
+updateRequired"__id*=
+;
+updateRequired)java.util.concurrent.atomic.AtomicBooleanã
+à
+
+__unknown_file (=
+$
+%86java.util.function.BiConsumer"
+StudentService.this"__id*'%
+#ee.hitsa.ois.service.StudentServiceè
+å
+ñ
+âD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/StudentService.java‡ „("
+%97java.util.function.Consumer"__declareFunction*:8
+6__sonar_lambda_159$ee.hitsa.ois.service.StudentServiceö
+ó
+
+__unknown_file (6
+"
+%97java.util.function.Consumer"
+updateRequired"__id*=
+;
+updateRequired)java.util.concurrent.atomic.AtomicBooleanâ
+Ü
+
+__unknown_file (;
+"
+%97java.util.function.Consumer"
+StudentService.this"__id*'%
+#ee.hitsa.ois.service.StudentService¥
+±
+ñ
+âD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/StudentService.java“ „(
+%101void"Ûee.hitsa.ois.util.EntityUtil#bindEntityCollection(Ljava/util/Collection;Ljava/util/function/Function;Ljava/util/Collection;Ljava/util/function/Function;Ljava/util/function/Function;Ljava/util/function/BiConsumer;Ljava/util/function/Consumer;)V* "
+ee.hitsa.ois.util.EntityUtil*
+
+%67java.util.List*$
+"
+%68java.util.function.Function*
+
+%70java.util.List*$
+"
+%71java.util.function.Function*$
+"
+%73java.util.function.Function*&
+$
+%86java.util.function.BiConsumer*$
+"
+%97java.util.function.Consumer•¢
+ñ
+âD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/StudentService.java‰ ‰( 
+%102boolean"0java.util.concurrent.atomic.AtomicBoolean#get()Z*=
+;
+updateRequired)java.util.concurrent.atomic.AtomicBoolean2get()*
+5
+6*Ç
+8ñ
+âD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/StudentService.java… …(ﬁ
+€
+ñ
+âD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/StudentService.java… …(%
+%45ee.hitsa.ois.domain.Classifier"__id*
+
+%47
+<nulltype>*
+7*∂
+9ñ
+âD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/StudentService.java» »($ö
+ó
+ñ
+âD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/StudentService.java» »($3
+%48,ee.hitsa.ois.repository.ClassifierRepository"__id*A*?%
+#ee.hitsa.ois.service.StudentService"
+classifierRepository‡›
+ñ
+âD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/StudentService.java», »(C
+%49java.lang.String"Wee.hitsa.ois.web.commandobject.student.StudentForm#getStudyLanguage()Ljava/lang/String;*<
+:
+form2ee.hitsa.ois.web.commandobject.student.StudentForm2getStudyLanguage()ùö
+ñ
+âD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/StudentService.java» »(D%
+%46ee.hitsa.ois.domain.Classifier"forg.springframework.data.jpa.repository.JpaRepository#getOne(Ljava/io/Serializable;)Ljava/lang/Object;*5
+3
+%48,ee.hitsa.ois.repository.ClassifierRepository*
+
+%49java.lang.String2getOne(Ljava/io/Serializable;)Ú
+Ô
+ñ
+âD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/StudentService.java» »(D%
+%45ee.hitsa.ois.domain.Classifier"__id*'
+%
+%46ee.hitsa.ois.domain.Classifier*
+7*•
+20ñ
+âD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/StudentService.java∂ ∂(äá
+ñ
+âD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/StudentService.java∂( ∂(74
+%20-ee.hitsa.ois.web.commandobject.OisFileCommand"lee.hitsa.ois.web.commandobject.student.StudentForm#getPhoto()Lee/hitsa/ois/web/commandobject/OisFileCommand;*<
+:
+form2ee.hitsa.ois.web.commandobject.student.StudentForm2
+getPhoto()∏
+µ
+ñ
+âD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/StudentService.java∂ ∂(?"
+%21ee.hitsa.ois.domain.OisFile"tee.hitsa.ois.util.EntityUtil#bindToEntity(Ljava/lang/Object;Ljava/lang/Object;[Ljava/lang/String;)Ljava/lang/Object;* "
+ee.hitsa.ois.util.EntityUtil*6
+4
+%20-ee.hitsa.ois.web.commandobject.OisFileCommand*&
+$
+photoee.hitsa.ois.domain.OisFile˚
+¯
+ñ
+âD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/StudentService.java∑/ ∑(1&
+%22javax.persistence.EntityManager"__id*/*-%
+#ee.hitsa.ois.service.StudentService"
+em«
+ƒ
+ñ
+âD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/StudentService.java∑ ∑(2"
+%23ee.hitsa.ois.domain.OisFile"êee.hitsa.ois.util.EntityUtil#save(Lee/hitsa/ois/domain/BaseEntityWithId;Ljavax/persistence/EntityManager;)Lee/hitsa/ois/domain/BaseEntityWithId;* "
+ee.hitsa.ois.util.EntityUtil*&
+$
+photoee.hitsa.ois.domain.OisFile*(
+&
+%22javax.persistence.EntityManagerÓ
+Î
+ñ
+âD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/StudentService.java∑ ∑(2$
+photoee.hitsa.ois.domain.OisFile"__id*$
+"
+%23ee.hitsa.ois.domain.OisFile˛˚
+ñ
+âD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/StudentService.java∏ ∏('
+%24void"Pee.hitsa.ois.domain.student.StudentBase#setPhoto(Lee/hitsa/ois/domain/OisFile;)V*0
+.
+student#ee.hitsa.ois.domain.student.Student*&
+$
+photoee.hitsa.ois.domain.OisFile2'setPhoto(Lee/hitsa/ois/domain/OisFile;)*
+19*Á
+21ñ
+âD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/StudentService.java¥ ¥()›⁄
+ñ
+âD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/StudentService.java¥  ¥('"
+%18ee.hitsa.ois.domain.OisFile"ee.hitsa.ois.domain.OisFile
+Ì
+ñ
+âD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/StudentService.java¥ ¥()
+%19"%ee.hitsa.ois.domain.OisFile#<init>()V*$
+"
+%18ee.hitsa.ois.domain.OisFileÓ
+Î
+ñ
+âD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/StudentService.java¥ ¥()$
+photoee.hitsa.ois.domain.OisFile"__id*$
+"
+%18ee.hitsa.ois.domain.OisFile*
+20*™
+10ñ
+âD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/StudentService.javaƒ ≈(m‚ﬂ
+ñ
+âD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/StudentService.javaƒ ≈(m
+%41void"wee.hitsa.ois.domain.student.StudentBase#setCurriculumSpeciality(Lee/hitsa/ois/domain/curriculum/CurriculumSpeciality;)V*0
+.
+student#ee.hitsa.ois.domain.student.Student*<
+:
+%353ee.hitsa.ois.domain.curriculum.CurriculumSpeciality2NsetCurriculumSpeciality(Lee/hitsa/ois/domain/curriculum/CurriculumSpeciality;)‹Ÿ
+ñ
+âD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/StudentService.java∆ ∆(.
+%42java.lang.String"Uee.hitsa.ois.web.commandobject.student.StudentForm#getSchoolEmail()Ljava/lang/String;*<
+:
+form2ee.hitsa.ois.web.commandobject.student.StudentForm2getSchoolEmail()€ÿ
+ñ
+âD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/StudentService.java∆ ∆(/
+%43void"Eee.hitsa.ois.domain.student.StudentBase#setEmail(Ljava/lang/String;)V*0
+.
+student#ee.hitsa.ois.domain.student.Student*
+
+%42java.lang.String2setEmail(Ljava/lang/String;)‡›
+ñ
+âD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/StudentService.java« «(3
+%44java.lang.String"Wee.hitsa.ois.web.commandobject.student.StudentForm#getStudyLanguage()Ljava/lang/String;*<
+:
+form2ee.hitsa.ois.web.commandobject.student.StudentForm2getStudyLanguage()*
+8
+9*ô
+11ñ
+âD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/StudentService.java≈h ≈(lÛ
+
+ñ
+âD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/StudentService.java≈h ≈(l:
+%353ee.hitsa.ois.domain.curriculum.CurriculumSpeciality"__id*
+
+%37
+<nulltype>*
+10*ﬁ
+12ñ
+âD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/StudentService.java≈ ≈(˚
+¯
+ñ
+âD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/StudentService.java≈ ≈(&
+%38javax.persistence.EntityManager"__id*/*-%
+#ee.hitsa.ois.service.StudentService"
+emúô
+ñ
+âD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/StudentService.java≈> ≈(\.
+%39'ee.hitsa.ois.web.dto.AutocompleteResult"uee.hitsa.ois.web.commandobject.student.StudentForm#getCurriculumSpeciality()Lee/hitsa/ois/web/dto/AutocompleteResult;*<
+:
+form2ee.hitsa.ois.web.commandobject.student.StudentForm2getCurriculumSpeciality()æª
+ñ
+âD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/StudentService.java≈> ≈(d
+%40java.lang.Long"Nee.hitsa.ois.web.commandobject.EntityConnectionCommand#getId()Ljava/lang/Long;*0
+.
+%39'ee.hitsa.ois.web.dto.AutocompleteResult2getId()ª∏
+ñ
+âD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/StudentService.java≈ ≈(e:
+%363ee.hitsa.ois.domain.curriculum.CurriculumSpeciality"cjavax.persistence.EntityManager#getReference(Ljava/lang/Class;Ljava/lang/Object;)Ljava/lang/Object;*(
+&
+%38javax.persistence.EntityManager*
+""*
+
+%40java.lang.Long21getReference(Ljava/lang/Class;Ljava/lang/Object;)ú
+ô
+ñ
+âD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/StudentService.java≈ ≈(e:
+%353ee.hitsa.ois.domain.curriculum.CurriculumSpeciality"__id*<
+:
+%363ee.hitsa.ois.domain.curriculum.CurriculumSpeciality*
+10*∏
+23ñ
+âD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/StudentService.java≤ ≤(äá
+ñ
+âD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/StudentService.java≤ ≤(&4
+%17-ee.hitsa.ois.web.commandobject.OisFileCommand"lee.hitsa.ois.web.commandobject.student.StudentForm#getPhoto()Lee/hitsa/ois/web/commandobject/OisFileCommand;*<
+:
+form2ee.hitsa.ois.web.commandobject.student.StudentForm2
+getPhoto()*
+19
+20
+21:5
+user-ee.hitsa.ois.service.security.HoisUserDetails:.
+student#ee.hitsa.ois.domain.student.Student::
+form2ee.hitsa.ois.web.commandobject.student.StudentFormB'%
+#ee.hitsa.ois.service.StudentService

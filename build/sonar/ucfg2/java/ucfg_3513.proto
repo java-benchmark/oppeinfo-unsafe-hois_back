@@ -1,0 +1,132 @@
+
+åee.hitsa.ois.service.SubjectStudyPeriodPlanService#save(Ljava/lang/Long;Lee/hitsa/ois/domain/timetable/SubjectStudyPeriodPlan;Lee/hitsa/ois/web/dto/SubjectStudyPeriodPlanDto;)Lee/hitsa/ois/domain/timetable/SubjectStudyPeriodPlan;¥
+˜D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/SubjectStudyPeriodPlanService.javaŽ" Ž(&"1*Á5
+1¥
+˜D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/SubjectStudyPeriodPlanService.java" ($˜
+•
+¥
+˜D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/SubjectStudyPeriodPlanService.java" ($%
+%0javax.persistence.EntityManager"__id*>*<4
+2ee.hitsa.ois.service.SubjectStudyPeriodPlanService"
+emÞÛ
+¥
+˜D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/SubjectStudyPeriodPlanService.javaE (Z
+%1java.lang.Long"Oee.hitsa.ois.web.dto.SubjectStudyPeriodPlanDto#getStudyPeriod()Ljava/lang/Long;*8
+6
+form.ee.hitsa.ois.web.dto.SubjectStudyPeriodPlanDto2getStudyPeriod()³°
+¥
+˜D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/SubjectStudyPeriodPlanService.java" ([%
+%2ee.hitsa.ois.domain.StudyPeriod"cjavax.persistence.EntityManager#getReference(Ljava/lang/Class;Ljava/lang/Object;)Ljava/lang/Object;*'
+%
+%0javax.persistence.EntityManager*
+""*
+
+%1java.lang.Long21getReference(Ljava/lang/Class;Ljava/lang/Object;)Š
+‡
+¥
+˜D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/SubjectStudyPeriodPlanService.java (\.
+studyPeriodee.hitsa.ois.domain.StudyPeriod"__id*'
+%
+%2ee.hitsa.ois.domain.StudyPeriodÉÆ
+¥
+˜D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/SubjectStudyPeriodPlanService.java) (A
+%3java.time.LocalDate"Aee.hitsa.ois.domain.StudyPeriod#getEndDate()Ljava/time/LocalDate;*0
+.
+studyPeriodee.hitsa.ois.domain.StudyPeriod2getEndDate()
+Œ
+¥
+˜D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/SubjectStudyPeriodPlanService.javaK (Z
+%4java.time.LocalDate".java.time.LocalDate#now()Ljava/time/LocalDate;*"
+java.time.LocalDateåâ
+¥
+˜D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/SubjectStudyPeriodPlanService.java) ([
+%5boolean"Ajava.time.LocalDate#isBefore(Ljava/time/chrono/ChronoLocalDate;)Z*
+
+%3java.time.LocalDate*
+
+%4java.time.LocalDate2,isBefore(Ljava/time/chrono/ChronoLocalDate;)‡
+„
+¥
+˜D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/SubjectStudyPeriodPlanService.java ‘(H
+
+%6void"Mee.hitsa.ois.exception.AssertionFailedException#throwIf(ZLjava/lang/String;)V*3"1
+/ee.hitsa.ois.exception.AssertionFailedException*
+
+%5boolean*97
+5Past subjectStudyPeriods cannot be updated or created¡
+ž
+¥
+˜D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/SubjectStudyPeriodPlanService.java“ “(
+
+%7void"vee.hitsa.ois.service.SubjectStudyPeriodPlanService#deleteDuplicates(Lee/hitsa/ois/web/dto/SubjectStudyPeriodPlanDto;)V*64
+2ee.hitsa.ois.service.SubjectStudyPeriodPlanService*8
+6
+form.ee.hitsa.ois.web.dto.SubjectStudyPeriodPlanDtoÜÙ
+¥
+˜D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/SubjectStudyPeriodPlanService.java”  ”(5
+%8java.util.Set"Nee.hitsa.ois.web.dto.SubjectStudyPeriodPlanDto#getCurriculums()Ljava/util/Set;*8
+6
+form.ee.hitsa.ois.web.dto.SubjectStudyPeriodPlanDto2getCurriculums()ƒ
+€
+¥
+˜D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/SubjectStudyPeriodPlanService.java” ”(?
+
+%9void"œee.hitsa.ois.service.SubjectStudyPeriodPlanService#updateCurriculums(Lee/hitsa/ois/domain/timetable/SubjectStudyPeriodPlan;Ljava/util/Set;Ljava/lang/Long;)V*64
+2ee.hitsa.ois.service.SubjectStudyPeriodPlanService*>
+<
+plan4ee.hitsa.ois.domain.timetable.SubjectStudyPeriodPlan*
+
+%8java.util.Set*
+
+schoolIdjava.lang.LongÛØ
+¥
+˜D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/SubjectStudyPeriodPlanService.java• •(3
+%10java.util.Set"Mee.hitsa.ois.web.dto.SubjectStudyPeriodPlanDto#getStudyForms()Ljava/util/Set;*8
+6
+form.ee.hitsa.ois.web.dto.SubjectStudyPeriodPlanDto2getStudyForms()Ö
+Ó
+¥
+˜D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/SubjectStudyPeriodPlanService.java• •(4
+%11void"‹ee.hitsa.ois.service.SubjectStudyPeriodPlanService#updateStudyForms(Lee/hitsa/ois/domain/timetable/SubjectStudyPeriodPlan;Ljava/util/Set;)V*64
+2ee.hitsa.ois.service.SubjectStudyPeriodPlanService*>
+<
+plan4ee.hitsa.ois.domain.timetable.SubjectStudyPeriodPlan*
+
+%10java.util.SetÛØ
+¥
+˜D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/SubjectStudyPeriodPlanService.java– –(3
+%12java.util.Set"Mee.hitsa.ois.web.dto.SubjectStudyPeriodPlanDto#getCapacities()Ljava/util/Set;*8
+6
+form.ee.hitsa.ois.web.dto.SubjectStudyPeriodPlanDto2getCapacities()Ö
+Ó
+¥
+˜D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/SubjectStudyPeriodPlanService.java– –(4
+%13void"‹ee.hitsa.ois.service.SubjectStudyPeriodPlanService#updateCapacities(Lee/hitsa/ois/domain/timetable/SubjectStudyPeriodPlan;Ljava/util/Set;)V*64
+2ee.hitsa.ois.service.SubjectStudyPeriodPlanService*>
+<
+plan4ee.hitsa.ois.domain.timetable.SubjectStudyPeriodPlan*
+
+%12java.util.Set™
+–
+¥
+˜D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/SubjectStudyPeriodPlanService.java—% —('&
+%14javax.persistence.EntityManager"__id*>*<4
+2ee.hitsa.ois.service.SubjectStudyPeriodPlanService"
+em‡
+„
+¥
+˜D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/SubjectStudyPeriodPlanService.java— —((;
+%154ee.hitsa.ois.domain.timetable.SubjectStudyPeriodPlan"ee.hitsa.ois.util.EntityUtil#save(Lee/hitsa/ois/domain/BaseEntityWithId;Ljavax/persistence/EntityManager;)Lee/hitsa/ois/domain/BaseEntityWithId;* "
+ee.hitsa.ois.util.EntityUtil*>
+<
+plan4ee.hitsa.ois.domain.timetable.SubjectStudyPeriodPlan*(
+&
+%14javax.persistence.EntityManager"ç
+¥
+˜D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/SubjectStudyPeriodPlanService.java— —()=
+;
+%154ee.hitsa.ois.domain.timetable.SubjectStudyPeriodPlan:
+schoolIdjava.lang.Long:<
+plan4ee.hitsa.ois.domain.timetable.SubjectStudyPeriodPlan:6
+form.ee.hitsa.ois.web.dto.SubjectStudyPeriodPlanDtoB64
+2ee.hitsa.ois.service.SubjectStudyPeriodPlanService

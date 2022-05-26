@@ -1,0 +1,77 @@
+
+Åee.hitsa.ois.service.StudentRemarkService#isStudentGroupTeacher(Lee/hitsa/ois/service/security/HoisUserDetails;Ljava/lang/Long;)Zú
+èD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/StudentRemarkService.java√ √()"1*î
+1ú
+èD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/StudentRemarkService.javaƒ ƒ(Ü
+É
+ú
+èD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/StudentRemarkService.javaƒ ƒ(%
+%0javax.persistence.EntityManager"__id*5*3+
+)ee.hitsa.ois.service.StudentRemarkService"
+emü
+ú
+ú
+èD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/StudentRemarkService.javaƒ, ≈(H
+%1java.lang.String"__concat*
+select s.id from student s *86
+4join student_group sg on sg.id = s.student_group_id ä
+á
+ú
+èD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/StudentRemarkService.javaƒ, ∆(:
+%2java.lang.String"__concat*
+
+%1java.lang.String**(
+&where s.id = ?1 and sg.teacher_id = ?2ãà
+ú
+èD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/StudentRemarkService.javaƒ ∆(;
+%3javax.persistence.Query"^javax.persistence.EntityManager#createNativeQuery(Ljava/lang/String;)Ljavax/persistence/Query;*'
+%
+%0javax.persistence.EntityManager*
+
+%2java.lang.String2%createNativeQuery(Ljava/lang/String;)˛˚
+ú
+èD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/StudentRemarkService.javaƒ «(+
+%4javax.persistence.Query"Rjavax.persistence.Query#setParameter(ILjava/lang/Object;)Ljavax/persistence/Query;*
+
+%3javax.persistence.Query*2*
+
+	studentIdjava.lang.Long2!setParameter(ILjava/lang/Object;)œÃ
+ú
+èD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/StudentRemarkService.java»! »(4
+%5java.lang.Long"Lee.hitsa.ois.service.security.HoisUserDetails#getTeacherId()Ljava/lang/Long;*7
+5
+user-ee.hitsa.ois.service.security.HoisUserDetails2getTeacherId()˜Ù
+ú
+èD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/StudentRemarkService.javaƒ »(5
+%6javax.persistence.Query"Rjavax.persistence.Query#setParameter(ILjava/lang/Object;)Ljavax/persistence/Query;*
+
+%4javax.persistence.Query*2*
+
+%5java.lang.Long2!setParameter(ILjava/lang/Object;)Ω∫
+ú
+èD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/StudentRemarkService.javaƒ …(!
+%7javax.persistence.Query"Ajavax.persistence.Query#setMaxResults(I)Ljavax/persistence/Query;*
+
+%6javax.persistence.Query*22setMaxResults(I)£†
+ú
+èD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/StudentRemarkService.javaƒ …(1
+%8java.util.List"7javax.persistence.Query#getResultList()Ljava/util/List;*
+
+%7javax.persistence.Query2getResultList()ÿ
+’
+ú
+èD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/StudentRemarkService.javaƒ …(2
+datajava.util.List"__id*
+
+%8java.util.ListÒÓ
+ú
+èD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/StudentRemarkService.java   (
+%9boolean"java.util.List#isEmpty()Z*
+
+datajava.util.List2	isEmpty()"ß
+ú
+èD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/StudentRemarkService.java   (
+"":5
+user-ee.hitsa.ois.service.security.HoisUserDetails:
+	studentIdjava.lang.LongB-+
+)ee.hitsa.ois.service.StudentRemarkService

@@ -1,0 +1,403 @@
+
+ßee.hitsa.ois.service.subjectstudyperiod.SubjectStudyPeriodCapacitiesService#updateSspCapacities(Ljava/lang/Long;Lee/hitsa/ois/web/dto/SubjectStudyPeriodDtoContainer;)Vº
+±D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/subjectstudyperiod/SubjectStudyPeriodCapacitiesService.javaK K(#"16*∂
+13º
+±D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/subjectstudyperiod/SubjectStudyPeriodCapacitiesService.javaW= W(@ÎË
+º
+±D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/subjectstudyperiod/SubjectStudyPeriodCapacitiesService.javaW= W(P
+%17java.util.List"Jee.hitsa.ois.web.dto.SubjectStudyPeriodDto#getCapacities()Ljava/util/List;*3
+1
+dto*ee.hitsa.ois.web.dto.SubjectStudyPeriodDto2getCapacities()*
+8*ÿ-
+14º
+±D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/subjectstudyperiod/SubjectStudyPeriodCapacitiesService.javaO% O('»
+≈
+º
+±D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/subjectstudyperiod/SubjectStudyPeriodCapacitiesService.javaO% O('%
+%3javax.persistence.EntityManager"__id*W*UM
+Kee.hitsa.ois.service.subjectstudyperiod.SubjectStudyPeriodCapacitiesService"
+em⁄◊
+º
+±D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/subjectstudyperiod/SubjectStudyPeriodCapacitiesService.javaOO O(Z
+%4java.lang.Long"Bee.hitsa.ois.web.dto.SubjectStudyPeriodDto#getId()Ljava/lang/Long;*3
+1
+dto*ee.hitsa.ois.web.dto.SubjectStudyPeriodDto2getId()Â‚
+º
+±D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/subjectstudyperiod/SubjectStudyPeriodCapacitiesService.javaO% O([@
+%5:ee.hitsa.ois.domain.subject.studyperiod.SubjectStudyPeriod"cjavax.persistence.EntityManager#getReference(Ljava/lang/Class;Ljava/lang/Object;)Ljava/lang/Object;*'
+%
+%3javax.persistence.EntityManager*
+""*
+
+%4java.lang.Long21getReference(Ljava/lang/Class;Ljava/lang/Object;)œ
+Ã
+º
+±D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/subjectstudyperiod/SubjectStudyPeriodCapacitiesService.javaO O(\A
+ssp:ee.hitsa.ois.domain.subject.studyperiod.SubjectStudyPeriod"__id*B
+@
+%5:ee.hitsa.ois.domain.subject.studyperiod.SubjectStudyPeriodÆ´
+º
+±D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/subjectstudyperiod/SubjectStudyPeriodCapacitiesService.javaQ? Q(O)
+%6#ee.hitsa.ois.domain.subject.Subject"lee.hitsa.ois.domain.subject.studyperiod.SubjectStudyPeriod#getSubject()Lee/hitsa/ois/domain/subject/Subject;*C
+A
+ssp:ee.hitsa.ois.domain.subject.studyperiod.SubjectStudyPeriod2getSubject()˘ˆ
+º
+±D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/subjectstudyperiod/SubjectStudyPeriodCapacitiesService.javaQ? Q(['
+%7!ee.hitsa.ois.domain.school.School"Ree.hitsa.ois.domain.subject.Subject#getSchool()Lee/hitsa/ois/domain/school/School;*+
+)
+%6#ee.hitsa.ois.domain.subject.Subject2getSchool()Å
+˛
+º
+±D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/subjectstudyperiod/SubjectStudyPeriodCapacitiesService.javaQ. Q(\
+%8java.lang.Long"Zee.hitsa.ois.util.EntityUtil#getId(Lee/hitsa/ois/domain/BaseEntityWithId;)Ljava/lang/Long;* "
+ee.hitsa.ois.util.EntityUtil*)
+'
+%7!ee.hitsa.ois.domain.school.SchoolœÃ
+º
+±D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/subjectstudyperiod/SubjectStudyPeriodCapacitiesService.javaQ. Q(m
+%9boolean"*java.lang.Long#equals(Ljava/lang/Object;)Z*
+
+%8java.lang.Long*
+
+schoolIdjava.lang.Long2equals(Ljava/lang/Object;)â
+Ü
+º
+±D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/subjectstudyperiod/SubjectStudyPeriodCapacitiesService.javaQ R(?
+%10void"Mee.hitsa.ois.exception.AssertionFailedException#throwIf(ZLjava/lang/String;)V*3"1
+/ee.hitsa.ois.exception.AssertionFailedException*
+""*,*
+(User and subject have different schools!ﬁ
+€
+º
+±D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/subjectstudyperiod/SubjectStudyPeriodCapacitiesService.javaTU T(m"
+%11java.util.function.Function"__declareFunction*ca
+___sonar_lambda_2045$ee.hitsa.ois.service.subjectstudyperiod.SubjectStudyPeriodCapacitiesServiceãà
+º
+±D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/subjectstudyperiod/SubjectStudyPeriodCapacitiesService.javaU U('
+%13java.util.List"Zee.hitsa.ois.domain.subject.studyperiod.SubjectStudyPeriod#getCapacities()Ljava/util/List;*C
+A
+ssp:ee.hitsa.ois.domain.subject.studyperiod.SubjectStudyPeriod2getCapacities()°
+û
+º
+±D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/subjectstudyperiod/SubjectStudyPeriodCapacitiesService.javaTD U((
+%14java.util.Map"fee.hitsa.ois.util.StreamUtil#toMap(Ljava/util/function/Function;Ljava/util/Collection;)Ljava/util/Map;* "
+ee.hitsa.ois.util.StreamUtil*$
+"
+%11java.util.function.Function*
+
+%13java.util.ListÇ
+ˇ
+º
+±D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/subjectstudyperiod/SubjectStudyPeriodCapacitiesService.javaT U() 
+savedCapacitiesjava.util.Map"__id*
+
+%14java.util.MapÛ
+º
+±D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/subjectstudyperiod/SubjectStudyPeriodCapacitiesService.javaV> V(I
+%15java.util.ArrayList"java.util.ArrayListÜ
+É
+º
+±D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/subjectstudyperiod/SubjectStudyPeriodCapacitiesService.javaV: V(K
+%16"java.util.ArrayList#<init>()V*
+
+%15java.util.ArrayListÑ
+Å
+º
+±D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/subjectstudyperiod/SubjectStudyPeriodCapacitiesService.javaV V(L
+
+capacitiesjava.util.List"__id*
+
+%15java.util.ArrayList*
+13*Â
+15º
+±D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/subjectstudyperiod/SubjectStudyPeriodCapacitiesService.javaN) N(2öó
+º
+±D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/subjectstudyperiod/SubjectStudyPeriodCapacitiesService.javaN) N(N
+%2java.util.List"_ee.hitsa.ois.web.dto.SubjectStudyPeriodDtoContainer#getSubjectStudyPeriodDtos()Ljava/util/List;*B
+@
+	container3ee.hitsa.ois.web.dto.SubjectStudyPeriodDtoContainer2getSubjectStudyPeriodDtos()*
+2*≈
+16º
+±D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/subjectstudyperiod/SubjectStudyPeriodCapacitiesService.javaL( L(9ÚÔ
+º
+±D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/subjectstudyperiod/SubjectStudyPeriodCapacitiesService.javaL, L(7
+%0java.util.ArrayList"java.util.ArrayListÑ
+Å
+º
+±D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/subjectstudyperiod/SubjectStudyPeriodCapacitiesService.javaL( L(9
+%1"java.util.ArrayList#<init>()V*
+
+%0java.util.ArrayList˝
+˙
+º
+±D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/subjectstudyperiod/SubjectStudyPeriodCapacitiesService.javaL L(:
+sspsjava.util.List"__id*
+
+%0java.util.ArrayList*
+15*‹
+0 "‘
+º
+±D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/subjectstudyperiod/SubjectStudyPeriodCapacitiesService.javaq q(
+implicit return*ı
+1º
+±D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/subjectstudyperiod/SubjectStudyPeriodCapacitiesService.javap p($¯
+ı
+º
+±D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/subjectstudyperiod/SubjectStudyPeriodCapacitiesService.javap p($;
+%404ee.hitsa.ois.repository.SubjectStudyPeriodRepository"__id*q*oM
+Kee.hitsa.ois.service.subjectstudyperiod.SubjectStudyPeriodCapacitiesService"
+subjectStudyPeriodRepository∞≠
+º
+±D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/subjectstudyperiod/SubjectStudyPeriodCapacitiesService.javap p(/
+%41java.util.List"`org.springframework.data.jpa.repository.JpaRepository#save(Ljava/lang/Iterable;)Ljava/util/List;*=
+;
+%404ee.hitsa.ois.repository.SubjectStudyPeriodRepository*
+
+sspsjava.util.List2save(Ljava/lang/Iterable;)*
+0*ı
+2º
+±D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/subjectstudyperiod/SubjectStudyPeriodCapacitiesService.javaN N(&É
+Ä
+º
+±D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/subjectstudyperiod/SubjectStudyPeriodCapacitiesService.javaN N(&1
+dto*ee.hitsa.ois.web.dto.SubjectStudyPeriodDto"__id*
+""°
+û
+º
+±D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/subjectstudyperiod/SubjectStudyPeriodCapacitiesService.javaN N(&1
+dto*ee.hitsa.ois.web.dto.SubjectStudyPeriodDto"
+__arrayGet*
+
+%2java.util.List*
+""*
+14
+1*Â
+3º
+±D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/subjectstudyperiod/SubjectStudyPeriodCapacitiesService.javak k(≤Ø
+º
+±D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/subjectstudyperiod/SubjectStudyPeriodCapacitiesService.javak k()
+%35void"[ee.hitsa.ois.domain.subject.studyperiod.SubjectStudyPeriod#setCapacities(Ljava/util/List;)V*C
+A
+ssp:ee.hitsa.ois.domain.subject.studyperiod.SubjectStudyPeriod*
+
+
+capacitiesjava.util.List2setCapacities(Ljava/util/List;)ıÚ
+º
+±D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/subjectstudyperiod/SubjectStudyPeriodCapacitiesService.javal  l(5
+%36java.lang.Boolean"Oee.hitsa.ois.web.dto.SubjectStudyPeriodDto#getCapacityDiff()Ljava/lang/Boolean;*3
+1
+dto*ee.hitsa.ois.web.dto.SubjectStudyPeriodDto2getCapacityDiff()∏µ
+º
+±D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/subjectstudyperiod/SubjectStudyPeriodCapacitiesService.javal l(6
+%37void"`ee.hitsa.ois.domain.subject.studyperiod.SubjectStudyPeriod#setCapacityDiff(Ljava/lang/Boolean;)V*C
+A
+ssp:ee.hitsa.ois.domain.subject.studyperiod.SubjectStudyPeriod*
+
+%36java.lang.Boolean2$setCapacityDiff(Ljava/lang/Boolean;)ÔÏ
+º
+±D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/subjectstudyperiod/SubjectStudyPeriodCapacitiesService.javam m(-
+%38void"Œee.hitsa.ois.service.subjectstudyperiod.SubjectStudyPeriodCapacitiesService#updateTeacherCapacities(Lee/hitsa/ois/domain/subject/studyperiod/SubjectStudyPeriod;Lee/hitsa/ois/web/dto/SubjectStudyPeriodDto;)V*OM
+Kee.hitsa.ois.service.subjectstudyperiod.SubjectStudyPeriodCapacitiesService*C
+A
+ssp:ee.hitsa.ois.domain.subject.studyperiod.SubjectStudyPeriod*3
+1
+dto*ee.hitsa.ois.web.dto.SubjectStudyPeriodDto2ÅupdateTeacherCapacities(Lee/hitsa/ois/domain/subject/studyperiod/SubjectStudyPeriod;Lee/hitsa/ois/web/dto/SubjectStudyPeriodDto;)¡
+æ
+º
+±D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/subjectstudyperiod/SubjectStudyPeriodCapacitiesService.javan n(
+%39boolean"
+__arrayAdd*
+
+sspsjava.util.List*: *C
+A
+ssp:ee.hitsa.ois.domain.subject.studyperiod.SubjectStudyPeriod*
+2*´
+4º
+±D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/subjectstudyperiod/SubjectStudyPeriodCapacitiesService.javad d(9õ
+ò
+º
+±D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/subjectstudyperiod/SubjectStudyPeriodCapacitiesService.javad d(9I
+savedCapacity8ee.hitsa.ois.domain.timetable.SubjectStudyPeriodCapacity"__id*
+""¿
+Ω
+º
+±D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/subjectstudyperiod/SubjectStudyPeriodCapacitiesService.javad d(9I
+savedCapacity8ee.hitsa.ois.domain.timetable.SubjectStudyPeriodCapacity"
+__arrayGet*
+
+%29java.util.Collection*
+""*
+3
+6*È	
+5º
+±D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/subjectstudyperiod/SubjectStudyPeriodCapacitiesService.javaf f(!†
+ù
+º
+±D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/subjectstudyperiod/SubjectStudyPeriodCapacitiesService.javaf+ f(C
+%32java.lang.Short"+java.lang.Short#valueOf(S)Ljava/lang/Short;*"
+java.lang.Short*2 ™ß
+º
+±D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/subjectstudyperiod/SubjectStudyPeriodCapacitiesService.javaf f(D
+%33void"Uee.hitsa.ois.domain.timetable.SubjectStudyPeriodCapacity#setHours(Ljava/lang/Short;)V*K
+I
+savedCapacity8ee.hitsa.ois.domain.timetable.SubjectStudyPeriodCapacity*
+
+%32java.lang.Short2setHours(Ljava/lang/Short;)œ
+Ã
+º
+±D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/subjectstudyperiod/SubjectStudyPeriodCapacitiesService.javag g(1
+%34boolean"
+__arrayAdd*
+
+
+capacitiesjava.util.List*: *K
+I
+savedCapacity8ee.hitsa.ois.domain.timetable.SubjectStudyPeriodCapacity*
+4*ˆ
+6º
+±D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/subjectstudyperiod/SubjectStudyPeriodCapacitiesService.javae e(!üú
+º
+±D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/subjectstudyperiod/SubjectStudyPeriodCapacitiesService.javae e(8
+%30java.util.List"_ee.hitsa.ois.domain.timetable.SubjectStudyPeriodCapacity#getTeacherCapacities()Ljava/util/List;*K
+I
+savedCapacity8ee.hitsa.ois.domain.timetable.SubjectStudyPeriodCapacity2getTeacherCapacities()áÑ
+º
+±D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/subjectstudyperiod/SubjectStudyPeriodCapacitiesService.javae e(?
+
+%31int"java.util.List#size()I*
+
+%30java.util.List2size()*
+4
+5*Ö
+7º
+±D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/subjectstudyperiod/SubjectStudyPeriodCapacitiesService.javad< d(Kª∏
+º
+±D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/subjectstudyperiod/SubjectStudyPeriodCapacitiesService.javad< d(T
+%29java.util.Collection",java.util.Map#values()Ljava/util/Collection;*"
+ 
+savedCapacitiesjava.util.Map2values()*
+4*ñ
+8º
+±D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/subjectstudyperiod/SubjectStudyPeriodCapacitiesService.javaW W(:ì
+ê
+º
+±D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/subjectstudyperiod/SubjectStudyPeriodCapacitiesService.javaW W(:A
+capacityDto2ee.hitsa.ois.web.dto.SubjectStudyPeriodCapacityDto"__id*
+""≤
+Ø
+º
+±D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/subjectstudyperiod/SubjectStudyPeriodCapacitiesService.javaW W(:A
+capacityDto2ee.hitsa.ois.web.dto.SubjectStudyPeriodCapacityDto"
+__arrayGet*
+
+%17java.util.List*
+""*
+7
+12*ê
+9º
+±D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/subjectstudyperiod/SubjectStudyPeriodCapacitiesService.java` `(∆
+√
+º
+±D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/subjectstudyperiod/SubjectStudyPeriodCapacitiesService.java` `($
+%28boolean"
+__arrayAdd*
+
+
+capacitiesjava.util.List*: *B
+@
+sspc8ee.hitsa.ois.domain.timetable.SubjectStudyPeriodCapacity*
+8*‚
+10º
+±D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/subjectstudyperiod/SubjectStudyPeriodCapacitiesService.java] ](%Ω∫
+º
+±D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/subjectstudyperiod/SubjectStudyPeriodCapacitiesService.java]D ](^?
+%238ee.hitsa.ois.domain.timetable.SubjectStudyPeriodCapacity"8ee.hitsa.ois.domain.timetable.SubjectStudyPeriodCapacity–
+Õ
+º
+±D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/subjectstudyperiod/SubjectStudyPeriodCapacitiesService.java]@ ](`
+%24"Bee.hitsa.ois.domain.timetable.SubjectStudyPeriodCapacity#<init>()V*A
+?
+%238ee.hitsa.ois.domain.timetable.SubjectStudyPeriodCapacityË
+Â
+º
+±D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/subjectstudyperiod/SubjectStudyPeriodCapacitiesService.java]b ](v3
+%25,ee.hitsa.ois.repository.ClassifierRepository"__id*i*gM
+Kee.hitsa.ois.service.subjectstudyperiod.SubjectStudyPeriodCapacitiesService"
+classifierRepositoryâ
+Ü
+º
+±D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/subjectstudyperiod/SubjectStudyPeriodCapacitiesService.java] ](w?
+%268ee.hitsa.ois.domain.timetable.SubjectStudyPeriodCapacity"¢ee.hitsa.ois.util.EntityUtil#bindToEntity(Ljava/lang/Object;Ljava/lang/Object;Lee/hitsa/ois/repository/ClassifierRepository;[Ljava/lang/String;)Ljava/lang/Object;* "
+ee.hitsa.ois.util.EntityUtil*C
+A
+capacityDto2ee.hitsa.ois.web.dto.SubjectStudyPeriodCapacityDto*A
+?
+%238ee.hitsa.ois.domain.timetable.SubjectStudyPeriodCapacity*5
+3
+%25,ee.hitsa.ois.repository.ClassifierRepositoryÕ
+ 
+º
+±D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/subjectstudyperiod/SubjectStudyPeriodCapacitiesService.java] ](w@
+sspc8ee.hitsa.ois.domain.timetable.SubjectStudyPeriodCapacity"__id*A
+?
+%268ee.hitsa.ois.domain.timetable.SubjectStudyPeriodCapacityΩ∫
+º
+±D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/subjectstudyperiod/SubjectStudyPeriodCapacitiesService.java^ ^(3
+%27void"çee.hitsa.ois.domain.timetable.SubjectStudyPeriodCapacity#setSubjectStudyPeriod(Lee/hitsa/ois/domain/subject/studyperiod/SubjectStudyPeriod;)V*B
+@
+sspc8ee.hitsa.ois.domain.timetable.SubjectStudyPeriodCapacity*C
+A
+ssp:ee.hitsa.ois.domain.subject.studyperiod.SubjectStudyPeriod2SsetSubjectStudyPeriod(Lee/hitsa/ois/domain/subject/studyperiod/SubjectStudyPeriod;)*
+9*Ä
+11º
+±D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/subjectstudyperiod/SubjectStudyPeriodCapacitiesService.javaZ Z(*Û
+º
+±D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/subjectstudyperiod/SubjectStudyPeriodCapacitiesService.javaZ2 Z(E
+%19java.lang.Long"Jee.hitsa.ois.web.dto.SubjectStudyPeriodCapacityDto#getId()Ljava/lang/Long;*C
+A
+capacityDto2ee.hitsa.ois.web.dto.SubjectStudyPeriodCapacityDto2getId()Õ
+ 
+º
+±D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/subjectstudyperiod/SubjectStudyPeriodCapacitiesService.javaZ Z(F?
+%208ee.hitsa.ois.domain.timetable.SubjectStudyPeriodCapacity"__mapRemove*"
+ 
+savedCapacitiesjava.util.Map*
+
+%19java.lang.LongÕ
+ 
+º
+±D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/subjectstudyperiod/SubjectStudyPeriodCapacitiesService.javaZ Z(F@
+sspc8ee.hitsa.ois.domain.timetable.SubjectStudyPeriodCapacity"__id*A
+?
+%208ee.hitsa.ois.domain.timetable.SubjectStudyPeriodCapacity˚¯
+º
+±D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/subjectstudyperiod/SubjectStudyPeriodCapacitiesService.java[" [(8
+%21java.lang.Short"Nee.hitsa.ois.web.dto.SubjectStudyPeriodCapacityDto#getHours()Ljava/lang/Short;*C
+A
+capacityDto2ee.hitsa.ois.web.dto.SubjectStudyPeriodCapacityDto2
+getHours()°û
+º
+±D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/subjectstudyperiod/SubjectStudyPeriodCapacitiesService.java[ [(9
+%22void"Uee.hitsa.ois.domain.timetable.SubjectStudyPeriodCapacity#setHours(Ljava/lang/Short;)V*B
+@
+sspc8ee.hitsa.ois.domain.timetable.SubjectStudyPeriodCapacity*
+
+%21java.lang.Short2setHours(Ljava/lang/Short;)*
+9*ÿ
+12º
+±D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/subjectstudyperiod/SubjectStudyPeriodCapacitiesService.javaX X(0í
+è
+º
+±D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/subjectstudyperiod/SubjectStudyPeriodCapacitiesService.javaX X(0@
+sspc8ee.hitsa.ois.domain.timetable.SubjectStudyPeriodCapacity"__id*
+""Û
+º
+±D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/subjectstudyperiod/SubjectStudyPeriodCapacitiesService.javaY Y('
+%18java.lang.Long"Jee.hitsa.ois.web.dto.SubjectStudyPeriodCapacityDto#getId()Ljava/lang/Long;*C
+A
+capacityDto2ee.hitsa.ois.web.dto.SubjectStudyPeriodCapacityDto2getId()*
+10
+11:
+schoolIdjava.lang.Long:@
+	container3ee.hitsa.ois.web.dto.SubjectStudyPeriodDtoContainerBOM
+Kee.hitsa.ois.service.subjectstudyperiod.SubjectStudyPeriodCapacitiesService

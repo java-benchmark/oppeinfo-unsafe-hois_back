@@ -1,0 +1,140 @@
+
+Yee.hitsa.ois.service.AcademicCalendarService#studyYears(Ljava/lang/Long;)Ljava/util/List;ù
+íD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/AcademicCalendarService.javaQ$ Q(."1*º3
+1ù
+íD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/AcademicCalendarService.javaR R(ä
+á
+ù
+íD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/AcademicCalendarService.javaR R(%
+%0javax.persistence.EntityManager"__id*8*6.
+,ee.hitsa.ois.service.AcademicCalendarService"
+emÈ
+Ê
+ù
+íD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/AcademicCalendarService.javaR, S(U
+%1java.lang.String"__concat*[Y
+Wselect c.code, c.name_et, c.name_en, sy.id, sy.start_date, sy.end_date, 0 as count from*EC
+A (select id from study_year sy where sy.school_id = :schoolId and‡
+›
+û
+íD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/AcademicCalendarService.javaR, T(é
+%2java.lang.String"__concat*
+
+%1java.lang.String*~|
+z ((sy.start_date <= :now and sy.end_date >= :now) or (sy.start_date - interval '2 month') <= :now and sy.end_date >= :now)·
+ﬁ
+û
+íD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/AcademicCalendarService.javaR, U(è
+%3java.lang.String"__concat*
+
+%2java.lang.String*}
+{ union select first_value(id) over(order by end_date desc) from study_year where school_id = :schoolId and end_date < :now ˙
+˜
+û
+íD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/AcademicCalendarService.javaR, V(•
+%4java.lang.String"__concat*
+
+%3java.lang.String*óî
+ë union select first_value(id) over(order by end_date asc) from study_year where school_id = :schoolId and end_date > :now and start_date >:now) xà
+Ö
+ù
+íD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/AcademicCalendarService.javaR, W(7
+%5java.lang.String"__concat*
+
+%4java.lang.String*'%
+# join study_year sy on sy.id = x.idë
+é
+ù
+íD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/AcademicCalendarService.javaR, X(@
+%6java.lang.String"__concat*
+
+%5java.lang.String*0.
+, join classifier c on c.code = sy.year_code ∂
+≥
+ù
+íD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/AcademicCalendarService.javaR, Y(e
+%7java.lang.String"__concat*
+
+%6java.lang.String*US
+Q where (exists(select sp.id from study_period sp where sp.study_year_id = sy.id) ª
+∏
+ù
+íD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/AcademicCalendarService.javaR, Z(j
+%8java.lang.String"__concat*
+
+%7java.lang.String*ZX
+V or exists(select spe.id from study_period_event spe where spe.study_year_id = sy.id))Ä
+˝
+ù
+íD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/AcademicCalendarService.javaR, [(/
+%9java.lang.String"__concat*
+
+%8java.lang.String*
+ order by sy.start_date ascçä
+ù
+íD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/AcademicCalendarService.javaR [(0
+%10javax.persistence.Query"^javax.persistence.EntityManager#createNativeQuery(Ljava/lang/String;)Ljavax/persistence/Query;*'
+%
+%0javax.persistence.EntityManager*
+
+%9java.lang.String2%createNativeQuery(Ljava/lang/String;)™ß
+ù
+íD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/AcademicCalendarService.javaR \(3
+%11javax.persistence.Query"cjavax.persistence.Query#setParameter(Ljava/lang/String;Ljava/lang/Object;)Ljavax/persistence/Query;* 
+
+%10javax.persistence.Query*
+
+schoolId*
+
+schoolIdjava.lang.Long22setParameter(Ljava/lang/String;Ljava/lang/Object;)à
+Ö
+ù
+íD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/AcademicCalendarService.java]G ](V
+%12java.time.LocalDate".java.time.LocalDate#now()Ljava/time/LocalDate;*"
+java.time.LocalDate‡
+›
+ù
+íD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/AcademicCalendarService.java]% ](W
+%13java.sql.Timestamp"^ee.hitsa.ois.util.JpaQueryUtil#parameterAsTimestamp(Ljava/time/LocalDate;)Ljava/sql/Timestamp;*"" 
+ee.hitsa.ois.util.JpaQueryUtil*
+
+%12java.time.LocalDate§°
+ù
+íD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/AcademicCalendarService.javaR ](X
+%14javax.persistence.Query"cjavax.persistence.Query#setParameter(Ljava/lang/String;Ljava/lang/Object;)Ljavax/persistence/Query;* 
+
+%11javax.persistence.Query*
+now*
+
+%13java.sql.Timestamp22setParameter(Ljava/lang/String;Ljava/lang/Object;)¶£
+ù
+íD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/AcademicCalendarService.javaR ^( 
+%15java.util.List"7javax.persistence.Query#getResultList()Ljava/util/List;* 
+
+%14javax.persistence.Query2getResultList()⁄
+◊
+ù
+íD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/AcademicCalendarService.javaR ^(!
+datajava.util.List"__id*
+
+%15java.util.Listù
+ö
+ù
+íD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/AcademicCalendarService.java`' `(O"
+%16java.util.function.Function"__declareFunction*A?
+=__sonar_lambda_6$ee.hitsa.ois.service.AcademicCalendarServiceå
+â
+ù
+íD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/AcademicCalendarService.java` `(V
+%19java.util.List"nee.hitsa.ois.util.StreamUtil#toMappedList(Ljava/util/function/Function;Ljava/util/Collection;)Ljava/util/List;* "
+ee.hitsa.ois.util.StreamUtil*$
+"
+%16java.util.function.Function*
+
+datajava.util.List"π
+ù
+íD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/AcademicCalendarService.java` `(W
+
+%19java.util.List:
+schoolIdjava.lang.LongB0.
+,ee.hitsa.ois.service.AcademicCalendarService

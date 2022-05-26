@@ -1,0 +1,96 @@
+
+bee.hitsa.ois.service.CertificateContentService#getSubjectOutcomes(Ljava/util/Set;)Ljava/util/List;°
+îD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/CertificateContentService.javaƒ% ƒ(7"3*±
+2°
+îD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/CertificateContentService.java∆ ∆($◊‘
+°
+îD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/CertificateContentService.java∆ ∆("
+%1java.util.ArrayList"java.util.ArrayListÈ
+Ê
+°
+îD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/CertificateContentService.java∆ ∆($
+%2"java.util.ArrayList#<init>()V*
+
+%1java.util.ArrayList"¡
+°
+îD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/CertificateContentService.java∆ ∆(%
+
+%1java.util.ArrayList*¨
+3°
+îD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/CertificateContentService.java≈ ≈(˙˜
+°
+îD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/CertificateContentService.java≈ ≈( 
+%0boolean"java.util.Set#isEmpty()Z*
+
+
+subjectIdsjava.util.Set2	isEmpty()*
+2
+1*ﬁ
+1°
+îD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/CertificateContentService.java» »(ê
+ç
+°
+îD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/CertificateContentService.java» »(%
+%3javax.persistence.EntityManager"__id*:*80
+.ee.hitsa.ois.service.CertificateContentService"
+emÖ
+Ç
+°
+îD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/CertificateContentService.java», …(!
+%4java.lang.String"__concat*'%
+#select id, outcomes_et, outcomes_en*
+ from subject¯
+ı
+°
+îD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/CertificateContentService.java»,  (#
+%5java.lang.String"__concat*
+
+%4java.lang.String*
+ where id in ?1êç
+°
+îD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/CertificateContentService.java»  ($
+%6javax.persistence.Query"^javax.persistence.EntityManager#createNativeQuery(Ljava/lang/String;)Ljavax/persistence/Query;*'
+%
+%3javax.persistence.EntityManager*
+
+%5java.lang.String2%createNativeQuery(Ljava/lang/String;)ÉÄ
+°
+îD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/CertificateContentService.java» À((
+%7javax.persistence.Query"Rjavax.persistence.Query#setParameter(ILjava/lang/Object;)Ljavax/persistence/Query;*
+
+%6javax.persistence.Query*2*
+
+
+subjectIdsjava.util.Set2!setParameter(ILjava/lang/Object;)®•
+°
+îD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/CertificateContentService.java» Ã(
+%8java.util.List"7javax.persistence.Query#getResultList()Ljava/util/List;*
+
+%7javax.persistence.Query2getResultList()›
+⁄
+°
+îD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/CertificateContentService.java» Ã(
+rowsjava.util.List"__id*
+
+%8java.util.List¶
+£
+¢
+îD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/CertificateContentService.javaÕ' Õ(Ç!
+%9java.util.function.Function"__declareFunction*FD
+B__sonar_lambda_1294$ee.hitsa.ois.service.CertificateContentServiceê
+ç
+¢
+îD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/CertificateContentService.javaÕ Õ(â
+%15java.util.List"nee.hitsa.ois.util.StreamUtil#toMappedList(Ljava/util/function/Function;Ljava/util/Collection;)Ljava/util/List;* "
+ee.hitsa.ois.util.StreamUtil*#
+!
+%9java.util.function.Function*
+
+rowsjava.util.List"æ
+¢
+îD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/CertificateContentService.javaÕ Õ(ä
+
+%15java.util.List:
+
+subjectIdsjava.util.SetB20
+.ee.hitsa.ois.service.CertificateContentService

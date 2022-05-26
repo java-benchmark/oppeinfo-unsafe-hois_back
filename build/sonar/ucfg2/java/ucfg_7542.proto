@@ -1,0 +1,96 @@
+
+šee.hitsa.ois.service.PublicDataService#getStudyYearSchedule(Ljava/lang/Long;Lee/hitsa/ois/web/commandobject/StudyYearScheduleDtoContainer;)Ljava/util/Set;™
+ŒD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/PublicDataService.java«% «(9"1*ü$
+1™
+ŒD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/PublicDataService.java¬F ¬(]ëè
+™
+ŒD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/PublicDataService.java¬4 ¬(E'
+%0!ee.hitsa.ois.util.JpaQueryBuilder"!ee.hitsa.ois.util.JpaQueryBuilder±
+®
+™
+ŒD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/PublicDataService.java¬0 ¬(e
+%1"Nee.hitsa.ois.util.JpaQueryBuilder#<init>(Ljava/lang/Class;Ljava/lang/String;)V*)
+'
+%0!ee.hitsa.ois.util.JpaQueryBuilder*
+""*
+sysù
+ö
+™
+ŒD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/PublicDataService.java¬ ¬(f'
+qb!ee.hitsa.ois.util.JpaQueryBuilder"__id*)
+'
+%0!ee.hitsa.ois.util.JpaQueryBuilderÚ×
+™
+ŒD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/PublicDataService.java® ®(N
+
+%2void"oee.hitsa.ois.util.JpaNativeQueryBuilder#requiredCriteria(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Long;)V*)
+'
+qb!ee.hitsa.ois.util.JpaQueryBuilder*
+sys.school.id = :schoolId*
+
+schoolId*
+
+schoolIdjava.lang.Long2FrequiredCriteria(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Long;)öó
+™
+ŒD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/PublicDataService.java¯Y ¯(w
+%3java.util.Set"]ee.hitsa.ois.web.commandobject.StudyYearScheduleDtoContainer#getStudyPeriods()Ljava/util/Set;*N
+L
+schedulesCmd<ee.hitsa.ois.web.commandobject.StudyYearScheduleDtoContainer2getStudyPeriods()óð
+™
+ŒD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/PublicDataService.java¯ ¯(x
+
+%4void"uee.hitsa.ois.util.JpaNativeQueryBuilder#requiredCriteria(Ljava/lang/String;Ljava/lang/String;Ljava/util/Collection;)V*)
+'
+qb!ee.hitsa.ois.util.JpaQueryBuilder*+)
+'sys.studyPeriod.id in (:studyPeriodIds)*
+studyPeriodIds*
+
+%3java.util.Set2LrequiredCriteria(Ljava/lang/String;Ljava/lang/String;Ljava/util/Collection;)øõ
+™
+ŒD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/PublicDataService.java°\ °({
+%5java.util.Set"^ee.hitsa.ois.web.commandobject.StudyYearScheduleDtoContainer#getStudentGroups()Ljava/util/Set;*N
+L
+schedulesCmd<ee.hitsa.ois.web.commandobject.StudyYearScheduleDtoContainer2getStudentGroups()öó
+™
+ŒD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/PublicDataService.java° °(|
+
+%6void"uee.hitsa.ois.util.JpaNativeQueryBuilder#optionalCriteria(Ljava/lang/String;Ljava/lang/String;Ljava/util/Collection;)V*)
+'
+qb!ee.hitsa.ois.util.JpaQueryBuilder*-+
+)sys.studentGroup.id in (:studentGroupIds)*
+studentGroupIds*
+
+%5java.util.Set2LoptionalCriteria(Ljava/lang/String;Ljava/lang/String;Ljava/util/Collection;)€
+ý
+™
+ŒD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/PublicDataService.java²J ²(L%
+%7javax.persistence.EntityManager"__id*2*0(
+&ee.hitsa.ois.service.PublicDataService"
+em­ª
+™
+ŒD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/PublicDataService.java²@ ²(M"
+%8javax.persistence.TypedQuery"iee.hitsa.ois.util.JpaQueryBuilder#select(Ljavax/persistence/EntityManager;)Ljavax/persistence/TypedQuery;*)
+'
+qb!ee.hitsa.ois.util.JpaQueryBuilder*'
+%
+%7javax.persistence.EntityManager2)select(Ljavax/persistence/EntityManager;)ª§
+™
+ŒD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/PublicDataService.java²@ ²(]
+%9java.util.List"<javax.persistence.TypedQuery#getResultList()Ljava/util/List;*$
+"
+%8javax.persistence.TypedQuery2getResultList()å
+â
+™
+ŒD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/PublicDataService.java² ²(^
+%10java.util.Set"lee.hitsa.ois.util.StreamUtil#toMappedSet(Ljava/util/function/Function;Ljava/util/Collection;)Ljava/util/Set;* "
+ee.hitsa.ois.util.StreamUtil*
+""*
+
+%9java.util.List"´
+™
+ŒD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/PublicDataService.java² ²(_
+
+%10java.util.Set:
+schoolIdjava.lang.Long:L
+schedulesCmd<ee.hitsa.ois.web.commandobject.StudyYearScheduleDtoContainerB*(
+&ee.hitsa.ois.service.PublicDataService

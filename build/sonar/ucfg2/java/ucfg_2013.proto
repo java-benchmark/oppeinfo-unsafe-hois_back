@@ -1,0 +1,907 @@
+
+·ee.hitsa.ois.service.UserAdminRolesService#updateRole(Lee/hitsa/ois/service/security/HoisUserDetails;Lee/hitsa/ois/domain/UserSchoolRole;Lee/hitsa/ois/web/commandobject/UserSchoolRoleForm;)Lee/hitsa/ois/domain/UserSchoolRole;õ
+êD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/UserAdminRolesService.javah h($"20*≈
+13ù
+êD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/UserAdminRolesService.javaå1 å(;–Õ
+ù
+êD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/UserAdminRolesService.javaåH å(W
+%79java.util.Map"Lee.hitsa.ois.web.commandobject.UserSchoolRoleForm#getRights()Ljava/util/Map;*:
+8
+cmd1ee.hitsa.ois.web.commandobject.UserSchoolRoleForm2getRights()Ω
+∫
+ù
+êD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/UserAdminRolesService.javaå1 å(X
+%80java.util.Map"Hee.hitsa.ois.util.StreamUtil#nullSafeMap(Ljava/util/Map;)Ljava/util/Map;* "
+ee.hitsa.ois.util.StreamUtil*
+
+%79java.util.MapÜÉ
+ù
+êD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/UserAdminRolesService.javaå1 å(c
+%81java.util.Set"'java.util.Map#entrySet()Ljava/util/Set;*
+
+%80java.util.Map2
+entrySet()*
+5*Ã^
+14õ
+êD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/UserAdminRolesService.java{ {(í
+è
+õ
+êD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/UserAdminRolesService.java{ {(f)
+%32"ee.hitsa.ois.domain.UserSchoolRole"tee.hitsa.ois.util.EntityUtil#bindToEntity(Ljava/lang/Object;Ljava/lang/Object;[Ljava/lang/String;)Ljava/lang/Object;* "
+ee.hitsa.ois.util.EntityUtil*:
+8
+cmd1ee.hitsa.ois.web.commandobject.UserSchoolRoleForm*,
+*
+role"ee.hitsa.ois.domain.UserSchoolRole*
+
+school*
+teacherOccupation*
+
+rights*
+overwriteRights±Æ
+õ
+êD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/UserAdminRolesService.java}, }(<
+%33java.util.Set"=ee.hitsa.ois.domain.UserSchoolRole#getRights()Ljava/util/Set;*,
+*
+role"ee.hitsa.ois.domain.UserSchoolRole2getRights()õò
+õ
+êD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/UserAdminRolesService.java}, }(E
+%34java.util.stream.Stream"6java.util.Collection#stream()Ljava/util/stream/Stream;*
+
+%33java.util.Set2stream()õ
+ò
+õ
+êD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/UserAdminRolesService.java~/ ~(K"
+%35java.util.function.Function"__declareFunction*A?
+=__sonar_lambda_272$ee.hitsa.ois.service.UserAdminRolesServiceõ
+ò
+õ
+êD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/UserAdminRolesService.java+ (K"
+%38java.util.function.Function"__declareFunction*A?
+=__sonar_lambda_273$ee.hitsa.ois.service.UserAdminRolesService¶
+£
+õ
+êD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/UserAdminRolesService.javaM (_!
+%41java.util.stream.Collector"?java.util.stream.Collectors#toSet()Ljava/util/stream/Collector;*"
+java.util.stream.Collectors¨
+©
+õ
+êD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/UserAdminRolesService.java (`!
+%42java.util.stream.Collector"zjava.util.stream.Collectors#mapping(Ljava/util/function/Function;Ljava/util/stream/Collector;)Ljava/util/stream/Collector;*"
+java.util.stream.Collectors*$
+"
+%38java.util.function.Function*#
+!
+%41java.util.stream.CollectorØ
+¨
+õ
+êD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/UserAdminRolesService.java~ (a!
+%43java.util.stream.Collector"}java.util.stream.Collectors#groupingBy(Ljava/util/function/Function;Ljava/util/stream/Collector;)Ljava/util/stream/Collector;*"
+java.util.stream.Collectors*$
+"
+%35java.util.function.Function*#
+!
+%42java.util.stream.CollectorˆÛ
+õ
+êD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/UserAdminRolesService.java}, (b
+%44java.util.Map"Ojava.util.stream.Stream#collect(Ljava/util/stream/Collector;)Ljava/lang/Object;* 
+
+%34java.util.stream.Stream*#
+!
+%43java.util.stream.Collector2%collect(Ljava/util/stream/Collector;)⁄
+◊
+õ
+êD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/UserAdminRolesService.java} (c
+oldPermsjava.util.Map"__id*
+
+%44java.util.Mapâ
+Ü
+ù
+êD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/UserAdminRolesService.javaÇ Ç(&
+%45javax.persistence.EntityManager"__id*6*4,
+*ee.hitsa.ois.service.UserAdminRolesService"
+em∏µ
+û
+êD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/UserAdminRolesService.javaÇ Ç(Á
+%46javax.persistence.Query"^javax.persistence.EntityManager#createNativeQuery(Ljava/lang/String;)Ljavax/persistence/Query;*(
+&
+%45javax.persistence.EntityManager*¿Ω
+∫select c.code, c.main_class_code from classifier c where (c.main_class_code = ?1 and c.code in (select object_code from user_role_default where role_code = ?2)) or c.main_class_code = ?32%createNativeQuery(Ljava/lang/String;)⁄
+◊
+ù
+êD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/UserAdminRolesService.javaÉ! É(9'
+%47 ee.hitsa.ois.enums.MainClassCode"__id*
+""òï
+ù
+êD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/UserAdminRolesService.javaÉ! É(@
+%48java.lang.String"'java.lang.Enum#name()Ljava/lang/String;*)
+'
+%47 ee.hitsa.ois.enums.MainClassCode2name()˝˙
+ù
+êD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/UserAdminRolesService.javaÇ É(A
+%49javax.persistence.Query"Rjavax.persistence.Query#setParameter(ILjava/lang/Object;)Ljavax/persistence/Query;* 
+
+%46javax.persistence.Query*2*
+
+%48java.lang.String2!setParameter(ILjava/lang/Object;)—
+Œ
+ù
+êD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/UserAdminRolesService.javaÑ! Ñ(,
+%50ee.hitsa.ois.enums.Role"__id*
+""èå
+ù
+êD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/UserAdminRolesService.javaÑ! Ñ(3
+%51java.lang.String"'java.lang.Enum#name()Ljava/lang/String;* 
+
+%50ee.hitsa.ois.enums.Role2name()˝˙
+ù
+êD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/UserAdminRolesService.javaÇ Ñ(4
+%52javax.persistence.Query"Rjavax.persistence.Query#setParameter(ILjava/lang/Object;)Ljavax/persistence/Query;* 
+
+%49javax.persistence.Query*2*
+
+%51java.lang.String2!setParameter(ILjava/lang/Object;)⁄
+◊
+ù
+êD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/UserAdminRolesService.javaÖ! Ö(4'
+%53 ee.hitsa.ois.enums.MainClassCode"__id*
+""òï
+ù
+êD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/UserAdminRolesService.javaÖ! Ö(;
+%54java.lang.String"'java.lang.Enum#name()Ljava/lang/String;*)
+'
+%53 ee.hitsa.ois.enums.MainClassCode2name()˝˙
+ù
+êD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/UserAdminRolesService.javaÇ Ö(<
+%55javax.persistence.Query"Rjavax.persistence.Query#setParameter(ILjava/lang/Object;)Ljavax/persistence/Query;* 
+
+%52javax.persistence.Query*2*
+
+%54java.lang.String2!setParameter(ILjava/lang/Object;)¶£
+ù
+êD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/UserAdminRolesService.javaÇ Ü( 
+%56java.util.List"7javax.persistence.Query#getResultList()Ljava/util/List;* 
+
+%55javax.persistence.Query2getResultList()ÿ
+’
+ù
+êD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/UserAdminRolesService.javaÇ Ü(!
+cljava.util.List"__id*
+
+%56java.util.Listù
+ö
+ù
+êD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/UserAdminRolesService.javaá5 á(N"
+%57java.util.function.Function"__declareFunction*A?
+=__sonar_lambda_274$ee.hitsa.ois.service.UserAdminRolesServiceùö
+ù
+êD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/UserAdminRolesService.javaáP á([
+%59java.util.stream.Stream"6java.util.Collection#stream()Ljava/util/stream/Stream;*
+
+cljava.util.List2stream()ü
+ú
+û
+êD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/UserAdminRolesService.javaác á(§#
+%60java.util.function.Predicate"__declareFunction*A?
+=__sonar_lambda_275$ee.hitsa.ois.service.UserAdminRolesServiceéã
+û
+êD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/UserAdminRolesService.javaáP á(•
+%65java.util.stream.Stream"Wjava.util.stream.Stream#filter(Ljava/util/function/Predicate;)Ljava/util/stream/Stream;* 
+
+%59java.util.stream.Stream*%
+#
+%60java.util.function.Predicate2&filter(Ljava/util/function/Predicate;)ï
+í
+û
+êD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/UserAdminRolesService.javaá á(¶
+%66java.util.Set"oee.hitsa.ois.util.StreamUtil#toMappedSet(Ljava/util/function/Function;Ljava/util/stream/Stream;)Ljava/util/Set;* "
+ee.hitsa.ois.util.StreamUtil*$
+"
+%57java.util.function.Function* 
+
+%65java.util.stream.Stream‹
+Ÿ
+û
+êD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/UserAdminRolesService.javaá á(ß
+objectsjava.util.Set"__id*
+
+%66java.util.Setù
+ö
+ù
+êD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/UserAdminRolesService.javaà9 à(R"
+%67java.util.function.Function"__declareFunction*A?
+=__sonar_lambda_276$ee.hitsa.ois.service.UserAdminRolesServiceùö
+ù
+êD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/UserAdminRolesService.javaàT à(_
+%69java.util.stream.Stream"6java.util.Collection#stream()Ljava/util/stream/Stream;*
+
+cljava.util.List2stream()ü
+ú
+û
+êD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/UserAdminRolesService.javaàg à(£#
+%70java.util.function.Predicate"__declareFunction*A?
+=__sonar_lambda_277$ee.hitsa.ois.service.UserAdminRolesServiceéã
+û
+êD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/UserAdminRolesService.javaàT à(§
+%75java.util.stream.Stream"Wjava.util.stream.Stream#filter(Ljava/util/function/Predicate;)Ljava/util/stream/Stream;* 
+
+%69java.util.stream.Stream*%
+#
+%70java.util.function.Predicate2&filter(Ljava/util/function/Predicate;)ï
+í
+û
+êD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/UserAdminRolesService.javaà" à(•
+%76java.util.Set"oee.hitsa.ois.util.StreamUtil#toMappedSet(Ljava/util/function/Function;Ljava/util/stream/Stream;)Ljava/util/Set;* "
+ee.hitsa.ois.util.StreamUtil*$
+"
+%67java.util.function.Function* 
+
+%75java.util.stream.Stream‡
+›
+û
+êD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/UserAdminRolesService.javaà à(¶
+permissionsjava.util.Set"__id*
+
+%76java.util.Set‘—
+ù
+êD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/UserAdminRolesService.javaã+ ã(6
+%77java.util.ArrayList"java.util.ArrayListÁ
+‰
+ù
+êD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/UserAdminRolesService.javaã' ã(8
+%78"java.util.ArrayList#<init>()V*
+
+%77java.util.ArrayList‰
+·
+ù
+êD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/UserAdminRolesService.javaã ã(9
+	newRightsjava.util.List"__id*
+
+%77java.util.ArrayList*
+13*å
+15õ
+êD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/UserAdminRolesService.javax0 x(:éã
+õ
+êD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/UserAdminRolesService.javax x(/8
+%301ee.hitsa.ois.validation.ValidationFailedException"1ee.hitsa.ois.validation.ValidationFailedException—
+Œ
+õ
+êD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/UserAdminRolesService.javax x(;
+%31"Kee.hitsa.ois.validation.ValidationFailedException#<init>(Ljava/util/List;)V*:
+8
+%301ee.hitsa.ois.validation.ValidationFailedException*
+
+
+formErrorsjava.util.List*
+0*¶
+16õ
+êD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/UserAdminRolesService.javaw w(˜Ù
+õ
+êD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/UserAdminRolesService.javaw w(!
+%29boolean"java.util.List#isEmpty()Z*
+
+
+formErrorsjava.util.List2	isEmpty()*
+14
+15*á	
+17õ
+êD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/UserAdminRolesService.javau u(™ß
+õ
+êD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/UserAdminRolesService.javau u(MF
+%26?ee.hitsa.ois.web.ControllerErrorHandler$ErrorInfo$ErrorForField"?ee.hitsa.ois.web.ControllerErrorHandler$ErrorInfo$ErrorForFieldÅ
+˛
+õ
+êD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/UserAdminRolesService.javau u(i
+%27"mee.hitsa.ois.web.ControllerErrorHandler$ErrorInfo$ErrorForField#<init>(Ljava/lang/String;Ljava/lang/String;)V*H
+F
+%26?ee.hitsa.ois.web.ControllerErrorHandler$ErrorInfo$ErrorForField*
+sameNameExists*
+
+nameEn´
+®
+õ
+êD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/UserAdminRolesService.javau u(j
+%28boolean"
+__arrayAdd*
+
+
+formErrorsjava.util.List*: *H
+F
+%26?ee.hitsa.ois.web.ControllerErrorHandler$ErrorInfo$ErrorForField*
+16*ß
+18õ
+êD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/UserAdminRolesService.javat t(…
+∆
+õ
+êD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/UserAdminRolesService.javat t(
+%23java.lang.Boolean"__id*
+""ı
+Ú
+õ
+êD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/UserAdminRolesService.javat  t(=
+%24java.lang.Boolean"__mapGet*
+
+checkjava.util.Map*
+existsSameNameEn¥±
+õ
+êD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/UserAdminRolesService.javat t(>
+%25boolean"-java.lang.Boolean#equals(Ljava/lang/Object;)Z*
+
+%23java.lang.Boolean*
+
+%24java.lang.Boolean2equals(Ljava/lang/Object;)*
+16
+17*á	
+19õ
+êD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/UserAdminRolesService.javar r(™ß
+õ
+êD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/UserAdminRolesService.javar r(MF
+%20?ee.hitsa.ois.web.ControllerErrorHandler$ErrorInfo$ErrorForField"?ee.hitsa.ois.web.ControllerErrorHandler$ErrorInfo$ErrorForFieldÅ
+˛
+õ
+êD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/UserAdminRolesService.javar r(i
+%21"mee.hitsa.ois.web.ControllerErrorHandler$ErrorInfo$ErrorForField#<init>(Ljava/lang/String;Ljava/lang/String;)V*H
+F
+%20?ee.hitsa.ois.web.ControllerErrorHandler$ErrorInfo$ErrorForField*
+sameNameExists*
+
+nameEt´
+®
+õ
+êD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/UserAdminRolesService.javar r(j
+%22boolean"
+__arrayAdd*
+
+
+formErrorsjava.util.List*: *H
+F
+%20?ee.hitsa.ois.web.ControllerErrorHandler$ErrorInfo$ErrorForField*
+18*Ω
+0 "µ
+ù
+êD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/UserAdminRolesService.java´ ´(
+implicit return*·
+1ù
+êD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/UserAdminRolesService.java™ ™(ä
+á
+ù
+êD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/UserAdminRolesService.java™% ™(''
+%147javax.persistence.EntityManager"__id*6*4,
+*ee.hitsa.ois.service.UserAdminRolesService"
+em›
+⁄
+ù
+êD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/UserAdminRolesService.java™ ™((*
+%148"ee.hitsa.ois.domain.UserSchoolRole"êee.hitsa.ois.util.EntityUtil#save(Lee/hitsa/ois/domain/BaseEntityWithId;Ljavax/persistence/EntityManager;)Lee/hitsa/ois/domain/BaseEntityWithId;* "
+ee.hitsa.ois.util.EntityUtil*,
+*
+role"ee.hitsa.ois.domain.UserSchoolRole*)
+'
+%147javax.persistence.EntityManager"Œ
+ù
+êD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/UserAdminRolesService.java™ ™(),
+*
+%148"ee.hitsa.ois.domain.UserSchoolRole*À*
+2ù
+êD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/UserAdminRolesService.java£0 £(4¥±
+ù
+êD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/UserAdminRolesService.java£0 £(@
+%125java.util.Set"=ee.hitsa.ois.domain.UserSchoolRole#getRights()Ljava/util/Set;*,
+*
+role"ee.hitsa.ois.domain.UserSchoolRole2getRights()üú
+ù
+êD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/UserAdminRolesService.java£0 £(I
+%126java.util.stream.Stream"6java.util.Collection#stream()Ljava/util/stream/Stream;*
+
+%125java.util.Set2stream()û
+õ
+ù
+êD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/UserAdminRolesService.java§3 §(O#
+%127java.util.function.Function"__declareFunction*A?
+=__sonar_lambda_280$ee.hitsa.ois.service.UserAdminRolesServiceû
+õ
+ù
+êD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/UserAdminRolesService.java•/ •(O#
+%130java.util.function.Function"__declareFunction*A?
+=__sonar_lambda_281$ee.hitsa.ois.service.UserAdminRolesService©
+¶
+ù
+êD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/UserAdminRolesService.java•Q •(c"
+%133java.util.stream.Collector"?java.util.stream.Collectors#toSet()Ljava/util/stream/Collector;*"
+java.util.stream.Collectors±
+Æ
+ù
+êD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/UserAdminRolesService.java• •(d"
+%134java.util.stream.Collector"zjava.util.stream.Collectors#mapping(Ljava/util/function/Function;Ljava/util/stream/Collector;)Ljava/util/stream/Collector;*"
+java.util.stream.Collectors*%
+#
+%130java.util.function.Function*$
+"
+%133java.util.stream.Collector¥
+±
+ù
+êD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/UserAdminRolesService.java§ •(e"
+%135java.util.stream.Collector"}java.util.stream.Collectors#groupingBy(Ljava/util/function/Function;Ljava/util/stream/Collector;)Ljava/util/stream/Collector;*"
+java.util.stream.Collectors*%
+#
+%127java.util.function.Function*$
+"
+%134java.util.stream.Collector˚¯
+ù
+êD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/UserAdminRolesService.java£0 •(f
+%136java.util.Map"Ojava.util.stream.Stream#collect(Ljava/util/stream/Collector;)Ljava/lang/Object;*!
+
+%126java.util.stream.Stream*$
+"
+%135java.util.stream.Collector2%collect(Ljava/util/stream/Collector;)›
+⁄
+ù
+êD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/UserAdminRolesService.java£ •(g
+newPermsjava.util.Map"__id*
+
+%136java.util.Map≤Ø
+ù
+êD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/UserAdminRolesService.java¶ ¶(
+%137java.util.Set"<ee.hitsa.ois.domain.UserSchoolRole#getUsers()Ljava/util/Set;*,
+*
+role"ee.hitsa.ois.domain.UserSchoolRole2
+getUsers()üú
+ù
+êD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/UserAdminRolesService.java¶ ¶($
+%138java.util.stream.Stream"6java.util.Collection#stream()Ljava/util/stream/Stream;*
+
+%137java.util.Set2stream()ü
+ú
+ù
+êD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/UserAdminRolesService.java¶, ¶(f$
+%139java.util.function.Predicate"__declareFunction*A?
+=__sonar_lambda_282$ee.hitsa.ois.service.UserAdminRolesServiceêç
+ù
+êD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/UserAdminRolesService.java¶ ¶(g
+%143java.util.stream.Stream"Wjava.util.stream.Stream#filter(Ljava/util/function/Predicate;)Ljava/util/stream/Stream;*!
+
+%138java.util.stream.Stream*&
+$
+%139java.util.function.Predicate2&filter(Ljava/util/function/Predicate;)û
+õ
+ù
+êD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/UserAdminRolesService.java¶p ®(#
+%144java.util.function.Consumer"__declareFunction*A?
+=__sonar_lambda_283$ee.hitsa.ois.service.UserAdminRolesServiceî
+ë
+
+__unknown_file (0
+#
+%144java.util.function.Consumer"	
+clCache"__id*=
+;
+clCache0ee.hitsa.ois.util.ClassifierUtil$ClassifierCacher
+p
+
+__unknown_file (1
+#
+%144java.util.function.Consumer"
+
+oldPerms"__id*
+
+oldPermsjava.util.Mapr
+p
+
+__unknown_file (1
+#
+%144java.util.function.Consumer"
+
+newPerms"__id*
+
+newPermsjava.util.Map‰·
+ù
+êD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/UserAdminRolesService.java¶ ®(
+%146void"?java.util.stream.Stream#forEach(Ljava/util/function/Consumer;)V*!
+
+%143java.util.stream.Stream*%
+#
+%144java.util.function.Consumer2&forEach(Ljava/util/function/Consumer;)*
+1*’
+3ù
+êD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/UserAdminRolesService.java¢> ¢(B≤Ø
+ù
+êD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/UserAdminRolesService.java¢> ¢(M
+%123java.util.Set"<ee.hitsa.ois.domain.UserSchoolRole#getUsers()Ljava/util/Set;*,
+*
+role"ee.hitsa.ois.domain.UserSchoolRole2
+getUsers()ÚÔ
+ù
+êD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/UserAdminRolesService.java¢> ¢(W
+%124boolean"java.util.Set#isEmpty()Z*
+
+%123java.util.Set2	isEmpty()*
+2
+1*Ñ
+4ù
+êD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/UserAdminRolesService.javaò6 ò(Gü
+ú
+ù
+êD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/UserAdminRolesService.javaò6 ò(G-
+%97&ee.hitsa.ois.service.ClassifierService"__id*E*C,
+*ee.hitsa.ois.service.UserAdminRolesService"
+classifierServiceéã
+ù
+êD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/UserAdminRolesService.javaò& ò(57
+%980ee.hitsa.ois.util.ClassifierUtil$ClassifierCache"0ee.hitsa.ois.util.ClassifierUtil$ClassifierCache˙
+˜
+ù
+êD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/UserAdminRolesService.javaò" ò(H
+%99"bee.hitsa.ois.util.ClassifierUtil$ClassifierCache#<init>(Lee/hitsa/ois/service/ClassifierService;)V*9
+7
+%980ee.hitsa.ois.util.ClassifierUtil$ClassifierCache*/
+-
+%97&ee.hitsa.ois.service.ClassifierService°
+û
+ù
+êD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/UserAdminRolesService.javaò ò(I;
+clCache0ee.hitsa.ois.util.ClassifierUtil$ClassifierCache"__id*9
+7
+%980ee.hitsa.ois.util.ClassifierUtil$ClassifierCache¥±
+ù
+êD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/UserAdminRolesService.javaö( ö(8
+%100java.util.Set"=ee.hitsa.ois.domain.UserSchoolRole#getRights()Ljava/util/Set;*,
+*
+role"ee.hitsa.ois.domain.UserSchoolRole2getRights()ü
+ú
+û
+êD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/UserAdminRolesService.javaö: ö(ñ#
+%101java.util.function.Function"__declareFunction*A?
+=__sonar_lambda_278$ee.hitsa.ois.service.UserAdminRolesServiceü
+ú
+û
+êD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/UserAdminRolesService.javaö£ †(	#
+%107java.util.function.Function"__declareFunction*A?
+=__sonar_lambda_279$ee.hitsa.ois.service.UserAdminRolesService
+}
+
+__unknown_file (-
+#
+%107java.util.function.Function"
+role"__id*,
+*
+role"ee.hitsa.ois.domain.UserSchoolRoleî
+ë
+
+__unknown_file (0
+#
+%107java.util.function.Function"	
+clCache"__id*=
+;
+clCache0ee.hitsa.ois.util.ClassifierUtil$ClassifierCacheˆ
+Û
+ù
+êD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/UserAdminRolesService.javaö †(
+
+%119void"öee.hitsa.ois.util.EntityUtil#bindEntityCollection(Ljava/util/Collection;Ljava/util/function/Function;Ljava/util/Collection;Ljava/util/function/Function;)V* "
+ee.hitsa.ois.util.EntityUtil*
+
+%100java.util.Set*%
+#
+%101java.util.function.Function*
+
+	newRightsjava.util.List*%
+#
+%107java.util.function.FunctionÃ
+…
+ù
+êD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/UserAdminRolesService.java¢ ¢(
+%120java.lang.Boolean"__id*
+""ÎË
+ù
+êD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/UserAdminRolesService.java¢  ¢(8
+%121java.lang.Boolean"Yee.hitsa.ois.web.commandobject.UserSchoolRoleForm#getOverwriteRights()Ljava/lang/Boolean;*:
+8
+cmd1ee.hitsa.ois.web.commandobject.UserSchoolRoleForm2getOverwriteRights()π∂
+ù
+êD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/UserAdminRolesService.java¢ ¢(9
+%122boolean"-java.lang.Boolean#equals(Ljava/lang/Object;)Z*
+
+%120java.lang.Boolean*
+
+%121java.lang.Boolean2equals(Ljava/lang/Object;)*
+3
+1*Ë
+5ù
+êD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/UserAdminRolesService.javaå å(.Ã
+…
+ù
+êD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/UserAdminRolesService.javaå å(.
+itjava.util.Map$Entry"__id*
+""Í
+Á
+ù
+êD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/UserAdminRolesService.javaå å(.
+itjava.util.Map$Entry"
+__arrayGet*
+
+%81java.util.Set*
+""*
+4
+12*‡
+6ù
+êD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/UserAdminRolesService.javaê ê(»
+≈
+ù
+êD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/UserAdminRolesService.javaê ê(
+pjava.lang.String"__id*
+""Á
+‰
+ù
+êD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/UserAdminRolesService.javaê ê(
+pjava.lang.String"
+__arrayGet*
+
+%89java.util.List*
+""*
+5
+9*Å
+7ù
+êD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/UserAdminRolesService.javaî î(ìê
+ù
+êD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/UserAdminRolesService.javaî, î(7
+%94java.lang.String".java.util.Map$Entry#getKey()Ljava/lang/Object;*
+
+itjava.util.Map$Entry2getKey()¬
+ø
+ù
+êD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/UserAdminRolesService.javaî î(;
+%95java.util.List"<java.util.Arrays#asList([Ljava/lang/Object;)Ljava/util/List;*"
+java.util.Arrays*
+
+%94java.lang.String*
+
+pjava.lang.String˚
+¯
+ù
+êD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/UserAdminRolesService.javaî î(<
+%96boolean"
+__arrayAdd*
+
+	newRightsjava.util.List*: *
+
+%95java.util.List*
+6*á
+8ù
+êD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/UserAdminRolesService.javaí7 í(R˛
+˚
+ù
+êD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/UserAdminRolesService.javaí7 í(V
+%91java.lang.String"__concat*
+Unknown permission code: *
+
+pjava.lang.Stringåâ
+ù
+êD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/UserAdminRolesService.javaí í(66
+%92/ee.hitsa.ois.exception.AssertionFailedException"/ee.hitsa.ois.exception.AssertionFailedExceptionÃ
+…
+ù
+êD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/UserAdminRolesService.javaí í(W
+%93"Kee.hitsa.ois.exception.AssertionFailedException#<init>(Ljava/lang/String;)V*8
+6
+%92/ee.hitsa.ois.exception.AssertionFailedException*
+
+%91java.lang.String*
+0*Â
+9ù
+êD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/UserAdminRolesService.javaë ë(∑¥
+ù
+êD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/UserAdminRolesService.javaë ë(+
+%90boolean"+java.util.Set#contains(Ljava/lang/Object;)Z*
+
+permissionsjava.util.Set*
+
+pjava.lang.String2contains(Ljava/lang/Object;)*
+7
+8*À:
+20õ
+êD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/UserAdminRolesService.javai i(’“
+õ
+êD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/UserAdminRolesService.javai i(1
+%0java.lang.String"Rorg.springframework.security.core.userdetails.User#getUsername()Ljava/lang/String;*7
+5
+user-ee.hitsa.ois.service.security.HoisUserDetails2getUsername()Ü
+É
+õ
+êD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/UserAdminRolesService.javai3 i(5%
+%1javax.persistence.EntityManager"__id*6*4,
+*ee.hitsa.ois.service.UserAdminRolesService"
+emÚ
+Ô
+õ
+êD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/UserAdminRolesService.javai i(6
+
+%2void"^ee.hitsa.ois.util.EntityUtil#setUsername(Ljava/lang/String;Ljavax/persistence/EntityManager;)V* "
+ee.hitsa.ois.util.EntityUtil*
+
+%0java.lang.String*'
+%
+%1javax.persistence.EntityManagerùö
+õ
+êD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/UserAdminRolesService.javaj2 j(L?
+%39ee.hitsa.ois.web.commandobject.UserSchoolRoleCheckCommand"9ee.hitsa.ois.web.commandobject.UserSchoolRoleCheckCommandØ
+¨
+õ
+êD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/UserAdminRolesService.javaj. j(N
+%4"Cee.hitsa.ois.web.commandobject.UserSchoolRoleCheckCommand#<init>()V*A
+?
+%39ee.hitsa.ois.web.commandobject.UserSchoolRoleCheckCommand±
+Æ
+õ
+êD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/UserAdminRolesService.javaj j(OE
+checkCmd9ee.hitsa.ois.web.commandobject.UserSchoolRoleCheckCommand"__id*A
+?
+%39ee.hitsa.ois.web.commandobject.UserSchoolRoleCheckCommand¨©
+õ
+êD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/UserAdminRolesService.javak k('
+%5java.lang.Long"<ee.hitsa.ois.domain.BaseEntityWithId#getId()Ljava/lang/Long;*,
+*
+role"ee.hitsa.ois.domain.UserSchoolRole2getId()ÉÄ
+õ
+êD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/UserAdminRolesService.javak k((
+
+%6void"Vee.hitsa.ois.web.commandobject.UserSchoolRoleCheckCommand#setRoleId(Ljava/lang/Long;)V*G
+E
+checkCmd9ee.hitsa.ois.web.commandobject.UserSchoolRoleCheckCommand*
+
+%5java.lang.Long2setRoleId(Ljava/lang/Long;)”–
+õ
+êD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/UserAdminRolesService.javal l(*
+%7java.lang.String"Oee.hitsa.ois.web.commandobject.UserSchoolRoleForm#getNameEt()Ljava/lang/String;*:
+8
+cmd1ee.hitsa.ois.web.commandobject.UserSchoolRoleForm2getNameEt()âÜ
+õ
+êD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/UserAdminRolesService.javal l(+
+
+%8void"Xee.hitsa.ois.web.commandobject.UserSchoolRoleCheckCommand#setNameEt(Ljava/lang/String;)V*G
+E
+checkCmd9ee.hitsa.ois.web.commandobject.UserSchoolRoleCheckCommand*
+
+%7java.lang.String2setNameEt(Ljava/lang/String;)”–
+õ
+êD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/UserAdminRolesService.javam m(*
+%9java.lang.String"Oee.hitsa.ois.web.commandobject.UserSchoolRoleForm#getNameEn()Ljava/lang/String;*:
+8
+cmd1ee.hitsa.ois.web.commandobject.UserSchoolRoleForm2getNameEn()äá
+õ
+êD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/UserAdminRolesService.javam m(+
+%10void"Xee.hitsa.ois.web.commandobject.UserSchoolRoleCheckCommand#setNameEn(Ljava/lang/String;)V*G
+E
+checkCmd9ee.hitsa.ois.web.commandobject.UserSchoolRoleCheckCommand*
+
+%9java.lang.String2setNameEn(Ljava/lang/String;)Ÿ÷
+õ
+êD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/UserAdminRolesService.javan. n(>(
+%11!ee.hitsa.ois.domain.school.School"Qee.hitsa.ois.domain.UserSchoolRole#getSchool()Lee/hitsa/ois/domain/school/School;*,
+*
+role"ee.hitsa.ois.domain.UserSchoolRole2getSchool()‚
+ﬂ
+õ
+êD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/UserAdminRolesService.javan n(?
+%12java.lang.Long"Zee.hitsa.ois.util.EntityUtil#getId(Lee/hitsa/ois/domain/BaseEntityWithId;)Ljava/lang/Long;* "
+ee.hitsa.ois.util.EntityUtil**
+(
+%11!ee.hitsa.ois.domain.school.SchoolâÜ
+õ
+êD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/UserAdminRolesService.javan n(@
+%13void"Xee.hitsa.ois.web.commandobject.UserSchoolRoleCheckCommand#setSchoolId(Ljava/lang/Long;)V*G
+E
+checkCmd9ee.hitsa.ois.web.commandobject.UserSchoolRoleCheckCommand*
+
+%12java.lang.Long2setSchoolId(Ljava/lang/Long;)Å˛
+õ
+êD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/UserAdminRolesService.javao% o(?
+%14java.util.Map"Åee.hitsa.ois.service.UserAdminRolesService#checkRole(Lee/hitsa/ois/web/commandobject/UserSchoolRoleCheckCommand;Z)Ljava/util/Map;*.,
+*ee.hitsa.ois.service.UserAdminRolesService*G
+E
+checkCmd9ee.hitsa.ois.web.commandobject.UserSchoolRoleCheckCommand*2 2GcheckRole(Lee/hitsa/ois/web/commandobject/UserSchoolRoleCheckCommand;Z)◊
+‘
+õ
+êD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/UserAdminRolesService.javao o(@
+checkjava.util.Map"__id*
+
+%14java.util.Map“œ
+õ
+êD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/UserAdminRolesService.javapF p(Q
+%15java.util.ArrayList"java.util.ArrayListÂ
+‚
+õ
+êD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/UserAdminRolesService.javapB p(S
+%16"java.util.ArrayList#<init>()V*
+
+%15java.util.ArrayList„
+‡
+õ
+êD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/UserAdminRolesService.javap p(T
+
+formErrorsjava.util.List"__id*
+
+%15java.util.ArrayList…
+∆
+õ
+êD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/UserAdminRolesService.javaq q(
+%17java.lang.Boolean"__id*
+""ı
+Ú
+õ
+êD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/UserAdminRolesService.javaq  q(=
+%18java.lang.Boolean"__mapGet*
+
+checkjava.util.Map*
+existsSameNameEt¥±
+õ
+êD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/UserAdminRolesService.javaq q(>
+%19boolean"-java.lang.Boolean#equals(Ljava/lang/Object;)Z*
+
+%17java.lang.Boolean*
+
+%18java.lang.Boolean2equals(Ljava/lang/Object;)*
+18
+19*Ü
+10ù
+êD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/UserAdminRolesService.javaê ê(%ïí
+ù
+êD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/UserAdminRolesService.javaê3 ê(@
+%88java.util.List"0java.util.Map$Entry#getValue()Ljava/lang/Object;*
+
+itjava.util.Map$Entry2
+getValue()¬
+ø
+ù
+êD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/UserAdminRolesService.javaê ê(A
+%89java.util.List"Kee.hitsa.ois.util.StreamUtil#nullSafeList(Ljava/util/List;)Ljava/util/List;* "
+ee.hitsa.ois.util.StreamUtil*
+
+%88java.util.List*
+6*ú
+
+11ù
+êD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/UserAdminRolesService.javaé3 é(Jìê
+ù
+êD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/UserAdminRolesService.javaéM é(X
+%84java.lang.String".java.util.Map$Entry#getKey()Ljava/lang/Object;*
+
+itjava.util.Map$Entry2getKey()¸
+˘
+ù
+êD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/UserAdminRolesService.javaé3 é(X
+%85java.lang.String"__concat*
+Unknown object code: *
+
+%84java.lang.Stringåâ
+ù
+êD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/UserAdminRolesService.javaé é(26
+%86/ee.hitsa.ois.exception.AssertionFailedException"/ee.hitsa.ois.exception.AssertionFailedExceptionÃ
+…
+ù
+êD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/UserAdminRolesService.javaé é(Y
+%87"Kee.hitsa.ois.exception.AssertionFailedException#<init>(Ljava/lang/String;)V*8
+6
+%86/ee.hitsa.ois.exception.AssertionFailedException*
+
+%85java.lang.String*
+0*¸
+12ù
+êD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/UserAdminRolesService.javaç ç(ìê
+ù
+êD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/UserAdminRolesService.javaç! ç(,
+%82java.lang.String".java.util.Map$Entry#getKey()Ljava/lang/Object;*
+
+itjava.util.Map$Entry2getKey()µ≤
+ù
+êD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/UserAdminRolesService.javaç ç(-
+%83boolean"+java.util.Set#contains(Ljava/lang/Object;)Z*
+
+objectsjava.util.Set*
+
+%82java.lang.String2contains(Ljava/lang/Object;)*
+10
+11:5
+user-ee.hitsa.ois.service.security.HoisUserDetails:*
+role"ee.hitsa.ois.domain.UserSchoolRole:8
+cmd1ee.hitsa.ois.web.commandobject.UserSchoolRoleFormB.,
+*ee.hitsa.ois.service.UserAdminRolesService

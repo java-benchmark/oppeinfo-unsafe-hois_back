@@ -1,0 +1,551 @@
+
+¹ee.hitsa.ois.service.poll.PollService#allPollResults(Lee/hitsa/ois/domain/poll/Poll;Lee/hitsa/ois/web/commandobject/poll/PollResultCommand;)Lee/hitsa/ois/web/dto/poll/AllPollResultsDto;˜
+‹D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/poll/PollService.java´  ´ (+"1*÷Æ
+1˜
+‹D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/poll/PollService.javaµ  µ (|‘
+
+™
+‹D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/poll/PollService.javaµ  ¶ (Š
+%0java.lang.String"__concat*_]
+[pt.id as themeId, pt.name_et as themeEt, pt.name_en as themeEn, pt.order_nr as themeOrder, *mk
+iq.id as questionId, q.name_et as questionEt, ptq.order_nr as questionOrder, q.type_code as questionType, Ú
+×
+™
+‹D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/poll/PollService.javaµ  · (š
+%1java.lang.String"__concat*
+
+%0java.lang.String*}{
+yqa.id as answerId, qa.name_et as answerEt, qa.name_en as answerEn, qa.order_nr as answerOrder, qa.answer_nr as answerNr, Ó
+Ğ
+™
+‹D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/poll/PollService.javaµ  ¸ (“
+%2java.lang.String"__concat*
+
+%1java.lang.String*vt
+rA1.answerCount as answerCount, A1.answers as answers, A2.responses as responseCount, A2.average as averageWeight, ±
+®
+˜
+‹D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/poll/PollService.javaµ  ¹ (r
+%3java.lang.String"__concat*
+
+%2java.lang.String*US
+QSUBJECT_JOURNAL.journalId, SUBJECT_JOURNAL.journalEt, SUBJECT_JOURNAL.subjectId, ä
+á
+™
+‹D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/poll/PollService.javaµ  º (¡
+%4java.lang.String"__concat*
+
+%3java.lang.String*†ƒ
+€SUBJECT_JOURNAL.subjectCode || ' - ' || SUBJECT_JOURNAL.subjectEt || ' (' || SUBJECT_JOURNAL.teacherNames || ')' as subjectEt , ä
+á
+™
+‹D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/poll/PollService.javaµ  » (¡
+%5java.lang.String"__concat*
+
+%4java.lang.String*†ƒ
+€SUBJECT_JOURNAL.subjectCode || ' - ' || SUBJECT_JOURNAL.subjectEn || ' (' || SUBJECT_JOURNAL.teacherNames || ')' as subjectEn , º
+·
+˜
+‹D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/poll/PollService.javaµ  ¼ ({
+%6java.lang.String"__concat*
+
+%5java.lang.String*^\
+ZSUBJECT_JOURNAL.teacherId as teacherId, SUBJECT_JOURNAL.teacherName, SUBJECT_JOURNAL.sspIdá
+Ş
+˜
+‹D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/poll/PollService.javaµ  ¼ (|!
+SEARCH_SELECTjava.lang.String"__id*
+
+%6java.lang.String€
+ı
+˜
+‹D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/poll/PollService.java½  ¾ (:
+%7java.lang.String"__concat*
+FROM poll p *,*
+(JOIN poll_theme pt on pt.poll_id = p.id š
+—
+˜
+‹D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/poll/PollService.java½  ¿ (L
+%8java.lang.String"__concat*
+
+%7java.lang.String*><
+:JOIN poll_theme_question ptq ON ptq.poll_theme_id = pt.id Š
+‡
+˜
+‹D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/poll/PollService.java½  À (<
+%9java.lang.String"__concat*
+
+%8java.lang.String*.,
+*JOIN question q ON ptq.question_id = q.id —
+”
+˜
+‹D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/poll/PollService.java½  Á (H
+%10java.lang.String"__concat*
+
+%9java.lang.String*:8
+6LEFT JOIN question_answer qa ON qa.question_id = q.id ‡
+„
+™
+‹D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/poll/PollService.java½  Â (³
+%11java.lang.String"__concat*
+
+%10java.lang.String*§¤
+¡LEFT JOIN (SELECT r.poll_id, s.id AS subjectId,j.id AS journalId, j.name_et AS journalEt, s.name_et AS subjectEt, s.name_en AS subjectEn, s.code as subjectCode, ò
+ï
+™
+‹D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/poll/PollService.java½  Ã (¢
+%12java.lang.String"__concat*
+
+%11java.lang.String*’
+Œrqa.teacher_id AS teacherId, concat(p.firstname, ' ', p.lastname) AS teacherName, rqa.question_id, rqa.question_answer_id, ssp.id as sspId, ´
+±
+˜
+‹D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/poll/PollService.java½  Ä (h
+%13java.lang.String"__concat*
+
+%12java.lang.String*VT
+Rstring_agg(distinct concat(pp.firstname, ' ', pp.lastname), ', ') as teacherNames ¤
+¡
+˜
+‹D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/poll/PollService.java½  Å (X
+%14java.lang.String"__concat*
+
+%13java.lang.String*FD
+BFROM response r JOIN response_subject rs ON rs.response_id = r.id 
+‹
+˜
+‹D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/poll/PollService.java½  Æ (B
+%15java.lang.String"__concat*
+
+%14java.lang.String*0.
+,LEFT JOIN journal j ON rs.journal_id = j.id ¬
+©
+˜
+‹D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/poll/PollService.java½  Ç (`
+%16java.lang.String"__concat*
+
+%15java.lang.String*NL
+JLEFT JOIN subject_study_period ssp on rs.subject_study_period_id = ssp.id 
+Œ
+˜
+‹D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/poll/PollService.java½  È (C
+%17java.lang.String"__concat*
+
+%16java.lang.String*1/
+-LEFT JOIN subject s ON ssp.subject_id = s.id ·
+´
+˜
+‹D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/poll/PollService.java½  É (k
+%18java.lang.String"__concat*
+
+%17java.lang.String*YW
+ULEFT JOIN subject_study_period_teacher sspt on sspt.subject_study_period_id = ssp.id ’
+
+˜
+‹D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/poll/PollService.java½  Ê (F
+%19java.lang.String"__concat*
+
+%18java.lang.String*42
+0LEFT JOIN teacher tt on sspt.teacher_id = tt.id 
+‹
+˜
+‹D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/poll/PollService.java½  Ë (B
+%20java.lang.String"__concat*
+
+%19java.lang.String*0.
+,LEFT JOIN person pp on pp.id = tt.person_id §
+¤
+˜
+‹D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/poll/PollService.java½  Ì ([
+%21java.lang.String"__concat*
+
+%20java.lang.String*IG
+EJOIN response_question_answer rqa ON rqa.response_subject_id = rs.id 
+Œ
+˜
+‹D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/poll/PollService.java½  Í (C
+%22java.lang.String"__concat*
+
+%21java.lang.String*1/
+-LEFT JOIN teacher t ON rqa.teacher_id = t.id ‹
+ˆ
+˜
+‹D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/poll/PollService.java½  Î (?
+%23java.lang.String"__concat*
+
+%22java.lang.String*-+
+)LEFT JOIN person p ON t.person_id = p.id è
+å
+™
+‹D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/poll/PollService.java½  Ï (˜
+%24java.lang.String"__concat*
+
+%23java.lang.String*ˆ…
+‚GROUP BY r.poll_id, s.id, j.id, j.name_et, s.name_et, s.name_en, rqa.teacher_id, rqa.question_id, rqa.question_answer_id, ssp.id, œ
+™
+˜
+‹D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/poll/PollService.java½  Ğ (P
+%25java.lang.String"__concat*
+
+%24java.lang.String*><
+:concat (p.firstname, ' ', p.lastname)) SUBJECT_JOURNAL ON ›
+˜
+™
+‹D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/poll/PollService.java½  Ñ (Ë
+%26java.lang.String"__concat*
+
+%25java.lang.String*»¸
+µsubject_journal.question_id=q.id and (SUBJECT_JOURNAL.question_answer_id = qa.id OR q.type_code = 'VASTUS_T') and (SUBJECT_JOURNAL.poll_id = pt.poll_id AND pt.is_repetitive = TRUE) ²
+¯
+˜
+‹D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/poll/PollService.java½  Ò (f
+%27java.lang.String"__concat*
+
+%26java.lang.String*TR
+Pand((coalescE(pt.is_teacher,false)=false and subject_journal.teacherId is null) ¥
+¢
+˜
+‹D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/poll/PollService.java½  Ó (Y
+%28java.lang.String"__concat*
+
+%27java.lang.String*GE
+Cor (pt.is_teacher=true and subject_journal.teacherId is not null)) ÿ
+ü
+™
+‹D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/poll/PollService.java½  Ô («
+%29java.lang.String"__concat*
+
+%28java.lang.String*Ÿœ
+™LEFT JOIN (SELECT COUNT (rqa.id) AS answerCount, ARRAY_AGG (rqa.answer_txt) AS answers, r.poll_id, rqa.question_id, rs.subject_study_period_id as sspId, ´
+±
+˜
+‹D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/poll/PollService.java½  Õ (h
+%30java.lang.String"__concat*
+
+%29java.lang.String*VT
+Rrqa.question_answer_id, rs.journal_id, rs.subject_id, rqa.teacher_id AS teacherId „
+
+˜
+‹D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/poll/PollService.java½  Ö (8
+%31java.lang.String"__concat*
+
+%30java.lang.String*&$
+"FROM response_question_answer rqa Œ
+‰
+˜
+‹D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/poll/PollService.java½  × (@
+%32java.lang.String"__concat*
+
+%31java.lang.String*.,
+*JOIN response r ON rqa.response_id = r.id ¿
+¼
+˜
+‹D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/poll/PollService.java½  Ø (s
+%33java.lang.String"__concat*
+
+%32java.lang.String*a_
+]LEFT JOIN response_subject rs ON (rs.response_id = r.id AND rqa.response_subject_id = rs.id) ğ
+í
+™
+‹D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/poll/PollService.java½  Ù ( 
+%34java.lang.String"__concat*
+
+%33java.lang.String*
+ŠGROUP BY r.poll_id, rqa.question_id, rqa.question_answer_id, rs.journal_id, rs.subject_id, rqa.teacher_id, rs.subject_study_period_id) A1 ˜
+•
+˜
+‹D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/poll/PollService.java½  Ú (L
+%35java.lang.String"__concat*
+
+%34java.lang.String*:8
+6ON A1.question_id = q. ID AND A1.poll_id = pt.poll_id ¢
+Ÿ
+˜
+‹D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/poll/PollService.java½  Û (V
+%36java.lang.String"__concat*
+
+%35java.lang.String*DB
+@AND (A1.question_answer_id = qa.id OR q.type_code = 'VASTUS_T') ã
+à
+™
+‹D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/poll/PollService.java½  Ü (”
+%37java.lang.String"__concat*
+
+%36java.lang.String*ƒ€
+~AND (((coalesce(pt.is_repetitive,false)=false or p.type_code != 'KYSITLUS_O') and a1.sspId is null and a1.journal_id is null) Ú
+×
+™
+‹D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/poll/PollService.java½  İ (‘
+%38java.lang.String"__concat*
+
+%37java.lang.String*{y
+wor (coalesce(pt.is_repetitive,false)=true and coalesce(pt.is_teacher,false)=false and subject_journal.question_id=q.id ·
+´
+˜
+‹D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/poll/PollService.java½  Ş (o
+%39java.lang.String"__concat*
+
+%38java.lang.String*YW
+Uand (A1.journal_id = SUBJECT_JOURNAL.journalId OR A1.sspId = SUBJECT_JOURNAL.sspId)) É
+Æ
+™
+‹D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/poll/PollService.java½  ß (€
+%40java.lang.String"__concat*
+
+%39java.lang.String*jh
+for (coalesce(pt.is_repetitive,false)=true and pt.is_teacher=true and subject_journal.question_id=q.id ¶
+³
+˜
+‹D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/poll/PollService.java½  à (n
+%41java.lang.String"__concat*
+
+%40java.lang.String*XV
+Tand (A1.journal_id = SUBJECT_JOURNAL.journalId OR A1.sspId = SUBJECT_JOURNAL.sspId) ‘
+
+˜
+‹D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/poll/PollService.java½  á (I
+%42java.lang.String"__concat*
+
+%41java.lang.String*31
+/and A1.teacherId = SUBJECT_JOURNAL.teacherId)) Ó
+Ğ
+™
+‹D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/poll/PollService.java½  â (‚
+%43java.lang.String"__concat*
+
+%42java.lang.String*tr
+pLEFT JOIN (SELECT COUNT (DISTINCT r.id) AS responses, CAST (AVG (rqa.answer_nr) AS DECIMAL (10, 2)) AS average, Ş
+Û
+™
+‹D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/poll/PollService.java½  ã (‘
+%44java.lang.String"__concat*
+
+%43java.lang.String*}
+{r.poll_id, rqa.question_id, rs.subject_id, rs.journal_id, rqa.teacher_id as teacherId, rs.subject_study_period_id as sspId ®
+«
+˜
+‹D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/poll/PollService.java½  ä (b
+%45java.lang.String"__concat*
+
+%44java.lang.String*PN
+LFROM response_question_answer rqa JOIN response r ON rqa.response_id = r.id À
+½
+˜
+‹D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/poll/PollService.java½  å (t
+%46java.lang.String"__concat*
+
+%45java.lang.String*b`
+^LEFT JOIN response_subject rs ON ( rs.response_id = r.id AND rqa.response_subject_id = rs.id) Ø
+Õ
+™
+‹D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/poll/PollService.java½  æ (‹
+%47java.lang.String"__concat*
+
+%46java.lang.String*yw
+uGROUP BY r.poll_id, rqa.question_id, rs.journal_id, rs.subject_id, rqa.teacher_id, rs.subject_study_period_id) A2 ON ø
+õ
+˜
+‹D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/poll/PollService.java½  ç (,
+%48java.lang.String"__concat*
+
+%47java.lang.String*
+A2.question_id = q.id ş
+û
+˜
+‹D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/poll/PollService.java½  è (2
+%49java.lang.String"__concat*
+
+%48java.lang.String* 
+AND A2.poll_id = pt.poll_id ì
+é
+™
+‹D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/poll/PollService.java½  é (œ
+%50java.lang.String"__concat*
+
+%49java.lang.String*Œ‰
+†AND (((coalesce(pt.is_repetitive,false)=false or p.type_code != 'KYSITLUS_O') and a2.subject_id is null and a2.journal_id is null) or ×
+Ô
+™
+‹D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/poll/PollService.java½  ê (Š
+%51java.lang.String"__concat*
+
+%50java.lang.String*xv
+t(coalesce(pt.is_repetitive,false)=true and coalescE(pt.is_teacher,false)=false and subject_journal.question_id=q.id º
+·
+˜
+‹D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/poll/PollService.java½  ë (n
+%52java.lang.String"__concat*
+
+%51java.lang.String*\Z
+Xand (A2.journal_id = SUBJECT_JOURNAL.journalId OR A2.sspId = SUBJECT_JOURNAL.sspId)) or Å
+Â
+˜
+‹D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/poll/PollService.java½  ì (y
+%53java.lang.String"__concat*
+
+%52java.lang.String*ge
+c(coalesce(pt.is_repetitive,false)=true and pt.is_teacher=true and subject_journal.question_id=q.id ¶
+³
+˜
+‹D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/poll/PollService.java½  í (j
+%54java.lang.String"__concat*
+
+%53java.lang.String*XV
+Tand (A2.journal_id = SUBJECT_JOURNAL.journalId OR A2.sspId = SUBJECT_JOURNAL.sspId) 
+
+˜
+‹D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/poll/PollService.java½  î (D
+%55java.lang.String"__concat*
+
+%54java.lang.String*20
+.and A2.teacherId = SUBJECT_JOURNAL.teacherId))à
+İ
+˜
+‹D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/poll/PollService.java½  î (E
+SEARCH_FROMjava.lang.String"__id*
+
+%55java.lang.String÷ô
+˜
+‹D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/poll/PollService.javaï ' ï (<.
+%56'ee.hitsa.ois.util.JpaNativeQueryBuilder"'ee.hitsa.ois.util.JpaNativeQueryBuilder¿
+¼
+˜
+‹D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/poll/PollService.javaï # ï (I
+%57"Cee.hitsa.ois.util.JpaNativeQueryBuilder#<init>(Ljava/lang/String;)V*0
+.
+%56'ee.hitsa.ois.util.JpaNativeQueryBuilder*!
+
+SEARCH_FROMjava.lang.String…
+‚
+˜
+‹D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/poll/PollService.javaï  ï (J-
+qb'ee.hitsa.ois.util.JpaNativeQueryBuilder"__id*0
+.
+%56'ee.hitsa.ois.util.JpaNativeQueryBuilderÜ
+Ù
+˜
+‹D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/poll/PollService.javağ 8 ğ (N
+%58java.lang.Long"Zee.hitsa.ois.util.EntityUtil#getId(Lee/hitsa/ois/domain/BaseEntityWithId;)Ljava/lang/Long;* "
+ee.hitsa.ois.util.EntityUtil*'
+%
+pollee.hitsa.ois.domain.poll.PollÎË
+˜
+‹D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/poll/PollService.javağ  ğ (O
+%59void"oee.hitsa.ois.util.JpaNativeQueryBuilder#requiredCriteria(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Long;)V*/
+-
+qb'ee.hitsa.ois.util.JpaNativeQueryBuilder*
+p.id = :pollId*
+
+pollId*
+
+%58java.lang.Long2FrequiredCriteria(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Long;)õò
+˜
+‹D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/poll/PollService.javañ G ñ (h
+%60java.lang.Long"_ee.hitsa.ois.web.commandobject.poll.PollResultCommand#getSubjectStudyPeriodId()Ljava/lang/Long;*B
+@
+command5ee.hitsa.ois.web.commandobject.poll.PollResultCommand2getSubjectStudyPeriodId()İÚ
+˜
+‹D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/poll/PollService.javañ  ñ (i
+%61void"oee.hitsa.ois.util.JpaNativeQueryBuilder#optionalCriteria(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Long;)V*/
+-
+qb'ee.hitsa.ois.util.JpaNativeQueryBuilder*" 
+SUBJECT_JOURNAL.sspId = :sspId*	
+sspId*
+
+%60java.lang.Long2FoptionalCriteria(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Long;)ßÜ
+˜
+‹D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/poll/PollService.javaò S ò (i
+%62java.lang.Long"Tee.hitsa.ois.web.commandobject.poll.PollResultCommand#getJournalId()Ljava/lang/Long;*B
+@
+command5ee.hitsa.ois.web.commandobject.poll.PollResultCommand2getJournalId()éæ
+˜
+‹D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/poll/PollService.javaò  ò (j
+%63void"oee.hitsa.ois.util.JpaNativeQueryBuilder#optionalCriteria(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Long;)V*/
+-
+qb'ee.hitsa.ois.util.JpaNativeQueryBuilder**(
+&SUBJECT_JOURNAL.journalId = :journalId*
+	journalId*
+
+%62java.lang.Long2FoptionalCriteria(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Long;)Í
+Ê
+˜
+‹D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/poll/PollService.javaô  ô (=
+%64org.hibernate.SQLQuery"Œee.hitsa.ois.service.poll.PollService#getArrayTypeQuery(Lee/hitsa/ois/util/JpaNativeQueryBuilder;Ljava/lang/String;)Lorg/hibernate/SQLQuery;*)'
+%ee.hitsa.ois.service.poll.PollService*/
+-
+qb'ee.hitsa.ois.util.JpaNativeQueryBuilder*#
+!
+SEARCH_SELECTjava.lang.Stringæ
+ã
+˜
+‹D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/poll/PollService.javaô  ô (>
+queryorg.hibernate.SQLQuery"__id*
+
+%64org.hibernate.SQLQueryŒ‰
+˜
+‹D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/poll/PollService.javaõ  õ (&
+%65java.util.List"*org.hibernate.Query#list()Ljava/util/List;*!
+
+queryorg.hibernate.SQLQuery2list()Ø
+Õ
+˜
+‹D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/poll/PollService.javaõ  õ ('
+answersjava.util.List"__id*
+
+%65java.util.Listé
+æ
+˜
+‹D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/poll/PollService.javaö B ö ([
+%66java.util.LinkedHashMap"aee.hitsa.ois.service.poll.PollService#mapAnswerToTheme(Ljava/util/List;)Ljava/util/LinkedHashMap;*)"'
+%ee.hitsa.ois.service.poll.PollService*
+
+answersjava.util.Listò
+ï
+˜
+‹D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/poll/PollService.javaö  ö (\*
+processedThemesjava.util.LinkedHashMap"__id* 
+
+%66java.util.LinkedHashMap
+š
+˜
+‹D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/poll/PollService.java÷  ÷ (2
+%67void"nee.hitsa.ois.service.poll.PollService#mapAllResultsThemes(Ljava/util/HashMap;Lee/hitsa/ois/domain/poll/Poll;)V*)"'
+%ee.hitsa.ois.service.poll.PollService*,
+*
+processedThemesjava.util.LinkedHashMap*'
+%
+pollee.hitsa.ois.domain.poll.Poll«¨
+˜
+‹D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/poll/PollService.javaø 5 ø (M
+%68java.util.Collection"6java.util.LinkedHashMap#values()Ljava/util/Collection;*,
+*
+processedThemesjava.util.LinkedHashMap2values()ÏÌ
+˜
+‹D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/poll/PollService.javaø ) ø (4
+%69java.util.ArrayList"java.util.ArrayList—
+”
+˜
+‹D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/poll/PollService.javaø % ø (N
+%70"3java.util.ArrayList#<init>(Ljava/util/Collection;)V*
+
+%69java.util.ArrayList*
+
+%68java.util.Collectionÿü
+˜
+‹D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/poll/PollService.javaø  ø ($2
+%71+ee.hitsa.ois.web.dto.poll.AllPollResultsDto"+ee.hitsa.ois.web.dto.poll.AllPollResultsDtoÀ
+½
+˜
+‹D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/poll/PollService.javaø  ø (O
+%72"Eee.hitsa.ois.web.dto.poll.AllPollResultsDto#<init>(Ljava/util/List;)V*4
+2
+%71+ee.hitsa.ois.web.dto.poll.AllPollResultsDto*
+
+%69java.util.ArrayList"Ñ
+˜
+‹D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/poll/PollService.javaø  ø (P4
+2
+%71+ee.hitsa.ois.web.dto.poll.AllPollResultsDto:%
+pollee.hitsa.ois.domain.poll.Poll:@
+command5ee.hitsa.ois.web.commandobject.poll.PollResultCommandB)'
+%ee.hitsa.ois.service.poll.PollService

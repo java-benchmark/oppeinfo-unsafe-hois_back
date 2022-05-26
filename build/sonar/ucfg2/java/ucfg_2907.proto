@@ -1,0 +1,111 @@
+
+zee.hitsa.ois.service.StudentGroupTeacherReportService#studentsThatHavePassedOccupationExam(Ljava/util/Set;)Ljava/util/Set;¨
+›D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/StudentGroupTeacherReportService.javañ ñ(:"1*á)
+1¨
+›D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/StudentGroupTeacherReportService.javaò ò(ž
+›
+¨
+›D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/StudentGroupTeacherReportService.javaò ò(%
+%0javax.persistence.EntityManager"__id*A*?7
+5ee.hitsa.ois.service.StudentGroupTeacherReportService"
+em²
+¯
+¨
+›D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/StudentGroupTeacherReportService.javaò, ó(;
+%1java.lang.String"__concat*1/
+-select ps.student_id from protocol_student ps*-+
+) join protocol p on p.id = ps.protocol_id¹
+¶
+¨
+›D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/StudentGroupTeacherReportService.javaò, ô([
+%2java.lang.String"__concat*
+
+%1java.lang.String*MK
+I where ps.student_id in (:studentIds) and p.status_code = :protocolStatusË
+È
+¨
+›D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/StudentGroupTeacherReportService.javaò, õ(m
+%3java.lang.String"__concat*
+
+%2java.lang.String*_]
+[ and p.is_final = true and p.is_final_thesis = false and ps.grade_code in (:positiveGrades)—”
+¨
+›D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/StudentGroupTeacherReportService.javaò õ(n
+%4javax.persistence.Query"^javax.persistence.EntityManager#createNativeQuery(Ljava/lang/String;)Ljavax/persistence/Query;*'
+%
+%0javax.persistence.EntityManager*
+
+%3java.lang.String2%createNativeQuery(Ljava/lang/String;)¶³
+¨
+›D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/StudentGroupTeacherReportService.javaò ö(7
+%5javax.persistence.Query"cjavax.persistence.Query#setParameter(Ljava/lang/String;Ljava/lang/Object;)Ljavax/persistence/Query;*
+
+%4javax.persistence.Query*
+
+studentIds*
+
+
+studentIdsjava.util.Set22setParameter(Ljava/lang/String;Ljava/lang/Object;)å
+â
+¨
+›D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/StudentGroupTeacherReportService.java÷0 ÷(R'
+%6!ee.hitsa.ois.enums.ProtocolStatus"__id*
+""¢Ÿ
+¨
+›D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/StudentGroupTeacherReportService.java÷0 ÷(Y
+%7java.lang.String"'java.lang.Enum#name()Ljava/lang/String;*)
+'
+%6!ee.hitsa.ois.enums.ProtocolStatus2name()µ²
+¨
+›D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/StudentGroupTeacherReportService.javaò ÷(Z
+%8javax.persistence.Query"cjavax.persistence.Query#setParameter(Ljava/lang/String;Ljava/lang/Object;)Ljavax/persistence/Query;*
+
+%5javax.persistence.Query*
+protocolStatus*
+
+%7java.lang.String22setParameter(Ljava/lang/String;Ljava/lang/Object;)Ò
+Ï
+¨
+›D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/StudentGroupTeacherReportService.javaø0 ø(]
+%9java.util.List"__id*
+""´±
+¨
+›D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/StudentGroupTeacherReportService.javaò ø(^
+%10javax.persistence.Query"cjavax.persistence.Query#setParameter(Ljava/lang/String;Ljava/lang/Object;)Ljavax/persistence/Query;*
+
+%8javax.persistence.Query*
+positiveGrades*
+
+%9java.util.List22setParameter(Ljava/lang/String;Ljava/lang/Object;)±®
+¨
+›D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/StudentGroupTeacherReportService.javaò ù( 
+%11java.util.List"7javax.persistence.Query#getResultList()Ljava/util/List;* 
+
+%10javax.persistence.Query2getResultList()å
+â
+¨
+›D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/StudentGroupTeacherReportService.javaò ù(!
+datajava.util.List"__id*
+
+%11java.util.List³
+°
+¨
+›D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/StudentGroupTeacherReportService.javaú& ú(="
+%12java.util.function.Function"__declareFunction*LJ
+H__sonar_lambda_336$ee.hitsa.ois.service.StudentGroupTeacherReportService”
+‘
+¨
+›D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/StudentGroupTeacherReportService.javaú ú(D
+%14java.util.Set"lee.hitsa.ois.util.StreamUtil#toMappedSet(Ljava/util/function/Function;Ljava/util/Collection;)Ljava/util/Set;* "
+ee.hitsa.ois.util.StreamUtil*$
+"
+%12java.util.function.Function*
+
+datajava.util.List"Ã
+¨
+›D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/StudentGroupTeacherReportService.javaú ú(E
+
+%14java.util.Set:
+
+studentIdsjava.util.SetB97
+5ee.hitsa.ois.service.StudentGroupTeacherReportService

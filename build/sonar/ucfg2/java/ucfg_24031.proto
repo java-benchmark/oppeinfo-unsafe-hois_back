@@ -1,0 +1,102 @@
+
+kee.hitsa.ois.service.ScholarshipService#applicationsConnectedToDirectives(Ljava/util/List;)Ljava/util/List;ö
+çD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/ScholarshipService.java‡
+ ‡
+(8"1*∞
+1ö
+çD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/ScholarshipService.java·
+ ·
+(Ç
+ˇ
+ö
+çD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/ScholarshipService.java·
+ ·
+(%
+%0javax.persistence.EntityManager"__id*3*1)
+'ee.hitsa.ois.service.ScholarshipService"
+em˙
+˜
+ö
+çD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/ScholarshipService.java·
+. ‚
+(4
+%1java.lang.String"__concat*
+select sa.id*$"
+  from scholarship_application sa•
+¢
+ö
+çD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/ScholarshipService.java·
+. „
+(W
+%2java.lang.String"__concat*
+
+%1java.lang.String*GE
+C join directive_student ds on ds.scholarship_application_id = sa.idˆ
+Û
+ö
+çD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/ScholarshipService.java·
+. ‰
+((
+%3java.lang.String"__concat*
+
+%2java.lang.String*
+ where sa.id in (?1)âÜ
+ö
+çD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/ScholarshipService.java·
+ ‰
+()
+%4javax.persistence.Query"^javax.persistence.EntityManager#createNativeQuery(Ljava/lang/String;)Ljavax/persistence/Query;*'
+%
+%0javax.persistence.EntityManager*
+
+%3java.lang.String2%createNativeQuery(Ljava/lang/String;)Å˛
+ö
+çD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/ScholarshipService.java·
+ Â
+(0
+%5javax.persistence.Query"Rjavax.persistence.Query#setParameter(ILjava/lang/Object;)Ljavax/persistence/Query;*
+
+%4javax.persistence.Query*2*"
+ 
+applicationIdsjava.util.List2!setParameter(ILjava/lang/Object;)°û
+ö
+çD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/ScholarshipService.java·
+ Ê
+( 
+%6java.util.List"7javax.persistence.Query#getResultList()Ljava/util/List;*
+
+%5javax.persistence.Query2getResultList()ÿ
+’
+ö
+çD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/ScholarshipService.java·
+ Ê
+(!
+resultjava.util.List"__id*
+
+%6java.util.Listó
+î
+ö
+çD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/ScholarshipService.javaË
+' Ë
+(>!
+%7java.util.function.Function"__declareFunction*?=
+;__sonar_lambda_2517$ee.hitsa.ois.service.ScholarshipServiceâ
+Ü
+ö
+çD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/ScholarshipService.javaË
+ Ë
+(G
+%9java.util.List"nee.hitsa.ois.util.StreamUtil#toMappedList(Ljava/util/function/Function;Ljava/util/Collection;)Ljava/util/List;* "
+ee.hitsa.ois.util.StreamUtil*#
+!
+%7java.util.function.Function*
+
+resultjava.util.List"µ
+ö
+çD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/ScholarshipService.javaË
+ Ë
+(H
+
+%9java.util.List: 
+applicationIdsjava.util.ListB+)
+'ee.hitsa.ois.service.ScholarshipService

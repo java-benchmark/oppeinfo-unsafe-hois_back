@@ -1,0 +1,84 @@
+
+Éee.hitsa.ois.service.JournalService#viewableStudents(Lee/hitsa/ois/service/security/HoisUserDetails;Ljava/util/Set;)Ljava/util/Set;ñ
+âD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/JournalService.javaœ œ(&"1*ÿ
+1ñ
+âD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/JournalService.java– –(˙
+˜
+ñ
+âD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/JournalService.java– –(%
+%0javax.persistence.EntityManager"__id*/*-%
+#ee.hitsa.ois.service.JournalService"
+em¢
+ü
+ñ
+âD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/JournalService.java–, —(P
+%1java.lang.String"__concat*
+select s.id from student s*B@
+> join curriculum_version cv on cv.id = s.curriculum_version_idé
+ã
+ñ
+âD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/JournalService.java–, “(B
+%2java.lang.String"__concat*
+
+%1java.lang.String*42
+0 where cv.curriculum_id in (?1) and s.id in (?2)ÖÇ
+ñ
+âD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/JournalService.java– “(C
+%3javax.persistence.Query"^javax.persistence.EntityManager#createNativeQuery(Ljava/lang/String;)Ljavax/persistence/Query;*'
+%
+%0javax.persistence.EntityManager*
+
+%2java.lang.String2%createNativeQuery(Ljava/lang/String;)—Œ
+ñ
+âD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/JournalService.java”! ”(8
+%4java.util.List"Pee.hitsa.ois.service.security.HoisUserDetails#getCurriculumIds()Ljava/util/List;*7
+5
+user-ee.hitsa.ois.service.security.HoisUserDetails2getCurriculumIds()ÒÓ
+ñ
+âD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/JournalService.java– ”(9
+%5javax.persistence.Query"Rjavax.persistence.Query#setParameter(ILjava/lang/Object;)Ljavax/persistence/Query;*
+
+%3javax.persistence.Query*2*
+
+%4java.util.List2!setParameter(ILjava/lang/Object;)¯ı
+ñ
+âD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/JournalService.java– ‘(,
+%6javax.persistence.Query"Rjavax.persistence.Query#setParameter(ILjava/lang/Object;)Ljavax/persistence/Query;*
+
+%5javax.persistence.Query*2*
+
+
+studentIdsjava.util.Set2!setParameter(ILjava/lang/Object;)ùö
+ñ
+âD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/JournalService.java– ’( 
+%7java.util.List"7javax.persistence.Query#getResultList()Ljava/util/List;*
+
+%6javax.persistence.Query2getResultList()“
+œ
+ñ
+âD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/JournalService.java– ’(!
+datajava.util.List"__id*
+
+%7java.util.Listé
+ã
+ñ
+âD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/JournalService.java÷& ÷(=!
+%8java.util.function.Function"__declareFunction*:8
+6__sonar_lambda_631$ee.hitsa.ois.service.JournalServiceÅ
+˛
+ñ
+âD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/JournalService.java÷ ÷(D
+%10java.util.Set"lee.hitsa.ois.util.StreamUtil#toMappedSet(Ljava/util/function/Function;Ljava/util/Collection;)Ljava/util/Set;* "
+ee.hitsa.ois.util.StreamUtil*#
+!
+%8java.util.function.Function*
+
+datajava.util.List"±
+ñ
+âD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/JournalService.java÷ ÷(E
+
+%10java.util.Set:5
+user-ee.hitsa.ois.service.security.HoisUserDetails:
+
+studentIdsjava.util.SetB'%
+#ee.hitsa.ois.service.JournalService

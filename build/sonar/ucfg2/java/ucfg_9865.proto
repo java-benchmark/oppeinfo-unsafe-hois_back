@@ -1,0 +1,94 @@
+
+Äee.hitsa.ois.service.fotobox.FotoBoxService#directiveStudentUsercodes(Lee/hitsa/ois/domain/directive/Directive;)Ljava/util/List;û
+ëD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/fotobox/FotoBoxService.java“ “(2"1*Â!
+1û
+ëD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/fotobox/FotoBoxService.java” ”(ä
+á
+û
+ëD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/fotobox/FotoBoxService.java” ”(%
+%0javax.persistence.EntityManager"__id*7*5-
++ee.hitsa.ois.service.fotobox.FotoBoxService"
+emª
+∏
+û
+ëD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/fotobox/FotoBoxService.java”, ‘(;
+%1java.lang.String"__concat*FD
+Bselect coalesce(p.idcode, p.unique_code) from directive_student ds*+)
+' join student s on s.id = ds.student_idä
+á
+û
+ëD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/fotobox/FotoBoxService.java”, ’(8
+%2java.lang.String"__concat*
+
+%1java.lang.String*(&
+$ join person p on p.id = s.person_idÅ
+˛
+û
+ëD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/fotobox/FotoBoxService.java”, ÷(/
+%3java.lang.String"__concat*
+
+%2java.lang.String*
+ where ds.directive_id = ?1çä
+û
+ëD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/fotobox/FotoBoxService.java” ÷(0
+%4javax.persistence.Query"^javax.persistence.EntityManager#createNativeQuery(Ljava/lang/String;)Ljavax/persistence/Query;*'
+%
+%0javax.persistence.EntityManager*
+
+%3java.lang.String2%createNativeQuery(Ljava/lang/String;)
+Ì
+û
+ëD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/fotobox/FotoBoxService.java◊! ◊(<
+%5java.lang.Long"Zee.hitsa.ois.util.EntityUtil#getId(Lee/hitsa/ois/domain/BaseEntityWithId;)Ljava/lang/Long;* "
+ee.hitsa.ois.util.EntityUtil*6
+4
+	directive'ee.hitsa.ois.domain.directive.Directive˘ˆ
+û
+ëD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/fotobox/FotoBoxService.java” ◊(=
+%6javax.persistence.Query"Rjavax.persistence.Query#setParameter(ILjava/lang/Object;)Ljavax/persistence/Query;*
+
+%4javax.persistence.Query*2*
+
+%5java.lang.Long2!setParameter(ILjava/lang/Object;)•¢
+û
+ëD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/fotobox/FotoBoxService.java” ÿ( 
+%7java.util.List"7javax.persistence.Query#getResultList()Ljava/util/List;*
+
+%6javax.persistence.Query2getResultList()⁄
+◊
+û
+ëD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/fotobox/FotoBoxService.java” ÿ(!
+datajava.util.List"__id*
+
+%7java.util.Listü
+ú
+û
+ëD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/fotobox/FotoBoxService.javaŸ6 Ÿ(O!
+%8java.util.function.Function"__declareFunction*CA
+?__sonar_lambda_1310$ee.hitsa.ois.service.fotobox.FotoBoxServiceâ
+Ü
+û
+ëD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/fotobox/FotoBoxService.javaŸ Ÿ(V
+%10java.util.Set"lee.hitsa.ois.util.StreamUtil#toMappedSet(Ljava/util/function/Function;Ljava/util/Collection;)Ljava/util/Set;* "
+ee.hitsa.ois.util.StreamUtil*#
+!
+%8java.util.function.Function*
+
+datajava.util.List’“
+û
+ëD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/fotobox/FotoBoxService.javaŸ Ÿ(
+%11java.util.ArrayList"java.util.ArrayListñ
+ì
+û
+ëD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/fotobox/FotoBoxService.javaŸ Ÿ(W
+%12"3java.util.ArrayList#<init>(Ljava/util/Collection;)V*
+
+%11java.util.ArrayList*
+
+%10java.util.Set"ø
+û
+ëD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/fotobox/FotoBoxService.javaŸ Ÿ(X
+
+%11java.util.ArrayList:4
+	directive'ee.hitsa.ois.domain.directive.DirectiveB/-
++ee.hitsa.ois.service.fotobox.FotoBoxService

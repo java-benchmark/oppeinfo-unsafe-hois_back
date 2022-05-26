@@ -1,0 +1,318 @@
+
+àee.hitsa.ois.service.ReportService#weightedAverageSubQuery(Lee/hitsa/ois/web/commandobject/report/StudentDataCommand;)Ljava/lang/String;ï
+àD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/ReportService.java√ √(*"15*Ü
+13ï
+àD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/ReportService.javaÕ Õ(E›
+⁄
+ï
+àD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/ReportService.javaÕ Œ(r
+%7java.lang.String"__concat*86
+4left join (select weightedAverage, student_id from (*db
+`select * from (select floor(sum(gradeMark)*100/sum(credits))/100 as weightedAverage, student_id Â
+‚
+ñ
+àD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/ReportService.javaÕ œ(ñ
+%8java.lang.String"__concat*
+
+%7java.lang.String*äá
+Ñfrom (select distinct on (svr.curriculum_version_omodule_id) svr.credits * svr.grade_mark as gradeMark, svr.credits, svr.student_id Ä
+˝
+ï
+àD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/ReportService.javaÕ –(5
+%9java.lang.String"__concat*
+
+%8java.lang.String*'%
+#from student_vocational_result svr í
+è
+ï
+àD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/ReportService.javaÕ —(F
+%10java.lang.String"__concat*
+
+%9java.lang.String*86
+4where svr.grade_code in (:vocationalPositiveGrades) *
+11
+12*
+14ï
+àD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/ReportService.java» »(¯
+ı
+ï
+àD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/ReportService.java» »(%
+%3javax.persistence.EntityManager"__id*.*,$
+"ee.hitsa.ois.service.ReportService"
+emÆ´
+ï
+àD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/ReportService.java» »(N%
+%4ee.hitsa.ois.domain.StudyPeriod"cjavax.persistence.EntityManager#getReference(Ljava/lang/Class;Ljava/lang/Object;)Ljava/lang/Object;*'
+%
+%3javax.persistence.EntityManager*
+""*!
+
+studyPeriodIdjava.lang.Long21getReference(Ljava/lang/Class;Ljava/lang/Object;)Ò
+Ó
+ï
+àD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/ReportService.java» »(O%
+spee.hitsa.ois.domain.StudyPeriod"__id*'
+%
+%4ee.hitsa.ois.domain.StudyPeriod¥±
+ï
+àD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/ReportService.java… …()
+%5java.time.LocalDate"Cee.hitsa.ois.domain.StudyPeriod#getStartDate()Ljava/time/LocalDate;*'
+%
+spee.hitsa.ois.domain.StudyPeriod2getStartDate()‡
+›
+ï
+àD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/ReportService.java… …() 
+	startDatejava.time.LocalDate"__id*
+
+%5java.time.LocalDate∞≠
+ï
+àD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/ReportService.java   (%
+%6java.time.LocalDate"Aee.hitsa.ois.domain.StudyPeriod#getEndDate()Ljava/time/LocalDate;*'
+%
+spee.hitsa.ois.domain.StudyPeriod2getEndDate()ﬁ
+€
+ï
+àD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/ReportService.java   (%
+endDatejava.time.LocalDate"__id*
+
+%6java.time.LocalDate*
+13* 
+15ï
+àD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/ReportService.javaƒ ƒ(%˙˜
+ï
+àD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/ReportService.javaƒ ƒ(@
+%0java.lang.Long"cee.hitsa.ois.web.commandobject.report.StudentDataCommand#getWeightedAveragePeriod()Ljava/lang/Long;*F
+D
+criteria8ee.hitsa.ois.web.commandobject.report.StudentDataCommand2getWeightedAveragePeriod()⁄
+◊
+ï
+àD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/ReportService.javaƒ ƒ(A
+studyPeriodIdjava.lang.Long"__id*
+
+%0java.lang.LongÄ˝
+ï
+àD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/ReportService.java≈ ≈(?
+%1java.time.LocalDate"fee.hitsa.ois.web.commandobject.report.StudentDataCommand#getWeightedAverageFrom()Ljava/time/LocalDate;*F
+D
+criteria8ee.hitsa.ois.web.commandobject.report.StudentDataCommand2getWeightedAverageFrom()‡
+›
+ï
+àD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/ReportService.java≈ ≈(@ 
+	startDatejava.time.LocalDate"__id*
+
+%1java.time.LocalDateÄ˝
+ï
+àD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/ReportService.java∆ ∆(=
+%2java.time.LocalDate"fee.hitsa.ois.web.commandobject.report.StudentDataCommand#getWeightedAverageThru()Ljava/time/LocalDate;*F
+D
+criteria8ee.hitsa.ois.web.commandobject.report.StudentDataCommand2getWeightedAverageThru()ﬁ
+€
+ï
+àD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/ReportService.java∆ ∆(>
+endDatejava.time.LocalDate"__id*
+
+%2java.time.LocalDate*
+13
+14*≥
+1ï
+àD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/ReportService.javaÕ ›(VÙ
+Ò
+ï
+àD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/ReportService.javaÕ ›(V
+%34java.lang.String"__concat*
+
+%30java.lang.String*
+
+%31java.lang.Stringñ
+ì
+ï
+àD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/ReportService.javaÕ ﬁ(I
+%35java.lang.String"__concat*
+
+%34java.lang.String*;9
+7and shr.grade_mark is not null and shr.grade_mark != 0 ê
+ç
+ï
+àD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/ReportService.javaÕ ﬂ(C
+%36java.lang.String"__concat*
+
+%35java.lang.String*53
+1and shr.credits is not null and shr.credits != 0 º
+π
+ï
+àD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/ReportService.javaÕ ‡(o
+%37java.lang.String"__concat*
+
+%36java.lang.String*a_
+]group by shr.student_id) spCredits ) as weightedAverage on weightedAverage.student_id = s.id "≥
+ï
+àD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/ReportService.javaÕ ‡(p
+
+%37java.lang.String*¯
+2ï
+àD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/ReportService.java›S ›(U’
+“
+ï
+àD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/ReportService.java›S ›(U
+%31java.lang.String"__id*
+
+%33java.lang.String*
+1*¯
+3ï
+àD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/ReportService.java›# ›(P’
+“
+ï
+àD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/ReportService.java›# ›(P
+%31java.lang.String"__id*
+
+%32java.lang.String*
+1*ö
+4ï
+àD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/ReportService.javaÕ ‹(XÙ
+Ò
+ï
+àD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/ReportService.javaÕ ‹(X
+%30java.lang.String"__concat*
+
+%26java.lang.String*
+
+%27java.lang.String*
+2
+3*¯
+5ï
+àD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/ReportService.java‹U ‹(W’
+“
+ï
+àD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/ReportService.java‹U ‹(W
+%27java.lang.String"__id*
+
+%29java.lang.String*
+4*¯
+6ï
+àD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/ReportService.java‹% ‹(R’
+“
+ï
+àD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/ReportService.java‹% ‹(R
+%27java.lang.String"__id*
+
+%28java.lang.String*
+4*∞
+7ï
+àD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/ReportService.javaÕ ”(VÙ
+Ò
+ï
+àD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/ReportService.javaÕ ”(V
+%18java.lang.String"__concat*
+
+%14java.lang.String*
+
+%15java.lang.Stringñ
+ì
+ï
+àD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/ReportService.javaÕ ‘(I
+%19java.lang.String"__concat*
+
+%18java.lang.String*;9
+7and svr.grade_mark is not null and svr.grade_mark != 0 å
+â
+ï
+àD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/ReportService.javaÕ ’(?
+%20java.lang.String"__concat*
+
+%19java.lang.String*1/
+-and svr.credits is not null and credits != 0 £
+†
+ñ
+àD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/ReportService.javaÕ ÷(“
+%21java.lang.String"__concat*
+
+%20java.lang.String*∆√
+¿order by svr.curriculum_version_omodule_id, coalesce(svr.changed, svr.inserted) desc) as distinct_module_credits group by student_id) credits_sum where credits_sum.weightedAverage is not null È
+Ê
+ï
+àD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/ReportService.javaÕ ◊(
+%22java.lang.String"__concat*
+
+%21java.lang.String*
+
+union all À
+»
+ï
+àD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/ReportService.javaÕ ÿ(~
+%23java.lang.String"__concat*
+
+%22java.lang.String*pn
+lselect floor(sum(shr.credits * shr.grade_mark)*100/sum(shr.credits))/100 as weightedAverage, shr.student_id ˛
+˚
+ï
+àD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/ReportService.javaÕ Ÿ(1
+%24java.lang.String"__concat*
+
+%23java.lang.String*#!
+from student_higher_result shr è
+å
+ï
+àD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/ReportService.javaÕ ⁄(B
+%25java.lang.String"__concat*
+
+%24java.lang.String*42
+0where shr.grade_code in (:higherPositiveGrades) ¯
+ı
+ï
+àD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/ReportService.javaÕ €(+
+%26java.lang.String"__concat*
+
+%25java.lang.String*
+and shr.is_active = true *
+5
+6*¯
+8ï
+àD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/ReportService.java”S ”(U’
+“
+ï
+àD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/ReportService.java”S ”(U
+%15java.lang.String"__id*
+
+%17java.lang.String*
+7*¯
+9ï
+àD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/ReportService.java”# ”(P’
+“
+ï
+àD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/ReportService.java”# ”(P
+%15java.lang.String"__id*
+
+%16java.lang.String*
+7*õ
+10ï
+àD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/ReportService.javaÕ “(XÙ
+Ò
+ï
+àD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/ReportService.javaÕ “(X
+%14java.lang.String"__concat*
+
+%10java.lang.String*
+
+%11java.lang.String*
+8
+9*˙
+11ï
+àD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/ReportService.java“U “(W’
+“
+ï
+àD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/ReportService.java“U “(W
+%11java.lang.String"__id*
+
+%13java.lang.String*
+10*˙
+12ï
+àD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/ReportService.java“% “(R’
+“
+ï
+àD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/ReportService.java“% “(R
+%11java.lang.String"__id*
+
+%12java.lang.String*
+10:D
+criteria8ee.hitsa.ois.web.commandobject.report.StudentDataCommandB&$
+"ee.hitsa.ois.service.ReportService

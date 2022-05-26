@@ -1,0 +1,57 @@
+
+oee.hitsa.ois.service.StudentResultHigherService#curriculumVersionHigherModules(Ljava/util/Set;)Ljava/util/List;¢
+ïD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/StudentResultHigherService.java¢0 ¢(N"1*≈
+1¢
+ïD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/StudentResultHigherService.java£ £(í
+è
+¢
+ïD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/StudentResultHigherService.java£ £(%
+%0javax.persistence.EntityManager"__id*;*91
+/ee.hitsa.ois.service.StudentResultHigherService"
+emØ
+¨
+¢
+ïD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/StudentResultHigherService.java£ §(A
+%1java.lang.String"__concat*86
+4select cvhm from CurriculumVersionHigherModule cvhm *)'
+%join fetch cvhm.curriculumVersion cv Ö
+Ç
+¢
+ïD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/StudentResultHigherService.java£ •(7
+%2java.lang.String"__concat*
+
+%1java.lang.String*
+join fetch cv.curriculum c ˇ
+¸
+¢
+ïD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/StudentResultHigherService.java£ ¶(1
+%3java.lang.String"__concat*
+
+%2java.lang.String*
+where cvhm.id in (?1)π∂
+¢
+ïD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/StudentResultHigherService.java£ ¶(W"
+%4javax.persistence.TypedQuery"njavax.persistence.EntityManager#createQuery(Ljava/lang/String;Ljava/lang/Class;)Ljavax/persistence/TypedQuery;*'
+%
+%0javax.persistence.EntityManager*
+
+%3java.lang.String*
+""20createQuery(Ljava/lang/String;Ljava/lang/Class;)óî
+¢
+ïD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/StudentResultHigherService.java£ ß(+"
+%5javax.persistence.TypedQuery"\javax.persistence.TypedQuery#setParameter(ILjava/lang/Object;)Ljavax/persistence/TypedQuery;*$
+"
+%4javax.persistence.TypedQuery*2*
+
+	moduleIdsjava.util.Set2!setParameter(ILjava/lang/Object;)≥∞
+¢
+ïD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/StudentResultHigherService.java£ ®( 
+%6java.util.List"<javax.persistence.TypedQuery#getResultList()Ljava/util/List;*$
+"
+%5javax.persistence.TypedQuery2getResultList()"Ω
+¢
+ïD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/StudentResultHigherService.java£ ®(!
+
+%6java.util.List:
+	moduleIdsjava.util.SetB31
+/ee.hitsa.ois.service.StudentResultHigherService

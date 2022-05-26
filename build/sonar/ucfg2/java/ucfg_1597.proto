@@ -1,0 +1,83 @@
+
+tee.hitsa.ois.service.StudentService#getCurriculumVersionIncludesSpecialities(Lee/hitsa/ois/domain/student/Student;)Z–
+‰D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/StudentService.javaÁ Á(<"3*…
+2–
+‰D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/StudentService.javaÈ" È(&áÞ
+–
+‰D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/StudentService.javaÈ" È(-	
+%9int"java.util.List#size()I*
+
+datajava.util.List2size()*
+1*î
+3–
+‰D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/StudentService.javaÂ Â(ú
+÷
+–
+‰D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/StudentService.javaÂ Â(%
+%0javax.persistence.EntityManager"__id*/*-%
+#ee.hitsa.ois.service.StudentService"
+em¹
+¶
+–
+‰D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/StudentService.javaÂ, Ã(T
+%1java.lang.String"__concat*31
+/select 1 from curriculum_version_speciality cvs*DB
+@ join curriculum_version cv on cv.id = cvs.curriculum_version_id
+
+–
+‰D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/StudentService.javaÂ, Ä(F
+%2java.lang.String"__concat*
+
+%1java.lang.String*64
+2 join student s on s.curriculum_version_id = cv.idî
+ë
+–
+‰D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/StudentService.javaÂ, Å($
+%3java.lang.String"__concat*
+
+%2java.lang.String*
+ where s.id = ?1…‚
+–
+‰D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/StudentService.javaÂ Å(%
+%4javax.persistence.Query"^javax.persistence.EntityManager#createNativeQuery(Ljava/lang/String;)Ljavax/persistence/Query;*'
+%
+%0javax.persistence.EntityManager*
+
+%3java.lang.String2%createNativeQuery(Ljava/lang/String;)«¨
+–
+‰D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/StudentService.javaÆ! Æ(0
+%5java.lang.Long"<ee.hitsa.ois.domain.BaseEntityWithId#getId()Ljava/lang/Long;*0
+.
+student#ee.hitsa.ois.domain.student.Student2getId()ñî
+–
+‰D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/StudentService.javaÂ Æ(1
+%6javax.persistence.Query"Rjavax.persistence.Query#setParameter(ILjava/lang/Object;)Ljavax/persistence/Query;*
+
+%4javax.persistence.Query*2*
+
+%5java.lang.Long2!setParameter(ILjava/lang/Object;)š
+–
+‰D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/StudentService.javaÂ Ç( 
+%7java.util.List"7javax.persistence.Query#getResultList()Ljava/util/List;*
+
+%6javax.persistence.Query2getResultList()Ò
+Ï
+–
+‰D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/StudentService.javaÂ Ç(!
+datajava.util.List"__id*
+
+%7java.util.Listëè
+–
+‰D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/StudentService.javaÈ È(
+%8boolean"java.util.List#isEmpty()Z*
+
+datajava.util.List2	isEmpty()*
+2
+1*À
+1–
+‰D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/StudentService.javaÈ È(2"¡
+–
+‰D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/StudentService.javaÈ È(2
+"":.
+student#ee.hitsa.ois.domain.student.StudentB'%
+#ee.hitsa.ois.service.StudentService

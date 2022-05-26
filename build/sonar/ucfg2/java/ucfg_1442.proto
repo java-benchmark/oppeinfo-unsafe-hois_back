@@ -1,0 +1,224 @@
+
+µee.hitsa.ois.service.AutocompleteService#vocationalModules(Ljava/lang/Long;Lee/hitsa/ois/web/commandobject/curriculum/VocationalModuleCommand;)Lorg/springframework/data/domain/Page;õ
+éD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/AutocompleteService.java˛$ ˛(5"4*Ç
+2õ
+éD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/AutocompleteService.javaˇN ˇ(WŸ
+÷
+õ
+éD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/AutocompleteService.javaˇN ˇ(W
+%3java.lang.String"__id*
+
+%5java.lang.String*
+1*Ç
+3õ
+éD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/AutocompleteService.javaˇB ˇ(KŸ
+÷
+õ
+éD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/AutocompleteService.javaˇB ˇ(K
+%3java.lang.String"__id*
+
+%4java.lang.String*
+1*π
+4õ
+éD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/AutocompleteService.javaˇ ˇ(#“
+œ
+õ
+éD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/AutocompleteService.javaˇ ˇ(&!
+%0ee.hitsa.ois.enums.Language"__id*
+""Û
+õ
+éD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/AutocompleteService.javaˇ. ˇ(>!
+%1ee.hitsa.ois.enums.Language"See.hitsa.ois.web.commandobject.SearchCommand#getLang()Lee/hitsa/ois/enums/Language;*M
+K
+lookupAee.hitsa.ois.web.commandobject.curriculum.VocationalModuleCommand2	getLang()¬ø
+õ
+éD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/AutocompleteService.javaˇ ˇ(?
+%2boolean"*java.lang.Enum#equals(Ljava/lang/Object;)Z*#
+!
+%0ee.hitsa.ois.enums.Language*#
+!
+%1ee.hitsa.ois.enums.Language2equals(Ljava/lang/Object;)*
+2
+3*∆E
+1õ
+éD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/AutocompleteService.javaˇ ˇ(X‡
+›
+õ
+éD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/AutocompleteService.javaˇ ˇ(X
+	nameFieldjava.lang.String"__id*
+
+%3java.lang.Stringú
+ô
+õ
+éD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/AutocompleteService.javaÄ Ä(61
+%6+org.springframework.data.domain.PageRequest"wee.hitsa.ois.service.AutocompleteService#sortAndLimit([Ljava/lang/String;)Lorg/springframework/data/domain/PageRequest;*,"*
+(ee.hitsa.ois.service.AutocompleteService*
+
+	nameFieldjava.lang.Stringï
+í
+õ
+éD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/AutocompleteService.javaÄ Ä(77
+pageable+org.springframework.data.domain.PageRequest"__id*3
+1
+%6+org.springframework.data.domain.PageRequestö
+ó
+õ
+éD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/AutocompleteService.javaÇ= É(E
+%7java.lang.String"__concat*
+from curriculum_module cm *53
+1join classifier mcl on mcl.code = cm.module_code è
+å
+õ
+éD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/AutocompleteService.javaÇ= Ñ(@
+%8java.lang.String"__concat*
+
+%7java.lang.String*0.
+,join curriculum c on c.id = cm.curriculum_id˘ˆ
+õ
+éD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/AutocompleteService.javaÇ' Ç(<-
+%9'ee.hitsa.ois.util.JpaNativeQueryBuilder"'ee.hitsa.ois.util.JpaNativeQueryBuilder∏
+µ
+õ
+éD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/AutocompleteService.javaÇ# Ñ(A
+%10"Cee.hitsa.ois.util.JpaNativeQueryBuilder#<init>(Ljava/lang/String;)V*/
+-
+%9'ee.hitsa.ois.util.JpaNativeQueryBuilder*
+
+%8java.lang.StringÛ
+õ
+éD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/AutocompleteService.javaÇ# Ñ(P.
+%11'ee.hitsa.ois.util.JpaNativeQueryBuilder"Åee.hitsa.ois.util.JpaNativeQueryBuilder#sort(Lorg/springframework/data/domain/Pageable;)Lee/hitsa/ois/util/JpaNativeQueryBuilder;*/
+-
+%9'ee.hitsa.ois.util.JpaNativeQueryBuilder*9
+7
+pageable+org.springframework.data.domain.PageRequest20sort(Lorg/springframework/data/domain/Pageable;)à
+Ö
+õ
+éD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/AutocompleteService.javaÇ Ñ(Q-
+qb'ee.hitsa.ois.util.JpaNativeQueryBuilder"__id*0
+.
+%11'ee.hitsa.ois.util.JpaNativeQueryBuilder‡›
+õ
+éD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/AutocompleteService.javaÜ Ü(K
+%12void"oee.hitsa.ois.util.JpaNativeQueryBuilder#requiredCriteria(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Long;)V*/
+-
+qb'ee.hitsa.ois.util.JpaNativeQueryBuilder*
+c.school_id =:schoolId*
+
+schoolId*
+
+schoolIdjava.lang.Long2FrequiredCriteria(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Long;)§
+°
+õ
+éD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/AutocompleteService.javaá à(/
+%13java.lang.String"__concat*=;
+9c.id in (select uc.curriculum_id from user_curriculum uc *
+where uc.user_id = :userId)Û
+õ
+éD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/AutocompleteService.javaà; à(M
+%14java.lang.Long"]ee.hitsa.ois.web.commandobject.curriculum.VocationalModuleCommand#getUserId()Ljava/lang/Long;*M
+K
+lookupAee.hitsa.ois.web.commandobject.curriculum.VocationalModuleCommand2getUserId()ÿ’
+õ
+éD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/AutocompleteService.javaá à(N
+%15void"oee.hitsa.ois.util.JpaNativeQueryBuilder#optionalCriteria(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Long;)V*/
+-
+qb'ee.hitsa.ois.util.JpaNativeQueryBuilder*
+
+%13java.lang.String*
+
+userId*
+
+%14java.lang.Long2FoptionalCriteria(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Long;)Ÿ÷
+õ
+éD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/AutocompleteService.javaä ä((
+%16void"Cee.hitsa.ois.util.JpaNativeQueryBuilder#filter(Ljava/lang/String;)V*/
+-
+qb'ee.hitsa.ois.util.JpaNativeQueryBuilder*
+c.is_higher = false2filter(Ljava/lang/String;)Ó
+Î
+õ
+éD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/AutocompleteService.javaãM ã(^
+%17java.lang.String"__concat*
+cm.*
+
+	nameFieldjava.lang.StringÔ
+Ï
+õ
+éD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/AutocompleteService.javaå å("
+%18java.lang.String"__concat*
+mcl.*
+
+	nameFieldjava.lang.Stringâ
+Ü
+õ
+éD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/AutocompleteService.javaã å(-
+%19java.lang.String"Pjava.lang.String#format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;*"
+java.lang.String*#!
+concat(%s,' - ',%s,' (',%s,')')*
+
+%17java.lang.String*
+
+%18java.lang.String*
+
+c.codeﬁ€
+õ
+éD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/AutocompleteService.javaå7 å(G
+%20java.lang.String"Hee.hitsa.ois.web.commandobject.SearchCommand#getName()Ljava/lang/String;*M
+K
+lookupAee.hitsa.ois.web.commandobject.curriculum.VocationalModuleCommand2	getName()‹Ÿ
+õ
+éD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/AutocompleteService.javaã å(H
+%21void"qee.hitsa.ois.util.JpaNativeQueryBuilder#optionalContains(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V*/
+-
+qb'ee.hitsa.ois.util.JpaNativeQueryBuilder*
+
+%19java.lang.String*
+name*
+
+%20java.lang.String2HoptionalContains(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)ß
+§
+õ
+éD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/AutocompleteService.javaé- è(3
+%22java.lang.String"__concat*<:
+8cm.id, cm.name_et, cm.name_en, mcl.name_et mcl_name_et, *#!
+mcl.name_en mcl_name_en, c.codeÖ
+Ç
+õ
+éD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/AutocompleteService.javaè5 è(7&
+%23javax.persistence.EntityManager"__id*4*2*
+(ee.hitsa.ois.service.AutocompleteService"
+emˇ
+¸
+õ
+éD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/AutocompleteService.javaé è(B+
+%24$org.springframework.data.domain.Page"Ÿee.hitsa.ois.util.JpaQueryUtil#pagingResult(Lee/hitsa/ois/util/JpaNativeQueryBuilder;Ljava/lang/String;Ljavax/persistence/EntityManager;Lorg/springframework/data/domain/Pageable;)Lorg/springframework/data/domain/Page;*"" 
+ee.hitsa.ois.util.JpaQueryUtil*/
+-
+qb'ee.hitsa.ois.util.JpaNativeQueryBuilder*
+
+%22java.lang.String*(
+&
+%23javax.persistence.EntityManager*9
+7
+pageable+org.springframework.data.domain.PageRequest≤
+Ø
+õ
+éD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/AutocompleteService.javaèG í(	;
+%254org.springframework.core.convert.converter.Converter"__declareFunction*?=
+;__sonar_lambda_127$ee.hitsa.ois.service.AutocompleteServiceÇˇ
+õ
+éD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/AutocompleteService.javaé í(
++
+%33$org.springframework.data.domain.Page"Üorg.springframework.data.domain.Page#map(Lorg/springframework/core/convert/converter/Converter;)Lorg/springframework/data/domain/Page;*-
++
+%24$org.springframework.data.domain.Page*=
+;
+%254org.springframework.core.convert.converter.Converter2;map(Lorg/springframework/core/convert/converter/Converter;)"Õ
+õ
+éD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/AutocompleteService.javaé í(-
++
+%33$org.springframework.data.domain.Page:
+schoolIdjava.lang.Long:K
+lookupAee.hitsa.ois.web.commandobject.curriculum.VocationalModuleCommandB,*
+(ee.hitsa.ois.service.AutocompleteService

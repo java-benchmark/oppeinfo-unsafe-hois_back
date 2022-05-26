@@ -1,0 +1,159 @@
+
+wee.hitsa.ois.service.PracticeApplicationService#admissionHasPlaces(Lee/hitsa/ois/domain/enterprise/PracticeAdmission;)Z¢
+ïD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/PracticeApplicationService.javaê ê(&"4*Ω0
+2¢
+ïD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/PracticeApplicationService.javaí í(í
+è
+¢
+ïD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/PracticeApplicationService.javaí í(%
+%4javax.persistence.EntityManager"__id*;*91
+/ee.hitsa.ois.service.PracticeApplicationService"
+em≈
+¬
+¢
+ïD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/PracticeApplicationService.javaí( ì(]
+%5java.lang.String"__concat*.,
+*select papp.id from practice_admission pa *IG
+Ejoin practice_application papp on pa.id = papp.practice_admission_id ¢
+ü
+¢
+ïD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/PracticeApplicationService.javaí( î(P
+%6java.lang.String"__concat*
+
+%5java.lang.String*<:
+8where pa.id = ?1 and papp.status_code in (?2, ?3) limit ‹Ÿ
+¢
+ïD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/PracticeApplicationService.javaîS î(h
+%7java.lang.Short"Mee.hitsa.ois.domain.enterprise.PracticeAdmission#getPlaces()Ljava/lang/Short;*?
+=
+	admission0ee.hitsa.ois.domain.enterprise.PracticeAdmission2getPlaces()ıÚ
+¢
+ïD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/PracticeApplicationService.javaîS î(s	
+%8int"java.lang.Short#intValue()I*
+
+%7java.lang.Short2
+intValue()Ò
+Ó
+¢
+ïD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/PracticeApplicationService.javaí( î(s
+%9java.lang.String"__concat*
+
+%6java.lang.String*
+	
+%8intíè
+¢
+ïD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/PracticeApplicationService.javaí î(t
+%10javax.persistence.Query"^javax.persistence.EntityManager#createNativeQuery(Ljava/lang/String;)Ljavax/persistence/Query;*'
+%
+%4javax.persistence.EntityManager*
+
+%9java.lang.String2%createNativeQuery(Ljava/lang/String;)«ƒ
+¢
+ïD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/PracticeApplicationService.javaï! ï(2
+%11java.lang.Long"<ee.hitsa.ois.domain.BaseEntityWithId#getId()Ljava/lang/Long;*?
+=
+	admission0ee.hitsa.ois.domain.enterprise.PracticeAdmission2getId()Ä˝
+¢
+ïD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/PracticeApplicationService.javaí ï(3
+%12javax.persistence.Query"Rjavax.persistence.Query#setParameter(ILjava/lang/Object;)Ljavax/persistence/Query;* 
+
+%10javax.persistence.Query*2*
+
+%11java.lang.Long2!setParameter(ILjava/lang/Object;)Î
+Ë
+¢
+ïD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/PracticeApplicationService.javañ! ñ(G3
+%13,ee.hitsa.ois.enums.PracticeApplicationStatus"__id*
+""©¶
+¢
+ïD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/PracticeApplicationService.javañ! ñ(N
+%14java.lang.String"'java.lang.Enum#name()Ljava/lang/String;*5
+3
+%13,ee.hitsa.ois.enums.PracticeApplicationStatus2name()Çˇ
+¢
+ïD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/PracticeApplicationService.javaí ñ(O
+%15javax.persistence.Query"Rjavax.persistence.Query#setParameter(ILjava/lang/Object;)Ljavax/persistence/Query;* 
+
+%12javax.persistence.Query*2*
+
+%14java.lang.String2!setParameter(ILjava/lang/Object;)Î
+Ë
+¢
+ïD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/PracticeApplicationService.javaó! ó(G3
+%16,ee.hitsa.ois.enums.PracticeApplicationStatus"__id*
+""©¶
+¢
+ïD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/PracticeApplicationService.javaó! ó(N
+%17java.lang.String"'java.lang.Enum#name()Ljava/lang/String;*5
+3
+%16,ee.hitsa.ois.enums.PracticeApplicationStatus2name()Çˇ
+¢
+ïD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/PracticeApplicationService.javaí ó(O
+%18javax.persistence.Query"Rjavax.persistence.Query#setParameter(ILjava/lang/Object;)Ljavax/persistence/Query;* 
+
+%15javax.persistence.Query*2*
+
+%17java.lang.String2!setParameter(ILjava/lang/Object;)´®
+¢
+ïD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/PracticeApplicationService.javaí ò( 
+%19java.util.List"7javax.persistence.Query#getResultList()Ljava/util/List;* 
+
+%18javax.persistence.Query2getResultList()ÌÍ
+¢
+ïD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/PracticeApplicationService.javaí ò('
+
+%20int"java.util.List#size()I*
+
+%19java.util.List2size()›⁄
+¢
+ïD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/PracticeApplicationService.javaò* ò(?
+%21java.lang.Short"Mee.hitsa.ois.domain.enterprise.PracticeAdmission#getPlaces()Ljava/lang/Short;*?
+=
+	admission0ee.hitsa.ois.domain.enterprise.PracticeAdmission2getPlaces()˜Ù
+¢
+ïD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/PracticeApplicationService.javaò* ò(J
+
+%22int"java.lang.Short#intValue()I*
+
+%21java.lang.Short2
+intValue()"≠
+¢
+ïD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/PracticeApplicationService.javaí ò(K
+""*è
+3¢
+ïD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/PracticeApplicationService.javaë< ë(E‹Ÿ
+¢
+ïD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/PracticeApplicationService.javaë< ë(Q
+%3java.lang.Short"Mee.hitsa.ois.domain.enterprise.PracticeAdmission#getPlaces()Ljava/lang/Short;*?
+=
+	admission0ee.hitsa.ois.domain.enterprise.PracticeAdmission2getPlaces()*
+2
+1*§
+4¢
+ïD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/PracticeApplicationService.javaë ë(œ
+Ã
+¢
+ïD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/PracticeApplicationService.javaë ë(
+%0java.lang.Boolean"__id*
+""‰·
+¢
+ïD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/PracticeApplicationService.javaë  ë(7
+%1java.lang.Boolean"Qee.hitsa.ois.domain.enterprise.PracticeAdmission#getIsStrict()Ljava/lang/Boolean;*?
+=
+	admission0ee.hitsa.ois.domain.enterprise.PracticeAdmission2getIsStrict()∏µ
+¢
+ïD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/PracticeApplicationService.javaë ë(8
+%2boolean"-java.lang.Boolean#equals(Ljava/lang/Object;)Z*
+
+%0java.lang.Boolean*
+
+%1java.lang.Boolean2equals(Ljava/lang/Object;)*
+3
+1*ÿ
+1¢
+ïD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/PracticeApplicationService.javaö ö("≠
+¢
+ïD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/PracticeApplicationService.javaö ö(
+"":=
+	admission0ee.hitsa.ois.domain.enterprise.PracticeAdmissionB31
+/ee.hitsa.ois.service.PracticeApplicationService

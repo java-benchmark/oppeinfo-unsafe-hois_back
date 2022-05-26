@@ -1,0 +1,220 @@
+
+úee.hitsa.ois.web.ApplicationController#delete(Lee/hitsa/ois/service/security/HoisUserDetails;Lee/hitsa/ois/domain/application/Application;Ljava/lang/Long;)Vô
+åD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/web/ApplicationController.javaÇ Ç("startingBlock*Û
+2ô
+åD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/web/ApplicationController.javaÜ0 Ü(6÷”
+õ
+åD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/web/ApplicationController.javaÜÄ Ü(í
+%10java.lang.String"Rorg.springframework.security.core.userdetails.User#getUsername()Ljava/lang/String;*7
+5
+user-ee.hitsa.ois.service.security.HoisUserDetails2getUsername()Ω∫
+õ
+åD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/web/ApplicationController.javaÜî Ü(ß
+%11java.lang.Long"<ee.hitsa.ois.domain.BaseEntityWithId#getId()Ljava/lang/Long;*<
+:
+application+ee.hitsa.ois.domain.application.Application2getId()ùö
+õ
+åD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/web/ApplicationController.javaÜ© Ü(∂
+%12java.lang.String"'java.lang.Enum#name()Ljava/lang/String;*0
+.
+status$ee.hitsa.ois.enums.ApplicationStatus2name()¥
+±
+ö
+åD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/web/ApplicationController.javaÜ0 Ü(∑
+%13java.lang.String"Pjava.lang.String#format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;*"
+java.lang.String*B@
+>user %s is not allowed to delete application %d with status %s*
+
+%10java.lang.String*
+
+%11java.lang.Long*
+
+%12java.lang.Stringåâ
+ô
+åD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/web/ApplicationController.javaÜ Ü(/8
+%141ee.hitsa.ois.validation.ValidationFailedException"1ee.hitsa.ois.validation.ValidationFailedExceptionÕ
+ 
+ö
+åD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/web/ApplicationController.javaÜ Ü(∏
+%15"Mee.hitsa.ois.validation.ValidationFailedException#<init>(Ljava/lang/String;)V*:
+8
+%141ee.hitsa.ois.validation.ValidationFailedException*
+
+%13java.lang.String*
+0*Ñ
+3õ
+åD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/web/ApplicationController.javaÖ¶ Ö(±ÿ
+’
+õ
+åD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/web/ApplicationController.javaÖ¶ Ö(∆
+%9boolean"Qee.hitsa.ois.util.StudentUtil#canBeEdited(Lee/hitsa/ois/domain/student/Student;)Z*!"
+ee.hitsa.ois.util.StudentUtil*0
+.
+student#ee.hitsa.ois.domain.student.Student*
+2
+1*›
+startingBlockö
+åD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/web/ApplicationController.javaÇ Ç(æ¶
+£
+ô
+åD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/web/ApplicationController.javaÅ Å( 
+%18"
+__annotate*97
+5org.springframework.web.bind.annotation.DeleteMapping*7
+5
+user-ee.hitsa.ois.service.security.HoisUserDetailsÌ
+Í
+ô
+åD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/web/ApplicationController.javaÇ' Ç(+5
+user-ee.hitsa.ois.service.security.HoisUserDetails"__annotation*
+
+%18´
+®
+ô
+åD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/web/ApplicationController.javaÅ Å( 
+%19"
+__annotate*97
+5org.springframework.web.bind.annotation.DeleteMapping*<
+:
+application+ee.hitsa.ois.domain.application.Applicationõ
+ò
+ô
+åD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/web/ApplicationController.javaÇ- Ç(b
+%20"
+__annotate*)'
+%ee.hitsa.ois.util.WithVersionedEntity*<
+:
+application+ee.hitsa.ois.domain.application.Application˚
+¯
+ô
+åD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/web/ApplicationController.javaÇo Ç(z:
+application+ee.hitsa.ois.domain.application.Application"__annotation*
+
+%19*
+
+%20
+Ì
+ö
+åD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/web/ApplicationController.javaÇ| Ç(ó
+%21"
+__annotate*
+java.lang.SuppressWarnings*
+
+versionjava.lang.Long”
+–
+õ
+åD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/web/ApplicationController.javaÇ∂ Ç(Ω
+versionjava.lang.Long"__annotation*
+
+%21*
+7*ﬁ
+4ô
+åD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/web/ApplicationController.javaÖj Ö({⁄
+◊
+ö
+åD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/web/ApplicationController.javaÖj Ö(ë*
+%7$ee.hitsa.ois.enums.ApplicationStatus"__id*
+""◊‘
+ö
+åD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/web/ApplicationController.javaÖj Ö(†
+%8boolean"*java.lang.Enum#equals(Ljava/lang/Object;)Z*,
+*
+%7$ee.hitsa.ois.enums.ApplicationStatus*0
+.
+status$ee.hitsa.ois.enums.ApplicationStatus2equals(Ljava/lang/Object;)*
+3
+1*π
+6ô
+åD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/web/ApplicationController.javaÖ3 Ö(;€ÿ
+ô
+åD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/web/ApplicationController.javaÖP Ö(c'
+%5!ee.hitsa.ois.domain.school.School"Ree.hitsa.ois.domain.student.Student#getSchool()Lee/hitsa/ois/domain/school/School;*0
+.
+student#ee.hitsa.ois.domain.student.Student2getSchool()±
+Æ
+ô
+åD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/web/ApplicationController.javaÖ3 Ö(d
+%6boolean"}ee.hitsa.ois.util.UserUtil#isSchoolAdmin(Lee/hitsa/ois/service/security/HoisUserDetails;Lee/hitsa/ois/domain/school/School;)Z*"
+ee.hitsa.ois.util.UserUtil*7
+5
+user-ee.hitsa.ois.service.security.HoisUserDetails*)
+'
+%5!ee.hitsa.ois.domain.school.School*
+3
+4*™
+7ô
+åD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/web/ApplicationController.javaÉ É(%ıÚ
+ô
+åD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/web/ApplicationController.javaÉ É(2)
+%0#ee.hitsa.ois.domain.student.Student"]ee.hitsa.ois.domain.application.Application#getStudent()Lee/hitsa/ois/domain/student/Student;*<
+:
+application+ee.hitsa.ois.domain.application.Application2getStudent()Ç
+ˇ
+ô
+åD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/web/ApplicationController.javaÉ É(3.
+student#ee.hitsa.ois.domain.student.Student"__id*+
+)
+%0#ee.hitsa.ois.domain.student.StudentÈÊ
+ô
+åD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/web/ApplicationController.javaÑP Ñ(g$
+%1ee.hitsa.ois.domain.Classifier"Wee.hitsa.ois.domain.application.Application#getStatus()Lee/hitsa/ois/domain/Classifier;*<
+:
+application+ee.hitsa.ois.domain.application.Application2getStatus()€
+ÿ
+ô
+åD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/web/ApplicationController.javaÑ= Ñ(h
+%2java.lang.String"Xee.hitsa.ois.util.EntityUtil#getCode(Lee/hitsa/ois/domain/Classifier;)Ljava/lang/String;* "
+ee.hitsa.ois.util.EntityUtil*&
+$
+%1ee.hitsa.ois.domain.Classifier˜
+Ù
+ô
+åD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/web/ApplicationController.javaÑ# Ñ(i*
+%3$ee.hitsa.ois.enums.ApplicationStatus"fee.hitsa.ois.enums.ApplicationStatus#valueOf(Ljava/lang/String;)Lee/hitsa/ois/enums/ApplicationStatus;*("&
+$ee.hitsa.ois.enums.ApplicationStatus*
+
+%2java.lang.StringÉ
+Ä
+ô
+åD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/web/ApplicationController.javaÑ Ñ(j.
+status$ee.hitsa.ois.enums.ApplicationStatus"__id*,
+*
+%3$ee.hitsa.ois.enums.ApplicationStatus∂
+≥
+ô
+åD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/web/ApplicationController.javaÖ Ö(/
+%4boolean"{ee.hitsa.ois.util.UserUtil#isStudent(Lee/hitsa/ois/service/security/HoisUserDetails;Lee/hitsa/ois/domain/student/Student;)Z*"
+ee.hitsa.ois.util.UserUtil*7
+5
+user-ee.hitsa.ois.service.security.HoisUserDetails*0
+.
+student#ee.hitsa.ois.domain.student.Student*	
+3
+4
+6*π
+0 "±
+ô
+åD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/web/ApplicationController.javaâ â(
+implicit return*é
+1ô
+åD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/web/ApplicationController.javaà à(ô
+ñ
+ô
+åD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/web/ApplicationController.javaà à(.
+%16'ee.hitsa.ois.service.ApplicationService"__id*B*@(
+&ee.hitsa.ois.web.ApplicationController"
+applicationServiceÀ»
+ô
+åD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/web/ApplicationController.javaà à(4
+%17void"çee.hitsa.ois.service.ApplicationService#delete(Lee/hitsa/ois/service/security/HoisUserDetails;Lee/hitsa/ois/domain/application/Application;)V*0
+.
+%16'ee.hitsa.ois.service.ApplicationService*7
+5
+user-ee.hitsa.ois.service.security.HoisUserDetails*<
+:
+application+ee.hitsa.ois.domain.application.Application2ddelete(Lee/hitsa/ois/service/security/HoisUserDetails;Lee/hitsa/ois/domain/application/Application;)*
+0:5
+user-ee.hitsa.ois.service.security.HoisUserDetails::
+application+ee.hitsa.ois.domain.application.Application:
+versionjava.lang.LongB*(
+&ee.hitsa.ois.web.ApplicationController

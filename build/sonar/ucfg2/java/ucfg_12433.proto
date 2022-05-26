@@ -1,0 +1,81 @@
+
+Kee.hitsa.ois.service.EmailGeneratorService#emailExists(Ljava/lang/String;)Zõ
+êD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/EmailGeneratorService.javaN N("1*‰
+1õ
+êD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/EmailGeneratorService.javaP P(Ü
+É
+õ
+êD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/EmailGeneratorService.javaP P(%
+%0javax.persistence.EntityManager"__id*6*4,
+*ee.hitsa.ois.service.EmailGeneratorService"
+emà
+Ö
+õ
+êD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/EmailGeneratorService.javaP' Q(3
+%1java.lang.String"__concat*31
+/select 1 from teacher t where t.email = :email *
+
+union all ë
+é
+õ
+êD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/EmailGeneratorService.javaP' R(W
+%2java.lang.String"__concat*
+
+%1java.lang.String*20
+.select 1 from person p where p.email = :email Ì
+Í
+õ
+êD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/EmailGeneratorService.javaP' S(3
+%3java.lang.String"__concat*
+
+%2java.lang.String*
+
+union all ë
+é
+õ
+êD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/EmailGeneratorService.javaP' T(W
+%4java.lang.String"__concat*
+
+%3java.lang.String*20
+.select 1 from student s where s.email = :emailäá
+õ
+êD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/EmailGeneratorService.javaP T(X
+%5javax.persistence.Query"^javax.persistence.EntityManager#createNativeQuery(Ljava/lang/String;)Ljavax/persistence/Query;*'
+%
+%0javax.persistence.EntityManager*
+
+%4java.lang.String2%createNativeQuery(Ljava/lang/String;)Ê
+„
+õ
+êD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/EmailGeneratorService.javaP T(Y
+qjavax.persistence.Query"__id*
+
+%5javax.persistence.Query°û
+õ
+êD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/EmailGeneratorService.javaU U(&
+%6javax.persistence.Query"cjavax.persistence.Query#setParameter(Ljava/lang/String;Ljava/lang/Object;)Ljavax/persistence/Query;*
+
+qjavax.persistence.Query*	
+email*
+
+emailjava.lang.String22setParameter(Ljava/lang/String;Ljava/lang/Object;)ª∏
+õ
+êD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/EmailGeneratorService.javaV V("
+%7javax.persistence.Query"Ajavax.persistence.Query#setMaxResults(I)Ljavax/persistence/Query;*
+
+qjavax.persistence.Query*22setMaxResults(I)¢ü
+õ
+êD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/EmailGeneratorService.javaV V(2
+%8java.util.List"7javax.persistence.Query#getResultList()Ljava/util/List;*
+
+%7javax.persistence.Query2getResultList()ÓÎ
+õ
+êD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/EmailGeneratorService.javaV V(<
+%9boolean"java.util.List#isEmpty()Z*
+
+%8java.util.List2	isEmpty()"¶
+õ
+êD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/EmailGeneratorService.javaV V(=
+"":
+emailjava.lang.StringB.,
+*ee.hitsa.ois.service.EmailGeneratorService

@@ -1,0 +1,154 @@
+
+•ee.hitsa.ois.service.ehis.EhisStudentService#findGuestStudents(Ljava/lang/Long;Lee/hitsa/ois/web/commandobject/ehis/EhisStudentForm;)Ljava/util/List;Ÿ
+’D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/ehis/EhisStudentService.java# (4"1*Õ=
+1Ÿ
+’D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/ehis/EhisStudentService.java (Œ
+‰
+Ÿ
+’D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/ehis/EhisStudentService.java (%
+%0javax.persistence.EntityManager"__id*8*6.
+,ee.hitsa.ois.service.ehis.EhisStudentService"
+em²
+¯
+Ÿ
+’D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/ehis/EhisStudentService.java (.
+%1java.lang.String"__concat*IG
+Eselect ds from DirectiveStudent ds where ds.directive.school.id = ?1 *
+and ds.country.code != ?2 ‡
+„
+Ÿ
+’D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/ehis/EhisStudentService.java ‘(4
+%2java.lang.String"__concat*
+
+%1java.lang.String*$"
+ and ds.directive.type.code = ?3 ­
+ª
+Ÿ
+’D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/ehis/EhisStudentService.java ’(Z
+%3java.lang.String"__concat*
+
+%2java.lang.String*JH
+Fand (ds.directive.status.code = ?4 or ds.directive.status.code = ?5 ) ‘
+
+Ÿ
+’D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/ehis/EhisStudentService.java “(>
+%4java.lang.String"__concat*
+
+%3java.lang.String*.,
+*and ds.endDate >= ?6 and ds.endDate <= ?7 ˜
+•
+Ÿ
+’D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/ehis/EhisStudentService.java ”(E
+%5java.lang.String"__concat*
+
+%4java.lang.String*53
+1and ds.curriculumVersion.curriculum.higher = true¶³
+Ÿ
+’D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/ehis/EhisStudentService.java ”(^"
+%6javax.persistence.TypedQuery"njavax.persistence.EntityManager#createQuery(Ljava/lang/String;Ljava/lang/Class;)Ljavax/persistence/TypedQuery;*'
+%
+%0javax.persistence.EntityManager*
+
+%5java.lang.String*
+""20createQuery(Ljava/lang/String;Ljava/lang/Class;)”‘
+Ÿ
+’D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/ehis/EhisStudentService.java •(*"
+%7javax.persistence.TypedQuery"\javax.persistence.TypedQuery#setParameter(ILjava/lang/Object;)Ljavax/persistence/TypedQuery;*$
+"
+%6javax.persistence.TypedQuery*2*
+
+schoolIdjava.lang.Long2!setParameter(ILjava/lang/Object;)„
+Ÿ
+’D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/ehis/EhisStudentService.java –(,"
+%8javax.persistence.TypedQuery"\javax.persistence.TypedQuery#setParameter(ILjava/lang/Object;)Ljavax/persistence/TypedQuery;*$
+"
+%7javax.persistence.TypedQuery*2*
+
+RIIK_EST2!setParameter(ILjava/lang/Object;)Û
+Ø
+Ÿ
+’D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/ehis/EhisStudentService.java—! —(?&
+%9 ee.hitsa.ois.enums.DirectiveType"__id*
+""™–
+Ÿ
+’D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/ehis/EhisStudentService.java—! —(F
+%10java.lang.String"'java.lang.Enum#name()Ljava/lang/String;*(
+&
+%9 ee.hitsa.ois.enums.DirectiveType2name()’
+Ÿ
+’D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/ehis/EhisStudentService.java —(G#
+%11javax.persistence.TypedQuery"\javax.persistence.TypedQuery#setParameter(ILjava/lang/Object;)Ljavax/persistence/TypedQuery;*$
+"
+%8javax.persistence.TypedQuery*2*
+
+%10java.lang.String2!setParameter(ILjava/lang/Object;)Ş
+Û
+Ÿ
+’D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/ehis/EhisStudentService.java˜! ˜(L)
+%12"ee.hitsa.ois.enums.DirectiveStatus"__id*
+""œ™
+Ÿ
+’D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/ehis/EhisStudentService.java˜! ˜(S
+%13java.lang.String"'java.lang.Enum#name()Ljava/lang/String;*+
+)
+%12"ee.hitsa.ois.enums.DirectiveStatus2name()“
+Ÿ
+’D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/ehis/EhisStudentService.java ˜(T#
+%14javax.persistence.TypedQuery"\javax.persistence.TypedQuery#setParameter(ILjava/lang/Object;)Ljavax/persistence/TypedQuery;*%
+#
+%11javax.persistence.TypedQuery*2*
+
+%13java.lang.String2!setParameter(ILjava/lang/Object;)Ş
+Û
+Ÿ
+’D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/ehis/EhisStudentService.java™! ™(L)
+%15"ee.hitsa.ois.enums.DirectiveStatus"__id*
+""œ™
+Ÿ
+’D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/ehis/EhisStudentService.java™! ™(S
+%16java.lang.String"'java.lang.Enum#name()Ljava/lang/String;*+
+)
+%15"ee.hitsa.ois.enums.DirectiveStatus2name()“
+Ÿ
+’D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/ehis/EhisStudentService.java ™(T#
+%17javax.persistence.TypedQuery"\javax.persistence.TypedQuery#setParameter(ILjava/lang/Object;)Ljavax/persistence/TypedQuery;*%
+#
+%14javax.persistence.TypedQuery*2*
+
+%16java.lang.String2!setParameter(ILjava/lang/Object;)ãà
+Ÿ
+’D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/ehis/EhisStudentService.javaš! š(3
+%18java.time.LocalDate"Ree.hitsa.ois.web.commandobject.ehis.EhisStudentForm#getFrom()Ljava/time/LocalDate;*A
+?
+criteria3ee.hitsa.ois.web.commandobject.ehis.EhisStudentForm2	getFrom()–“
+Ÿ
+’D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/ehis/EhisStudentService.java š(4#
+%19javax.persistence.TypedQuery"\javax.persistence.TypedQuery#setParameter(ILjava/lang/Object;)Ljavax/persistence/TypedQuery;*%
+#
+%17javax.persistence.TypedQuery*2*
+
+%18java.time.LocalDate2!setParameter(ILjava/lang/Object;)ãà
+Ÿ
+’D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/ehis/EhisStudentService.java›! ›(3
+%20java.time.LocalDate"Ree.hitsa.ois.web.commandobject.ehis.EhisStudentForm#getThru()Ljava/time/LocalDate;*A
+?
+criteria3ee.hitsa.ois.web.commandobject.ehis.EhisStudentForm2	getThru()–“
+Ÿ
+’D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/ehis/EhisStudentService.java ›(4#
+%21javax.persistence.TypedQuery"\javax.persistence.TypedQuery#setParameter(ILjava/lang/Object;)Ljavax/persistence/TypedQuery;*%
+#
+%19javax.persistence.TypedQuery*2*
+
+%20java.time.LocalDate2!setParameter(ILjava/lang/Object;)²¯
+Ÿ
+’D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/ehis/EhisStudentService.java œ( 
+%22java.util.List"<javax.persistence.TypedQuery#getResultList()Ljava/util/List;*%
+#
+%21javax.persistence.TypedQuery2getResultList()"»
+Ÿ
+’D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/ehis/EhisStudentService.java œ(!
+
+%22java.util.List:
+schoolIdjava.lang.Long:?
+criteria3ee.hitsa.ois.web.commandobject.ehis.EhisStudentFormB0.
+,ee.hitsa.ois.service.ehis.EhisStudentService

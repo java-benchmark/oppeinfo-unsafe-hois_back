@@ -1,0 +1,164 @@
+
+^ee.hitsa.ois.service.BoardingSchoolService#studentDormitories(Ljava/util/List;)Ljava/util/Map;ù
+êD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/BoardingSchoolService.javaÇ* Ç(<"1*∞<
+1ù
+êD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/BoardingSchoolService.javaÉ É(à
+Ö
+ù
+êD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/BoardingSchoolService.javaÉ É(%
+%0javax.persistence.EntityManager"__id*6*4,
+*ee.hitsa.ois.service.BoardingSchoolService"
+emı
+Ú
+ù
+êD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/BoardingSchoolService.javaÉ, Ñ(r
+%1java.lang.String"__concat*JH
+Fselect d.id d_id, s.id s_id, r.id r_id, r.code r_code, b.code b_code, *b`
+^d.valid_from, d.valid_thru, d.add_info, case when (?2 >= d.valid_from and ?2 <= d.valid_thru) û
+õ
+ù
+êD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/BoardingSchoolService.javaÉ, Ö(M
+%2java.lang.String"__concat*
+
+%1java.lang.String*=;
+9or ?2 < d.valid_from then false else true end as expired ˆ
+Û
+ù
+êD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/BoardingSchoolService.javaÉ, Ü(%
+%3java.lang.String"__concat*
+
+%2java.lang.String*
+from dormitory d ã
+à
+ù
+êD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/BoardingSchoolService.javaÉ, á(:
+%4java.lang.String"__concat*
+
+%3java.lang.String**(
+&join student s on s.id = d.student_id Ö
+Ç
+ù
+êD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/BoardingSchoolService.javaÉ, à(4
+%5java.lang.String"__concat*
+
+%4java.lang.String*$"
+ join room r on r.id = d.room_id ç
+ä
+ù
+êD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/BoardingSchoolService.javaÉ, â(<
+%6java.lang.String"__concat*
+
+%5java.lang.String*,*
+(join building b on b.id = r.building_id •
+¢
+ù
+êD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/BoardingSchoolService.javaÉ, ä(T
+%7java.lang.String"__concat*
+
+%6java.lang.String*DB
+@where s.id in (?1) order by d.valid_thru desc, d.valid_from descåâ
+ù
+êD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/BoardingSchoolService.javaÉ ä(U
+%8javax.persistence.Query"^javax.persistence.EntityManager#createNativeQuery(Ljava/lang/String;)Ljavax/persistence/Query;*'
+%
+%0javax.persistence.EntityManager*
+
+%7java.lang.String2%createNativeQuery(Ljava/lang/String;)Ä˝
+ù
+êD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/BoardingSchoolService.javaÉ ã(,
+%9javax.persistence.Query"Rjavax.persistence.Query#setParameter(ILjava/lang/Object;)Ljavax/persistence/Query;*
+
+%8javax.persistence.Query*2*
+
+
+studentIdsjava.util.List2!setParameter(ILjava/lang/Object;)à
+Ö
+ù
+êD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/BoardingSchoolService.javaåC å(R
+%10java.time.LocalDate".java.time.LocalDate#now()Ljava/time/LocalDate;*"
+java.time.LocalDate‡
+›
+ù
+êD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/BoardingSchoolService.javaå! å(S
+%11java.sql.Timestamp"^ee.hitsa.ois.util.JpaQueryUtil#parameterAsTimestamp(Ljava/time/LocalDate;)Ljava/sql/Timestamp;*"" 
+ee.hitsa.ois.util.JpaQueryUtil*
+
+%10java.time.LocalDate˛˚
+ù
+êD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/BoardingSchoolService.javaÉ å(T
+%12javax.persistence.Query"Rjavax.persistence.Query#setParameter(ILjava/lang/Object;)Ljavax/persistence/Query;*
+
+%9javax.persistence.Query*2*
+
+%11java.sql.Timestamp2!setParameter(ILjava/lang/Object;)¶£
+ù
+êD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/BoardingSchoolService.javaÉ ç( 
+%13java.util.List"7javax.persistence.Query#getResultList()Ljava/util/List;* 
+
+%12javax.persistence.Query2getResultList()⁄
+◊
+ù
+êD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/BoardingSchoolService.javaÉ ç(!
+datajava.util.List"__id*
+
+%13java.util.List√
+¿
+ù
+êD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/BoardingSchoolService.javaè è(,
+%14java.util.List"Kee.hitsa.ois.util.StreamUtil#nullSafeList(Ljava/util/List;)Ljava/util/List;* "
+ee.hitsa.ois.util.StreamUtil*
+
+datajava.util.Listûõ
+ù
+êD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/BoardingSchoolService.javaè è(5
+%15java.util.stream.Stream"6java.util.Collection#stream()Ljava/util/stream/Stream;*
+
+%14java.util.List2stream()û
+õ
+ù
+êD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/BoardingSchoolService.javaê/ ê(F"
+%16java.util.function.Function"__declareFunction*B@
+>__sonar_lambda_2701$ee.hitsa.ois.service.BoardingSchoolServiceû
+õ
+ù
+êD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/BoardingSchoolService.javaê[ ú("
+%18java.util.function.Function"__declareFunction*B@
+>__sonar_lambda_2702$ee.hitsa.ois.service.BoardingSchoolService‘
+—
+ù
+êD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/BoardingSchoolService.javaú ú(:!
+%43java.util.stream.Collector"cjava.util.stream.Collectors#toCollection(Ljava/util/function/Supplier;)Ljava/util/stream/Collector;*"
+java.util.stream.Collectors*
+""Æ
+´
+ù
+êD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/BoardingSchoolService.javaêH ú(;!
+%44java.util.stream.Collector"zjava.util.stream.Collectors#mapping(Ljava/util/function/Function;Ljava/util/stream/Collector;)Ljava/util/stream/Collector;*"
+java.util.stream.Collectors*$
+"
+%18java.util.function.Function*#
+!
+%43java.util.stream.Collector±
+Æ
+ù
+êD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/BoardingSchoolService.javaê ú(<!
+%45java.util.stream.Collector"}java.util.stream.Collectors#groupingBy(Ljava/util/function/Function;Ljava/util/stream/Collector;)Ljava/util/stream/Collector;*"
+java.util.stream.Collectors*$
+"
+%16java.util.function.Function*#
+!
+%44java.util.stream.Collector¯ı
+ù
+êD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/BoardingSchoolService.javaè ú(=
+%46java.util.Map"Ojava.util.stream.Stream#collect(Ljava/util/stream/Collector;)Ljava/lang/Object;* 
+
+%15java.util.stream.Stream*#
+!
+%45java.util.stream.Collector2%collect(Ljava/util/stream/Collector;)"∏
+ù
+êD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/BoardingSchoolService.javaè ú(>
+
+%46java.util.Map:
+
+studentIdsjava.util.ListB.,
+*ee.hitsa.ois.service.BoardingSchoolService

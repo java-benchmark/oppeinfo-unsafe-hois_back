@@ -1,0 +1,190 @@
+
+see.hitsa.ois.services.JuhanService#formRooms(Lee/hitsa/ois/web/commandobject/juhan/JuhanEventForm;)Ljava/util/List;•
+ˆD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/services/JuhanService.javaô ô( "5*ƒ
+2•
+ˆD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/services/JuhanService.java‚0 ‚(Tˆ…
+•
+ˆD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/services/JuhanService.java‚ ‚(/8
+%221ee.hitsa.ois.validation.ValidationFailedException"1ee.hitsa.ois.validation.ValidationFailedExceptionÕ
+Ò
+•
+ˆD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/services/JuhanService.java‚ ‚(U
+%23"Mee.hitsa.ois.validation.ValidationFailedException#<init>(Ljava/lang/String;)V*:
+8
+%221ee.hitsa.ois.validation.ValidationFailedException*&$
+"Event rooms don't belong to school*
+0*ï
+3•
+ˆD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/services/JuhanService.java (âß
+•
+ˆD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/services/JuhanService.java (
+
+%20int"java.util.List#size()I*
+
+roomsjava.util.List2size()äá
+•
+ˆD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/services/JuhanService.java (*
+
+%21int"java.util.List#size()I*
+
+roomIdsjava.util.List2size()*
+2
+1*ó
+4•
+ˆD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/services/JuhanService.javaû= û(Gèå
+•
+ˆD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/services/JuhanService.javaû+ û(<(
+%12!ee.hitsa.ois.util.JpaQueryBuilder"!ee.hitsa.ois.util.JpaQueryBuilder­
+ª
+•
+ˆD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/services/JuhanService.javaû' û(M
+%13"Nee.hitsa.ois.util.JpaQueryBuilder#<init>(Ljava/lang/Class;Ljava/lang/String;)V**
+(
+%12!ee.hitsa.ois.util.JpaQueryBuilder*
+""*
+rö
+ó
+•
+ˆD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/services/JuhanService.javaû û(N'
+qb!ee.hitsa.ois.util.JpaQueryBuilder"__id**
+(
+%12!ee.hitsa.ois.util.JpaQueryBuilderØÕ
+•
+ˆD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/services/JuhanService.javaüP ü(g
+%14java.lang.Long"Qee.hitsa.ois.web.commandobject.juhan.JuhanEventForm#getSchoolId()Ljava/lang/Long;*B
+@
+	eventForm3ee.hitsa.ois.web.commandobject.juhan.JuhanEventForm2getSchoolId()ÙÖ
+•
+ˆD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/services/JuhanService.javaü ü(h
+%15void"oee.hitsa.ois.util.JpaNativeQueryBuilder#requiredCriteria(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Long;)V*)
+'
+qb!ee.hitsa.ois.util.JpaQueryBuilder*$"
+ r.building.school.id = :schoolId*
+
+schoolId*
+
+%14java.lang.Long2FrequiredCriteria(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Long;)Ú×
+•
+ˆD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/services/JuhanService.javaı ı(I
+%16void"uee.hitsa.ois.util.JpaNativeQueryBuilder#optionalCriteria(Ljava/lang/String;Ljava/lang/String;Ljava/util/Collection;)V*)
+'
+qb!ee.hitsa.ois.util.JpaQueryBuilder*
+r.id in (:roomIds)*	
+roomIds*
+
+roomIdsjava.util.List2LoptionalCriteria(Ljava/lang/String;Ljava/lang/String;Ljava/util/Collection;)ù
+ö
+•
+ˆD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/services/JuhanService.javaÿ ÿ( &
+%17javax.persistence.EntityManager"__id*.*,$
+"ee.hitsa.ois.services.JuhanService"
+em«¨
+•
+ˆD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/services/JuhanService.javaÿ ÿ(!#
+%18javax.persistence.TypedQuery"iee.hitsa.ois.util.JpaQueryBuilder#select(Ljavax/persistence/EntityManager;)Ljavax/persistence/TypedQuery;*)
+'
+qb!ee.hitsa.ois.util.JpaQueryBuilder*(
+&
+%17javax.persistence.EntityManager2)select(Ljavax/persistence/EntityManager;)¨¥
+•
+ˆD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/services/JuhanService.javaÿ ÿ(1
+%19java.util.List"<javax.persistence.TypedQuery#getResultList()Ljava/util/List;*%
+#
+%18javax.persistence.TypedQuery2getResultList()Ó
+Ğ
+•
+ˆD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/services/JuhanService.javaÿ ÿ(1
+roomsjava.util.List"__id*
+
+%19java.util.List*
+3*¤
+5•
+ˆD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/services/JuhanService.javaõ õ(,ËÈ
+•
+ˆD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/services/JuhanService.javaõ õ(*
+%0java.util.ArrayList"java.util.ArrayListİ
+Ú
+•
+ˆD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/services/JuhanService.javaõ õ(,
+%1"java.util.ArrayList#<init>()V*
+
+%0java.util.ArrayList×
+Ô
+•
+ˆD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/services/JuhanService.javaõ õ(-
+roomsjava.util.List"__id*
+
+%0java.util.ArrayListÑÎ
+•
+ˆD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/services/JuhanService.java÷5 ÷(I
+%2java.util.List"Nee.hitsa.ois.web.commandobject.juhan.JuhanEventForm#getRooms()Ljava/util/List;*B
+@
+	eventForm3ee.hitsa.ois.web.commandobject.juhan.JuhanEventForm2
+getRooms()¸
+µ
+•
+ˆD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/services/JuhanService.java÷ ÷(J
+%3java.util.List"Kee.hitsa.ois.util.StreamUtil#nullSafeList(Ljava/util/List;)Ljava/util/List;* "
+ee.hitsa.ois.util.StreamUtil*
+
+%2java.util.List”‘
+•
+ˆD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/services/JuhanService.java÷ ÷(S
+%4java.util.stream.Stream"6java.util.Collection#stream()Ljava/util/stream/Stream;*
+
+%3java.util.List2stream()
+‹
+•
+ˆD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/services/JuhanService.javaø ø(2"
+%5java.util.function.Predicate"__declareFunction*:8
+6__sonar_lambda_1945$ee.hitsa.ois.services.JuhanService‚ÿ
+•
+ˆD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/services/JuhanService.java÷ ø(3
+%7java.util.stream.Stream"Wjava.util.stream.Stream#filter(Ljava/util/function/Predicate;)Ljava/util/stream/Stream;*
+
+%4java.util.stream.Stream*$
+"
+%5java.util.function.Predicate2&filter(Ljava/util/function/Predicate;)ÜÙ
+•
+ˆD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/services/JuhanService.java÷ ø(V
+%8java.util.stream.Stream"Sjava.util.stream.Stream#map(Ljava/util/function/Function;)Ljava/util/stream/Stream;*
+
+%7java.util.stream.Stream*
+""2"map(Ljava/util/function/Function;) 
+
+•
+ˆD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/services/JuhanService.javaù ù(, 
+%9java.util.stream.Collector"@java.util.stream.Collectors#toList()Ljava/util/stream/Collector;*"
+java.util.stream.Collectorsïì
+•
+ˆD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/services/JuhanService.java÷ ù(-
+%10java.util.List"Ojava.util.stream.Stream#collect(Ljava/util/stream/Collector;)Ljava/lang/Object;*
+
+%8java.util.stream.Stream*"
+ 
+%9java.util.stream.Collector2%collect(Ljava/util/stream/Collector;)Õ
+Ò
+•
+ˆD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/services/JuhanService.java÷ ù(.
+roomIdsjava.util.List"__id*
+
+%10java.util.Listîë
+•
+ˆD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/services/JuhanService.javaú ú(
+%11boolean"java.util.List#isEmpty()Z*
+
+roomIdsjava.util.List2	isEmpty()*
+3
+4*µ
+0 "­
+•
+ˆD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/services/JuhanService.java… …(
+implicit return*Ñ
+1•
+ˆD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/services/JuhanService.java„ „("³
+•
+ˆD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/services/JuhanService.java„ „(
+
+roomsjava.util.List:@
+	eventForm3ee.hitsa.ois.web.commandobject.juhan.JuhanEventFormB&$
+"ee.hitsa.ois.services.JuhanService

@@ -1,0 +1,114 @@
+
+Íee.hitsa.ois.web.MidtermResultController#getDeclaredSubjects(Lee/hitsa/ois/service/security/HoisUserDetails;Ljava/lang/Long;Lorg/springframework/data/domain/Pageable;)Lorg/springframework/data/domain/Page;™
+ŽD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/web/MidtermResultController.java (  (;"startingBlock*Û	
+startingBlockš
+ŽD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/web/MidtermResultController.java ;  (•¢
+Ÿ
+™
+ŽD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/web/MidtermResultController.java (
+%9"
+__annotate*64
+2org.springframework.web.bind.annotation.GetMapping*7
+5
+user-ee.hitsa.ois.service.security.HoisUserDetailsì
+é
+™
+ŽD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/web/MidtermResultController.java L  (P5
+user-ee.hitsa.ois.service.security.HoisUserDetails"__annotation*
+
+%9¢
+Ÿ
+™
+ŽD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/web/MidtermResultController.java (
+%10"
+__annotate*64
+2org.springframework.web.bind.annotation.GetMapping*6
+4
+pageable(org.springframework.data.domain.Pageableî
+ë
+›
+ŽD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/web/MidtermResultController.java Œ  (”4
+pageable(org.springframework.data.domain.Pageable"__annotation*
+
+%10*
+1*Š 
+1™
+ŽD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/web/MidtermResultController.java! !(â
+ß
+™
+ŽD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/web/MidtermResultController.java! !(&
+
+%0void"\ee.hitsa.ois.util.UserUtil#assertIsStudent(Lee/hitsa/ois/service/security/HoisUserDetails;)V*"
+ee.hitsa.ois.util.UserUtil*7
+5
+user-ee.hitsa.ois.service.security.HoisUserDetails‚
+ÿ
+™
+ŽD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/web/MidtermResultController.java" "(%
+%1javax.persistence.EntityManager"__id*4*2*
+(ee.hitsa.ois.web.MidtermResultController"
+em­ª
+™
+ŽD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/web/MidtermResultController.java" "(I%
+%2ee.hitsa.ois.domain.StudyPeriod"cjavax.persistence.EntityManager#getReference(Ljava/lang/Class;Ljava/lang/Object;)Ljava/lang/Object;*'
+%
+%1javax.persistence.EntityManager*
+""*
+
+periodIdjava.lang.Long21getReference(Ljava/lang/Class;Ljava/lang/Object;)ù
+ö
+™
+ŽD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/web/MidtermResultController.java" "(J)
+periodee.hitsa.ois.domain.StudyPeriod"__id*'
+%
+%2ee.hitsa.ois.domain.StudyPeriodÐÍ
+™
+ŽD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/web/MidtermResultController.java#( #(=#
+%3ee.hitsa.ois.domain.StudyYear"Mee.hitsa.ois.domain.StudyPeriod#getStudyYear()Lee/hitsa/ois/domain/StudyYear;*+
+)
+periodee.hitsa.ois.domain.StudyPeriod2getStudyYear()ÊÇ
+™
+ŽD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/web/MidtermResultController.java#( #(I'
+%4!ee.hitsa.ois.domain.school.School"Lee.hitsa.ois.domain.StudyYear#getSchool()Lee/hitsa/ois/domain/school/School;*%
+#
+%3ee.hitsa.ois.domain.StudyYear2getSchool()²
+¯
+™
+ŽD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/web/MidtermResultController.java# #(J
+
+%5void"€ee.hitsa.ois.util.UserUtil#assertSameSchool(Lee/hitsa/ois/service/security/HoisUserDetails;Lee/hitsa/ois/domain/school/School;)V*"
+ee.hitsa.ois.util.UserUtil*7
+5
+user-ee.hitsa.ois.service.security.HoisUserDetails*)
+'
+%4!ee.hitsa.ois.domain.school.Schoolž
+›
+™
+ŽD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/web/MidtermResultController.java$ $(#/
+%6)ee.hitsa.ois.service.MidtermResultService"__id*F*D*
+(ee.hitsa.ois.web.MidtermResultController"
+midtermResultServiceÌÉ
+™
+ŽD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/web/MidtermResultController.java$@ $(S
+%7java.lang.Long"Lee.hitsa.ois.service.security.HoisUserDetails#getStudentId()Ljava/lang/Long;*7
+5
+user-ee.hitsa.ois.service.security.HoisUserDetails2getStudentId()À½
+™
+ŽD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/web/MidtermResultController.java$ $(f*
+%8$org.springframework.data.domain.Page"Èee.hitsa.ois.service.MidtermResultService#getDeclaredSubjectsByPeriod(Ljava/lang/Long;Lee/hitsa/ois/domain/StudyPeriod;Lorg/springframework/data/domain/Pageable;)Lorg/springframework/data/domain/Page;*1
+/
+%6)ee.hitsa.ois.service.MidtermResultService*
+
+%7java.lang.Long*+
+)
+periodee.hitsa.ois.domain.StudyPeriod*6
+4
+pageable(org.springframework.data.domain.Pageable2xgetDeclaredSubjectsByPeriod(Ljava/lang/Long;Lee/hitsa/ois/domain/StudyPeriod;Lorg/springframework/data/domain/Pageable;)"Ê
+™
+ŽD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/web/MidtermResultController.java$ $(g,
+*
+%8$org.springframework.data.domain.Page:5
+user-ee.hitsa.ois.service.security.HoisUserDetails:
+periodIdjava.lang.Long:4
+pageable(org.springframework.data.domain.PageableB,*
+(ee.hitsa.ois.web.MidtermResultController

@@ -1,0 +1,162 @@
+
+”ee.hitsa.ois.service.ModuleProtocolService#availableTeacherModules(Lee/hitsa/ois/service/security/HoisUserDetails;Ljava/lang/Long;Lorg/springframework/data/domain/Pageable;)Lorg/springframework/data/domain/Page;ù
+êD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/ModuleProtocolService.javaê) ê(@"1*ü<
+1ù
+êD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/ModuleProtocolService.javaë ë(<π
+∂
+ù
+êD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/ModuleProtocolService.javaë í(X
+%0java.lang.String"__concat*(&
+$from curriculum_version_omodule cvo *HF
+Dinner join curriculum_module cm on cm.id = cvo.curriculum_module_id ú
+ô
+ù
+êD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/ModuleProtocolService.javaë ì(K
+%1java.lang.String"__concat*
+
+%0java.lang.String*;9
+7inner join classifier mcl on mcl.code = cm.module_code ´
+®
+ù
+êD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/ModuleProtocolService.javaë î(Z
+%2java.lang.String"__concat*
+
+%1java.lang.String*JH
+Finner join curriculum_version cv on cv.id = cvo.curriculum_version_id ó
+î
+ù
+êD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/ModuleProtocolService.javaë ï(F
+%3java.lang.String"__concat*
+
+%2java.lang.String*64
+2inner join curriculum c on c.id = cv.curriculum_id›
+⁄
+ù
+êD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/ModuleProtocolService.javaë ï(G
+fromjava.lang.String"__id*
+
+%3java.lang.String˚¯
+ù
+êD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/ModuleProtocolService.javaó' ó(<-
+%4'ee.hitsa.ois.util.JpaNativeQueryBuilder"'ee.hitsa.ois.util.JpaNativeQueryBuilderª
+∏
+ù
+êD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/ModuleProtocolService.javaó# ó(B
+%5"Cee.hitsa.ois.util.JpaNativeQueryBuilder#<init>(Ljava/lang/String;)V*/
+-
+%4'ee.hitsa.ois.util.JpaNativeQueryBuilder*
+
+fromjava.lang.Stringâ
+Ü
+ù
+êD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/ModuleProtocolService.javaó ó(C-
+qb'ee.hitsa.ois.util.JpaNativeQueryBuilder"__id*/
+-
+%4'ee.hitsa.ois.util.JpaNativeQueryBuilderŒÀ
+ù
+êD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/ModuleProtocolService.javaòC ò(U
+%6java.lang.Long"Kee.hitsa.ois.service.security.HoisUserDetails#getSchoolId()Ljava/lang/Long;*7
+5
+user-ee.hitsa.ois.service.security.HoisUserDetails2getSchoolId()‹Ÿ
+ù
+êD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/ModuleProtocolService.javaò ò(V
+
+%7void"oee.hitsa.ois.util.JpaNativeQueryBuilder#requiredCriteria(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Long;)V*/
+-
+qb'ee.hitsa.ois.util.JpaNativeQueryBuilder*
+c.school_id = :schoolId*
+
+schoolId*
+
+%6java.lang.Long2FrequiredCriteria(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Long;)…
+∆
+ù
+êD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/ModuleProtocolService.javaôM ô(\
+%8java.lang.String"__id*
+""ÏÈ
+ù
+êD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/ModuleProtocolService.javaô ô(]
+
+%9void"qee.hitsa.ois.util.JpaNativeQueryBuilder#requiredCriteria(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V*/
+-
+qb'ee.hitsa.ois.util.JpaNativeQueryBuilder*" 
+cm.module_code != :module_code*
+module_code*
+
+%8java.lang.String2HrequiredCriteria(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)´
+®
+û
+êD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/ModuleProtocolService.javaö õ(á
+%10java.lang.String"__concat*hf
+d exists(select lpm.id from lesson_plan_module lpm join lesson_plan lp on lp.id = lpm.lesson_plan_id *xv
+twhere lpm.curriculum_version_omodule_id = cvo.id and lpm.teacher_id = :teacherId and lp.study_year_id = :studyYear) ”–
+ü
+êD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/ModuleProtocolService.javaõñ õ(©
+%11java.lang.Long"Lee.hitsa.ois.service.security.HoisUserDetails#getTeacherId()Ljava/lang/Long;*7
+5
+user-ee.hitsa.ois.service.security.HoisUserDetails2getTeacherId()ﬁ€
+û
+êD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/ModuleProtocolService.javaö õ(™
+%12void"oee.hitsa.ois.util.JpaNativeQueryBuilder#requiredCriteria(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Long;)V*/
+-
+qb'ee.hitsa.ois.util.JpaNativeQueryBuilder*
+
+%10java.lang.String*
+	teacherId*
+
+%11java.lang.Long2FrequiredCriteria(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Long;)öó
+ù
+êD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/ModuleProtocolService.javaú ú(,
+%13void"Xee.hitsa.ois.util.JpaNativeQueryBuilder#parameter(Ljava/lang/String;Ljava/lang/Object;)V*/
+-
+qb'ee.hitsa.ois.util.JpaNativeQueryBuilder*
+	studyYear*
+
+	studyYearjava.lang.Long2/parameter(Ljava/lang/String;Ljava/lang/Object;)â
+Ü
+ù
+êD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/ModuleProtocolService.javaû7 û(9&
+%14javax.persistence.EntityManager"__id*6*4,
+*ee.hitsa.ois.service.ModuleProtocolService"
+emÔ
+Ï
+ù
+êD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/ModuleProtocolService.javaû û(D+
+%15$org.springframework.data.domain.Page"Ÿee.hitsa.ois.util.JpaQueryUtil#pagingResult(Lee/hitsa/ois/util/JpaNativeQueryBuilder;Ljava/lang/String;Ljavax/persistence/EntityManager;Lorg/springframework/data/domain/Pageable;)Lorg/springframework/data/domain/Page;*"" 
+ee.hitsa.ois.util.JpaQueryUtil*/
+-
+qb'ee.hitsa.ois.util.JpaNativeQueryBuilder*
+
+cvo.id*(
+&
+%14javax.persistence.EntityManager*6
+4
+pageable(org.springframework.data.domain.Pageable∑
+¥
+ù
+êD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/ModuleProtocolService.javaûI †(	;
+%164org.springframework.core.convert.converter.Converter"__declareFunction*B@
+>__sonar_lambda_1831$ee.hitsa.ois.service.ModuleProtocolService∞
+≠
+
+__unknown_file ([
+;
+%164org.springframework.core.convert.converter.Converter"
+ModuleProtocolService.this"__id*.,
+*ee.hitsa.ois.service.ModuleProtocolServiceÑÅ
+ù
+êD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/ModuleProtocolService.javaû †(
++
+%21$org.springframework.data.domain.Page"Üorg.springframework.data.domain.Page#map(Lorg/springframework/core/convert/converter/Converter;)Lorg/springframework/data/domain/Page;*-
++
+%15$org.springframework.data.domain.Page*=
+;
+%164org.springframework.core.convert.converter.Converter2;map(Lorg/springframework/core/convert/converter/Converter;)"œ
+ù
+êD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/ModuleProtocolService.javaû †(-
++
+%21$org.springframework.data.domain.Page:5
+user-ee.hitsa.ois.service.security.HoisUserDetails:
+	studyYearjava.lang.Long:4
+pageable(org.springframework.data.domain.PageableB.,
+*ee.hitsa.ois.service.ModuleProtocolService

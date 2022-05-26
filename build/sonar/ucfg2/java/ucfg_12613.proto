@@ -1,0 +1,87 @@
+
+Zee.hitsa.ois.service.poll.PollService#hasThemeRepetitive(Lee/hitsa/ois/domain/poll/Poll;)Zò
+ãD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/poll/PollService.javaì ì(%"3*ƒ
+2ò
+ãD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/poll/PollService.javaõ õ("£
+ò
+ãD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/poll/PollService.javaõ õ(
+""*Ã
+3ò
+ãD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/poll/PollService.javaî" î($˛
+˚
+ò
+ãD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/poll/PollService.javaî" î($%
+%0javax.persistence.EntityManager"__id*1*/'
+%ee.hitsa.ois.service.poll.PollService"
+emò
+ï
+ò
+ãD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/poll/PollService.javaî7 ï(5
+%1java.lang.String"__concat*/-
++select pt.is_repetitive from poll_theme pt *%#
+!join poll p on pt.poll_id = p.id 
+Ì
+ò
+ãD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/poll/PollService.javaî7 ñ($
+%2java.lang.String"__concat*
+
+%1java.lang.String*
+where p.id = ?1 ˚
+¯
+ò
+ãD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/poll/PollService.javaî7 ó(/
+%3java.lang.String"__concat*
+
+%2java.lang.String*
+and pt.is_repetitive = trueáÑ
+ò
+ãD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/poll/PollService.javaî" ó(0
+%4javax.persistence.Query"^javax.persistence.EntityManager#createNativeQuery(Ljava/lang/String;)Ljavax/persistence/Query;*'
+%
+%0javax.persistence.EntityManager*
+
+%3java.lang.String2%createNativeQuery(Ljava/lang/String;)€
+ÿ
+ò
+ãD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/poll/PollService.javaò ò(3
+%5java.lang.Long"Zee.hitsa.ois.util.EntityUtil#getId(Lee/hitsa/ois/domain/BaseEntityWithId;)Ljava/lang/Long;* "
+ee.hitsa.ois.util.EntityUtil*'
+%
+pollee.hitsa.ois.domain.poll.PollÛ
+ò
+ãD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/poll/PollService.javaî" ò(4
+%6javax.persistence.Query"Rjavax.persistence.Query#setParameter(ILjava/lang/Object;)Ljavax/persistence/Query;*
+
+%4javax.persistence.Query*2*
+
+%5java.lang.Long2!setParameter(ILjava/lang/Object;)π∂
+ò
+ãD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/poll/PollService.javaî" ô(
+%7javax.persistence.Query"Ajavax.persistence.Query#setMaxResults(I)Ljavax/persistence/Query;*
+
+%6javax.persistence.Query*22setMaxResults(I)üú
+ò
+ãD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/poll/PollService.javaî" ô(-
+%8java.util.List"7javax.persistence.Query#getResultList()Ljava/util/List;*
+
+%7javax.persistence.Query2getResultList()ﬂ
+‹
+ò
+ãD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/poll/PollService.javaî ô(.!
+repetitiveThemejava.util.List"__id*
+
+%8java.util.List¯ı
+ò
+ãD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/poll/PollService.javaö ö(%
+%9boolean"java.util.List#isEmpty()Z*#
+!
+repetitiveThemejava.util.List2	isEmpty()*
+2
+1*ƒ
+1ò
+ãD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/poll/PollService.javaù ù("£
+ò
+ãD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/poll/PollService.javaù ù(
+"":%
+pollee.hitsa.ois.domain.poll.PollB)'
+%ee.hitsa.ois.service.poll.PollService

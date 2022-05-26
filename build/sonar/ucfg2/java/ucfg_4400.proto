@@ -1,0 +1,187 @@
+
+éee.hitsa.ois.service.JournalService#updateJournalEntryStudentGrade(Lee/hitsa/ois/service/security/HoisUserDetails;Lee/hitsa/ois/domain/timetable/JournalEntryStudent;Lee/hitsa/ois/web/commandobject/timetable/JournalEntryStudentForm;)V–
+‰D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/JournalService.javaë ë(/"6*â
+2–
+‰D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/JournalService.javaõ õ(#‹ˆ
+–
+‰D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/JournalService.javaõ3 õ([
+%13java.lang.String"cee.hitsa.ois.web.commandobject.timetable.JournalEntryStudentForm#getVerbalGrade()Ljava/lang/String;*]
+[
+journalEntryStudentForm@ee.hitsa.ois.web.commandobject.timetable.JournalEntryStudentForm2getVerbalGrade()‹ˆ
+–
+‰D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/JournalService.javaõ õ(\
+%14void"Uee.hitsa.ois.domain.timetable.JournalEntryStudent#setVerbalGrade(Ljava/lang/String;)V*J
+H
+journalEntryStudent1ee.hitsa.ois.domain.timetable.JournalEntryStudent*
+
+%13java.lang.String2"setVerbalGrade(Ljava/lang/String;)‘
+Ž
+–
+‰D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/JournalService.javaö5 ö(H
+%15java.time.LocalDateTime"6java.time.LocalDateTime#now()Ljava/time/LocalDateTime;*"
+java.time.LocalDateTime¤¡
+–
+‰D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/JournalService.javaö ö(I
+%16void"^ee.hitsa.ois.domain.timetable.JournalEntryStudent#setGradeInserted(Ljava/time/LocalDateTime;)V*J
+H
+journalEntryStudent1ee.hitsa.ois.domain.timetable.JournalEntryStudent* 
+
+%15java.time.LocalDateTime2+setGradeInserted(Ljava/time/LocalDateTime;)ÑÎ
+–
+‰D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/JournalService.java÷7 ÷(I
+%17java.lang.String"Rorg.springframework.security.core.userdetails.User#getUsername()Ljava/lang/String;*7
+5
+user-ee.hitsa.ois.service.security.HoisUserDetails2getUsername()“
+–
+‰D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/JournalService.java÷ ÷(J
+%18void"Yee.hitsa.ois.domain.timetable.JournalEntryStudent#setGradeInsertedBy(Ljava/lang/String;)V*J
+H
+journalEntryStudent1ee.hitsa.ois.domain.timetable.JournalEntryStudent*
+
+%17java.lang.String2&setGradeInsertedBy(Ljava/lang/String;)*
+0*à
+3–
+‰D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/JournalService.javað ð('ú
+÷
+–
+‰D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/JournalService.javað1 ð(3%
+%3javax.persistence.EntityManager"__id*/*-%
+#ee.hitsa.ois.service.JournalService"
+em˜•
+–
+‰D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/JournalService.javañ ñ(>#
+%4ee.hitsa.ois.web.dto.GradeDto"jee.hitsa.ois.web.commandobject.timetable.JournalEntryStudentForm#getGrade()Lee/hitsa/ois/web/dto/GradeDto;*]
+[
+journalEntryStudentForm@ee.hitsa.ois.web.commandobject.timetable.JournalEntryStudentForm2
+getGrade()¡ž
+–
+‰D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/JournalService.javañ ñ(H
+%5java.lang.String"9ee.hitsa.ois.web.dto.GradeDto#getCode()Ljava/lang/String;*%
+#
+%4ee.hitsa.ois.web.dto.GradeDto2	getCode()¥¢
+–
+‰D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/JournalService.javað1 ñ(I$
+%6ee.hitsa.ois.domain.Classifier"cjavax.persistence.EntityManager#getReference(Ljava/lang/Class;Ljava/lang/Object;)Ljava/lang/Object;*'
+%
+%3javax.persistence.EntityManager*
+""*
+
+%5java.lang.String21getReference(Ljava/lang/Class;Ljava/lang/Object;)§¤
+–
+‰D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/JournalService.javað ñ(J
+
+%7void"]ee.hitsa.ois.domain.timetable.JournalEntryStudent#setGrade(Lee/hitsa/ois/domain/Classifier;)V*J
+H
+journalEntryStudent1ee.hitsa.ois.domain.timetable.JournalEntryStudent*&
+$
+%6ee.hitsa.ois.domain.Classifier2*setGrade(Lee/hitsa/ois/domain/Classifier;)˜•
+–
+‰D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/JournalService.javaó ó(>#
+%8ee.hitsa.ois.web.dto.GradeDto"jee.hitsa.ois.web.commandobject.timetable.JournalEntryStudentForm#getGrade()Lee/hitsa/ois/web/dto/GradeDto;*]
+[
+journalEntryStudentForm@ee.hitsa.ois.web.commandobject.timetable.JournalEntryStudentForm2
+getGrade()¹¶
+–
+‰D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/JournalService.javaó ó(V
+%9java.lang.Long"Eee.hitsa.ois.web.dto.GradeDto#getGradingSchemaRowId()Ljava/lang/Long;*%
+#
+%8ee.hitsa.ois.web.dto.GradeDto2getGradingSchemaRowId()û
+ø
+–
+‰D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/JournalService.javaóX ó(Z&
+%10javax.persistence.EntityManager"__id*/*-%
+#ee.hitsa.ois.service.JournalService"
+emÛ
+Ø
+–
+‰D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/JournalService.javaò< ó([9
+%112ee.hitsa.ois.domain.gradingschema.GradingSchemaRow"•ee.hitsa.ois.util.EntityUtil#getOptionalOne(Ljava/lang/Class;Ljava/lang/Long;Ljavax/persistence/EntityManager;)Lee/hitsa/ois/domain/BaseEntityWithId;* "
+ee.hitsa.ois.util.EntityUtil*
+""*
+
+%9java.lang.Long*(
+&
+%10javax.persistence.EntityManagerûø
+–
+‰D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/JournalService.javaò ó(\
+%12void"|ee.hitsa.ois.domain.timetable.JournalEntryStudent#setGradingSchemaRow(Lee/hitsa/ois/domain/gradingschema/GradingSchemaRow;)V*J
+H
+journalEntryStudent1ee.hitsa.ois.domain.timetable.JournalEntryStudent*;
+9
+%112ee.hitsa.ois.domain.gradingschema.GradingSchemaRow2IsetGradingSchemaRow(Lee/hitsa/ois/domain/gradingschema/GradingSchemaRow;)*
+2*¿
+4–
+‰D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/JournalService.javaï ï(+˜•
+–
+‰D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/JournalService.javaï ï(6#
+%2ee.hitsa.ois.web.dto.GradeDto"jee.hitsa.ois.web.commandobject.timetable.JournalEntryStudentForm#getGrade()Lee/hitsa/ois/web/dto/GradeDto;*]
+[
+journalEntryStudentForm@ee.hitsa.ois.web.commandobject.timetable.JournalEntryStudentForm2
+getGrade()*
+2
+3*ä
+5–
+‰D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/JournalService.javaî î(/½
+º
+–
+‰D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/JournalService.javaî î(]
+%1boolean"»ee.hitsa.ois.service.JournalService#journalStudentEntryGradeChanged(Lee/hitsa/ois/domain/timetable/JournalEntryStudent;Lee/hitsa/ois/web/commandobject/timetable/JournalEntryStudentForm;)Z*'%
+#ee.hitsa.ois.service.JournalService*J
+H
+journalEntryStudent1ee.hitsa.ois.domain.timetable.JournalEntryStudent*]
+[
+journalEntryStudentForm@ee.hitsa.ois.web.commandobject.timetable.JournalEntryStudentForm*
+4
+0*ç
+6–
+‰D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/JournalService.javaí í(.À
+½
+–
+‰D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/JournalService.javaí í(G
+%0boolean"Šee.hitsa.ois.service.JournalService#journalStudentEntryFormGradeEmpty(Lee/hitsa/ois/web/commandobject/timetable/JournalEntryStudentForm;)Z*'%
+#ee.hitsa.ois.service.JournalService*]
+[
+journalEntryStudentForm@ee.hitsa.ois.web.commandobject.timetable.JournalEntryStudentForm*
+5
+1*¶
+0 "®
+–
+‰D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/JournalService.java€ €(
+implicit return*€
+1–
+‰D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/JournalService.javaú ú(ˆ…
+–
+‰D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/JournalService.javaú ú(.
+%19void"]ee.hitsa.ois.domain.timetable.JournalEntryStudent#setGrade(Lee/hitsa/ois/domain/Classifier;)V*J
+H
+journalEntryStudent1ee.hitsa.ois.domain.timetable.JournalEntryStudent*
+""2*setGrade(Lee/hitsa/ois/domain/Classifier;)ÆÃ
+–
+‰D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/JournalService.javaû û(9
+%20void"|ee.hitsa.ois.domain.timetable.JournalEntryStudent#setGradingSchemaRow(Lee/hitsa/ois/domain/gradingschema/GradingSchemaRow;)V*J
+H
+journalEntryStudent1ee.hitsa.ois.domain.timetable.JournalEntryStudent*
+""2IsetGradingSchemaRow(Lee/hitsa/ois/domain/gradingschema/GradingSchemaRow;)øõ
+–
+‰D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/JournalService.javaü ü(4
+%21void"Uee.hitsa.ois.domain.timetable.JournalEntryStudent#setVerbalGrade(Ljava/lang/String;)V*J
+H
+journalEntryStudent1ee.hitsa.ois.domain.timetable.JournalEntryStudent*
+""2"setVerbalGrade(Ljava/lang/String;)Š‡
+–
+‰D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/JournalService.javaý ý(6
+%22void"^ee.hitsa.ois.domain.timetable.JournalEntryStudent#setGradeInserted(Ljava/time/LocalDateTime;)V*J
+H
+journalEntryStudent1ee.hitsa.ois.domain.timetable.JournalEntryStudent*
+""2+setGradeInserted(Ljava/time/LocalDateTime;)€ý
+–
+‰D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/JournalService.javaþ þ(8
+%23void"Yee.hitsa.ois.domain.timetable.JournalEntryStudent#setGradeInsertedBy(Ljava/lang/String;)V*J
+H
+journalEntryStudent1ee.hitsa.ois.domain.timetable.JournalEntryStudent*
+""2&setGradeInsertedBy(Ljava/lang/String;)*
+0:5
+user-ee.hitsa.ois.service.security.HoisUserDetails:H
+journalEntryStudent1ee.hitsa.ois.domain.timetable.JournalEntryStudent:[
+journalEntryStudentForm@ee.hitsa.ois.web.commandobject.timetable.JournalEntryStudentFormB'%
+#ee.hitsa.ois.service.JournalService

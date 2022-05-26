@@ -1,0 +1,88 @@
+
+Nee.hitsa.ois.services.JuhanService#juhanEvents(Ljava/util/Set;)Ljava/util/Map;•
+ˆD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/services/JuhanService.java»& »(1"3*÷
+2•
+ˆD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/services/JuhanService.java½ ½("ÇÄ
+•
+ˆD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/services/JuhanService.java½ ½( 
+%1java.util.HashMap"java.util.HashMapÙ
+Ö
+•
+ˆD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/services/JuhanService.java½ ½("
+%2"java.util.HashMap#<init>()V*
+
+%1java.util.HashMap"³
+•
+ˆD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/services/JuhanService.java½ ½(#
+
+%1java.util.HashMap*—
+3•
+ˆD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/services/JuhanService.java¼ ¼(ñî
+•
+ˆD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/services/JuhanService.java¼ ¼(#
+%0boolean"java.util.Set#isEmpty()Z* 
+
+juhanEventIdsjava.util.Set2	isEmpty()*
+2
+1*Ã
+1•
+ˆD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/services/JuhanService.java¿& ¿((ø
+õ
+•
+ˆD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/services/JuhanService.java¿& ¿((%
+%3javax.persistence.EntityManager"__id*.*,$
+"ee.hitsa.ois.services.JuhanService"
+em…
+‚
+•
+ˆD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/services/JuhanService.java¿5 À(-
+%4java.lang.String"__concat*%#
+!select te from TimetableEvent te *
+where te.juhanEventId in ?1¬©
+•
+ˆD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/services/JuhanService.java¿& À(D"
+%5javax.persistence.TypedQuery"njavax.persistence.EntityManager#createQuery(Ljava/lang/String;Ljava/lang/Class;)Ljavax/persistence/TypedQuery;*'
+%
+%3javax.persistence.EntityManager*
+
+%4java.lang.String*
+""20createQuery(Ljava/lang/String;Ljava/lang/Class;)Ž‹
+•
+ˆD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/services/JuhanService.java¿& Á(/"
+%6javax.persistence.TypedQuery"\javax.persistence.TypedQuery#setParameter(ILjava/lang/Object;)Ljavax/persistence/TypedQuery;*$
+"
+%5javax.persistence.TypedQuery*2* 
+
+juhanEventIdsjava.util.Set2!setParameter(ILjava/lang/Object;)¦£
+•
+ˆD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/services/JuhanService.java¿& Â( 
+%7java.util.List"<javax.persistence.TypedQuery#getResultList()Ljava/util/List;*$
+"
+%6javax.persistence.TypedQuery2getResultList()Ó
+Ð
+•
+ˆD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/services/JuhanService.java¿ Â(!
+eventsjava.util.List"__id*
+
+%7java.util.List
+Š
+•
+ˆD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/services/JuhanService.javaÃA Ã(G!
+%8java.util.function.Function"__declareFunction*:8
+6__sonar_lambda_1940$ee.hitsa.ois.services.JuhanService¡
+ž
+•
+ˆD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/services/JuhanService.javaÃ Ã(P
+%9java.util.Map"ƒee.hitsa.ois.util.StreamUtil#toMap(Ljava/util/function/Function;Ljava/util/function/Function;Ljava/util/Collection;)Ljava/util/Map;* "
+ee.hitsa.ois.util.StreamUtil*
+""*#
+!
+%8java.util.function.Function*
+
+eventsjava.util.List"¯
+•
+ˆD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/services/JuhanService.javaÃ Ã(Q
+
+%9java.util.Map:
+juhanEventIdsjava.util.SetB&$
+"ee.hitsa.ois.services.JuhanService

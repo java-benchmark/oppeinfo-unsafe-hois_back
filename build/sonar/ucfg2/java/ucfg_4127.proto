@@ -1,0 +1,95 @@
+
+}ee.hitsa.ois.service.ReportService#declarationConfirmation(Lee/hitsa/ois/service/security/HoisUserDetails;)Ljava/lang/String;•
+ˆD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/ReportService.javaö ö(*"1*ú
+1•
+ˆD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/ReportService.java÷" ÷(2Œ
+‰
+•
+ˆD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/ReportService.java÷" ÷(2+
+%0%ee.hitsa.ois.service.StudyYearService"__id*<*:$
+"ee.hitsa.ois.service.ReportService"
+studyYearServiceÆÃ
+•
+ˆD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/ReportService.java÷I ÷([
+%1java.lang.Long"Kee.hitsa.ois.service.security.HoisUserDetails#getSchoolId()Ljava/lang/Long;*7
+5
+user-ee.hitsa.ois.service.security.HoisUserDetails2getSchoolId()€ý
+•
+ˆD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/ReportService.java÷" ÷(\
+%2java.lang.Long"]ee.hitsa.ois.service.StudyYearService#getCurrentStudyPeriod(Ljava/lang/Long;)Ljava/lang/Long;*-
++
+%0%ee.hitsa.ois.service.StudyYearService*
+
+%1java.lang.Long2'getCurrentStudyPeriod(Ljava/lang/Long;)ß
+Ü
+•
+ˆD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/ReportService.java÷ ÷(]$
+currentStudyPeriodjava.lang.Long"__id*
+
+%2java.lang.Long†
+ƒ
+•
+ˆD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/ReportService.javaø ù('
+%3java.lang.String"__concat*.,
+*join (select d.confirm_date, d.student_id *
+from declaration d ÷
+ô
+•
+ˆD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/ReportService.javaø ú(.
+%4java.lang.String"__concat*
+
+%3java.lang.String*
+where d.study_period_id = ÿ
+ü
+•
+ˆD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/ReportService.javaø ú(C
+%5java.lang.String"__concat*
+
+%4java.lang.String*&
+$
+currentStudyPeriodjava.lang.LongÞ
+Û
+•
+ˆD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/ReportService.javaø ú(I
+%6java.lang.String"__concat*
+
+%5java.lang.String*
+ ò
+ï
+•
+ˆD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/ReportService.javaø û()
+%7java.lang.String"__concat*
+
+%6java.lang.String*
+and d.status_code = 'Õ
+Ò
+•
+ˆD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/ReportService.javaû, û(R*
+%8$ee.hitsa.ois.enums.DeclarationStatus"__id*
+""’
+•
+ˆD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/ReportService.javaû, û(Y
+%9java.lang.String"'java.lang.Enum#name()Ljava/lang/String;*,
+*
+%8$ee.hitsa.ois.enums.DeclarationStatus2name()ò
+ï
+•
+ˆD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/ReportService.javaø û(Y
+%10java.lang.String"__concat*
+
+%7java.lang.String*
+
+%9java.lang.String«
+¨
+–
+ˆD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/ReportService.javaø û(©
+%11java.lang.String"__concat*
+
+%10java.lang.String*OM
+K') as declarationConfirmation on declarationConfirmation.student_id = s.id "´
+–
+ˆD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/ReportService.javaø û(ª
+
+%11java.lang.String:5
+user-ee.hitsa.ois.service.security.HoisUserDetailsB&$
+"ee.hitsa.ois.service.ReportService

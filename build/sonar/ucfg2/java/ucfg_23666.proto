@@ -1,0 +1,118 @@
+
+øee.hitsa.ois.service.UserTeacherRolesService#usersByOccupation(Lee/hitsa/ois/domain/teacher/TeacherOccupation;Lorg/springframework/data/domain/Pageable;)Lorg/springframework/data/domain/Page;ü
+íD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/UserTeacherRolesService.java›$ ›(5"1*ƒ.
+1ü
+íD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/UserTeacherRolesService.javaﬁ= ﬁ(\§
+°
+ü
+íD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/UserTeacherRolesService.javaﬁ= ﬂ(H
+%0java.lang.String"__concat*!
+from teacher_occupation tocc *86
+4join teacher t on t.teacher_occupation_id = tocc.id ã
+à
+ü
+íD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/UserTeacherRolesService.javaﬁ= ‡(8
+%1java.lang.String"__concat*
+
+%0java.lang.String*(&
+$join user_ u on u.teacher_id = t.id ã
+à
+ü
+íD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/UserTeacherRolesService.javaﬁ= ·(8
+%2java.lang.String"__concat*
+
+%1java.lang.String*(&
+$join person p on p.id = u.person_id ˝˙
+ü
+íD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/UserTeacherRolesService.javaﬁ' ﬁ(<-
+%3'ee.hitsa.ois.util.JpaNativeQueryBuilder"'ee.hitsa.ois.util.JpaNativeQueryBuilderª
+∏
+ü
+íD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/UserTeacherRolesService.javaﬁ# ·(9
+%4"Cee.hitsa.ois.util.JpaNativeQueryBuilder#<init>(Ljava/lang/String;)V*/
+-
+%3'ee.hitsa.ois.util.JpaNativeQueryBuilder*
+
+%2java.lang.StringÛ
+ü
+íD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/UserTeacherRolesService.javaﬁ# ·(H-
+%5'ee.hitsa.ois.util.JpaNativeQueryBuilder"Åee.hitsa.ois.util.JpaNativeQueryBuilder#sort(Lorg/springframework/data/domain/Pageable;)Lee/hitsa/ois/util/JpaNativeQueryBuilder;*/
+-
+%3'ee.hitsa.ois.util.JpaNativeQueryBuilder*6
+4
+pageable(org.springframework.data.domain.Pageable20sort(Lorg/springframework/data/domain/Pageable;)ã
+à
+ü
+íD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/UserTeacherRolesService.javaﬁ ·(I-
+qb'ee.hitsa.ois.util.JpaNativeQueryBuilder"__id*/
+-
+%5'ee.hitsa.ois.util.JpaNativeQueryBuilder¡æ
+ü
+íD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/UserTeacherRolesService.java‚3 ‚(E
+%6java.lang.Long"<ee.hitsa.ois.domain.BaseEntityWithId#getId()Ljava/lang/Long;*=
+;
+
+occupation-ee.hitsa.ois.domain.teacher.TeacherOccupation2getId()ŒÀ
+ü
+íD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/UserTeacherRolesService.java‚ ‚(F
+
+%7void"oee.hitsa.ois.util.JpaNativeQueryBuilder#requiredCriteria(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Long;)V*/
+-
+qb'ee.hitsa.ois.util.JpaNativeQueryBuilder*
+tocc.id = :id*
+id*
+
+%6java.lang.Long2FrequiredCriteria(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Long;)ã
+à
+°
+íD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/UserTeacherRolesService.java„ä „(ô
+%8java.time.LocalDate".java.time.LocalDate#now()Ljava/time/LocalDate;*"
+java.time.LocalDateµ≤
+†
+íD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/UserTeacherRolesService.java„ „(ö
+
+%9void"tee.hitsa.ois.util.JpaNativeQueryBuilder#requiredCriteria(Ljava/lang/String;Ljava/lang/String;Ljava/time/LocalDate;)V*/
+-
+qb'ee.hitsa.ois.util.JpaNativeQueryBuilder*ge
+c((u.valid_from is null or u.valid_from <= :now) and (u.valid_thru is null or u.valid_thru >= :now))*
+now*
+
+%8java.time.LocalDate2KrequiredCriteria(Ljava/lang/String;Ljava/lang/String;Ljava/time/LocalDate;)ç
+ä
+ü
+íD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/UserTeacherRolesService.java‰W ‰(Y&
+%10javax.persistence.EntityManager"__id*8*6.
+,ee.hitsa.ois.service.UserTeacherRolesService"
+emë
+é
+ü
+íD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/UserTeacherRolesService.java‰ ‰(d+
+%11$org.springframework.data.domain.Page"Ÿee.hitsa.ois.util.JpaQueryUtil#pagingResult(Lee/hitsa/ois/util/JpaNativeQueryBuilder;Ljava/lang/String;Ljavax/persistence/EntityManager;Lorg/springframework/data/domain/Pageable;)Lorg/springframework/data/domain/Page;*"" 
+ee.hitsa.ois.util.JpaQueryUtil*/
+-
+qb'ee.hitsa.ois.util.JpaNativeQueryBuilder**(
+&u.id, p.firstname || ' ' || p.lastname*(
+&
+%10javax.persistence.EntityManager*6
+4
+pageable(org.springframework.data.domain.Pageableª
+∏
+ü
+íD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/UserTeacherRolesService.javaÂ Â(p;
+%124org.springframework.core.convert.converter.Converter"__declareFunction*DB
+@__sonar_lambda_2471$ee.hitsa.ois.service.UserTeacherRolesServiceÜÉ
+ü
+íD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/UserTeacherRolesService.java‰ Â(q+
+%18$org.springframework.data.domain.Page"Üorg.springframework.data.domain.Page#map(Lorg/springframework/core/convert/converter/Converter;)Lorg/springframework/data/domain/Page;*-
++
+%11$org.springframework.data.domain.Page*=
+;
+%124org.springframework.core.convert.converter.Converter2;map(Lorg/springframework/core/convert/converter/Converter;)"—
+ü
+íD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/UserTeacherRolesService.java‰ Â(r-
++
+%18$org.springframework.data.domain.Page:;
+
+occupation-ee.hitsa.ois.domain.teacher.TeacherOccupation:4
+pageable(org.springframework.data.domain.PageableB0.
+,ee.hitsa.ois.service.UserTeacherRolesService

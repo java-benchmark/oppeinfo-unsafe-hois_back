@@ -1,0 +1,126 @@
+
+àee.hitsa.ois.service.ApelApplicationService#hasMultipleNominalDurationExtensions(Lee/hitsa/ois/domain/apelapplication/ApelApplication;)Zû
+ëD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/ApelApplicationService.java•	 •	(8"1*Ÿ3
+1û
+ëD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/ApelApplicationService.java¶	 ¶	(ä
+á
+û
+ëD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/ApelApplicationService.java¶	 ¶	(%
+%0javax.persistence.EntityManager"__id*7*5-
++ee.hitsa.ois.service.ApelApplicationService"
+emŸ
+÷
+û
+ëD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/ApelApplicationService.java¶	, ß	(v
+%1java.lang.String"__concat*)'
+%select aa.id from apel_application aa*fd
+b where aa.student_id = :studentId and aa.id != :applicationId and aa.nominal_type_code is not null∏
+µ
+û
+ëD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/ApelApplicationService.java¶	, ®	(f
+%2java.lang.String"__concat*
+
+%1java.lang.String*VT
+R and aa.nominal_type_code != :nominalType and aa.status_code != :applicationStatusçä
+û
+ëD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/ApelApplicationService.java¶	 ®	(g
+%3javax.persistence.Query"^javax.persistence.EntityManager#createNativeQuery(Ljava/lang/String;)Ljavax/persistence/Query;*'
+%
+%0javax.persistence.EntityManager*
+
+%2java.lang.String2%createNativeQuery(Ljava/lang/String;)éã
+û
+ëD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/ApelApplicationService.java©	< ©	(X)
+%4#ee.hitsa.ois.domain.student.Student"eee.hitsa.ois.domain.apelapplication.ApelApplication#getStudent()Lee/hitsa/ois/domain/student/Student;*H
+F
+apelApplication3ee.hitsa.ois.domain.apelapplication.ApelApplication2getStudent()Â
+‚
+û
+ëD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/ApelApplicationService.java©	+ ©	(Y
+%5java.lang.Long"Zee.hitsa.ois.util.EntityUtil#getId(Lee/hitsa/ois/domain/BaseEntityWithId;)Ljava/lang/Long;* "
+ee.hitsa.ois.util.EntityUtil*+
+)
+%4#ee.hitsa.ois.domain.student.Student§°
+û
+ëD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/ApelApplicationService.java¶	 ©	(Z
+%6javax.persistence.Query"cjavax.persistence.Query#setParameter(Ljava/lang/String;Ljava/lang/Object;)Ljavax/persistence/Query;*
+
+%3javax.persistence.Query*
+	studentId*
+
+%5java.lang.Long22setParameter(Ljava/lang/String;Ljava/lang/Object;)À»
+û
+ëD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/ApelApplicationService.java™	/ ™	(F
+%7java.lang.Long"<ee.hitsa.ois.domain.BaseEntityWithId#getId()Ljava/lang/Long;*H
+F
+apelApplication3ee.hitsa.ois.domain.apelapplication.ApelApplication2getId()®•
+û
+ëD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/ApelApplicationService.java¶	 ™	(G
+%8javax.persistence.Query"cjavax.persistence.Query#setParameter(Ljava/lang/String;Ljava/lang/Object;)Ljavax/persistence/Query;*
+
+%6javax.persistence.Query*
+applicationId*
+
+%7java.lang.Long22setParameter(Ljava/lang/String;Ljava/lang/Object;)Â
+‚
+û
+ëD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/ApelApplicationService.java´	- ´	(R1
+%9+ee.hitsa.ois.enums.NominalDurationExtension"__id*
+""£†
+û
+ëD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/ApelApplicationService.java´	- ´	(Y
+%10java.lang.String"'java.lang.Enum#name()Ljava/lang/String;*3
+1
+%9+ee.hitsa.ois.enums.NominalDurationExtension2name()™ß
+û
+ëD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/ApelApplicationService.java¶	 ´	(Z
+%11javax.persistence.Query"cjavax.persistence.Query#setParameter(Ljava/lang/String;Ljava/lang/Object;)Ljavax/persistence/Query;*
+
+%8javax.persistence.Query*
+nominalType*
+
+%10java.lang.String22setParameter(Ljava/lang/String;Ljava/lang/Object;)„
+‡
+û
+ëD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/ApelApplicationService.java¨	3 ¨	(W/
+%12(ee.hitsa.ois.enums.ApelApplicationStatus"__id*
+""°û
+û
+ëD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/ApelApplicationService.java¨	3 ¨	(^
+%13java.lang.String"'java.lang.Enum#name()Ljava/lang/String;*1
+/
+%12(ee.hitsa.ois.enums.ApelApplicationStatus2name()±Æ
+û
+ëD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/ApelApplicationService.java¶	 ¨	(_
+%14javax.persistence.Query"cjavax.persistence.Query#setParameter(Ljava/lang/String;Ljava/lang/Object;)Ljavax/persistence/Query;* 
+
+%11javax.persistence.Query*
+applicationStatus*
+
+%13java.lang.String22setParameter(Ljava/lang/String;Ljava/lang/Object;)¡æ
+û
+ëD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/ApelApplicationService.java¶	 ≠	(!
+%15javax.persistence.Query"Ajavax.persistence.Query#setMaxResults(I)Ljavax/persistence/Query;* 
+
+%14javax.persistence.Query*22setMaxResults(I)ß§
+û
+ëD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/ApelApplicationService.java¶	 ≠	(1
+%16java.util.List"7javax.persistence.Query#getResultList()Ljava/util/List;* 
+
+%15javax.persistence.Query2getResultList()€
+ÿ
+û
+ëD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/ApelApplicationService.java¶	 ≠	(2
+datajava.util.List"__id*
+
+%16java.util.ListÙÒ
+û
+ëD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/ApelApplicationService.javaÆ	 Æ	(
+%17boolean"java.util.List#isEmpty()Z*
+
+datajava.util.List2	isEmpty()"©
+û
+ëD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/ApelApplicationService.javaÆ	 Æ	(
+"":F
+apelApplication3ee.hitsa.ois.domain.apelapplication.ApelApplicationB/-
++ee.hitsa.ois.service.ApelApplicationService

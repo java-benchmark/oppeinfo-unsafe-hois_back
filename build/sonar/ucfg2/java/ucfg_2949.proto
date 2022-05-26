@@ -1,0 +1,73 @@
+
+nee.hitsa.ois.service.StudentGroupTeacherReportService#studentWeightedAverages(Ljava/util/List;)Ljava/util/Map;®
+õD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/StudentGroupTeacherReportService.java‹" ‹(9"1*ê
+1®
+õD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/StudentGroupTeacherReportService.java› ›(û
+õ
+®
+õD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/StudentGroupTeacherReportService.java› ›(%
+%0javax.persistence.EntityManager"__id*A*?7
+5ee.hitsa.ois.service.StudentGroupTeacherReportService"
+em–
+Õ
+®
+õD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/StudentGroupTeacherReportService.javaﬁ# ﬂ(B
+%1java.lang.String"__concat*RP
+Nselect scc.student_id, scc.average_mark from student_curriculum_completion scc**(
+& where scc.student_id in (:studentIds)óî
+®
+õD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/StudentGroupTeacherReportService.java› ﬂ(C
+%2javax.persistence.Query"^javax.persistence.EntityManager#createNativeQuery(Ljava/lang/String;)Ljavax/persistence/Query;*'
+%
+%0javax.persistence.EntityManager*
+
+%1java.lang.String2%createNativeQuery(Ljava/lang/String;)∑¥
+®
+õD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/StudentGroupTeacherReportService.java› ‡(7
+%3javax.persistence.Query"cjavax.persistence.Query#setParameter(Ljava/lang/String;Ljava/lang/Object;)Ljavax/persistence/Query;*
+
+%2javax.persistence.Query*
+
+studentIds*
+
+
+studentIdsjava.util.List22setParameter(Ljava/lang/String;Ljava/lang/Object;)Ø¨
+®
+õD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/StudentGroupTeacherReportService.java› ‡(G
+%4java.util.List"7javax.persistence.Query#getResultList()Ljava/util/List;*
+
+%3javax.persistence.Query2getResultList()‰
+·
+®
+õD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/StudentGroupTeacherReportService.java› ‡(H
+datajava.util.List"__id*
+
+%4java.util.List≤
+Ø
+®
+õD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/StudentGroupTeacherReportService.java·  ·(7!
+%5java.util.function.Function"__declareFunction*LJ
+H__sonar_lambda_358$ee.hitsa.ois.service.StudentGroupTeacherReportService≤
+Ø
+®
+õD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/StudentGroupTeacherReportService.java·9 ·(S!
+%7java.util.function.Function"__declareFunction*LJ
+H__sonar_lambda_359$ee.hitsa.ois.service.StudentGroupTeacherReportServiceœ
+Ã
+®
+õD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/StudentGroupTeacherReportService.java· ·(Z
+%9java.util.Map"Éee.hitsa.ois.util.StreamUtil#toMap(Ljava/util/function/Function;Ljava/util/function/Function;Ljava/util/Collection;)Ljava/util/Map;* "
+ee.hitsa.ois.util.StreamUtil*#
+!
+%5java.util.function.Function*#
+!
+%7java.util.function.Function*
+
+datajava.util.List"¬
+®
+õD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/StudentGroupTeacherReportService.java· ·([
+
+%9java.util.Map:
+
+studentIdsjava.util.ListB97
+5ee.hitsa.ois.service.StudentGroupTeacherReportService

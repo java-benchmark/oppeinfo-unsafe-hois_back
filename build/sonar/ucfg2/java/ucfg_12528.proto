@@ -1,0 +1,200 @@
+
+kee.hitsa.ois.service.poll.PollService#setPollTargetCountOverallSupervisor(Lee/hitsa/ois/domain/poll/Poll;)Vò
+ãD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/poll/PollService.javaƒ ƒ(4"2*≠?
+2ò
+ãD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/poll/PollService.java≈ ≈(6‚
+ﬂ
+ò
+ãD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/poll/PollService.java≈ ≈(7!
+SEARCH_SELECTjava.lang.String"__id*
+count(distinct cs.id)é
+ã
+ò
+ãD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/poll/PollService.java∆ «(=
+%0java.lang.String"__concat*
+from practice_journal pj *-+
+)join contract c on pj.contract_id = c.id î
+ë
+ò
+ãD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/poll/PollService.java∆ »(H
+%1java.lang.String"__concat*
+
+%0java.lang.String*86
+4join contract_supervisor cs on cs.contract_id = c.idﬂ
+‹
+ò
+ãD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/poll/PollService.java∆ »(I
+SEARCH_FROMjava.lang.String"__id*
+
+%1java.lang.StringˆÛ
+ò
+ãD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/poll/PollService.java…' …(<-
+%2'ee.hitsa.ois.util.JpaNativeQueryBuilder"'ee.hitsa.ois.util.JpaNativeQueryBuilderΩ
+∫
+ò
+ãD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/poll/PollService.java…# …(I
+%3"Cee.hitsa.ois.util.JpaNativeQueryBuilder#<init>(Ljava/lang/String;)V*/
+-
+%2'ee.hitsa.ois.util.JpaNativeQueryBuilder*!
+
+SEARCH_FROMjava.lang.StringÑ
+Å
+ò
+ãD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/poll/PollService.java… …(J-
+qb'ee.hitsa.ois.util.JpaNativeQueryBuilder"__id*/
+-
+%2'ee.hitsa.ois.util.JpaNativeQueryBuilderπ∂
+ò
+ãD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/poll/PollService.java F  ([
+%4java.time.LocalDate"Cee.hitsa.ois.domain.poll.Poll#getJournalFrom()Ljava/time/LocalDate;*'
+%
+pollee.hitsa.ois.domain.poll.Poll2getJournalFrom()ÈÊ
+ò
+ãD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/poll/PollService.java   (\
+
+%5void"tee.hitsa.ois.util.JpaNativeQueryBuilder#requiredCriteria(Ljava/lang/String;Ljava/lang/String;Ljava/time/LocalDate;)V*/
+-
+qb'ee.hitsa.ois.util.JpaNativeQueryBuilder*
+pj.end_date >= :startDate*
+	startDate*
+
+%4java.time.LocalDate2KrequiredCriteria(Ljava/lang/String;Ljava/lang/String;Ljava/time/LocalDate;)π∂
+ò
+ãD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/poll/PollService.javaÀB À(W
+%6java.time.LocalDate"Cee.hitsa.ois.domain.poll.Poll#getJournalThru()Ljava/time/LocalDate;*'
+%
+pollee.hitsa.ois.domain.poll.Poll2getJournalThru()Â‚
+ò
+ãD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/poll/PollService.javaÀ À(X
+
+%7void"tee.hitsa.ois.util.JpaNativeQueryBuilder#requiredCriteria(Ljava/lang/String;Ljava/lang/String;Ljava/time/LocalDate;)V*/
+-
+qb'ee.hitsa.ois.util.JpaNativeQueryBuilder*
+pj.end_date <= :endDate*	
+endDate*
+
+%6java.time.LocalDate2KrequiredCriteria(Ljava/lang/String;Ljava/lang/String;Ljava/time/LocalDate;)À»
+ò
+ãD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/poll/PollService.javaÃU Ã(e'
+%8!ee.hitsa.ois.domain.school.School"Lee.hitsa.ois.domain.poll.Poll#getSchool()Lee/hitsa/ois/domain/school/School;*'
+%
+pollee.hitsa.ois.domain.poll.Poll2getSchool()›
+⁄
+ò
+ãD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/poll/PollService.javaÃD Ã(f
+%9java.lang.Long"Zee.hitsa.ois.util.EntityUtil#getId(Lee/hitsa/ois/domain/BaseEntityWithId;)Ljava/lang/Long;* "
+ee.hitsa.ois.util.EntityUtil*)
+'
+%8!ee.hitsa.ois.domain.school.SchoolŸ÷
+ò
+ãD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/poll/PollService.javaÃ Ã(g
+%10void"oee.hitsa.ois.util.JpaNativeQueryBuilder#requiredCriteria(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Long;)V*/
+-
+qb'ee.hitsa.ois.util.JpaNativeQueryBuilder*
+pj.school_id = :schoolId*
+
+schoolId*
+
+%9java.lang.Long2FrequiredCriteria(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Long;)ˇ
+¸
+ò
+ãD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/poll/PollService.javaÕ0 Õ(2&
+%11javax.persistence.EntityManager"__id*1*/'
+%ee.hitsa.ois.service.poll.PollService"
+em˘ˆ
+ò
+ãD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/poll/PollService.javaÕ Õ(3
+%12javax.persistence.Query"|ee.hitsa.ois.util.JpaNativeQueryBuilder#select(Ljava/lang/String;Ljavax/persistence/EntityManager;)Ljavax/persistence/Query;*/
+-
+qb'ee.hitsa.ois.util.JpaNativeQueryBuilder*#
+!
+SEARCH_SELECTjava.lang.String*(
+&
+%11javax.persistence.EntityManager2;select(Ljava/lang/String;Ljavax/persistence/EntityManager;)©¶
+ò
+ãD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/poll/PollService.javaÕ Õ(E
+%13java.lang.Object";javax.persistence.Query#getSingleResult()Ljava/lang/Object;* 
+
+%12javax.persistence.Query2getSingleResult()⁄
+◊
+ò
+ãD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/poll/PollService.javaÕ Õ(F
+countjava.lang.Object"__id*
+
+%13java.lang.Object∞≠
+ò
+ãD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/poll/PollService.javaŒ& Œ(;
+%14java.util.List">ee.hitsa.ois.domain.poll.Poll#getPollTargets()Ljava/util/List;*'
+%
+pollee.hitsa.ois.domain.poll.Poll2getPollTargets()ôñ
+ò
+ãD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/poll/PollService.javaŒ& Œ(D
+%15java.util.stream.Stream"6java.util.Collection#stream()Ljava/util/stream/Stream;*
+
+%14java.util.List2stream()ñ
+ì
+ô
+ãD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/poll/PollService.javaŒL Œ(í#
+%16java.util.function.Predicate"__declareFunction*=;
+9__sonar_lambda_1532$ee.hitsa.ois.service.poll.PollServiceâÜ
+ô
+ãD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/poll/PollService.javaŒ& Œ(ì
+%20java.util.stream.Stream"Wjava.util.stream.Stream#filter(Ljava/util/function/Predicate;)Ljava/util/stream/Stream;* 
+
+%15java.util.stream.Stream*%
+#
+%16java.util.function.Predicate2&filter(Ljava/util/function/Predicate;)¢ü
+ô
+ãD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/poll/PollService.javaŒ& Œ(ü
+%21java.util.Optional"7java.util.stream.Stream#findFirst()Ljava/util/Optional;* 
+
+%20java.util.stream.Stream2findFirst()‡
+›
+ô
+ãD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/poll/PollService.javaŒ Œ(†
+targetjava.util.Optional"__id*
+
+%21java.util.Optional¸˘
+ò
+ãD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/poll/PollService.javaœ œ(
+%22boolean"java.util.Optional#isPresent()Z*
+
+targetjava.util.Optional2isPresent()*
+0
+1*∏
+0 "∞
+ò
+ãD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/poll/PollService.java” ”(
+implicit return*ë
+1ò
+ãD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/poll/PollService.java–$ –(*ùö
+ò
+ãD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/poll/PollService.java–$ –(0*
+%23#ee.hitsa.ois.domain.poll.PollTarget"*java.util.Optional#get()Ljava/lang/Object;*
+
+targetjava.util.Optional2get()Ö
+Ç
+ò
+ãD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/poll/PollService.java– –(11
+
+pollTarget#ee.hitsa.ois.domain.poll.PollTarget"__id*,
+*
+%23#ee.hitsa.ois.domain.poll.PollTarget’
+“
+ò
+ãD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/poll/PollService.java—& —(L
+%24java.lang.Integer"Vee.hitsa.ois.util.JpaQueryUtil#resultAsInteger(Ljava/lang/Object;I)Ljava/lang/Integer;*"" 
+ee.hitsa.ois.util.JpaQueryUtil*
+
+countjava.lang.Object*2 ÎË
+ò
+ãD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/poll/PollService.java— —(M
+%25void"Hee.hitsa.ois.domain.poll.PollTarget#setTargetCount(Ljava/lang/Integer;)V*3
+1
+
+pollTarget#ee.hitsa.ois.domain.poll.PollTarget*
+
+%24java.lang.Integer2#setTargetCount(Ljava/lang/Integer;)*
+0:%
+pollee.hitsa.ois.domain.poll.PollB)'
+%ee.hitsa.ois.service.poll.PollService

@@ -1,0 +1,151 @@
+
+Òee.hitsa.ois.service.PracticeEnterpriseService#getStudentGroups(Lee/hitsa/ois/service/security/HoisUserDetails;Lee/hitsa/ois/domain/enterprise/EnterpriseSchool;Lorg/springframework/data/domain/Pageable;)Lorg/springframework/data/domain/Page;°
+îD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/PracticeEnterpriseService.javaË, Ë(<"1*ÿ8
+1°
+îD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/PracticeEnterpriseService.javaÍ Í(4º
+π
+°
+îD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/PracticeEnterpriseService.javaÍ Î(U
+%0java.lang.String"__concat*
+from enterprise_school es *QO
+Mjoin enterprise_school_isced_class esic on esic.enterprise_school_id = es.id ù
+ö
+°
+îD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/PracticeEnterpriseService.javaÍ Ï(<
+%1java.lang.String"__concat*
+
+%0java.lang.String*86
+4join classifier c on c.code = esic.isced_class_code È
+Ê
+°
+îD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/PracticeEnterpriseService.javaÍ Ï(= 
+searchStringjava.lang.String"__id*
+
+%1java.lang.Stringˇ¸
+°
+îD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/PracticeEnterpriseService.javaÌ! Ì(6-
+%2'ee.hitsa.ois.util.JpaNativeQueryBuilder"'ee.hitsa.ois.util.JpaNativeQueryBuilder«
+ƒ
+°
+îD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/PracticeEnterpriseService.javaÌ Ì(D
+%3"Cee.hitsa.ois.util.JpaNativeQueryBuilder#<init>(Ljava/lang/String;)V*/
+-
+%2'ee.hitsa.ois.util.JpaNativeQueryBuilder*"
+ 
+searchStringjava.lang.StringıÚ
+°
+îD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/PracticeEnterpriseService.javaÌ Ì(S-
+%4'ee.hitsa.ois.util.JpaNativeQueryBuilder"Åee.hitsa.ois.util.JpaNativeQueryBuilder#sort(Lorg/springframework/data/domain/Pageable;)Lee/hitsa/ois/util/JpaNativeQueryBuilder;*/
+-
+%2'ee.hitsa.ois.util.JpaNativeQueryBuilder*6
+4
+pageable(org.springframework.data.domain.Pageable20sort(Lorg/springframework/data/domain/Pageable;)ç
+ä
+°
+îD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/PracticeEnterpriseService.javaÌ Ì(T-
+qb'ee.hitsa.ois.util.JpaNativeQueryBuilder"__id*/
+-
+%4'ee.hitsa.ois.util.JpaNativeQueryBuilderÇ
+ˇ
+°
+îD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/PracticeEnterpriseService.javaÓL Ó(n
+%5java.lang.Long"Zee.hitsa.ois.util.EntityUtil#getId(Lee/hitsa/ois/domain/BaseEntityWithId;)Ljava/lang/Long;* "
+ee.hitsa.ois.util.EntityUtil*E
+C
+enterpriseSchool/ee.hitsa.ois.domain.enterprise.EnterpriseSchoolÓÎ
+°
+îD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/PracticeEnterpriseService.javaÓ Ó(o
+
+%6void"oee.hitsa.ois.util.JpaNativeQueryBuilder#requiredCriteria(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Long;)V*/
+-
+qb'ee.hitsa.ois.util.JpaNativeQueryBuilder*
+es.id = :enterpriseSchoolId*
+enterpriseSchoolId*
+
+%5java.lang.Long2FrequiredCriteria(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Long;)¿
+Ω
+°
+îD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/PracticeEnterpriseService.javaÔ (.
+%7java.lang.String"__concat*IG
+Eesic.id, esic.isced_class_code, esic.places, esic.add_info, c.value, **(
+&exists(select null from curriculum cu ˛
+˚
+°
+îD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/PracticeEnterpriseService.javaÔ Ò(
+%8java.lang.String"__concat*
+
+%7java.lang.String*
+where cu.school_id = “œ
+°
+îD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/PracticeEnterpriseService.javaÒ  Ò(2
+%9java.lang.Long"Kee.hitsa.ois.service.security.HoisUserDetails#getSchoolId()Ljava/lang/Long;*7
+5
+user-ee.hitsa.ois.service.security.HoisUserDetails2getSchoolId()¸
+˘
+°
+îD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/PracticeEnterpriseService.javaÔ Ò(2
+%10java.lang.String"__concat*
+
+%8java.lang.String*
+
+%9java.lang.Longú
+ô
+°
+îD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/PracticeEnterpriseService.javaÔ Ú(9
+%11java.lang.String"__concat*
+
+%10java.lang.String*53
+1 and cu.isced_class_code = esic.isced_class_code ≤
+Ø
+°
+îD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/PracticeEnterpriseService.javaÔ Û(O
+%12java.lang.String"__concat*
+
+%11java.lang.String*KI
+Gand cu.status_code != 'OPPEKAVA_STAATUS_C'), c.valid_from, c.valid_thruÍ
+Á
+°
+îD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/PracticeEnterpriseService.javaÔ Û(P 
+selectStringjava.lang.String"__id*
+
+%12java.lang.Stringë
+é
+°
+îD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/PracticeEnterpriseService.javaÙ; Ù(=&
+%13javax.persistence.EntityManager"__id*:*80
+.ee.hitsa.ois.service.PracticeEnterpriseService"
+emã
+à
+°
+îD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/PracticeEnterpriseService.javaÙ Ù(H+
+%14$org.springframework.data.domain.Page"Ÿee.hitsa.ois.util.JpaQueryUtil#pagingResult(Lee/hitsa/ois/util/JpaNativeQueryBuilder;Ljava/lang/String;Ljavax/persistence/EntityManager;Lorg/springframework/data/domain/Pageable;)Lorg/springframework/data/domain/Page;*"" 
+ee.hitsa.ois.util.JpaQueryUtil*/
+-
+qb'ee.hitsa.ois.util.JpaNativeQueryBuilder*"
+ 
+selectStringjava.lang.String*(
+&
+%13javax.persistence.EntityManager*6
+4
+pageable(org.springframework.data.domain.PageableΩ
+∫
+°
+îD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/PracticeEnterpriseService.javaÙM ˇ(	;
+%154org.springframework.core.convert.converter.Converter"__declareFunction*DB
+@__sonar_lambda_30$ee.hitsa.ois.service.PracticeEnterpriseServiceàÖ
+°
+îD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/PracticeEnterpriseService.javaÙ ˇ(
++
+%34$org.springframework.data.domain.Page"Üorg.springframework.data.domain.Page#map(Lorg/springframework/core/convert/converter/Converter;)Lorg/springframework/data/domain/Page;*-
++
+%14$org.springframework.data.domain.Page*=
+;
+%154org.springframework.core.convert.converter.Converter2;map(Lorg/springframework/core/convert/converter/Converter;)"”
+°
+îD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/PracticeEnterpriseService.javaÙ ˇ(-
++
+%34$org.springframework.data.domain.Page:5
+user-ee.hitsa.ois.service.security.HoisUserDetails:C
+enterpriseSchool/ee.hitsa.ois.domain.enterprise.EnterpriseSchool:4
+pageable(org.springframework.data.domain.PageableB20
+.ee.hitsa.ois.service.PracticeEnterpriseService

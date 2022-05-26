@@ -1,0 +1,87 @@
+
+|ee.hitsa.ois.service.subjectstudyperiod.SubjectStudyPeriodStudentGroupService#getCurricula(Ljava/lang/Long;)Ljava/util/List;À
+³D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/subjectstudyperiod/SubjectStudyPeriodStudentGroupService.java¬% ¬(1"1*÷$
+1À
+³D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/subjectstudyperiod/SubjectStudyPeriodStudentGroupService.java­' ­()Î
+Ë
+À
+³D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/subjectstudyperiod/SubjectStudyPeriodStudentGroupService.java­' ­()%
+%0javax.persistence.EntityManager"__id*Y*WO
+Mee.hitsa.ois.service.subjectstudyperiod.SubjectStudyPeriodStudentGroupService"
+emÑ
+Î
+À
+³D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/subjectstudyperiod/SubjectStudyPeriodStudentGroupService.java® ¯(V
+%1java.lang.String"__concat*
+select c from Curriculum c *FD
+Bwhere c.school.id = ?1 and c.status.code = ?2 and c.higher = true «
+¨
+À
+³D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/subjectstudyperiod/SubjectStudyPeriodStudentGroupService.java® °(7
+%2java.lang.String"__concat*
+
+%1java.lang.String*'%
+#order by c.nameEt, c.nameEn, c.code×Ô
+À
+³D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/subjectstudyperiod/SubjectStudyPeriodStudentGroupService.java­' °(J"
+%3javax.persistence.TypedQuery"njavax.persistence.EntityManager#createQuery(Ljava/lang/String;Ljava/lang/Class;)Ljavax/persistence/TypedQuery;*'
+%
+%0javax.persistence.EntityManager*
+
+%2java.lang.String*
+""20createQuery(Ljava/lang/String;Ljava/lang/Class;)µ²
+À
+³D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/subjectstudyperiod/SubjectStudyPeriodStudentGroupService.java­' ±(&"
+%4javax.persistence.TypedQuery"\javax.persistence.TypedQuery#setParameter(ILjava/lang/Object;)Ljavax/persistence/TypedQuery;*$
+"
+%3javax.persistence.TypedQuery*2*
+
+schoolIdjava.lang.Long2!setParameter(ILjava/lang/Object;)ÿ
+ü
+À
+³D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/subjectstudyperiod/SubjectStudyPeriodStudentGroupService.java² ²(@)
+%5#ee.hitsa.ois.enums.CurriculumStatus"__id*
+""¼¹
+À
+³D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/subjectstudyperiod/SubjectStudyPeriodStudentGroupService.java² ²(G
+%6java.lang.String"'java.lang.Enum#name()Ljava/lang/String;*+
+)
+%5#ee.hitsa.ois.enums.CurriculumStatus2name()±®
+À
+³D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/subjectstudyperiod/SubjectStudyPeriodStudentGroupService.java­' ²(H"
+%7javax.persistence.TypedQuery"\javax.persistence.TypedQuery#setParameter(ILjava/lang/Object;)Ljavax/persistence/TypedQuery;*$
+"
+%4javax.persistence.TypedQuery*2*
+
+%6java.lang.String2!setParameter(ILjava/lang/Object;)ÑÎ
+À
+³D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/subjectstudyperiod/SubjectStudyPeriodStudentGroupService.java­' ³(
+%8java.util.List"<javax.persistence.TypedQuery#getResultList()Ljava/util/List;*$
+"
+%7javax.persistence.TypedQuery2getResultList()ƒ
+€
+À
+³D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/subjectstudyperiod/SubjectStudyPeriodStudentGroupService.java­ ³(
+curriculumsjava.util.List"__id*
+
+%8java.util.Listã
+à
+À
+³D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/subjectstudyperiod/SubjectStudyPeriodStudentGroupService.javaµ' ½(	!
+%9java.util.function.Function"__declareFunction*ec
+a__sonar_lambda_1067$ee.hitsa.ois.service.subjectstudyperiod.SubjectStudyPeriodStudentGroupServiceµ
+²
+À
+³D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/subjectstudyperiod/SubjectStudyPeriodStudentGroupService.javaµ ½(
+%26java.util.List"nee.hitsa.ois.util.StreamUtil#toMappedList(Ljava/util/function/Function;Ljava/util/Collection;)Ljava/util/List;* "
+ee.hitsa.ois.util.StreamUtil*#
+!
+%9java.util.function.Function*
+
+curriculumsjava.util.List"Ü
+À
+³D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/subjectstudyperiod/SubjectStudyPeriodStudentGroupService.javaµ ½(
+
+%26java.util.List:
+schoolIdjava.lang.LongBQO
+Mee.hitsa.ois.service.subjectstudyperiod.SubjectStudyPeriodStudentGroupService

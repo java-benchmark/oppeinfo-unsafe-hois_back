@@ -1,0 +1,97 @@
+
+^ee.hitsa.ois.service.JournalService#canAddFinalEntry(Lee/hitsa/ois/domain/timetable/Journal;)Z–
+‰D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/JournalService.java¿ ¿(#"3*œ
+2–
+‰D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/JournalService.javaÂ Â(ú
+÷
+–
+‰D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/JournalService.javaÂ Â(%
+%1javax.persistence.EntityManager"__id*/*-%
+#ee.hitsa.ois.service.JournalService"
+em
+
+–
+‰D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/JournalService.javaÂ( Ã(D
+%2java.lang.String"__concat*
+select 1 from journal j *20
+.join journal_entry je on je.journal_id = j.id ™
+–
+–
+‰D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/JournalService.javaÂ( Ä(Q
+%3java.lang.String"__concat*
+
+%2java.lang.String*?=
+;where j.id = :journalId and je.entry_type_code = :entryCode…‚
+–
+‰D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/JournalService.javaÂ Ä(R
+%4javax.persistence.Query"^javax.persistence.EntityManager#createNativeQuery(Ljava/lang/String;)Ljavax/persistence/Query;*'
+%
+%1javax.persistence.EntityManager*
+
+%3java.lang.String2%createNativeQuery(Ljava/lang/String;)­ª
+–
+‰D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/JournalService.javaÅ/ Å(>
+%5java.lang.Long"<ee.hitsa.ois.domain.BaseEntityWithId#getId()Ljava/lang/Long;*2
+0
+journal%ee.hitsa.ois.domain.timetable.Journal2getId()œ™
+–
+‰D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/JournalService.javaÂ Å(?
+%6javax.persistence.Query"cjavax.persistence.Query#setParameter(Ljava/lang/String;Ljava/lang/Object;)Ljavax/persistence/Query;*
+
+%4javax.persistence.Query*
+	journalId*
+
+%5java.lang.Long22setParameter(Ljava/lang/String;Ljava/lang/Object;)Õ
+Ò
+–
+‰D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/JournalService.javaÆ/ Æ(L)
+%7#ee.hitsa.ois.enums.JournalEntryType"__id*
+""’
+–
+‰D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/JournalService.javaÆ/ Æ(S
+%8java.lang.String"'java.lang.Enum#name()Ljava/lang/String;*+
+)
+%7#ee.hitsa.ois.enums.JournalEntryType2name()ž›
+–
+‰D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/JournalService.javaÂ Æ(T
+%9javax.persistence.Query"cjavax.persistence.Query#setParameter(Ljava/lang/String;Ljava/lang/Object;)Ljavax/persistence/Query;*
+
+%6javax.persistence.Query*
+	entryCode*
+
+%8java.lang.String22setParameter(Ljava/lang/String;Ljava/lang/Object;)¸µ
+–
+‰D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/JournalService.javaÂ Ç(%
+%10javax.persistence.Query"Ajavax.persistence.Query#setMaxResults(I)Ljavax/persistence/Query;*
+
+%9javax.persistence.Query*22setMaxResults(I)Ÿœ
+–
+‰D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/JournalService.javaÂ Ç(5
+%11java.util.List"7javax.persistence.Query#getResultList()Ljava/util/List;* 
+
+%10javax.persistence.Query2getResultList()ëè
+–
+‰D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/JournalService.javaÂ Ç(?
+%12boolean"java.util.List#isEmpty()Z*
+
+%11java.util.List2	isEmpty()"¡
+–
+‰D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/JournalService.javaÂ Ç(@
+""*Ì
+3–
+‰D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/JournalService.javaÀ À(¥¢
+–
+‰D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/JournalService.javaÀ À(&
+%0boolean"_ee.hitsa.ois.service.JournalService#finalEntryAllowed(Lee/hitsa/ois/domain/timetable/Journal;)Z*'%
+#ee.hitsa.ois.service.JournalService*2
+0
+journal%ee.hitsa.ois.domain.timetable.Journal2:finalEntryAllowed(Lee/hitsa/ois/domain/timetable/Journal;)*
+2
+1*À
+1–
+‰D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/JournalService.javaÉ É("¡
+–
+‰D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/JournalService.javaÉ É(
+"":0
+journal%ee.hitsa.ois.domain.timetable.JournalB'%
+#ee.hitsa.ois.service.JournalService

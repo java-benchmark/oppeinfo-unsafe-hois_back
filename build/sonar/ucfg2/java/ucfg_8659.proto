@@ -1,0 +1,86 @@
+
+{ee.hitsa.ois.service.DocumentService#getDiplomas(Lee/hitsa/ois/web/commandobject/document/DiplomaBaseForm;)Ljava/util/List;ó
+äD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/DocumentService.javañ ñ($"1*â"
+1ó
+äD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/DocumentService.javaó ó(¸
+˘
+ó
+äD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/DocumentService.javaó ó(%
+%0javax.persistence.EntityManager"__id*0*.&
+$ee.hitsa.ois.service.DocumentService"
+emë
+é
+ó
+äD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/DocumentService.javaó ò(C
+%1java.lang.String"__concat*
+select d from Diploma d*31
+/ where d.directive.id = ?1 and d.type.code = ?2ˆ
+Û
+ó
+äD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/DocumentService.javaó ô(+
+%2java.lang.String"__concat*
+
+%1java.lang.String*
+ and d.student.id in ?3Ä
+˝
+ó
+äD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/DocumentService.javaó ö(5
+%3java.lang.String"__concat*
+
+%2java.lang.String*%#
+! order by d.lastname, d.firstnameÆ´
+ó
+äD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/DocumentService.javaó ö(E"
+%4javax.persistence.TypedQuery"njavax.persistence.EntityManager#createQuery(Ljava/lang/String;Ljava/lang/Class;)Ljavax/persistence/TypedQuery;*'
+%
+%0javax.persistence.EntityManager*
+
+%3java.lang.String*
+""20createQuery(Ljava/lang/String;Ljava/lang/Class;)‚ﬂ
+ó
+äD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/DocumentService.javaõ! õ(6
+%5java.lang.Long"Xee.hitsa.ois.web.commandobject.document.DiplomaBaseForm#getDirectiveId()Ljava/lang/Long;*A
+?
+form7ee.hitsa.ois.web.commandobject.document.DiplomaBaseForm2getDirectiveId()ÜÉ
+ó
+äD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/DocumentService.javaó õ(7"
+%6javax.persistence.TypedQuery"\javax.persistence.TypedQuery#setParameter(ILjava/lang/Object;)Ljavax/persistence/TypedQuery;*$
+"
+%4javax.persistence.TypedQuery*2*
+
+%5java.lang.Long2!setParameter(ILjava/lang/Object;)‡›
+ó
+äD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/DocumentService.javaú! ú(3
+%7java.lang.String"Wee.hitsa.ois.web.commandobject.document.DiplomaBaseForm#getFormType()Ljava/lang/String;*A
+?
+form7ee.hitsa.ois.web.commandobject.document.DiplomaBaseForm2getFormType()àÖ
+ó
+äD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/DocumentService.javaó ú(4"
+%8javax.persistence.TypedQuery"\javax.persistence.TypedQuery#setParameter(ILjava/lang/Object;)Ljavax/persistence/TypedQuery;*$
+"
+%6javax.persistence.TypedQuery*2*
+
+%7java.lang.String2!setParameter(ILjava/lang/Object;)‡›
+ó
+äD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/DocumentService.javaù! ù(5
+%9java.util.List"Wee.hitsa.ois.web.commandobject.document.DiplomaBaseForm#getStudentIds()Ljava/util/List;*A
+?
+form7ee.hitsa.ois.web.commandobject.document.DiplomaBaseForm2getStudentIds()áÑ
+ó
+äD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/DocumentService.javaó ù(6#
+%10javax.persistence.TypedQuery"\javax.persistence.TypedQuery#setParameter(ILjava/lang/Object;)Ljavax/persistence/TypedQuery;*$
+"
+%8javax.persistence.TypedQuery*2*
+
+%9java.util.List2!setParameter(ILjava/lang/Object;)™ß
+ó
+äD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/DocumentService.javaó û( 
+%11java.util.List"<javax.persistence.TypedQuery#getResultList()Ljava/util/List;*%
+#
+%10javax.persistence.TypedQuery2getResultList()"≥
+ó
+äD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/DocumentService.javaó û(!
+
+%11java.util.List:?
+form7ee.hitsa.ois.web.commandobject.document.DiplomaBaseFormB(&
+$ee.hitsa.ois.service.DocumentService

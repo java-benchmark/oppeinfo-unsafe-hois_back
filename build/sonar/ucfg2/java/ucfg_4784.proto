@@ -1,0 +1,55 @@
+
+¹ee.hitsa.ois.service.curriculum.CurriculumVersionHigherModuleService#getSubjectsForMinorSpeciality(Lee/hitsa/ois/web/commandobject/curriculum/HigherModuleSubjectCommand;)Ljava/util/Set;·
+ªD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/curriculum/CurriculumVersionHigherModuleService.javaÃ8 Ã(U"1*‘
+1·
+ªD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/curriculum/CurriculumVersionHigherModuleService.javaÄ> Ä(@¼
+¹
+·
+ªD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/curriculum/CurriculumVersionHigherModuleService.javaÄ> Ä(@%
+%0javax.persistence.EntityManager"__id*P*NF
+Dee.hitsa.ois.service.curriculum.CurriculumVersionHigherModuleService"
+em—”
+¸
+ªD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/curriculum/CurriculumVersionHigherModuleService.javaÄ> Ä(Ø"
+%1javax.persistence.TypedQuery"njavax.persistence.EntityManager#createQuery(Ljava/lang/String;Ljava/lang/Class;)Ljavax/persistence/TypedQuery;*'
+%
+%0javax.persistence.EntityManager*`^
+\select s from CurriculumVersionHigherModuleSubject s where s.module.curriculumVersion.id =?1*
+""20createQuery(Ljava/lang/String;Ljava/lang/Class;)«¨
+·
+ªD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/curriculum/CurriculumVersionHigherModuleService.javaÅ! Å(?
+%2java.lang.Long"kee.hitsa.ois.web.commandobject.curriculum.HigherModuleSubjectCommand#getCurriculumVersion()Ljava/lang/Long;*Q
+O
+commandDee.hitsa.ois.web.commandobject.curriculum.HigherModuleSubjectCommand2getCurriculumVersion()¦£
+·
+ªD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/curriculum/CurriculumVersionHigherModuleService.javaÄ> Å(@"
+%3javax.persistence.TypedQuery"\javax.persistence.TypedQuery#setParameter(ILjava/lang/Object;)Ljavax/persistence/TypedQuery;*$
+"
+%1javax.persistence.TypedQuery*2*
+
+%2java.lang.Long2!setParameter(ILjava/lang/Object;)ÈÅ
+·
+ªD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/curriculum/CurriculumVersionHigherModuleService.javaÄ> Æ( 
+%4java.util.List"<javax.persistence.TypedQuery#getResultList()Ljava/util/List;*$
+"
+%3javax.persistence.TypedQuery2getResultList()÷
+ô
+·
+ªD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/curriculum/CurriculumVersionHigherModuleService.javaÄ Æ(!
+subjectsjava.util.List"__id*
+
+%4java.util.Listˆ
+…
+·
+ªD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/curriculum/CurriculumVersionHigherModuleService.javaÇ Ç(d
+%5java.util.Set"lee.hitsa.ois.util.StreamUtil#toMappedSet(Ljava/util/function/Function;Ljava/util/Collection;)Ljava/util/Set;* "
+ee.hitsa.ois.util.StreamUtil*
+""*
+
+subjectsjava.util.List"Ñ
+·
+ªD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/curriculum/CurriculumVersionHigherModuleService.javaÇ Ç(e
+
+%5java.util.Set:O
+commandDee.hitsa.ois.web.commandobject.curriculum.HigherModuleSubjectCommandBHF
+Dee.hitsa.ois.service.curriculum.CurriculumVersionHigherModuleService

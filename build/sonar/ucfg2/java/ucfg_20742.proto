@@ -1,0 +1,128 @@
+
+àee.hitsa.ois.service.DirectiveService#individualCurriculumModules(Lee/hitsa/ois/domain/student/Student;Ljava/lang/Long;)Ljava/util/List;ò
+ãD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/DirectiveService.javaê/ ê(J"1*Ù+
+1ò
+ãD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/DirectiveService.javaë ë(#‰
+·
+ò
+ãD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/DirectiveService.javaë ë(2
+%0java.lang.Long"Zee.hitsa.ois.util.EntityUtil#getId(Lee/hitsa/ois/domain/BaseEntityWithId;)Ljava/lang/Long;* "
+ee.hitsa.ois.util.EntityUtil*0
+.
+student#ee.hitsa.ois.domain.student.StudentŸ
+÷
+ò
+ãD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/DirectiveService.javaë ë(3
+	studentIdjava.lang.Long"__id*
+
+%0java.lang.Longß
+§
+ò
+ãD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/DirectiveService.javaì ì((
+%1java.util.List"<java.util.Arrays#asList([Ljava/lang/Object;)Ljava/util/List;*"
+java.util.Arrays*
+
+	studentIdjava.lang.Long⁄◊
+ò
+ãD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/DirectiveService.javaí\ ì(6
+%2java.util.Map"zee.hitsa.ois.service.DirectiveService#existingIndividualCurriculumModules(Ljava/util/List;Ljava/lang/Long;)Ljava/util/Map;*)'
+%ee.hitsa.ois.service.DirectiveService*
+
+%1java.util.List*
+
+directiveIdjava.lang.Long2EexistingIndividualCurriculumModules(Ljava/util/List;Ljava/lang/Long;)›
+⁄
+ò
+ãD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/DirectiveService.javaí ì(7 
+existingModulesjava.util.Map"__id*
+
+%2java.util.MapÄ
+˝
+ò
+ãD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/DirectiveService.javaîX î(v
+%3java.util.Map"__mapGet*"
+ 
+existingModulesjava.util.Map*
+
+	studentIdjava.lang.Long‰
+·
+ò
+ãD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/DirectiveService.javaî î(w'
+studentExistingModulesjava.util.Map"__id*
+
+%3java.util.Mapß
+§
+ò
+ãD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/DirectiveService.javañA ñ(Y
+%4java.util.List"<java.util.Arrays#asList([Ljava/lang/Object;)Ljava/util/List;*"
+java.util.Arrays*
+
+	studentIdjava.lang.LongÉÄ
+ò
+ãD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/DirectiveService.javañ# ñ(g-
+%5'ee.hitsa.ois.util.JpaNativeQueryBuilder"éee.hitsa.ois.service.DirectiveService#individualCurriculumModulesQb(Ljava/util/List;Ljava/lang/Long;)Lee/hitsa/ois/util/JpaNativeQueryBuilder;*)'
+%ee.hitsa.ois.service.DirectiveService*
+
+%4java.util.List*
+
+directiveIdjava.lang.Long2?individualCurriculumModulesQb(Ljava/util/List;Ljava/lang/Long;)Ñ
+Å
+ò
+ãD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/DirectiveService.javañ ñ(h-
+qb'ee.hitsa.ois.util.JpaNativeQueryBuilder"__id*/
+-
+%5'ee.hitsa.ois.util.JpaNativeQueryBuilder˛
+˚
+ò
+ãD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/DirectiveService.javaóu ó(w%
+%6javax.persistence.EntityManager"__id*1*/'
+%ee.hitsa.ois.service.DirectiveService"
+em®•
+ò
+ãD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/DirectiveService.javaó ó(x
+%7javax.persistence.Query"|ee.hitsa.ois.util.JpaNativeQueryBuilder#select(Ljava/lang/String;Ljavax/persistence/EntityManager;)Ljavax/persistence/Query;*/
+-
+qb'ee.hitsa.ois.util.JpaNativeQueryBuilder*TR
+Pcvo.id, cm.name_et, mcl.name_et mcl_name_et, cm.name_en, mcl.name_en mcl_name_en*'
+%
+%6javax.persistence.EntityManager2;select(Ljava/lang/String;Ljavax/persistence/EntityManager;)üú
+ò
+ãD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/DirectiveService.javaó ò( 
+%8java.util.List"7javax.persistence.Query#getResultList()Ljava/util/List;*
+
+%7javax.persistence.Query2getResultList()‘
+—
+ò
+ãD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/DirectiveService.javaó ò(!
+datajava.util.List"__id*
+
+%8java.util.Listì
+ê
+ò
+ãD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/DirectiveService.javaô' ú(g!
+%9java.util.function.Function"__declareFunction*=;
+9__sonar_lambda_2301$ee.hitsa.ois.service.DirectiveServiceç
+ä
+
+__unknown_file (=
+!
+%9java.util.function.Function"
+studentExistingModules"__id*)
+'
+studentExistingModulesjava.util.MapÜ
+É
+ò
+ãD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/DirectiveService.javaô ú(n
+%26java.util.List"nee.hitsa.ois.util.StreamUtil#toMappedList(Ljava/util/function/Function;Ljava/util/Collection;)Ljava/util/List;* "
+ee.hitsa.ois.util.StreamUtil*#
+!
+%9java.util.function.Function*
+
+datajava.util.List"¥
+ò
+ãD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/DirectiveService.javaô ú(o
+
+%26java.util.List:.
+student#ee.hitsa.ois.domain.student.Student:
+directiveIdjava.lang.LongB)'
+%ee.hitsa.ois.service.DirectiveService

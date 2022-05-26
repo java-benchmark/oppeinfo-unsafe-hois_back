@@ -1,0 +1,120 @@
+
+™ee.hitsa.ois.service.StudentService#supportServicesList(Lee/hitsa/ois/domain/student/Student;ZLjava/time/LocalDate;Ljava/time/LocalDate;)Ljava/util/List;–
+‰D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/StudentService.javaÅ* Å(="1*ý)
+1–
+‰D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/StudentService.javaÆ) Æ(8ÈÅ
+–
+‰D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/StudentService.javaÆ- Æ(6
+%0java.util.HashMap"java.util.HashMapÚ
+×
+–
+‰D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/StudentService.javaÆ) Æ(8
+%1"java.util.HashMap#<init>()V*
+
+%0java.util.HashMapÚ
+×
+–
+‰D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/StudentService.javaÆ Æ(9
+paramsjava.util.HashMap"__id*
+
+%0java.util.HashMap—
+”
+–
+‰D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/StudentService.javaÇ# Ç(X-
+%2'ee.hitsa.ois.util.JpaNativeQueryBuilder"¿ee.hitsa.ois.service.StudentService#supportServicesQB(Lee/hitsa/ois/domain/student/Student;Ljava/util/Map;Lorg/springframework/data/domain/Pageable;Z)Lee/hitsa/ois/util/JpaNativeQueryBuilder;*'"%
+#ee.hitsa.ois.service.StudentService*0
+.
+student#ee.hitsa.ois.domain.student.Student*
+
+paramsjava.util.HashMap*
+""*
+""‚
+ÿ
+–
+‰D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/StudentService.javaÇ Ç(Y-
+qb'ee.hitsa.ois.util.JpaNativeQueryBuilder"__id*/
+-
+%2'ee.hitsa.ois.util.JpaNativeQueryBuilderÞÛ
+–
+‰D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/StudentService.javaÈ È(@
+
+%3void"tee.hitsa.ois.util.JpaNativeQueryBuilder#optionalCriteria(Ljava/lang/String;Ljava/lang/String;Ljava/time/LocalDate;)V*/
+-
+qb'ee.hitsa.ois.util.JpaNativeQueryBuilder*
+entry_date >= :from*
+from*
+
+fromjava.time.LocalDate2KoptionalCriteria(Ljava/lang/String;Ljava/lang/String;Ljava/time/LocalDate;)ÞÛ
+–
+‰D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/StudentService.javaÉ É(@
+
+%4void"tee.hitsa.ois.util.JpaNativeQueryBuilder#optionalCriteria(Ljava/lang/String;Ljava/lang/String;Ljava/time/LocalDate;)V*/
+-
+qb'ee.hitsa.ois.util.JpaNativeQueryBuilder*
+entry_date <= :thru*
+thru*
+
+thrujava.time.LocalDate2KoptionalCriteria(Ljava/lang/String;Ljava/lang/String;Ljava/time/LocalDate;)˜•
+–
+‰D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/StudentService.javaÊ Ê("-
+%5'ee.hitsa.ois.util.JpaNativeQueryBuilder"jee.hitsa.ois.util.JpaNativeQueryBuilder#sort([Ljava/lang/String;)Lee/hitsa/ois/util/JpaNativeQueryBuilder;*/
+-
+qb'ee.hitsa.ois.util.JpaNativeQueryBuilder*
+entry_date desc2sort([Ljava/lang/String;)ü
+ù
+˜
+‰D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/StudentService.javaË™ Ë(›%
+%6javax.persistence.EntityManager"__id*/*-%
+#ee.hitsa.ois.service.StudentService"
+em†ƒ
+—
+‰D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/StudentService.javaË Ë(¤
+%7javax.persistence.Query"‹ee.hitsa.ois.util.JpaNativeQueryBuilder#select(Ljava/lang/String;Ljavax/persistence/EntityManager;Ljava/util/Map;)Ljavax/persistence/Query;*/
+-
+qb'ee.hitsa.ois.util.JpaNativeQueryBuilder*us
+qid, entry_date, title, \"content\", validity_code, is_public, ois_file_id, submitter, artificial, ending_id, ehis*'
+%
+%6javax.persistence.EntityManager*
+
+paramsjava.util.HashMap2Jselect(Ljava/lang/String;Ljavax/persistence/EntityManager;Ljava/util/Map;)ž›
+—
+‰D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/StudentService.javaË Ë(´
+%8java.util.List"7javax.persistence.Query#getResultList()Ljava/util/List;*
+
+%7javax.persistence.Query2getResultList()Ö
+Ó
+—
+‰D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/StudentService.javaË Ë(µ
+resultsjava.util.List"__id*
+
+%8java.util.List
+Œ
+—
+‰D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/StudentService.javaÌ' Ì(!
+%9java.util.function.Function"__declareFunction*:8
+6__sonar_lambda_189$ee.hitsa.ois.service.StudentServiceˆ
+…
+
+__unknown_file (:
+!
+%9java.util.function.Function"
+StudentService.this"__id*'%
+#ee.hitsa.ois.service.StudentServiceˆ
+…
+—
+‰D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/StudentService.javaÌ Ì(—
+%15java.util.List"nee.hitsa.ois.util.StreamUtil#toMappedList(Ljava/util/function/Function;Ljava/util/Collection;)Ljava/util/List;* "
+ee.hitsa.ois.util.StreamUtil*#
+!
+%9java.util.function.Function*
+
+resultsjava.util.List"³
+—
+‰D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/StudentService.javaÌ Ì(˜
+
+%15java.util.List:.
+student#ee.hitsa.ois.domain.student.Student:
+"":
+fromjava.time.LocalDate:
+thrujava.time.LocalDateB'%
+#ee.hitsa.ois.service.StudentService

@@ -1,0 +1,111 @@
+
+nee.hitsa.ois.service.CommitteeService#getScholarshipDecisions(Lee/hitsa/ois/domain/Committee;)Ljava/util/List;ò
+ãD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/CommitteeService.javaâ2 â(I"1*Ù%
+1ò
+ãD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/CommitteeService.javaä ä(˛
+˚
+ò
+ãD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/CommitteeService.javaä ä(%
+%0javax.persistence.EntityManager"__id*1*/'
+%ee.hitsa.ois.service.CommitteeService"
+emÆ
+´
+ò
+ãD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/CommitteeService.javaä. ã(E
+%1java.lang.String"__concat*53
+1select id, protocol_nr, decided, scholarship_type*53
+1 from (select sd.id, sd.protocol_nr, sd.decided, ï
+í
+ò
+ãD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/CommitteeService.javaä. å(I
+%2java.lang.String"__concat*
+
+%1java.lang.String*97
+5 (select st.type_code from scholarship_application saõ
+ò
+ò
+ãD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/CommitteeService.javaä. ç(S
+%3java.lang.String"__concat*
+
+%2java.lang.String*?=
+; join scholarship_term st on st.id = sa.scholarship_term_id¶
+£
+ò
+ãD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/CommitteeService.javaä. é(^
+%4java.lang.String"__concat*
+
+%3java.lang.String*JH
+F where sa.scholarship_decision_id = sd.id limit 1) as scholarship_type˝
+˙
+ò
+ãD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/CommitteeService.javaä. è(1
+%5java.lang.String"__concat*
+
+%4java.lang.String*!
+ from scholarship_decision sdÄ
+˝
+ò
+ãD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/CommitteeService.javaä. ê(4
+%6java.lang.String"__concat*
+
+%5java.lang.String*$"
+  where sd.committee_id = ?1) subÉ
+Ä
+ò
+ãD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/CommitteeService.javaä. ë(7
+%7java.lang.String"__concat*
+
+%6java.lang.String*'%
+# where scholarship_type is not nulláÑ
+ò
+ãD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/CommitteeService.javaä ë(8
+%8javax.persistence.Query"^javax.persistence.EntityManager#createNativeQuery(Ljava/lang/String;)Ljavax/persistence/Query;*'
+%
+%0javax.persistence.EntityManager*
+
+%7java.lang.String2%createNativeQuery(Ljava/lang/String;)‡
+›
+ò
+ãD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/CommitteeService.javaí! í(<
+%9java.lang.Long"Zee.hitsa.ois.util.EntityUtil#getId(Lee/hitsa/ois/domain/BaseEntityWithId;)Ljava/lang/Long;* "
+ee.hitsa.ois.util.EntityUtil*,
+*
+	committeeee.hitsa.ois.domain.CommitteeÙÒ
+ò
+ãD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/CommitteeService.javaä í(=
+%10javax.persistence.Query"Rjavax.persistence.Query#setParameter(ILjava/lang/Object;)Ljavax/persistence/Query;*
+
+%8javax.persistence.Query*2*
+
+%9java.lang.Long2!setParameter(ILjava/lang/Object;)°û
+ò
+ãD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/CommitteeService.javaä ì( 
+%11java.util.List"7javax.persistence.Query#getResultList()Ljava/util/List;* 
+
+%10javax.persistence.Query2getResultList()◊
+‘
+ò
+ãD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/CommitteeService.javaä ì(!
+resultjava.util.List"__id*
+
+%11java.util.Listî
+ë
+ò
+ãD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/CommitteeService.javaî' õ(	"
+%12java.util.function.Function"__declareFunction*=;
+9__sonar_lambda_3026$ee.hitsa.ois.service.CommitteeServiceâ
+Ü
+ò
+ãD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/CommitteeService.javaî õ(
+%23java.util.List"nee.hitsa.ois.util.StreamUtil#toMappedList(Ljava/util/function/Function;Ljava/util/Collection;)Ljava/util/List;* "
+ee.hitsa.ois.util.StreamUtil*$
+"
+%12java.util.function.Function*
+
+resultjava.util.List"¥
+ò
+ãD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/CommitteeService.javaî õ(
+
+%23java.util.List:*
+	committeeee.hitsa.ois.domain.CommitteeB)'
+%ee.hitsa.ois.service.CommitteeService

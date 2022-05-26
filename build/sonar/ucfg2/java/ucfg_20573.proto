@@ -1,0 +1,137 @@
+
+ˆee.hitsa.ois.service.StudentGroupAbsenceService#teacherHasTodaysAbsences(Lee/hitsa/ois/service/security/HoisUserDetails;)Ljava/util/Map;¢
+•D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/StudentGroupAbsenceService.javaâ  â(8"1*š3
+1¢
+•D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/StudentGroupAbsenceService.javaã= ã(WÎ
+Ë
+¢
+•D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/StudentGroupAbsenceService.javaã= ã(W
+%0java.lang.String"__id*
+""€ý
+¢
+•D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/StudentGroupAbsenceService.javaã' ã(<-
+%1'ee.hitsa.ois.util.JpaNativeQueryBuilder"'ee.hitsa.ois.util.JpaNativeQueryBuilder¾
+»
+¢
+•D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/StudentGroupAbsenceService.javaã# ã(X
+%2"Cee.hitsa.ois.util.JpaNativeQueryBuilder#<init>(Ljava/lang/String;)V*/
+-
+%1'ee.hitsa.ois.util.JpaNativeQueryBuilder*
+
+%0java.lang.StringŽ
+‹
+¢
+•D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/StudentGroupAbsenceService.javaã ã(Y-
+qb'ee.hitsa.ois.util.JpaNativeQueryBuilder"__id*/
+-
+%1'ee.hitsa.ois.util.JpaNativeQueryBuilderÕÒ
+¢
+•D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/StudentGroupAbsenceService.javaäG ä(Z
+%3java.lang.Long"Lee.hitsa.ois.service.security.HoisUserDetails#getTeacherId()Ljava/lang/Long;*7
+5
+user-ee.hitsa.ois.service.security.HoisUserDetails2getTeacherId()åâ
+¢
+•D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/StudentGroupAbsenceService.javaä ä([
+
+%4void"oee.hitsa.ois.util.JpaNativeQueryBuilder#requiredCriteria(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Long;)V*/
+-
+qb'ee.hitsa.ois.util.JpaNativeQueryBuilder*
+sg.teacher_id = :teacherId*
+	teacherId*
+
+%3java.lang.Long2FrequiredCriteria(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Long;)Œ
+‰
+¢
+•D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/StudentGroupAbsenceService.javaå å()
+%5java.time.LocalDate".java.time.LocalDate#now()Ljava/time/LocalDate;*"
+java.time.LocalDateé
+æ
+¢
+•D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/StudentGroupAbsenceService.javaå å(*
+todayjava.time.LocalDate"__id*
+
+%5java.time.LocalDateîë
+¢
+•D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/StudentGroupAbsenceService.javaæ æ(D
+
+%6void"tee.hitsa.ois.util.JpaNativeQueryBuilder#requiredCriteria(Ljava/lang/String;Ljava/lang/String;Ljava/time/LocalDate;)V*/
+-
+qb'ee.hitsa.ois.util.JpaNativeQueryBuilder*
+je.entry_date >= :from*
+from*
+
+todayjava.time.LocalDate2KrequiredCriteria(Ljava/lang/String;Ljava/lang/String;Ljava/time/LocalDate;)îë
+¢
+•D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/StudentGroupAbsenceService.javaç ç(D
+
+%7void"tee.hitsa.ois.util.JpaNativeQueryBuilder#requiredCriteria(Ljava/lang/String;Ljava/lang/String;Ljava/time/LocalDate;)V*/
+-
+qb'ee.hitsa.ois.util.JpaNativeQueryBuilder*
+je.entry_date <= :thru*
+thru*
+
+todayjava.time.LocalDate2KrequiredCriteria(Ljava/lang/String;Ljava/lang/String;Ljava/time/LocalDate;)Œ‰
+¢
+•D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/StudentGroupAbsenceService.javaè è(U
+
+%8void"Cee.hitsa.ois.util.JpaNativeQueryBuilder#filter(Ljava/lang/String;)V*/
+-
+qb'ee.hitsa.ois.util.JpaNativeQueryBuilder*DB
+@(jes.absence_code is not null or jesla.absence_code is not null)2filter(Ljava/lang/String;)Î
+Ë
+¢
+•D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/StudentGroupAbsenceService.javaê! ê(=
+%9java.lang.String"__id*
+""“
+
+¢
+•D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/StudentGroupAbsenceService.javaê? ê(A&
+%10javax.persistence.EntityManager"__id*;*91
+/ee.hitsa.ois.service.StudentGroupAbsenceService"
+emøõ
+¢
+•D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/StudentGroupAbsenceService.javaê ê(B
+%11javax.persistence.Query"|ee.hitsa.ois.util.JpaNativeQueryBuilder#select(Ljava/lang/String;Ljavax/persistence/EntityManager;)Ljavax/persistence/Query;*/
+-
+qb'ee.hitsa.ois.util.JpaNativeQueryBuilder*
+
+%9java.lang.String*(
+&
+%10javax.persistence.EntityManager2;select(Ljava/lang/String;Ljavax/persistence/EntityManager;)«¨
+¢
+•D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/StudentGroupAbsenceService.javaê ê(R
+%12java.util.List"7javax.persistence.Query#getResultList()Ljava/util/List;* 
+
+%11javax.persistence.Query2getResultList()ß
+Ü
+¢
+•D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/StudentGroupAbsenceService.javaê ê(S
+datajava.util.List"__id*
+
+%12java.util.Listîë
+¢
+•D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/StudentGroupAbsenceService.javaëM ë(X
+
+%13int"java.util.List#size()I*
+
+datajava.util.List2size()’
+
+¢
+•D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/StudentGroupAbsenceService.javaë= ë(]
+%14java.lang.Boolean"/java.lang.Boolean#valueOf(Z)Ljava/lang/Boolean;*"
+java.lang.Boolean*
+""å
+â
+¢
+•D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/StudentGroupAbsenceService.javaë ë(^
+%15java.util.Map"Wjava.util.Collections#singletonMap(Ljava/lang/Object;Ljava/lang/Object;)Ljava/util/Map;*"
+java.util.Collections*
+hasTodaysAbsences*
+
+%14java.lang.Boolean"½
+¢
+•D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/StudentGroupAbsenceService.javaë ë(_
+
+%15java.util.Map:5
+user-ee.hitsa.ois.service.security.HoisUserDetailsB31
+/ee.hitsa.ois.service.StudentGroupAbsenceService

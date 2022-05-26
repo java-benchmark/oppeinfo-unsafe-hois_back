@@ -1,0 +1,98 @@
+
+aee.hitsa.ois.service.DeclarationService#unconfirmedDeclarations(Ljava/lang/Long;)Ljava/util/List;ö
+çD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/DeclarationService.javaÕ Õ(5"3*ï
+2ö
+çD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/DeclarationService.java– –($–Õ
+ö
+çD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/DeclarationService.java– –("
+%2java.util.ArrayList"java.util.ArrayList‚
+ﬂ
+ö
+çD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/DeclarationService.java– –($
+%3"java.util.ArrayList#<init>()V*
+
+%2java.util.ArrayList"∫
+ö
+çD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/DeclarationService.java– –(%
+
+%2java.util.ArrayList*Ø
+3ö
+çD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/DeclarationService.javaŒ Œ(+ñ
+ì
+ö
+çD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/DeclarationService.javaŒ Œ(++
+%0%ee.hitsa.ois.service.StudyYearService"__id*A*?)
+'ee.hitsa.ois.service.DeclarationService"
+studyYearServiceãà
+ö
+çD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/DeclarationService.javaŒ Œ(K
+%1java.lang.Long"]ee.hitsa.ois.service.StudyYearService#getCurrentStudyPeriod(Ljava/lang/Long;)Ljava/lang/Long;*-
++
+%0%ee.hitsa.ois.service.StudyYearService*
+
+schoolIdjava.lang.Long2'getCurrentStudyPeriod(Ljava/lang/Long;)›
+⁄
+ö
+çD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/DeclarationService.javaŒ Œ(L
+studyPeriodjava.lang.Long"__id*
+
+%1java.lang.Long*
+2
+1*∆
+1ö
+çD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/DeclarationService.java” ”(Ç
+ˇ
+ö
+çD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/DeclarationService.java” ”(%
+%4javax.persistence.EntityManager"__id*3*1)
+'ee.hitsa.ois.service.DeclarationService"
+emàÖ
+ö
+çD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/DeclarationService.java” ‘(""
+%5javax.persistence.TypedQuery"njavax.persistence.EntityManager#createQuery(Ljava/lang/String;Ljava/lang/Class;)Ljavax/persistence/TypedQuery;*'
+%
+%4javax.persistence.EntityManager*om
+kselect d from Declaration d where d.student.school.id = ?1 and d.status.code = ?2 and d.studyPeriod.id = ?3*
+""20createQuery(Ljava/lang/String;Ljava/lang/Class;)èå
+ö
+çD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/DeclarationService.java” ’(&"
+%6javax.persistence.TypedQuery"\javax.persistence.TypedQuery#setParameter(ILjava/lang/Object;)Ljavax/persistence/TypedQuery;*$
+"
+%5javax.persistence.TypedQuery*2*
+
+schoolIdjava.lang.Long2!setParameter(ILjava/lang/Object;)⁄
+◊
+ö
+çD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/DeclarationService.java÷ ÷(C*
+%7$ee.hitsa.ois.enums.DeclarationStatus"__id*
+""óî
+ö
+çD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/DeclarationService.java÷ ÷(J
+%8java.lang.String"'java.lang.Enum#name()Ljava/lang/String;*,
+*
+%7$ee.hitsa.ois.enums.DeclarationStatus2name()ãà
+ö
+çD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/DeclarationService.java” ÷(K"
+%9javax.persistence.TypedQuery"\javax.persistence.TypedQuery#setParameter(ILjava/lang/Object;)Ljavax/persistence/TypedQuery;*$
+"
+%6javax.persistence.TypedQuery*2*
+
+%8java.lang.String2!setParameter(ILjava/lang/Object;)ìê
+ö
+çD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/DeclarationService.java” ◊()#
+%10javax.persistence.TypedQuery"\javax.persistence.TypedQuery#setParameter(ILjava/lang/Object;)Ljavax/persistence/TypedQuery;*$
+"
+%9javax.persistence.TypedQuery*2*
+
+studyPeriodjava.lang.Long2!setParameter(ILjava/lang/Object;)≠™
+ö
+çD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/DeclarationService.java” ÿ(
+%11java.util.List"<javax.persistence.TypedQuery#getResultList()Ljava/util/List;*%
+#
+%10javax.persistence.TypedQuery2getResultList()"∂
+ö
+çD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/DeclarationService.java” ÿ(
+
+%11java.util.List:
+schoolIdjava.lang.LongB+)
+'ee.hitsa.ois.service.DeclarationService

@@ -1,0 +1,175 @@
+
+nee.hitsa.ois.service.SchoolService#schoolType(Ljava/lang/Long;)Lee/hitsa/ois/service/SchoolService$SchoolType;•
+ˆD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/SchoolService.javaŽ Ž( "1*Š8
+1•
+ˆD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/SchoolService.java (ø
+õ
+•
+ˆD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/SchoolService.java (%
+%0javax.persistence.EntityManager"__id*.*,$
+"ee.hitsa.ois.service.SchoolService"
+em®
+«
+•
+ˆD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/SchoolService.java, (F
+%1java.lang.String"__concat*53
+1select clc.connect_classifier_code from school s *86
+4join school_study_level ssl on ssl.school_id = s.id ’
+
+•
+ˆD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/SchoolService.java, ‘(G
+%2java.lang.String"__concat*
+
+%1java.lang.String*97
+5join classifier cl on cl.code = ssl.study_level_code š
+—
+•
+ˆD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/SchoolService.java, ’(O
+%3java.lang.String"__concat*
+
+%2java.lang.String*A?
+=join classifier_connect clc on clc.classifier_code = cl.code ñ
+î
+•
+ˆD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/SchoolService.java, “(&
+%4java.lang.String"__concat*
+
+%3java.lang.String*
+where s.id = :school„
+•
+ˆD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/SchoolService.java “('
+%5javax.persistence.Query"^javax.persistence.EntityManager#createNativeQuery(Ljava/lang/String;)Ljavax/persistence/Query;*'
+%
+%0javax.persistence.EntityManager*
+
+%4java.lang.String2%createNativeQuery(Ljava/lang/String;)ž›
+•
+ˆD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/SchoolService.java ”(1
+%6javax.persistence.Query"cjavax.persistence.Query#setParameter(Ljava/lang/String;Ljava/lang/Object;)Ljavax/persistence/Query;*
+
+%5javax.persistence.Query*
+
+school*
+
+schoolIdjava.lang.Long22setParameter(Ljava/lang/String;Ljava/lang/Object;)œ™
+•
+ˆD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/SchoolService.java •( 
+%7java.util.List"7javax.persistence.Query#getResultList()Ljava/util/List;*
+
+%6javax.persistence.Query2getResultList()Ñ
+Î
+•
+ˆD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/SchoolService.java •(!
+datajava.util.List"__id*
+
+%7java.util.List
+Š
+•
+ˆD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/SchoolService.java–= –(V!
+%8java.util.function.Function"__declareFunction*:8
+6__sonar_lambda_1777$ee.hitsa.ois.service.SchoolService€
+ý
+•
+ˆD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/SchoolService.java–& –(]
+%10java.util.Set"lee.hitsa.ois.util.StreamUtil#toMappedSet(Ljava/util/function/Function;Ljava/util/Collection;)Ljava/util/Set;* "
+ee.hitsa.ois.util.StreamUtil*#
+!
+%8java.util.function.Function*
+
+datajava.util.ListÛ
+Ø
+•
+ˆD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/SchoolService.java– –(^ 
+educationLevelsjava.util.Set"__id*
+
+%10java.util.SetÀ
+½
+•
+ˆD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/SchoolService.java˜4 ˜(H
+%11java.util.List"__id*
+""Ò
+Ï
+•
+ˆD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/SchoolService.java˜ ˜(Z
+%12boolean"Mjava.util.Collections#disjoint(Ljava/util/Collection;Ljava/util/Collection;)Z*"
+java.util.Collections*
+
+%11java.util.List*"
+ 
+educationLevelsjava.util.SetÀ
+½
+•
+ˆD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/SchoolService.java™& ™(>
+%13java.util.List"__id*
+""Ò
+Ï
+•
+ˆD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/SchoolService.java™ ™(P
+%14boolean"Mjava.util.Collections#disjoint(Ljava/util/Collection;Ljava/util/Collection;)Z*"
+java.util.Collections*
+
+%13java.util.List*"
+ 
+educationLevelsjava.util.SetÀ
+½
+•
+ˆD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/SchoolService.javaš& š(?
+%15java.util.List"__id*
+""Ò
+Ï
+•
+ˆD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/SchoolService.javaš š(Q
+%16boolean"Mjava.util.Collections#disjoint(Ljava/util/Collection;Ljava/util/Collection;)Z*"
+java.util.Collections*
+
+%15java.util.List*"
+ 
+educationLevelsjava.util.SetÀ
+½
+•
+ˆD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/SchoolService.java›& ›(;
+%17java.util.List"__id*
+""Ò
+Ï
+•
+ˆD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/SchoolService.java› ›(M
+%18boolean"Mjava.util.Collections#disjoint(Ljava/util/Collection;Ljava/util/Collection;)Z*"
+java.util.Collections*
+
+%17java.util.List*"
+ 
+educationLevelsjava.util.SetÀ
+½
+•
+ˆD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/SchoolService.javaœ& œ(;
+%19java.util.List"__id*
+""Ò
+Ï
+•
+ˆD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/SchoolService.javaœ œ(M
+%20boolean"Mjava.util.Collections#disjoint(Ljava/util/Collection;Ljava/util/Collection;)Z*"
+java.util.Collections*
+
+%19java.util.List*"
+ 
+educationLevelsjava.util.Set€ý
+•
+ˆD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/SchoolService.java˜ ˜(4
+%21-ee.hitsa.ois.service.SchoolService$SchoolType"-ee.hitsa.ois.service.SchoolService$SchoolTypeÀ
+½
+•
+ˆD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/SchoolService.java˜ œ(N
+%22"<ee.hitsa.ois.service.SchoolService$SchoolType#<init>(ZZZZZ)V*6
+4
+%21-ee.hitsa.ois.service.SchoolService$SchoolType*
+""*
+""*
+""*
+""*
+"""Ð
+•
+ˆD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/SchoolService.java˜ œ(O6
+4
+%21-ee.hitsa.ois.service.SchoolService$SchoolType:
+schoolIdjava.lang.LongB&$
+"ee.hitsa.ois.service.SchoolService

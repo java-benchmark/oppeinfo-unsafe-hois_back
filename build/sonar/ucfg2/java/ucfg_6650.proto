@@ -1,0 +1,564 @@
+
+ìee.hitsa.ois.service.TimetableService#getCapacitiesForVocationalPlanning(Ljava/util/List;Lee/hitsa/ois/domain/timetable/Timetable;)Ljava/util/List;ò
+ãD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/TimetableService.javaè3 è(U"14*ÀD
+14ò
+ãD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/TimetableService.javaë= ë(Mí
+è
+ò
+ãD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/TimetableService.javaë= í(L
+%0java.lang.String"__concat*
+from journal j*<:
+8 join journal_capacity_type jct on jct.journal_id = j.idÿ
+’
+ô
+ãD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/TimetableService.javaë= ì(ã
+%1java.lang.String"__concat*
+
+%0java.lang.String*{y
+w join (select distinct ot.lesson_plan_module_id, journal_id from journal_omodule_theme ot) jot on jot.journal_id = j.id¢
+ü
+ò
+ãD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/TimetableService.javaë= î(V
+%2java.lang.String"__concat*
+
+%1java.lang.String*FD
+B join lesson_plan_module lpm on lpm.id = jot.lesson_plan_module_idí
+è
+ò
+ãD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/TimetableService.javaë= ï(F
+%3java.lang.String"__concat*
+
+%2java.lang.String*64
+2 join lesson_plan lp on lp.id = lpm.lesson_plan_idˆÛ
+ò
+ãD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/TimetableService.javaë' ë(<-
+%4'ee.hitsa.ois.util.JpaNativeQueryBuilder"'ee.hitsa.ois.util.JpaNativeQueryBuilder¥
+±
+ò
+ãD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/TimetableService.javaë# ï(G
+%5"Cee.hitsa.ois.util.JpaNativeQueryBuilder#<init>(Ljava/lang/String;)V*/
+-
+%4'ee.hitsa.ois.util.JpaNativeQueryBuilder*
+
+%3java.lang.StringÑ
+Å
+ò
+ãD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/TimetableService.javaë ï(H-
+qb'ee.hitsa.ois.util.JpaNativeQueryBuilder"__id*/
+-
+%4'ee.hitsa.ois.util.JpaNativeQueryBuilderÍÁ
+ò
+ãD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/TimetableService.javaò! ò(;%
+%6ee.hitsa.ois.domain.StudyPeriod"Yee.hitsa.ois.domain.timetable.Timetable#getStudyPeriod()Lee/hitsa/ois/domain/StudyPeriod;*6
+4
+	timetable'ee.hitsa.ois.domain.timetable.Timetable2getStudyPeriod()À»
+ò
+ãD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/TimetableService.javaò! ò(J#
+%7ee.hitsa.ois.domain.StudyYear"Mee.hitsa.ois.domain.StudyPeriod#getStudyYear()Lee/hitsa/ois/domain/StudyYear;*'
+%
+%6ee.hitsa.ois.domain.StudyPeriod2getStudyYear()Ÿ
+÷
+ò
+ãD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/TimetableService.javaò ò(K
+%8java.lang.Long"Zee.hitsa.ois.util.EntityUtil#getId(Lee/hitsa/ois/domain/BaseEntityWithId;)Ljava/lang/Long;* "
+ee.hitsa.ois.util.EntityUtil*%
+#
+%7ee.hitsa.ois.domain.StudyYear‚ﬂ
+ò
+ãD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/TimetableService.javaó ò(L
+
+%9void"oee.hitsa.ois.util.JpaNativeQueryBuilder#requiredCriteria(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Long;)V*/
+-
+qb'ee.hitsa.ois.util.JpaNativeQueryBuilder*#!
+lp.study_year_id = :studyYearId*
+studyYearId*
+
+%8java.lang.Long2FrequiredCriteria(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Long;)äá
+ò
+ãD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/TimetableService.javaô ô(l
+%10void"uee.hitsa.ois.util.JpaNativeQueryBuilder#requiredCriteria(Ljava/lang/String;Ljava/lang/String;Ljava/util/Collection;)V*/
+-
+qb'ee.hitsa.ois.util.JpaNativeQueryBuilder*-+
+)lp.student_group_id in (:studentGroupIds)*
+studentGroupIds*#
+!
+studentGroupIdsjava.util.List2LrequiredCriteria(Ljava/lang/String;Ljava/lang/String;Ljava/util/Collection;)÷”
+ò
+ãD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/TimetableService.javaö ö((
+%11void"Cee.hitsa.ois.util.JpaNativeQueryBuilder#filter(Ljava/lang/String;)V*/
+-
+qb'ee.hitsa.ois.util.JpaNativeQueryBuilder*
+lp.is_usable = true2filter(Ljava/lang/String;)ˇ
+¸
+ò
+ãD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/TimetableService.javaúd ú(f&
+%12javax.persistence.EntityManager"__id*1*/'
+%ee.hitsa.ois.service.TimetableService"
+emôñ
+ò
+ãD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/TimetableService.javaú ú(g
+%13javax.persistence.Query"|ee.hitsa.ois.util.JpaNativeQueryBuilder#select(Ljava/lang/String;Ljavax/persistence/EntityManager;)Ljavax/persistence/Query;*/
+-
+qb'ee.hitsa.ois.util.JpaNativeQueryBuilder*CA
+?lp.student_group_id, j.id as journal_id, jct.capacity_type_code*(
+&
+%12javax.persistence.EntityManager2;select(Ljava/lang/String;Ljavax/persistence/EntityManager;)°û
+ò
+ãD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/TimetableService.javaú ú(w
+%14java.util.List"7javax.persistence.Query#getResultList()Ljava/util/List;* 
+
+%13javax.persistence.Query2getResultList()’
+“
+ò
+ãD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/TimetableService.javaú ú(x
+datajava.util.List"__id*
+
+%14java.util.Listì
+ê
+ò
+ãD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/TimetableService.javaû û(w"
+%15java.util.function.Function"__declareFunction*<:
+8__sonar_lambda_910$ee.hitsa.ois.service.TimetableServiceá
+Ñ
+ò
+ãD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/TimetableService.javaù8 ü(
+%21java.util.List"nee.hitsa.ois.util.StreamUtil#toMappedList(Ljava/util/function/Function;Ljava/util/Collection;)Ljava/util/List;* "
+ee.hitsa.ois.util.StreamUtil*$
+"
+%15java.util.function.Function*
+
+datajava.util.List◊
+‘
+ò
+ãD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/TimetableService.javaù ü(
+resultjava.util.List"__id*
+
+%21java.util.Listª
+∏
+ò
+ãD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/TimetableService.java°A °(j
+%22java.util.Map"}ee.hitsa.ois.service.TimetableService#periodLessons(Ljava/util/List;Lee/hitsa/ois/domain/timetable/Timetable;)Ljava/util/Map;*)'
+%ee.hitsa.ois.service.TimetableService*#
+!
+studentGroupIdsjava.util.List*6
+4
+	timetable'ee.hitsa.ois.domain.timetable.Timetableﬂ
+‹
+ò
+ãD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/TimetableService.java° °(k!
+periodLessonsMapjava.util.Map"__id*
+
+%22java.util.MapΩ
+∫
+ò
+ãD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/TimetableService.java¢E ¢(p
+%23java.util.Map"ee.hitsa.ois.service.TimetableService#leftOverLessons(Ljava/util/List;Lee/hitsa/ois/domain/timetable/Timetable;)Ljava/util/Map;*)'
+%ee.hitsa.ois.service.TimetableService*#
+!
+studentGroupIdsjava.util.List*6
+4
+	timetable'ee.hitsa.ois.domain.timetable.Timetable·
+ﬁ
+ò
+ãD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/TimetableService.java¢ ¢(q#
+leftOverLessonsMapjava.util.Map"__id*
+
+%23java.util.Map§
+°
+ò
+ãD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/TimetableService.java£G §(
+%24java.util.Map"äee.hitsa.ois.service.TimetableService#getAllocatedLessonsForByJournalAndCapacity(Lee/hitsa/ois/domain/timetable/Timetable;)Ljava/util/Map;*)'
+%ee.hitsa.ois.service.TimetableService*6
+4
+	timetable'ee.hitsa.ois.domain.timetable.Timetable‚
+ﬂ
+ò
+ãD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/TimetableService.java£ §($
+allocatedLessonsMapjava.util.Map"__id*
+
+%24java.util.Map*
+2*ÿ
+1ò
+ãD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/TimetableService.java– –("∑
+ò
+ãD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/TimetableService.java– –(
+
+resultjava.util.List*∑
+2ò
+ãD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/TimetableService.java¶ ¶(1Ù
+Ò
+ò
+ãD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/TimetableService.java¶ ¶(1F
+dto?ee.hitsa.ois.web.dto.timetable.TimetableStudentGroupCapacityDto"__id*
+""ñ
+ì
+ò
+ãD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/TimetableService.java¶ ¶(1F
+dto?ee.hitsa.ois.web.dto.timetable.TimetableStudentGroupCapacityDto"
+__arrayGet*
+
+resultjava.util.List*
+""*
+1
+12*Æ
+3ò
+ãD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/TimetableService.java ,  (/Å˛
+ò
+ãD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/TimetableService.java ,  (H
+%66java.lang.Long"fee.hitsa.ois.web.dto.timetable.TimetableVocationalCapacityDto#getTotalPlannedLessons()Ljava/lang/Long;*H
+F
+dto?ee.hitsa.ois.web.dto.timetable.TimetableStudentGroupCapacityDto2getTotalPlannedLessons()ÓÎ
+ò
+ãD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/TimetableService.java ,  (T
+%67long"java.lang.Long#longValue()J*
+
+%66java.lang.Long2longValue()ÖÇ
+ò
+ãD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/TimetableService.javaÀ À(<
+%68java.lang.Long"hee.hitsa.ois.web.dto.timetable.TimetableVocationalCapacityDto#getTotalAllocatedLessons()Ljava/lang/Long;*H
+F
+dto?ee.hitsa.ois.web.dto.timetable.TimetableStudentGroupCapacityDto2getTotalAllocatedLessons()ÓÎ
+ò
+ãD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/TimetableService.javaÀ À(H
+%69long"java.lang.Long#longValue()J*
+
+%68java.lang.Long2longValue()¸
+˘
+ò
+ãD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/TimetableService.javaÃ, Ã(J
+%70java.lang.Long")java.lang.Long#valueOf(J)Ljava/lang/Long;*"
+java.lang.Long*
+""õò
+ò
+ãD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/TimetableService.javaÃ Ã(K
+%71void"dee.hitsa.ois.web.dto.timetable.TimetableVocationalCapacityDto#setTotalLessonsLeft(Ljava/lang/Long;)V*H
+F
+dto?ee.hitsa.ois.web.dto.timetable.TimetableStudentGroupCapacityDto*
+
+%70java.lang.Long2%setTotalLessonsLeft(Ljava/lang/Long;)*
+2*√%
+4ò
+ãD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/TimetableService.java¬ ¬(ÚÔ
+ò
+ãD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/TimetableService.java¬1 ¬(S
+%52java.lang.Long"Zee.hitsa.ois.service.TimetableService$AllocatedLessons#getTotalAllocated()Ljava/lang/Long;*J
+H
+currentLessons6ee.hitsa.ois.service.TimetableService$AllocatedLessons2getTotalAllocated()•¢
+ò
+ãD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/TimetableService.java¬ ¬(T
+%53void"iee.hitsa.ois.web.dto.timetable.TimetableVocationalCapacityDto#setTotalAllocatedLessons(Ljava/lang/Long;)V*H
+F
+dto?ee.hitsa.ois.web.dto.timetable.TimetableStudentGroupCapacityDto*
+
+%52java.lang.Long2*setTotalAllocatedLessons(Ljava/lang/Long;)ˇ¸
+ò
+ãD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/TimetableService.java√' √(B
+%54java.lang.Long"eee.hitsa.ois.web.dto.timetable.TimetableVocationalCapacityDto#getThisPlannedLessons()Ljava/lang/Long;*H
+F
+dto?ee.hitsa.ois.web.dto.timetable.TimetableStudentGroupCapacityDto2getThisPlannedLessons()ÓÎ
+ò
+ãD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/TimetableService.java√' √(N
+%55long"java.lang.Long#longValue()J*
+
+%54java.lang.Long2longValue()˛˚
+ò
+ãD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/TimetableService.javaƒ ƒ(F
+%56java.lang.Long"`ee.hitsa.ois.service.TimetableService$AllocatedLessons#getCurrentWeekAllocated()Ljava/lang/Long;*J
+H
+currentLessons6ee.hitsa.ois.service.TimetableService$AllocatedLessons2getCurrentWeekAllocated()ÓÎ
+ò
+ãD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/TimetableService.javaƒ ƒ(R
+%57long"java.lang.Long#longValue()J*
+
+%56java.lang.Long2longValue()¸
+˘
+ò
+ãD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/TimetableService.java≈' ≈(@
+%58java.lang.Long")java.lang.Long#valueOf(J)Ljava/lang/Long;*"
+java.lang.Long*
+""ëé
+ò
+ãD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/TimetableService.java≈ ≈(A
+%59void"_ee.hitsa.ois.web.dto.timetable.TimetableVocationalCapacityDto#setLessonsLeft(Ljava/lang/Long;)V*H
+F
+dto?ee.hitsa.ois.web.dto.timetable.TimetableStudentGroupCapacityDto*
+
+%58java.lang.Long2 setLessonsLeft(Ljava/lang/Long;)Å˛
+ò
+ãD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/TimetableService.java∆, ∆(H
+%60java.lang.Long"fee.hitsa.ois.web.dto.timetable.TimetableVocationalCapacityDto#getTotalPlannedLessons()Ljava/lang/Long;*H
+F
+dto?ee.hitsa.ois.web.dto.timetable.TimetableStudentGroupCapacityDto2getTotalPlannedLessons()ÓÎ
+ò
+ãD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/TimetableService.java∆, ∆(T
+%61long"java.lang.Long#longValue()J*
+
+%60java.lang.Long2longValue()ÖÇ
+ò
+ãD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/TimetableService.java« «(<
+%62java.lang.Long"hee.hitsa.ois.web.dto.timetable.TimetableVocationalCapacityDto#getTotalAllocatedLessons()Ljava/lang/Long;*H
+F
+dto?ee.hitsa.ois.web.dto.timetable.TimetableStudentGroupCapacityDto2getTotalAllocatedLessons()ÓÎ
+ò
+ãD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/TimetableService.java« «(H
+%63long"java.lang.Long#longValue()J*
+
+%62java.lang.Long2longValue()¸
+˘
+ò
+ãD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/TimetableService.java», »(J
+%64java.lang.Long")java.lang.Long#valueOf(J)Ljava/lang/Long;*"
+java.lang.Long*
+""õò
+ò
+ãD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/TimetableService.java» »(K
+%65void"dee.hitsa.ois.web.dto.timetable.TimetableVocationalCapacityDto#setTotalLessonsLeft(Ljava/lang/Long;)V*H
+F
+dto?ee.hitsa.ois.web.dto.timetable.TimetableStudentGroupCapacityDto*
+
+%64java.lang.Long2%setTotalLessonsLeft(Ljava/lang/Long;)*
+2*á
+5ò
+ãD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/TimetableService.java¿2 ¿(G¨
+©
+ò
+ãD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/TimetableService.java¿2 ¿(P=
+%516ee.hitsa.ois.service.TimetableService$AllocatedLessons"__mapGet*(
+&
+groupAllocatedLessonsjava.util.Map*
+
+keyjava.lang.StringØ
+¨
+ò
+ãD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/TimetableService.java¿ ¿(QH
+currentLessons6ee.hitsa.ois.service.TimetableService$AllocatedLessons"__id*?
+=
+%516ee.hitsa.ois.service.TimetableService$AllocatedLessons*
+3
+4*˝
+6ò
+ãD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/TimetableService.javaæB æ(UÎË
+ò
+ãD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/TimetableService.javaæZ æ(j
+%49java.lang.Long"\ee.hitsa.ois.web.dto.timetable.TimetableStudentGroupCapacityDto#getJournal()Ljava/lang/Long;*H
+F
+dto?ee.hitsa.ois.web.dto.timetable.TimetableStudentGroupCapacityDto2getJournal()ˇ
+¸
+ò
+ãD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/TimetableService.javaæB æ(k
+%50java.util.Map"__mapGet*&
+$
+allocatedLessonsMapjava.util.Map*
+
+%49java.lang.Long‰
+·
+ò
+ãD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/TimetableService.javaæ æ(l&
+groupAllocatedLessonsjava.util.Map"__id*
+
+%50java.util.Map*
+2
+5*Æ
+7ò
+ãD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/TimetableService.java∏+ ∏(<ÖÇ
+ò
+ãD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/TimetableService.java∏+ ∏(Y
+%43java.lang.Long"bee.hitsa.ois.service.TimetableService$LeftOverLessons#getOutsidePeriodTotalHours()Ljava/lang/Long;*L
+J
+capacityLeftOvers5ee.hitsa.ois.service.TimetableService$LeftOverLessons2getOutsidePeriodTotalHours()ÓÎ
+ò
+ãD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/TimetableService.java∏+ ∏(e
+%44long"java.lang.Long#longValue()J*
+
+%43java.lang.Long2longValue()ÉÄ
+ò
+ãD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/TimetableService.javaπ π(K
+%45java.lang.Long"aee.hitsa.ois.service.TimetableService$LeftOverLessons#getOutsidePeriodAllocated()Ljava/lang/Long;*L
+J
+capacityLeftOvers5ee.hitsa.ois.service.TimetableService$LeftOverLessons2getOutsidePeriodAllocated()ÓÎ
+ò
+ãD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/TimetableService.javaπ π(W
+%46long"java.lang.Long#longValue()J*
+
+%45java.lang.Long2longValue()¸
+˘
+ò
+ãD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/TimetableService.java∫+ ∫(H
+%47java.lang.Long")java.lang.Long#valueOf(J)Ljava/lang/Long;*"
+java.lang.Long*
+""ôñ
+ò
+ãD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/TimetableService.java∫ ∫(I
+%48void"cee.hitsa.ois.web.dto.timetable.TimetableVocationalCapacityDto#setLeftOverLessons(Ljava/lang/Long;)V*H
+F
+dto?ee.hitsa.ois.web.dto.timetable.TimetableStudentGroupCapacityDto*
+
+%47java.lang.Long2$setLeftOverLessons(Ljava/lang/Long;)*
+6*â
+8ò
+ãD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/TimetableService.java∂4 ∂(H≠
+™
+ò
+ãD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/TimetableService.java∂4 ∂(T<
+%425ee.hitsa.ois.service.TimetableService$LeftOverLessons"__mapRemove*'
+%
+groupLeftOverLessonsjava.util.Map*
+
+keyjava.lang.String∞
+≠
+ò
+ãD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/TimetableService.java∂ ∂(UJ
+capacityLeftOvers5ee.hitsa.ois.service.TimetableService$LeftOverLessons"__id*>
+<
+%425ee.hitsa.ois.service.TimetableService$LeftOverLessons*
+6
+7*˚
+9ò
+ãD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/TimetableService.java¥@ ¥(RÎË
+ò
+ãD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/TimetableService.java¥W ¥(g
+%40java.lang.Long"\ee.hitsa.ois.web.dto.timetable.TimetableStudentGroupCapacityDto#getJournal()Ljava/lang/Long;*H
+F
+dto?ee.hitsa.ois.web.dto.timetable.TimetableStudentGroupCapacityDto2getJournal()˛
+˚
+ò
+ãD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/TimetableService.java¥@ ¥(h
+%41java.util.Map"__mapGet*%
+#
+leftOverLessonsMapjava.util.Map*
+
+%40java.lang.Long„
+‡
+ò
+ãD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/TimetableService.java¥ ¥(i%
+groupLeftOverLessonsjava.util.Map"__id*
+
+%41java.util.Map*
+6
+8*Ä
+10ò
+ãD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/TimetableService.java≠ ≠(˜Ù
+ò
+ãD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/TimetableService.java≠/ ≠(W
+%32java.lang.Long"\ee.hitsa.ois.service.TimetableService$PeriodLessons#getTotalPlannedLessons()Ljava/lang/Long;*H
+F
+capacityLpHours3ee.hitsa.ois.service.TimetableService$PeriodLessons2getTotalPlannedLessons()°û
+ò
+ãD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/TimetableService.java≠ ≠(X
+%33void"gee.hitsa.ois.web.dto.timetable.TimetableVocationalCapacityDto#setTotalPlannedLessons(Ljava/lang/Long;)V*H
+F
+dto?ee.hitsa.ois.web.dto.timetable.TimetableStudentGroupCapacityDto*
+
+%32java.lang.Long2(setTotalPlannedLessons(Ljava/lang/Long;)˜Ù
+ò
+ãD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/TimetableService.javaÆ, Æ(T
+%34java.lang.Long"\ee.hitsa.ois.service.TimetableService$PeriodLessons#getTotalPlannedLessons()Ljava/lang/Long;*H
+F
+capacityLpHours3ee.hitsa.ois.service.TimetableService$PeriodLessons2getTotalPlannedLessons()õò
+ò
+ãD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/TimetableService.javaÆ Æ(U
+%35void"dee.hitsa.ois.web.dto.timetable.TimetableVocationalCapacityDto#setTotalLessonsLeft(Ljava/lang/Long;)V*H
+F
+dto?ee.hitsa.ois.web.dto.timetable.TimetableStudentGroupCapacityDto*
+
+%34java.lang.Long2%setTotalLessonsLeft(Ljava/lang/Long;)ıÚ
+ò
+ãD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/TimetableService.javaØ. Ø(U
+%36java.lang.Long"[ee.hitsa.ois.service.TimetableService$PeriodLessons#getThisPlannedLessons()Ljava/lang/Long;*H
+F
+capacityLpHours3ee.hitsa.ois.service.TimetableService$PeriodLessons2getThisPlannedLessons()üú
+ò
+ãD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/TimetableService.javaØ Ø(V
+%37void"fee.hitsa.ois.web.dto.timetable.TimetableVocationalCapacityDto#setThisPlannedLessons(Ljava/lang/Long;)V*H
+F
+dto?ee.hitsa.ois.web.dto.timetable.TimetableStudentGroupCapacityDto*
+
+%36java.lang.Long2'setThisPlannedLessons(Ljava/lang/Long;)ıÚ
+ò
+ãD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/TimetableService.java∞' ∞(N
+%38java.lang.Long"[ee.hitsa.ois.service.TimetableService$PeriodLessons#getThisPlannedLessons()Ljava/lang/Long;*H
+F
+capacityLpHours3ee.hitsa.ois.service.TimetableService$PeriodLessons2getThisPlannedLessons()ëé
+ò
+ãD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/TimetableService.java∞ ∞(O
+%39void"_ee.hitsa.ois.web.dto.timetable.TimetableVocationalCapacityDto#setLessonsLeft(Ljava/lang/Long;)V*H
+F
+dto?ee.hitsa.ois.web.dto.timetable.TimetableStudentGroupCapacityDto*
+
+%38java.lang.Long2 setLessonsLeft(Ljava/lang/Long;)*
+9*Ä
+11ò
+ãD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/TimetableService.java´0 ´(D®
+•
+ò
+ãD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/TimetableService.java´0 ´(M:
+%313ee.hitsa.ois.service.TimetableService$PeriodLessons"__mapGet*'
+%
+groupLessonPlanHoursjava.util.Map*
+
+keyjava.lang.String™
+ß
+ò
+ãD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/TimetableService.java´ ´(NF
+capacityLpHours3ee.hitsa.ois.service.TimetableService$PeriodLessons"__id*<
+:
+%313ee.hitsa.ois.service.TimetableService$PeriodLessons*
+9
+10*¶
+12ò
+ãD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/TimetableService.javaß ß(ıÚ
+ò
+ãD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/TimetableService.javaß ß(.
+%25java.lang.Long"aee.hitsa.ois.web.dto.timetable.TimetableStudentGroupCapacityDto#getStudentGroup()Ljava/lang/Long;*H
+F
+dto?ee.hitsa.ois.web.dto.timetable.TimetableStudentGroupCapacityDto2getStudentGroup()·
+ﬁ
+ò
+ãD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/TimetableService.javaß ß(4
+%26java.lang.String"__concat*
+
+%25java.lang.Long*
+/˜Ù
+ò
+ãD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/TimetableService.javaß7 ß(L
+%27java.lang.String"aee.hitsa.ois.web.dto.timetable.TimetableVocationalCapacityDto#getCapacityType()Ljava/lang/String;*H
+F
+dto?ee.hitsa.ois.web.dto.timetable.TimetableStudentGroupCapacityDto2getCapacityType()˜
+Ù
+ò
+ãD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/TimetableService.javaß ß(L
+%28java.lang.String"__concat*
+
+%26java.lang.String*
+
+%27java.lang.Stringÿ
+’
+ò
+ãD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/TimetableService.javaß ß(M
+keyjava.lang.String"__id*
+
+%28java.lang.StringÎË
+ò
+ãD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/TimetableService.java©S ©(c
+%29java.lang.Long"\ee.hitsa.ois.web.dto.timetable.TimetableStudentGroupCapacityDto#getJournal()Ljava/lang/Long;*H
+F
+dto?ee.hitsa.ois.web.dto.timetable.TimetableStudentGroupCapacityDto2getJournal()¸
+˘
+ò
+ãD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/TimetableService.java©> ©(d
+%30java.util.Map"__mapGet*#
+!
+periodLessonsMapjava.util.Map*
+
+%29java.lang.Long„
+‡
+ò
+ãD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/TimetableService.java© ©(e%
+groupLessonPlanHoursjava.util.Map"__id*
+
+%30java.util.Map*
+9
+11:!
+studentGroupIdsjava.util.List:4
+	timetable'ee.hitsa.ois.domain.timetable.TimetableB)'
+%ee.hitsa.ois.service.TimetableService

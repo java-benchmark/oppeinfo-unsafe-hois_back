@@ -1,0 +1,142 @@
+
+hee.hitsa.ois.service.TimetableEventService#getRoomsByTimetableEventTime(Ljava/util/List;)Ljava/util/Map;ù
+êD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/TimetableEventService.javaô* ô(F"1*Å6
+1ù
+êD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/TimetableEventService.javaö ö(5ê
+ç
+ù
+êD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/TimetableEventService.javaö õ(6
+%0java.lang.String"__concat*!
+from timetable_event_room ter*&$
+" join room r on r.id = ter.room_idç
+ä
+ù
+êD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/TimetableEventService.javaö ú(<
+%1java.lang.String"__concat*
+
+%0java.lang.String*,*
+( join building b on b.id = r.building_id›
+⁄
+ù
+êD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/TimetableEventService.javaö ú(=
+fromjava.lang.String"__id*
+
+%1java.lang.String˚¯
+ù
+êD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/TimetableEventService.javaù' ù(<-
+%2'ee.hitsa.ois.util.JpaNativeQueryBuilder"'ee.hitsa.ois.util.JpaNativeQueryBuilderª
+∏
+ù
+êD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/TimetableEventService.javaù# ù(B
+%3"Cee.hitsa.ois.util.JpaNativeQueryBuilder#<init>(Ljava/lang/String;)V*/
+-
+%2'ee.hitsa.ois.util.JpaNativeQueryBuilder*
+
+fromjava.lang.Stringâ
+Ü
+ù
+êD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/TimetableEventService.javaù ù(C-
+qb'ee.hitsa.ois.util.JpaNativeQueryBuilder"__id*/
+-
+%2'ee.hitsa.ois.util.JpaNativeQueryBuilder˚¯
+ù
+êD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/TimetableEventService.javaü ü(Y
+
+%4void"uee.hitsa.ois.util.JpaNativeQueryBuilder#requiredCriteria(Ljava/lang/String;Ljava/lang/String;Ljava/util/Collection;)V*/
+-
+qb'ee.hitsa.ois.util.JpaNativeQueryBuilder*,*
+(ter.timetable_event_time_id in (:tetIds)*
+
+tetIds*
+
+tetIdsjava.util.List2LrequiredCriteria(Ljava/lang/String;Ljava/lang/String;Ljava/util/Collection;)ûõ
+ù
+êD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/TimetableEventService.java° °(!-
+%5'ee.hitsa.ois.util.JpaNativeQueryBuilder"jee.hitsa.ois.util.JpaNativeQueryBuilder#sort([Ljava/lang/String;)Lee/hitsa/ois/util/JpaNativeQueryBuilder;*/
+-
+qb'ee.hitsa.ois.util.JpaNativeQueryBuilder*
+b.code, r.code2sort([Ljava/lang/String;)à
+Ö
+ù
+êD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/TimetableEventService.java£u £(w%
+%6javax.persistence.EntityManager"__id*6*4,
+*ee.hitsa.ois.service.TimetableEventService"
+em∂≥
+ù
+êD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/TimetableEventService.java¢ £(x
+%7javax.persistence.Query"|ee.hitsa.ois.util.JpaNativeQueryBuilder#select(Ljava/lang/String;Ljavax/persistence/EntityManager;)Ljavax/persistence/Query;*/
+-
+qb'ee.hitsa.ois.util.JpaNativeQueryBuilder*][
+Yter.timetable_event_time_id, r.id as roomId, r.code as room_code, b.code as building_code*'
+%
+%6javax.persistence.EntityManager2;select(Ljava/lang/String;Ljavax/persistence/EntityManager;)§°
+ù
+êD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/TimetableEventService.java¢ §( 
+%8java.util.List"7javax.persistence.Query#getResultList()Ljava/util/List;*
+
+%7javax.persistence.Query2getResultList()‡
+›
+ù
+êD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/TimetableEventService.java¢ §(!
+queryResultjava.util.List"__id*
+
+%8java.util.Listû
+õ
+û
+êD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/TimetableEventService.javaß ß(á!
+%9java.util.function.Function"__declareFunction*B@
+>__sonar_lambda_1218$ee.hitsa.ois.service.TimetableEventServiceì
+ê
+û
+êD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/TimetableEventService.java¶+ ß(ï
+%16java.util.List"nee.hitsa.ois.util.StreamUtil#toMappedList(Ljava/util/function/Function;Ljava/util/Collection;)Ljava/util/List;* "
+ee.hitsa.ois.util.StreamUtil*#
+!
+%9java.util.function.Function*
+
+queryResultjava.util.List‰
+·
+û
+êD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/TimetableEventService.java¶ ß(ñ
+resultObjectsjava.util.List"__id*
+
+%16java.util.Listê
+ç
+ù
+êD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/TimetableEventService.java® ®(@
+%17void"oee.hitsa.ois.service.TimetableEventService#setOtherRoomsByTimetableEventTime(Ljava/util/List;Ljava/util/List;)V*.,
+*ee.hitsa.ois.service.TimetableEventService*
+
+tetIdsjava.util.List*!
+
+resultObjectsjava.util.List®•
+ù
+êD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/TimetableEventService.java© ©(%
+%18java.util.stream.Stream"6java.util.Collection#stream()Ljava/util/stream/Stream;*!
+
+resultObjectsjava.util.List2stream()û
+õ
+ù
+êD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/TimetableEventService.java©D ©(`"
+%19java.util.function.Function"__declareFunction*B@
+>__sonar_lambda_1219$ee.hitsa.ois.service.TimetableEventService
+Ì
+ù
+êD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/TimetableEventService.java©. ©(a!
+%21java.util.stream.Collector"ajava.util.stream.Collectors#groupingBy(Ljava/util/function/Function;)Ljava/util/stream/Collector;*"
+java.util.stream.Collectors*$
+"
+%19java.util.function.Function¯ı
+ù
+êD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/TimetableEventService.java© ©(b
+%22java.util.Map"Ojava.util.stream.Stream#collect(Ljava/util/stream/Collector;)Ljava/lang/Object;* 
+
+%18java.util.stream.Stream*#
+!
+%21java.util.stream.Collector2%collect(Ljava/util/stream/Collector;)"∏
+ù
+êD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/TimetableEventService.java© ©(c
+
+%22java.util.Map:
+tetIdsjava.util.ListB.,
+*ee.hitsa.ois.service.TimetableEventService

@@ -1,0 +1,200 @@
+
+´ee.hitsa.ois.util.ApplicationUtil#assertValisPeriodUniqueness(Ljava/lang/Long;Ljava/lang/Long;Ljava/time/LocalDate;Ljava/time/LocalDate;Ljavax/persistence/EntityManager;)Vî
+áD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/util/ApplicationUtil.java† †(2"2*ßD
+2î
+áD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/util/ApplicationUtil.java¢= ¢(Xå
+â
+î
+áD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/util/ApplicationUtil.java¢= £(?
+%0java.lang.String"__concat*
+from directive_student ds*/-
++ join directive d on d.id = ds.directive_id¶
+£
+î
+áD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/util/ApplicationUtil.java¢= §(^
+%1java.lang.String"__concat*
+
+%0java.lang.String*NL
+J left join study_period sp_start on sp_start.id = ds.study_period_start_id†
+ù
+î
+áD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/util/ApplicationUtil.java¢= •(X
+%2java.lang.String"__concat*
+
+%1java.lang.String*HF
+D left join study_period sp_end on sp_end.id = ds.study_period_end_idª
+∏
+î
+áD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/util/ApplicationUtil.java¢= ¶(s
+%3java.lang.String"__concat*
+
+%2java.lang.String*ca
+_ left join (directive_student ds_katk join directive d_katk on d_katk.id = ds_katk.directive_id±
+Æ
+î
+áD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/util/ApplicationUtil.java¢= ß(m
+%4java.lang.String"__concat*
+
+%3java.lang.String*YW
+U and d_katk.type_code = :katkDirectiveType and d_katk.status_code = :directiveStatus)°
+û
+î
+áD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/util/ApplicationUtil.java¢= ®(]
+%5java.lang.String"__concat*
+
+%4java.lang.String*IG
+E on ds_katk.directive_student_id = ds.id and ds_katk.canceled = falseÚÔ
+î
+áD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/util/ApplicationUtil.java¢' ¢(<-
+%6'ee.hitsa.ois.util.JpaNativeQueryBuilder"'ee.hitsa.ois.util.JpaNativeQueryBuilder∞
+≠
+î
+áD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/util/ApplicationUtil.java¢# ®(^
+%7"Cee.hitsa.ois.util.JpaNativeQueryBuilder#<init>(Ljava/lang/String;)V*/
+-
+%6'ee.hitsa.ois.util.JpaNativeQueryBuilder*
+
+%5java.lang.StringÄ
+˝
+î
+áD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/util/ApplicationUtil.java¢ ®(_-
+qb'ee.hitsa.ois.util.JpaNativeQueryBuilder"__id*/
+-
+%6'ee.hitsa.ois.util.JpaNativeQueryBuilderﬁ€
+î
+áD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/util/ApplicationUtil.java© ©(Q
+
+%8void"oee.hitsa.ois.util.JpaNativeQueryBuilder#requiredCriteria(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Long;)V*/
+-
+qb'ee.hitsa.ois.util.JpaNativeQueryBuilder*
+ds.student_id = :studentId*
+	studentId*
+
+	studentIdjava.lang.Long2FrequiredCriteria(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Long;)–
+Õ
+î
+áD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/util/ApplicationUtil.java™M ™(i&
+%9 ee.hitsa.ois.enums.DirectiveType"__id*
+""Ì
+î
+áD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/util/ApplicationUtil.java™ ™(j
+%10void"oee.hitsa.ois.util.JpaNativeQueryBuilder#requiredCriteria(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Enum;)V*/
+-
+qb'ee.hitsa.ois.util.JpaNativeQueryBuilder* 
+d.type_code = :directiveType*
+directiveType*(
+&
+%9 ee.hitsa.ois.enums.DirectiveType2FrequiredCriteria(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Enum;)”
+–
+î
+áD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/util/ApplicationUtil.java¨ ¨(;)
+%11"ee.hitsa.ois.enums.DirectiveStatus"__id*
+""ëé
+î
+áD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/util/ApplicationUtil.java´ ¨(<
+%12void"oee.hitsa.ois.util.JpaNativeQueryBuilder#requiredCriteria(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Enum;)V*/
+-
+qb'ee.hitsa.ois.util.JpaNativeQueryBuilder*<:
+8d.status_code = :directiveStatus and ds.canceled = false*
+directiveStatus*+
+)
+%11"ee.hitsa.ois.enums.DirectiveStatus2FrequiredCriteria(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Enum;)—
+Œ
+î
+áD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/util/ApplicationUtil.java≠* ≠(J'
+%13 ee.hitsa.ois.enums.DirectiveType"__id*
+""èå
+î
+áD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/util/ApplicationUtil.java≠* ≠(Q
+%14java.lang.String"'java.lang.Enum#name()Ljava/lang/String;*)
+'
+%13 ee.hitsa.ois.enums.DirectiveType2name()ïí
+î
+áD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/util/ApplicationUtil.java≠ ≠(R
+%15void"Xee.hitsa.ois.util.JpaNativeQueryBuilder#parameter(Ljava/lang/String;Ljava/lang/Object;)V*/
+-
+qb'ee.hitsa.ois.util.JpaNativeQueryBuilder*
+katkDirectiveType*
+
+%14java.lang.String2/parameter(Ljava/lang/String;Ljava/lang/Object;)Ê„
+î
+áD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/util/ApplicationUtil.javaÆ ∞(#
+%16void"tee.hitsa.ois.util.JpaNativeQueryBuilder#requiredCriteria(Ljava/lang/String;Ljava/lang/String;Ljava/time/LocalDate;)V*/
+-
+qb'ee.hitsa.ois.util.JpaNativeQueryBuilder*ôñ
+ìcoalesce(case when ds_katk.start_date is not null then ds_katk.start_date - interval '1 day' else null end, sp_end.end_date, ds.end_date) >= :start*	
+start*"
+ 
+	startDatejava.time.LocalDate2KrequiredCriteria(Ljava/lang/String;Ljava/lang/String;Ljava/time/LocalDate;)Ä˝
+î
+áD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/util/ApplicationUtil.java± ±(c
+%17void"tee.hitsa.ois.util.JpaNativeQueryBuilder#requiredCriteria(Ljava/lang/String;Ljava/lang/String;Ljava/time/LocalDate;)V*/
+-
+qb'ee.hitsa.ois.util.JpaNativeQueryBuilder*86
+4coalesce(sp_start.start_date, ds.start_date) <= :end*
+end* 
+
+endDatejava.time.LocalDate2KrequiredCriteria(Ljava/lang/String;Ljava/lang/String;Ljava/time/LocalDate;)Û
+î
+áD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/util/ApplicationUtil.java≤ ≤(e
+%18void"oee.hitsa.ois.util.JpaNativeQueryBuilder#optionalCriteria(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Long;)V*/
+-
+qb'ee.hitsa.ois.util.JpaNativeQueryBuilder* 
+ds.id != :directiveStudentId*
+directiveStudentId*&
+$
+directiveStudentIdjava.lang.Long2FoptionalCriteria(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Long;)⁄◊
+î
+áD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/util/ApplicationUtil.java¥ ¥(-
+%19javax.persistence.Query"|ee.hitsa.ois.util.JpaNativeQueryBuilder#select(Ljava/lang/String;Ljavax/persistence/EntityManager;)Ljavax/persistence/Query;*/
+-
+qb'ee.hitsa.ois.util.JpaNativeQueryBuilder*	
+ds.id*'
+%
+emjavax.persistence.EntityManager2;select(Ljava/lang/String;Ljavax/persistence/EntityManager;)∑¥
+î
+áD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/util/ApplicationUtil.java¥ ¥(>
+%20javax.persistence.Query"Ajavax.persistence.Query#setMaxResults(I)Ljavax/persistence/Query;* 
+
+%19javax.persistence.Query*22setMaxResults(I)ùö
+î
+áD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/util/ApplicationUtil.java¥ ¥(N
+%21java.util.List"7javax.persistence.Query#getResultList()Ljava/util/List;* 
+
+%20javax.persistence.Query2getResultList()—
+Œ
+î
+áD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/util/ApplicationUtil.java¥ ¥(O
+datajava.util.List"__id*
+
+%21java.util.ListÍÁ
+î
+áD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/util/ApplicationUtil.javaµ µ(
+%22boolean"java.util.List#isEmpty()Z*
+
+datajava.util.List2	isEmpty()*
+0
+1*¥
+0 "¨
+î
+áD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/util/ApplicationUtil.java∏ ∏(
+implicit return*”
+1î
+áD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/util/ApplicationUtil.java∂$ ∂(OÌÍ
+î
+áD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/util/ApplicationUtil.java∂ ∂(#+
+%23$ee.hitsa.ois.exception.HoisException"$ee.hitsa.ois.exception.HoisException¡
+æ
+î
+áD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/util/ApplicationUtil.java∂ ∂(P
+%24"@ee.hitsa.ois.exception.HoisException#<init>(Ljava/lang/String;)V*-
++
+%23$ee.hitsa.ois.exception.HoisException*-+
+)application.messages.foreignStudyInPeriod*
+0:
+	studentIdjava.lang.Long:$
+directiveStudentIdjava.lang.Long: 
+	startDatejava.time.LocalDate:
+endDatejava.time.LocalDate:%
+emjavax.persistence.EntityManagerB%"#
+!ee.hitsa.ois.util.ApplicationUtil

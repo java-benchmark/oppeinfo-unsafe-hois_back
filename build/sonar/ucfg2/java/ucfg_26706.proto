@@ -1,0 +1,104 @@
+
+aee.hitsa.ois.service.LessonPlanService#lessonPlanJournalTeachers(Ljava/lang/Long;)Ljava/util/Set;™
+ŒD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/LessonPlanService.java (/"1*þ#
+1™
+ŒD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/LessonPlanService.java‘ ‘(€
+ý
+™
+ŒD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/LessonPlanService.java‘ ‘(%
+%0javax.persistence.EntityManager"__id*2*0(
+&ee.hitsa.ois.service.LessonPlanService"
+em§
+¤
+™
+ŒD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/LessonPlanService.java‘0 ’(R
+%1java.lang.String"__concat*$"
+ select t.id from lesson_plan lp *><
+:join lesson_plan_module lpm on lp.id = lpm.lesson_plan_id ³
+°
+™
+ŒD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/LessonPlanService.java‘0 “(j
+%2java.lang.String"__concat*
+
+%1java.lang.String*VT
+Rjoin curriculum_version_omodule cvo on lpm.curriculum_version_omodule_id = cvo.id »
+¸
+™
+ŒD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/LessonPlanService.java‘0 ”(r
+%3java.lang.String"__concat*
+
+%2java.lang.String*^\
+Zjoin curriculum_version_omodule_theme cvot on cvo.id = cvot.curriculum_version_omodule_id µ
+²
+™
+ŒD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/LessonPlanService.java‘0 •(l
+%4java.lang.String"__concat*
+
+%3java.lang.String*XV
+Tjoin journal_omodule_theme jot on cvot.id = jot.curriculum_version_omodule_theme_id ›
+˜
+™
+ŒD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/LessonPlanService.java‘0 –(R
+%5java.lang.String"__concat*
+
+%4java.lang.String*><
+:join journal_teacher jt on jot.journal_id = jt.journal_id ˆ
+…
+™
+ŒD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/LessonPlanService.java‘0 —(?
+%6java.lang.String"__concat*
+
+%5java.lang.String*+)
+'join teacher t on jt.teacher_id = t.id ñ
+î
+™
+ŒD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/LessonPlanService.java‘0 ˜((
+%7java.lang.String"__concat*
+
+%6java.lang.String*
+where lp.id = ?1ˆ…
+™
+ŒD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/LessonPlanService.java‘ ˜()
+%8javax.persistence.Query"^javax.persistence.EntityManager#createNativeQuery(Ljava/lang/String;)Ljavax/persistence/Query;*'
+%
+%0javax.persistence.EntityManager*
+
+%7java.lang.String2%createNativeQuery(Ljava/lang/String;)þû
+™
+ŒD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/LessonPlanService.java‘ ™(.
+%9javax.persistence.Query"Rjavax.persistence.Query#setParameter(ILjava/lang/Object;)Ljavax/persistence/Query;*
+
+%8javax.persistence.Query*2* 
+
+lessonPlanIdjava.lang.Long2!setParameter(ILjava/lang/Object;)¡ž
+™
+ŒD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/LessonPlanService.java‘ š( 
+%10java.util.List"7javax.persistence.Query#getResultList()Ljava/util/List;*
+
+%9javax.persistence.Query2getResultList()Ú
+×
+™
+ŒD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/LessonPlanService.java‘ š(!
+teachersjava.util.List"__id*
+
+%10java.util.List–
+“
+™
+ŒD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/LessonPlanService.java›& ›(="
+%11java.util.function.Function"__declareFunction*><
+:__sonar_lambda_2791$ee.hitsa.ois.service.LessonPlanService‰
+†
+™
+ŒD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/LessonPlanService.java› ›(H
+%13java.util.Set"lee.hitsa.ois.util.StreamUtil#toMappedSet(Ljava/util/function/Function;Ljava/util/Collection;)Ljava/util/Set;* "
+ee.hitsa.ois.util.StreamUtil*$
+"
+%11java.util.function.Function*
+
+teachersjava.util.List"´
+™
+ŒD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/LessonPlanService.java› ›(I
+
+%13java.util.Set:
+lessonPlanIdjava.lang.LongB*(
+&ee.hitsa.ois.service.LessonPlanService

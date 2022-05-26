@@ -1,0 +1,71 @@
+
+tee.hitsa.ois.service.ApelApplicationService#existingStudentCurriculumOutcomeResults(Ljava/lang/Long;)Ljava/util/Map;
+‘D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/ApelApplicationService.java¹= ¹(d"1*½
+1
+‘D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/ApelApplicationService.javaº> º(@Š
+‡
+
+‘D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/ApelApplicationService.javaº> º(@%
+%0javax.persistence.EntityManager"__id*7*5-
++ee.hitsa.ois.service.ApelApplicationService"
+em³
+°
+
+‘D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/ApelApplicationService.javaºM »(d
+%1java.lang.String"__concat*
+select scmor from*TR
+P StudentCurriculumModuleOutcomesResult scmor where scmor.student.id = :studentIdµ²
+
+‘D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/ApelApplicationService.javaº> ¼(<"
+%2javax.persistence.TypedQuery"njavax.persistence.EntityManager#createQuery(Ljava/lang/String;Ljava/lang/Class;)Ljavax/persistence/TypedQuery;*'
+%
+%0javax.persistence.EntityManager*
+
+%1java.lang.String*
+""20createQuery(Ljava/lang/String;Ljava/lang/Class;)¿¼
+
+‘D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/ApelApplicationService.javaº> ½(5"
+%3javax.persistence.TypedQuery"mjavax.persistence.TypedQuery#setParameter(Ljava/lang/String;Ljava/lang/Object;)Ljavax/persistence/TypedQuery;*$
+"
+%2javax.persistence.TypedQuery*
+	studentId*
+
+	studentIdjava.lang.Long22setParameter(Ljava/lang/String;Ljava/lang/Object;)¯¬
+
+‘D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/ApelApplicationService.javaº> ¾( 
+%4java.util.List"<javax.persistence.TypedQuery#getResultList()Ljava/util/List;*$
+"
+%3javax.persistence.TypedQuery2getResultList()İ
+Ú
+
+‘D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/ApelApplicationService.javaº ¾(!
+resultsjava.util.List"__id*
+
+%4java.util.ListŸ
+œ
+
+‘D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/ApelApplicationService.java¿  ¿(V!
+%5java.util.function.Function"__declareFunction*CA
+?__sonar_lambda_1745$ee.hitsa.ois.service.ApelApplicationServiceŸ
+œ
+
+‘D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/ApelApplicationService.java¿X ¿(^!
+%8java.util.function.Function"__declareFunction*CA
+?__sonar_lambda_1746$ee.hitsa.ois.service.ApelApplicationServiceÈ
+Å
+
+‘D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/ApelApplicationService.java¿ ¿(h
+%9java.util.Map"ƒee.hitsa.ois.util.StreamUtil#toMap(Ljava/util/function/Function;Ljava/util/function/Function;Ljava/util/Collection;)Ljava/util/Map;* "
+ee.hitsa.ois.util.StreamUtil*#
+!
+%5java.util.function.Function*#
+!
+%8java.util.function.Function*
+
+resultsjava.util.List"¸
+
+‘D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/ApelApplicationService.java¿ ¿(i
+
+%9java.util.Map:
+	studentIdjava.lang.LongB/-
++ee.hitsa.ois.service.ApelApplicationService

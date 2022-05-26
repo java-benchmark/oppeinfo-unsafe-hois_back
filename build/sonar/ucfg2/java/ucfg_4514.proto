@@ -1,0 +1,250 @@
+
+eee.hitsa.ois.service.JournalService#studentAbsences(Ljava/lang/Long;Ljava/lang/Long;)Ljava/util/List;–
+‰D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/JournalService.java‹* ‹(9"3*À
+2–
+‰D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/JournalService.java ("¡
+–
+‰D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/JournalService.java (
+""*Ñ
+3–
+‰D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/JournalService.javaŒ Œ(.
+‹
+–
+‰D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/JournalService.javaŒ Œ(.+
+%0%ee.hitsa.ois.service.StudyYearService"__id*=*;%
+#ee.hitsa.ois.service.JournalService"
+studyYearService¡
+–
+‰D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/JournalService.javaŒ Œ(L#
+%1ee.hitsa.ois.domain.StudyYear"jee.hitsa.ois.service.StudyYearService#getCurrentStudyYear(Ljava/lang/Long;)Lee/hitsa/ois/domain/StudyYear;*-
++
+%0%ee.hitsa.ois.service.StudyYearService*
+
+schoolIdjava.lang.Long2%getCurrentStudyYear(Ljava/lang/Long;)õ
+ò
+–
+‰D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/JournalService.javaŒ Œ(M*
+	studyYearee.hitsa.ois.domain.StudyYear"__id*%
+#
+%1ee.hitsa.ois.domain.StudyYear*
+2
+1*P
+1–
+‰D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/JournalService.java‘ ‘(#€
+ı
+–
+‰D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/JournalService.java‘ ‘()
+%2java.time.LocalDate".java.time.LocalDate#now()Ljava/time/LocalDate;*"
+java.time.LocalDateİ
+Ú
+–
+‰D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/JournalService.java‘ ‘(*
+todayjava.time.LocalDate"__id*
+
+%2java.time.LocalDateú
+÷
+–
+‰D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/JournalService.java’ ’(%
+%3javax.persistence.EntityManager"__id*/*-%
+#ee.hitsa.ois.service.JournalService"
+emà
+İ
+–
+‰D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/JournalService.java’' “(S
+%4java.lang.String"__concat*[Y
+Wselect je.id, je.entry_date, j.name_et, coalesce(jesla.absence_code, jes.absence_code),*CA
+? je.start_lesson_nr, je.lessons, jesla.lesson_nr from journal jŠ
+‡
+–
+‰D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/JournalService.java’' ”(@
+%5java.lang.String"__concat*
+
+%4java.lang.String*0.
+, join journal_entry je on je.journal_id=j.idŒ
+‰
+–
+‰D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/JournalService.java’' •(B
+%6java.lang.String"__concat*
+
+%5java.lang.String*20
+. join journal_student js on js.journal_id=j.id¼
+¹
+–
+‰D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/JournalService.java’' –(r
+%7java.lang.String"__concat*
+
+%6java.lang.String*b`
+^ join journal_entry_student jes on jes.journal_entry_id=je.id and jes.journal_student_id=js.id¾
+»
+–
+‰D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/JournalService.java’' —(t
+%8java.lang.String"__concat*
+
+%7java.lang.String*db
+` left join journal_entry_student_lesson_absence jesla on jesla.journal_entry_student_id = jes.idƒ
+€
+–
+‰D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/JournalService.java’' ˜(9
+%9java.lang.String"__concat*
+
+%8java.lang.String*)'
+% join student s on s.id=js.student_idÚ
+×
+—
+‰D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/JournalService.java’' ™(
+%10java.lang.String"__concat*
+
+%9java.lang.String*~|
+z where j.study_year_id= ?1 and s.id= ?2 and (jes.absence_code in (:absenceCodes) or jesla.absence_code in (:absenceCodes))­
+ª
+–
+‰D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/JournalService.java’' š(a
+%11java.lang.String"__concat*
+
+%10java.lang.String*QO
+M and (je.entry_date is null or (je.entry_date >= ?3 and je.entry_date <= ?4))±
+®
+–
+‰D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/JournalService.java’' ›(e
+%12java.lang.String"__concat*
+
+%11java.lang.String*US
+Q group by j.name_et, je.id, jes.absence_code, jesla.absence_code, jesla.lesson_nr˜
+•
+–
+‰D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/JournalService.java’' œ(L
+%13java.lang.String"__concat*
+
+%12java.lang.String*<:
+8 order by je.entry_date desc nulls last, jesla.lesson_nr‡„
+–
+‰D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/JournalService.java’ œ(M
+%14javax.persistence.Query"^javax.persistence.EntityManager#createNativeQuery(Ljava/lang/String;)Ljavax/persistence/Query;*'
+%
+%3javax.persistence.EntityManager*
+
+%13java.lang.String2%createNativeQuery(Ljava/lang/String;)â
+ß
+–
+‰D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/JournalService.java’ œ(N
+qjavax.persistence.Query"__id* 
+
+%14javax.persistence.Query¨¥
+–
+‰D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/JournalService.java (+
+%15java.lang.Long"<ee.hitsa.ois.domain.BaseEntityWithId#getId()Ljava/lang/Long;*,
+*
+	studyYearee.hitsa.ois.domain.StudyYear2getId()òï
+–
+‰D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/JournalService.java (,
+%16javax.persistence.Query"Rjavax.persistence.Query#setParameter(ILjava/lang/Object;)Ljavax/persistence/Query;*
+
+qjavax.persistence.Query*2*
+
+%15java.lang.Long2!setParameter(ILjava/lang/Object;)øõ
+–
+‰D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/JournalService.java ($
+%17javax.persistence.Query"Rjavax.persistence.Query#setParameter(ILjava/lang/Object;)Ljavax/persistence/Query;*
+
+qjavax.persistence.Query*2*
+
+	studentIdjava.lang.Long2!setParameter(ILjava/lang/Object;)£ 
+–
+‰D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/JournalService.javaŸ< Ÿ(O
+%18java.time.LocalDate"5java.time.LocalDate#minusDays(J)Ljava/time/LocalDate;*
+
+todayjava.time.LocalDate*22minusDays(J)Ù
+Ö
+–
+‰D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/JournalService.javaŸ Ÿ(P
+%19java.sql.Timestamp"^ee.hitsa.ois.util.JpaQueryUtil#parameterAsTimestamp(Ljava/time/LocalDate;)Ljava/sql/Timestamp;*"" 
+ee.hitsa.ois.util.JpaQueryUtil*
+
+%18java.time.LocalDateöó
+–
+‰D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/JournalService.javaŸ Ÿ(Q
+%20javax.persistence.Query"Rjavax.persistence.Query#setParameter(ILjava/lang/Object;)Ljavax/persistence/Query;*
+
+qjavax.persistence.Query*2*
+
+%19java.sql.Timestamp2!setParameter(ILjava/lang/Object;)Ú
+×
+–
+‰D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/JournalService.java <  (\
+%21java.time.LocalDateTime"[ee.hitsa.ois.util.DateUtils#lastMomentOfDay(Ljava/time/LocalDate;)Ljava/time/LocalDateTime;*"
+ee.hitsa.ois.util.DateUtils*
+
+todayjava.time.LocalDateá
+Ş
+–
+‰D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/JournalService.java   (]
+%22java.sql.Timestamp"bee.hitsa.ois.util.JpaQueryUtil#parameterAsTimestamp(Ljava/time/LocalDateTime;)Ljava/sql/Timestamp;*"" 
+ee.hitsa.ois.util.JpaQueryUtil* 
+
+%21java.time.LocalDateTimeöó
+–
+‰D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/JournalService.java   (^
+%23javax.persistence.Query"Rjavax.persistence.Query#setParameter(ILjava/lang/Object;)Ljavax/persistence/Query;*
+
+qjavax.persistence.Query*2*
+
+%22java.sql.Timestamp2!setParameter(ILjava/lang/Object;)Í
+Ê
+–
+‰D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/JournalService.java¡; ¡(N!
+%24ee.hitsa.ois.enums.Absence"__id*
+""Í
+Ê
+–
+‰D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/JournalService.java¡P ¡(c!
+%25ee.hitsa.ois.enums.Absence"__id*
+""ç
+ä
+–
+‰D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/JournalService.java¡' ¡(d
+%26java.util.List"Hee.hitsa.ois.util.EnumUtil#toNameList([Ljava/lang/Enum;)Ljava/util/List;*"
+ee.hitsa.ois.util.EnumUtil*#
+!
+%24ee.hitsa.ois.enums.Absence*#
+!
+%25ee.hitsa.ois.enums.Absence 
+–
+‰D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/JournalService.java¡ ¡(e
+%27javax.persistence.Query"cjavax.persistence.Query#setParameter(Ljava/lang/String;Ljava/lang/Object;)Ljavax/persistence/Query;*
+
+qjavax.persistence.Query*
+absenceCodes*
+
+%26java.util.List22setParameter(Ljava/lang/String;Ljava/lang/Object;)š
+–
+‰D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/JournalService.java¢ ¢((
+%28java.util.List"7javax.persistence.Query#getResultList()Ljava/util/List;*
+
+qjavax.persistence.Query2getResultList()Ó
+Ğ
+–
+‰D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/JournalService.java¢ ¢()
+datajava.util.List"__id*
+
+%28java.util.List
+Œ
+–
+‰D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/JournalService.java¥ ¦(l"
+%29java.util.function.Function"__declareFunction*:8
+6__sonar_lambda_665$ee.hitsa.ois.service.JournalService…
+‚
+–
+‰D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/JournalService.java¤ §(
+%39java.util.List"nee.hitsa.ois.util.StreamUtil#toMappedList(Ljava/util/function/Function;Ljava/util/Collection;)Ljava/util/List;* "
+ee.hitsa.ois.util.StreamUtil*$
+"
+%29java.util.function.Function*
+
+datajava.util.List"²
+–
+‰D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/JournalService.java¤ §(
+
+%39java.util.List:
+schoolIdjava.lang.Long:
+	studentIdjava.lang.LongB'%
+#ee.hitsa.ois.service.JournalService

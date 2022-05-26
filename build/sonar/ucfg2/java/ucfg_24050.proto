@@ -1,0 +1,95 @@
+
+tee.hitsa.ois.service.ScholarshipService#studentTermDirectives(Lee/hitsa/ois/domain/student/Student;)Ljava/util/List;ö
+çD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/ScholarshipService.javaÅ Å(1"1*£#
+1ö
+çD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/ScholarshipService.javaÇ Ç(Ç
+ˇ
+ö
+çD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/ScholarshipService.javaÇ Ç(%
+%0javax.persistence.EntityManager"__id*3*1)
+'ee.hitsa.ois.service.ScholarshipService"
+em√
+¿
+ö
+çD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/ScholarshipService.javaÇ É(]
+%1java.lang.String"__concat*0.
+,select d from Directive d join d.students ds*MK
+I where ds.student = ?1 and d.status.code in (?2)  and d.type.code in (?3)±Æ
+ö
+çD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/ScholarshipService.javaÇ É(o"
+%2javax.persistence.TypedQuery"njavax.persistence.EntityManager#createQuery(Ljava/lang/String;Ljava/lang/Class;)Ljavax/persistence/TypedQuery;*'
+%
+%0javax.persistence.EntityManager*
+
+%1java.lang.String*
+""20createQuery(Ljava/lang/String;Ljava/lang/Class;)£†
+ö
+çD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/ScholarshipService.javaÇ Ñ()"
+%3javax.persistence.TypedQuery"\javax.persistence.TypedQuery#setParameter(ILjava/lang/Object;)Ljavax/persistence/TypedQuery;*$
+"
+%2javax.persistence.TypedQuery*2*0
+.
+student#ee.hitsa.ois.domain.student.Student2!setParameter(ILjava/lang/Object;)ÿ
+’
+ö
+çD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/ScholarshipService.javaÖ5 Ö(a(
+%4"ee.hitsa.ois.enums.DirectiveStatus"__id*
+""ÿ
+’
+ö
+çD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/ScholarshipService.javaÜ Ü(E(
+%5"ee.hitsa.ois.enums.DirectiveStatus"__id*
+""¯
+ı
+ö
+çD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/ScholarshipService.javaÖ! Ü(F
+%6java.util.List"Hee.hitsa.ois.util.EnumUtil#toNameList([Ljava/lang/Enum;)Ljava/util/List;*"
+ee.hitsa.ois.util.EnumUtil**
+(
+%4"ee.hitsa.ois.enums.DirectiveStatus**
+(
+%5"ee.hitsa.ois.enums.DirectiveStatusâÜ
+ö
+çD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/ScholarshipService.javaÇ Ü(G"
+%7javax.persistence.TypedQuery"\javax.persistence.TypedQuery#setParameter(ILjava/lang/Object;)Ljavax/persistence/TypedQuery;*$
+"
+%3javax.persistence.TypedQuery*2*
+
+%6java.util.List2!setParameter(ILjava/lang/Object;)÷
+”
+ö
+çD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/ScholarshipService.javaá5 á(P&
+%8 ee.hitsa.ois.enums.DirectiveType"__id*
+""÷
+”
+ö
+çD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/ScholarshipService.javaáR á(o&
+%9 ee.hitsa.ois.enums.DirectiveType"__id*
+""ı
+Ú
+ö
+çD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/ScholarshipService.javaá! á(p
+%10java.util.List"Hee.hitsa.ois.util.EnumUtil#toNameList([Ljava/lang/Enum;)Ljava/util/List;*"
+ee.hitsa.ois.util.EnumUtil*(
+&
+%8 ee.hitsa.ois.enums.DirectiveType*(
+&
+%9 ee.hitsa.ois.enums.DirectiveTypeãà
+ö
+çD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/ScholarshipService.javaÇ á(q#
+%11javax.persistence.TypedQuery"\javax.persistence.TypedQuery#setParameter(ILjava/lang/Object;)Ljavax/persistence/TypedQuery;*$
+"
+%7javax.persistence.TypedQuery*2*
+
+%10java.util.List2!setParameter(ILjava/lang/Object;)≠™
+ö
+çD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/ScholarshipService.javaÇ à( 
+%12java.util.List"<javax.persistence.TypedQuery#getResultList()Ljava/util/List;*%
+#
+%11javax.persistence.TypedQuery2getResultList()"∂
+ö
+çD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/ScholarshipService.javaÇ à(!
+
+%12java.util.List:.
+student#ee.hitsa.ois.domain.student.StudentB+)
+'ee.hitsa.ois.service.ScholarshipService

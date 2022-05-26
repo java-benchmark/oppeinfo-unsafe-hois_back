@@ -1,0 +1,352 @@
+
+fee.hitsa.ois.service.JobService#changeValisTulekJob(Lee/hitsa/ois/domain/directive/DirectiveStudent;)Ví
+ÖD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/JobService.javaù ù($"6*”&
+2í
+ÖD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/JobService.java≠! ≠(#Û
+
+í
+ÖD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/JobService.java≠! ≠(#&
+%22javax.persistence.EntityManager"__id*+*)!
+ee.hitsa.ois.service.JobService"
+em–
+Õ
+í
+ÖD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/JobService.java≠0 Æ(W
+%23java.lang.String"__concat*RP
+Nselect j from Job j where j.status.code = :status and j.type.code = :type and *?=
+;j.student.id = :studentId and j.directive.id = :directiveId¨©
+í
+ÖD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/JobService.java≠! Æ(c#
+%24javax.persistence.TypedQuery"njavax.persistence.EntityManager#createQuery(Ljava/lang/String;Ljava/lang/Class;)Ljavax/persistence/TypedQuery;*(
+&
+%22javax.persistence.EntityManager*
+
+%23java.lang.String*
+""20createQuery(Ljava/lang/String;Ljava/lang/Class;)À
+»
+í
+ÖD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/JobService.javaØ0 Ø(K#
+%25ee.hitsa.ois.enums.JobStatus"__id*
+""âÜ
+í
+ÖD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/JobService.javaØ0 Ø(R
+%26java.lang.String"'java.lang.Enum#name()Ljava/lang/String;*%
+#
+%25ee.hitsa.ois.enums.JobStatus2name()Æ´
+í
+ÖD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/JobService.java≠! Ø(S#
+%27javax.persistence.TypedQuery"mjavax.persistence.TypedQuery#setParameter(Ljava/lang/String;Ljava/lang/Object;)Ljavax/persistence/TypedQuery;*%
+#
+%24javax.persistence.TypedQuery*
+
+status*
+
+%26java.lang.String22setParameter(Ljava/lang/String;Ljava/lang/Object;)…
+∆
+í
+ÖD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/JobService.java∞. ∞(E!
+%28ee.hitsa.ois.enums.JobType"__id*
+""áÑ
+í
+ÖD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/JobService.java∞. ∞(L
+%29java.lang.String"'java.lang.Enum#name()Ljava/lang/String;*#
+!
+%28ee.hitsa.ois.enums.JobType2name()¨©
+í
+ÖD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/JobService.java≠! ∞(M#
+%30javax.persistence.TypedQuery"mjavax.persistence.TypedQuery#setParameter(Ljava/lang/String;Ljava/lang/Object;)Ljavax/persistence/TypedQuery;*%
+#
+%27javax.persistence.TypedQuery*
+type*
+
+%29java.lang.String22setParameter(Ljava/lang/String;Ljava/lang/Object;)µ≤
+í
+ÖD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/JobService.java≠! ±(=#
+%31javax.persistence.TypedQuery"mjavax.persistence.TypedQuery#setParameter(Ljava/lang/String;Ljava/lang/Object;)Ljavax/persistence/TypedQuery;*%
+#
+%30javax.persistence.TypedQuery*
+	studentId*
+
+	studentIdjava.lang.Long22setParameter(Ljava/lang/String;Ljava/lang/Object;)øº
+í
+ÖD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/JobService.java≠! ≤(G#
+%32javax.persistence.TypedQuery"mjavax.persistence.TypedQuery#setParameter(Ljava/lang/String;Ljava/lang/Object;)Ljavax/persistence/TypedQuery;*%
+#
+%31javax.persistence.TypedQuery*
+directiveId*%
+#
+originDirectiveIdjava.lang.Long22setParameter(Ljava/lang/String;Ljava/lang/Object;)…∆
+í
+ÖD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/JobService.java≠! ≥()#
+%33javax.persistence.TypedQuery"Kjavax.persistence.TypedQuery#setMaxResults(I)Ljavax/persistence/TypedQuery;*%
+#
+%32javax.persistence.TypedQuery*22setMaxResults(I)•¢
+í
+ÖD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/JobService.java≠! ¥((
+%34java.util.List"<javax.persistence.TypedQuery#getResultList()Ljava/util/List;*%
+#
+%33javax.persistence.TypedQuery2getResultList()œ
+Ã
+í
+ÖD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/JobService.java≠ ¥()
+jobsjava.util.List"__id*
+
+%34java.util.ListËÂ
+í
+ÖD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/JobService.java∂ ∂(#
+%35boolean"java.util.List#isEmpty()Z*
+
+jobsjava.util.List2	isEmpty()*
+0
+1*œ)
+3ì
+ÖD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/JobService.java§ §(≤‘
+—
+ì
+ÖD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/JobService.java§ §(≥
+sqljava.lang.String"__id*ôñ
+ìupdate job set job_time = :endDate where type_code = :type and student_id = :studentId and directive_id = :directiveId and status_code = :jobStatusÚ
+Ô
+í
+ÖD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/JobService.java• •(%
+%8javax.persistence.EntityManager"__id*+*)!
+ee.hitsa.ois.service.JobService"
+emÇˇ
+í
+ÖD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/JobService.java• •(3
+%9javax.persistence.Query"^javax.persistence.EntityManager#createNativeQuery(Ljava/lang/String;)Ljavax/persistence/Query;*'
+%
+%8javax.persistence.EntityManager*
+
+sqljava.lang.String2%createNativeQuery(Ljava/lang/String;)›
+⁄
+í
+ÖD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/JobService.java• •(4
+qjavax.persistence.Query"__id*
+
+%9javax.persistence.Query…
+∆
+í
+ÖD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/JobService.java¶' ¶(>!
+%10ee.hitsa.ois.enums.JobType"__id*
+""áÑ
+í
+ÖD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/JobService.java¶' ¶(E
+%11java.lang.String"'java.lang.Enum#name()Ljava/lang/String;*#
+!
+%10ee.hitsa.ois.enums.JobType2name()ñì
+í
+ÖD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/JobService.java¶ ¶(F
+%12javax.persistence.Query"cjavax.persistence.Query#setParameter(Ljava/lang/String;Ljava/lang/Object;)Ljavax/persistence/Query;*
+
+qjavax.persistence.Query*
+type*
+
+%11java.lang.String22setParameter(Ljava/lang/String;Ljava/lang/Object;)–Õ
+í
+ÖD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/JobService.javaßL ß(]
+%13java.time.LocalDate"Ree.hitsa.ois.domain.directive.DirectiveStudent#getStartDate()Ljava/time/LocalDate;*6
+4
+ds.ee.hitsa.ois.domain.directive.DirectiveStudent2getStartDate()’
+“
+í
+ÖD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/JobService.javaß* ß(^
+%14java.sql.Timestamp"^ee.hitsa.ois.util.JpaQueryUtil#parameterAsTimestamp(Ljava/time/LocalDate;)Ljava/sql/Timestamp;*"" 
+ee.hitsa.ois.util.JpaQueryUtil*
+
+%13java.time.LocalDateõò
+í
+ÖD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/JobService.javaß ß(_
+%15javax.persistence.Query"cjavax.persistence.Query#setParameter(Ljava/lang/String;Ljava/lang/Object;)Ljavax/persistence/Query;*
+
+qjavax.persistence.Query*	
+endDate*
+
+%14java.sql.Timestamp22setParameter(Ljava/lang/String;Ljava/lang/Object;)À
+»
+í
+ÖD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/JobService.java®, ®(G#
+%16ee.hitsa.ois.enums.JobStatus"__id*
+""âÜ
+í
+ÖD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/JobService.java®, ®(N
+%17java.lang.String"'java.lang.Enum#name()Ljava/lang/String;*%
+#
+%16ee.hitsa.ois.enums.JobStatus2name()õò
+í
+ÖD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/JobService.java® ®(O
+%18javax.persistence.Query"cjavax.persistence.Query#setParameter(Ljava/lang/String;Ljava/lang/Object;)Ljavax/persistence/Query;*
+
+qjavax.persistence.Query*
+	jobStatus*
+
+%17java.lang.String22setParameter(Ljava/lang/String;Ljava/lang/Object;)üú
+í
+ÖD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/JobService.java© ©(6
+%19javax.persistence.Query"cjavax.persistence.Query#setParameter(Ljava/lang/String;Ljava/lang/Object;)Ljavax/persistence/Query;*
+
+qjavax.persistence.Query*
+	studentId*
+
+	studentIdjava.lang.Long22setParameter(Ljava/lang/String;Ljava/lang/Object;)©¶
+í
+ÖD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/JobService.java™ ™(@
+%20javax.persistence.Query"cjavax.persistence.Query#setParameter(Ljava/lang/String;Ljava/lang/Object;)Ljavax/persistence/Query;*
+
+qjavax.persistence.Query*
+directiveId*%
+#
+originDirectiveIdjava.lang.Long22setParameter(Ljava/lang/String;Ljava/lang/Object;)ˇ¸
+í
+ÖD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/JobService.java´ ´(!
+
+%21int"(javax.persistence.Query#executeUpdate()I*
+
+qjavax.persistence.Query2executeUpdate()*
+0*ü
+
+4í
+ÖD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/JobService.java° °(%¸
+˘
+í
+ÖD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/JobService.java° °(+
+%5java.time.LocalDate".java.time.LocalDate#now()Ljava/time/LocalDate;*"
+java.time.LocalDate◊
+‘
+í
+ÖD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/JobService.java° °(,
+nowjava.time.LocalDate"__id*
+
+%5java.time.LocalDateœÃ
+í
+ÖD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/JobService.java¢ ¢(!
+%6java.time.LocalDate"Ree.hitsa.ois.domain.directive.DirectiveStudent#getStartDate()Ljava/time/LocalDate;*6
+4
+ds.ee.hitsa.ois.domain.directive.DirectiveStudent2getStartDate()—Œ
+í
+ÖD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/JobService.java¢ ¢(.
+%7boolean"@java.time.LocalDate#isAfter(Ljava/time/chrono/ChronoLocalDate;)Z*
+
+%6java.time.LocalDate*
+
+nowjava.time.LocalDate2+isAfter(Ljava/time/chrono/ChronoLocalDate;)*
+2
+3*û
+6í
+ÖD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/JobService.javaû û(#ÎË
+í
+ÖD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/JobService.javaû2 û(A)
+%0#ee.hitsa.ois.domain.student.Student"`ee.hitsa.ois.domain.directive.DirectiveStudent#getStudent()Lee/hitsa/ois/domain/student/Student;*6
+4
+ds.ee.hitsa.ois.domain.directive.DirectiveStudent2getStudent()·
+ﬁ
+í
+ÖD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/JobService.javaû û(B
+%1java.lang.Long"bee.hitsa.ois.util.EntityUtil#getNullableId(Lee/hitsa/ois/domain/BaseEntityWithId;)Ljava/lang/Long;* "
+ee.hitsa.ois.util.EntityUtil*+
+)
+%0#ee.hitsa.ois.domain.student.Student”
+–
+í
+ÖD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/JobService.javaû û(C
+	studentIdjava.lang.Long"__id*
+
+%1java.lang.Longìê
+í
+ÖD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/JobService.javaü: ü(R4
+%2.ee.hitsa.ois.domain.directive.DirectiveStudent"tee.hitsa.ois.domain.directive.DirectiveStudent#getDirectiveStudent()Lee/hitsa/ois/domain/directive/DirectiveStudent;*6
+4
+ds.ee.hitsa.ois.domain.directive.DirectiveStudent2getDirectiveStudent()˜Ù
+í
+ÖD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/JobService.javaü: ü(a-
+%3'ee.hitsa.ois.domain.directive.Directive"fee.hitsa.ois.domain.directive.DirectiveStudent#getDirective()Lee/hitsa/ois/domain/directive/Directive;*6
+4
+%2.ee.hitsa.ois.domain.directive.DirectiveStudent2getDirective()Â
+‚
+í
+ÖD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/JobService.javaü! ü(b
+%4java.lang.Long"bee.hitsa.ois.util.EntityUtil#getNullableId(Lee/hitsa/ois/domain/BaseEntityWithId;)Ljava/lang/Long;* "
+ee.hitsa.ois.util.EntityUtil*/
+-
+%3'ee.hitsa.ois.domain.directive.Directive€
+ÿ
+í
+ÖD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/JobService.javaü ü(c#
+originDirectiveIdjava.lang.Long"__id*
+
+%4java.lang.Long*
+4
+0*≤
+0 "™
+í
+ÖD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/JobService.javaæ æ(
+implicit return*•
+1í
+ÖD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/JobService.java∑ ∑("‚
+ﬂ
+í
+ÖD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/JobService.java∑ ∑()
+%36ee.hitsa.ois.domain.Job"
+__arrayGet*
+
+jobsjava.util.List*2 ‡
+›
+í
+ÖD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/JobService.java∑ ∑(*
+jobee.hitsa.ois.domain.Job"__id* 
+
+%36ee.hitsa.ois.domain.JobÀ
+»
+í
+ÖD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/JobService.java∏& ∏(C#
+%37ee.hitsa.ois.enums.JobStatus"__id*
+""˚
+¯
+í
+ÖD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/JobService.java∏ ∏(D
+%38void"fee.hitsa.ois.service.JobService#setJobStatus(Lee/hitsa/ois/domain/Job;Lee/hitsa/ois/enums/JobStatus;)V*#!
+ee.hitsa.ois.service.JobService* 
+
+jobee.hitsa.ois.domain.Job*%
+#
+%37ee.hitsa.ois.enums.JobStatus–Õ
+í
+ÖD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/JobService.javaπ# π(4
+%39java.time.LocalDate"Ree.hitsa.ois.domain.directive.DirectiveStudent#getStartDate()Ljava/time/LocalDate;*6
+4
+ds.ee.hitsa.ois.domain.directive.DirectiveStudent2getStartDate()¬
+ø
+í
+ÖD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/JobService.javaπ< π(I
+%40java.time.LocalTime"__id*
+""ﬂ‹
+í
+ÖD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/JobService.javaπ# π(J
+%41java.time.LocalDateTime"Jjava.time.LocalDate#atTime(Ljava/time/LocalTime;)Ljava/time/LocalDateTime;*
+
+%39java.time.LocalDate*
+
+%40java.time.LocalTime2atTime(Ljava/time/LocalTime;)–Õ
+í
+ÖD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/JobService.javaπ π(K
+%42void">ee.hitsa.ois.domain.Job#setJobTime(Ljava/time/LocalDateTime;)V* 
+
+jobee.hitsa.ois.domain.Job* 
+
+%41java.time.LocalDateTime2%setJobTime(Ljava/time/LocalDateTime;)ï
+í
+í
+ÖD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/JobService.java∫ ∫(+3
+%43,ee.hitsa.ois.service.DirectiveConfirmService"__id*@*>!
+ee.hitsa.ois.service.JobService"
+directiveConfirmServiceåâ
+í
+ÖD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/JobService.java∫ ∫(D
+%44void"\ee.hitsa.ois.service.DirectiveConfirmService#updateStudentStatus(Lee/hitsa/ois/domain/Job;)V*5
+3
+%43,ee.hitsa.ois.service.DirectiveConfirmService* 
+
+jobee.hitsa.ois.domain.Job2.updateStudentStatus(Lee/hitsa/ois/domain/Job;)*
+0:4
+ds.ee.hitsa.ois.domain.directive.DirectiveStudentB#!
+ee.hitsa.ois.service.JobService

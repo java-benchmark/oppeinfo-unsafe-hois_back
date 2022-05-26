@@ -1,0 +1,98 @@
+
+}ee.hitsa.ois.service.TimetableService#vocationalPeriodsWithConnectedSubjects(Ljava/lang/Long;Ljava/lang/Long;)Ljava/util/Set;˜
+‹D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/TimetableService.javaê ê(D"1*•"
+1˜
+‹D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/TimetableService.javaë ë(þ
+û
+˜
+‹D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/TimetableService.javaë ë(%
+%0javax.persistence.EntityManager"__id*1*/'
+%ee.hitsa.ois.service.TimetableService"
+em²
+¯
+˜
+‹D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/TimetableService.javaë' ì(<
+%1java.lang.String"__concat*@>
+<select sy.id, sy.start_date, sy.end_date from study_year sy *.,
+*join journal j on sy.id = j.study_year_id 
+
+˜
+‹D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/TimetableService.javaë' í(B
+%2java.lang.String"__concat*
+
+%1java.lang.String*42
+0join journal_student js on j.id = js.journal_id ™
+–
+˜
+‹D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/TimetableService.javaë' î(K
+%3java.lang.String"__concat*
+
+%2java.lang.String*=;
+9where js.student_id = :studentId and sy.id = :studyYearId‡„
+˜
+‹D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/TimetableService.javaë î(L
+%4javax.persistence.Query"^javax.persistence.EntityManager#createNativeQuery(Ljava/lang/String;)Ljavax/persistence/Query;*'
+%
+%0javax.persistence.EntityManager*
+
+%3java.lang.String2%createNativeQuery(Ljava/lang/String;)ã
+à
+˜
+‹D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/TimetableService.javaë î(M
+qjavax.persistence.Query"__id*
+
+%4javax.persistence.Query¤¡
+˜
+‹D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/TimetableService.javaï ï(.
+%5javax.persistence.Query"cjavax.persistence.Query#setParameter(Ljava/lang/String;Ljava/lang/Object;)Ljavax/persistence/Query;*
+
+qjavax.persistence.Query*
+	studentId*
+
+	studentIdjava.lang.Long22setParameter(Ljava/lang/String;Ljava/lang/Object;)¨¥
+˜
+‹D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/TimetableService.javað ð(2
+%6javax.persistence.Query"cjavax.persistence.Query#setParameter(Ljava/lang/String;Ljava/lang/Object;)Ljavax/persistence/Query;*
+
+qjavax.persistence.Query*
+studyYearId*
+
+studyYearIdjava.lang.Long22setParameter(Ljava/lang/String;Ljava/lang/Object;)ž›
+˜
+‹D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/TimetableService.javaò ò((
+%7java.util.List"7javax.persistence.Query#getResultList()Ljava/util/List;*
+
+qjavax.persistence.Query2getResultList()Ô
+Ñ
+˜
+‹D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/TimetableService.javaò ò()
+datajava.util.List"__id*
+
+%7java.util.List’
+
+˜
+‹D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/TimetableService.javaô ô(d!
+%8java.util.function.Function"__declareFunction*<:
+8__sonar_lambda_950$ee.hitsa.ois.service.TimetableServiceƒ
+€
+˜
+‹D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/TimetableService.javaó9 ô(k
+%13java.util.Set"lee.hitsa.ois.util.StreamUtil#toMappedSet(Ljava/util/function/Function;Ljava/util/Collection;)Ljava/util/Set;* "
+ee.hitsa.ois.util.StreamUtil*#
+!
+%8java.util.function.Function*
+
+datajava.util.Listë
+è
+˜
+‹D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/TimetableService.javaó ô(l-
+periodsWithConnectedSubjectsjava.util.Set"__id*
+
+%13java.util.Set"Ì
+˜
+‹D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/TimetableService.javaö ö(,/
+-
+periodsWithConnectedSubjectsjava.util.Set:
+	studentIdjava.lang.Long:
+studyYearIdjava.lang.LongB)'
+%ee.hitsa.ois.service.TimetableService

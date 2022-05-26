@@ -1,0 +1,97 @@
+
+{ee.hitsa.ois.service.HigherProtocolService#protocolStudentExamDates(Lee/hitsa/ois/domain/protocol/Protocol;)Ljava/util/Map;ù
+êD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/HigherProtocolService.javaê! ê(9"1*¥#
+1ù
+êD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/HigherProtocolService.javaë ë(à
+Ö
+ù
+êD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/HigherProtocolService.javaë ë(%
+%0javax.persistence.EntityManager"__id*6*4,
+*ee.hitsa.ois.service.HigherProtocolService"
+em‰
+·
+ù
+êD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/HigherProtocolService.javaë, í(w
+%1java.lang.String"__concat*42
+0select ps.id, te.start from protocol_student ps *ge
+cjoin subject_study_period_exam_student sspes on sspes.id = ps.subject_study_period_exam_student_id π
+∂
+ù
+êD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/HigherProtocolService.javaë, ì(h
+%2java.lang.String"__concat*
+
+%1java.lang.String*XV
+Tjoin subject_study_period_exam sspe on sspe.id = sspes.subject_study_period_exam_id †
+ù
+ù
+êD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/HigherProtocolService.javaë, î(O
+%3java.lang.String"__concat*
+
+%2java.lang.String*?=
+;join timetable_event te on te.id = sspe.timetable_event_id á
+Ñ
+ù
+êD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/HigherProtocolService.javaë, ï(6
+%4java.lang.String"__concat*
+
+%3java.lang.String*&$
+"where ps.protocol_id = :protocolIdåâ
+ù
+êD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/HigherProtocolService.javaë ï(7
+%5javax.persistence.Query"^javax.persistence.EntityManager#createNativeQuery(Ljava/lang/String;)Ljavax/persistence/Query;*'
+%
+%0javax.persistence.EntityManager*
+
+%4java.lang.String2%createNativeQuery(Ljava/lang/String;)µ≤
+ù
+êD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/HigherProtocolService.javañ, ñ(<
+%6java.lang.Long"<ee.hitsa.ois.domain.BaseEntityWithId#getId()Ljava/lang/Long;*3
+1
+protocol%ee.hitsa.ois.domain.protocol.Protocol2getId()§°
+ù
+êD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/HigherProtocolService.javaë ñ(=
+%7javax.persistence.Query"cjavax.persistence.Query#setParameter(Ljava/lang/String;Ljava/lang/Object;)Ljavax/persistence/Query;*
+
+%5javax.persistence.Query*
+
+protocolId*
+
+%6java.lang.Long22setParameter(Ljava/lang/String;Ljava/lang/Object;)§°
+ù
+êD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/HigherProtocolService.javaë ó( 
+%8java.util.List"7javax.persistence.Query#getResultList()Ljava/util/List;*
+
+%7javax.persistence.Query2getResultList()Ÿ
+÷
+ù
+êD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/HigherProtocolService.javaë ó(!
+datajava.util.List"__id*
+
+%8java.util.Listù
+ö
+ù
+êD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/HigherProtocolService.javaò  ò(7!
+%9java.util.function.Function"__declareFunction*B@
+>__sonar_lambda_2730$ee.hitsa.ois.service.HigherProtocolServiceû
+õ
+ù
+êD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/HigherProtocolService.javaò9 ò(U"
+%11java.util.function.Function"__declareFunction*B@
+>__sonar_lambda_2731$ee.hitsa.ois.service.HigherProtocolService∆
+√
+ù
+êD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/HigherProtocolService.javaò ò(\
+%13java.util.Map"Éee.hitsa.ois.util.StreamUtil#toMap(Ljava/util/function/Function;Ljava/util/function/Function;Ljava/util/Collection;)Ljava/util/Map;* "
+ee.hitsa.ois.util.StreamUtil*#
+!
+%9java.util.function.Function*$
+"
+%11java.util.function.Function*
+
+datajava.util.List"∏
+ù
+êD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/HigherProtocolService.javaò ò(]
+
+%13java.util.Map:1
+protocol%ee.hitsa.ois.domain.protocol.ProtocolB.,
+*ee.hitsa.ois.service.HigherProtocolService

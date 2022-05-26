@@ -1,0 +1,167 @@
+
+iee.hitsa.ois.service.TeacherDetailLoadService#teacherSubjectStudyPeriods(Ljava/util/Set;)Ljava/util/List;†
+ìD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/TeacherDetailLoadService.javaâ
+5 â
+(O"3*Ù
+2†
+ìD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/TeacherDetailLoadService.javaå
+3 å
+(KÄ
+˝
+†
+ìD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/TeacherDetailLoadService.javaå
+3 å
+(b
+%3java.util.Map"fee.hitsa.ois.service.TeacherDetailLoadService#studyPeriodStudentGroups(Ljava/util/Set;)Ljava/util/Map;*1/
+-ee.hitsa.ois.service.TeacherDetailLoadService*(
+&
+subjectStudyPeriodIdsjava.util.Set„
+‡
+†
+ìD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/TeacherDetailLoadService.javaå
+ å
+(c
+studentGroupsjava.util.Map"__id*
+
+%3java.util.Mapé
+ã
+†
+ìD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/TeacherDetailLoadService.javaé
+ é
+(%
+%4javax.persistence.EntityManager"__id*9*7/
+-ee.hitsa.ois.service.TeacherDetailLoadService"
+emΩ
+∫
+†
+ìD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/TeacherDetailLoadService.javaé
+0 è
+(@
+%5java.lang.String"__concat*EC
+Aselect ssp.id, s.name_et, s.name_en from subject_study_period ssp*,*
+( join subject s on s.id = ssp.subject_idï
+í
+†
+ìD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/TeacherDetailLoadService.javaé
+0 ê
+(E
+%6java.lang.String"__concat*
+
+%5java.lang.String*1/
+- where ssp.id in (:sspIds) order by s.name_etèå
+†
+ìD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/TeacherDetailLoadService.javaé
+ ê
+(F
+%7javax.persistence.Query"^javax.persistence.EntityManager#createNativeQuery(Ljava/lang/String;)Ljavax/persistence/Query;*'
+%
+%4javax.persistence.EntityManager*
+
+%6java.lang.String2%createNativeQuery(Ljava/lang/String;)µ≤
+†
+ìD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/TeacherDetailLoadService.javaé
+ ë
+(B
+%8javax.persistence.Query"cjavax.persistence.Query#setParameter(Ljava/lang/String;Ljava/lang/Object;)Ljavax/persistence/Query;*
+
+%7javax.persistence.Query*
+
+sspIds*(
+&
+subjectStudyPeriodIdsjava.util.Set22setParameter(Ljava/lang/String;Ljava/lang/Object;)ß§
+†
+ìD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/TeacherDetailLoadService.javaé
+ ë
+(R
+%9java.util.List"7javax.persistence.Query#getResultList()Ljava/util/List;*
+
+%8javax.persistence.Query2getResultList()‹
+Ÿ
+†
+ìD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/TeacherDetailLoadService.javaé
+ ë
+(S
+datajava.util.List"__id*
+
+%9java.util.List£
+†
+†
+ìD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/TeacherDetailLoadService.javaí
+: ò
+("
+%10java.util.function.Function"__declareFunction*DB
+@__sonar_lambda_261$ee.hitsa.ois.service.TeacherDetailLoadService{
+y
+
+__unknown_file (5
+"
+%10java.util.function.Function"
+studentGroups"__id* 
+
+studentGroupsjava.util.Mapè
+å
+†
+ìD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/TeacherDetailLoadService.javaí
+" ò
+(
+%21java.util.List"nee.hitsa.ois.util.StreamUtil#toMappedList(Ljava/util/function/Function;Ljava/util/Collection;)Ljava/util/List;* "
+ee.hitsa.ois.util.StreamUtil*$
+"
+%10java.util.function.Function*
+
+datajava.util.ListÏ
+È
+†
+ìD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/TeacherDetailLoadService.javaí
+ ò
+(%
+subjectStudyPeriodsjava.util.List"__id*
+
+%21java.util.List*
+1*Ï
+3†
+ìD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/TeacherDetailLoadService.javaä
+G ä
+(X÷”
+†
+ìD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/TeacherDetailLoadService.javaä
+K ä
+(V
+%0java.util.ArrayList"java.util.ArrayListË
+Â
+†
+ìD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/TeacherDetailLoadService.javaä
+G ä
+(X
+%1"java.util.ArrayList#<init>()V*
+
+%0java.util.ArrayList
+Ì
+†
+ìD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/TeacherDetailLoadService.javaä
+ ä
+(Y%
+subjectStudyPeriodsjava.util.List"__id*
+
+%0java.util.ArrayListÑÅ
+†
+ìD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/TeacherDetailLoadService.javaã
+ ã
+(,
+%2boolean"java.util.Set#isEmpty()Z*(
+&
+subjectStudyPeriodIdsjava.util.Set2	isEmpty()*
+2
+1*ı
+1†
+ìD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/TeacherDetailLoadService.javaö
+ ö
+(""Ã
+†
+ìD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/TeacherDetailLoadService.javaö
+ ö
+(#'
+%
+subjectStudyPeriodsjava.util.List:&
+subjectStudyPeriodIdsjava.util.SetB1/
+-ee.hitsa.ois.service.TeacherDetailLoadService

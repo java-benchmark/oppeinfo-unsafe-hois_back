@@ -1,0 +1,91 @@
+
+²ee.hitsa.ois.service.TeacherDetailLoadService#teacherSingleEvents(Ljava/lang/Long;Lee/hitsa/ois/web/commandobject/report/TeacherDetailLoadCommand;Ljava/util/List;)Ljava/util/Map; 
+“D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/TeacherDetailLoadService.javaß, ß(?"1*‘
+1 
+“D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/TeacherDetailLoadService.javaá# á(2¸
+µ
+ 
+“D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/TeacherDetailLoadService.javaá# á(N-
+%0'ee.hitsa.ois.util.JpaNativeQueryBuilder"¹ee.hitsa.ois.service.TeacherDetailLoadService#teacherEventsQb(Lee/hitsa/ois/web/commandobject/report/TeacherDetailLoadCommand;Ljava/util/List;Z)Lee/hitsa/ois/util/JpaNativeQueryBuilder;*1"/
+-ee.hitsa.ois.service.TeacherDetailLoadService*L
+J
+criteria>ee.hitsa.ois.web.commandobject.report.TeacherDetailLoadCommand*
+
+
+teacherIdsjava.util.List*2Œ
+‰
+ 
+“D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/TeacherDetailLoadService.javaá á(O-
+qb'ee.hitsa.ois.util.JpaNativeQueryBuilder"__id*/
+-
+%0'ee.hitsa.ois.util.JpaNativeQueryBuilder×
+Ô
+ 
+“D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/TeacherDetailLoadService.javaã! ä(W
+%1java.lang.String"__concat*DB
+@tet.teacher_id, tem.id tem_id, te.capacity_type_code, te.start, *GE
+Ccoalesce(te.lessons, 1) lessons, get_study_period(date(tem.start), €
+ý
+ 
+“D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/TeacherDetailLoadService.javaã! ä(b
+%2java.lang.String"__concat*
+
+%1java.lang.String*
+
+schoolIdjava.lang.Longñ
+î
+ 
+“D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/TeacherDetailLoadService.javaã! ä(p
+%3java.lang.String"__concat*
+
+%2java.lang.String*
+	) sp_id, •
+’
+ 
+“D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/TeacherDetailLoadService.javaã! å(A
+%4java.lang.String"__concat*
+
+%3java.lang.String*1/
+-null journal_id, null subject_study_period_idŽ
+‹
+ 
+“D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/TeacherDetailLoadService.javaåC å(E%
+%5javax.persistence.EntityManager"__id*9*7/
+-ee.hitsa.ois.service.TeacherDetailLoadService"
+emôñ
+ 
+“D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/TeacherDetailLoadService.javaã å(F
+%6javax.persistence.Query"|ee.hitsa.ois.util.JpaNativeQueryBuilder#select(Ljava/lang/String;Ljavax/persistence/EntityManager;)Ljavax/persistence/Query;*/
+-
+qb'ee.hitsa.ois.util.JpaNativeQueryBuilder*
+
+%4java.lang.String*'
+%
+%5javax.persistence.EntityManager2;select(Ljava/lang/String;Ljavax/persistence/EntityManager;)§¤
+ 
+“D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/TeacherDetailLoadService.javaã å(V
+%7java.util.List"7javax.persistence.Query#getResultList()Ljava/util/List;*
+
+%6javax.persistence.Query2getResultList()Ü
+Ù
+ 
+“D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/TeacherDetailLoadService.javaã å(W
+datajava.util.List"__id*
+
+%7java.util.Listç
+ä
+ 
+“D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/TeacherDetailLoadService.javaæ æ(#
+%8java.util.Map"]ee.hitsa.ois.service.TeacherDetailLoadService#resultAsEvents(Ljava/util/List;)Ljava/util/Map;*1"/
+-ee.hitsa.ois.service.TeacherDetailLoadService*
+
+datajava.util.List"º
+ 
+“D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/TeacherDetailLoadService.javaæ æ($
+
+%8java.util.Map:
+schoolIdjava.lang.Long:J
+criteria>ee.hitsa.ois.web.commandobject.report.TeacherDetailLoadCommand:
+
+teacherIdsjava.util.ListB1/
+-ee.hitsa.ois.service.TeacherDetailLoadService

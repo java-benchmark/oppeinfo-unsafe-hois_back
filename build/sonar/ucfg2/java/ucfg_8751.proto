@@ -1,0 +1,85 @@
+
+yee.hitsa.ois.service.DocumentService#areCurriculumModulesGraded(Lee/hitsa/ois/domain/student/Student;)Ljava/lang/Boolean;—
+ŠD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/DocumentService.java÷ ÷(."1*¿
+1—
+ŠD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/DocumentService.javaø ø(ü
+ù
+—
+ŠD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/DocumentService.javaø ø(%
+%0javax.persistence.EntityManager"__id*0*.&
+$ee.hitsa.ois.service.DocumentService"
+em 
+
+—
+ŠD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/DocumentService.javaø, ù(R
+%1java.lang.String"__concat*
+select 1 from student s*B@
+> join curriculum_version cv on cv.id = s.curriculum_version_idª
+§
+—
+ŠD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/DocumentService.javaø, ú(_
+%2java.lang.String"__concat*
+
+%1java.lang.String*OM
+K join curriculum_version_hmodule cvhm on cvhm.curriculum_version_id = cv.idˆ
+…
+—
+ŠD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/DocumentService.javaø, û(=
+%3java.lang.String"__concat*
+
+%2java.lang.String*-+
+) where s.id = ?1 and cvhm.is_grade = true†ƒ
+—
+ŠD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/DocumentService.javaø û(>
+%4javax.persistence.Query"^javax.persistence.EntityManager#createNativeQuery(Ljava/lang/String;)Ljavax/persistence/Query;*'
+%
+%0javax.persistence.EntityManager*
+
+%3java.lang.String2%createNativeQuery(Ljava/lang/String;)ã
+à
+—
+ŠD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/DocumentService.javaü! ü(:
+%5java.lang.Long"Zee.hitsa.ois.util.EntityUtil#getId(Lee/hitsa/ois/domain/BaseEntityWithId;)Ljava/lang/Long;* "
+ee.hitsa.ois.util.EntityUtil*0
+.
+student#ee.hitsa.ois.domain.student.Studentòï
+—
+ŠD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/DocumentService.javaø ü(;
+%6javax.persistence.Query"Rjavax.persistence.Query#setParameter(ILjava/lang/Object;)Ljavax/persistence/Query;*
+
+%4javax.persistence.Query*2*
+
+%5java.lang.Long2!setParameter(ILjava/lang/Object;)¸µ
+—
+ŠD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/DocumentService.javaø ý(!
+%7javax.persistence.Query"Ajavax.persistence.Query#setMaxResults(I)Ljavax/persistence/Query;*
+
+%6javax.persistence.Query*22setMaxResults(I)ž›
+—
+ŠD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/DocumentService.javaø þ( 
+%8java.util.List"7javax.persistence.Query#getResultList()Ljava/util/List;*
+
+%7javax.persistence.Query2getResultList()Ó
+Ð
+—
+ŠD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/DocumentService.javaø þ(!
+datajava.util.List"__id*
+
+%8java.util.Listìé
+—
+ŠD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/DocumentService.javaÿ  ÿ(.
+%9boolean"java.util.List#isEmpty()Z*
+
+datajava.util.List2	isEmpty()‡
+„
+—
+ŠD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/DocumentService.javaÿ ÿ(/
+%10java.lang.Boolean"/java.lang.Boolean#valueOf(Z)Ljava/lang/Boolean;*"
+java.lang.Boolean*
+"""¶
+—
+ŠD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/DocumentService.javaÿ ÿ(0
+
+%10java.lang.Boolean:.
+student#ee.hitsa.ois.domain.student.StudentB(&
+$ee.hitsa.ois.service.DocumentService

@@ -1,0 +1,133 @@
+
+•ee.hitsa.ois.service.LessonPlanService#findLessonPlanByStudyYearAndStudentGroup(Lee/hitsa/ois/domain/StudyYear;Ljava/util/Collection;)Ljava/util/Map;™
+ŒD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/LessonPlanService.javaé
+ é
+(D"1*Í%
+1™
+ŒD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/LessonPlanService.javaê
+= ê
+(R÷ô
+™
+ŒD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/LessonPlanService.javaê
+' ê
+(<-
+%0'ee.hitsa.ois.util.JpaNativeQueryBuilder"'ee.hitsa.ois.util.JpaNativeQueryBuilder´
+±
+™
+ŒD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/LessonPlanService.javaê
+# ê
+(S
+%1"Cee.hitsa.ois.util.JpaNativeQueryBuilder#<init>(Ljava/lang/String;)V*/
+-
+%0'ee.hitsa.ois.util.JpaNativeQueryBuilder*
+from lesson_plan lp…
+‚
+™
+ŒD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/LessonPlanService.javaê
+ ê
+(T-
+qb'ee.hitsa.ois.util.JpaNativeQueryBuilder"__id*/
+-
+%0'ee.hitsa.ois.util.JpaNativeQueryBuilderá
+Þ
+™
+ŒD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/LessonPlanService.javaì
+J ì
+(e
+%2java.lang.Long"Zee.hitsa.ois.util.EntityUtil#getId(Lee/hitsa/ois/domain/BaseEntityWithId;)Ljava/lang/Long;* "
+ee.hitsa.ois.util.EntityUtil*,
+*
+	studyYearee.hitsa.ois.domain.StudyYearßÜ
+™
+ŒD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/LessonPlanService.javaì
+ ì
+(f
+
+%3void"oee.hitsa.ois.util.JpaNativeQueryBuilder#requiredCriteria(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Long;)V*/
+-
+qb'ee.hitsa.ois.util.JpaNativeQueryBuilder*!
+lp.study_year_id = :studyYear*
+	studyYear*
+
+%2java.lang.Long2FrequiredCriteria(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Long;)‡„
+™
+ŒD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/LessonPlanService.javaí
+ í
+(c
+
+%4void"uee.hitsa.ois.util.JpaNativeQueryBuilder#requiredCriteria(Ljava/lang/String;Ljava/lang/String;Ljava/util/Collection;)V*/
+-
+qb'ee.hitsa.ois.util.JpaNativeQueryBuilder**(
+&lp.student_group_id in (:studentGroup)*
+studentGroup*&
+$
+studentGroupjava.util.Collection2LrequiredCriteria(Ljava/lang/String;Ljava/lang/String;Ljava/util/Collection;)€
+ý
+™
+ŒD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/LessonPlanService.javaï
+A ï
+(C%
+%5javax.persistence.EntityManager"__id*2*0(
+&ee.hitsa.ois.service.LessonPlanService"
+emóð
+™
+ŒD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/LessonPlanService.javaï
+ ï
+(D
+%6javax.persistence.Query"|ee.hitsa.ois.util.JpaNativeQueryBuilder#select(Ljava/lang/String;Ljavax/persistence/EntityManager;)Ljavax/persistence/Query;*/
+-
+qb'ee.hitsa.ois.util.JpaNativeQueryBuilder*
+lp.student_group_id, lp.id*'
+%
+%5javax.persistence.EntityManager2;select(Ljava/lang/String;Ljavax/persistence/EntityManager;) 
+™
+ŒD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/LessonPlanService.javaï
+ ï
+(T
+%7java.util.List"7javax.persistence.Query#getResultList()Ljava/util/List;*
+
+%6javax.persistence.Query2getResultList()×
+Ô
+™
+ŒD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/LessonPlanService.javaï
+ ï
+(U
+resultjava.util.List"__id*
+
+%7java.util.List•
+’
+™
+ŒD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/LessonPlanService.javað
+  ð
+(7!
+%8java.util.function.Function"__declareFunction*><
+:__sonar_lambda_2854$ee.hitsa.ois.service.LessonPlanService–
+“
+™
+ŒD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/LessonPlanService.javað
+: ð
+(Q"
+%10java.util.function.Function"__declareFunction*><
+:__sonar_lambda_2855$ee.hitsa.ois.service.LessonPlanServiceÄ
+Á
+™
+ŒD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/LessonPlanService.javað
+ ð
+(Z
+%12java.util.Map"ƒee.hitsa.ois.util.StreamUtil#toMap(Ljava/util/function/Function;Ljava/util/function/Function;Ljava/util/Collection;)Ljava/util/Map;* "
+ee.hitsa.ois.util.StreamUtil*#
+!
+%8java.util.function.Function*$
+"
+%10java.util.function.Function*
+
+resultjava.util.List"´
+™
+ŒD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/LessonPlanService.javað
+ ð
+([
+
+%12java.util.Map:*
+	studyYearee.hitsa.ois.domain.StudyYear:$
+studentGroupjava.util.CollectionB*(
+&ee.hitsa.ois.service.LessonPlanService

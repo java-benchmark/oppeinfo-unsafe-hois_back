@@ -1,0 +1,350 @@
+
+`ee.hitsa.ois.service.JournalService#setStudentJournalAbsences(Ljava/lang/Long;Ljava/util/List;)V–
+‰D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/JournalService.java¹ ¹(*"15*³
+13–
+‰D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/JournalService.javaÉN É(R˜•
+–
+‰D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/JournalService.javaÉN É([
+%14java.util.stream.Stream"6java.util.Collection#stream()Ljava/util/stream/Stream;*
+
+datajava.util.List2stream()
+
+—
+‰D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/JournalService.javaÉz É(‘"
+%15java.util.function.Function"__declareFunction*:8
+6__sonar_lambda_655$ee.hitsa.ois.service.JournalService
+Œ
+–
+‰D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/JournalService.javaÊ+ Ó("
+%17java.util.function.Function"__declareFunction*:8
+6__sonar_lambda_656$ee.hitsa.ois.service.JournalService¢
+Ÿ
+–
+‰D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/JournalService.javaÓ Ó(.!
+%27java.util.stream.Collector"@java.util.stream.Collectors#toList()Ljava/util/stream/Collector;*"
+java.util.stream.Collectors§
+¤
+–
+‰D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/JournalService.javaÊ Ó(/!
+%28java.util.stream.Collector"zjava.util.stream.Collectors#mapping(Ljava/util/function/Function;Ljava/util/stream/Collector;)Ljava/util/stream/Collector;*"
+java.util.stream.Collectors*$
+"
+%17java.util.function.Function*#
+!
+%27java.util.stream.Collectorª
+§
+–
+‰D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/JournalService.javaÉd Ó(0!
+%29java.util.stream.Collector"}java.util.stream.Collectors#groupingBy(Ljava/util/function/Function;Ljava/util/stream/Collector;)Ljava/util/stream/Collector;*"
+java.util.stream.Collectors*$
+"
+%15java.util.function.Function*#
+!
+%28java.util.stream.Collectorñî
+–
+‰D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/JournalService.javaÉN Ó(1
+%30java.util.Map"Ojava.util.stream.Stream#collect(Ljava/util/stream/Collector;)Ljava/lang/Object;* 
+
+%14java.util.stream.Stream*#
+!
+%29java.util.stream.Collector2%collect(Ljava/util/stream/Collector;)Þ
+Û
+–
+‰D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/JournalService.javaÉ Ó(2"
+absencesByJournaljava.util.Map"__id*
+
+%30java.util.Map*
+1*¨"
+14–
+‰D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/JournalService.java½" ½($ú
+÷
+–
+‰D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/JournalService.java½" ½($%
+%2javax.persistence.EntityManager"__id*/*-%
+#ee.hitsa.ois.service.JournalService"
+em´
+±
+–
+‰D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/JournalService.java½7 ¾(.
+%3java.lang.String"__concat*XV
+Tselect j.id, jes.absence_code, je.lessons, jesla.absence_code as lesson_absence_code*
+ from journal_entry je›
+˜
+–
+‰D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/JournalService.java½7 ¿(U
+%4java.lang.String"__concat*
+
+%3java.lang.String*A?
+= join journal_entry_student jes on jes.journal_entry_id=je.id¾
+»
+–
+‰D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/JournalService.java½7 À(x
+%5java.lang.String"__concat*
+
+%4java.lang.String*db
+` left join journal_entry_student_lesson_absence jesla on jesla.journal_entry_student_id = jes.id˜
+•
+–
+‰D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/JournalService.java½7 Á(R
+%6java.lang.String"__concat*
+
+%5java.lang.String*><
+: join journal_student js on jes.journal_student_id = js.id†
+ƒ
+–
+‰D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/JournalService.java½7 Â(@
+%7java.lang.String"__concat*
+
+%6java.lang.String*,*
+( join journal j  on j.id = js.journal_idÎ
+Ë
+—
+‰D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/JournalService.java½7 Ã(‡
+%8java.lang.String"__concat*
+
+%7java.lang.String*sq
+o where j.id in (?1) and js.student_id = ?2 and (jes.absence_code is not null or jesla.absence_code is not null)†ƒ
+—
+‰D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/JournalService.java½" Ã(ˆ
+%9javax.persistence.Query"^javax.persistence.EntityManager#createNativeQuery(Ljava/lang/String;)Ljavax/persistence/Query;*'
+%
+%2javax.persistence.EntityManager*
+
+%8java.lang.String2%createNativeQuery(Ljava/lang/String;)î
+ë
+—
+‰D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/JournalService.java½ Ã(‰(
+absencesQueryjavax.persistence.Query"__id*
+
+%9javax.persistence.Query…‚
+–
+‰D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/JournalService.javaÄ Ä(5
+%10javax.persistence.Query"Rjavax.persistence.Query#setParameter(ILjava/lang/Object;)Ljavax/persistence/Query;**
+(
+absencesQueryjavax.persistence.Query*2*
+
+
+journalIdsjava.util.List2!setParameter(ILjava/lang/Object;)„
+–
+‰D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/JournalService.javaÅ Å(4
+%11javax.persistence.Query"Rjavax.persistence.Query#setParameter(ILjava/lang/Object;)Ljavax/persistence/Query;**
+(
+absencesQueryjavax.persistence.Query*2*
+
+	studentIdjava.lang.Long2!setParameter(ILjava/lang/Object;)©¦
+–
+‰D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/JournalService.javaÆ Æ(8
+%12java.util.List"7javax.persistence.Query#getResultList()Ljava/util/List;**
+(
+absencesQueryjavax.persistence.Query2getResultList()Ó
+Ð
+–
+‰D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/JournalService.javaÆ Æ(9
+datajava.util.List"__id*
+
+%12java.util.Listìé
+–
+‰D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/JournalService.javaÈ È(
+%13boolean"java.util.List#isEmpty()Z*
+
+datajava.util.List2	isEmpty()*
+13
+0*â
+15–
+‰D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/JournalService.javaº  º(*ê
+ç
+–
+‰D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/JournalService.javaº  º([
+%0java.util.List"nee.hitsa.ois.util.StreamUtil#toMappedList(Ljava/util/function/Function;Ljava/util/Collection;)Ljava/util/List;* "
+ee.hitsa.ois.util.StreamUtil*
+""*
+
+journalsjava.util.ListØ
+Õ
+–
+‰D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/JournalService.javaº º(\
+
+journalIdsjava.util.List"__id*
+
+%0java.util.Listñî
+–
+‰D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/JournalService.java¼ ¼(!
+%1boolean"java.util.List#isEmpty()Z*
+
+
+journalIdsjava.util.List2	isEmpty()*
+14
+0*¶
+0 "®
+–
+‰D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/JournalService.javaê ê(
+implicit return*
+1–
+‰D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/JournalService.javaÕ Õ(.ç
+ä
+–
+‰D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/JournalService.javaÕ Õ(.;
+journal0ee.hitsa.ois.web.dto.timetable.StudentJournalDto"__id*
+""‹
+ˆ
+–
+‰D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/JournalService.javaÕ Õ(.;
+journal0ee.hitsa.ois.web.dto.timetable.StudentJournalDto"
+__arrayGet*
+
+journalsjava.util.List*
+""*
+0
+11*Þ
+2–
+‰D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/JournalService.javaÙ Ù(/Ë
+È
+–
+‰D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/JournalService.javaÙ Ù(/
+absenceTypejava.lang.String"__id*
+""é
+æ
+–
+‰D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/JournalService.javaÙ Ù(/
+absenceTypejava.lang.String"
+__arrayGet*
+
+%34java.util.Set*
+""*
+9
+1*„
+3–
+‰D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/JournalService.javaä ä(#ÏÌ
+–
+‰D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/JournalService.javaä ä(1
+%42java.util.Map"Mee.hitsa.ois.web.dto.timetable.StudentJournalDto#getAbsences()Ljava/util/Map;*=
+;
+journal0ee.hitsa.ois.web.dto.timetable.StudentJournalDto2getAbsences()ú
+÷
+–
+‰D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/JournalService.javaäC ä(V
+%43java.lang.Long")java.lang.Long#valueOf(J)Ljava/lang/Long;*"
+java.lang.Long*
+""‘
+Ž
+–
+‰D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/JournalService.javaä ä(W
+%44java.lang.Long"__mapSet*
+
+%42java.util.Map*!
+
+absenceTypejava.lang.String*
+
+%43java.lang.Long*
+2*¶
+4–
+‰D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/JournalService.javaÝ! Ý(Aî
+ë
+–
+‰D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/JournalService.javaÝ! Ý(AB
+absence7ee.hitsa.ois.web.dto.timetable.StudentJournalAbsenceDto"__id*
+""ž
+›
+–
+‰D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/JournalService.javaÝ! Ý(AB
+absence7ee.hitsa.ois.web.dto.timetable.StudentJournalAbsenceDto"
+__arrayGet*(
+&
+journalAbsenceOfTypejava.util.List*
+""*
+3
+7*ñ
+6–
+‰D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/JournalService.javaß$ ß()ßÜ
+–
+‰D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/JournalService.javaß- ß(A
+%40java.lang.Short"Uee.hitsa.ois.web.dto.timetable.StudentJournalAbsenceDto#getLessons()Ljava/lang/Short;*D
+B
+absence7ee.hitsa.ois.web.dto.timetable.StudentJournalAbsenceDto2getLessons()ëè
+–
+‰D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/JournalService.javaß- ß(L
+
+%41int"java.lang.Short#intValue()I*
+
+%40java.lang.Short2
+intValue()*
+4*†
+7–
+‰D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/JournalService.javaÞ$ Þ(+ßÜ
+–
+‰D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/JournalService.javaÞ$ Þ(8
+%39java.lang.Short"Uee.hitsa.ois.web.dto.timetable.StudentJournalAbsenceDto#getLessons()Ljava/lang/Short;*D
+B
+absence7ee.hitsa.ois.web.dto.timetable.StudentJournalAbsenceDto2getLessons()*
+4
+6*®	
+9–
+‰D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/JournalService.javaÚR Ú(\
+
+–
+‰D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/JournalService.javaÛ4 Û(_#
+%35java.util.function.Predicate"__declareFunction*:8
+6__sonar_lambda_657$ee.hitsa.ois.service.JournalService{
+y
+
+__unknown_file (4
+#
+%35java.util.function.Predicate"
+absenceType"__id*!
+
+absenceTypejava.lang.String”
+‘
+–
+‰D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/JournalService.javaÚR Û(q
+%38java.util.List"qee.hitsa.ois.util.StreamUtil#toFilteredList(Ljava/util/function/Predicate;Ljava/util/Collection;)Ljava/util/List;* "
+ee.hitsa.ois.util.StreamUtil*%
+#
+%35java.util.function.Predicate*#
+!
+journalAbsencesjava.util.Listã
+à
+–
+‰D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/JournalService.javaÚ Û(r&
+journalAbsenceOfTypejava.util.List"__id*
+
+%38java.util.List*
+4*ò
+10–
+‰D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/JournalService.javaÙ2 Ù(9ÏÌ
+–
+‰D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/JournalService.javaÙ2 Ù(G
+%33java.util.Map"Mee.hitsa.ois.web.dto.timetable.StudentJournalDto#getAbsences()Ljava/util/Map;*=
+;
+journal0ee.hitsa.ois.web.dto.timetable.StudentJournalDto2getAbsences()ûø
+–
+‰D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/JournalService.javaÙ2 Ù(P
+%34java.util.Set"%java.util.Map#keySet()Ljava/util/Set;*
+
+%33java.util.Map2keySet()*
+2*Î
+11–
+‰D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/JournalService.javaÖE Ö(VÅÂ
+–
+‰D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/JournalService.javaÖ[ Ö(j
+%31java.lang.Long"Hee.hitsa.ois.web.dto.timetable.StudentJournalDto#getId()Ljava/lang/Long;*=
+;
+journal0ee.hitsa.ois.web.dto.timetable.StudentJournalDto2getId()ü
+ù
+–
+‰D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/JournalService.javaÖE Ö(k
+%32java.util.List"__mapGet*$
+"
+absencesByJournaljava.util.Map*
+
+%31java.lang.LongÞ
+Û
+–
+‰D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/JournalService.javaÖ Ö(l!
+journalAbsencesjava.util.List"__id*
+
+%32java.util.List*
+10
+1:
+	studentIdjava.lang.Long:
+journalsjava.util.ListB'%
+#ee.hitsa.ois.service.JournalService

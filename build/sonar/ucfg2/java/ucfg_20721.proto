@@ -1,0 +1,92 @@
+
+_ee.hitsa.ois.service.DirectiveService#findValidStudentGroups(Ljava/lang/Long;Z)Ljava/util/List;˜
+‹D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/DirectiveService.javaø ø(5"4*ü
+2˜
+‹D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/DirectiveService.javaüG ü(IÖ
+Ó
+˜
+‹D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/DirectiveService.javaüG ü(I
+%3java.lang.String"__id*
+
+%5java.lang.String*
+1*ü
+3˜
+‹D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/DirectiveService.javaü( ü(DÖ
+Ó
+˜
+‹D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/DirectiveService.javaü( ü(D
+%3java.lang.String"__id*
+
+%4java.lang.String*
+1*ó	
+4˜
+‹D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/DirectiveService.javaù ù(!‚
+ÿ
+˜
+‹D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/DirectiveService.javaù ù('
+%0java.time.LocalDate".java.time.LocalDate#now()Ljava/time/LocalDate;*"
+java.time.LocalDateİ
+Ú
+˜
+‹D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/DirectiveService.javaù ù((
+nowjava.time.LocalDate"__id*
+
+%0java.time.LocalDateş
+û
+˜
+‹D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/DirectiveService.javaú ú(%
+%1javax.persistence.EntityManager"__id*1*/'
+%ee.hitsa.ois.service.DirectiveService"
+emä
+á
+˜
+‹D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/DirectiveService.javaú û(u
+%2java.lang.String"__concat*;9
+7select sg from StudentGroup sg where sg.school.id = ?1 *ec
+aand (sg.validFrom is null or sg.validFrom <= ?2) and (sg.validThru is null or sg.validThru >= ?2)*
+2
+3*Ë
+1˜
+‹D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/DirectiveService.javaú ü(Jô
+ñ
+˜
+‹D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/DirectiveService.javaú ü(J
+%6java.lang.String"__concat*
+
+%2java.lang.String*
+
+%3java.lang.String¯¬
+˜
+‹D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/DirectiveService.javaú ü(_"
+%7javax.persistence.TypedQuery"njavax.persistence.EntityManager#createQuery(Ljava/lang/String;Ljava/lang/Class;)Ljavax/persistence/TypedQuery;*'
+%
+%1javax.persistence.EntityManager*
+
+%6java.lang.String*
+""20createQuery(Ljava/lang/String;Ljava/lang/Class;)Š
+˜
+‹D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/DirectiveService.javaú ı(*"
+%8javax.persistence.TypedQuery"\javax.persistence.TypedQuery#setParameter(ILjava/lang/Object;)Ljavax/persistence/TypedQuery;*$
+"
+%7javax.persistence.TypedQuery*2*
+
+schoolIdjava.lang.Long2!setParameter(ILjava/lang/Object;)Š
+˜
+‹D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/DirectiveService.javaú ı(?"
+%9javax.persistence.TypedQuery"\javax.persistence.TypedQuery#setParameter(ILjava/lang/Object;)Ljavax/persistence/TypedQuery;*$
+"
+%8javax.persistence.TypedQuery*2*
+
+nowjava.time.LocalDate2!setParameter(ILjava/lang/Object;)ª§
+˜
+‹D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/DirectiveService.javaú ı(O
+%10java.util.List"<javax.persistence.TypedQuery#getResultList()Ljava/util/List;*$
+"
+%9javax.persistence.TypedQuery2getResultList()"´
+˜
+‹D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/DirectiveService.javaú ı(P
+
+%10java.util.List:
+schoolIdjava.lang.Long:
+""B)'
+%ee.hitsa.ois.service.DirectiveService

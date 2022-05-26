@@ -1,0 +1,190 @@
+
+kee.hitsa.ois.service.JournalService#journalOutcomeResults(Ljava/lang/Long;Ljava/lang/Long;)Ljava/util/List;ñ
+âD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/JournalService.java√
+8 √
+(M"3*á
+2ñ
+âD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/JournalService.javaÃ
+# Ã
+(-é
+ã
+ñ
+âD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/JournalService.javaÃ
+; Ã
+(R!
+%8java.util.function.Function"__declareFunction*:8
+6__sonar_lambda_622$ee.hitsa.ois.service.JournalServiceÑ
+Å
+ñ
+âD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/JournalService.javaÃ
+# Ã
+(Y
+%10java.util.List"nee.hitsa.ois.util.StreamUtil#toMappedList(Ljava/util/function/Function;Ljava/util/Collection;)Ljava/util/List;* "
+ee.hitsa.ois.util.StreamUtil*#
+!
+%8java.util.function.Function*
+
+datajava.util.Listÿ
+’
+ñ
+âD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/JournalService.javaÃ
+ Ã
+(Z
+	resultIdsjava.util.List"__id*
+
+%10java.util.List˚
+¯
+ñ
+âD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/JournalService.javaÕ
+ Õ
+(&
+%11javax.persistence.EntityManager"__id*/*-%
+#ee.hitsa.ois.service.JournalService"
+emß
+§
+ñ
+âD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/JournalService.javaÕ
+" Œ
+(D
+%12java.lang.String"__concat*<:
+8select scmor from StudentCurriculumModuleOutcomesResult *(&
+$scmor where scmor.id in (:resultIds)∞≠
+ñ
+âD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/JournalService.javaÕ
+ Œ
+(r#
+%13javax.persistence.TypedQuery"njavax.persistence.EntityManager#createQuery(Ljava/lang/String;Ljava/lang/Class;)Ljavax/persistence/TypedQuery;*(
+&
+%11javax.persistence.EntityManager*
+
+%12java.lang.String*
+""20createQuery(Ljava/lang/String;Ljava/lang/Class;)π∂
+ñ
+âD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/JournalService.javaÕ
+ œ
+(9#
+%14javax.persistence.TypedQuery"mjavax.persistence.TypedQuery#setParameter(Ljava/lang/String;Ljava/lang/Object;)Ljavax/persistence/TypedQuery;*%
+#
+%13javax.persistence.TypedQuery*
+	resultIds*
+
+	resultIdsjava.util.List22setParameter(Ljava/lang/String;Ljava/lang/Object;)©¶
+ñ
+âD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/JournalService.javaÕ
+ œ
+(I
+%15java.util.List"<javax.persistence.TypedQuery#getResultList()Ljava/util/List;*%
+#
+%14javax.persistence.TypedQuery2getResultList()"≤
+ñ
+âD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/JournalService.javaÕ
+ œ
+(J
+
+%15java.util.List*É
+3ñ
+âD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/JournalService.javaƒ
+ ƒ
+(˙
+˜
+ñ
+âD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/JournalService.javaƒ
+ ƒ
+(%
+%0javax.persistence.EntityManager"__id*/*-%
+#ee.hitsa.ois.service.JournalService"
+em÷
+”
+ñ
+âD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/JournalService.javaƒ
+, ≈
+([
+%1java.lang.String"__concat*IG
+Eselect scmor.id from student_curriculum_module_outcomes_result scmor *KI
+Gwhere scmor.curriculum_module_outcomes_id = ?1 and scmor.student_id in •
+¢
+ñ
+âD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/JournalService.javaƒ
+, ∆
+([
+%2java.lang.String"__concat*
+
+%1java.lang.String*KI
+G(select js.student_id from journal_student js where js.journal_id = ?2)ÖÇ
+ñ
+âD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/JournalService.javaƒ
+ ∆
+(\
+%3javax.persistence.Query"^javax.persistence.EntityManager#createNativeQuery(Ljava/lang/String;)Ljavax/persistence/Query;*'
+%
+%0javax.persistence.EntityManager*
+
+%2java.lang.String2%createNativeQuery(Ljava/lang/String;)¯ı
+ñ
+âD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/JournalService.javaƒ
+ «
+(+
+%4javax.persistence.Query"Rjavax.persistence.Query#setParameter(ILjava/lang/Object;)Ljavax/persistence/Query;*
+
+%3javax.persistence.Query*2*
+
+	outcomeIdjava.lang.Long2!setParameter(ILjava/lang/Object;)¯ı
+ñ
+âD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/JournalService.javaƒ
+ »
+(+
+%5javax.persistence.Query"Rjavax.persistence.Query#setParameter(ILjava/lang/Object;)Ljavax/persistence/Query;*
+
+%4javax.persistence.Query*2*
+
+	journalIdjava.lang.Long2!setParameter(ILjava/lang/Object;)ùö
+ñ
+âD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/JournalService.javaƒ
+ …
+( 
+%6java.util.List"7javax.persistence.Query#getResultList()Ljava/util/List;*
+
+%5javax.persistence.Query2getResultList()“
+œ
+ñ
+âD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/JournalService.javaƒ
+ …
+(!
+datajava.util.List"__id*
+
+%6java.util.ListÎË
+ñ
+âD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/JournalService.javaÀ
+ À
+(
+%7boolean"java.util.List#isEmpty()Z*
+
+datajava.util.List2	isEmpty()*
+2
+1*â
+1ñ
+âD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/JournalService.java—
+ —
+( Õ 
+ñ
+âD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/JournalService.java—
+ —
+(
+%16java.util.ArrayList"java.util.ArrayList‡
+›
+ñ
+âD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/JournalService.java—
+ —
+( 
+%17"java.util.ArrayList#<init>()V*
+
+%16java.util.ArrayList"∑
+ñ
+âD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/JournalService.java—
+ —
+(!
+
+%16java.util.ArrayList:
+	journalIdjava.lang.Long:
+	outcomeIdjava.lang.LongB'%
+#ee.hitsa.ois.service.JournalService

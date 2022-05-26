@@ -1,0 +1,521 @@
+
+òee.hitsa.ois.service.TimetableService#searchVocationalTimetableForManagement(Lee/hitsa/ois/web/commandobject/timetable/TimetableManagementSearchCommand;Lorg/springframework/data/domain/Pageable;Lee/hitsa/ois/service/security/HoisUserDetails;)Lorg/springframework/data/domain/Page;ò
+ãD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/TimetableService.javaô/ ô(U"12*ﬂ
+2ò
+ãD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/TimetableService.javaø ø(œ
+Ã
+ò
+ãD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/TimetableService.javaø* ø(t
+%57java.util.Comparator"hee.hitsa.ois.util.StreamUtil#comparingWithNullsLast(Ljava/util/function/Function;)Ljava/util/Comparator;* "
+ee.hitsa.ois.util.StreamUtil*
+""À
+»
+ò
+ãD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/TimetableService.javaø ø(u
+%58void"Cjava.util.Collections#sort(Ljava/util/List;Ljava/util/Comparator;)V*"
+java.util.Collections*
+
+wrappedDatajava.util.List*
+
+%57java.util.Comparatorô
+ñ
+ò
+ãD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/TimetableService.java¿ ¿(,
+%59void"0java.util.Collections#reverse(Ljava/util/List;)V*"
+java.util.Collections*
+
+wrappedDatajava.util.List*
+1*“
+3ò
+ãD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/TimetableService.javaæ æ(©¶
+ò
+ãD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/TimetableService.javaæ æ(1
+%56boolean",java.lang.String#equals(Ljava/lang/Object;)Z*	
+2: DESC*"
+ 
+pageableSortjava.lang.String2equals(Ljava/lang/Object;)*
+2
+1*√
+4ò
+ãD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/TimetableService.javaΩ Ω(œ
+Ã
+ò
+ãD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/TimetableService.javaΩ* Ω(t
+%54java.util.Comparator"hee.hitsa.ois.util.StreamUtil#comparingWithNullsLast(Ljava/util/function/Function;)Ljava/util/Comparator;* "
+ee.hitsa.ois.util.StreamUtil*
+""À
+»
+ò
+ãD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/TimetableService.javaΩ Ω(u
+%55void"Cjava.util.Collections#sort(Ljava/util/List;Ljava/util/Comparator;)V*"
+java.util.Collections*
+
+wrappedDatajava.util.List*
+
+%54java.util.Comparator*
+1*—
+5ò
+ãD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/TimetableService.javaº º(®•
+ò
+ãD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/TimetableService.javaº º(0
+%53boolean",java.lang.String#equals(Ljava/lang/Object;)Z*
+
+2: ASC*"
+ 
+pageableSortjava.lang.String2equals(Ljava/lang/Object;)*
+3
+4*ﬂ
+6ò
+ãD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/TimetableService.java∫ ∫(œ
+Ã
+ò
+ãD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/TimetableService.java∫* ∫(s
+%50java.util.Comparator"hee.hitsa.ois.util.StreamUtil#comparingWithNullsLast(Ljava/util/function/Function;)Ljava/util/Comparator;* "
+ee.hitsa.ois.util.StreamUtil*
+""À
+»
+ò
+ãD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/TimetableService.java∫ ∫(t
+%51void"Cjava.util.Collections#sort(Ljava/util/List;Ljava/util/Comparator;)V*"
+java.util.Collections*
+
+wrappedDatajava.util.List*
+
+%50java.util.Comparatorô
+ñ
+ò
+ãD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/TimetableService.javaª ª(,
+%52void"0java.util.Collections#reverse(Ljava/util/List;)V*"
+java.util.Collections*
+
+wrappedDatajava.util.List*
+1*€
+7ò
+ãD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/TimetableService.javaπ π(%≤Ø
+ò
+ãD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/TimetableService.javaπ π(:
+%49boolean",java.lang.String#equals(Ljava/lang/Object;)Z*
+3: DESC, 4: DESC*"
+ 
+pageableSortjava.lang.String2equals(Ljava/lang/Object;)*
+5
+6*√
+8ò
+ãD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/TimetableService.java∏ ∏(œ
+Ã
+ò
+ãD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/TimetableService.java∏* ∏(s
+%47java.util.Comparator"hee.hitsa.ois.util.StreamUtil#comparingWithNullsLast(Ljava/util/function/Function;)Ljava/util/Comparator;* "
+ee.hitsa.ois.util.StreamUtil*
+""À
+»
+ò
+ãD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/TimetableService.java∏ ∏(t
+%48void"Cjava.util.Collections#sort(Ljava/util/List;Ljava/util/Comparator;)V*"
+java.util.Collections*
+
+wrappedDatajava.util.List*
+
+%47java.util.Comparator*
+1*Ω
+9ò
+ãD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/TimetableService.java∂ ∂(`·
+ﬁ
+ò
+ãD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/TimetableService.java∂ ∂(` 
+pageableSortjava.lang.String"__id*
+
+%42java.lang.String∞≠
+ò
+ãD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/TimetableService.java∑ ∑(1
+%46boolean",java.lang.String#equals(Ljava/lang/Object;)Z*
+3: ASC, 4: ASC*"
+ 
+pageableSortjava.lang.String2equals(Ljava/lang/Object;)*
+7
+8*˘
+10ò
+ãD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/TimetableService.java∂[ ∂(_“
+œ
+ò
+ãD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/TimetableService.java∂[ ∂(_
+%42java.lang.String"__id*
+
+%44
+<nulltype>*
+9*¢
+11ò
+ãD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/TimetableService.java∂; ∂(CËÂ
+ò
+ãD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/TimetableService.java∂; ∂(M+
+%45$org.springframework.data.domain.Sort"Xorg.springframework.data.domain.Pageable#getSort()Lorg/springframework/data/domain/Sort;*6
+4
+pageable(org.springframework.data.domain.Pageable2	getSort()µ≤
+ò
+ãD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/TimetableService.java∂; ∂(X
+%43java.lang.String"Aorg.springframework.data.domain.Sort#toString()Ljava/lang/String;*-
++
+%45$org.springframework.data.domain.Sort2
+toString()ÿ
+’
+ò
+ãD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/TimetableService.java∂; ∂(X
+%42java.lang.String"__id*
+
+%43java.lang.String*
+9*Éh
+12ò
+ãD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/TimetableService.javaõ õ(˛
+˚
+ò
+ãD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/TimetableService.javaõ õ(%
+%0javax.persistence.EntityManager"__id*1*/'
+%ee.hitsa.ois.service.TimetableService"
+em…∆
+ò
+ãD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/TimetableService.javaõ6 õ(H
+%1java.lang.Long"Kee.hitsa.ois.service.security.HoisUserDetails#getSchoolId()Ljava/lang/Long;*7
+5
+user-ee.hitsa.ois.service.security.HoisUserDetails2getSchoolId()®•
+ò
+ãD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/TimetableService.javaõ õ(I'
+%2!ee.hitsa.ois.domain.school.School"cjavax.persistence.EntityManager#getReference(Ljava/lang/Class;Ljava/lang/Object;)Ljava/lang/Object;*'
+%
+%0javax.persistence.EntityManager*
+""*
+
+%1java.lang.Long21getReference(Ljava/lang/Class;Ljava/lang/Object;)¸
+˘
+ò
+ãD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/TimetableService.javaõ õ(J+
+school!ee.hitsa.ois.domain.school.School"__id*)
+'
+%2!ee.hitsa.ois.domain.school.Schoolé
+ã
+ò
+ãD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/TimetableService.javaú= ù(F
+%3java.lang.String"__concat*
+from timetable t*64
+2 join study_period sp on sp.id = t.study_period_idˆÛ
+ò
+ãD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/TimetableService.javaú' ú(<-
+%4'ee.hitsa.ois.util.JpaNativeQueryBuilder"'ee.hitsa.ois.util.JpaNativeQueryBuilder¥
+±
+ò
+ãD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/TimetableService.javaú# ù(G
+%5"Cee.hitsa.ois.util.JpaNativeQueryBuilder#<init>(Ljava/lang/String;)V*/
+-
+%4'ee.hitsa.ois.util.JpaNativeQueryBuilder*
+
+%3java.lang.StringÑ
+Å
+ò
+ãD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/TimetableService.javaú ù(H-
+qb'ee.hitsa.ois.util.JpaNativeQueryBuilder"__id*/
+-
+%4'ee.hitsa.ois.util.JpaNativeQueryBuilderáÑ
+ò
+ãD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/TimetableService.javaüN ü(e
+%6java.lang.Long"hee.hitsa.ois.web.commandobject.timetable.TimetableManagementSearchCommand#getStudyYear()Ljava/lang/Long;*W
+U
+criteriaIee.hitsa.ois.web.commandobject.timetable.TimetableManagementSearchCommand2getStudyYear()‚ﬂ
+ò
+ãD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/TimetableService.javaü ü(f
+
+%7void"oee.hitsa.ois.util.JpaNativeQueryBuilder#requiredCriteria(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Long;)V*/
+-
+qb'ee.hitsa.ois.util.JpaNativeQueryBuilder*#!
+sp.study_year_id = :studyYearId*
+studyYearId*
+
+%6java.lang.Long2FrequiredCriteria(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Long;)…∆
+ò
+ãD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/TimetableService.java†C †(U
+%8java.lang.Long"Kee.hitsa.ois.service.security.HoisUserDetails#getSchoolId()Ljava/lang/Long;*7
+5
+user-ee.hitsa.ois.service.security.HoisUserDetails2getSchoolId()◊‘
+ò
+ãD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/TimetableService.java† †(V
+
+%9void"oee.hitsa.ois.util.JpaNativeQueryBuilder#requiredCriteria(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Long;)V*/
+-
+qb'ee.hitsa.ois.util.JpaNativeQueryBuilder*
+t.school_id = :schoolId*
+
+schoolId*
+
+%8java.lang.Long2FrequiredCriteria(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Long;)Çˇ
+ò
+ãD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/TimetableService.java¢7 ¢(I
+%10java.lang.String"eee.hitsa.ois.web.commandobject.timetable.TimetableManagementSearchCommand#getType()Ljava/lang/String;*W
+U
+criteriaIee.hitsa.ois.web.commandobject.timetable.TimetableManagementSearchCommand2	getType()Ø
+¨
+ò
+ãD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/TimetableService.java¢  ¢(J
+%11boolean">ee.hitsa.ois.enums.TimetableType#isHigher(Ljava/lang/String;)Z*$""
+ ee.hitsa.ois.enums.TimetableType*
+
+%10java.lang.Stringí
+è
+ò
+ãD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/TimetableService.java¢ ¢(K
+%12java.lang.Boolean"/java.lang.Boolean#valueOf(Z)Ljava/lang/Boolean;*"
+java.lang.Boolean*
+
+%11boolean‚ﬂ
+ò
+ãD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/TimetableService.java° ¢(L
+%13void"ree.hitsa.ois.util.JpaNativeQueryBuilder#optionalCriteria(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Boolean;)V*/
+-
+qb'ee.hitsa.ois.util.JpaNativeQueryBuilder*
+t.is_higher = :isHigher*
+
+isHigher*
+
+%12java.lang.Boolean2IoptionalCriteria(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Boolean;)ç
+ä
+ò
+ãD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/TimetableService.java§ §(b
+selectjava.lang.String"__id*KI
+Gt.id, t.status_code, t.start_date, t.end_date, t.is_higher, sp.id sp_idˇ
+¸
+ò
+ãD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/TimetableService.java•) •(+&
+%14javax.persistence.EntityManager"__id*1*/'
+%ee.hitsa.ois.service.TimetableService"
+emÚÔ
+ò
+ãD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/TimetableService.java• •(,
+%15javax.persistence.Query"|ee.hitsa.ois.util.JpaNativeQueryBuilder#select(Ljava/lang/String;Ljavax/persistence/EntityManager;)Ljavax/persistence/Query;*/
+-
+qb'ee.hitsa.ois.util.JpaNativeQueryBuilder*
+
+selectjava.lang.String*(
+&
+%14javax.persistence.EntityManager2;select(Ljava/lang/String;Ljavax/persistence/EntityManager;)°û
+ò
+ãD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/TimetableService.java• •(<
+%16java.util.List"7javax.persistence.Query#getResultList()Ljava/util/List;* 
+
+%15javax.persistence.Query2getResultList()’
+“
+ò
+ãD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/TimetableService.java• •(=
+datajava.util.List"__id*
+
+%16java.util.Listˇ
+¸
+ò
+ãD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/TimetableService.java¶ ¶(&
+%17javax.persistence.EntityManager"__id*1*/'
+%ee.hitsa.ois.service.TimetableService"
+emåâ
+ò
+ãD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/TimetableService.java¶< ¶(U
+%18java.lang.Long"jee.hitsa.ois.web.commandobject.timetable.TimetableManagementSearchCommand#getStudyPeriod()Ljava/lang/Long;*W
+U
+criteriaIee.hitsa.ois.web.commandobject.timetable.TimetableManagementSearchCommand2getStudyPeriod()©¶
+ò
+ãD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/TimetableService.java¶ ¶(V&
+%19ee.hitsa.ois.domain.StudyPeriod"cjavax.persistence.EntityManager#getReference(Ljava/lang/Class;Ljava/lang/Object;)Ljava/lang/Object;*(
+&
+%17javax.persistence.EntityManager*
+""*
+
+%18java.lang.Long21getReference(Ljava/lang/Class;Ljava/lang/Object;)ı
+Ú
+ò
+ãD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/TimetableService.java¶ ¶(W%
+spee.hitsa.ois.domain.StudyPeriod"__id*(
+&
+%19ee.hitsa.ois.domain.StudyPeriod÷”
+ò
+ãD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/TimetableService.java®R ®(g%
+%20ee.hitsa.ois.domain.Classifier"Pee.hitsa.ois.domain.school.School#getTimetable()Lee/hitsa/ois/domain/Classifier;*-
++
+school!ee.hitsa.ois.domain.school.School2getTimetable()‹
+Ÿ
+ô
+ãD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/TimetableService.java®i ®(å-
+%21&ee.hitsa.ois.enums.SchoolTimetableType"__id*
+""›
+⁄
+ö
+ãD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/TimetableService.java®é ®(Ø-
+%22&ee.hitsa.ois.enums.SchoolTimetableType"__id*
+""º
+π
+ô
+ãD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/TimetableService.java®= ®(∞
+%23boolean"Zee.hitsa.ois.util.ClassifierUtil#oneOf(Lee/hitsa/ois/domain/Classifier;[Ljava/lang/Enum;)Z*$""
+ ee.hitsa.ois.util.ClassifierUtil*'
+%
+%20ee.hitsa.ois.domain.Classifier*/
+-
+%21&ee.hitsa.ois.enums.SchoolTimetableType*/
+-
+%22&ee.hitsa.ois.enums.SchoolTimetableTypeì
+ê
+ô
+ãD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/TimetableService.java®- ®(±
+%24java.lang.Boolean"/java.lang.Boolean#valueOf(Z)Ljava/lang/Boolean;*"
+java.lang.Boolean*
+
+%23booleanÚ
+Ô
+ô
+ãD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/TimetableService.java® ®(≤/
+canExportOrImportTimetablejava.lang.Boolean"__id*
+
+%24java.lang.Booleanì
+ê
+ò
+ãD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/TimetableService.java©Q ≤(	"
+%25java.util.function.Function"__declareFunction*<:
+8__sonar_lambda_886$ee.hitsa.ois.service.TimetableServiceö
+ó
+
+__unknown_file (B
+"
+%25java.util.function.Function"
+canExportOrImportTimetable"__id*1
+/
+canExportOrImportTimetablejava.lang.Booleaná
+Ñ
+ò
+ãD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/TimetableService.java©9 ≤(
+%34java.util.List"nee.hitsa.ois.util.StreamUtil#toMappedList(Ljava/util/function/Function;Ljava/util/Collection;)Ljava/util/List;* "
+ee.hitsa.ois.util.StreamUtil*$
+"
+%25java.util.function.Function*
+
+datajava.util.List‹
+Ÿ
+ò
+ãD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/TimetableService.java© ≤(
+wrappedDatajava.util.List"__id*
+
+%34java.util.ListÙ
+Ò
+ò
+ãD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/TimetableService.java≥ ≥(M
+%35java.util.List"îee.hitsa.ois.service.TimetableService#addMissingDatesToBlocked(Lee/hitsa/ois/domain/StudyPeriod;Ljava/util/List;Ljava/lang/Boolean;)Ljava/util/List;*)"'
+%ee.hitsa.ois.service.TimetableService*'
+%
+spee.hitsa.ois.domain.StudyPeriod*
+
+wrappedDatajava.util.List*1
+/
+canExportOrImportTimetablejava.lang.Booleanî
+ë
+ò
+ãD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/TimetableService.java¥0 ¥(i#
+%36java.util.function.Predicate"__declareFunction*<:
+8__sonar_lambda_887$ee.hitsa.ois.service.TimetableServiceØ
+¨
+
+__unknown_file (1
+#
+%36java.util.function.Predicate"
+
+criteria"__id*W
+U
+criteriaIee.hitsa.ois.web.commandobject.timetable.TimetableManagementSearchCommandí
+è
+ò
+ãD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/TimetableService.java¥ ¥(w
+%40java.util.List"qee.hitsa.ois.util.StreamUtil#toFilteredList(Ljava/util/function/Predicate;Ljava/util/Collection;)Ljava/util/List;* "
+ee.hitsa.ois.util.StreamUtil*%
+#
+%36java.util.function.Predicate*
+
+wrappedDatajava.util.List‹
+Ÿ
+ò
+ãD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/TimetableService.java¥ ¥(w
+wrappedDatajava.util.List"__id*
+
+%40java.util.ListËÂ
+ò
+ãD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/TimetableService.java∂ ∂(0+
+%41$org.springframework.data.domain.Sort"Xorg.springframework.data.domain.Pageable#getSort()Lorg/springframework/data/domain/Sort;*6
+4
+pageable(org.springframework.data.domain.Pageable2	getSort()*
+10
+11*¬
+1ò
+ãD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/TimetableService.java√ √($ÎË
+ò
+ãD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/TimetableService.java√ √(+
+
+%60int"java.util.List#size()I*
+
+wrappedDatajava.util.List2size()¶£
+ò
+ãD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/TimetableService.javaƒ ƒ(1
+
+%61int"5org.springframework.data.domain.Pageable#getOffset()I*6
+4
+pageable(org.springframework.data.domain.Pageable2getOffset()Ì
+Í
+ò
+ãD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/TimetableService.javaƒ ƒ(>
+
+%62int"java.lang.Math#min(II)I*"
+java.lang.Math*
+
+
+%61int*
+""™ß
+ò
+ãD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/TimetableService.java≈# ≈(9
+
+%63int"7org.springframework.data.domain.Pageable#getPageSize()I*6
+4
+pageable(org.springframework.data.domain.Pageable2getPageSize()Á
+‰
+ò
+ãD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/TimetableService.java≈ ≈(F
+
+%64int"java.lang.Math#min(II)I*"
+java.lang.Math*
+""*
+""üú
+ò
+ãD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/TimetableService.java∆ ∆(=
+%65java.util.List"*java.util.List#subList(II)Ljava/util/List;*
+
+wrappedDatajava.util.List*
+""*
+""2subList(II)ÎË
+ò
+ãD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/TimetableService.java∆I ∆([
+
+%66int"java.util.List#size()I*
+
+wrappedDatajava.util.List2size()˘ˆ
+ò
+ãD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/TimetableService.java∆ ∆(/
+%67(org.springframework.data.domain.PageImpl"(org.springframework.data.domain.PageImpl¶
+£
+ò
+ãD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/TimetableService.java∆ ∆(\
+%68"morg.springframework.data.domain.PageImpl#<init>(Ljava/util/List;Lorg/springframework/data/domain/Pageable;J)V*1
+/
+%67(org.springframework.data.domain.PageImpl*
+
+%65java.util.List*6
+4
+pageable(org.springframework.data.domain.Pageable*
+
+
+%66int"Œ
+ò
+ãD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/TimetableService.java∆ ∆(]1
+/
+%67(org.springframework.data.domain.PageImpl:U
+criteriaIee.hitsa.ois.web.commandobject.timetable.TimetableManagementSearchCommand:4
+pageable(org.springframework.data.domain.Pageable:5
+user-ee.hitsa.ois.service.security.HoisUserDetailsB)'
+%ee.hitsa.ois.service.TimetableService

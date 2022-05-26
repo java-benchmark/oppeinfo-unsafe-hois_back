@@ -1,0 +1,235 @@
+
+»ee.hitsa.ois.service.StudentGroupTeacherReportService#negativeJournalResultsQb(Lee/hitsa/ois/web/commandobject/report/StudentGroupTeacherCommand;)Lee/hitsa/ois/util/JpaNativeQueryBuilder;¨
+›D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/StudentGroupTeacherReportService.javaÂ) Â(A"3*ü
+2¨
+›D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/StudentGroupTeacherReportService.javaÕ Õ(à
+Ý
+¨
+›D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/StudentGroupTeacherReportService.javaÕ Ö(Z
+%23java.lang.String"__concat*EC
+Acoalesce(je.entry_date, jes.grade_inserted) >= :studyPeriodStart *FD
+Band coalesce(je.entry_date, jes.grade_inserted) <= :studyPeriodEndèå
+¨
+›D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/StudentGroupTeacherReportService.javaÕ Ö([
+%24void"Cee.hitsa.ois.util.JpaNativeQueryBuilder#filter(Ljava/lang/String;)V*/
+-
+qb'ee.hitsa.ois.util.JpaNativeQueryBuilder*
+
+%23java.lang.String2filter(Ljava/lang/String;)ž›
+¨
+›D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/StudentGroupTeacherReportService.java×H ×(f
+%25java.time.LocalDate"kee.hitsa.ois.web.commandobject.report.StudentGroupTeacherCommand#getStudyPeriodStart()Ljava/time/LocalDate;*N
+L
+criteria@ee.hitsa.ois.web.commandobject.report.StudentGroupTeacherCommand2getStudyPeriodStart()ë
+è
+¨
+›D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/StudentGroupTeacherReportService.java×- ×(g
+%26java.time.LocalDateTime"\ee.hitsa.ois.util.DateUtils#firstMomentOfDay(Ljava/time/LocalDate;)Ljava/time/LocalDateTime;*"
+ee.hitsa.ois.util.DateUtils*
+
+%25java.time.LocalDate¯¬
+¨
+›D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/StudentGroupTeacherReportService.java× ×(h
+%27void"Xee.hitsa.ois.util.JpaNativeQueryBuilder#parameter(Ljava/lang/String;Ljava/lang/Object;)V*/
+-
+qb'ee.hitsa.ois.util.JpaNativeQueryBuilder*
+studyPeriodStart* 
+
+%26java.time.LocalDateTime2/parameter(Ljava/lang/String;Ljava/lang/Object;)š—
+¨
+›D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/StudentGroupTeacherReportService.javaØE Ø(a
+%28java.time.LocalDate"iee.hitsa.ois.web.commandobject.report.StudentGroupTeacherCommand#getStudyPeriodEnd()Ljava/time/LocalDate;*N
+L
+criteria@ee.hitsa.ois.web.commandobject.report.StudentGroupTeacherCommand2getStudyPeriodEnd()ê
+ç
+¨
+›D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/StudentGroupTeacherReportService.javaØ+ Ø(b
+%29java.time.LocalDateTime"[ee.hitsa.ois.util.DateUtils#lastMomentOfDay(Ljava/time/LocalDate;)Ljava/time/LocalDateTime;*"
+ee.hitsa.ois.util.DateUtils*
+
+%28java.time.LocalDate­ª
+¨
+›D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/StudentGroupTeacherReportService.javaØ Ø(c
+%30void"Xee.hitsa.ois.util.JpaNativeQueryBuilder#parameter(Ljava/lang/String;Ljava/lang/Object;)V*/
+-
+qb'ee.hitsa.ois.util.JpaNativeQueryBuilder*
+studyPeriodEnd* 
+
+%29java.time.LocalDateTime2/parameter(Ljava/lang/String;Ljava/lang/Object;)*
+1*¶J
+3¨
+›D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/StudentGroupTeacherReportService.javaÃ= Ã(N
+Œ
+¨
+›D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/StudentGroupTeacherReportService.javaÃ= Ä(8
+%0java.lang.String"__concat*
+from student s *(&
+$join person p on p.id = s.person_id ¤
+¡
+¨
+›D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/StudentGroupTeacherReportService.javaÃ= Å(H
+%1java.lang.String"__concat*
+
+%0java.lang.String*86
+4join student_group sg on sg.id = s.student_group_id  
+
+¨
+›D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/StudentGroupTeacherReportService.javaÃ= Æ(D
+%2java.lang.String"__concat*
+
+%1java.lang.String*42
+0join journal_student js on js.student_id = s.id —
+”
+¨
+›D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/StudentGroupTeacherReportService.javaÃ= Æ(p
+%3java.lang.String"__concat*
+
+%2java.lang.String*+)
+'join journal j on j.id = js.journal_id ±
+®
+¨
+›D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/StudentGroupTeacherReportService.javaÃ= Ç(U
+%4java.lang.String"__concat*
+
+%3java.lang.String*EC
+Ajoin journal_entry_student jes on jes.journal_student_id = js.id ¥
+¢
+¨
+›D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/StudentGroupTeacherReportService.javaÃ= È(I
+%5java.lang.String"__concat*
+
+%4java.lang.String*97
+5join journal_entry je on je.id = jes.journal_entry_id†ƒ
+¨
+›D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/StudentGroupTeacherReportService.javaÃ' Ã(<-
+%6'ee.hitsa.ois.util.JpaNativeQueryBuilder"'ee.hitsa.ois.util.JpaNativeQueryBuilderÄ
+Á
+¨
+›D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/StudentGroupTeacherReportService.javaÃ# È(J
+%7"Cee.hitsa.ois.util.JpaNativeQueryBuilder#<init>(Ljava/lang/String;)V*/
+-
+%6'ee.hitsa.ois.util.JpaNativeQueryBuilder*
+
+%5java.lang.String”
+‘
+¨
+›D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/StudentGroupTeacherReportService.javaÃ È(K-
+qb'ee.hitsa.ois.util.JpaNativeQueryBuilder"__id*/
+-
+%6'ee.hitsa.ois.util.JpaNativeQueryBuilder‹ˆ
+¨
+›D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/StudentGroupTeacherReportService.javaÉI É(c
+%8java.lang.Long"bee.hitsa.ois.web.commandobject.report.StudentGroupTeacherCommand#getStudentGroup()Ljava/lang/Long;*N
+L
+criteria@ee.hitsa.ois.web.commandobject.report.StudentGroupTeacherCommand2getStudentGroup()íê
+¨
+›D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/StudentGroupTeacherReportService.javaÉ É(d
+
+%9void"oee.hitsa.ois.util.JpaNativeQueryBuilder#requiredCriteria(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Long;)V*/
+-
+qb'ee.hitsa.ois.util.JpaNativeQueryBuilder*
+sg.id = :studentGroupId*
+studentGroupId*
+
+%8java.lang.Long2FrequiredCriteria(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Long;)‚ÿ
+¨
+›D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/StudentGroupTeacherReportService.javaÊ> Ê(S
+%10java.lang.Long"]ee.hitsa.ois.web.commandobject.report.StudentGroupTeacherCommand#getStudent()Ljava/lang/Long;*N
+L
+criteria@ee.hitsa.ois.web.commandobject.report.StudentGroupTeacherCommand2getStudent()äá
+¨
+›D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/StudentGroupTeacherReportService.javaÊ Ê(T
+%11void"oee.hitsa.ois.util.JpaNativeQueryBuilder#optionalCriteria(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Long;)V*/
+-
+qb'ee.hitsa.ois.util.JpaNativeQueryBuilder*
+s.id = :studentId*
+	studentId*
+
+%10java.lang.Long2FoptionalCriteria(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Long;)†ƒ
+¨
+›D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/StudentGroupTeacherReportService.javaËM Ë(d
+%12java.lang.Long"_ee.hitsa.ois.web.commandobject.report.StudentGroupTeacherCommand#getStudyYear()Ljava/lang/Long;*N
+L
+criteria@ee.hitsa.ois.web.commandobject.report.StudentGroupTeacherCommand2getStudyYear()óð
+¨
+›D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/StudentGroupTeacherReportService.javaË Ë(e
+%13void"oee.hitsa.ois.util.JpaNativeQueryBuilder#optionalCriteria(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Long;)V*/
+-
+qb'ee.hitsa.ois.util.JpaNativeQueryBuilder*" 
+j.study_year_id = :studyYearId*
+studyYearId*
+
+%12java.lang.Long2FoptionalCriteria(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Long;)ˆ…
+¨
+›D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/StudentGroupTeacherReportService.javaÌY Ì(q
+%14java.util.List"`ee.hitsa.ois.web.commandobject.report.StudentGroupTeacherCommand#getEntryTypes()Ljava/util/List;*N
+L
+criteria@ee.hitsa.ois.web.commandobject.report.StudentGroupTeacherCommand2getEntryTypes()‹ˆ
+¨
+›D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/StudentGroupTeacherReportService.javaÌ Ì(r
+%15void"uee.hitsa.ois.util.JpaNativeQueryBuilder#optionalCriteria(Ljava/lang/String;Ljava/lang/String;Ljava/util/Collection;)V*/
+-
+qb'ee.hitsa.ois.util.JpaNativeQueryBuilder*+)
+'je.entry_type_code in (:entryTypeCodes)*
+entryTypeCodes*
+
+%14java.util.List2LoptionalCriteria(Ljava/lang/String;Ljava/lang/String;Ljava/util/Collection;)Ó
+Ð
+¨
+›D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/StudentGroupTeacherReportService.javaÎ Î(=
+%16java.util.List"__id*
+""‹ˆ
+¨
+›D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/StudentGroupTeacherReportService.javaÍ Î(>
+%17void"uee.hitsa.ois.util.JpaNativeQueryBuilder#optionalCriteria(Ljava/lang/String;Ljava/lang/String;Ljava/util/Collection;)V*/
+-
+qb'ee.hitsa.ois.util.JpaNativeQueryBuilder*+)
+'jes.grade_code not in (:positiveGrades)*
+positiveGrades*
+
+%16java.util.List2LoptionalCriteria(Ljava/lang/String;Ljava/lang/String;Ljava/util/Collection;)†ƒ
+¨
+›D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/StudentGroupTeacherReportService.javaÐ Ð("
+%18java.time.LocalDate"_ee.hitsa.ois.web.commandobject.report.StudentGroupTeacherCommand#getFrom()Ljava/time/LocalDate;*N
+L
+criteria@ee.hitsa.ois.web.commandobject.report.StudentGroupTeacherCommand2	getFrom()ÞÛ
+¨
+›D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/StudentGroupTeacherReportService.javaÏ Ð(@
+%19void"‘ee.hitsa.ois.util.JpaNativeQueryBuilder#optionalCriteria(Ljava/lang/String;Ljava/lang/String;Ljava/time/LocalDate;Ljava/util/function/Function;)V*/
+-
+qb'ee.hitsa.ois.util.JpaNativeQueryBuilder*=;
+9coalesce(je.entry_date, jes.grade_inserted) >= :entryFrom*
+	entryFrom*
+
+%18java.time.LocalDate*
+""2hoptionalCriteria(Ljava/lang/String;Ljava/lang/String;Ljava/time/LocalDate;Ljava/util/function/Function;)†ƒ
+¨
+›D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/StudentGroupTeacherReportService.javaÒ Ò("
+%20java.time.LocalDate"_ee.hitsa.ois.web.commandobject.report.StudentGroupTeacherCommand#getThru()Ljava/time/LocalDate;*N
+L
+criteria@ee.hitsa.ois.web.commandobject.report.StudentGroupTeacherCommand2	getThru()ÞÛ
+¨
+›D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/StudentGroupTeacherReportService.javaÑ Ò(?
+%21void"‘ee.hitsa.ois.util.JpaNativeQueryBuilder#optionalCriteria(Ljava/lang/String;Ljava/lang/String;Ljava/time/LocalDate;Ljava/util/function/Function;)V*/
+-
+qb'ee.hitsa.ois.util.JpaNativeQueryBuilder*=;
+9coalesce(je.entry_date, jes.grade_inserted) <= :entryThru*
+	entryThru*
+
+%20java.time.LocalDate*
+""2hoptionalCriteria(Ljava/lang/String;Ljava/lang/String;Ljava/time/LocalDate;Ljava/util/function/Function;)Š‡
+¨
+›D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/StudentGroupTeacherReportService.javaÔ Ô(%
+%22java.lang.Long"aee.hitsa.ois.web.commandobject.report.StudentGroupTeacherCommand#getStudyPeriod()Ljava/lang/Long;*N
+L
+criteria@ee.hitsa.ois.web.commandobject.report.StudentGroupTeacherCommand2getStudyPeriod()*
+2
+1*
+1¨
+›D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/StudentGroupTeacherReportService.javaÚ Ú("Ü
+¨
+›D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/StudentGroupTeacherReportService.javaÚ Ú(/
+-
+qb'ee.hitsa.ois.util.JpaNativeQueryBuilder:L
+criteria@ee.hitsa.ois.web.commandobject.report.StudentGroupTeacherCommandB9"7
+5ee.hitsa.ois.service.StudentGroupTeacherReportService

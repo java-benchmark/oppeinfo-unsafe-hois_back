@@ -1,0 +1,88 @@
+
+wee.hitsa.ois.service.DocumentService#createOccupationQuery(Ljava/lang/String;Ljava/lang/Long;)Ljavax/persistence/Query;ó
+äD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/DocumentService.javaÇ Ç('"1*£
+1ó
+äD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/DocumentService.javaÉ É(¸
+˘
+ó
+äD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/DocumentService.javaÉ É(%
+%0javax.persistence.EntityManager"__id*0*.&
+$ee.hitsa.ois.service.DocumentService"
+emí
+è
+ó
+äD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/DocumentService.javaÉ$ Ñ(.
+%1java.lang.String"__concat*1/
+-select distinct c.name_et, soc.certificate_nr*
+ from directive_student dsû
+õ
+ó
+äD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/DocumentService.javaÉ$ Ö(S
+%2java.lang.String"__concat*
+
+%1java.lang.String*CA
+? join curriculum_version cv on cv.id = ds.curriculum_version_id§
+°
+ó
+äD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/DocumentService.javaÉ$ Ü(Y
+%3java.lang.String"__concat*
+
+%2java.lang.String*IG
+E join curriculum_occupation co on co.curriculum_id = cv.curriculum_id«
+ƒ
+ó
+äD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/DocumentService.javaÉ$ á(|
+%4java.lang.String"__concat*
+
+%3java.lang.String*lj
+h join student_occupation_certificate soc on soc.student_id = ds.student_id and co.occupation_code = soc.Ç
+ˇ
+ò
+äD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/DocumentService.javaÉ$ á(è
+%5java.lang.String"__concat*
+
+%4java.lang.String*&
+$
+certificateFieldjava.lang.Stringë
+é
+ó
+äD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/DocumentService.javaÉ$ à(F
+%6java.lang.String"__concat*
+
+%5java.lang.String*64
+2 join classifier c on c.code = soc.occupation_code≠
+™
+ó
+äD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/DocumentService.javaÉ$ â(f
+%7java.lang.String"__concat*
+
+%6java.lang.String*RP
+N and coalesce(soc.valid_thru, cast('infinity' as date)) >= cast(now() as date)Ã
+…
+ò
+äD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/DocumentService.javaÉ$ ä(Ä
+%8java.lang.String"__concat*
+
+%7java.lang.String*pn
+l where ds.directive_id = ?1 and ds.student_id = ?2 and ds.canceled = false and co.is_occupation_grant = trueáÑ
+ò
+äD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/DocumentService.javaÉ ä(Å
+%9javax.persistence.Query"^javax.persistence.EntityManager#createNativeQuery(Ljava/lang/String;)Ljavax/persistence/Query;*'
+%
+%0javax.persistence.EntityManager*
+
+%8java.lang.String2%createNativeQuery(Ljava/lang/String;)¸˘
+ó
+äD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/DocumentService.javaÉ ã(-
+%10javax.persistence.Query"Rjavax.persistence.Query#setParameter(ILjava/lang/Object;)Ljavax/persistence/Query;*
+
+%9javax.persistence.Query*2*
+
+directiveIdjava.lang.Long2!setParameter(ILjava/lang/Object;)"º
+ó
+äD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/DocumentService.javaÉ ã(. 
+
+%10javax.persistence.Query:$
+certificateFieldjava.lang.String:
+directiveIdjava.lang.LongB(&
+$ee.hitsa.ois.service.DocumentService

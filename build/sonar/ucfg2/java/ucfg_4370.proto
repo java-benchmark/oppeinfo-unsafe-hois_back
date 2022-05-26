@@ -1,0 +1,586 @@
+
+Žee.hitsa.ois.service.JournalService#suitedStudentsQb(Lee/hitsa/ois/service/security/HoisUserDetails;)Lee/hitsa/ois/util/JpaNativeQueryBuilder;–
+‰D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/JournalService.java±! ±(1"5*”
+
+2–
+‰D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/JournalService.javaÅ Å(Ê
+Ç
+–
+‰D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/JournalService.javaÅ  Æ(j
+%21java.lang.String"__concat*1/
+-exists (select jt.id from journal_teacher jt *VT
+Rwhere jt.journal_id = j.id and jt.teacher_id = :teacherId and jt.is_filler = true)ÊÇ
+–
+‰D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/JournalService.javaÇ! Ç(4
+%22java.lang.Long"Lee.hitsa.ois.service.security.HoisUserDetails#getTeacherId()Ljava/lang/Long;*7
+5
+user-ee.hitsa.ois.service.security.HoisUserDetails2getTeacherId()ÖÓ
+–
+‰D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/JournalService.javaÅ Ç(5
+%23void"oee.hitsa.ois.util.JpaNativeQueryBuilder#requiredCriteria(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Long;)V*/
+-
+qb'ee.hitsa.ois.util.JpaNativeQueryBuilder*
+
+%21java.lang.String*
+	teacherId*
+
+%22java.lang.Long2FrequiredCriteria(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Long;)*
+1*Õ
+3–
+‰D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/JournalService.javaÄ Ä(®«
+–
+‰D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/JournalService.javaÄ Ä(#
+%20boolean":ee.hitsa.ois.service.security.HoisUserDetails#isTeacher()Z*7
+5
+user-ee.hitsa.ois.service.security.HoisUserDetails2isTeacher()*
+2
+1*ö
+4–
+‰D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/JournalService.javaÃ Ã(ÒÏ
+–
+‰D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/JournalService.javaÃa Ã(x
+%18java.util.List"Pee.hitsa.ois.service.security.HoisUserDetails#getCurriculumIds()Ljava/util/List;*7
+5
+user-ee.hitsa.ois.service.security.HoisUserDetails2getCurriculumIds()ýú
+–
+‰D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/JournalService.javaÃ Ã(y
+%19void"uee.hitsa.ois.util.JpaNativeQueryBuilder#requiredCriteria(Ljava/lang/String;Ljava/lang/String;Ljava/util/Collection;)V*/
+-
+qb'ee.hitsa.ois.util.JpaNativeQueryBuilder*,*
+(cv.curriculum_id in (:userCurriculumIds)*
+userCurriculumIds*
+
+%18java.util.List2LrequiredCriteria(Ljava/lang/String;Ljava/lang/String;Ljava/util/Collection;)*
+1*«.
+5–
+‰D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/JournalService.java²= ²(N‘
+Ž
+–
+‰D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/JournalService.java²= ³(L
+%0java.lang.String"__concat*
+from journal j *<:
+8join journal_omodule_theme jot on jot.journal_id = j.id  
+
+–
+‰D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/JournalService.java²= ´(V
+%1java.lang.String"__concat*
+
+%0java.lang.String*FD
+Bjoin lesson_plan_module lpm on lpm.id = jot.lesson_plan_module_id 
+
+–
+‰D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/JournalService.java²= µ(F
+%2java.lang.String"__concat*
+
+%1java.lang.String*64
+2join lesson_plan lp on lp.id = lpm.lesson_plan_id “
+
+–
+‰D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/JournalService.java²= ¶(I
+%3java.lang.String"__concat*
+
+%2java.lang.String*97
+5join student_group sg on sg.id = lp.student_group_id ‹
+ˆ
+–
+‰D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/JournalService.java²= ·(A
+%4java.lang.String"__concat*
+
+%3java.lang.String*1/
+-join student s on s.student_group_id = sg.id ‚
+ÿ
+–
+‰D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/JournalService.java²= ¸(8
+%5java.lang.String"__concat*
+
+%4java.lang.String*(&
+$join person p on p.id = s.person_id ¹
+¶
+–
+‰D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/JournalService.java²= ¹(o
+%6java.lang.String"__concat*
+
+%5java.lang.String*_]
+[join curriculum_version_omodule cvo on cvo.curriculum_version_id = s.curriculum_version_id 
+Š
+–
+‰D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/JournalService.java²= º(G
+%7java.lang.String"__concat*
+
+%6java.lang.String*31
+/and cvo.id = lpm.curriculum_version_omodule_id ¸
+µ
+–
+‰D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/JournalService.java²= »(n
+%8java.lang.String"__concat*
+
+%7java.lang.String*^\
+Zjoin curriculum_version_omodule_theme cvot on cvot.curriculum_version_omodule_id = cvo.id ”
+‘
+–
+‰D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/JournalService.java²= ¼(N
+%9java.lang.String"__concat*
+
+%8java.lang.String*:8
+6and cvot.id = jot.curriculum_version_omodule_theme_id ž
+›
+–
+‰D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/JournalService.java²= ½(S
+%10java.lang.String"__concat*
+
+%9java.lang.String*CA
+?join curriculum_version cv on cv.id = cvo.curriculum_version_idõò
+–
+‰D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/JournalService.java²' ²(<.
+%11'ee.hitsa.ois.util.JpaNativeQueryBuilder"'ee.hitsa.ois.util.JpaNativeQueryBuilderµ
+²
+–
+‰D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/JournalService.java²# ½(T
+%12"Cee.hitsa.ois.util.JpaNativeQueryBuilder#<init>(Ljava/lang/String;)V*0
+.
+%11'ee.hitsa.ois.util.JpaNativeQueryBuilder*
+
+%10java.lang.Stringƒ
+€
+–
+‰D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/JournalService.java² ½(U-
+qb'ee.hitsa.ois.util.JpaNativeQueryBuilder"__id*0
+.
+%11'ee.hitsa.ois.util.JpaNativeQueryBuilderÈÅ
+–
+‰D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/JournalService.java¿C ¿(U
+%13java.lang.Long"Kee.hitsa.ois.service.security.HoisUserDetails#getSchoolId()Ljava/lang/Long;*7
+5
+user-ee.hitsa.ois.service.security.HoisUserDetails2getSchoolId()×Ô
+–
+‰D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/JournalService.java¿ ¿(V
+%14void"oee.hitsa.ois.util.JpaNativeQueryBuilder#requiredCriteria(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Long;)V*/
+-
+qb'ee.hitsa.ois.util.JpaNativeQueryBuilder*
+s.school_id = :schoolId*
+
+schoolId*
+
+%13java.lang.Long2FrequiredCriteria(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Long;)Á
+¾
+–
+‰D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/JournalService.javaÁ Á(3
+%15java.util.List"__id*
+""ôñ
+–
+‰D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/JournalService.javaÀ Á(4
+%16void"uee.hitsa.ois.util.JpaNativeQueryBuilder#requiredCriteria(Ljava/lang/String;Ljava/lang/String;Ljava/util/Collection;)V*/
+-
+qb'ee.hitsa.ois.util.JpaNativeQueryBuilder*&$
+"s.status_code in (:activeStudents)*
+activeStudents*
+
+%15java.util.List2LrequiredCriteria(Ljava/lang/String;Ljava/lang/String;Ljava/util/Collection;)¼¹
+–
+‰D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/JournalService.javaÂ Â(#
+%17boolean"Aee.hitsa.ois.service.security.HoisUserDetails#isLeadingTeacher()Z*7
+5
+user-ee.hitsa.ois.service.security.HoisUserDetails2isLeadingTeacher()*
+3
+4*Ô‹
+1–
+‰D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/JournalService.javaÊ Ê(
+®
+«
+–
+‰D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/JournalService.javaÊ Ë(=
+%24java.lang.String"__concat*><
+:s.id not in (select js.student_id from journal_student js *-+
+)join journal j2 on j2.id = js.journal_id ›
+˜
+–
+‰D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/JournalService.javaÊ Ì(O
+%25java.lang.String"__concat*
+
+%24java.lang.String*?=
+;where j2.id = j.id or j2.journal_sub_id = j.journal_sub_id)ÖÓ
+–
+‰D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/JournalService.javaÊ Ì(P
+%26void"Cee.hitsa.ois.util.JpaNativeQueryBuilder#filter(Ljava/lang/String;)V*/
+-
+qb'ee.hitsa.ois.util.JpaNativeQueryBuilder*
+
+%25java.lang.String2filter(Ljava/lang/String;)å
+â
+–
+‰D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/JournalService.javaÏ Ð(h
+%27java.lang.String"__concat*JH
+Fs.id not in (select svr.student_id from student_vocational_result svr *XV
+Tjoin curriculum_version_omodule cvo2 on cvo2.id = svr.curriculum_version_omodule_id ‚
+ÿ
+–
+‰D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/JournalService.javaÏ Ñ(:
+%28java.lang.String"__concat*
+
+%27java.lang.String*&$
+"or cvo2.id = any(svr.arr_modules) Ÿ
+œ
+–
+‰D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/JournalService.javaÏ Ò(S
+%29java.lang.String"__concat*
+
+%28java.lang.String*CA
+?join curriculum_module cm on cm.id = cvo2.curriculum_module_id ‰
+†
+–
+‰D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/JournalService.javaÏ Ó(=
+%30java.lang.String"__concat*
+
+%29java.lang.String*-+
+)where svr.grade_code in (:positiveGrades)»
+¸
+–
+‰D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/JournalService.javaÏ Ô(s
+%31java.lang.String"__concat*
+
+%30java.lang.String*_]
+[and cm.id in (select cvo3.curriculum_module_id from curriculum_version_omodule_theme cvot3 ¶
+³
+–
+‰D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/JournalService.javaÏ Õ(n
+%32java.lang.String"__concat*
+
+%31java.lang.String*ZX
+Vjoin curriculum_version_omodule cvo3 on cvo3.id = cvot3.curriculum_version_omodule_id ú
+÷
+–
+‰D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/JournalService.javaÏ Ö(2
+%33java.lang.String"__concat*
+
+%32java.lang.String*
+where cvot3.id = cvot.id))ÖÓ
+–
+‰D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/JournalService.javaÏ Ö(3
+%34void"Cee.hitsa.ois.util.JpaNativeQueryBuilder#filter(Ljava/lang/String;)V*/
+-
+qb'ee.hitsa.ois.util.JpaNativeQueryBuilder*
+
+%33java.lang.String2filter(Ljava/lang/String;)Á
+¾
+–
+‰D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/JournalService.java×' ×(T
+%35java.util.List"__id*
+""’
+–
+‰D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/JournalService.java× ×(U
+%36void"Xee.hitsa.ois.util.JpaNativeQueryBuilder#parameter(Ljava/lang/String;Ljava/lang/Object;)V*/
+-
+qb'ee.hitsa.ois.util.JpaNativeQueryBuilder*
+positiveGrades*
+
+%35java.util.List2/parameter(Ljava/lang/String;Ljava/lang/Object;)¿
+¼
+–
+‰D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/JournalService.javaÚ Û(D
+%37java.lang.String"__concat*HF
+Ds.id not in (select a.student_id from application_omodule_theme aot *42
+0join application a on a.id = aot.application_id Ä
+Á
+–
+‰D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/JournalService.javaÚ Ü(x
+%38java.lang.String"__concat*
+
+%37java.lang.String*hf
+dwhere a.student_id = s.id and a.type_code = :applicationType and a.status_code = :applicationStatus ¶
+³
+–
+‰D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/JournalService.javaÚ Ý(n
+%39java.lang.String"__concat*
+
+%38java.lang.String*ZX
+Vand aot.curriculum_version_omodule_theme_id = jot.curriculum_version_omodule_theme_id)ÖÓ
+–
+‰D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/JournalService.javaÚ Ý(o
+%40void"Cee.hitsa.ois.util.JpaNativeQueryBuilder#filter(Ljava/lang/String;)V*/
+-
+qb'ee.hitsa.ois.util.JpaNativeQueryBuilder*
+
+%39java.lang.String2filter(Ljava/lang/String;)Õ
+Ò
+–
+‰D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/JournalService.javaÞ( Þ(L)
+%41"ee.hitsa.ois.enums.ApplicationType"__id*
+""“
+–
+‰D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/JournalService.javaÞ( Þ(S
+%42java.lang.String"'java.lang.Enum#name()Ljava/lang/String;*+
+)
+%41"ee.hitsa.ois.enums.ApplicationType2name()•’
+–
+‰D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/JournalService.javaÞ Þ(T
+%43void"Xee.hitsa.ois.util.JpaNativeQueryBuilder#parameter(Ljava/lang/String;Ljava/lang/Object;)V*/
+-
+qb'ee.hitsa.ois.util.JpaNativeQueryBuilder*
+applicationType*
+
+%42java.lang.String2/parameter(Ljava/lang/String;Ljava/lang/Object;)×
+Ô
+–
+‰D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/JournalService.javaß* ß(V+
+%44$ee.hitsa.ois.enums.ApplicationStatus"__id*
+""•’
+–
+‰D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/JournalService.javaß* ß(]
+%45java.lang.String"'java.lang.Enum#name()Ljava/lang/String;*-
++
+%44$ee.hitsa.ois.enums.ApplicationStatus2name()—”
+–
+‰D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/JournalService.javaß ß(^
+%46void"Xee.hitsa.ois.util.JpaNativeQueryBuilder#parameter(Ljava/lang/String;Ljava/lang/Object;)V*/
+-
+qb'ee.hitsa.ois.util.JpaNativeQueryBuilder*
+applicationStatus*
+
+%45java.lang.String2/parameter(Ljava/lang/String;Ljava/lang/Object;)ÿ
+ü
+–
+‰D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/JournalService.javaâ ã(:
+%47java.lang.String"__concat*
+s.id not in ( **(
+&select js3.student_id from journal j3 ›
+˜
+–
+‰D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/JournalService.javaâ ä(S
+%48java.lang.String"__concat*
+
+%47java.lang.String*?=
+;join journal_omodule_theme jot3 on jot3.journal_id = j3.id ­
+ª
+–
+‰D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/JournalService.javaâ å(e
+%49java.lang.String"__concat*
+
+%48java.lang.String*QO
+Mjoin journal_student js3 on js3.journal_id = j3.id and js3.student_id = s.id ´
+±
+–
+‰D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/JournalService.javaâ æ(l
+%50java.lang.String"__concat*
+
+%49java.lang.String*XV
+Tjoin journal_entry je on je.journal_id = j3.id and je.entry_type_code = :finalEntry Ã
+À
+–
+‰D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/JournalService.javaâ ç({
+%51java.lang.String"__concat*
+
+%50java.lang.String*ge
+cjoin journal_entry_student jes on jes.journal_entry_id = je.id and jes.journal_student_id = js3.id Š
+‡
+–
+‰D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/JournalService.javaâ è(B
+%52java.lang.String"__concat*
+
+%51java.lang.String*.,
+*where jes.grade_code in (:positiveGrades) —
+”
+–
+‰D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/JournalService.javaâ é(O
+%53java.lang.String"__concat*
+
+%52java.lang.String*;9
+7and jot3.curriculum_version_omodule_theme_id = cvot.id ê
+ç
+–
+‰D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/JournalService.javaâ ê(
+%54java.lang.String"__concat*
+
+%53java.lang.String*
+
+union all Ž
+‹
+–
+‰D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/JournalService.javaâ ë(B
+%55java.lang.String"__concat*
+
+%54java.lang.String*20
+.select aa.student_id from apel_application aa ¤
+¡
+–
+‰D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/JournalService.javaâ ì(\
+%56java.lang.String"__concat*
+
+%55java.lang.String*HF
+Djoin apel_application_record aar on aar.apel_application_id = aa.id À
+½
+–
+‰D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/JournalService.javaâ í(x
+%57java.lang.String"__concat*
+
+%56java.lang.String*db
+`join apel_application_informal_subject_or_module aai on aai.apel_application_record_id = aar.id ­
+ª
+–
+‰D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/JournalService.javaâ î(e
+%58java.lang.String"__concat*
+
+%57java.lang.String*QO
+Mwhere aa.status_code = :apelStatus and aa.student_id = s.id and aai.transfer –
+“
+–
+‰D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/JournalService.javaâ ï(N
+%59java.lang.String"__concat*
+
+%58java.lang.String*:8
+6and aai.curriculum_version_omodule_theme_id = cvot.id ê
+ç
+–
+‰D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/JournalService.javaâ ð(
+%60java.lang.String"__concat*
+
+%59java.lang.String*
+
+union all 
+
+–
+‰D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/JournalService.javaâ ñ(D
+%61java.lang.String"__concat*
+
+%60java.lang.String*42
+0select aa2.student_id from apel_application aa2 §
+¤
+–
+‰D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/JournalService.javaâ ò(_
+%62java.lang.String"__concat*
+
+%61java.lang.String*KI
+Gjoin apel_application_record aar2 on aar2.apel_application_id = aa2.id ¿
+¼
+–
+‰D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/JournalService.javaâ ó(w
+%63java.lang.String"__concat*
+
+%62java.lang.String*ca
+_join apel_application_formal_subject_or_module aaf on aaf.apel_application_record_id = aar2.id Ë
+È
+—
+‰D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/JournalService.javaâ ô(‚
+%64java.lang.String"__concat*
+
+%63java.lang.String*nl
+jjoin apel_application_formal_replaced_subject_or_module aarf on aarf.apel_application_record_id = aar2.id ¯
+¬
+–
+‰D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/JournalService.javaâ õ(g
+%65java.lang.String"__concat*
+
+%64java.lang.String*SQ
+Owhere aa2.status_code = :apelStatus and aa2.student_id = s.id and aaf.transfer —
+”
+–
+‰D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/JournalService.javaâ ö(O
+%66java.lang.String"__concat*
+
+%65java.lang.String*;9
+7and aarf.curriculum_version_omodule_theme_id = cvot.id)ÖÓ
+–
+‰D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/JournalService.javaâ ö(P
+%67void"Cee.hitsa.ois.util.JpaNativeQueryBuilder#filter(Ljava/lang/String;)V*/
+-
+qb'ee.hitsa.ois.util.JpaNativeQueryBuilder*
+
+%66java.lang.String2filter(Ljava/lang/String;)Ö
+Ó
+–
+‰D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/JournalService.java÷# ÷(@*
+%68#ee.hitsa.ois.enums.JournalEntryType"__id*
+""”‘
+–
+‰D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/JournalService.java÷# ÷(G
+%69java.lang.String"'java.lang.Enum#name()Ljava/lang/String;*,
+*
+%68#ee.hitsa.ois.enums.JournalEntryType2name()
+–
+‰D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/JournalService.java÷ ÷(H
+%70void"Xee.hitsa.ois.util.JpaNativeQueryBuilder#parameter(Ljava/lang/String;Ljava/lang/Object;)V*/
+-
+qb'ee.hitsa.ois.util.JpaNativeQueryBuilder*
+
+finalEntry*
+
+%69java.lang.String2/parameter(Ljava/lang/String;Ljava/lang/Object;)Û
+Ø
+–
+‰D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/JournalService.javaø# ø(G/
+%71(ee.hitsa.ois.enums.ApelApplicationStatus"__id*
+""™–
+–
+‰D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/JournalService.javaø# ø(N
+%72java.lang.String"'java.lang.Enum#name()Ljava/lang/String;*1
+/
+%71(ee.hitsa.ois.enums.ApelApplicationStatus2name()
+–
+‰D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/JournalService.javaø ø(O
+%73void"Xee.hitsa.ois.util.JpaNativeQueryBuilder#parameter(Ljava/lang/String;Ljava/lang/Object;)V*/
+-
+qb'ee.hitsa.ois.util.JpaNativeQueryBuilder*
+
+apelStatus*
+
+%72java.lang.String2/parameter(Ljava/lang/String;Ljava/lang/Object;)ñ
+î
+–
+‰D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/JournalService.javaû ü(m
+%74java.lang.String"__concat*QO
+M(coalesce(cvot.is_module_outcomes, false) = false or cvot.is_module_outcomes *][
+Yand (select count(cmo.id) != count(scmor.id) from curriculum_version_omodule_theme cvot4 Å
+Â
+–
+‰D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/JournalService.javaû ý(}
+%75java.lang.String"__concat*
+
+%74java.lang.String*ig
+ejoin curriculum_version_omodule_outcomes cvoo on cvoo.curriculum_version_omodule_theme_id = cvot4.id ³
+°
+–
+‰D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/JournalService.javaû þ(k
+%76java.lang.String"__concat*
+
+%75java.lang.String*WU
+Sjoin curriculum_module_outcomes cmo on cmo.id = cvoo.curriculum_module_outcomes_id µ
+²
+–
+‰D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/JournalService.javaû ÿ(m
+%77java.lang.String"__concat*
+
+%76java.lang.String*YW
+Uleft join student_curriculum_module_outcomes_result scmor on scmor.student_id = s.id ‘
+Ž
+–
+‰D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/JournalService.javaû €(I
+%78java.lang.String"__concat*
+
+%77java.lang.String*53
+1and scmor.curriculum_module_outcomes_id = cmo.id Š
+‡
+–
+‰D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/JournalService.javaû (B
+%79java.lang.String"__concat*
+
+%78java.lang.String*.,
+*and scmor.grade_code in (:positiveGrades) š
+—
+–
+‰D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/JournalService.javaû ‚(R
+%80java.lang.String"__concat*
+
+%79java.lang.String*><
+:where cvot4.id = jot.curriculum_version_omodule_theme_id))ÖÓ
+–
+‰D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/JournalService.javaû ‚(S
+%81void"Cee.hitsa.ois.util.JpaNativeQueryBuilder#filter(Ljava/lang/String;)V*/
+-
+qb'ee.hitsa.ois.util.JpaNativeQueryBuilder*
+
+%80java.lang.String2filter(Ljava/lang/String;)"Ê
+–
+‰D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/JournalService.javaƒ ƒ(/
+-
+qb'ee.hitsa.ois.util.JpaNativeQueryBuilder:5
+user-ee.hitsa.ois.service.security.HoisUserDetailsB'%
+#ee.hitsa.ois.service.JournalService

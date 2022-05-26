@@ -1,0 +1,121 @@
+
+™ee.hitsa.ois.service.ehis.EhisLogService#innoveAjaluguQuery(Ljava/lang/Long;Lee/hitsa/ois/web/commandobject/ehis/EhisLogCommand;)Lee/hitsa/ois/util/JpaNativeQueryBuilder;õ
+éD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/ehis/EhisLogService.javaÁ) Á(;"3*®
+2õ
+éD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/ehis/EhisLogService.java (ˇ¸
+õ
+éD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/ehis/EhisLogService.java (R
+%17void"Cee.hitsa.ois.util.JpaNativeQueryBuilder#filter(Ljava/lang/String;)V*/
+-
+qb'ee.hitsa.ois.util.JpaNativeQueryBuilder*=;
+9(sl.has_xtee_errors = true or sl.has_other_errors = true)2filter(Ljava/lang/String;)*
+1*ı(
+3õ
+éD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/ehis/EhisLogService.javaË= Ë(Z˘ˆ
+õ
+éD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/ehis/EhisLogService.javaË' Ë(<-
+%0'ee.hitsa.ois.util.JpaNativeQueryBuilder"'ee.hitsa.ois.util.JpaNativeQueryBuilderæ
+ª
+õ
+éD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/ehis/EhisLogService.javaË# Ë([
+%1"Cee.hitsa.ois.util.JpaNativeQueryBuilder#<init>(Ljava/lang/String;)V*/
+-
+%0'ee.hitsa.ois.util.JpaNativeQueryBuilder*
+from ws_ehis_student_log slá
+Ñ
+õ
+éD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/ehis/EhisLogService.javaË Ë(\-
+qb'ee.hitsa.ois.util.JpaNativeQueryBuilder"__id*/
+-
+%0'ee.hitsa.ois.util.JpaNativeQueryBuilderÛ
+õ
+éD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/ehis/EhisLogService.javaÍ Í(m
+
+%2void"qee.hitsa.ois.util.JpaNativeQueryBuilder#requiredCriteria(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V*/
+-
+qb'ee.hitsa.ois.util.JpaNativeQueryBuilder*%#
+!sl.ws_name = :innoveHistoryWsName*
+innoveHistoryWsName*
+ehis.innoveAjalugu2HrequiredCriteria(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)·ﬁ
+õ
+éD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/ehis/EhisLogService.javaÎ Î(M
+
+%3void"oee.hitsa.ois.util.JpaNativeQueryBuilder#requiredCriteria(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Long;)V*/
+-
+qb'ee.hitsa.ois.util.JpaNativeQueryBuilder*
+sl.school_id = :schoolId*
+
+schoolId*
+
+schoolIdjava.lang.Long2FrequiredCriteria(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Long;)€ÿ
+õ
+éD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/ehis/EhisLogService.javaÏF Ï(W
+%4java.time.LocalDate"Qee.hitsa.ois.web.commandobject.ehis.EhisLogCommand#getFrom()Ljava/time/LocalDate;*?
+=
+command2ee.hitsa.ois.web.commandobject.ehis.EhisLogCommand2	getFrom()Ú
+Ô
+ú
+éD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/ehis/EhisLogService.javaÏY Ï(Ä!
+%5java.util.function.Function"__declareFunction*
+__sonar_lambda_1333$Õ 
+ú
+éD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/ehis/EhisLogService.javaÏ Ï(Å
+
+%8void"ëee.hitsa.ois.util.JpaNativeQueryBuilder#optionalCriteria(Ljava/lang/String;Ljava/lang/String;Ljava/time/LocalDate;Ljava/util/function/Function;)V*/
+-
+qb'ee.hitsa.ois.util.JpaNativeQueryBuilder*
+sl.inserted >= :startFrom*
+	startFrom*
+
+%4java.time.LocalDate*#
+!
+%5java.util.function.Function2hoptionalCriteria(Ljava/lang/String;Ljava/lang/String;Ljava/time/LocalDate;Ljava/util/function/Function;)€ÿ
+õ
+éD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/ehis/EhisLogService.javaÌF Ì(W
+%9java.time.LocalDate"Qee.hitsa.ois.web.commandobject.ehis.EhisLogCommand#getThru()Ljava/time/LocalDate;*?
+=
+command2ee.hitsa.ois.web.commandobject.ehis.EhisLogCommand2	getThru()Û
+
+ú
+éD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/ehis/EhisLogService.javaÌY Ì(Ä"
+%10java.util.function.Function"__declareFunction*
+__sonar_lambda_1334$œÃ
+ú
+éD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/ehis/EhisLogService.javaÌ Ì(Å
+%13void"ëee.hitsa.ois.util.JpaNativeQueryBuilder#optionalCriteria(Ljava/lang/String;Ljava/lang/String;Ljava/time/LocalDate;Ljava/util/function/Function;)V*/
+-
+qb'ee.hitsa.ois.util.JpaNativeQueryBuilder*
+sl.inserted <= :startThru*
+	startThru*
+
+%9java.time.LocalDate*$
+"
+%10java.util.function.Function2hoptionalCriteria(Ljava/lang/String;Ljava/lang/String;Ljava/time/LocalDate;Ljava/util/function/Function;)…
+∆
+õ
+éD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/ehis/EhisLogService.javaÔ Ô(
+%14java.lang.Boolean"__id*
+""‹Ÿ
+õ
+éD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/ehis/EhisLogService.javaÔ  Ô(3
+%15java.lang.Boolean"Qee.hitsa.ois.web.commandobject.ehis.EhisLogCommand#getErrors()Ljava/lang/Boolean;*?
+=
+command2ee.hitsa.ois.web.commandobject.ehis.EhisLogCommand2getErrors()¥±
+õ
+éD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/ehis/EhisLogService.javaÔ Ô(4
+%16boolean"-java.lang.Boolean#equals(Ljava/lang/Object;)Z*
+
+%14java.lang.Boolean*
+
+%15java.lang.Boolean2equals(Ljava/lang/Object;)*
+2
+1*Û
+1õ
+éD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/ehis/EhisLogService.javaÛ Û("œ
+õ
+éD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/ehis/EhisLogService.javaÛ Û(/
+-
+qb'ee.hitsa.ois.util.JpaNativeQueryBuilder:
+schoolIdjava.lang.Long:=
+command2ee.hitsa.ois.web.commandobject.ehis.EhisLogCommandB,"*
+(ee.hitsa.ois.service.ehis.EhisLogService

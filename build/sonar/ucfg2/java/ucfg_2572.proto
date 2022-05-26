@@ -1,0 +1,108 @@
+
+Žee.hitsa.ois.util.UntisCodeUtil#journalStudentGroups(Lee/hitsa/ois/domain/timetable/Journal;Ljavax/persistence/EntityManager;)Ljava/util/List;’
+…D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/util/UntisCodeUtil.java…# …(7"1*é&
+1’
+…D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/util/UntisCodeUtil.java† †(¨
+¥
+’
+…D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/util/UntisCodeUtil.java†& ‡(@
+%0java.lang.String"__concat*.,
+*select lp.student_group_id from journal j *<:
+8join journal_omodule_theme jot on jot.journal_id = j.id œ
+™
+’
+…D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/util/UntisCodeUtil.java†& ˆ(J
+%1java.lang.String"__concat*
+
+%0java.lang.String*FD
+Bjoin lesson_plan_module lpm on lpm.id = jot.lesson_plan_module_id Œ
+‰
+’
+…D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/util/UntisCodeUtil.java†& ‰(:
+%2java.lang.String"__concat*
+
+%1java.lang.String*64
+2join lesson_plan lp on lp.id = lpm.lesson_plan_id é
+æ
+’
+…D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/util/UntisCodeUtil.java†& Š(
+%3java.lang.String"__concat*
+
+%2java.lang.String*
+where j.id = ?1þ
+’
+…D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/util/UntisCodeUtil.java† Š(
+%4javax.persistence.Query"^javax.persistence.EntityManager#createNativeQuery(Ljava/lang/String;)Ljavax/persistence/Query;*'
+%
+emjavax.persistence.EntityManager*
+
+%3java.lang.String2%createNativeQuery(Ljava/lang/String;)©¦
+’
+…D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/util/UntisCodeUtil.java‹ ‹($
+%5java.lang.Long"<ee.hitsa.ois.domain.BaseEntityWithId#getId()Ljava/lang/Long;*2
+0
+journal%ee.hitsa.ois.domain.timetable.Journal2getId()íê
+’
+…D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/util/UntisCodeUtil.java† ‹(%
+%6javax.persistence.Query"Rjavax.persistence.Query#setParameter(ILjava/lang/Object;)Ljavax/persistence/Query;*
+
+%4javax.persistence.Query*2*
+
+%5java.lang.Long2!setParameter(ILjava/lang/Object;)™–
+’
+…D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/util/UntisCodeUtil.java† Œ(
+%7java.util.List"7javax.persistence.Query#getResultList()Ljava/util/List;*
+
+%6javax.persistence.Query2getResultList()Î
+Ë
+’
+…D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/util/UntisCodeUtil.java† Œ(
+datajava.util.List"__id*
+
+%7java.util.Listç
+ä
+’
+…D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/util/UntisCodeUtil.javaŽ7 Ž(N!
+%8java.util.function.Function"__declareFunction*
+__sonar_lambda_324$€
+ý
+’
+…D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/util/UntisCodeUtil.javaŽ Ž(U
+%10java.util.List"nee.hitsa.ois.util.StreamUtil#toMappedList(Ljava/util/function/Function;Ljava/util/Collection;)Ljava/util/List;* "
+ee.hitsa.ois.util.StreamUtil*#
+!
+%8java.util.function.Function*
+
+datajava.util.ListÚ
+×
+’
+…D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/util/UntisCodeUtil.javaŽ Ž(V!
+studentGroupIdsjava.util.List"__id*
+
+%10java.util.ListÆÃ
+’
+…D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/util/UntisCodeUtil.java	 (_#
+%11javax.persistence.TypedQuery"njavax.persistence.EntityManager#createQuery(Ljava/lang/String;Ljava/lang/Class;)Ljavax/persistence/TypedQuery;*'
+%
+emjavax.persistence.EntityManager*42
+0select sg from StudentGroup sg where sg.id in ?1*
+""20createQuery(Ljava/lang/String;Ljava/lang/Class;)
+’
+…D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/util/UntisCodeUtil.java	 (%#
+%12javax.persistence.TypedQuery"\javax.persistence.TypedQuery#setParameter(ILjava/lang/Object;)Ljavax/persistence/TypedQuery;*%
+#
+%11javax.persistence.TypedQuery*2*#
+!
+studentGroupIdsjava.util.List2!setParameter(ILjava/lang/Object;)¥¢
+’
+…D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/util/UntisCodeUtil.java	 ‘(
+%13java.util.List"<javax.persistence.TypedQuery#getResultList()Ljava/util/List;*%
+#
+%12javax.persistence.TypedQuery2getResultList()"®
+’
+…D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/util/UntisCodeUtil.java ‘(
+
+%13java.util.List:0
+journal%ee.hitsa.ois.domain.timetable.Journal:%
+emjavax.persistence.EntityManagerB#"!
+ee.hitsa.ois.util.UntisCodeUtil

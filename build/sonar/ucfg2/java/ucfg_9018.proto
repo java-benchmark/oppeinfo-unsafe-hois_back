@@ -1,0 +1,60 @@
+
+’ee.hitsa.ois.service.security.HoisUserDetailsService#getHoisUserDetails(Lee/hitsa/ois/domain/User;)Lee/hitsa/ois/service/security/HoisUserDetails;¥
+šD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/security/HoisUserDetailsService.javaS S(-"1*Ä
+1¥
+šD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/security/HoisUserDetailsService.javaT! T(#š
+—
+¥
+šD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/security/HoisUserDetailsService.javaT! T(#%
+%0javax.persistence.EntityManager"__id*@*>6
+4ee.hitsa.ois.service.security.HoisUserDetailsService"
+emŒ‰
+¥
+šD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/security/HoisUserDetailsService.javaT! V("
+%1javax.persistence.TypedQuery"njavax.persistence.EntityManager#createQuery(Ljava/lang/String;Ljava/lang/Class;)Ljavax/persistence/TypedQuery;*'
+%
+%0javax.persistence.EntityManager*hf
+dselect ('ROLE_' || u.permission.code || '_' || u.object.code) from UserRights u where u.user.id = ?1*
+""20createQuery(Ljava/lang/String;Ljava/lang/Class;)¬©
+¥
+šD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/security/HoisUserDetailsService.javaV. V(:
+%2java.lang.Long"<ee.hitsa.ois.domain.BaseEntityWithId#getId()Ljava/lang/Long;*"
+ 
+useree.hitsa.ois.domain.User2getId()”‘
+¥
+šD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/security/HoisUserDetailsService.javaT! V(;"
+%3javax.persistence.TypedQuery"\javax.persistence.TypedQuery#setParameter(ILjava/lang/Object;)Ljavax/persistence/TypedQuery;*$
+"
+%1javax.persistence.TypedQuery*2*
+
+%2java.lang.Long2!setParameter(ILjava/lang/Object;)¶³
+¥
+šD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/security/HoisUserDetailsService.javaT! V(K
+%4java.util.List"<javax.persistence.TypedQuery#getResultList()Ljava/util/List;*$
+"
+%3javax.persistence.TypedQuery2getResultList()æ
+ã
+¥
+šD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/security/HoisUserDetailsService.javaT V(L
+	userRolesjava.util.List"__id*
+
+%4java.util.ListŒ
+¥
+šD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/security/HoisUserDetailsService.javaW W("3
+%5-ee.hitsa.ois.service.security.HoisUserDetails"-ee.hitsa.ois.service.security.HoisUserDetailsŽ
+‹
+¥
+šD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/security/HoisUserDetailsService.javaW W(3
+%6"aee.hitsa.ois.service.security.HoisUserDetails#<init>(Lee/hitsa/ois/domain/User;Ljava/util/List;)V*5
+3
+%5-ee.hitsa.ois.service.security.HoisUserDetails*"
+ 
+useree.hitsa.ois.domain.User*
+
+	userRolesjava.util.List"ß
+¥
+šD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/security/HoisUserDetailsService.javaW W(45
+3
+%5-ee.hitsa.ois.service.security.HoisUserDetails: 
+useree.hitsa.ois.domain.UserB86
+4ee.hitsa.ois.service.security.HoisUserDetailsService

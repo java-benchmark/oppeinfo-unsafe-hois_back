@@ -1,0 +1,189 @@
+
+ee.hitsa.ois.service.TimetableService#getJournalsFromCapacityPerTeacher(Ljava/lang/Long;Ljava/lang/Integer;Lee/hitsa/ois/domain/StudyPeriod;)Ljava/util/List;˜
+‹D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/TimetableService.javaã ã(5"1*ØD
+1˜
+‹D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/TimetableService.javaäO ä(s¶
+³
+˜
+‹D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/TimetableService.javaäO å(Z
+%0java.lang.String"__concat*&$
+"from journal_teacher_capacity jtc *LJ
+Hjoin journal_capacity_type jct on jct.id = jtc.journal_capacity_type_id ”
+‘
+˜
+‹D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/TimetableService.javaäO æ(F
+%1java.lang.String"__concat*
+
+%0java.lang.String*86
+4join study_period sp on sp.id = jtc.study_period_id š
+—
+˜
+‹D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/TimetableService.javaäO ç(L
+%2java.lang.String"__concat*
+
+%1java.lang.String*><
+:join journal_teacher jt on jt.id = jtc.journal_teacher_id ‡
+„
+˜
+‹D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/TimetableService.javaäO è(9
+%3java.lang.String"__concat*
+
+%2java.lang.String*+)
+'join teacher t on jt.teacher_id = t.id ‡
+„
+˜
+‹D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/TimetableService.javaäO é(9
+%4java.lang.String"__concat*
+
+%3java.lang.String*+)
+'join journal j on j.id = jt.journal_id ˜
+•
+˜
+‹D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/TimetableService.javaäO ê(J
+%5java.lang.String"__concat*
+
+%4java.lang.String*<:
+8join journal_omodule_theme jot on jot.journal_id = j.id ¢
+Ÿ
+˜
+‹D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/TimetableService.javaäO ë(T
+%6java.lang.String"__concat*
+
+%5java.lang.String*FD
+Bjoin lesson_plan_module lpm on lpm.id = jot.lesson_plan_module_id ‘
+Ž
+˜
+‹D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/TimetableService.javaäO ì(C
+%7java.lang.String"__concat*
+
+%6java.lang.String*53
+1join lesson_plan lp on lp.id = lpm.lesson_plan_idöó
+˜
+‹D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/TimetableService.javaä9 ä(N-
+%8'ee.hitsa.ois.util.JpaNativeQueryBuilder"'ee.hitsa.ois.util.JpaNativeQueryBuilder´
+±
+˜
+‹D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/TimetableService.javaä5 ì(D
+%9"Cee.hitsa.ois.util.JpaNativeQueryBuilder#<init>(Ljava/lang/String;)V*/
+-
+%8'ee.hitsa.ois.util.JpaNativeQueryBuilder*
+
+%7java.lang.String–
+“
+˜
+‹D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/TimetableService.javaä ì(E?
+teacherCapacityQuery'ee.hitsa.ois.util.JpaNativeQueryBuilder"__id*/
+-
+%8'ee.hitsa.ois.util.JpaNativeQueryBuilderðí
+˜
+‹D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/TimetableService.javaí í(^
+%10void"oee.hitsa.ois.util.JpaNativeQueryBuilder#requiredCriteria(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Long;)V*A
+?
+teacherCapacityQuery'ee.hitsa.ois.util.JpaNativeQueryBuilder*
+j.school_id = :schoolId*
+
+schoolId*
+
+schoolIdjava.lang.Long2FrequiredCriteria(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Long;)÷ô
+˜
+‹D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/TimetableService.javaî^ î(p
+%11long"java.lang.Integer#longValue()J*
+
+weekNrjava.lang.Integer2longValue()ƒ
+€
+˜
+‹D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/TimetableService.javaîQ î(q
+%12java.lang.Long")java.lang.Long#valueOf(J)Ljava/lang/Long;*"
+java.lang.Long*
+
+%11longçä
+˜
+‹D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/TimetableService.javaî î(r
+%13void"oee.hitsa.ois.util.JpaNativeQueryBuilder#requiredCriteria(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Long;)V*A
+?
+teacherCapacityQuery'ee.hitsa.ois.util.JpaNativeQueryBuilder*
+jtc.week_nr = :weekNr*
+
+weekNr*
+
+%12java.lang.Long2FrequiredCriteria(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Long;)®«
+˜
+‹D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/TimetableService.javaïd ï(w
+%14java.lang.Long"<ee.hitsa.ois.domain.BaseEntityWithId#getId()Ljava/lang/Long;*0
+.
+studyPeriodee.hitsa.ois.domain.StudyPeriod2getId()ùö
+˜
+‹D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/TimetableService.javaï ï(x
+%15void"oee.hitsa.ois.util.JpaNativeQueryBuilder#requiredCriteria(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Long;)V*A
+?
+teacherCapacityQuery'ee.hitsa.ois.util.JpaNativeQueryBuilder*&$
+"jtc.study_period_id = :studyPeriod*
+studyPeriod*
+
+%14java.lang.Long2FrequiredCriteria(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Long;)Ë
+È
+˜
+‹D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/TimetableService.javað$ ñ(]
+%16java.lang.String"__concat*97
+5lp.is_usable = true and j.untis_code is not null and *MK
+Ij.is_capacity_diff = true and jtc.hours != 0 and t.untis_code is not nullêç
+˜
+‹D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/TimetableService.javað ñ(^
+%17void"Cee.hitsa.ois.util.JpaNativeQueryBuilder#filter(Ljava/lang/String;)V*A
+?
+teacherCapacityQuery'ee.hitsa.ois.util.JpaNativeQueryBuilder*
+
+%16java.lang.String2filter(Ljava/lang/String;)¶
+³
+˜
+‹D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/TimetableService.javaò' ó(V
+%18java.lang.String"__concat*)'
+%distinct j.untis_code as journalCode,*HF
+D j.name_et as journalName, j.id as journalId, jtc.hours as capacity,§
+¤
+˜
+‹D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/TimetableService.javaò' ô(W
+%19java.lang.String"__concat*
+
+%18java.lang.String*IG
+E jct.capacity_type_code as typeCode, t.untis_code as teacherUntisCodeê
+ç
+˜
+‹D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/TimetableService.javaò ô(X)
+teacherCapacitySelectjava.lang.String"__id*
+
+%19java.lang.String¢Ÿ
+˜
+‹D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/TimetableService.javaõ õ(0.
+%20'ee.hitsa.ois.util.JpaNativeQueryBuilder"jee.hitsa.ois.util.JpaNativeQueryBuilder#sort([Ljava/lang/String;)Lee/hitsa/ois/util/JpaNativeQueryBuilder;*A
+?
+teacherCapacityQuery'ee.hitsa.ois.util.JpaNativeQueryBuilder*
+j.id2sort([Ljava/lang/String;)ÿ
+ü
+˜
+‹D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/TimetableService.javaõO õ(Q&
+%21javax.persistence.EntityManager"__id*1*/'
+%ee.hitsa.ois.service.TimetableService"
+em‚ÿ
+˜
+‹D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/TimetableService.javaõ õ(R
+%22javax.persistence.Query"|ee.hitsa.ois.util.JpaNativeQueryBuilder#select(Ljava/lang/String;Ljavax/persistence/EntityManager;)Ljavax/persistence/Query;*0
+.
+%20'ee.hitsa.ois.util.JpaNativeQueryBuilder*+
+)
+teacherCapacitySelectjava.lang.String*(
+&
+%21javax.persistence.EntityManager2;select(Ljava/lang/String;Ljavax/persistence/EntityManager;)¡ž
+˜
+‹D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/TimetableService.javaõ õ(b
+%23java.util.List"7javax.persistence.Query#getResultList()Ljava/util/List;* 
+
+%22javax.persistence.Query2getResultList()"´
+˜
+‹D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/TimetableService.javaõ õ(c
+
+%23java.util.List:
+schoolIdjava.lang.Long:
+weekNrjava.lang.Integer:.
+studyPeriodee.hitsa.ois.domain.StudyPeriodB)'
+%ee.hitsa.ois.service.TimetableService

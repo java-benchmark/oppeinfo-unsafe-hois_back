@@ -1,0 +1,77 @@
+
+Uee.hitsa.ois.service.DocumentService#supplementData(Ljava/lang/Long;)Ljava/util/List;ó
+äD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/DocumentService.java¥
+$ ¥
+(2"1*¿
+1ó
+äD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/DocumentService.javaµ
+ µ
+(¸
+˘
+ó
+äD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/DocumentService.javaµ
+ µ
+(%
+%0javax.persistence.EntityManager"__id*0*.&
+$ee.hitsa.ois.service.DocumentService"
+emÒ
+Ó
+ó
+äD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/DocumentService.javaµ
+ ∂
+(/
+%1java.lang.String"__concat*
+select sup *
+from DiplomaSupplement sup ˘
+ˆ
+ó
+äD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/DocumentService.javaµ
+ ∑
+(.
+%2java.lang.String"__concat*
+
+%1java.lang.String*
+where sup.diploma.id = ?1 ê
+ç
+ó
+äD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/DocumentService.javaµ
+ ∏
+(E
+%3java.lang.String"__concat*
+
+%2java.lang.String*53
+1order by sup.diplomaSupplement.id desc nulls lastÆ´
+ó
+äD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/DocumentService.javaµ
+ ∏
+(_"
+%4javax.persistence.TypedQuery"njavax.persistence.EntityManager#createQuery(Ljava/lang/String;Ljava/lang/Class;)Ljavax/persistence/TypedQuery;*'
+%
+%0javax.persistence.EntityManager*
+
+%3java.lang.String*
+""20createQuery(Ljava/lang/String;Ljava/lang/Class;)çä
+ó
+äD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/DocumentService.javaµ
+ π
+(+"
+%5javax.persistence.TypedQuery"\javax.persistence.TypedQuery#setParameter(ILjava/lang/Object;)Ljavax/persistence/TypedQuery;*$
+"
+%4javax.persistence.TypedQuery*2*
+
+	diplomaIdjava.lang.Long2!setParameter(ILjava/lang/Object;)®•
+ó
+äD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/DocumentService.javaµ
+ π
+(;
+%6java.util.List"<javax.persistence.TypedQuery#getResultList()Ljava/util/List;*$
+"
+%5javax.persistence.TypedQuery2getResultList()"≤
+ó
+äD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/DocumentService.javaµ
+ π
+(<
+
+%6java.util.List:
+	diplomaIdjava.lang.LongB(&
+$ee.hitsa.ois.service.DocumentService

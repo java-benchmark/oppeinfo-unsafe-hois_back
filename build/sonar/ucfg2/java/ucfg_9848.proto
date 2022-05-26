@@ -1,0 +1,100 @@
+
+vee.hitsa.ois.service.fotobox.FotoBoxService#activeStudentsPerUsercode(Ljava/lang/Long;Ljava/util/List;)Ljava/util/Map;ú
+ëD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/fotobox/FotoBoxService.javas' s(@"1*ù&
+1ú
+ëD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/fotobox/FotoBoxService.javat! t(#à
+Ö
+ú
+ëD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/fotobox/FotoBoxService.javat! t(#%
+%0javax.persistence.EntityManager"__id*7*5-
++ee.hitsa.ois.service.fotobox.FotoBoxService"
+emø
+º
+ú
+ëD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/fotobox/FotoBoxService.javat0 u(V
+%1java.lang.String"__concat*1/
+-select s from Student s join fetch s.person p*FD
+B where s.school.id = ?1 and (p.idcode in ?2 or p.uniqueCode in ?2)¸
+˘
+ú
+ëD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/fotobox/FotoBoxService.javat0 v(,
+%2java.lang.String"__concat*
+
+%1java.lang.String*
+ and s.status.code in ?3≥∞
+ú
+ëD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/fotobox/FotoBoxService.javat! v(<"
+%3javax.persistence.TypedQuery"njavax.persistence.EntityManager#createQuery(Ljava/lang/String;Ljava/lang/Class;)Ljavax/persistence/TypedQuery;*'
+%
+%0javax.persistence.EntityManager*
+
+%2java.lang.String*
+""20createQuery(Ljava/lang/String;Ljava/lang/Class;)ëé
+ú
+ëD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/fotobox/FotoBoxService.javat! w(*"
+%4javax.persistence.TypedQuery"\javax.persistence.TypedQuery#setParameter(ILjava/lang/Object;)Ljavax/persistence/TypedQuery;*$
+"
+%3javax.persistence.TypedQuery*2*
+
+schoolIdjava.lang.Long2!setParameter(ILjava/lang/Object;)íè
+ú
+ëD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/fotobox/FotoBoxService.javat! x(+"
+%5javax.persistence.TypedQuery"\javax.persistence.TypedQuery#setParameter(ILjava/lang/Object;)Ljavax/persistence/TypedQuery;*$
+"
+%4javax.persistence.TypedQuery*2*
+
+	usercodesjava.util.List2!setParameter(ILjava/lang/Object;)∆
+√
+ú
+ëD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/fotobox/FotoBoxService.javay! y(D
+%6java.util.List"__id*
+""ãà
+ú
+ëD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/fotobox/FotoBoxService.javat! y(E"
+%7javax.persistence.TypedQuery"\javax.persistence.TypedQuery#setParameter(ILjava/lang/Object;)Ljavax/persistence/TypedQuery;*$
+"
+%5javax.persistence.TypedQuery*2*
+
+%6java.util.List2!setParameter(ILjava/lang/Object;)≠™
+ú
+ëD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/fotobox/FotoBoxService.javat! z( 
+%8java.util.List"<javax.persistence.TypedQuery#getResultList()Ljava/util/List;*$
+"
+%7javax.persistence.TypedQuery2getResultList()‹
+Ÿ
+ú
+ëD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/fotobox/FotoBoxService.javat z(!
+studentsjava.util.List"__id*
+
+%8java.util.List°û
+ú
+ëD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/fotobox/FotoBoxService.java{ {( 
+%9java.util.stream.Stream"6java.util.Collection#stream()Ljava/util/stream/Stream;*
+
+studentsjava.util.List2stream()û
+õ
+ú
+ëD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/fotobox/FotoBoxService.java{? |(K"
+%10java.util.function.Function"__declareFunction*CA
+?__sonar_lambda_1306$ee.hitsa.ois.service.fotobox.FotoBoxServiceÔ
+Ï
+ú
+ëD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/fotobox/FotoBoxService.java{) |(L!
+%18java.util.stream.Collector"ajava.util.stream.Collectors#groupingBy(Ljava/util/function/Function;)Ljava/util/stream/Collector;*"
+java.util.stream.Collectors*$
+"
+%10java.util.function.FunctionˆÛ
+ú
+ëD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/fotobox/FotoBoxService.java{ |(M
+%19java.util.Map"Ojava.util.stream.Stream#collect(Ljava/util/stream/Collector;)Ljava/lang/Object;*
+
+%9java.util.stream.Stream*#
+!
+%18java.util.stream.Collector2%collect(Ljava/util/stream/Collector;)"∑
+ú
+ëD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/fotobox/FotoBoxService.java{ |(N
+
+%19java.util.Map:
+schoolIdjava.lang.Long:
+	usercodesjava.util.ListB/-
++ee.hitsa.ois.service.fotobox.FotoBoxService

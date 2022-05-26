@@ -1,0 +1,204 @@
+
+aee.hitsa.ois.service.StudentService#vocationalConnectedEntities(Ljava/lang/Long;)Ljava/util/List;ñ
+âD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/StudentService.javaÌ2 Ì(M"1*îB
+1ñ
+âD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/StudentService.javaÓ Ó(˙
+˜
+ñ
+âD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/StudentService.javaÓ Ó(%
+%0javax.persistence.EntityManager"__id*/*-%
+#ee.hitsa.ois.service.StudentService"
+emä
+á
+ñ
+âD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/StudentService.javaÓ' Ô(C
+%1java.lang.String"__concat*îë
+éselect jj.id, 'journal' as type, jj.name_et as name_et, jj.name_et as name_en, sy.end_date, sy.year_code, null as protocol_nr from journal jj *31
+/join journal_student js on jj.id=js.journal_id ç
+ä
+ñ
+âD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/StudentService.javaÓ' (C
+%2java.lang.String"__concat*
+
+%1java.lang.String*31
+/join study_year sy on jj.study_year_id = sy.id ˜
+Ù
+ñ
+âD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/StudentService.javaÓ' Ò(-
+%3java.lang.String"__concat*
+
+%2java.lang.String*
+where js.student_id = ?1 ‰
+·
+ñ
+âD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/StudentService.javaÓ' Ú(
+%4java.lang.String"__concat*
+
+%3java.lang.String*
+
+union Û
+
+ó
+âD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/StudentService.javaÓ' Û(£
+%5java.lang.String"__concat*
+
+%4java.lang.String*óî
+ëselect pj.id, 'practice', 'Praktikap√É¬§evik', 'Practice journal', pj.grade_inserted, sy.year_code, null as protocol_nr from practice_journal pj ç
+ä
+ñ
+âD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/StudentService.javaÓ' Ù(C
+%6java.lang.String"__concat*
+
+%5java.lang.String*31
+/join study_year sy on pj.study_year_id = sy.id ˜
+Ù
+ñ
+âD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/StudentService.javaÓ' ı(-
+%7java.lang.String"__concat*
+
+%6java.lang.String*
+where pj.student_id = ?1 ‰
+·
+ñ
+âD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/StudentService.javaÓ' ˆ(
+%8java.lang.String"__concat*
+
+%7java.lang.String*
+
+union «
+ƒ
+ñ
+âD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/StudentService.javaÓ' ˜(}
+%9java.lang.String"__concat*
+
+%8java.lang.String*mk
+iselect ps.protocol_id, case when p.is_final = true then 'finalProtocol' else 'protocol' end, cm.name_et, ≠
+™
+ñ
+âD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/StudentService.javaÓ' ¯(b
+%10java.lang.String"__concat*
+
+%9java.lang.String*RP
+Ncm.name_et, sy.end_date, sy.year_code, p.protocol_nr from protocol_student ps â
+Ü
+ñ
+âD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/StudentService.javaÓ' ˘(=
+%11java.lang.String"__concat*
+
+%10java.lang.String*-+
+)join protocol p on ps.protocol_id = p.id ú
+ô
+ñ
+âD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/StudentService.javaÓ' ˙(P
+%12java.lang.String"__concat*
+
+%11java.lang.String*@>
+<join protocol_vdata pvd on ps.protocol_id = pvd.protocol_id ≤
+Ø
+ñ
+âD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/StudentService.javaÓ' ˚(f
+%13java.lang.String"__concat*
+
+%12java.lang.String*VT
+Rjoin curriculum_version_omodule cvo on pvd.curriculum_version_omodule_id = cvo.id û
+õ
+ñ
+âD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/StudentService.javaÓ' ¸(R
+%14java.lang.String"__concat*
+
+%13java.lang.String*B@
+>join curriculum_module cm on cvo.curriculum_module_id = cm.id ê
+ç
+ñ
+âD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/StudentService.javaÓ' ˝(D
+%15java.lang.String"__concat*
+
+%14java.lang.String*42
+0join study_year sy on pvd.study_year_id = sy.id ˘
+ˆ
+ñ
+âD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/StudentService.javaÓ' ˛(-
+%16java.lang.String"__concat*
+
+%15java.lang.String*
+where ps.student_id = ?1 Ê
+„
+ñ
+âD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/StudentService.javaÓ' ˇ(
+%17java.lang.String"__concat*
+
+%16java.lang.String*
+
+union ﬂ
+‹
+ó
+âD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/StudentService.javaÓ' Ä(é
+%18java.lang.String"__concat*
+
+%17java.lang.String*Å
+}select aa.id, 'apel', 'V√É‚Ä¢TA avaldus', 'APEL application', aa.confirmed, null as year_code, null from apel_application aa ù
+ö
+ñ
+âD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/StudentService.javaÓ' Å(Q
+%19java.lang.String"__concat*
+
+%18java.lang.String*A?
+=where aa.student_id = ?1 and aa.status_code='VOTA_STAATUS_C' Ô
+Ï
+ñ
+âD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/StudentService.javaÓ' Ç(#
+%20java.lang.String"__concat*
+
+%19java.lang.String*
+order by 5 descáÑ
+ñ
+âD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/StudentService.javaÓ Ç($
+%21javax.persistence.Query"^javax.persistence.EntityManager#createNativeQuery(Ljava/lang/String;)Ljavax/persistence/Query;*'
+%
+%0javax.persistence.EntityManager*
+
+%20java.lang.String2%createNativeQuery(Ljava/lang/String;)‚
+ﬂ
+ñ
+âD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/StudentService.javaÓ Ç(%
+qjavax.persistence.Query"__id* 
+
+%21javax.persistence.Query¯ı
+ñ
+âD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/StudentService.javaÉ É($
+%22javax.persistence.Query"Rjavax.persistence.Query#setParameter(ILjava/lang/Object;)Ljavax/persistence/Query;*
+
+qjavax.persistence.Query*2*
+
+	studentIdjava.lang.Long2!setParameter(ILjava/lang/Object;)ùö
+ñ
+âD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/StudentService.javaÑ Ñ((
+%23java.util.List"7javax.persistence.Query#getResultList()Ljava/util/List;*
+
+qjavax.persistence.Query2getResultList()”
+–
+ñ
+âD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/StudentService.javaÑ Ñ()
+datajava.util.List"__id*
+
+%23java.util.Listè
+å
+ñ
+âD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/StudentService.javaá à(r"
+%24java.util.function.Function"__declareFunction*:8
+6__sonar_lambda_183$ee.hitsa.ois.service.StudentServiceÖ
+Ç
+ñ
+âD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/StudentService.javaÜ à(y
+%34java.util.List"nee.hitsa.ois.util.StreamUtil#toMappedList(Ljava/util/function/Function;Ljava/util/Collection;)Ljava/util/List;* "
+ee.hitsa.ois.util.StreamUtil*$
+"
+%24java.util.function.Function*
+
+datajava.util.List"≤
+ñ
+âD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/StudentService.javaÜ à(z
+
+%34java.util.List:
+	studentIdjava.lang.LongB'%
+#ee.hitsa.ois.service.StudentService

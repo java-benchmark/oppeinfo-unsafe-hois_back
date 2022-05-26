@@ -1,0 +1,178 @@
+
+°ee.hitsa.ois.service.moodle.MoodleService#getTasksWithMissingGrades(Lee/hitsa/ois/domain/subject/studyperiod/SubjectStudyPeriod;Ljava/util/List;)Ljava/util/List;ú
+èD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/moodle/MoodleService.javaœ œ(0"1*ãA
+1ú
+èD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/moodle/MoodleService.java– –(Ü
+É
+ú
+èD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/moodle/MoodleService.java– –(%
+%0javax.persistence.EntityManager"__id*5*3+
+)ee.hitsa.ois.service.moodle.MoodleService"
+emª
+∏
+ú
+èD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/moodle/MoodleService.java–' —(W
+%1java.lang.String"__concat*,*
+(select count(*) from declaration_subject*GE
+C where subject_study_period_id = ?1 and is_moodle_registered = trueãà
+ú
+èD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/moodle/MoodleService.java– —(X
+%2javax.persistence.Query"^javax.persistence.EntityManager#createNativeQuery(Ljava/lang/String;)Ljavax/persistence/Query;*'
+%
+%0javax.persistence.EntityManager*
+
+%1java.lang.String2%createNativeQuery(Ljava/lang/String;)Á
+‰
+ú
+èD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/moodle/MoodleService.java– —(Y
+qjavax.persistence.Query"__id*
+
+%2javax.persistence.Queryä
+á
+ú
+èD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/moodle/MoodleService.java“ “(>
+%3java.lang.Long"Zee.hitsa.ois.util.EntityUtil#getId(Lee/hitsa/ois/domain/BaseEntityWithId;)Ljava/lang/Long;* "
+ee.hitsa.ois.util.EntityUtil*R
+P
+subjectStudyPeriod:ee.hitsa.ois.domain.subject.studyperiod.SubjectStudyPeriodˆÛ
+ú
+èD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/moodle/MoodleService.java“ “(?
+%4javax.persistence.Query"Rjavax.persistence.Query#setParameter(ILjava/lang/Object;)Ljavax/persistence/Query;*
+
+qjavax.persistence.Query*2*
+
+%3java.lang.Long2!setParameter(ILjava/lang/Object;)™ß
+ú
+èD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/moodle/MoodleService.java”) ”(<
+%5java.lang.Object";javax.persistence.Query#getSingleResult()Ljava/lang/Object;*
+
+qjavax.persistence.Query2getSingleResult()Ê
+„
+ú
+èD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/moodle/MoodleService.java” ”(="
+moodleStudentsjava.lang.Number"__id*
+
+%5java.lang.ObjectÜ
+É
+ú
+èD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/moodle/MoodleService.java‘ ‘(%
+%6javax.persistence.EntityManager"__id*5*3+
+)ee.hitsa.ois.service.moodle.MoodleService"
+em…
+∆
+ú
+èD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/moodle/MoodleService.java‘! ’(o
+%7java.lang.String"__concat*" 
+select mt.moodle_grade_item_id*_]
+[ from (select id, moodle_grade_item_id from midterm_task where subject_study_period_id = ?1â
+Ü
+ú
+èD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/moodle/MoodleService.java‘! ÷(9
+%8java.lang.String"__concat*
+
+%7java.lang.String*)'
+% and moodle_grade_item_id in (?2)) mtØ
+¨
+ú
+èD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/moodle/MoodleService.java‘! ◊(_
+%9java.lang.String"__concat*
+
+%8java.lang.String*OM
+K left join midterm_task_student_result mtsr on mtsr.midterm_task_id = mt.idÜ
+É
+ú
+èD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/moodle/MoodleService.java‘! ÿ(5
+%10java.lang.String"__concat*
+
+%9java.lang.String*%#
+! group by mt.moodle_grade_item_idÖ
+Ç
+ú
+èD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/moodle/MoodleService.java‘! Ÿ(3
+%11java.lang.String"__concat*
+
+%10java.lang.String*#!
+ having count(mtsr.points) < ?3çä
+ú
+èD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/moodle/MoodleService.java‘ Ÿ(4
+%12javax.persistence.Query"^javax.persistence.EntityManager#createNativeQuery(Ljava/lang/String;)Ljavax/persistence/Query;*'
+%
+%6javax.persistence.EntityManager*
+
+%11java.lang.String2%createNativeQuery(Ljava/lang/String;)Ë
+Â
+ú
+èD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/moodle/MoodleService.java‘ Ÿ(4
+qjavax.persistence.Query"__id* 
+
+%12javax.persistence.Queryã
+à
+ú
+èD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/moodle/MoodleService.java⁄ ⁄(>
+%13java.lang.Long"Zee.hitsa.ois.util.EntityUtil#getId(Lee/hitsa/ois/domain/BaseEntityWithId;)Ljava/lang/Long;* "
+ee.hitsa.ois.util.EntityUtil*R
+P
+subjectStudyPeriod:ee.hitsa.ois.domain.subject.studyperiod.SubjectStudyPeriod¯ı
+ú
+èD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/moodle/MoodleService.java⁄ ⁄(?
+%14javax.persistence.Query"Rjavax.persistence.Query#setParameter(ILjava/lang/Object;)Ljavax/persistence/Query;*
+
+qjavax.persistence.Query*2*
+
+%13java.lang.Long2!setParameter(ILjava/lang/Object;)Û
+
+ú
+èD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/moodle/MoodleService.java€ €(O
+%15java.util.List"nee.hitsa.ois.util.StreamUtil#toMappedList(Ljava/util/function/Function;Ljava/util/Collection;)Ljava/util/List;* "
+ee.hitsa.ois.util.StreamUtil*
+""*
+
+
+gradeItemsjava.util.List¯ı
+ú
+èD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/moodle/MoodleService.java€ €(P
+%16javax.persistence.Query"Rjavax.persistence.Query#setParameter(ILjava/lang/Object;)Ljavax/persistence/Query;*
+
+qjavax.persistence.Query*2*
+
+%15java.util.List2!setParameter(ILjava/lang/Object;)ÖÇ
+ú
+èD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/moodle/MoodleService.java‹ ‹()
+%17javax.persistence.Query"Rjavax.persistence.Query#setParameter(ILjava/lang/Object;)Ljavax/persistence/Query;*
+
+qjavax.persistence.Query*2*$
+"
+moodleStudentsjava.lang.Number2!setParameter(ILjava/lang/Object;)£†
+ú
+èD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/moodle/MoodleService.java› ›(*
+%18java.util.List"7javax.persistence.Query#getResultList()Ljava/util/List;*
+
+qjavax.persistence.Query2getResultList()€
+ÿ
+ú
+èD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/moodle/MoodleService.java› ›(+
+resultjava.util.List"__id*
+
+%18java.util.Listõ
+ò
+ú
+èD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/moodle/MoodleService.javaﬁ' ﬁ(>"
+%19java.util.function.Function"__declareFunction*@>
+<__sonar_lambda_803$ee.hitsa.ois.service.moodle.MoodleServiceç
+ä
+ú
+èD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/moodle/MoodleService.javaﬁ ﬁ(G
+%21java.util.List"nee.hitsa.ois.util.StreamUtil#toMappedList(Ljava/util/function/Function;Ljava/util/Collection;)Ljava/util/List;* "
+ee.hitsa.ois.util.StreamUtil*$
+"
+%19java.util.function.Function*
+
+resultjava.util.List"∏
+ú
+èD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/moodle/MoodleService.javaﬁ ﬁ(H
+
+%21java.util.List:P
+subjectStudyPeriod:ee.hitsa.ois.domain.subject.studyperiod.SubjectStudyPeriod:
+
+gradeItemsjava.util.ListB-+
+)ee.hitsa.ois.service.moodle.MoodleService

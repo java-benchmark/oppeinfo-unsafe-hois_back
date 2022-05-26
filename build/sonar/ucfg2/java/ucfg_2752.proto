@@ -1,0 +1,95 @@
+
+Zee.hitsa.ois.service.SchoolBoardService#roomTimetables(Ljava/lang/String;)Ljava/util/List;ò
+çD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/SchoolBoardService.java}" }(0"1*á%
+1ò
+çD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/SchoolBoardService.java~ ~(*è
+å
+ò
+çD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/SchoolBoardService.java~ ~(<'
+%0!ee.hitsa.ois.domain.school.School"qee.hitsa.ois.service.SchoolBoardService#schoolByIdentifier(Ljava/lang/String;)Lee/hitsa/ois/domain/school/School;*+)
+'ee.hitsa.ois.service.SchoolBoardService*&
+$
+schoolIdentifierjava.lang.String¸
+˘
+ò
+çD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/SchoolBoardService.java~ ~(=+
+school!ee.hitsa.ois.domain.school.School"__id*)
+'
+%0!ee.hitsa.ois.domain.school.School¨©
+ö
+çD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/SchoolBoardService.javaÄ9 Ä(G
+%1java.lang.Long"<ee.hitsa.ois.domain.BaseEntityWithId#getId()Ljava/lang/Long;*-
++
+school!ee.hitsa.ois.domain.school.School2getId()é
+ã
+ö
+çD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/SchoolBoardService.javaÄ# Ä(H-
+%2'ee.hitsa.ois.util.JpaNativeQueryBuilder"xee.hitsa.ois.service.SchoolBoardService#roomTimetableEventsQb(Ljava/lang/Long;)Lee/hitsa/ois/util/JpaNativeQueryBuilder;*+)
+'ee.hitsa.ois.service.SchoolBoardService*
+
+%1java.lang.LongÜ
+É
+ö
+çD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/SchoolBoardService.javaÄ Ä(I-
+qb'ee.hitsa.ois.util.JpaNativeQueryBuilder"__id*/
+-
+%2'ee.hitsa.ois.util.JpaNativeQueryBuilder¸
+˘
+ö
+çD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/SchoolBoardService.javaÅ Å((
+
+%3void"pee.hitsa.ois.service.SchoolBoardService#setCurrentWeekEventsCriteria(Lee/hitsa/ois/util/JpaNativeQueryBuilder;)V*+")
+'ee.hitsa.ois.service.SchoolBoardService*/
+-
+qb'ee.hitsa.ois.util.JpaNativeQueryBuilderñì
+ö
+çD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/SchoolBoardService.javaÉ É(-
+%4'ee.hitsa.ois.util.JpaNativeQueryBuilder"jee.hitsa.ois.util.JpaNativeQueryBuilder#sort([Ljava/lang/String;)Lee/hitsa/ois/util/JpaNativeQueryBuilder;*/
+-
+qb'ee.hitsa.ois.util.JpaNativeQueryBuilder*
+	room_code2sort([Ljava/lang/String;)Ç
+ˇ
+ö
+çD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/SchoolBoardService.javaÑ` Ñ(b%
+%5javax.persistence.EntityManager"__id*3*1)
+'ee.hitsa.ois.service.SchoolBoardService"
+emïí
+ö
+çD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/SchoolBoardService.javaÑ Ñ(c
+%6javax.persistence.Query"|ee.hitsa.ois.util.JpaNativeQueryBuilder#select(Ljava/lang/String;Ljavax/persistence/EntityManager;)Ljavax/persistence/Query;*/
+-
+qb'ee.hitsa.ois.util.JpaNativeQueryBuilder*?=
+;distinct r.id, b.code as building_code, r.code as room_code*'
+%
+%5javax.persistence.EntityManager2;select(Ljava/lang/String;Ljavax/persistence/EntityManager;)°û
+ö
+çD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/SchoolBoardService.javaÑ Ñ(s
+%7java.util.List"7javax.persistence.Query#getResultList()Ljava/util/List;*
+
+%6javax.persistence.Query2getResultList()÷
+”
+ö
+çD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/SchoolBoardService.javaÑ Ñ(t
+datajava.util.List"__id*
+
+%7java.util.Listñ
+ì
+ö
+çD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/SchoolBoardService.javaÖ' Ö(N!
+%8java.util.function.Function"__declareFunction*><
+:__sonar_lambda_327$ee.hitsa.ois.service.SchoolBoardServiceà
+Ö
+ö
+çD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/SchoolBoardService.javaÖ Ö(U
+%11java.util.List"nee.hitsa.ois.util.StreamUtil#toMappedList(Ljava/util/function/Function;Ljava/util/Collection;)Ljava/util/List;* "
+ee.hitsa.ois.util.StreamUtil*#
+!
+%8java.util.function.Function*
+
+datajava.util.List"∂
+ö
+çD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/SchoolBoardService.javaÖ Ö(V
+
+%11java.util.List:$
+schoolIdentifierjava.lang.StringB+)
+'ee.hitsa.ois.service.SchoolBoardService

@@ -1,0 +1,50 @@
+
+ree.hitsa.ois.service.DocumentService#toDirectiveDtoList(Lee/hitsa/ois/util/JpaNativeQueryBuilder;)Ljava/util/List;—
+ŠD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/DocumentService.java« «(1"1*É
+1—
+ŠD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/DocumentService.java¬ ¬(þ
+û
+™
+ŠD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/DocumentService.java¬§ ¬(©%
+%0javax.persistence.EntityManager"__id*0*.&
+$ee.hitsa.ois.service.DocumentService"
+emÛØ
+˜
+ŠD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/DocumentService.java¬ ¬(ª
+%1javax.persistence.Query"|ee.hitsa.ois.util.JpaNativeQueryBuilder#select(Ljava/lang/String;Ljavax/persistence/EntityManager;)Ljavax/persistence/Query;*/
+-
+qb'ee.hitsa.ois.util.JpaNativeQueryBuilder*†ƒ
+€d.id, d.directive_nr, d.status_code, d.inserted, d.confirm_date, case when d.type_code = :dDupl then true else false end as dupl*'
+%
+%0javax.persistence.EntityManager2;select(Ljava/lang/String;Ljavax/persistence/EntityManager;)ž›
+—
+ŠD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/DocumentService.java¬ ­( 
+%2java.util.List"7javax.persistence.Query#getResultList()Ljava/util/List;*
+
+%1javax.persistence.Query2getResultList()Õ
+Ò
+—
+ŠD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/DocumentService.java¬ ­(!
+resultjava.util.List"__id*
+
+%2java.util.List‘
+Ž
+—
+ŠD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/DocumentService.java®' ·(	!
+%3java.util.function.Function"__declareFunction*<:
+8__sonar_lambda_1106$ee.hitsa.ois.service.DocumentService‡
+„
+—
+ŠD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/DocumentService.java® ·(
+%18java.util.List"nee.hitsa.ois.util.StreamUtil#toMappedList(Ljava/util/function/Function;Ljava/util/Collection;)Ljava/util/List;* "
+ee.hitsa.ois.util.StreamUtil*#
+!
+%3java.util.function.Function*
+
+resultjava.util.List"³
+—
+ŠD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/DocumentService.java® ·(
+
+%18java.util.List:-
+qb'ee.hitsa.ois.util.JpaNativeQueryBuilderB(&
+$ee.hitsa.ois.service.DocumentService

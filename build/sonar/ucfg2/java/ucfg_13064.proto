@@ -1,0 +1,244 @@
+
+àee.hitsa.ois.service.GradingSchemaService#typeSchemas(Lee/hitsa/ois/service/security/HoisUserDetails;Ljava/lang/String;)Ljava/util/List;ö
+èD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/GradingSchemaService.javaH" H(-"3*…
+2ö
+èD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/GradingSchemaService.javaW W(#“
+œ
+ö
+èD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/GradingSchemaService.javaW W(/
+%31void"Tee.hitsa.ois.service.GradingSchemaService#setTypeSchemaStudyYears(Ljava/util/List;)V*-+
+)ee.hitsa.ois.service.GradingSchemaService*
+
+
+schemaDtosjava.util.ListÃ
+…
+ö
+èD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/GradingSchemaService.javaX X()
+%32void"Nee.hitsa.ois.service.GradingSchemaService#setTypeSchemaRows(Ljava/util/List;)V*-+
+)ee.hitsa.ois.service.GradingSchemaService*
+
+
+schemaDtosjava.util.List*
+1*¸O
+3ö
+èD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/GradingSchemaService.javaI- I(/Ñ
+Å
+ö
+èD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/GradingSchemaService.javaI- I(/%
+%0javax.persistence.EntityManager"__id*5*3+
+)ee.hitsa.ois.service.GradingSchemaService"
+emç
+ä
+ö
+èD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/GradingSchemaService.javaI< J(1
+%1java.lang.String"__concat*$"
+ select gs from GradingSchema gs *#!
+where gs.school.id = :schoolId ¢
+ü
+ö
+èD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/GradingSchemaService.javaI< K(R
+%2java.lang.String"__concat*
+
+%1java.lang.String*DB
+@and gs.isVocational = :isVocational and gs.isHigher = :isHigher û
+õ
+ö
+èD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/GradingSchemaService.javaI< L(N
+%3java.lang.String"__concat*
+
+%2java.lang.String*@>
+<and gs.isBasic = :isBasic and gs.isSecondary = :isSecondary ˆ
+Û
+ö
+èD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/GradingSchemaService.javaI< M(&
+%4java.lang.String"__concat*
+
+%3java.lang.String*
+order by gs.inserted±Æ
+ö
+èD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/GradingSchemaService.javaI- M(<"
+%5javax.persistence.TypedQuery"njavax.persistence.EntityManager#createQuery(Ljava/lang/String;Ljava/lang/Class;)Ljavax/persistence/TypedQuery;*'
+%
+%0javax.persistence.EntityManager*
+
+%4java.lang.String*
+""20createQuery(Ljava/lang/String;Ljava/lang/Class;)À»
+ö
+èD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/GradingSchemaService.javaN* N(<
+%6java.lang.Long"Kee.hitsa.ois.service.security.HoisUserDetails#getSchoolId()Ljava/lang/Long;*7
+5
+user-ee.hitsa.ois.service.security.HoisUserDetails2getSchoolId()≥∞
+ö
+èD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/GradingSchemaService.javaI- N(="
+%7javax.persistence.TypedQuery"mjavax.persistence.TypedQuery#setParameter(Ljava/lang/String;Ljava/lang/Object;)Ljavax/persistence/TypedQuery;*$
+"
+%5javax.persistence.TypedQuery*
+
+schoolId*
+
+%6java.lang.Long22setParameter(Ljava/lang/String;Ljava/lang/Object;)⁄
+◊
+ö
+èD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/GradingSchemaService.javaO: O(V*
+%8$ee.hitsa.ois.enums.GradingSchemaType"__id*
+""óî
+ö
+èD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/GradingSchemaService.javaO: O(]
+%9java.lang.String"'java.lang.Enum#name()Ljava/lang/String;*,
+*
+%8$ee.hitsa.ois.enums.GradingSchemaType2name()îë
+ö
+èD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/GradingSchemaService.javaO: O(k
+%10java.lang.String"0java.lang.String#toLowerCase()Ljava/lang/String;*
+
+%9java.lang.String2toLowerCase()±Æ
+ö
+èD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/GradingSchemaService.javaO. O(l
+%11boolean",java.lang.String#equals(Ljava/lang/Object;)Z*
+
+typejava.lang.String*
+
+%10java.lang.String2equals(Ljava/lang/Object;)≤Ø
+ö
+èD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/GradingSchemaService.javaI- O(m#
+%12javax.persistence.TypedQuery"mjavax.persistence.TypedQuery#setParameter(Ljava/lang/String;Ljava/lang/Object;)Ljavax/persistence/TypedQuery;*$
+"
+%7javax.persistence.TypedQuery*
+isVocational*
+
+%11boolean22setParameter(Ljava/lang/String;Ljava/lang/Object;)€
+ÿ
+ö
+èD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/GradingSchemaService.javaP6 P(N+
+%13$ee.hitsa.ois.enums.GradingSchemaType"__id*
+""ôñ
+ö
+èD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/GradingSchemaService.javaP6 P(U
+%14java.lang.String"'java.lang.Enum#name()Ljava/lang/String;*-
++
+%13$ee.hitsa.ois.enums.GradingSchemaType2name()ïí
+ö
+èD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/GradingSchemaService.javaP6 P(c
+%15java.lang.String"0java.lang.String#toLowerCase()Ljava/lang/String;*
+
+%14java.lang.String2toLowerCase()±Æ
+ö
+èD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/GradingSchemaService.javaP* P(d
+%16boolean",java.lang.String#equals(Ljava/lang/Object;)Z*
+
+typejava.lang.String*
+
+%15java.lang.String2equals(Ljava/lang/Object;)Ø¨
+ö
+èD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/GradingSchemaService.javaI- P(e#
+%17javax.persistence.TypedQuery"mjavax.persistence.TypedQuery#setParameter(Ljava/lang/String;Ljava/lang/Object;)Ljavax/persistence/TypedQuery;*%
+#
+%12javax.persistence.TypedQuery*
+
+isHigher*
+
+%16boolean22setParameter(Ljava/lang/String;Ljava/lang/Object;)€
+ÿ
+ö
+èD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/GradingSchemaService.javaQ5 Q(L+
+%18$ee.hitsa.ois.enums.GradingSchemaType"__id*
+""ôñ
+ö
+èD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/GradingSchemaService.javaQ5 Q(S
+%19java.lang.String"'java.lang.Enum#name()Ljava/lang/String;*-
++
+%18$ee.hitsa.ois.enums.GradingSchemaType2name()ïí
+ö
+èD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/GradingSchemaService.javaQ5 Q(a
+%20java.lang.String"0java.lang.String#toLowerCase()Ljava/lang/String;*
+
+%19java.lang.String2toLowerCase()±Æ
+ö
+èD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/GradingSchemaService.javaQ) Q(b
+%21boolean",java.lang.String#equals(Ljava/lang/Object;)Z*
+
+typejava.lang.String*
+
+%20java.lang.String2equals(Ljava/lang/Object;)Æ´
+ö
+èD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/GradingSchemaService.javaI- Q(c#
+%22javax.persistence.TypedQuery"mjavax.persistence.TypedQuery#setParameter(Ljava/lang/String;Ljava/lang/Object;)Ljavax/persistence/TypedQuery;*%
+#
+%17javax.persistence.TypedQuery*	
+isBasic*
+
+%21boolean22setParameter(Ljava/lang/String;Ljava/lang/Object;)€
+ÿ
+ö
+èD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/GradingSchemaService.javaR9 R(T+
+%23$ee.hitsa.ois.enums.GradingSchemaType"__id*
+""ôñ
+ö
+èD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/GradingSchemaService.javaR9 R([
+%24java.lang.String"'java.lang.Enum#name()Ljava/lang/String;*-
++
+%23$ee.hitsa.ois.enums.GradingSchemaType2name()ïí
+ö
+èD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/GradingSchemaService.javaR9 R(i
+%25java.lang.String"0java.lang.String#toLowerCase()Ljava/lang/String;*
+
+%24java.lang.String2toLowerCase()±Æ
+ö
+èD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/GradingSchemaService.javaR- R(j
+%26boolean",java.lang.String#equals(Ljava/lang/Object;)Z*
+
+typejava.lang.String*
+
+%25java.lang.String2equals(Ljava/lang/Object;)≤Ø
+ö
+èD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/GradingSchemaService.javaI- R(k#
+%27javax.persistence.TypedQuery"mjavax.persistence.TypedQuery#setParameter(Ljava/lang/String;Ljava/lang/Object;)Ljavax/persistence/TypedQuery;*%
+#
+%22javax.persistence.TypedQuery*
+isSecondary*
+
+%26boolean22setParameter(Ljava/lang/String;Ljava/lang/Object;)≠™
+ö
+èD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/GradingSchemaService.javaI- S( 
+%28java.util.List"<javax.persistence.TypedQuery#getResultList()Ljava/util/List;*%
+#
+%27javax.persistence.TypedQuery2getResultList()·
+ﬁ
+ö
+èD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/GradingSchemaService.javaI S(! 
+gradingSchemasjava.util.List"__id*
+
+%28java.util.Listı
+Ú
+ö
+èD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/GradingSchemaService.javaU, U(i
+%29java.util.List"nee.hitsa.ois.util.StreamUtil#toMappedList(Ljava/util/function/Function;Ljava/util/Collection;)Ljava/util/List;* "
+ee.hitsa.ois.util.StreamUtil*
+""*"
+ 
+gradingSchemasjava.util.List›
+⁄
+ö
+èD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/GradingSchemaService.javaU U(j
+
+schemaDtosjava.util.List"__id*
+
+%29java.util.ListˆÛ
+ö
+èD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/GradingSchemaService.javaV V(!
+%30boolean"java.util.List#isEmpty()Z*
+
+
+schemaDtosjava.util.List2	isEmpty()*
+2
+1*‡
+1ö
+èD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/GradingSchemaService.javaZ Z("Ω
+ö
+èD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/GradingSchemaService.javaZ Z(
+
+
+schemaDtosjava.util.List:5
+user-ee.hitsa.ois.service.security.HoisUserDetails:
+typejava.lang.StringB-+
+)ee.hitsa.ois.service.GradingSchemaService

@@ -1,0 +1,190 @@
+
+åee.hitsa.ois.service.StudentService#directiveSupportServices(Lee/hitsa/ois/domain/student/Student;)Lee/hitsa/ois/util/JpaNativeQueryBuilder;ñ
+âD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/StudentService.java’) ’(A"1*õI
+1ñ
+âD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/StudentService.java÷= ÷(Yè
+å
+ñ
+âD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/StudentService.java÷= ◊(?
+%0java.lang.String"__concat*
+from directive_student ds */-
++join directive d on d.id = ds.directive_id ç
+ä
+ñ
+âD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/StudentService.java÷= ÿ(C
+%1java.lang.String"__concat*
+
+%0java.lang.String*31
+/join application a on a.id = ds.application_id †
+ù
+ñ
+âD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/StudentService.java÷= Ÿ(V
+%2java.lang.String"__concat*
+
+%1java.lang.String*FD
+Bjoin application_support_service ass on ass.application_id = a.id ï
+í
+ñ
+âD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/StudentService.java÷= ⁄(K
+%3java.lang.String"__concat*
+
+%2java.lang.String*;9
+7join (select c.id as c_id, concat ( c.name_et, ' - (', Ê
+„
+ó
+âD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/StudentService.java÷= €(ò
+%4java.lang.String"__concat*
+
+%3java.lang.String*äá
+Ñcoalesce(string_agg( p.firstname || ' ' || p.lastname, ', ' order by p.firstname, p.lastname ), cm.member_name), ')' ) as submitter µ
+≤
+ñ
+âD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/StudentService.java÷= ‹(k
+%5java.lang.String"__concat*
+
+%4java.lang.String*[Y
+Wfrom committee c join committee_member cm on c.id = cm.committee_id and cm.is_chairman Ã
+…
+ó
+âD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/StudentService.java÷= ›(Å
+%6java.lang.String"__concat*
+
+%5java.lang.String*qo
+mleft join person p on p.id = cm.person_id group by c.id, cm.member_name) as sub on sub.c_id = a.committee_id ª
+∏
+ñ
+âD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/StudentService.java÷= ﬁ(q
+%7java.lang.String"__concat*
+
+%6java.lang.String*a_
+]left join directive_student ds2 on ds.id = ds2.directive_student_id and ds2.canceled = false ‚
+ﬂ
+ó
+âD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/StudentService.java÷= ﬂ(î
+%8java.lang.String"__concat*
+
+%7java.lang.String*ÜÉ
+Äleft join directive d2 on d2.id = ds2.directive_id and d2.type_code = :lopDirectiveType and d2.status_code = :lopDirectiveStatusÙÒ
+ñ
+âD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/StudentService.java÷' ÷(<-
+%9'ee.hitsa.ois.util.JpaNativeQueryBuilder"'ee.hitsa.ois.util.JpaNativeQueryBuilder¥
+±
+ó
+âD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/StudentService.java÷# ﬂ(ï
+%10"Cee.hitsa.ois.util.JpaNativeQueryBuilder#<init>(Ljava/lang/String;)V*/
+-
+%9'ee.hitsa.ois.util.JpaNativeQueryBuilder*
+
+%8java.lang.StringÉ
+Ä
+ó
+âD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/StudentService.java÷ ﬂ(ñ-
+qb'ee.hitsa.ois.util.JpaNativeQueryBuilder"__id*/
+-
+%9'ee.hitsa.ois.util.JpaNativeQueryBuilder¨©
+ñ
+âD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/StudentService.java‡G ‡(V
+%11java.lang.Long"<ee.hitsa.ois.domain.BaseEntityWithId#getId()Ljava/lang/Long;*0
+.
+student#ee.hitsa.ois.domain.student.Student2getId()€ÿ
+ñ
+âD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/StudentService.java‡ ‡(W
+%12void"oee.hitsa.ois.util.JpaNativeQueryBuilder#requiredCriteria(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Long;)V*/
+-
+qb'ee.hitsa.ois.util.JpaNativeQueryBuilder*
+ds.student_id = :studentId*
+	studentId*
+
+%11java.lang.Long2FrequiredCriteria(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Long;)”
+–
+ñ
+âD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/StudentService.java·M ·(h'
+%13 ee.hitsa.ois.enums.DirectiveType"__id*
+""ëé
+ñ
+âD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/StudentService.java·M ·(o
+%14java.lang.String"'java.lang.Enum#name()Ljava/lang/String;*)
+'
+%13 ee.hitsa.ois.enums.DirectiveType2name()Á‰
+ñ
+âD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/StudentService.java· ·(p
+%15void"qee.hitsa.ois.util.JpaNativeQueryBuilder#requiredCriteria(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V*/
+-
+qb'ee.hitsa.ois.util.JpaNativeQueryBuilder* 
+d.type_code = :directiveType*
+directiveType*
+
+%14java.lang.String2HrequiredCriteria(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)’
+“
+ñ
+âD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/StudentService.java‚S ‚(~)
+%16"ee.hitsa.ois.enums.DirectiveStatus"__id*
+""îë
+ó
+âD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/StudentService.java‚S ‚(Ö
+%17java.lang.String"'java.lang.Enum#name()Ljava/lang/String;*+
+)
+%16"ee.hitsa.ois.enums.DirectiveStatus2name()ÓÎ
+ó
+âD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/StudentService.java‚ ‚(Ü
+%18void"qee.hitsa.ois.util.JpaNativeQueryBuilder#requiredCriteria(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V*/
+-
+qb'ee.hitsa.ois.util.JpaNativeQueryBuilder*$"
+ d.status_code = :directiveStatus*
+directiveStatus*
+
+%17java.lang.String2HrequiredCriteria(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)‘—
+ñ
+âD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/StudentService.java„ „((
+%19void"Cee.hitsa.ois.util.JpaNativeQueryBuilder#filter(Ljava/lang/String;)V*/
+-
+qb'ee.hitsa.ois.util.JpaNativeQueryBuilder*
+ds.canceled = false2filter(Ljava/lang/String;)”
+–
+ñ
+âD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/StudentService.java‰) ‰(H'
+%20 ee.hitsa.ois.enums.DirectiveType"__id*
+""ëé
+ñ
+âD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/StudentService.java‰) ‰(O
+%21java.lang.String"'java.lang.Enum#name()Ljava/lang/String;*)
+'
+%20 ee.hitsa.ois.enums.DirectiveType2name()ñì
+ñ
+âD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/StudentService.java‰ ‰(P
+%22void"Xee.hitsa.ois.util.JpaNativeQueryBuilder#parameter(Ljava/lang/String;Ljava/lang/Object;)V*/
+-
+qb'ee.hitsa.ois.util.JpaNativeQueryBuilder*
+lopDirectiveType*
+
+%21java.lang.String2/parameter(Ljava/lang/String;Ljava/lang/Object;)’
+“
+ñ
+âD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/StudentService.javaÂ+ Â(V)
+%23"ee.hitsa.ois.enums.DirectiveStatus"__id*
+""ìê
+ñ
+âD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/StudentService.javaÂ+ Â(]
+%24java.lang.String"'java.lang.Enum#name()Ljava/lang/String;*+
+)
+%23"ee.hitsa.ois.enums.DirectiveStatus2name()òï
+ñ
+âD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/StudentService.javaÂ Â(^
+%25void"Xee.hitsa.ois.util.JpaNativeQueryBuilder#parameter(Ljava/lang/String;Ljava/lang/Object;)V*/
+-
+qb'ee.hitsa.ois.util.JpaNativeQueryBuilder*
+lopDirectiveStatus*
+
+%24java.lang.String2/parameter(Ljava/lang/String;Ljava/lang/Object;)Á‰
+ñ
+âD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/StudentService.javaÊ Ê(o.
+%26'ee.hitsa.ois.util.JpaNativeQueryBuilder"lee.hitsa.ois.util.JpaNativeQueryBuilder#groupBy(Ljava/lang/String;)Lee/hitsa/ois/util/JpaNativeQueryBuilder;*/
+-
+qb'ee.hitsa.ois.util.JpaNativeQueryBuilder*][
+Yd.id, ds.id, d.confirm_date, sub.submitter, d2.id, coalesce (ds2.start_date, ds.end_date)2groupBy(Ljava/lang/String;)" 
+ñ
+âD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/StudentService.javaÁ Á(/
+-
+qb'ee.hitsa.ois.util.JpaNativeQueryBuilder:.
+student#ee.hitsa.ois.domain.student.StudentB'"%
+#ee.hitsa.ois.service.StudentService

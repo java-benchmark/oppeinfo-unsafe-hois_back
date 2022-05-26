@@ -1,0 +1,299 @@
+
+_ee.hitsa.ois.service.DocumentService#getStudyResultsVocational(Ljava/util/List;)Ljava/util/Map;ó
+äD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/DocumentService.javaü	9 ü	(R"1*œl
+1ó
+äD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/DocumentService.java†	 †	(¸
+˘
+ó
+äD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/DocumentService.java†	 †	(%
+%0javax.persistence.EntityManager"__id*0*.&
+$ee.hitsa.ois.service.DocumentService"
+em‡
+›
+ò
+äD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/DocumentService.java†	. °	(
+%1java.lang.String"__concat*∏µ
+≤SELECT sv.student_id, sv.module_name_et,sv.module_name_en,sv.credits,sv.grade,lower(clf.name_et) as grade_name_et,lower(clf.name_en) as grade_name_en, sv.teachers, sv.grade_date,*‚ﬂ
+‹ case when (select count (*) from apel_application_formal_subject_or_module aaf where sv.apel_application_record_id=aaf.apel_application_record_id and not aaf.is_my_school) > 0 then true else false end as is_apel_formal,™
+ß
+ò
+äD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/DocumentService.java†	. ¢	(€
+%2java.lang.String"__concat*
+
+%1java.lang.String*Õ 
+« case when (select count (*) from apel_application_informal_subject_or_module aaf where sv.apel_application_record_id=aaf.apel_application_record_id) > 0 then true else false end as is_apel_informal,∏
+µ
+ó
+äD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/DocumentService.java†	. £	(m
+%3java.lang.String"__concat*
+
+%2java.lang.String*][
+Y aps.name_et,aps.name_en,case when pp.is_final=true then true else false end as is_final,—
+Œ
+ò
+äD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/DocumentService.java†	. §	(Ö
+%4java.lang.String"__concat*
+
+%3java.lang.String*us
+q occup.name_et as occup_name_et, partoccup.name_et as partoccup_name_et, speciality.name_et as speciality_name_etÅ
+˛
+ó
+äD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/DocumentService.java†	. •	(6
+%5java.lang.String"__concat*
+
+%4java.lang.String*&$
+" from student_vocational_result svÊ
+„
+ó
+äD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/DocumentService.java†	. ¶	(
+%6java.lang.String"__concat*
+
+%5java.lang.String*	
+ join (â
+Ü
+ò
+äD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/DocumentService.java†	. ß	(∫
+%7java.lang.String"__concat*
+
+%6java.lang.String*¨©
+¶ select distinct cm.curriculum_module_id, first_value(sv.id) over (partition by student_id, cm.curriculum_module_id order by sv.grade_date desc, sv.grade desc) as id,ı
+Ú
+ó
+äD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/DocumentService.java†	. ®	(*
+%8java.lang.String"__concat*
+
+%7java.lang.String*
+ cmm.module_code as mdÅ
+˛
+ó
+äD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/DocumentService.java†	. ©	(6
+%9java.lang.String"__concat*
+
+%8java.lang.String*&$
+" from student_vocational_result sv∫
+∑
+ó
+äD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/DocumentService.java†	. ™	(n
+%10java.lang.String"__concat*
+
+%9java.lang.String*^\
+Z left join student_vocational_result_omodule svm on sv.id=svm.student_vocational_result_id‚
+ﬂ
+ò
+äD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/DocumentService.java†	. ´	(í
+%11java.lang.String"__concat*
+
+%10java.lang.String*ÉÄ
+~ left join curriculum_version_omodule cm on cm.id=coalesce(svm.curriculum_version_omodule_id,sv.curriculum_version_omodule_id)£
+†
+ó
+äD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/DocumentService.java†	. ¨	(V
+%12java.lang.String"__concat*
+
+%11java.lang.String*FD
+B left join curriculum_module cmm on cm.curriculum_module_id=cmm.idÌ
+Í
+ò
+äD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/DocumentService.java†	. ≠	(ú
+%13java.lang.String"__concat*
+
+%12java.lang.String*éã
+à where sv.student_id in (?1) and grade in ('A','3','4','5') and (svm.student_vocational_result_id is not null or sv.arr_modules is null)Á
+‰
+ó
+äD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/DocumentService.java†	. Æ	(
+%14java.lang.String"__concat*
+
+%13java.lang.String*
+
+ unionã
+à
+ó
+äD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/DocumentService.java†	. Ø	(>
+%15java.lang.String"__concat*
+
+%14java.lang.String*.,
+* select distinct 0, sv.id, cmm.module_codeÉ
+Ä
+ó
+äD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/DocumentService.java†	. ∞	(6
+%16java.lang.String"__concat*
+
+%15java.lang.String*&$
+" from student_vocational_result svª
+∏
+ó
+äD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/DocumentService.java†	. ±	(n
+%17java.lang.String"__concat*
+
+%16java.lang.String*^\
+Z left join student_vocational_result_omodule svm on sv.id=svm.student_vocational_result_id°
+û
+ó
+äD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/DocumentService.java†	. ≤	(T
+%18java.lang.String"__concat*
+
+%17java.lang.String*DB
+@ join curriculum_version_omodule cm on cm.id=any(sv.arr_modules)û
+õ
+ó
+äD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/DocumentService.java†	. ≥	(Q
+%19java.lang.String"__concat*
+
+%18java.lang.String*A?
+= join curriculum_module cmm on cm.curriculum_module_id=cmm.id˝
+˙
+ò
+äD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/DocumentService.java†	. ¥	(¨
+%20java.lang.String"__concat*
+
+%19java.lang.String*ûõ
+ò where sv.student_id in (?1) and grade in ('A','3','4','5') and sv.arr_modules is not null and svm.student_vocational_result_id is null) x on x.id=sv.idè
+å
+ó
+äD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/DocumentService.java†	. µ	(B
+%21java.lang.String"__concat*
+
+%20java.lang.String*20
+. join classifier clf on clf.code=sv.grade_codeó
+î
+ó
+äD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/DocumentService.java†	. ∂	(J
+%22java.lang.String"__concat*
+
+%21java.lang.String*:8
+6 left join apel_school aps on sv.apel_school_id=aps.idÀ
+»
+ó
+äD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/DocumentService.java†	. ∑	(~
+%23java.lang.String"__concat*
+
+%22java.lang.String*nl
+j left join (protocol_student ps join protocol pp on ps.protocol_id=pp.id)  on ps.id=sv.protocol_student_idé
+ã
+ò
+äD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/DocumentService.java†	. ∏	(Ω
+%24java.lang.String"__concat*
+
+%23java.lang.String*Ø¨
+© left join (protocol_student_occupation pso join student_occupation_certificate soc on pso.student_occupation_certificate_id = soc.id) on pso.protocol_student_id = ps.id†
+ù
+ó
+äD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/DocumentService.java†	. π	(S
+%25java.lang.String"__concat*
+
+%24java.lang.String*CA
+? left join classifier occup on occup.code = soc.occupation_code≠
+™
+ó
+äD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/DocumentService.java†	. ∫	(`
+%26java.lang.String"__concat*
+
+%25java.lang.String*PN
+L left join classifier partoccup on partoccup.code = soc.part_occupation_code™
+ß
+ó
+äD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/DocumentService.java†	. ª	(]
+%27java.lang.String"__concat*
+
+%26java.lang.String*MK
+I left join classifier speciality on speciality.code = soc.speciality_codeí
+è
+ò
+äD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/DocumentService.java†	. º	(¡
+%28java.lang.String"__concat*
+
+%27java.lang.String*≥∞
+≠ order by case coalesce(x.md,'KUTSEMOODUL_V') when 'KUTSEMOODUL_P' then 1  when 'KUTSEMOODUL_Y' then 2  when 'KUTSEMOODUL_V' then 3  when 'KUTSEMOODUL_L' then 4 else 3 end, ç
+ä
+ó
+äD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/DocumentService.java†	. Ω	(@
+%29java.lang.String"__concat*
+
+%28java.lang.String*0.
+, upper(sv.module_name_et), sv.grade_date ascàÖ
+ó
+äD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/DocumentService.java†	 Ω	(A
+%30javax.persistence.Query"^javax.persistence.EntityManager#createNativeQuery(Ljava/lang/String;)Ljavax/persistence/Query;*'
+%
+%0javax.persistence.EntityManager*
+
+%29java.lang.String2%createNativeQuery(Ljava/lang/String;)¸˘
+ó
+äD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/DocumentService.java†	 æ	(,
+%31javax.persistence.Query"Rjavax.persistence.Query#setParameter(ILjava/lang/Object;)Ljavax/persistence/Query;* 
+
+%30javax.persistence.Query*2*
+
+
+studentIdsjava.util.List2!setParameter(ILjava/lang/Object;)†ù
+ó
+äD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/DocumentService.java†	 ø	( 
+%32java.util.List"7javax.persistence.Query#getResultList()Ljava/util/List;* 
+
+%31javax.persistence.Query2getResultList()÷
+”
+ó
+äD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/DocumentService.java†	 ø	(!
+resultjava.util.List"__id*
+
+%32java.util.Listø
+º
+ó
+äD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/DocumentService.java¡	 ¡	(.
+%33java.util.List"Kee.hitsa.ois.util.StreamUtil#nullSafeList(Ljava/util/List;)Ljava/util/List;* "
+ee.hitsa.ois.util.StreamUtil*
+
+resultjava.util.Listòï
+ó
+äD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/DocumentService.java¡	 ¡	(7
+%34java.util.stream.Stream"6java.util.Collection#stream()Ljava/util/stream/Stream;*
+
+%33java.util.List2stream()í
+è
+ó
+äD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/DocumentService.java¬	/ ¬	(F"
+%35java.util.function.Function"__declareFunction*<:
+8__sonar_lambda_1158$ee.hitsa.ois.service.DocumentServiceí
+è
+ó
+äD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/DocumentService.java¬	[ Ê	("
+%37java.util.function.Function"__declareFunction*<:
+8__sonar_lambda_1159$ee.hitsa.ois.service.DocumentService£
+†
+ó
+äD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/DocumentService.javaÊ	 Ê	(&!
+%93java.util.stream.Collector"@java.util.stream.Collectors#toList()Ljava/util/stream/Collector;*"
+java.util.stream.Collectors®
+•
+ó
+äD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/DocumentService.java¬	H Ê	('!
+%94java.util.stream.Collector"zjava.util.stream.Collectors#mapping(Ljava/util/function/Function;Ljava/util/stream/Collector;)Ljava/util/stream/Collector;*"
+java.util.stream.Collectors*$
+"
+%37java.util.function.Function*#
+!
+%93java.util.stream.Collector´
+®
+ó
+äD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/DocumentService.java¬	 Ê	((!
+%95java.util.stream.Collector"}java.util.stream.Collectors#groupingBy(Ljava/util/function/Function;Ljava/util/stream/Collector;)Ljava/util/stream/Collector;*"
+java.util.stream.Collectors*$
+"
+%35java.util.function.Function*#
+!
+%94java.util.stream.CollectorÚÔ
+ó
+äD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/DocumentService.java¡	 Ê	()
+%96java.util.Map"Ojava.util.stream.Stream#collect(Ljava/util/stream/Collector;)Ljava/lang/Object;* 
+
+%34java.util.stream.Stream*#
+!
+%95java.util.stream.Collector2%collect(Ljava/util/stream/Collector;)"≤
+ó
+äD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/DocumentService.java¡	 Ê	(*
+
+%96java.util.Map:
+
+studentIdsjava.util.ListB(&
+$ee.hitsa.ois.service.DocumentService

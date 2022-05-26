@@ -1,0 +1,71 @@
+
+Äee.hitsa.ois.service.SchoolCapacityTypeService#getSchoolCapacitiesByTypeCode(Ljava/lang/Long;Ljava/lang/Boolean;)Ljava/util/Map;°
+îD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/SchoolCapacityTypeService.javaÅ+ Å(H"1*Ò
+1°
+îD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/SchoolCapacityTypeService.javaÇ4 Ç(6ê
+ç
+°
+îD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/SchoolCapacityTypeService.javaÇ4 Ç(6%
+%0javax.persistence.EntityManager"__id*:*80
+.ee.hitsa.ois.service.SchoolCapacityTypeService"
+em™
+ß
+°
+îD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/SchoolCapacityTypeService.javaÇC É(K
+%1java.lang.String"__concat**(
+&select sct from SchoolCapacityType sct*31
+/ where sct.school.id = ?1 and sct.isHigher = ?2∏µ
+°
+îD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/SchoolCapacityTypeService.javaÇ4 Ñ()"
+%2javax.persistence.TypedQuery"njavax.persistence.EntityManager#createQuery(Ljava/lang/String;Ljava/lang/Class;)Ljavax/persistence/TypedQuery;*'
+%
+%0javax.persistence.EntityManager*
+
+%1java.lang.String*
+""20createQuery(Ljava/lang/String;Ljava/lang/Class;)ñì
+°
+îD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/SchoolCapacityTypeService.javaÇ4 Ö(*"
+%3javax.persistence.TypedQuery"\javax.persistence.TypedQuery#setParameter(ILjava/lang/Object;)Ljavax/persistence/TypedQuery;*$
+"
+%2javax.persistence.TypedQuery*2*
+
+schoolIdjava.lang.Long2!setParameter(ILjava/lang/Object;)ôñ
+°
+îD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/SchoolCapacityTypeService.javaÇ4 Ü(*"
+%4javax.persistence.TypedQuery"\javax.persistence.TypedQuery#setParameter(ILjava/lang/Object;)Ljavax/persistence/TypedQuery;*$
+"
+%3javax.persistence.TypedQuery*2*
+
+isHigherjava.lang.Boolean2!setParameter(ILjava/lang/Object;)≤Ø
+°
+îD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/SchoolCapacityTypeService.javaÇ4 á( 
+%5java.util.List"<javax.persistence.TypedQuery#getResultList()Ljava/util/List;*$
+"
+%4javax.persistence.TypedQuery2getResultList()È
+Ê
+°
+îD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/SchoolCapacityTypeService.javaÇ á(!"
+schoolCapacitiesjava.util.List"__id*
+
+%5java.util.List§
+°
+°
+îD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/SchoolCapacityTypeService.javaà  à(P!
+%6java.util.function.Function"__declareFunction*EC
+A__sonar_lambda_290$ee.hitsa.ois.service.SchoolCapacityTypeServiceë
+é
+°
+îD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/SchoolCapacityTypeService.javaà à(c
+%9java.util.Map"fee.hitsa.ois.util.StreamUtil#toMap(Ljava/util/function/Function;Ljava/util/Collection;)Ljava/util/Map;* "
+ee.hitsa.ois.util.StreamUtil*#
+!
+%6java.util.function.Function*$
+"
+schoolCapacitiesjava.util.List"ª
+°
+îD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/SchoolCapacityTypeService.javaà à(d
+
+%9java.util.Map:
+schoolIdjava.lang.Long:
+isHigherjava.lang.BooleanB20
+.ee.hitsa.ois.service.SchoolCapacityTypeService

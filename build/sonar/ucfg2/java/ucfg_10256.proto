@@ -1,0 +1,122 @@
+
+úee.hitsa.ois.service.security.TaraService#insertAuthenticationRequestLog(Ljava/lang/String;Ljava/lang/String;Ljava/util/Map;)Lee/hitsa/ois/domain/WsTaraLog;ú
+èD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/security/TaraService.java‰ ‰(4"1*Ú+
+1ú
+èD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/security/TaraService.javaÊ Ê(-Ê„
+ú
+èD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/security/TaraService.javaÊ" Ê(+#
+%0ee.hitsa.ois.domain.WsTaraLog"ee.hitsa.ois.domain.WsTaraLog¯
+ı
+ú
+èD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/security/TaraService.javaÊ Ê(-
+%1"'ee.hitsa.ois.domain.WsTaraLog#<init>()V*%
+#
+%0ee.hitsa.ois.domain.WsTaraLog˚
+¯
+ú
+èD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/security/TaraService.javaÊ Ê(.*
+	logRecordee.hitsa.ois.domain.WsTaraLog"__id*%
+#
+%0ee.hitsa.ois.domain.WsTaraLogœÃ
+ú
+èD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/security/TaraService.javaÁ Á(
+
+%2void"9ee.hitsa.ois.domain.WsTaraLog#setUid(Ljava/lang/String;)V*,
+*
+	logRecordee.hitsa.ois.domain.WsTaraLog*
+
+uuidjava.lang.String2setUid(Ljava/lang/String;)Ü
+É
+ú
+èD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/security/TaraService.javaË Ë(%
+%3javax.persistence.EntityManager"__id*5*3+
+)ee.hitsa.ois.service.security.TaraService"
+em⁄
+◊
+ú
+èD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/security/TaraService.javaË< Ë(Y(
+%4"ee.hitsa.ois.enums.TaraRequestType"__id*
+""óî
+ú
+èD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/security/TaraService.javaË< Ë(`
+%5java.lang.String"'java.lang.Enum#name()Ljava/lang/String;**
+(
+%4"ee.hitsa.ois.enums.TaraRequestType2name()´®
+ú
+èD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/security/TaraService.javaË Ë(a$
+%6ee.hitsa.ois.domain.Classifier"cjavax.persistence.EntityManager#getReference(Ljava/lang/Class;Ljava/lang/Object;)Ljava/lang/Object;*'
+%
+%3javax.persistence.EntityManager*
+""*
+
+%5java.lang.String21getReference(Ljava/lang/Class;Ljava/lang/Object;)˘ˆ
+ú
+èD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/security/TaraService.javaË Ë(b
+
+%7void"Hee.hitsa.ois.domain.WsTaraLog#setType(Lee/hitsa/ois/domain/Classifier;)V*,
+*
+	logRecordee.hitsa.ois.domain.WsTaraLog*&
+$
+%6ee.hitsa.ois.domain.Classifier2)setType(Lee/hitsa/ois/domain/Classifier;)‡›
+ú
+èD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/security/TaraService.javaÈ È((
+
+%8void"@ee.hitsa.ois.domain.WsTaraLog#setRequestUrl(Ljava/lang/String;)V*,
+*
+	logRecordee.hitsa.ois.domain.WsTaraLog*
+
+requestjava.lang.String2!setRequestUrl(Ljava/lang/String;)ú
+ô
+ú
+èD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/security/TaraService.javaÍ" Í(.1
+%9+com.fasterxml.jackson.databind.ObjectMapper"__id*?*=+
+)ee.hitsa.ois.service.security.TaraService"
+objectMapperúô
+ú
+èD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/security/TaraService.javaÍ" Í(L
+%10java.lang.String"dcom.fasterxml.jackson.databind.ObjectMapper#writeValueAsString(Ljava/lang/Object;)Ljava/lang/String;*3
+1
+%9+com.fasterxml.jackson.databind.ObjectMapper*
+
+	uriParamsjava.util.Map2&writeValueAsString(Ljava/lang/Object;)·ﬁ
+ú
+èD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/security/TaraService.javaÍ Í(M
+%11void"Bee.hitsa.ois.domain.WsTaraLog#setRequestParam(Ljava/lang/String;)V*,
+*
+	logRecordee.hitsa.ois.domain.WsTaraLog*
+
+%10java.lang.String2#setRequestParam(Ljava/lang/String;) 
+«
+ú
+èD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/security/TaraService.javaÎ Î(,
+%12java.lang.Boolean"__id*
+""ﬁ€
+ú
+èD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/security/TaraService.javaÎ Î(-
+%13void"@ee.hitsa.ois.domain.WsTaraLog#setHasErrors(Ljava/lang/Boolean;)V*,
+*
+	logRecordee.hitsa.ois.domain.WsTaraLog*
+
+%12java.lang.Boolean2!setHasErrors(Ljava/lang/Boolean;)á
+Ñ
+ú
+èD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/security/TaraService.javaÏ Ï(
+&
+%14javax.persistence.EntityManager"__id*5*3+
+)ee.hitsa.ois.service.security.TaraService"
+em‚ﬂ
+ú
+èD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/security/TaraService.javaÏ Ï(
+%15void"<javax.persistence.EntityManager#persist(Ljava/lang/Object;)V*(
+&
+%14javax.persistence.EntityManager*,
+*
+	logRecordee.hitsa.ois.domain.WsTaraLog2persist(Ljava/lang/Object;)"Õ
+ú
+èD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/security/TaraService.javaÌ Ì(,
+*
+	logRecordee.hitsa.ois.domain.WsTaraLog:
+uuidjava.lang.String:
+requestjava.lang.String:
+	uriParamsjava.util.MapB-+
+)ee.hitsa.ois.service.security.TaraService

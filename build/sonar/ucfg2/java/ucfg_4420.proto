@@ -1,0 +1,41 @@
+
+kee.hitsa.ois.service.JournalService#journalEntries(Lee/hitsa/ois/domain/timetable/Journal;)Ljava/util/List;–
+‰D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/JournalService.javaë ë(-"1*‚
+1–
+‰D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/JournalService.javaì ì(ú
+÷
+–
+‰D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/JournalService.javaì ì(%
+%0javax.persistence.EntityManager"__id*/*-%
+#ee.hitsa.ois.service.JournalService"
+emÐÍ
+–
+‰D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/JournalService.javaì ì(l"
+%1javax.persistence.TypedQuery"njavax.persistence.EntityManager#createQuery(Ljava/lang/String;Ljava/lang/Class;)Ljavax/persistence/TypedQuery;*'
+%
+%0javax.persistence.EntityManager*;9
+7select je from JournalEntry je where je.journal.id = ?1*
+""20createQuery(Ljava/lang/String;Ljava/lang/Class;)­ª
+–
+‰D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/JournalService.javaí! í(0
+%2java.lang.Long"<ee.hitsa.ois.domain.BaseEntityWithId#getId()Ljava/lang/Long;*2
+0
+journal%ee.hitsa.ois.domain.timetable.Journal2getId()…‚
+–
+‰D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/JournalService.javaì í(1"
+%3javax.persistence.TypedQuery"\javax.persistence.TypedQuery#setParameter(ILjava/lang/Object;)Ljavax/persistence/TypedQuery;*$
+"
+%1javax.persistence.TypedQuery*2*
+
+%2java.lang.Long2!setParameter(ILjava/lang/Object;)§¤
+–
+‰D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/JournalService.javaì î( 
+%4java.util.List"<javax.persistence.TypedQuery#getResultList()Ljava/util/List;*$
+"
+%3javax.persistence.TypedQuery2getResultList()"±
+–
+‰D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/JournalService.javaì î(!
+
+%4java.util.List:0
+journal%ee.hitsa.ois.domain.timetable.JournalB'%
+#ee.hitsa.ois.service.JournalService

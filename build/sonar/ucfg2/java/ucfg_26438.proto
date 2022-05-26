@@ -1,0 +1,213 @@
+
+ƒee.hitsa.ois.service.PracticeApplicationService#studentAdmissions(Lee/hitsa/ois/service/security/HoisUserDetails;Z)Ljava/util/List; 
+•D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/PracticeApplicationService.javaI. I(?"4*Ã
+2 
+•D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/PracticeApplicationService.javaT T(W÷
+ô
+ 
+•D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/PracticeApplicationService.javaT U(}
+%12java.lang.String"__concat*EC
+A (cast(now() as date) between padm.valid_from and padm.valid_thru*ec
+a and exists(select id from practice_admission_student_group where practice_admission_id = padm.id¹
+¶
+ 
+•D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/PracticeApplicationService.javaT V(k
+%11java.lang.String"__concat*
+
+%12java.lang.String*SQ
+O and student_group_id in (select student_group_id from student where id = ?2)))ß
+Ü
+ 
+•D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/PracticeApplicationService.javaT V(k
+%9java.lang.String"__id*
+
+%11java.lang.String*
+1*
+3 
+•D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/PracticeApplicationService.javaS S({ß
+Ü
+ 
+•D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/PracticeApplicationService.javaS S({
+%9java.lang.String"__id*
+
+%10java.lang.String*
+1*Š
+4 
+•D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/PracticeApplicationService.javaJ J(
+
+ 
+•D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/PracticeApplicationService.javaJ J(%
+%0javax.persistence.EntityManager"__id*;*91
+/ee.hitsa.ois.service.PracticeApplicationService"
+em©
+¦
+¡
+•D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/PracticeApplicationService.javaJ. K(
+%1java.lang.String"__concat*[Y
+Wselect padm.id as admission_id, e.name, padm.valid_from, padm.valid_thru, padm.places, *€~
+|(select count(*) from practice_application where practice_admission_id = padm.id and status_code in (?3, ?4)) as app_count, Ñ
+Î
+ 
+•D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/PracticeApplicationService.javaJ. L(}
+%2java.lang.String"__concat*
+
+%1java.lang.String*mk
+ipadm.add_info, papp.submitted, papp.status_code, papp.reject_reason, c.id as contract_id, padm.is_strict …
+‚
+ 
+•D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/PracticeApplicationService.javaJ. M(1
+%3java.lang.String"__concat*
+
+%2java.lang.String*!
+ from practice_admission padm§
+¤
+ 
+•D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/PracticeApplicationService.javaJ. N(S
+%4java.lang.String"__concat*
+
+%3java.lang.String*CA
+? join enterprise_school es on es.id = padm.enterprise_school_id•
+’
+ 
+•D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/PracticeApplicationService.javaJ. O(A
+%5java.lang.String"__concat*
+
+%4java.lang.String*1/
+- join enterprise e on e.id = es.enterprise_idÍ
+Ê
+ 
+•D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/PracticeApplicationService.javaJ. P(y
+%6java.lang.String"__concat*
+
+%5java.lang.String*ig
+e left join practice_application papp on papp.practice_admission_id = padm.id and papp.student_id = ?2¤
+¡
+ 
+•D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/PracticeApplicationService.javaJ. Q(P
+%7java.lang.String"__concat*
+
+%6java.lang.String*@>
+< left join contract c on c.practice_application_id = papp.id…
+‚
+ 
+•D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/PracticeApplicationService.javaJ. R(1
+%8java.lang.String"__concat*
+
+%7java.lang.String*!
+ where es.school_id = ?1 and *
+2
+3*Ã-
+1 
+•D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/PracticeApplicationService.javaJ. V(lý
+ú
+ 
+•D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/PracticeApplicationService.javaJ. V(l
+%13java.lang.String"__concat*
+
+%8java.lang.String*
+
+%9java.lang.Stringœ
+™
+ 
+•D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/PracticeApplicationService.javaJ. W(F
+%14java.lang.String"__concat*
+
+%13java.lang.String*64
+2 order by e.name, padm.valid_from, padm.valid_thru‘Ž
+ 
+•D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/PracticeApplicationService.javaJ W(G
+%15javax.persistence.Query"^javax.persistence.EntityManager#createNativeQuery(Ljava/lang/String;)Ljavax/persistence/Query;*'
+%
+%0javax.persistence.EntityManager*
+
+%14java.lang.String2%createNativeQuery(Ljava/lang/String;)ÒÏ
+ 
+•D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/PracticeApplicationService.javaX! X(3
+%16java.lang.Long"Kee.hitsa.ois.service.security.HoisUserDetails#getSchoolId()Ljava/lang/Long;*7
+5
+user-ee.hitsa.ois.service.security.HoisUserDetails2getSchoolId()þû
+ 
+•D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/PracticeApplicationService.javaJ X(4
+%17javax.persistence.Query"Rjavax.persistence.Query#setParameter(ILjava/lang/Object;)Ljavax/persistence/Query;* 
+
+%15javax.persistence.Query*2*
+
+%16java.lang.Long2!setParameter(ILjava/lang/Object;)ÔÑ
+ 
+•D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/PracticeApplicationService.javaY! Y(4
+%18java.lang.Long"Lee.hitsa.ois.service.security.HoisUserDetails#getStudentId()Ljava/lang/Long;*7
+5
+user-ee.hitsa.ois.service.security.HoisUserDetails2getStudentId()þû
+ 
+•D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/PracticeApplicationService.javaJ Y(5
+%19javax.persistence.Query"Rjavax.persistence.Query#setParameter(ILjava/lang/Object;)Ljavax/persistence/Query;* 
+
+%17javax.persistence.Query*2*
+
+%18java.lang.Long2!setParameter(ILjava/lang/Object;)é
+æ
+ 
+•D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/PracticeApplicationService.javaZ! Z(G3
+%20,ee.hitsa.ois.enums.PracticeApplicationStatus"__id*
+""§¤
+ 
+•D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/PracticeApplicationService.javaZ! Z(N
+%21java.lang.String"'java.lang.Enum#name()Ljava/lang/String;*5
+3
+%20,ee.hitsa.ois.enums.PracticeApplicationStatus2name()€ý
+ 
+•D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/PracticeApplicationService.javaJ Z(O
+%22javax.persistence.Query"Rjavax.persistence.Query#setParameter(ILjava/lang/Object;)Ljavax/persistence/Query;* 
+
+%19javax.persistence.Query*2*
+
+%21java.lang.String2!setParameter(ILjava/lang/Object;)é
+æ
+ 
+•D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/PracticeApplicationService.java[! [(G3
+%23,ee.hitsa.ois.enums.PracticeApplicationStatus"__id*
+""§¤
+ 
+•D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/PracticeApplicationService.java[! [(N
+%24java.lang.String"'java.lang.Enum#name()Ljava/lang/String;*5
+3
+%23,ee.hitsa.ois.enums.PracticeApplicationStatus2name()€ý
+ 
+•D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/PracticeApplicationService.javaJ [(O
+%25javax.persistence.Query"Rjavax.persistence.Query#setParameter(ILjava/lang/Object;)Ljavax/persistence/Query;* 
+
+%22javax.persistence.Query*2*
+
+%24java.lang.String2!setParameter(ILjava/lang/Object;)©¦
+ 
+•D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/PracticeApplicationService.javaJ \( 
+%26java.util.List"7javax.persistence.Query#getResultList()Ljava/util/List;* 
+
+%25javax.persistence.Query2getResultList()ß
+Ü
+ 
+•D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/PracticeApplicationService.javaJ \(!
+resultjava.util.List"__id*
+
+%26java.util.List¦
+£
+ 
+•D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/PracticeApplicationService.java]' l(	"
+%27java.util.function.Function"__declareFunction*GE
+C__sonar_lambda_2777$ee.hitsa.ois.service.PracticeApplicationService‘
+Ž
+ 
+•D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/PracticeApplicationService.java] l(
+%54java.util.List"nee.hitsa.ois.util.StreamUtil#toMappedList(Ljava/util/function/Function;Ljava/util/Collection;)Ljava/util/List;* "
+ee.hitsa.ois.util.StreamUtil*$
+"
+%27java.util.function.Function*
+
+resultjava.util.List"¼
+ 
+•D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/PracticeApplicationService.java] l(
+
+%54java.util.List:5
+user-ee.hitsa.ois.service.security.HoisUserDetails:
+""B31
+/ee.hitsa.ois.service.PracticeApplicationService

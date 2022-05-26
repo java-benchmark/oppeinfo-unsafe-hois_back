@@ -1,0 +1,269 @@
+
+íee.hitsa.ois.service.subjectstudyperiod.SubjectStudyPeriodCapacitiesService#subjectStudyPeriodTeacherPlannedLoads(Ljava/util/List;)Ljava/util/Map;æ
+±D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/subjectstudyperiod/SubjectStudyPeriodCapacitiesService.javaé' é(L"3*€K
+2æ
+±D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/subjectstudyperiod/SubjectStudyPeriodCapacitiesService.javaòA ò(i‡
+›
+æ
+±D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/subjectstudyperiod/SubjectStudyPeriodCapacitiesService.javaòA ô(_
+%19java.lang.String"__concat**(
+&from subject_study_period_teacher sspt*KI
+G join subject_study_period ssp on ssp.id = sspt.subject_study_period_id€
+ÿ
+æ
+±D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/subjectstudyperiod/SubjectStudyPeriodCapacitiesService.javaòA ö(k
+%20java.lang.String"__concat*
+
+%19java.lang.String*WU
+S join subject_study_period_capacity ssppc on ssppc.subject_study_period_id = ssp.idÙ
+Ò
+ø
+±D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/subjectstudyperiod/SubjectStudyPeriodCapacitiesService.javaòA õ(É
+%21java.lang.String"__concat*
+
+%20java.lang.String*om
+k left join subject_study_period_teacher_capacity ssptc on ssptc.subject_study_period_capacity_id = ssppc.idº
+π
+æ
+±D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/subjectstudyperiod/SubjectStudyPeriodCapacitiesService.javaòA ú(L
+%22java.lang.String"__concat*
+
+%21java.lang.String*86
+4 and ssptc.subject_study_period_teacher_id = sspt.idùö
+æ
+±D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/subjectstudyperiod/SubjectStudyPeriodCapacitiesService.javaò+ ò(@.
+%23'ee.hitsa.ois.util.JpaNativeQueryBuilder"'ee.hitsa.ois.util.JpaNativeQueryBuilder›
+⁄
+æ
+±D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/subjectstudyperiod/SubjectStudyPeriodCapacitiesService.javaò' ú(M
+%24"Cee.hitsa.ois.util.JpaNativeQueryBuilder#<init>(Ljava/lang/String;)V*0
+.
+%23'ee.hitsa.ois.util.JpaNativeQueryBuilder*
+
+%22java.lang.String´
+®
+æ
+±D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/subjectstudyperiod/SubjectStudyPeriodCapacitiesService.javaò ú(N-
+qb'ee.hitsa.ois.util.JpaNativeQueryBuilder"__id*0
+.
+%23'ee.hitsa.ois.util.JpaNativeQueryBuilder¬ø
+ø
+±D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/subjectstudyperiod/SubjectStudyPeriodCapacitiesService.javaù ù(Ç
+%25void"uee.hitsa.ois.util.JpaNativeQueryBuilder#requiredCriteria(Ljava/lang/String;Ljava/lang/String;Ljava/util/Collection;)V*/
+-
+qb'ee.hitsa.ois.util.JpaNativeQueryBuilder*31
+/ssp.study_period_id in (:subjectStudyPeriodIds)*
+subjectStudyPeriodIds*(
+&
+subjectStudyPeriodIdsjava.util.Set2LrequiredCriteria(Ljava/lang/String;Ljava/lang/String;Ljava/util/Collection;)úô
+æ
+±D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/subjectstudyperiod/SubjectStudyPeriodCapacitiesService.javaû û(]
+%26void"uee.hitsa.ois.util.JpaNativeQueryBuilder#requiredCriteria(Ljava/lang/String;Ljava/lang/String;Ljava/util/Collection;)V*/
+-
+qb'ee.hitsa.ois.util.JpaNativeQueryBuilder*$"
+ sspt.teacher_id in (:teacherIds)*
+
+teacherIds*
+
+
+teacherIdsjava.util.Set2LrequiredCriteria(Ljava/lang/String;Ljava/lang/String;Ljava/util/Collection;)⁄◊
+æ
+±D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/subjectstudyperiod/SubjectStudyPeriodCapacitiesService.java† †(>.
+%27'ee.hitsa.ois.util.JpaNativeQueryBuilder"lee.hitsa.ois.util.JpaNativeQueryBuilder#groupBy(Ljava/lang/String;)Lee/hitsa/ois/util/JpaNativeQueryBuilder;*/
+-
+qb'ee.hitsa.ois.util.JpaNativeQueryBuilder*(&
+$sspt.teacher_id, ssp.study_period_id2groupBy(Ljava/lang/String;)ä
+á
+ø
+±D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/subjectstudyperiod/SubjectStudyPeriodCapacitiesService.java°% ¢(â
+%28java.lang.String"__concat*)'
+%ssp.study_period_id, sspt.teacher_id,*us
+q coalesce(sum(case when ssp.is_capacity_diff is null or ssp.is_capacity_diff is false then ssppc.hours end), 0) +Œ
+À
+æ
+±D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/subjectstudyperiod/SubjectStudyPeriodCapacitiesService.java°% £(^
+%29java.lang.String"__concat*
+
+%28java.lang.String*JH
+F coalesce(sum(case when ssp.is_capacity_diff then ssptc.hours end), 0)À
+»
+æ
+±D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/subjectstudyperiod/SubjectStudyPeriodCapacitiesService.java£` £(b&
+%30javax.persistence.EntityManager"__id*W*UM
+Kee.hitsa.ois.service.subjectstudyperiod.SubjectStudyPeriodCapacitiesService"
+emïí
+æ
+±D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/subjectstudyperiod/SubjectStudyPeriodCapacitiesService.java° £(c
+%31javax.persistence.Query"|ee.hitsa.ois.util.JpaNativeQueryBuilder#select(Ljava/lang/String;Ljavax/persistence/EntityManager;)Ljavax/persistence/Query;*/
+-
+qb'ee.hitsa.ois.util.JpaNativeQueryBuilder*
+
+%29java.lang.String*(
+&
+%30javax.persistence.EntityManager2;select(Ljava/lang/String;Ljavax/persistence/EntityManager;)«ƒ
+æ
+±D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/subjectstudyperiod/SubjectStudyPeriodCapacitiesService.java° £(s
+%32java.util.List"7javax.persistence.Query#getResultList()Ljava/util/List;* 
+
+%31javax.persistence.Query2getResultList()˚
+¯
+æ
+±D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/subjectstudyperiod/SubjectStudyPeriodCapacitiesService.java° £(t
+datajava.util.List"__id*
+
+%32java.util.List‰
+·
+æ
+±D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/subjectstudyperiod/SubjectStudyPeriodCapacitiesService.java•" •(?
+%33java.util.List"Kee.hitsa.ois.util.StreamUtil#nullSafeList(Ljava/util/List;)Ljava/util/List;* "
+ee.hitsa.ois.util.StreamUtil*
+
+datajava.util.Listøº
+æ
+±D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/subjectstudyperiod/SubjectStudyPeriodCapacitiesService.java•" •(H
+%34java.util.stream.Stream"6java.util.Collection#stream()Ljava/util/stream/Stream;*
+
+%33java.util.List2stream()‡
+›
+æ
+±D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/subjectstudyperiod/SubjectStudyPeriodCapacitiesService.java¶ ¶(+"
+%35java.util.function.Function"__declareFunction*ca
+___sonar_lambda_2063$ee.hitsa.ois.service.subjectstudyperiod.SubjectStudyPeriodCapacitiesService‡
+›
+æ
+±D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/subjectstudyperiod/SubjectStudyPeriodCapacitiesService.java¶> ¶(U"
+%37java.util.function.Function"__declareFunction*ca
+___sonar_lambda_2064$ee.hitsa.ois.service.subjectstudyperiod.SubjectStudyPeriodCapacitiesService‡
+›
+æ
+±D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/subjectstudyperiod/SubjectStudyPeriodCapacitiesService.java¶W ¶(o"
+%39java.util.function.Function"__declareFunction*ca
+___sonar_lambda_2065$ee.hitsa.ois.service.subjectstudyperiod.SubjectStudyPeriodCapacitiesServiceœ
+Ã
+æ
+±D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/subjectstudyperiod/SubjectStudyPeriodCapacitiesService.java¶- ¶(p!
+%41java.util.stream.Collector"yjava.util.stream.Collectors#toMap(Ljava/util/function/Function;Ljava/util/function/Function;)Ljava/util/stream/Collector;*"
+java.util.stream.Collectors*$
+"
+%37java.util.function.Function*$
+"
+%39java.util.function.Function“
+œ
+æ
+±D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/subjectstudyperiod/SubjectStudyPeriodCapacitiesService.java•Q ¶(q!
+%42java.util.stream.Collector"}java.util.stream.Collectors#groupingBy(Ljava/util/function/Function;Ljava/util/stream/Collector;)Ljava/util/stream/Collector;*"
+java.util.stream.Collectors*$
+"
+%35java.util.function.Function*#
+!
+%41java.util.stream.Collectorôñ
+æ
+±D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/subjectstudyperiod/SubjectStudyPeriodCapacitiesService.java•" ¶(r
+%43java.util.Map"Ojava.util.stream.Stream#collect(Ljava/util/stream/Collector;)Ljava/lang/Object;* 
+
+%34java.util.stream.Stream*#
+!
+%42java.util.stream.Collector2%collect(Ljava/util/stream/Collector;)à
+Ö
+æ
+±D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/subjectstudyperiod/SubjectStudyPeriodCapacitiesService.java• ¶(r$
+teacherPlannedLoadsjava.util.Map"__id*
+
+%43java.util.Map*
+1*ƒ%
+3æ
+±D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/subjectstudyperiod/SubjectStudyPeriodCapacitiesService.javaè: è(IÌ
+æ
+±D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/subjectstudyperiod/SubjectStudyPeriodCapacitiesService.javaè> è(G
+%0java.util.HashMap"java.util.HashMapÇ
+ˇ
+æ
+±D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/subjectstudyperiod/SubjectStudyPeriodCapacitiesService.javaè: è(I
+%1"java.util.HashMap#<init>()V*
+
+%0java.util.HashMapã
+à
+æ
+±D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/subjectstudyperiod/SubjectStudyPeriodCapacitiesService.javaè è(J$
+teacherPlannedLoadsjava.util.Map"__id*
+
+%0java.util.HashMapﬂ
+‹
+æ
+±D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/subjectstudyperiod/SubjectStudyPeriodCapacitiesService.javaëA ë(n!
+%2java.util.function.Function"__declareFunction*ca
+___sonar_lambda_2060$ee.hitsa.ois.service.subjectstudyperiod.SubjectStudyPeriodCapacitiesService∑
+¥
+æ
+±D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/subjectstudyperiod/SubjectStudyPeriodCapacitiesService.javaë* í($
+%5java.util.Set"lee.hitsa.ois.util.StreamUtil#toMappedSet(Ljava/util/function/Function;Ljava/util/Collection;)Ljava/util/Set;* "
+ee.hitsa.ois.util.StreamUtil*#
+!
+%2java.util.function.Function*'
+%
+subjectStudyPeriodsjava.util.Listâ
+Ü
+æ
+±D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/subjectstudyperiod/SubjectStudyPeriodCapacitiesService.javaë í(%&
+subjectStudyPeriodIdsjava.util.Set"__id*
+
+%5java.util.SetÚ
+Ô
+æ
+±D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/subjectstudyperiod/SubjectStudyPeriodCapacitiesService.javaì ì(K
+%6java.util.List"Kee.hitsa.ois.util.StreamUtil#nullSafeList(Ljava/util/List;)Ljava/util/List;* "
+ee.hitsa.ois.util.StreamUtil*'
+%
+subjectStudyPeriodsjava.util.ListΩ∫
+æ
+±D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/subjectstudyperiod/SubjectStudyPeriodCapacitiesService.javaì ì(T
+%7java.util.stream.Stream"6java.util.Collection#stream()Ljava/util/stream/Stream;*
+
+%6java.util.List2stream()ﬂ
+‹
+æ
+±D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/subjectstudyperiod/SubjectStudyPeriodCapacitiesService.javaî î(e!
+%8java.util.function.Function"__declareFunction*ca
+___sonar_lambda_2061$ee.hitsa.ois.service.subjectstudyperiod.SubjectStudyPeriodCapacitiesService´®
+æ
+±D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/subjectstudyperiod/SubjectStudyPeriodCapacitiesService.javaì î(f
+%15java.util.stream.Stream"Wjava.util.stream.Stream#flatMap(Ljava/util/function/Function;)Ljava/util/stream/Stream;*
+
+%7java.util.stream.Stream*#
+!
+%8java.util.function.Function2&flatMap(Ljava/util/function/Function;)…
+∆
+æ
+±D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/subjectstudyperiod/SubjectStudyPeriodCapacitiesService.javaï ï(+!
+%16java.util.stream.Collector"?java.util.stream.Collectors#toSet()Ljava/util/stream/Collector;*"
+java.util.stream.Collectorsôñ
+æ
+±D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/subjectstudyperiod/SubjectStudyPeriodCapacitiesService.javaì ï(,
+%17java.util.Set"Ojava.util.stream.Stream#collect(Ljava/util/stream/Collector;)Ljava/lang/Object;* 
+
+%15java.util.stream.Stream*#
+!
+%16java.util.stream.Collector2%collect(Ljava/util/stream/Collector;)ˇ
+¸
+æ
+±D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/subjectstudyperiod/SubjectStudyPeriodCapacitiesService.javaì ï(-
+
+teacherIdsjava.util.Set"__id*
+
+%17java.util.Setòï
+æ
+±D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/subjectstudyperiod/SubjectStudyPeriodCapacitiesService.javaó ó(!
+%18boolean"java.util.Set#isEmpty()Z*
+
+
+teacherIdsjava.util.Set2	isEmpty()*
+2
+1*∞
+1æ
+±D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/subjectstudyperiod/SubjectStudyPeriodCapacitiesService.java® ®(""È
+æ
+±D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/subjectstudyperiod/SubjectStudyPeriodCapacitiesService.java® ®(#&
+$
+teacherPlannedLoadsjava.util.Map:%
+subjectStudyPeriodsjava.util.ListBOM
+Kee.hitsa.ois.service.subjectstudyperiod.SubjectStudyPeriodCapacitiesService

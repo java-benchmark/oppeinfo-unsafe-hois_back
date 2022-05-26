@@ -1,0 +1,90 @@
+
+ree.hitsa.ois.service.CommitteeService#getApelApplicationDecisions(Lee/hitsa/ois/domain/Committee;)Ljava/util/List;ò
+ãD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/CommitteeService.javaû- û(H"1*ª
+1ò
+ãD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/CommitteeService.javaü ü(˛
+˚
+ò
+ãD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/CommitteeService.javaü ü(%
+%0javax.persistence.EntityManager"__id*1*/'
+%ee.hitsa.ois.service.CommitteeService"
+emø
+º
+ò
+ãD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/CommitteeService.javaü. †(;
+%1java.lang.String"__concat*PN
+Lselect aa.id, p.firstname, p.lastname, aa.decision from apel_application aa *+)
+'join student s on aa.student_id = s.id Ñ
+Å
+ò
+ãD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/CommitteeService.javaü. °(8
+%2java.lang.String"__concat*
+
+%1java.lang.String*(&
+$join person p on s.person_id = p.id ó
+î
+ò
+ãD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/CommitteeService.javaü. ¢(K
+%3java.lang.String"__concat*
+
+%2java.lang.String*;9
+7where aa.committee_id = ?1 and aa.decision is not null Ä
+˝
+ò
+ãD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/CommitteeService.javaü. £(4
+%4java.lang.String"__concat*
+
+%3java.lang.String*$"
+ order by p.lastname, p.firstnameáÑ
+ò
+ãD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/CommitteeService.javaü £(5
+%5javax.persistence.Query"^javax.persistence.EntityManager#createNativeQuery(Ljava/lang/String;)Ljavax/persistence/Query;*'
+%
+%0javax.persistence.EntityManager*
+
+%4java.lang.String2%createNativeQuery(Ljava/lang/String;)‡
+›
+ò
+ãD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/CommitteeService.java§! §(<
+%6java.lang.Long"Zee.hitsa.ois.util.EntityUtil#getId(Lee/hitsa/ois/domain/BaseEntityWithId;)Ljava/lang/Long;* "
+ee.hitsa.ois.util.EntityUtil*,
+*
+	committeeee.hitsa.ois.domain.CommitteeÛ
+ò
+ãD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/CommitteeService.javaü §(=
+%7javax.persistence.Query"Rjavax.persistence.Query#setParameter(ILjava/lang/Object;)Ljavax/persistence/Query;*
+
+%5javax.persistence.Query*2*
+
+%6java.lang.Long2!setParameter(ILjava/lang/Object;)üú
+ò
+ãD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/CommitteeService.javaü •( 
+%8java.util.List"7javax.persistence.Query#getResultList()Ljava/util/List;*
+
+%7javax.persistence.Query2getResultList()÷
+”
+ò
+ãD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/CommitteeService.javaü •(!
+resultjava.util.List"__id*
+
+%8java.util.Listì
+ê
+ò
+ãD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/CommitteeService.java¶' ¨(	!
+%9java.util.function.Function"__declareFunction*=;
+9__sonar_lambda_3027$ee.hitsa.ois.service.CommitteeServiceà
+Ö
+ò
+ãD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/CommitteeService.java¶ ¨(
+%20java.util.List"nee.hitsa.ois.util.StreamUtil#toMappedList(Ljava/util/function/Function;Ljava/util/Collection;)Ljava/util/List;* "
+ee.hitsa.ois.util.StreamUtil*#
+!
+%9java.util.function.Function*
+
+resultjava.util.List"¥
+ò
+ãD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/CommitteeService.java¶ ¨(
+
+%20java.util.List:*
+	committeeee.hitsa.ois.domain.CommitteeB)'
+%ee.hitsa.ois.service.CommitteeService

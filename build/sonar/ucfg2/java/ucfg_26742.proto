@@ -1,0 +1,73 @@
+
+Åee.hitsa.ois.service.LessonPlanService#lessonPlanModuleJournals(Lee/hitsa/ois/domain/timetable/LessonPlanModule;)Ljava/util/List;ô
+åD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/LessonPlanService.java∏ ∏(2"1*–
+1ô
+åD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/LessonPlanService.javaπ π(Ä
+˝
+ô
+åD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/LessonPlanService.javaπ π(%
+%0javax.persistence.EntityManager"__id*2*0(
+&ee.hitsa.ois.service.LessonPlanService"
+em´
+®
+ô
+åD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/LessonPlanService.javaπ ∫(7
+%1java.lang.String"__concat*?=
+;select jomt.journal from JournalOccupationModuleTheme jomt *'%
+#where jomt.lessonPlanModule.id = ?1∞≠
+ô
+åD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/LessonPlanService.javaπ ∫(G"
+%2javax.persistence.TypedQuery"njavax.persistence.EntityManager#createQuery(Ljava/lang/String;Ljava/lang/Class;)Ljavax/persistence/TypedQuery;*'
+%
+%0javax.persistence.EntityManager*
+
+%1java.lang.String*
+""20createQuery(Ljava/lang/String;Ljava/lang/Class;)˘
+ˆ
+ô
+åD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/LessonPlanService.javaª! ª(C
+%3java.lang.Long"Zee.hitsa.ois.util.EntityUtil#getId(Lee/hitsa/ois/domain/BaseEntityWithId;)Ljava/lang/Long;* "
+ee.hitsa.ois.util.EntityUtil*D
+B
+lessonPlanModule.ee.hitsa.ois.domain.timetable.LessonPlanModuleàÖ
+ô
+åD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/LessonPlanService.javaπ ª(D"
+%4javax.persistence.TypedQuery"\javax.persistence.TypedQuery#setParameter(ILjava/lang/Object;)Ljavax/persistence/TypedQuery;*$
+"
+%2javax.persistence.TypedQuery*2*
+
+%3java.lang.Long2!setParameter(ILjava/lang/Object;)™ß
+ô
+åD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/LessonPlanService.javaπ º( 
+%5java.util.List"<javax.persistence.TypedQuery#getResultList()Ljava/util/List;*$
+"
+%4javax.persistence.TypedQuery2getResultList()òï
+ô
+åD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/LessonPlanService.javaπ º()
+%6java.util.stream.Stream"6java.util.Collection#stream()Ljava/util/stream/Stream;*
+
+%5java.util.List2stream()®•
+ô
+åD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/LessonPlanService.javaπ º(4
+%7java.util.stream.Stream";java.util.stream.Stream#distinct()Ljava/util/stream/Stream;*
+
+%6java.util.stream.Stream2
+distinct()§
+°
+ô
+åD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/LessonPlanService.javaº= º(P 
+%8java.util.stream.Collector"@java.util.stream.Collectors#toList()Ljava/util/stream/Collector;*"
+java.util.stream.CollectorsÚÔ
+ô
+åD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/LessonPlanService.javaπ º(Q
+%9java.util.List"Ojava.util.stream.Stream#collect(Ljava/util/stream/Collector;)Ljava/lang/Object;*
+
+%7java.util.stream.Stream*"
+ 
+%8java.util.stream.Collector2%collect(Ljava/util/stream/Collector;)"¥
+ô
+åD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/LessonPlanService.javaπ º(R
+
+%9java.util.List:B
+lessonPlanModule.ee.hitsa.ois.domain.timetable.LessonPlanModuleB*(
+&ee.hitsa.ois.service.LessonPlanService

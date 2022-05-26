@@ -1,0 +1,94 @@
+
+Lee.hitsa.ois.service.ScholarshipService#canDeleteDecision(Ljava/lang/Long;)Zš
+D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/ScholarshipService.javañ ñ(%"1*ã
+1š
+D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/ScholarshipService.javaò ò(‚
+ÿ
+š
+D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/ScholarshipService.javaò ò(%
+%0javax.persistence.EntityManager"__id*3*1)
+'ee.hitsa.ois.service.ScholarshipService"
+emú
+÷
+š
+D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/ScholarshipService.javaò. ó(4
+%1java.lang.String"__concat*
+select sa.id*$"
+  from scholarship_application sa¥
+¢
+š
+D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/ScholarshipService.javaò. ô(W
+%2java.lang.String"__concat*
+
+%1java.lang.String*GE
+C join directive_student ds on ds.scholarship_application_id = sa.id
+Š
+š
+D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/ScholarshipService.javaò. õ(?
+%3java.lang.String"__concat*
+
+%2java.lang.String*/-
++ join directive d on d.id = ds.directive_id 
+
+š
+D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/ScholarshipService.javaò. ö(R
+%4java.lang.String"__concat*
+
+%3java.lang.String*B@
+> where sa.scholarship_decision_id = ?1 and ds.canceled = falseú
+÷
+š
+D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/ScholarshipService.javaò. ÷(,
+%5java.lang.String"__concat*
+
+%4java.lang.String*
+ and d.status_code in ?2‰†
+š
+D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/ScholarshipService.javaò ÷(-
+%6javax.persistence.Query"^javax.persistence.EntityManager#createNativeQuery(Ljava/lang/String;)Ljavax/persistence/Query;*'
+%
+%0javax.persistence.EntityManager*
+
+%5java.lang.String2%createNativeQuery(Ljava/lang/String;)ıú
+š
+D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/ScholarshipService.javaò ø(,
+%7javax.persistence.Query"Rjavax.persistence.Query#setParameter(ILjava/lang/Object;)Ljavax/persistence/Query;*
+
+%6javax.persistence.Query*2*
+
+
+decisionIdjava.lang.Long2!setParameter(ILjava/lang/Object;)Ä
+Á
+š
+D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/ScholarshipService.javaù! ù(9
+%8java.util.List"__id*
+""õò
+š
+D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/ScholarshipService.javaò ù(:
+%9javax.persistence.Query"Rjavax.persistence.Query#setParameter(ILjava/lang/Object;)Ljavax/persistence/Query;*
+
+%7javax.persistence.Query*2*
+
+%8java.util.List2!setParameter(ILjava/lang/Object;)¢Ÿ
+š
+D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/ScholarshipService.javaò ú( 
+%10java.util.List"7javax.persistence.Query#getResultList()Ljava/util/List;*
+
+%9javax.persistence.Query2getResultList()Ù
+Ö
+š
+D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/ScholarshipService.javaò ú(!
+resultjava.util.List"__id*
+
+%10java.util.Listòï
+š
+D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/ScholarshipService.javaû û(
+%11boolean"java.util.List#isEmpty()Z*
+
+resultjava.util.List2	isEmpty()"¥
+š
+D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/ScholarshipService.javaû û( 
+"":
+
+decisionIdjava.lang.LongB+)
+'ee.hitsa.ois.service.ScholarshipService

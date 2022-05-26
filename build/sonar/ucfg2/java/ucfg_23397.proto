@@ -1,0 +1,564 @@
+
+Ëee.hitsa.ois.service.FinalThesisService#search(Lee/hitsa/ois/service/security/HoisUserDetails;Lee/hitsa/ois/web/commandobject/FinalThesisSearchCommand;Lorg/springframework/data/domain/Pageable;)Lorg/springframework/data/domain/Page;ò
+çD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/FinalThesisService.javaK& K(,"startingBlock*Ê
+2ò
+çD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/FinalThesisService.javam m(ö
+ó
+ò
+çD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/FinalThesisService.javam n(?
+%50java.lang.String"__concat**(
+&exists(select ft.id from final_thesis *+)
+'join student s on s.id = ft.student_id ˝
+˙
+ò
+çD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/FinalThesisService.javam o(3
+%51java.lang.String"__concat*
+
+%50java.lang.String*
+where s.student_group_id = ÍÁ
+ò
+çD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/FinalThesisService.javao6 o(P
+%52java.lang.Long"Yee.hitsa.ois.web.commandobject.FinalThesisSearchCommand#getStudentGroup()Ljava/lang/Long;*E
+C
+criteria7ee.hitsa.ois.web.commandobject.FinalThesisSearchCommand2getStudentGroup()ı
+Ú
+ò
+çD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/FinalThesisService.javam o(P
+%53java.lang.String"__concat*
+
+%51java.lang.String*
+
+%52java.lang.Long„
+‡
+ò
+çD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/FinalThesisService.javam o(V
+%54java.lang.String"__concat*
+
+%53java.lang.String*
+)ÿ’
+ò
+çD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/FinalThesisService.javam o(W
+%55void"Cee.hitsa.ois.util.JpaNativeQueryBuilder#filter(Ljava/lang/String;)V*/
+-
+qb'ee.hitsa.ois.util.JpaNativeQueryBuilder*
+
+%54java.lang.String2filter(Ljava/lang/String;)*
+1*ì
+3ò
+çD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/FinalThesisService.javal l(ÍÁ
+ò
+çD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/FinalThesisService.javal l(&
+%49java.lang.Long"Yee.hitsa.ois.web.commandobject.FinalThesisSearchCommand#getStudentGroup()Ljava/lang/Long;*E
+C
+criteria7ee.hitsa.ois.web.commandobject.FinalThesisSearchCommand2getStudentGroup()*
+2
+1*∆
+startingBlockò
+çD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/FinalThesisService.javaK, K(ï
+í
+ò
+çD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/FinalThesisService.javaKC K(I
+%109"
+__annotate*
+javax.validation.Valid*E
+C
+criteria7ee.hitsa.ois.web.commandobject.FinalThesisSearchCommand˚
+¯
+ò
+çD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/FinalThesisService.javaKc K(kC
+criteria7ee.hitsa.ois.web.commandobject.FinalThesisSearchCommand"__annotation*
+
+%109*
+11*Ü
+4ò
+çD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/FinalThesisService.javaf f(ö
+ó
+ò
+çD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/FinalThesisService.javaf g(?
+%42java.lang.String"__concat**(
+&exists(select ft.id from final_thesis *+)
+'join student s on s.id = ft.student_id †
+ù
+ò
+çD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/FinalThesisService.javaf h(V
+%43java.lang.String"__concat*
+
+%42java.lang.String*B@
+>join curriculum_version cv on cv.id = s.curriculum_version_id 
+Ì
+ò
+çD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/FinalThesisService.javaf i(&
+%44java.lang.String"__concat*
+
+%43java.lang.String*
+where cv.id = ÙÒ
+ò
+çD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/FinalThesisService.javai) i(H
+%45java.lang.Long"^ee.hitsa.ois.web.commandobject.FinalThesisSearchCommand#getCurriculumVersion()Ljava/lang/Long;*E
+C
+criteria7ee.hitsa.ois.web.commandobject.FinalThesisSearchCommand2getCurriculumVersion()ı
+Ú
+ò
+çD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/FinalThesisService.javaf i(H
+%46java.lang.String"__concat*
+
+%44java.lang.String*
+
+%45java.lang.Long„
+‡
+ò
+çD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/FinalThesisService.javaf i(N
+%47java.lang.String"__concat*
+
+%46java.lang.String*
+)ÿ’
+ò
+çD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/FinalThesisService.javaf i(O
+%48void"Cee.hitsa.ois.util.JpaNativeQueryBuilder#filter(Ljava/lang/String;)V*/
+-
+qb'ee.hitsa.ois.util.JpaNativeQueryBuilder*
+
+%47java.lang.String2filter(Ljava/lang/String;)*
+3*ù
+5ò
+çD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/FinalThesisService.javae e(ÙÒ
+ò
+çD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/FinalThesisService.javae e(+
+%41java.lang.Long"^ee.hitsa.ois.web.commandobject.FinalThesisSearchCommand#getCurriculumVersion()Ljava/lang/Long;*E
+C
+criteria7ee.hitsa.ois.web.commandobject.FinalThesisSearchCommand2getCurriculumVersion()*
+3
+4*â'
+6ò
+çD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/FinalThesisService.java^ ^(≥
+∞
+ò
+çD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/FinalThesisService.java^ _(X
+%24java.lang.String"__concat**(
+&exists(select ft.id from final_thesis *DB
+@join final_thesis_supervisor fts on fts.final_thesis_id = ft.id Ñ
+Å
+ò
+çD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/FinalThesisService.java^ `(:
+%25java.lang.String"__concat*
+
+%24java.lang.String*&$
+"where upper(fts.firstname) like '%ÍÁ
+ò
+çD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/FinalThesisService.java`= `(U
+%26java.lang.String"Yee.hitsa.ois.web.commandobject.FinalThesisSearchCommand#getSupervisor()Ljava/lang/String;*E
+C
+criteria7ee.hitsa.ois.web.commandobject.FinalThesisSearchCommand2getSupervisor()ìê
+ò
+çD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/FinalThesisService.java`= `(c
+%27java.lang.String"0java.lang.String#toUpperCase()Ljava/lang/String;*
+
+%26java.lang.String2toUpperCase()˜
+Ù
+ò
+çD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/FinalThesisService.java^ `(c
+%28java.lang.String"__concat*
+
+%25java.lang.String*
+
+%27java.lang.StringÂ
+‚
+ò
+çD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/FinalThesisService.java^ `(l
+%29java.lang.String"__concat*
+
+%28java.lang.String*
+%' Ä
+˝
+ò
+çD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/FinalThesisService.java^ a(6
+%30java.lang.String"__concat*
+
+%29java.lang.String*" 
+or upper(fts.lastname) like '%ÍÁ
+ò
+çD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/FinalThesisService.javaa9 a(Q
+%31java.lang.String"Yee.hitsa.ois.web.commandobject.FinalThesisSearchCommand#getSupervisor()Ljava/lang/String;*E
+C
+criteria7ee.hitsa.ois.web.commandobject.FinalThesisSearchCommand2getSupervisor()ìê
+ò
+çD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/FinalThesisService.javaa9 a(_
+%32java.lang.String"0java.lang.String#toUpperCase()Ljava/lang/String;*
+
+%31java.lang.String2toUpperCase()˜
+Ù
+ò
+çD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/FinalThesisService.java^ a(_
+%33java.lang.String"__concat*
+
+%30java.lang.String*
+
+%32java.lang.StringÂ
+‚
+ò
+çD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/FinalThesisService.java^ a(g
+%34java.lang.String"__concat*
+
+%33java.lang.String*
+%' ò
+ï
+ò
+çD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/FinalThesisService.java^ b(N
+%35java.lang.String"__concat*
+
+%34java.lang.String*:8
+6or upper(fts.firstname || ' ' || fts.lastname) like '%ÍÁ
+ò
+çD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/FinalThesisService.javabQ b(i
+%36java.lang.String"Yee.hitsa.ois.web.commandobject.FinalThesisSearchCommand#getSupervisor()Ljava/lang/String;*E
+C
+criteria7ee.hitsa.ois.web.commandobject.FinalThesisSearchCommand2getSupervisor()ìê
+ò
+çD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/FinalThesisService.javabQ b(w
+%37java.lang.String"0java.lang.String#toUpperCase()Ljava/lang/String;*
+
+%36java.lang.String2toUpperCase()˜
+Ù
+ò
+çD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/FinalThesisService.java^ b(w
+%38java.lang.String"__concat*
+
+%35java.lang.String*
+
+%37java.lang.StringÂ
+‚
+ò
+çD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/FinalThesisService.java^ b(
+%39java.lang.String"__concat*
+
+%38java.lang.String*
+%')Ÿ÷
+ô
+çD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/FinalThesisService.java^ b(Ä
+%40void"Cee.hitsa.ois.util.JpaNativeQueryBuilder#filter(Ljava/lang/String;)V*/
+-
+qb'ee.hitsa.ois.util.JpaNativeQueryBuilder*
+
+%39java.lang.String2filter(Ljava/lang/String;)*
+5*ì
+7ò
+çD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/FinalThesisService.java] ](ÍÁ
+ò
+çD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/FinalThesisService.java] ]($
+%23java.lang.String"Yee.hitsa.ois.web.commandobject.FinalThesisSearchCommand#getSupervisor()Ljava/lang/String;*E
+C
+criteria7ee.hitsa.ois.web.commandobject.FinalThesisSearchCommand2getSupervisor()*
+5
+6*›
+8ò
+çD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/FinalThesisService.javaX X(≥
+∞
+ò
+çD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/FinalThesisService.javaX Y(X
+%17java.lang.String"__concat**(
+&exists(select ft.id from final_thesis *DB
+@join final_thesis_supervisor fts on fts.final_thesis_id = ft.id ˘
+ˆ
+ò
+çD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/FinalThesisService.javaX Z(/
+%18java.lang.String"__concat*
+
+%17java.lang.String*
+where fts.teacher_id = Ã…
+ò
+çD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/FinalThesisService.javaZ2 Z(E
+%19java.lang.Long"Lee.hitsa.ois.service.security.HoisUserDetails#getTeacherId()Ljava/lang/Long;*7
+5
+user-ee.hitsa.ois.service.security.HoisUserDetails2getTeacherId()ı
+Ú
+ò
+çD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/FinalThesisService.javaX Z(E
+%20java.lang.String"__concat*
+
+%18java.lang.String*
+
+%19java.lang.Long„
+‡
+ò
+çD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/FinalThesisService.javaX Z(K
+%21java.lang.String"__concat*
+
+%20java.lang.String*
+)ÿ’
+ò
+çD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/FinalThesisService.javaX Z(L
+%22void"Cee.hitsa.ois.util.JpaNativeQueryBuilder#filter(Ljava/lang/String;)V*/
+-
+qb'ee.hitsa.ois.util.JpaNativeQueryBuilder*
+
+%21java.lang.String2filter(Ljava/lang/String;)*
+7*ﬁ
+9ò
+çD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/FinalThesisService.javaS S(
+™
+ß
+ò
+çD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/FinalThesisService.javaS S(G
+%9java.util.List"<java.util.Arrays#asList([Ljava/lang/Object;)Ljava/util/List;*"
+java.util.Arrays*
+ft.theme_et*
+ft.theme_en‡›
+ò
+çD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/FinalThesisService.javaSR S(e
+%10java.lang.String"Tee.hitsa.ois.web.commandobject.FinalThesisSearchCommand#getTheme()Ljava/lang/String;*E
+C
+criteria7ee.hitsa.ois.web.commandobject.FinalThesisSearchCommand2
+getTheme()”–
+ò
+çD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/FinalThesisService.javaS S(f
+%11void"oee.hitsa.ois.util.JpaNativeQueryBuilder#optionalContains(Ljava/util/List;Ljava/lang/String;Ljava/lang/String;)V*/
+-
+qb'ee.hitsa.ois.util.JpaNativeQueryBuilder*
+
+%9java.util.List*	
+theme*
+
+%10java.lang.String2FoptionalContains(Ljava/util/List;Ljava/lang/String;Ljava/lang/String;)‚ﬂ
+ò
+çD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/FinalThesisService.javaTE T(Y
+%12java.lang.String"Uee.hitsa.ois.web.commandobject.FinalThesisSearchCommand#getStatus()Ljava/lang/String;*E
+C
+criteria7ee.hitsa.ois.web.commandobject.FinalThesisSearchCommand2getStatus()·ﬁ
+ò
+çD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/FinalThesisService.javaT T(Z
+%13void"qee.hitsa.ois.util.JpaNativeQueryBuilder#optionalCriteria(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V*/
+-
+qb'ee.hitsa.ois.util.JpaNativeQueryBuilder*
+ft.status_code in (:status)*
+
+status*
+
+%12java.lang.String2HoptionalCriteria(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)ÏÈ
+ò
+çD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/FinalThesisService.javaUI U(b
+%14java.lang.String"Zee.hitsa.ois.web.commandobject.FinalThesisSearchCommand#getStudentName()Ljava/lang/String;*E
+C
+criteria7ee.hitsa.ois.web.commandobject.FinalThesisSearchCommand2getStudentName()‰·
+ò
+çD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/FinalThesisService.javaU U(c
+%15void"qee.hitsa.ois.util.JpaNativeQueryBuilder#optionalContains(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V*/
+-
+qb'ee.hitsa.ois.util.JpaNativeQueryBuilder*$"
+ p.firstname || ' ' || p.lastname*
+name*
+
+%14java.lang.String2HoptionalContains(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)∞≠
+ò
+çD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/FinalThesisService.javaW W(
+%16boolean":ee.hitsa.ois.service.security.HoisUserDetails#isTeacher()Z*7
+5
+user-ee.hitsa.ois.service.security.HoisUserDetails2isTeacher()*
+7
+8*Ó
+10ò
+çD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/FinalThesisService.javaP P(”–
+ò
+çD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/FinalThesisService.javaPU P(l
+%7java.util.List"Pee.hitsa.ois.service.security.HoisUserDetails#getCurriculumIds()Ljava/util/List;*7
+5
+user-ee.hitsa.ois.service.security.HoisUserDetails2getCurriculumIds()ÒÓ
+ò
+çD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/FinalThesisService.javaP P(m
+
+%8void"uee.hitsa.ois.util.JpaNativeQueryBuilder#requiredCriteria(Ljava/lang/String;Ljava/lang/String;Ljava/util/Collection;)V*/
+-
+qb'ee.hitsa.ois.util.JpaNativeQueryBuilder* 
+c.id in (:userCurriculumIds)*
+userCurriculumIds*
+
+%7java.util.List2LrequiredCriteria(Ljava/lang/String;Ljava/lang/String;Ljava/util/Collection;)*
+9*˚
+11ò
+çD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/FinalThesisService.javaL= L(Hƒ
+¡
+ò
+çD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/FinalThesisService.javaL= L(H
+%0java.lang.String"__id*
+""ˆÛ
+ò
+çD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/FinalThesisService.javaL' L(<-
+%1'ee.hitsa.ois.util.JpaNativeQueryBuilder"'ee.hitsa.ois.util.JpaNativeQueryBuilder¥
+±
+ò
+çD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/FinalThesisService.javaL# L(I
+%2"Cee.hitsa.ois.util.JpaNativeQueryBuilder#<init>(Ljava/lang/String;)V*/
+-
+%1'ee.hitsa.ois.util.JpaNativeQueryBuilder*
+
+%0java.lang.StringÏÈ
+ò
+çD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/FinalThesisService.javaL# L(X-
+%3'ee.hitsa.ois.util.JpaNativeQueryBuilder"Åee.hitsa.ois.util.JpaNativeQueryBuilder#sort(Lorg/springframework/data/domain/Pageable;)Lee/hitsa/ois/util/JpaNativeQueryBuilder;*/
+-
+%1'ee.hitsa.ois.util.JpaNativeQueryBuilder*6
+4
+pageable(org.springframework.data.domain.Pageable20sort(Lorg/springframework/data/domain/Pageable;)Ñ
+Å
+ò
+çD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/FinalThesisService.javaL L(Y-
+qb'ee.hitsa.ois.util.JpaNativeQueryBuilder"__id*/
+-
+%3'ee.hitsa.ois.util.JpaNativeQueryBuilder…∆
+ò
+çD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/FinalThesisService.javaNC N(U
+%4java.lang.Long"Kee.hitsa.ois.service.security.HoisUserDetails#getSchoolId()Ljava/lang/Long;*7
+5
+user-ee.hitsa.ois.service.security.HoisUserDetails2getSchoolId()◊‘
+ò
+çD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/FinalThesisService.javaN N(V
+
+%5void"oee.hitsa.ois.util.JpaNativeQueryBuilder#requiredCriteria(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Long;)V*/
+-
+qb'ee.hitsa.ois.util.JpaNativeQueryBuilder*
+s.school_id = :schoolId*
+
+schoolId*
+
+%4java.lang.Long2FrequiredCriteria(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Long;)Ω∫
+ò
+çD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/FinalThesisService.javaO O(#
+%6boolean"Aee.hitsa.ois.service.security.HoisUserDetails#isLeadingTeacher()Z*7
+5
+user-ee.hitsa.ois.service.security.HoisUserDetails2isLeadingTeacher()*
+9
+10*∆7
+1ò
+çD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/FinalThesisService.javar r(
+ÙÒ
+ò
+çD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/FinalThesisService.javarL r(f
+%56java.time.LocalDate"^ee.hitsa.ois.web.commandobject.FinalThesisSearchCommand#getInsertedFrom()Ljava/time/LocalDate;*E
+C
+criteria7ee.hitsa.ois.web.commandobject.FinalThesisSearchCommand2getInsertedFrom()µ≤
+ô
+çD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/FinalThesisService.javar r(Ñ
+%57void"ëee.hitsa.ois.util.JpaNativeQueryBuilder#optionalCriteria(Ljava/lang/String;Ljava/lang/String;Ljava/time/LocalDate;Ljava/util/function/Function;)V*/
+-
+qb'ee.hitsa.ois.util.JpaNativeQueryBuilder* 
+ft.inserted >= :insertedFrom*
+insertedFrom*
+
+%56java.time.LocalDate*
+""2hoptionalCriteria(Ljava/lang/String;Ljava/lang/String;Ljava/time/LocalDate;Ljava/util/function/Function;)ÙÒ
+ò
+çD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/FinalThesisService.javasL s(f
+%58java.time.LocalDate"^ee.hitsa.ois.web.commandobject.FinalThesisSearchCommand#getInsertedThru()Ljava/time/LocalDate;*E
+C
+criteria7ee.hitsa.ois.web.commandobject.FinalThesisSearchCommand2getInsertedThru()µ≤
+ô
+çD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/FinalThesisService.javas s(É
+%59void"ëee.hitsa.ois.util.JpaNativeQueryBuilder#optionalCriteria(Ljava/lang/String;Ljava/lang/String;Ljava/time/LocalDate;Ljava/util/function/Function;)V*/
+-
+qb'ee.hitsa.ois.util.JpaNativeQueryBuilder* 
+ft.inserted <= :insertedThru*
+insertedThru*
+
+%58java.time.LocalDate*
+""2hoptionalCriteria(Ljava/lang/String;Ljava/lang/String;Ljava/time/LocalDate;Ljava/util/function/Function;)ˆÛ
+ò
+çD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/FinalThesisService.javauO u(j
+%60java.time.LocalDate"_ee.hitsa.ois.web.commandobject.FinalThesisSearchCommand#getConfirmedFrom()Ljava/time/LocalDate;*E
+C
+criteria7ee.hitsa.ois.web.commandobject.FinalThesisSearchCommand2getConfirmedFrom()∏µ
+ô
+çD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/FinalThesisService.javau u(à
+%61void"ëee.hitsa.ois.util.JpaNativeQueryBuilder#optionalCriteria(Ljava/lang/String;Ljava/lang/String;Ljava/time/LocalDate;Ljava/util/function/Function;)V*/
+-
+qb'ee.hitsa.ois.util.JpaNativeQueryBuilder*" 
+ft.confirmed >= :confirmedFrom*
+confirmedFrom*
+
+%60java.time.LocalDate*
+""2hoptionalCriteria(Ljava/lang/String;Ljava/lang/String;Ljava/time/LocalDate;Ljava/util/function/Function;)ˆÛ
+ò
+çD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/FinalThesisService.javavO v(j
+%62java.time.LocalDate"_ee.hitsa.ois.web.commandobject.FinalThesisSearchCommand#getConfirmedThru()Ljava/time/LocalDate;*E
+C
+criteria7ee.hitsa.ois.web.commandobject.FinalThesisSearchCommand2getConfirmedThru()∏µ
+ô
+çD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/FinalThesisService.javav v(á
+%63void"ëee.hitsa.ois.util.JpaNativeQueryBuilder#optionalCriteria(Ljava/lang/String;Ljava/lang/String;Ljava/time/LocalDate;Ljava/util/function/Function;)V*/
+-
+qb'ee.hitsa.ois.util.JpaNativeQueryBuilder*" 
+ft.confirmed <= :confirmedThru*
+confirmedThru*
+
+%62java.time.LocalDate*
+""2hoptionalCriteria(Ljava/lang/String;Ljava/lang/String;Ljava/time/LocalDate;Ljava/util/function/Function;)µ≤
+ò
+çD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/FinalThesisService.javax x(;.
+%64'ee.hitsa.ois.util.JpaNativeQueryBuilder"lee.hitsa.ois.util.JpaNativeQueryBuilder#groupBy(Ljava/lang/String;)Lee/hitsa/ois/util/JpaNativeQueryBuilder;*/
+-
+qb'ee.hitsa.ois.util.JpaNativeQueryBuilder*)'
+%ft.id, s.id, p.id, cv.id, c.id, sg.id2groupBy(Ljava/lang/String;)≈
+¬
+ò
+çD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/FinalThesisService.javaz< z(I
+%65java.lang.String"__id*
+""Å
+˛
+ò
+çD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/FinalThesisService.javazK z(M&
+%66javax.persistence.EntityManager"__id*3*1)
+'ee.hitsa.ois.service.FinalThesisService"
+em˘
+ˆ
+ò
+çD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/FinalThesisService.javaz z(X+
+%67$org.springframework.data.domain.Page"Ÿee.hitsa.ois.util.JpaQueryUtil#pagingResult(Lee/hitsa/ois/util/JpaNativeQueryBuilder;Ljava/lang/String;Ljavax/persistence/EntityManager;Lorg/springframework/data/domain/Pageable;)Lorg/springframework/data/domain/Page;*"" 
+ee.hitsa.ois.util.JpaQueryUtil*/
+-
+qb'ee.hitsa.ois.util.JpaNativeQueryBuilder*
+
+%65java.lang.String*(
+&
+%66javax.persistence.EntityManager*6
+4
+pageable(org.springframework.data.domain.PageableÉ
+Ä
+ò
+çD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/FinalThesisService.javaz z(Y.
+result$org.springframework.data.domain.Page"__id*-
++
+%67$org.springframework.data.domain.Page∞
+≠
+ô
+çD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/FinalThesisService.java| ë(	;
+%684org.springframework.core.convert.converter.Converter"__declareFunction*?=
+;__sonar_lambda_2423$ee.hitsa.ois.service.FinalThesisService£
+†
+
+__unknown_file (E
+;
+%684org.springframework.core.convert.converter.Converter"
+user"__id*7
+5
+user-ee.hitsa.ois.service.security.HoisUserDetails™
+ß
+
+__unknown_file (X
+;
+%684org.springframework.core.convert.converter.Converter"
+FinalThesisService.this"__id*+)
+'ee.hitsa.ois.service.FinalThesisServiceÑÅ
+ô
+çD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/FinalThesisService.java| ë(
+,
+%108$org.springframework.data.domain.Page"Üorg.springframework.data.domain.Page#map(Lorg/springframework/core/convert/converter/Converter;)Lorg/springframework/data/domain/Page;*0
+.
+result$org.springframework.data.domain.Page*=
+;
+%684org.springframework.core.convert.converter.Converter2;map(Lorg/springframework/core/convert/converter/Converter;)"Ã
+ô
+çD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/FinalThesisService.java| ë(.
+,
+%108$org.springframework.data.domain.Page:5
+user-ee.hitsa.ois.service.security.HoisUserDetails:C
+criteria7ee.hitsa.ois.web.commandobject.FinalThesisSearchCommand:4
+pageable(org.springframework.data.domain.PageableB+)
+'ee.hitsa.ois.service.FinalThesisService

@@ -1,0 +1,103 @@
+
+yee.hitsa.ois.service.DirectiveService#changedStudentsForCancel(Lee/hitsa/ois/domain/directive/Directive;)Ljava/util/List;˜
+‹D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/DirectiveService.javaÉ É('"1*’%
+1˜
+‹D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/DirectiveService.javaÌ Ì(þ
+û
+˜
+‹D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/DirectiveService.javaÌ Ì(%
+%0javax.persistence.EntityManager"__id*1*/'
+%ee.hitsa.ois.service.DirectiveService"
+emø
+õ
+™
+‹D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/DirectiveService.javaÌ' Í(”
+%1java.lang.String"__concat*&$
+"with recursive history_id(id) as (*Œ‰
+†select s.student_history_id from student s inner join directive_student ds on s.id = ds.student_id and ds.directive_id = :directiveId ê
+ç
+˜
+‹D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/DirectiveService.javaÌ' Î(
+%2java.lang.String"__concat*
+
+%1java.lang.String*
+
+union all ž
+›
+™
+‹D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/DirectiveService.javaÌ' Ï(È
+%3java.lang.String"__concat*
+
+%2java.lang.String*À½
+ºselect sh.prev_student_history_id from student_history sh inner join history_id h on sh.id = h.id left outer join directive_student ds on ds.student_history_id = h.id where ds.id is nullâ
+ß
+˜
+‹D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/DirectiveService.javaÌ' Ð(
+%4java.lang.String"__concat*
+
+%3java.lang.String*
+) è
+å
+™
+‹D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/DirectiveService.javaÌ' Ñ(’
+%5java.lang.String"__concat*
+
+%4java.lang.String*Š‡
+„select student_id from directive_student where directive_id = :directiveId and student_history_id not in (select id from history_id)ˆ…
+™
+‹D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/DirectiveService.javaÌ Ñ(“
+%6javax.persistence.Query"^javax.persistence.EntityManager#createNativeQuery(Ljava/lang/String;)Ljavax/persistence/Query;*'
+%
+%0javax.persistence.EntityManager*
+
+%5java.lang.String2%createNativeQuery(Ljava/lang/String;)ä
+á
+™
+‹D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/DirectiveService.javaÌ Ñ(”
+qjavax.persistence.Query"__id*
+
+%6javax.persistence.Query³°
+˜
+‹D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/DirectiveService.javaÒ& Ò(7
+%7java.lang.Long"<ee.hitsa.ois.domain.BaseEntityWithId#getId()Ljava/lang/Long;*6
+4
+	directive'ee.hitsa.ois.domain.directive.Directive2getId()Ÿœ
+˜
+‹D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/DirectiveService.javaÒ Ò(8
+%8javax.persistence.Query"cjavax.persistence.Query#setParameter(Ljava/lang/String;Ljava/lang/Object;)Ljavax/persistence/Query;*
+
+qjavax.persistence.Query*
+directiveId*
+
+%7java.lang.Long22setParameter(Ljava/lang/String;Ljava/lang/Object;)ž›
+˜
+‹D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/DirectiveService.javaÓ Ó((
+%9java.util.List"7javax.persistence.Query#getResultList()Ljava/util/List;*
+
+qjavax.persistence.Query2getResultList()Ô
+Ñ
+˜
+‹D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/DirectiveService.javaÓ Ó()
+datajava.util.List"__id*
+
+%9java.util.List”
+‘
+˜
+‹D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/DirectiveService.javaÔ' Ô(Q"
+%10java.util.function.Function"__declareFunction*=;
+9__sonar_lambda_2295$ee.hitsa.ois.service.DirectiveService‡
+„
+˜
+‹D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/DirectiveService.javaÔ Ô(X
+%13java.util.List"nee.hitsa.ois.util.StreamUtil#toMappedList(Ljava/util/function/Function;Ljava/util/Collection;)Ljava/util/List;* "
+ee.hitsa.ois.util.StreamUtil*$
+"
+%10java.util.function.Function*
+
+datajava.util.List"´
+˜
+‹D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/DirectiveService.javaÔ Ô(Y
+
+%13java.util.List:4
+	directive'ee.hitsa.ois.domain.directive.DirectiveB)'
+%ee.hitsa.ois.service.DirectiveService

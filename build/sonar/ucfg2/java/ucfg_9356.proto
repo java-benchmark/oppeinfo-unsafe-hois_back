@@ -1,0 +1,85 @@
+
+ïee.hitsa.ois.util.SubjectProgramUtil#hasConnection(Lee/hitsa/ois/domain/subject/subjectprogram/SubjectProgram;Lee/hitsa/ois/domain/subject/Subject;)Zï
+äD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/util/SubjectProgramUtil.java ( "1*¸
+1ï
+äD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/util/SubjectProgramUtil.java (˙
+˜
+ï
+äD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/util/SubjectProgramUtil.java (%
+%0javax.persistence.EntityManager"__id*0*.&
+$ee.hitsa.ois.util.SubjectProgramUtil"
+emÓ
+Î
+ï
+äD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/util/SubjectProgramUtil.java% (&
+%1java.lang.String"__concat*
+select sp.id *
+from subject_program sp ¥
+±
+ï
+äD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/util/SubjectProgramUtil.java% (e
+%2java.lang.String"__concat*
+
+%1java.lang.String*[Y
+Wjoin subject_study_period_teacher sspt on sspt.id = sp.subject_study_period_teacher_id §
+°
+ï
+äD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/util/SubjectProgramUtil.java% (U
+%3java.lang.String"__concat*
+
+%2java.lang.String*KI
+Gjoin subject_study_period ssp on ssp.id = sspt.subject_study_period_id Ö
+Ç
+ï
+äD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/util/SubjectProgramUtil.java% (6
+%4java.lang.String"__concat*
+
+%3java.lang.String*,*
+(where sp.id = ?1 and ssp.subject_id = ?2ÑÅ
+ï
+äD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/util/SubjectProgramUtil.java (7
+%5javax.persistence.Query"^javax.persistence.EntityManager#createNativeQuery(Ljava/lang/String;)Ljavax/persistence/Query;*'
+%
+%0javax.persistence.EntityManager*
+
+%4java.lang.String2%createNativeQuery(Ljava/lang/String;)¿Ω
+ï
+äD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/util/SubjectProgramUtil.java ((
+%6java.lang.Long"<ee.hitsa.ois.domain.BaseEntityWithId#getId()Ljava/lang/Long;*F
+D
+program9ee.hitsa.ois.domain.subject.subjectprogram.SubjectProgram2getId()Ì
+ï
+äD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/util/SubjectProgramUtil.java ()
+%7javax.persistence.Query"Rjavax.persistence.Query#setParameter(ILjava/lang/Object;)Ljavax/persistence/Query;*
+
+%5javax.persistence.Query*2*
+
+%6java.lang.Long2!setParameter(ILjava/lang/Object;)™ß
+ï
+äD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/util/SubjectProgramUtil.java: (I
+%8java.lang.Long"<ee.hitsa.ois.domain.BaseEntityWithId#getId()Ljava/lang/Long;*0
+.
+subject#ee.hitsa.ois.domain.subject.Subject2getId()Ì
+ï
+äD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/util/SubjectProgramUtil.java (J
+%9javax.persistence.Query"Rjavax.persistence.Query#setParameter(ILjava/lang/Object;)Ljavax/persistence/Query;*
+
+%7javax.persistence.Query*2*
+
+%8java.lang.Long2!setParameter(ILjava/lang/Object;)ùö
+ï
+äD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/util/SubjectProgramUtil.java (Z
+%10java.util.List"7javax.persistence.Query#getResultList()Ljava/util/List;*
+
+%9javax.persistence.Query2getResultList()ÍÁ
+ï
+äD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/util/SubjectProgramUtil.java (d
+%11boolean"java.util.List#isEmpty()Z*
+
+%10java.util.List2	isEmpty()"†
+ï
+äD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/util/SubjectProgramUtil.java (e
+"":D
+program9ee.hitsa.ois.domain.subject.subjectprogram.SubjectProgram:.
+subject#ee.hitsa.ois.domain.subject.SubjectB(&
+$ee.hitsa.ois.util.SubjectProgramUtil

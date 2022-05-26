@@ -1,0 +1,219 @@
+
+ree.hitsa.ois.service.JournalService#confirmAll(Lee/hitsa/ois/service/security/HoisUserDetails;)Ljava/lang/Integer;–
+‰D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/JournalService.java× ×("1*¸O
+1–
+‰D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/JournalService.javaØ  Ø(*Ž
+‹
+–
+‰D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/JournalService.javaØ1 Ø(A+
+%0%ee.hitsa.ois.service.StudyYearService"__id*=*;%
+#ee.hitsa.ois.service.JournalService"
+studyYearServiceÇÄ
+–
+‰D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/JournalService.javaØV Ø(h
+%1java.lang.Long"Kee.hitsa.ois.service.security.HoisUserDetails#getSchoolId()Ljava/lang/Long;*7
+5
+user-ee.hitsa.ois.service.security.HoisUserDetails2getSchoolId()›˜
+–
+‰D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/JournalService.javaØ1 Ø(i#
+%2ee.hitsa.ois.domain.StudyYear"jee.hitsa.ois.service.StudyYearService#getCurrentStudyYear(Ljava/lang/Long;)Lee/hitsa/ois/domain/StudyYear;*-
++
+%0%ee.hitsa.ois.service.StudyYearService*
+
+%1java.lang.Long2%getCurrentStudyYear(Ljava/lang/Long;)×
+Ô
+–
+‰D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/JournalService.javaØ  Ø(j
+%3java.lang.Long"Zee.hitsa.ois.util.EntityUtil#getId(Lee/hitsa/ois/domain/BaseEntityWithId;)Ljava/lang/Long;* "
+ee.hitsa.ois.util.EntityUtil*%
+#
+%2ee.hitsa.ois.domain.StudyYearÞ
+Û
+–
+‰D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/JournalService.javaØ Ø(k"
+currentStudyYearjava.lang.Long"__id*
+
+%3java.lang.Longú
+÷
+–
+‰D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/JournalService.javaÚ Ú(%
+%4javax.persistence.EntityManager"__id*/*-%
+#ee.hitsa.ois.service.JournalService"
+em©
+¦
+–
+‰D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/JournalService.javaÚ' Û(-
+%5java.lang.String"__concat*JH
+Fupdate journal set status_code = :journalStatusConfirmed where id in (*
+select id from journal j ¯
+¬
+–
+‰D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/JournalService.javaÚ' Ü(e
+%6java.lang.String"__concat*
+
+%5java.lang.String*US
+Qwhere j.study_year_id = :currentStudyYear and status_code = :journalStatusInWork ©
+¦
+–
+‰D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/JournalService.javaÚ' Ý(_
+%7java.lang.String"__concat*
+
+%6java.lang.String*OM
+Kand (j.assessment_code is null or (select students = graded_students from (½
+º
+–
+‰D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/JournalService.javaÚ' Þ(w
+%8java.lang.String"__concat*
+
+%7java.lang.String*ca
+_select count(js.id) students, count(case when jes.grade_code is not null then 1 else null end) †
+ƒ
+–
+‰D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/JournalService.javaÚ' ß(@
+%9java.lang.String"__concat*
+
+%8java.lang.String*,*
+(graded_students from journal_student js ¬
+©
+–
+‰D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/JournalService.javaÚ' à(e
+%10java.lang.String"__concat*
+
+%9java.lang.String*QO
+Mjoin student s on s.id = js.student_id and s.status_code in (:studentStatus) Â
+¿
+–
+‰D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/JournalService.javaÚ' á(z
+%11java.lang.String"__concat*
+
+%10java.lang.String*fd
+bleft join journal_entry je on je.journal_id = js.journal_id and je.entry_type_code = :finalResult Ç
+Ä
+–
+‰D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/JournalService.javaÚ' â(
+%12java.lang.String"__concat*
+
+%11java.lang.String*ki
+gleft join journal_entry_student jes on jes.journal_student_id = js.id and jes.journal_entry_id = je.id Ž
+‹
+–
+‰D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/JournalService.javaÚ' ã(F
+%13java.lang.String"__concat*
+
+%12java.lang.String*20
+.where js.journal_id = j.id) active_students)) «
+¨
+–
+‰D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/JournalService.javaÚ' ä(_
+%14java.lang.String"__concat*
+
+%13java.lang.String*OM
+Kand exists (select 1 from journal_student js2 where js2.journal_id = j.id))‡„
+–
+‰D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/JournalService.javaÚ ä(`
+%15javax.persistence.Query"^javax.persistence.EntityManager#createNativeQuery(Ljava/lang/String;)Ljavax/persistence/Query;*'
+%
+%4javax.persistence.EntityManager*
+
+%14java.lang.String2%createNativeQuery(Ljava/lang/String;)â
+ß
+–
+‰D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/JournalService.javaÚ ä(a
+qjavax.persistence.Query"__id* 
+
+%15javax.persistence.Query±®
+–
+‰D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/JournalService.javaæ æ(<
+%16javax.persistence.Query"cjavax.persistence.Query#setParameter(Ljava/lang/String;Ljava/lang/Object;)Ljavax/persistence/Query;*
+
+qjavax.persistence.Query*
+currentStudyYear*$
+"
+currentStudyYearjava.lang.Long22setParameter(Ljava/lang/String;Ljava/lang/Object;)Ó
+Ð
+–
+‰D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/JournalService.javaç1 ç(O'
+%17 ee.hitsa.ois.enums.JournalStatus"__id*
+""‘Ž
+–
+‰D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/JournalService.javaç1 ç(V
+%18java.lang.String"'java.lang.Enum#name()Ljava/lang/String;*)
+'
+%17 ee.hitsa.ois.enums.JournalStatus2name()¬©
+–
+‰D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/JournalService.javaç ç(W
+%19javax.persistence.Query"cjavax.persistence.Query#setParameter(Ljava/lang/String;Ljava/lang/Object;)Ljavax/persistence/Query;*
+
+qjavax.persistence.Query*
+journalStatusConfirmed*
+
+%18java.lang.String22setParameter(Ljava/lang/String;Ljava/lang/Object;)Ó
+Ð
+–
+‰D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/JournalService.javaè. è(L'
+%20 ee.hitsa.ois.enums.JournalStatus"__id*
+""‘Ž
+–
+‰D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/JournalService.javaè. è(S
+%21java.lang.String"'java.lang.Enum#name()Ljava/lang/String;*)
+'
+%20 ee.hitsa.ois.enums.JournalStatus2name()©¦
+–
+‰D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/JournalService.javaè è(T
+%22javax.persistence.Query"cjavax.persistence.Query#setParameter(Ljava/lang/String;Ljava/lang/Object;)Ljavax/persistence/Query;*
+
+qjavax.persistence.Query*
+journalStatusInWork*
+
+%21java.lang.String22setParameter(Ljava/lang/String;Ljava/lang/Object;)Á
+¾
+–
+‰D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/JournalService.javaé( é(K
+%23java.util.List"__id*
+""¡ž
+–
+‰D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/JournalService.javaé é(L
+%24javax.persistence.Query"cjavax.persistence.Query#setParameter(Ljava/lang/String;Ljava/lang/Object;)Ljavax/persistence/Query;*
+
+qjavax.persistence.Query*
+studentStatus*
+
+%23java.util.List22setParameter(Ljava/lang/String;Ljava/lang/Object;)Ö
+Ó
+–
+‰D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/JournalService.javaê& ê(C*
+%25#ee.hitsa.ois.enums.JournalEntryType"__id*
+""”‘
+–
+‰D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/JournalService.javaê& ê(J
+%26java.lang.String"'java.lang.Enum#name()Ljava/lang/String;*,
+*
+%25#ee.hitsa.ois.enums.JournalEntryType2name()¡ž
+–
+‰D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/JournalService.javaê ê(K
+%27javax.persistence.Query"cjavax.persistence.Query#setParameter(Ljava/lang/String;Ljava/lang/Object;)Ljavax/persistence/Query;*
+
+qjavax.persistence.Query*
+finalResult*
+
+%26java.lang.String22setParameter(Ljava/lang/String;Ljava/lang/Object;)ƒ€
+–
+‰D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/JournalService.javaì ì(0
+
+%28int"(javax.persistence.Query#executeUpdate()I*
+
+qjavax.persistence.Query2executeUpdate()Œ
+‰
+–
+‰D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/JournalService.javaì ì(1
+%29java.lang.Integer"/java.lang.Integer#valueOf(I)Ljava/lang/Integer;*"
+java.lang.Integer*
+
+
+%28int"µ
+–
+‰D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/JournalService.javaì ì(2
+
+%29java.lang.Integer:5
+user-ee.hitsa.ois.service.security.HoisUserDetailsB'%
+#ee.hitsa.ois.service.JournalService

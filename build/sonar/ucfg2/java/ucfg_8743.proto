@@ -1,0 +1,435 @@
+
+™ee.hitsa.ois.service.DocumentService#supplementPrintConfirm(Lee/hitsa/ois/service/security/HoisUserDetails;Ljava/lang/Long;Ljava/util/List;Lee/hitsa/ois/enums/Language;)Vó
+äD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/DocumentService.java© ©(&"9*¢
+2ó
+äD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/DocumentService.java« «(˝
+˙
+ó
+äD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/DocumentService.java« «(&
+%51javax.persistence.EntityManager"__id*0*.&
+$ee.hitsa.ois.service.DocumentService"
+em˝˙
+ó
+äD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/DocumentService.java« «(-
+%52void"<javax.persistence.EntityManager#persist(Ljava/lang/Object;)V*(
+&
+%51javax.persistence.EntityManager*L
+J
+diplomaSupplementForm1ee.hitsa.ois.domain.diploma.DiplomaSupplementForm2persist(Ljava/lang/Object;)*
+1*˙
+3ó
+äD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/DocumentService.java≈ ≈(%≈
+¬
+ó
+äD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/DocumentService.java≈3 ≈(?
+%49java.lang.Boolean"__id*
+""çä
+ó
+äD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/DocumentService.java≈ ≈(@
+%50void"Tee.hitsa.ois.domain.diploma.DiplomaSupplementForm#setIsEnglish(Ljava/lang/Boolean;)V*L
+J
+diplomaSupplementForm1ee.hitsa.ois.domain.diploma.DiplomaSupplementForm*
+
+%49java.lang.Boolean2!setIsEnglish(Ljava/lang/Boolean;)*
+2*ö(
+4ó
+äD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/DocumentService.javaº º($—
+Œ
+ó
+äD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/DocumentService.javaºD º(e$
+%35ee.hitsa.ois.enums.FormStatus"__id*
+""ª∏
+ó
+äD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/DocumentService.javaºg º(w%
+%36ee.hitsa.ois.domain.Classifier"Dee.hitsa.ois.domain.Form#getStatus()Lee/hitsa/ois/domain/Classifier;*"
+ 
+formee.hitsa.ois.domain.Form2getStatus()Ä
+˝
+ó
+äD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/DocumentService.javaº. º(x
+%37boolean"Zee.hitsa.ois.util.ClassifierUtil#equals(Ljava/lang/Enum;Lee/hitsa/ois/domain/Classifier;)Z*$""
+ ee.hitsa.ois.util.ClassifierUtil*&
+$
+%35ee.hitsa.ois.enums.FormStatus*'
+%
+%36ee.hitsa.ois.domain.Classifier–
+Õ
+ó
+äD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/DocumentService.javaº Ω(+
+%38void"Mee.hitsa.ois.exception.AssertionFailedException#throwIf(ZLjava/lang/String;)V*3"1
+/ee.hitsa.ois.exception.AssertionFailedException*
+""*
+form is already usedÓÎ
+ó
+äD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/DocumentService.javaæ æ("
+%39void"Eee.hitsa.ois.domain.Form#setStatus(Lee/hitsa/ois/domain/Classifier;)V*"
+ 
+formee.hitsa.ois.domain.Form**
+(
+statusee.hitsa.ois.domain.Classifier2+setStatus(Lee/hitsa/ois/domain/Classifier;)Ã…
+ó
+äD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/DocumentService.javaø ø( 
+%40void";ee.hitsa.ois.domain.Form#setPrinted(Ljava/time/LocalDate;)V*"
+ 
+formee.hitsa.ois.domain.Form*
+
+nowjava.time.LocalDate2!setPrinted(Ljava/time/LocalDate;)˝
+˙
+ó
+äD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/DocumentService.java¿" ¿($&
+%41javax.persistence.EntityManager"__id*0*.&
+$ee.hitsa.ois.service.DocumentService"
+em¡
+æ
+ó
+äD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/DocumentService.java¿ ¿(%
+%42ee.hitsa.ois.domain.Form"êee.hitsa.ois.util.EntityUtil#save(Lee/hitsa/ois/domain/BaseEntityWithId;Ljavax/persistence/EntityManager;)Lee/hitsa/ois/domain/BaseEntityWithId;* "
+ee.hitsa.ois.util.EntityUtil*"
+ 
+formee.hitsa.ois.domain.Form*(
+&
+%41javax.persistence.EntityManageräá
+ó
+äD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/DocumentService.java¡> ¡(S8
+%431ee.hitsa.ois.domain.diploma.DiplomaSupplementForm"1ee.hitsa.ois.domain.diploma.DiplomaSupplementFormù
+ö
+ó
+äD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/DocumentService.java¡: ¡(U
+%44";ee.hitsa.ois.domain.diploma.DiplomaSupplementForm#<init>()V*:
+8
+%431ee.hitsa.ois.domain.diploma.DiplomaSupplementForm´
+®
+ó
+äD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/DocumentService.java¡ ¡(VJ
+diplomaSupplementForm1ee.hitsa.ois.domain.diploma.DiplomaSupplementForm"__id*:
+8
+%431ee.hitsa.ois.domain.diploma.DiplomaSupplementFormôñ
+ó
+äD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/DocumentService.java¬ ¬(/
+%45void"Vee.hitsa.ois.domain.diploma.DiplomaSupplementForm#setForm(Lee/hitsa/ois/domain/Form;)V*L
+J
+diplomaSupplementForm1ee.hitsa.ois.domain.diploma.DiplomaSupplementForm*"
+ 
+formee.hitsa.ois.domain.Form2#setForm(Lee/hitsa/ois/domain/Form;)¯ı
+ó
+äD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/DocumentService.java√ √(B
+%46void"xee.hitsa.ois.domain.diploma.DiplomaSupplementForm#setDiplomaSupplement(Lee/hitsa/ois/domain/diploma/DiplomaSupplement;)V*L
+J
+diplomaSupplementForm1ee.hitsa.ois.domain.diploma.DiplomaSupplementForm*=
+;
+
+supplement-ee.hitsa.ois.domain.diploma.DiplomaSupplement2EsetDiplomaSupplement(Lee/hitsa/ois/domain/diploma/DiplomaSupplement;)œ
+Ã
+ó
+äD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/DocumentService.javaƒ ƒ("
+%47ee.hitsa.ois.enums.Language"__id*
+""¬ø
+ó
+äD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/DocumentService.javaƒ ƒ((
+%48boolean"*java.lang.Enum#equals(Ljava/lang/Object;)Z*$
+"
+%47ee.hitsa.ois.enums.Language*%
+#
+langee.hitsa.ois.enums.Language2equals(Ljava/lang/Object;)*
+2
+3*ﬁ
+5ó
+äD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/DocumentService.javaª ª(%π
+∂
+ó
+äD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/DocumentService.javaª ª(4
+%34java.util.List"Çee.hitsa.ois.service.DocumentService#requireForms(Lee/hitsa/ois/service/security/HoisUserDetails;Ljava/util/List;)Ljava/util/List;*(&
+$ee.hitsa.ois.service.DocumentService*7
+5
+user-ee.hitsa.ois.service.security.HoisUserDetails*
+
+formIdsjava.util.List*
+1*Ü
+6ó
+äD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/DocumentService.java∑ ∑(˝
+˙
+ó
+äD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/DocumentService.java∑$ ∑(&&
+%27javax.persistence.EntityManager"__id*0*.&
+$ee.hitsa.ois.service.DocumentService"
+emÒ
+Ó
+ó
+äD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/DocumentService.java∑ ∑('4
+%28-ee.hitsa.ois.domain.diploma.DiplomaSupplement"êee.hitsa.ois.util.EntityUtil#save(Lee/hitsa/ois/domain/BaseEntityWithId;Ljavax/persistence/EntityManager;)Lee/hitsa/ois/domain/BaseEntityWithId;* "
+ee.hitsa.ois.util.EntityUtil*=
+;
+
+supplement-ee.hitsa.ois.domain.diploma.DiplomaSupplement*(
+&
+%27javax.persistence.EntityManager˝
+˙
+ó
+äD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/DocumentService.javaπ π(&
+%29javax.persistence.EntityManager"__id*0*.&
+$ee.hitsa.ois.service.DocumentService"
+em—
+Œ
+ó
+äD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/DocumentService.javaπ> π(_$
+%30ee.hitsa.ois.enums.FormStatus"__id*
+""èå
+ó
+äD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/DocumentService.javaπ> π(f
+%31java.lang.String"'java.lang.Enum#name()Ljava/lang/String;*&
+$
+%30ee.hitsa.ois.enums.FormStatus2name()©¶
+ó
+äD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/DocumentService.javaπ π(g%
+%32ee.hitsa.ois.domain.Classifier"cjavax.persistence.EntityManager#getReference(Ljava/lang/Class;Ljava/lang/Object;)Ljava/lang/Object;*(
+&
+%29javax.persistence.EntityManager*
+""*
+
+%31java.lang.String21getReference(Ljava/lang/Class;Ljava/lang/Object;)ˆ
+Û
+ó
+äD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/DocumentService.javaπ π(h(
+statusee.hitsa.ois.domain.Classifier"__id*'
+%
+%32ee.hitsa.ois.domain.ClassifierÇ
+ˇ
+ó
+äD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/DocumentService.java∫ ∫('
+%33java.time.LocalDate".java.time.LocalDate#now()Ljava/time/LocalDate;*"
+java.time.LocalDate›
+⁄
+ó
+äD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/DocumentService.java∫ ∫((
+nowjava.time.LocalDate"__id*
+
+%33java.time.LocalDate*
+5*É
+7ó
+äD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/DocumentService.java≥ ≥($’
+“
+ó
+äD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/DocumentService.java≥D ≥(d(
+%18!ee.hitsa.ois.enums.DocumentStatus"__id*
+""ÎË
+ó
+äD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/DocumentService.java≥f ≥(|%
+%19ee.hitsa.ois.domain.Classifier"Yee.hitsa.ois.domain.diploma.DiplomaSupplement#getStatus()Lee/hitsa/ois/domain/Classifier;*=
+;
+
+supplement-ee.hitsa.ois.domain.diploma.DiplomaSupplement2getStatus()Ñ
+Å
+ó
+äD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/DocumentService.java≥. ≥(}
+%20boolean"Zee.hitsa.ois.util.ClassifierUtil#equals(Ljava/lang/Enum;Lee/hitsa/ois/domain/Classifier;)Z*$""
+ ee.hitsa.ois.util.ClassifierUtil**
+(
+%18!ee.hitsa.ois.enums.DocumentStatus*'
+%
+%19ee.hitsa.ois.domain.ClassifierŸ
+÷
+ó
+äD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/DocumentService.java≥ ¥(4
+%21void"Mee.hitsa.ois.exception.AssertionFailedException#throwIf(ZLjava/lang/String;)V*3"1
+/ee.hitsa.ois.exception.AssertionFailedException*
+""*!
+supplement is already printed˝
+˙
+ó
+äD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/DocumentService.javaµ! µ(#&
+%22javax.persistence.EntityManager"__id*0*.&
+$ee.hitsa.ois.service.DocumentService"
+em’
+“
+ó
+äD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/DocumentService.javaµC µ(c(
+%23!ee.hitsa.ois.enums.DocumentStatus"__id*
+""ìê
+ó
+äD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/DocumentService.javaµC µ(j
+%24java.lang.String"'java.lang.Enum#name()Ljava/lang/String;**
+(
+%23!ee.hitsa.ois.enums.DocumentStatus2name()©¶
+ó
+äD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/DocumentService.javaµ! µ(k%
+%25ee.hitsa.ois.domain.Classifier"cjavax.persistence.EntityManager#getReference(Ljava/lang/Class;Ljava/lang/Object;)Ljava/lang/Object;*(
+&
+%22javax.persistence.EntityManager*
+""*
+
+%24java.lang.String21getReference(Ljava/lang/Class;Ljava/lang/Object;)õò
+ó
+äD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/DocumentService.javaµ µ(l
+%26void"Zee.hitsa.ois.domain.diploma.DiplomaSupplement#setStatus(Lee/hitsa/ois/domain/Classifier;)V*=
+;
+
+supplement-ee.hitsa.ois.domain.diploma.DiplomaSupplement*'
+%
+%25ee.hitsa.ois.domain.Classifier2+setStatus(Lee/hitsa/ois/domain/Classifier;)*
+6*â
+8ó
+äD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/DocumentService.javaØ Ø($‘
+—
+ó
+äD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/DocumentService.javaØD Ø(d'
+%9!ee.hitsa.ois.enums.DocumentStatus"__id*
+""ÔÏ
+ó
+äD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/DocumentService.javaØf Ø(~%
+%10ee.hitsa.ois.domain.Classifier"[ee.hitsa.ois.domain.diploma.DiplomaSupplement#getStatusEn()Lee/hitsa/ois/domain/Classifier;*=
+;
+
+supplement-ee.hitsa.ois.domain.diploma.DiplomaSupplement2getStatusEn()É
+Ä
+ó
+äD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/DocumentService.javaØ. Ø(
+%11boolean"Zee.hitsa.ois.util.ClassifierUtil#equals(Ljava/lang/Enum;Lee/hitsa/ois/domain/Classifier;)Z*$""
+ ee.hitsa.ois.util.ClassifierUtil*)
+'
+%9!ee.hitsa.ois.enums.DocumentStatus*'
+%
+%10ee.hitsa.ois.domain.ClassifierŸ
+÷
+ó
+äD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/DocumentService.javaØ ∞(4
+%12void"Mee.hitsa.ois.exception.AssertionFailedException#throwIf(ZLjava/lang/String;)V*3"1
+/ee.hitsa.ois.exception.AssertionFailedException*
+""*!
+supplement is already printed˝
+˙
+ó
+äD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/DocumentService.java±# ±(%&
+%13javax.persistence.EntityManager"__id*0*.&
+$ee.hitsa.ois.service.DocumentService"
+em’
+“
+ó
+äD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/DocumentService.java±E ±(e(
+%14!ee.hitsa.ois.enums.DocumentStatus"__id*
+""ìê
+ó
+äD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/DocumentService.java±E ±(l
+%15java.lang.String"'java.lang.Enum#name()Ljava/lang/String;**
+(
+%14!ee.hitsa.ois.enums.DocumentStatus2name()©¶
+ó
+äD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/DocumentService.java±# ±(m%
+%16ee.hitsa.ois.domain.Classifier"cjavax.persistence.EntityManager#getReference(Ljava/lang/Class;Ljava/lang/Object;)Ljava/lang/Object;*(
+&
+%13javax.persistence.EntityManager*
+""*
+
+%15java.lang.String21getReference(Ljava/lang/Class;Ljava/lang/Object;)üú
+ó
+äD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/DocumentService.java± ±(n
+%17void"\ee.hitsa.ois.domain.diploma.DiplomaSupplement#setStatusEn(Lee/hitsa/ois/domain/Classifier;)V*=
+;
+
+supplement-ee.hitsa.ois.domain.diploma.DiplomaSupplement*'
+%
+%16ee.hitsa.ois.domain.Classifier2-setStatusEn(Lee/hitsa/ois/domain/Classifier;)*
+6*”
+9ó
+äD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/DocumentService.java™, ™(<á
+Ñ
+ó
+äD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/DocumentService.java™, ™(V4
+%0.ee.hitsa.ois.domain.directive.DirectiveStudent"¶ee.hitsa.ois.service.DocumentService#directiveStudent(Lee/hitsa/ois/service/security/HoisUserDetails;Ljava/lang/Long;)Lee/hitsa/ois/domain/directive/DirectiveStudent;*(&
+$ee.hitsa.ois.service.DocumentService*7
+5
+user-ee.hitsa.ois.service.security.HoisUserDetails*&
+$
+directiveStudentIdjava.lang.Longü
+ú
+ó
+äD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/DocumentService.java™ ™(WB
+directiveStudent.ee.hitsa.ois.domain.directive.DirectiveStudent"__id*6
+4
+%0.ee.hitsa.ois.domain.directive.DirectiveStudentÿ
+’
+ó
+äD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/DocumentService.java´' ´(F3
+%1-ee.hitsa.ois.domain.diploma.DiplomaSupplement"ìee.hitsa.ois.service.DocumentService#getSupplement(Lee/hitsa/ois/domain/directive/DirectiveStudent;)Lee/hitsa/ois/domain/diploma/DiplomaSupplement;*(&
+$ee.hitsa.ois.service.DocumentService*D
+B
+directiveStudent.ee.hitsa.ois.domain.directive.DirectiveStudentó
+î
+ó
+äD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/DocumentService.java´ ´(G;
+
+supplement-ee.hitsa.ois.domain.diploma.DiplomaSupplement"__id*5
+3
+%1-ee.hitsa.ois.domain.diploma.DiplomaSupplement‘
+—
+ó
+äD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/DocumentService.java¨@ ¨(`'
+%2!ee.hitsa.ois.enums.DocumentStatus"__id*
+""ˆÛ
+ó
+äD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/DocumentService.java≠ ≠(')
+%3#ee.hitsa.ois.domain.diploma.Diploma"_ee.hitsa.ois.domain.diploma.DiplomaSupplement#getDiploma()Lee/hitsa/ois/domain/diploma/Diploma;*=
+;
+
+supplement-ee.hitsa.ois.domain.diploma.DiplomaSupplement2getDiploma()ŒÀ
+ó
+äD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/DocumentService.java≠ ≠(3$
+%4ee.hitsa.ois.domain.Classifier"Oee.hitsa.ois.domain.diploma.Diploma#getStatus()Lee/hitsa/ois/domain/Classifier;*+
+)
+%3#ee.hitsa.ois.domain.diploma.Diploma2getStatus()Å
+˛
+ó
+äD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/DocumentService.java¨* ≠(4
+%5boolean"Zee.hitsa.ois.util.ClassifierUtil#equals(Ljava/lang/Enum;Lee/hitsa/ois/domain/Classifier;)Z*$""
+ ee.hitsa.ois.util.ClassifierUtil*)
+'
+%2!ee.hitsa.ois.enums.DocumentStatus*&
+$
+%4ee.hitsa.ois.domain.Classifier—
+Œ
+ó
+äD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/DocumentService.java¨ ≠(O
+
+%6void"Mee.hitsa.ois.exception.AssertionFailedException#throwIf(ZLjava/lang/String;)V*3"1
+/ee.hitsa.ois.exception.AssertionFailedException*
+""*
+Diploma is not printedŒ
+À
+ó
+äD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/DocumentService.javaÆ Æ(!
+%7ee.hitsa.ois.enums.Language"__id*
+""¿Ω
+ó
+äD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/DocumentService.javaÆ Æ($
+%8boolean"*java.lang.Enum#equals(Ljava/lang/Object;)Z*#
+!
+%7ee.hitsa.ois.enums.Language*%
+#
+langee.hitsa.ois.enums.Language2equals(Ljava/lang/Object;)*
+7
+8*∑
+0 "Ø
+ó
+äD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/DocumentService.java… …(
+implicit return*‰
+1ó
+äD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/DocumentService.javaª ª(Õ
+ 
+ó
+äD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/DocumentService.javaª ª( 
+formee.hitsa.ois.domain.Form"__id*
+""Ï
+È
+ó
+äD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/DocumentService.javaª ª( 
+formee.hitsa.ois.domain.Form"
+__arrayGet*
+
+%34java.util.List*
+""*
+4
+0:5
+user-ee.hitsa.ois.service.security.HoisUserDetails:$
+directiveStudentIdjava.lang.Long:
+formIdsjava.util.List:#
+langee.hitsa.ois.enums.LanguageB(&
+$ee.hitsa.ois.service.DocumentService

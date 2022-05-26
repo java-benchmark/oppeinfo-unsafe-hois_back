@@ -1,0 +1,117 @@
+
+wee.hitsa.ois.service.JournalUnconfirmedService#count(Lee/hitsa/ois/service/security/HoisUserDetails;)Ljava/lang/Number;Ÿ
+”D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/JournalUnconfirmedService.java2 2("1*ý,
+1Ÿ
+”D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/JournalUnconfirmedService.java3; 3(Kýú
+Ÿ
+”D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/JournalUnconfirmedService.java3% 3(:-
+%0'ee.hitsa.ois.util.JpaNativeQueryBuilder"'ee.hitsa.ois.util.JpaNativeQueryBuilderµ
+²
+Ÿ
+”D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/JournalUnconfirmedService.java3! 3(L
+%1"Cee.hitsa.ois.util.JpaNativeQueryBuilder#<init>(Ljava/lang/String;)V*/
+-
+%0'ee.hitsa.ois.util.JpaNativeQueryBuilder*
+from journal j‹
+ˆ
+Ÿ
+”D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/JournalUnconfirmedService.java3 3(M-
+qb'ee.hitsa.ois.util.JpaNativeQueryBuilder"__id*/
+-
+%0'ee.hitsa.ois.util.JpaNativeQueryBuilderÐÍ
+Ÿ
+”D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/JournalUnconfirmedService.java4A 4(S
+%2java.lang.Long"Kee.hitsa.ois.service.security.HoisUserDetails#getSchoolId()Ljava/lang/Long;*7
+5
+user-ee.hitsa.ois.service.security.HoisUserDetails2getSchoolId()ÞÛ
+Ÿ
+”D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/JournalUnconfirmedService.java4 4(T
+
+%3void"oee.hitsa.ois.util.JpaNativeQueryBuilder#requiredCriteria(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Long;)V*/
+-
+qb'ee.hitsa.ois.util.JpaNativeQueryBuilder*
+j.school_id = :schoolId*
+
+schoolId*
+
+%2java.lang.Long2FrequiredCriteria(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Long;)Ë
+È
+Ÿ
+”D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/JournalUnconfirmedService.java5 5(3
+%4java.lang.String"__id*
+""ÒÏ
+Ÿ
+”D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/JournalUnconfirmedService.java5B 5(U
+%5java.lang.Long"Lee.hitsa.ois.service.security.HoisUserDetails#getTeacherId()Ljava/lang/Long;*7
+5
+user-ee.hitsa.ois.service.security.HoisUserDetails2getTeacherId()ÜÙ
+Ÿ
+”D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/JournalUnconfirmedService.java5 5(V
+
+%6void"oee.hitsa.ois.util.JpaNativeQueryBuilder#optionalCriteria(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Long;)V*/
+-
+qb'ee.hitsa.ois.util.JpaNativeQueryBuilder*
+
+%4java.lang.String*
+	teacherId*
+
+%5java.lang.Long2FoptionalCriteria(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Long;)‰
+†
+Ÿ
+”D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/JournalUnconfirmedService.java6S 6(b
+%7java.time.LocalDate".java.time.LocalDate#now()Ljava/time/LocalDate;*"
+java.time.LocalDate¾
+»
+Ÿ
+”D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/JournalUnconfirmedService.java6m 6(v	
+%8int"__id*
+""¯¬
+Ÿ
+”D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/JournalUnconfirmedService.java6S 6(w
+%9java.time.LocalDate"5java.time.LocalDate#plusWeeks(J)Ljava/time/LocalDate;*
+
+%7java.time.LocalDate*
+	
+%8int2plusWeeks(J)€ý
+Ÿ
+”D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/JournalUnconfirmedService.java6 6(x
+%10void"tee.hitsa.ois.util.JpaNativeQueryBuilder#requiredCriteria(Ljava/lang/String;Ljava/lang/String;Ljava/time/LocalDate;)V*/
+-
+qb'ee.hitsa.ois.util.JpaNativeQueryBuilder*$"
+ j.end_date <= :twoWeeksBeforeEnd*
+twoWeeksBeforeEnd*
+
+%9java.time.LocalDate2KrequiredCriteria(Ljava/lang/String;Ljava/lang/String;Ljava/time/LocalDate;)Ü
+Ù
+Ÿ
+”D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/JournalUnconfirmedService.java7K 7(i'
+%11 ee.hitsa.ois.enums.JournalStatus"__id*
+""üù
+Ÿ
+”D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/JournalUnconfirmedService.java7 7(j
+%12void"oee.hitsa.ois.util.JpaNativeQueryBuilder#requiredCriteria(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Enum;)V*/
+-
+qb'ee.hitsa.ois.util.JpaNativeQueryBuilder*!
+j.status_code = :notConfirmed*
+notConfirmed*)
+'
+%11 ee.hitsa.ois.enums.JournalStatus2FrequiredCriteria(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Enum;)
+Œ
+Ÿ
+”D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/JournalUnconfirmedService.java8 8(&
+%13javax.persistence.EntityManager"__id*:*80
+.ee.hitsa.ois.service.JournalUnconfirmedService"
+em§¤
+Ÿ
+”D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/JournalUnconfirmedService.java8 8(
+%14java.lang.Number"bee.hitsa.ois.util.JpaNativeQueryBuilder#count(Ljavax/persistence/EntityManager;)Ljava/lang/Number;*/
+-
+qb'ee.hitsa.ois.util.JpaNativeQueryBuilder*(
+&
+%13javax.persistence.EntityManager2(count(Ljavax/persistence/EntityManager;)"½
+Ÿ
+”D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/JournalUnconfirmedService.java8 8(
+
+%14java.lang.Number:5
+user-ee.hitsa.ois.service.security.HoisUserDetailsB20
+.ee.hitsa.ois.service.JournalUnconfirmedService

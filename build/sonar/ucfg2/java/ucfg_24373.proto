@@ -1,0 +1,63 @@
+
+mee.hitsa.ois.service.StudyYearScheduleService#getStudyYearsWithStudyPeriods(Ljava/lang/Long;)Ljava/util/List; 
+“D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/StudyYearScheduleService.java´ ´(;"1*®
+1 
+“D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/StudyYearScheduleService.javaµ µ(!Ž
+‹
+ 
+“D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/StudyYearScheduleService.javaµ µ(!%
+%0javax.persistence.EntityManager"__id*9*7/
+-ee.hitsa.ois.service.StudyYearScheduleService"
+em›
+˜
+ 
+“D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/StudyYearScheduleService.javaµ. ¶((
+%1java.lang.String"__concat*75
+3select sy from StudyYear sy where sy.school.id = ?1*
+ order by sy.endDate·´
+ 
+“D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/StudyYearScheduleService.javaµ ¶(:"
+%2javax.persistence.TypedQuery"njavax.persistence.EntityManager#createQuery(Ljava/lang/String;Ljava/lang/Class;)Ljavax/persistence/TypedQuery;*'
+%
+%0javax.persistence.EntityManager*
+
+%1java.lang.String*
+""20createQuery(Ljava/lang/String;Ljava/lang/Class;)•’
+ 
+“D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/StudyYearScheduleService.javaµ ·(*"
+%3javax.persistence.TypedQuery"\javax.persistence.TypedQuery#setParameter(ILjava/lang/Object;)Ljavax/persistence/TypedQuery;*$
+"
+%2javax.persistence.TypedQuery*2*
+
+schoolIdjava.lang.Long2!setParameter(ILjava/lang/Object;)±®
+ 
+“D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/StudyYearScheduleService.javaµ ·(:
+%4java.util.List"<javax.persistence.TypedQuery#getResultList()Ljava/util/List;*$
+"
+%3javax.persistence.TypedQuery2getResultList()Ü
+Ù
+ 
+“D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/StudyYearScheduleService.javaµ ·(;
+datajava.util.List"__id*
+
+%4java.util.List£
+ 
+ 
+“D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/StudyYearScheduleService.java¸' ¼(	!
+%5java.util.function.Function"__declareFunction*EC
+A__sonar_lambda_2569$ee.hitsa.ois.service.StudyYearScheduleService
+Š
+ 
+“D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/StudyYearScheduleService.java¸ ¼(
+%9java.util.List"nee.hitsa.ois.util.StreamUtil#toMappedList(Ljava/util/function/Function;Ljava/util/Collection;)Ljava/util/List;* "
+ee.hitsa.ois.util.StreamUtil*#
+!
+%5java.util.function.Function*
+
+datajava.util.List"»
+ 
+“D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/StudyYearScheduleService.java¸ ¼(
+
+%9java.util.List:
+schoolIdjava.lang.LongB1/
+-ee.hitsa.ois.service.StudyYearScheduleService

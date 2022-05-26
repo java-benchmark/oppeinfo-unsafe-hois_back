@@ -1,0 +1,322 @@
+
+Žee.hitsa.ois.service.DirectiveConfirmService#findScholarshipsAvailableForTermination(Lee/hitsa/ois/domain/directive/Directive;)Ljava/util/Map;Ÿ
+’D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/DirectiveConfirmService.java©	& ©	(M"10*¥
+2Ÿ
+’D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/DirectiveConfirmService.java¸	f ¸	(oùö
+ 
+’D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/DirectiveConfirmService.java¸	f ¸	(„%
+%29ee.hitsa.ois.domain.Classifier"\ee.hitsa.ois.domain.directive.Directive#getScholarshipType()Lee/hitsa/ois/domain/Classifier;*6
+4
+	directive'ee.hitsa.ois.domain.directive.Directive2getScholarshipType()ü
+ù
+ 
+’D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/DirectiveConfirmService.java¸	f ¸	(„%
+%27ee.hitsa.ois.domain.Classifier"__id*'
+%
+%29ee.hitsa.ois.domain.Classifier*
+1*£
+3Ÿ
+’D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/DirectiveConfirmService.java¸	E ¸	(Nøõ
+Ÿ
+’D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/DirectiveConfirmService.java¸	E ¸	(c%
+%28ee.hitsa.ois.domain.Classifier"\ee.hitsa.ois.domain.directive.Directive#getScholarshipEhis()Lee/hitsa/ois/domain/Classifier;*6
+4
+	directive'ee.hitsa.ois.domain.directive.Directive2getScholarshipEhis()û
+ø
+Ÿ
+’D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/DirectiveConfirmService.java¸	E ¸	(c%
+%27ee.hitsa.ois.domain.Classifier"__id*'
+%
+%28ee.hitsa.ois.domain.Classifier*
+1*„
+4Ÿ
+’D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/DirectiveConfirmService.java±	5 ³	(Zþ
+û
+Ÿ
+’D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/DirectiveConfirmService.java±	5 ³	(Z
+%18java.lang.String"__concat*
+
+%14java.lang.String*
+
+%15java.lang.String¶
+³
+ 
+’D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/DirectiveConfirmService.java±	5 ³	(«
+%19java.lang.String"__concat*
+
+%18java.lang.String*PN
+L.code = ?3 and ds.directive.status.code = ?4 and ds.endDate >= CURRENT_DATE ó
+ð
+ 
+’D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/DirectiveConfirmService.java±	5 ´	(˜
+%20java.lang.String"__concat*
+
+%19java.lang.String*Œ‰
+†and (not exists (select ds2 from DirectiveStudent ds2 where ds2.canceled = false and ds2.directive.type.code = ?5 and ds2.id = ds.id) »
+¸
+Ÿ
+’D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/DirectiveConfirmService.java±	5 µ	(d
+%21java.lang.String"__concat*
+
+%20java.lang.String*VT
+Ror ds.id in (select ds3.id from DirectiveStudent ds3 where ds3.directive.id = ?6))¹¶
+Ÿ
+’D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/DirectiveConfirmService.java±	& µ	(}#
+%22javax.persistence.TypedQuery"njavax.persistence.EntityManager#createQuery(Ljava/lang/String;Ljava/lang/Class;)Ljavax/persistence/TypedQuery;*(
+&
+%12javax.persistence.EntityManager*
+
+%21java.lang.String*
+""20createQuery(Ljava/lang/String;Ljava/lang/Class;)˜•
+Ÿ
+’D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/DirectiveConfirmService.java±	& ¶	((#
+%23javax.persistence.TypedQuery"\javax.persistence.TypedQuery#setParameter(ILjava/lang/Object;)Ljavax/persistence/TypedQuery;*%
+#
+%22javax.persistence.TypedQuery*2*
+
+
+studentIdsjava.util.List2!setParameter(ILjava/lang/Object;)Ü
+Ù
+Ÿ
+’D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/DirectiveConfirmService.java·	 ·	(<'
+%24 ee.hitsa.ois.enums.DirectiveType"__id*
+""š—
+Ÿ
+’D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/DirectiveConfirmService.java·	 ·	(C
+%25java.lang.String"'java.lang.Enum#name()Ljava/lang/String;*)
+'
+%24 ee.hitsa.ois.enums.DirectiveType2name()“
+Ÿ
+’D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/DirectiveConfirmService.java±	& ·	(D#
+%26javax.persistence.TypedQuery"\javax.persistence.TypedQuery#setParameter(ILjava/lang/Object;)Ljavax/persistence/TypedQuery;*%
+#
+%23javax.persistence.TypedQuery*2*
+
+%25java.lang.String2!setParameter(ILjava/lang/Object;)*
+2
+3*Œ
+5Ÿ
+’D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/DirectiveConfirmService.java³	H ³	(Yß
+Ü
+Ÿ
+’D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/DirectiveConfirmService.java³	H ³	(Y
+%15java.lang.String"__id*
+
+%17java.lang.String*
+4*Œ
+6Ÿ
+’D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/DirectiveConfirmService.java³	4 ³	(Eß
+Ü
+Ÿ
+’D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/DirectiveConfirmService.java³	4 ³	(E
+%15java.lang.String"__id*
+
+%16java.lang.String*
+4*å
+7Ÿ
+’D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/DirectiveConfirmService.java¯	  ¯	(* 
+
+Ÿ
+’D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/DirectiveConfirmService.java¯	8 ¯	(]!
+%6java.util.function.Function"__declareFunction*CA
+?__sonar_lambda_746$ee.hitsa.ois.service.DirectiveConfirmServiceÉÆ
+Ÿ
+’D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/DirectiveConfirmService.java¯	_ ¯	(v
+%9java.util.List"Eee.hitsa.ois.domain.directive.Directive#getStudents()Ljava/util/List;*6
+4
+	directive'ee.hitsa.ois.domain.directive.Directive2getStudents()‹
+ˆ
+Ÿ
+’D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/DirectiveConfirmService.java¯	  ¯	(w
+%10java.util.List"nee.hitsa.ois.util.StreamUtil#toMappedList(Ljava/util/function/Function;Ljava/util/Collection;)Ljava/util/List;* "
+ee.hitsa.ois.util.StreamUtil*#
+!
+%6java.util.function.Function*
+
+%9java.util.Listâ
+ß
+Ÿ
+’D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/DirectiveConfirmService.java¯	 ¯	(x
+
+studentIdsjava.util.List"__id*
+
+%10java.util.Listøõ
+Ÿ
+’D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/DirectiveConfirmService.java°	 °	(;%
+%11ee.hitsa.ois.domain.Classifier"\ee.hitsa.ois.domain.directive.Directive#getScholarshipEhis()Lee/hitsa/ois/domain/Classifier;*6
+4
+	directive'ee.hitsa.ois.domain.directive.Directive2getScholarshipEhis()
+Š
+Ÿ
+’D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/DirectiveConfirmService.java±	& ±	((&
+%12javax.persistence.EntityManager"__id*8*6.
+,ee.hitsa.ois.service.DirectiveConfirmService"
+emË
+È
+Ÿ
+’D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/DirectiveConfirmService.java±	5 ²	(f
+%13java.lang.String"__concat*'%
+#select ds from DirectiveStudent ds *XV
+Twhere ds.canceled = false and ds.student.id in (?1) and ds.directive.type.code = ?2 ú
+÷
+Ÿ
+’D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/DirectiveConfirmService.java±	5 ³	(#
+%14java.lang.String"__concat*
+
+%13java.lang.String*
+and ds.directive.*
+5
+6*ê
+8Ÿ
+’D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/DirectiveConfirmService.java¬	 ¬	(†
+ƒ
+Ÿ
+’D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/DirectiveConfirmService.java¬	 ¬	()
+%5java.util.Map"/java.util.Collections#emptyMap()Ljava/util/Map;*"
+java.util.Collections"¹
+Ÿ
+’D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/DirectiveConfirmService.java¬	 ¬	(*
+
+%5java.util.Map*î
+9Ÿ
+’D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/DirectiveConfirmService.java«	 «	(ÉÆ
+Ÿ
+’D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/DirectiveConfirmService.java«	 «	(*
+%3java.util.List"Eee.hitsa.ois.domain.directive.Directive#getStudents()Ljava/util/List;*6
+4
+	directive'ee.hitsa.ois.domain.directive.Directive2getStudents()òï
+Ÿ
+’D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/DirectiveConfirmService.java«	 «	(4
+%4boolean"java.util.List#isEmpty()Z*
+
+%3java.util.List2	isEmpty()*
+7
+8*û
+10Ÿ
+’D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/DirectiveConfirmService.javaª	 ª	(áÞ
+Ÿ
+’D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/DirectiveConfirmService.javaª	" ª	(5$
+%0ee.hitsa.ois.domain.Classifier"Qee.hitsa.ois.domain.directive.Directive#getType()Lee/hitsa/ois/domain/Classifier;*6
+4
+	directive'ee.hitsa.ois.domain.directive.Directive2	getType()Û
+Ø
+Ÿ
+’D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/DirectiveConfirmService.javaª	7 ª	(W&
+%1 ee.hitsa.ois.enums.DirectiveType"__id*
+""ˆ
+…
+Ÿ
+’D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/DirectiveConfirmService.javaª	 ª	(X
+%2boolean"Zee.hitsa.ois.util.ClassifierUtil#oneOf(Lee/hitsa/ois/domain/Classifier;[Ljava/lang/Enum;)Z*$""
+ ee.hitsa.ois.util.ClassifierUtil*&
+$
+%0ee.hitsa.ois.domain.Classifier*(
+&
+%1 ee.hitsa.ois.enums.DirectiveType*
+8
+9*è+
+1 
+’D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/DirectiveConfirmService.java¸	 ¸	(…ì
+é
+ 
+’D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/DirectiveConfirmService.java¸	 ¸	(…
+%30java.lang.String"`ee.hitsa.ois.util.EntityUtil#getNullableCode(Lee/hitsa/ois/domain/Classifier;)Ljava/lang/String;* "
+ee.hitsa.ois.util.EntityUtil*'
+%
+%27ee.hitsa.ois.domain.Classifier”‘
+ 
+’D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/DirectiveConfirmService.java±	& ¸	(†#
+%31javax.persistence.TypedQuery"\javax.persistence.TypedQuery#setParameter(ILjava/lang/Object;)Ljavax/persistence/TypedQuery;*%
+#
+%26javax.persistence.TypedQuery*2*
+
+%30java.lang.String2!setParameter(ILjava/lang/Object;)Þ
+Û
+Ÿ
+’D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/DirectiveConfirmService.java¹	 ¹	(H)
+%32"ee.hitsa.ois.enums.DirectiveStatus"__id*
+""œ™
+Ÿ
+’D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/DirectiveConfirmService.java¹	 ¹	(O
+%33java.lang.String"'java.lang.Enum#name()Ljava/lang/String;*+
+)
+%32"ee.hitsa.ois.enums.DirectiveStatus2name()“
+Ÿ
+’D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/DirectiveConfirmService.java±	& ¹	(P#
+%34javax.persistence.TypedQuery"\javax.persistence.TypedQuery#setParameter(ILjava/lang/Object;)Ljavax/persistence/TypedQuery;*%
+#
+%31javax.persistence.TypedQuery*2*
+
+%33java.lang.String2!setParameter(ILjava/lang/Object;)Ü
+Ù
+Ÿ
+’D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/DirectiveConfirmService.javaº	 º	(='
+%35 ee.hitsa.ois.enums.DirectiveType"__id*
+""š—
+Ÿ
+’D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/DirectiveConfirmService.javaº	 º	(D
+%36java.lang.String"'java.lang.Enum#name()Ljava/lang/String;*)
+'
+%35 ee.hitsa.ois.enums.DirectiveType2name()“
+Ÿ
+’D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/DirectiveConfirmService.java±	& º	(E#
+%37javax.persistence.TypedQuery"\javax.persistence.TypedQuery#setParameter(ILjava/lang/Object;)Ljavax/persistence/TypedQuery;*%
+#
+%34javax.persistence.TypedQuery*2*
+
+%36java.lang.String2!setParameter(ILjava/lang/Object;)ò
+ï
+Ÿ
+’D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/DirectiveConfirmService.java»	 »	(8
+%38java.lang.Long"Zee.hitsa.ois.util.EntityUtil#getId(Lee/hitsa/ois/domain/BaseEntityWithId;)Ljava/lang/Long;* "
+ee.hitsa.ois.util.EntityUtil*6
+4
+	directive'ee.hitsa.ois.domain.directive.Directive‘Ž
+Ÿ
+’D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/DirectiveConfirmService.java±	& »	(9#
+%39javax.persistence.TypedQuery"\javax.persistence.TypedQuery#setParameter(ILjava/lang/Object;)Ljavax/persistence/TypedQuery;*%
+#
+%37javax.persistence.TypedQuery*2*
+
+%38java.lang.Long2!setParameter(ILjava/lang/Object;)²¯
+Ÿ
+’D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/DirectiveConfirmService.java±	& ¼	(
+%40java.util.List"<javax.persistence.TypedQuery#getResultList()Ljava/util/List;*%
+#
+%39javax.persistence.TypedQuery2getResultList()Ü
+Ù
+Ÿ
+’D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/DirectiveConfirmService.java±	 ¼	(
+datajava.util.List"__id*
+
+%40java.util.List¡ž
+Ÿ
+’D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/DirectiveConfirmService.java¾	 ¾	(
+%41java.util.stream.Stream"6java.util.Collection#stream()Ljava/util/stream/Stream;*
+
+datajava.util.List2stream()¡
+ž
+Ÿ
+’D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/DirectiveConfirmService.java¾	; ¾	(`"
+%42java.util.function.Function"__declareFunction*CA
+?__sonar_lambda_747$ee.hitsa.ois.service.DirectiveConfirmServiceò
+ï
+Ÿ
+’D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/DirectiveConfirmService.java¾	% ¾	(a!
+%45java.util.stream.Collector"ajava.util.stream.Collectors#groupingBy(Ljava/util/function/Function;)Ljava/util/stream/Collector;*"
+java.util.stream.Collectors*$
+"
+%42java.util.function.Functionú÷
+Ÿ
+’D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/DirectiveConfirmService.java¾	 ¾	(b
+%46java.util.Map"Ojava.util.stream.Stream#collect(Ljava/util/stream/Collector;)Ljava/lang/Object;* 
+
+%41java.util.stream.Stream*#
+!
+%45java.util.stream.Collector2%collect(Ljava/util/stream/Collector;)"º
+Ÿ
+’D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/DirectiveConfirmService.java¾	 ¾	(c
+
+%46java.util.Map:4
+	directive'ee.hitsa.ois.domain.directive.DirectiveB0.
+,ee.hitsa.ois.service.DirectiveConfirmService

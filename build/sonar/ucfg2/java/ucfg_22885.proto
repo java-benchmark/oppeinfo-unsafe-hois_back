@@ -1,0 +1,50 @@
+
+Wee.hitsa.ois.service.TeacherOccupationService#listAll(Ljava/lang/Long;)Ljava/util/List;ž
+“D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/TeacherOccupationService.java6& 6(-"1*ð
+1ž
+“D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/TeacherOccupationService.java7. 7(0Œ
+‰
+ž
+“D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/TeacherOccupationService.java7. 7(0%
+%0javax.persistence.EntityManager"__id*9*7/
+-ee.hitsa.ois.service.TeacherOccupationService"
+emÚ×
+Ÿ
+“D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/TeacherOccupationService.java7. 7(‘"
+%1javax.persistence.TypedQuery"njavax.persistence.EntityManager#createQuery(Ljava/lang/String;Ljava/lang/Class;)Ljavax/persistence/TypedQuery;*'
+%
+%0javax.persistence.EntityManager*<:
+8select t from TeacherOccupation t where t.school.id = ?1*
+""20createQuery(Ljava/lang/String;Ljava/lang/Class;)“
+ž
+“D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/TeacherOccupationService.java7. 8(*"
+%2javax.persistence.TypedQuery"\javax.persistence.TypedQuery#setParameter(ILjava/lang/Object;)Ljavax/persistence/TypedQuery;*$
+"
+%1javax.persistence.TypedQuery*2*
+
+schoolIdjava.lang.Long2!setParameter(ILjava/lang/Object;)¯¬
+ž
+“D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/TeacherOccupationService.java7. 8(:
+%3java.util.List"<javax.persistence.TypedQuery#getResultList()Ljava/util/List;*$
+"
+%2javax.persistence.TypedQuery2getResultList()á
+Þ
+ž
+“D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/TeacherOccupationService.java7 8(;
+occupationsjava.util.List"__id*
+
+%3java.util.Listõ
+ò
+ž
+“D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/TeacherOccupationService.java9 9(M
+%4java.util.List"nee.hitsa.ois.util.StreamUtil#toMappedList(Ljava/util/function/Function;Ljava/util/Collection;)Ljava/util/List;* "
+ee.hitsa.ois.util.StreamUtil*
+""*
+
+occupationsjava.util.List"¹
+ž
+“D:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/TeacherOccupationService.java9 9(N
+
+%4java.util.List:
+schoolIdjava.lang.LongB1/
+-ee.hitsa.ois.service.TeacherOccupationService

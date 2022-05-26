@@ -1,0 +1,899 @@
+
+±ee.hitsa.ois.service.kutseregister.KutseregisterService#importFromKutseregister(Ljava/lang/Long;Lee/hitsa/ois/web/commandobject/OccupationCertificateImportForm;)Ljava/util/List;®
+ùD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/kutseregister/KutseregisterService.javaJ1 J(H"16*∏-
+14®
+ùD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/kutseregister/KutseregisterService.javaX X(°
+û
+®
+ùD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/kutseregister/KutseregisterService.javaX X(&
+%17javax.persistence.EntityManager"__id*C*A9
+7ee.hitsa.ois.service.kutseregister.KutseregisterService"
+emì
+ê
+®
+ùD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/kutseregister/KutseregisterService.javaX, Y(
+%18java.lang.String"__concat*MK
+Iselect cv.id, cocl.name_et, cocl.code, cocl.valid_from, cocl.valid_thru, *qo
+mcscl.name_et as cname_et, cscl.code as ccode, cscl.valid_from as cvalid_from, cscl.valid_thru as cvalid_thru ç
+ä
+®
+ùD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/kutseregister/KutseregisterService.javaX, Z(-
+%19java.lang.String"__concat*
+
+%18java.lang.String*
+from curriculum_version cv ü
+ú
+®
+ùD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/kutseregister/KutseregisterService.javaX, [(?
+%20java.lang.String"__concat*
+
+%19java.lang.String*1/
+-join curriculum c on cv.curriculum_id = c.id ´
+®
+®
+ùD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/kutseregister/KutseregisterService.javaX, \(K
+%21java.lang.String"__concat*
+
+%20java.lang.String*=;
+9join curriculum_occupation co on co.curriculum_id = c.id ©
+¶
+®
+ùD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/kutseregister/KutseregisterService.javaX, ](I
+%22java.lang.String"__concat*
+
+%21java.lang.String*;9
+7join classifier cocl on co.occupation_code = cocl.code «
+ƒ
+®
+ùD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/kutseregister/KutseregisterService.javaX, ^(g
+%23java.lang.String"__concat*
+
+%22java.lang.String*YW
+Uleft join curriculum_occupation_speciality cs on cs.curriculum_occupation_id = co.id Æ
+´
+®
+ùD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/kutseregister/KutseregisterService.javaX, _(N
+%24java.lang.String"__concat*
+
+%23java.lang.String*@>
+<left join classifier cscl on cs.speciality_code = cscl.code ö
+ó
+®
+ùD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/kutseregister/KutseregisterService.javaX, `(:
+%25java.lang.String"__concat*
+
+%24java.lang.String*,*
+(where c.school_id = ?1 and cv.id in (?2)öó
+®
+ùD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/kutseregister/KutseregisterService.javaX `(;
+%26javax.persistence.Query"^javax.persistence.EntityManager#createNativeQuery(Ljava/lang/String;)Ljavax/persistence/Query;*(
+&
+%17javax.persistence.EntityManager*
+
+%25java.lang.String2%createNativeQuery(Ljava/lang/String;)ãà
+®
+ùD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/kutseregister/KutseregisterService.javaX a(*
+%27javax.persistence.Query"Rjavax.persistence.Query#setParameter(ILjava/lang/Object;)Ljavax/persistence/Query;* 
+
+%26javax.persistence.Query*2*
+
+schoolIdjava.lang.Long2!setParameter(ILjava/lang/Object;)íè
+®
+ùD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/kutseregister/KutseregisterService.javab! b(@
+%28java.util.List"eee.hitsa.ois.web.commandobject.OccupationCertificateImportForm#getCurriculumVersion()Ljava/util/List;*L
+J
+criteria>ee.hitsa.ois.web.commandobject.OccupationCertificateImportForm2getCurriculumVersion()ÜÉ
+®
+ùD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/kutseregister/KutseregisterService.javaX b(A
+%29javax.persistence.Query"Rjavax.persistence.Query#setParameter(ILjava/lang/Object;)Ljavax/persistence/Query;* 
+
+%27javax.persistence.Query*2*
+
+%28java.util.List2!setParameter(ILjava/lang/Object;)±Æ
+®
+ùD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/kutseregister/KutseregisterService.javaX c( 
+%30java.util.List"7javax.persistence.Query#getResultList()Ljava/util/List;* 
+
+%29javax.persistence.Query2getResultList()Â
+‚
+®
+ùD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/kutseregister/KutseregisterService.javaX c(!
+datajava.util.List"__id*
+
+%30java.util.List€ÿ
+®
+ùD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/kutseregister/KutseregisterService.javad9 d(B
+%31java.util.HashMap"java.util.HashMapÓ
+Î
+®
+ùD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/kutseregister/KutseregisterService.javad5 d(D
+%32"java.util.HashMap#<init>()V*
+
+%31java.util.HashMapÓ
+Î
+®
+ùD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/kutseregister/KutseregisterService.javad d(E
+occupationsjava.util.Map"__id*
+
+%31java.util.HashMap*
+10*ª
+15®
+ùD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/kutseregister/KutseregisterService.javaV0 V(Rõò
+®
+ùD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/kutseregister/KutseregisterService.javaV V(/8
+%151ee.hitsa.ois.validation.ValidationFailedException"1ee.hitsa.ois.validation.ValidationFailedExceptionÊ
+„
+®
+ùD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/kutseregister/KutseregisterService.javaV V(S
+%16"Mee.hitsa.ois.validation.ValidationFailedException#<init>(Ljava/lang/String;)V*:
+8
+%151ee.hitsa.ois.validation.ValidationFailedException*$"
+ occupationcertificate.nostudents*
+0*Ã5
+16®
+ùD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/kutseregister/KutseregisterService.javaL= L(wÜÉ
+®
+ùD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/kutseregister/KutseregisterService.javaL' L(<-
+%0'ee.hitsa.ois.util.JpaNativeQueryBuilder"'ee.hitsa.ois.util.JpaNativeQueryBuilderË
+Â
+®
+ùD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/kutseregister/KutseregisterService.javaL# L(x
+%1"Cee.hitsa.ois.util.JpaNativeQueryBuilder#<init>(Ljava/lang/String;)V*/
+-
+%0'ee.hitsa.ois.util.JpaNativeQueryBuilder*<:
+8from student s inner join person p on s.person_id = p.idî
+ë
+®
+ùD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/kutseregister/KutseregisterService.javaL L(y-
+qb'ee.hitsa.ois.util.JpaNativeQueryBuilder"__id*/
+-
+%0'ee.hitsa.ois.util.JpaNativeQueryBuilderÌÍ
+®
+ùD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/kutseregister/KutseregisterService.javaM M(L
+
+%2void"oee.hitsa.ois.util.JpaNativeQueryBuilder#requiredCriteria(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Long;)V*/
+-
+qb'ee.hitsa.ois.util.JpaNativeQueryBuilder*
+s.school_id = :schoolId*
+
+schoolId*
+
+schoolIdjava.lang.Long2FrequiredCriteria(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Long;)íè
+©
+ùD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/kutseregister/KutseregisterService.javaNd N(É
+%3java.util.List"eee.hitsa.ois.web.commandobject.OccupationCertificateImportForm#getCurriculumVersion()Ljava/util/List;*L
+J
+criteria>ee.hitsa.ois.web.commandobject.OccupationCertificateImportForm2getCurriculumVersion()ïí
+©
+ùD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/kutseregister/KutseregisterService.javaN N(Ñ
+
+%4void"uee.hitsa.ois.util.JpaNativeQueryBuilder#requiredCriteria(Ljava/lang/String;Ljava/lang/String;Ljava/util/Collection;)V*/
+-
+qb'ee.hitsa.ois.util.JpaNativeQueryBuilder*31
+/s.curriculum_version_id in (:curriculumVersion)*
+curriculumVersion*
+
+%3java.util.List2LrequiredCriteria(Ljava/lang/String;Ljava/lang/String;Ljava/util/Collection;)“
+œ
+®
+ùD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/kutseregister/KutseregisterService.javaOD O(g
+%5java.util.List"__id*
+""ÙÒ
+®
+ùD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/kutseregister/KutseregisterService.javaO O(h
+
+%6void"uee.hitsa.ois.util.JpaNativeQueryBuilder#requiredCriteria(Ljava/lang/String;Ljava/lang/String;Ljava/util/Collection;)V*/
+-
+qb'ee.hitsa.ois.util.JpaNativeQueryBuilder*
+s.status_code in (:status)*
+
+status*
+
+%5java.util.List2LrequiredCriteria(Ljava/lang/String;Ljava/lang/String;Ljava/util/Collection;)áÑ
+®
+ùD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/kutseregister/KutseregisterService.javaPU P(o
+%7java.util.List"`ee.hitsa.ois.web.commandobject.OccupationCertificateImportForm#getStudentGroup()Ljava/util/List;*L
+J
+criteria>ee.hitsa.ois.web.commandobject.OccupationCertificateImportForm2getStudentGroup()ÖÇ
+®
+ùD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/kutseregister/KutseregisterService.javaP P(p
+
+%8void"uee.hitsa.ois.util.JpaNativeQueryBuilder#optionalCriteria(Ljava/lang/String;Ljava/lang/String;Ljava/util/Collection;)V*/
+-
+qb'ee.hitsa.ois.util.JpaNativeQueryBuilder*)'
+%s.student_group_id in (:studentGroup)*
+studentGroup*
+
+%7java.util.List2LoptionalCriteria(Ljava/lang/String;Ljava/lang/String;Ljava/util/Collection;)ŒÀ
+®
+ùD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/kutseregister/KutseregisterService.javaQ> Q(S<
+%96ee.hitsa.ois.web.commandobject.EntityConnectionCommand"Éee.hitsa.ois.web.commandobject.OccupationCertificateImportForm#getStudent()Lee/hitsa/ois/web/commandobject/EntityConnectionCommand;*L
+J
+criteria>ee.hitsa.ois.web.commandobject.OccupationCertificateImportForm2getStudent()‹Ÿ
+®
+ùD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/kutseregister/KutseregisterService.javaQ Q(T
+%10void"óee.hitsa.ois.util.JpaNativeQueryBuilder#optionalCriteria(Ljava/lang/String;Ljava/lang/String;Lee/hitsa/ois/web/commandobject/EntityConnectionCommand;)V*/
+-
+qb'ee.hitsa.ois.util.JpaNativeQueryBuilder*
+s.id = :studentId*
+	studentId*>
+<
+%96ee.hitsa.ois.web.commandobject.EntityConnectionCommand2noptionalCriteria(Ljava/lang/String;Ljava/lang/String;Lee/hitsa/ois/web/commandobject/EntityConnectionCommand;)°
+û
+®
+ùD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/kutseregister/KutseregisterService.javaSP S(R&
+%11javax.persistence.EntityManager"__id*C*A9
+7ee.hitsa.ois.service.kutseregister.KutseregisterService"
+emëé
+®
+ùD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/kutseregister/KutseregisterService.javaS S(S
+%12javax.persistence.Query"|ee.hitsa.ois.util.JpaNativeQueryBuilder#select(Ljava/lang/String;Ljavax/persistence/EntityManager;)Ljavax/persistence/Query;*/
+-
+qb'ee.hitsa.ois.util.JpaNativeQueryBuilder*+)
+'s.id, p.idcode, s.curriculum_version_id*(
+&
+%11javax.persistence.EntityManager2;select(Ljava/lang/String;Ljavax/persistence/EntityManager;)±Æ
+®
+ùD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/kutseregister/KutseregisterService.javaS S(c
+%13java.util.List"7javax.persistence.Query#getResultList()Ljava/util/List;* 
+
+%12javax.persistence.Query2getResultList()È
+Ê
+®
+ùD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/kutseregister/KutseregisterService.javaS S(d
+studentsjava.util.List"__id*
+
+%13java.util.ListÇˇ
+®
+ùD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/kutseregister/KutseregisterService.javaT T(
+%14boolean"java.util.List#isEmpty()Z*
+
+studentsjava.util.List2	isEmpty()*
+14
+15* 
+0 "¬
+™
+ùD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/kutseregister/KutseregisterService.javaê ê(
+implicit return*ˇ
+1™
+ùD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/kutseregister/KutseregisterService.javaè è(Ç
+ˇ
+™
+ùD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/kutseregister/KutseregisterService.javaè è(X
+%111java.util.List"nee.hitsa.ois.util.StreamUtil#toMappedList(Ljava/util/function/Function;Ljava/util/Collection;)Ljava/util/List;* "
+ee.hitsa.ois.util.StreamUtil*
+""*
+
+
+addedCertsjava.util.List"«
+™
+ùD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/kutseregister/KutseregisterService.javaè è(Y
+
+%111java.util.List*å
+2™
+ùD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/kutseregister/KutseregisterService.javaá á(’
+“
+™
+ùD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/kutseregister/KutseregisterService.javaá á(
+sjava.lang.Object"__id*
+""˘
+ˆ
+™
+ùD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/kutseregister/KutseregisterService.javaá á(
+sjava.lang.Object"
+__arrayGet*
+
+studentsjava.util.List*
+""*
+3
+1*◊.
+3™
+ùD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/kutseregister/KutseregisterService.javaà à()⁄
+◊
+™
+ùD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/kutseregister/KutseregisterService.javaà à(/
+%96java.lang.Long"Pee.hitsa.ois.util.JpaQueryUtil#resultAsLong(Ljava/lang/Object;I)Ljava/lang/Long;*"" 
+ee.hitsa.ois.util.JpaQueryUtil*
+
+sjava.lang.Object*2 Ï
+È
+™
+ùD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/kutseregister/KutseregisterService.javaà à(0
+	studentIdjava.lang.Long"__id*
+
+%96java.lang.Long‚
+ﬂ
+™
+ùD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/kutseregister/KutseregisterService.javaâH â(\
+%97java.lang.String"Tee.hitsa.ois.util.JpaQueryUtil#resultAsString(Ljava/lang/Object;I)Ljava/lang/String;*"" 
+ee.hitsa.ois.util.JpaQueryUtil*
+
+sjava.lang.Object*2øº
+™
+ùD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/kutseregister/KutseregisterService.javaâ( â(2I
+%98Bee.hitsa.ois.service.kutseregister.KutseregisterService$StudentDto"Bee.hitsa.ois.service.kutseregister.KutseregisterService$StudentDto‹
+Ÿ
+™
+ùD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/kutseregister/KutseregisterService.javaâ$ â(]
+%99"~ee.hitsa.ois.service.kutseregister.KutseregisterService$StudentDto#<init>(Ljava/lang/Long;Ljava/lang/Long;Ljava/lang/String;)V*K
+I
+%98Bee.hitsa.ois.service.kutseregister.KutseregisterService$StudentDto*
+
+schoolIdjava.lang.Long*
+
+	studentIdjava.lang.Long*
+
+%97java.lang.String’
+“
+™
+ùD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/kutseregister/KutseregisterService.javaâ â(^P
+
+studentDtoBee.hitsa.ois.service.kutseregister.KutseregisterService$StudentDto"__id*K
+I
+%98Bee.hitsa.ois.service.kutseregister.KutseregisterService$StudentDto›
+⁄
+™
+ùD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/kutseregister/KutseregisterService.javaä' ä(9
+%100java.lang.Long"Pee.hitsa.ois.util.JpaQueryUtil#resultAsLong(Ljava/lang/Object;I)Ljava/lang/Long;*"" 
+ee.hitsa.ois.util.JpaQueryUtil*
+
+sjava.lang.Object*2˜
+Ù
+™
+ùD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/kutseregister/KutseregisterService.javaä ä(:%
+curriculumVersionIdjava.lang.Long"__id*
+
+%100java.lang.LongÖÇ
+™
+ùD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/kutseregister/KutseregisterService.javaã9 ã(K
+%101java.time.LocalDate"]ee.hitsa.ois.web.commandobject.OccupationCertificateImportForm#getFrom()Ljava/time/LocalDate;*L
+J
+criteria>ee.hitsa.ois.web.commandobject.OccupationCertificateImportForm2	getFrom()ÖÇ
+™
+ùD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/kutseregister/KutseregisterService.javaãM ã(_
+%102java.time.LocalDate"]ee.hitsa.ois.web.commandobject.OccupationCertificateImportForm#getThru()Ljava/time/LocalDate;*L
+J
+criteria>ee.hitsa.ois.web.commandobject.OccupationCertificateImportForm2	getThru()ñ
+ì
+™
+ùD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/kutseregister/KutseregisterService.javaåB å(Y
+%103java.util.List"1java.util.Collections#emptyList()Ljava/util/List;*"
+java.util.Collectionsõ
+ò
+™
+ùD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/kutseregister/KutseregisterService.javaå å(Z
+%104java.util.List"__mapGet*
+
+occupationsjava.util.Map*'
+%
+curriculumVersionIdjava.lang.Longπ
+∂
+™
+ùD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/kutseregister/KutseregisterService.javaç< ç(R#
+%105java.util.function.Function"__declareFunction*OM
+K__sonar_lambda_1908$ee.hitsa.ois.service.kutseregister.KutseregisterService“œ
+™
+ùD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/kutseregister/KutseregisterService.javaç ç(S
+%108java.util.Map"`java.util.Map#computeIfAbsent(Ljava/lang/Object;Ljava/util/function/Function;)Ljava/lang/Object;*
+
+certificatesjava.util.Map*
+
+	studentIdjava.lang.Long*%
+#
+%105java.util.function.Function2@computeIfAbsent(Ljava/lang/Object;Ljava/util/function/Function;)≤
+Ø
+™
+ùD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/kutseregister/KutseregisterService.javaã ç(T
+%109java.util.List"Âee.hitsa.ois.service.kutseregister.KutseregisterService#kutsetunnistus(Lee/hitsa/ois/service/kutseregister/KutseregisterService$StudentDto;Ljava/time/LocalDate;Ljava/time/LocalDate;Ljava/util/List;Ljava/util/Map;)Ljava/util/List;*;9
+7ee.hitsa.ois.service.kutseregister.KutseregisterService*R
+P
+
+studentDtoBee.hitsa.ois.service.kutseregister.KutseregisterService$StudentDto*
+
+%101java.time.LocalDate*
+
+%102java.time.LocalDate*
+
+%104java.util.List*
+
+%108java.util.Mapé
+ã
+™
+ùD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/kutseregister/KutseregisterService.javaã ç(U
+%110boolean"__arrayAddAll*
+
+
+addedCertsjava.util.List*: *
+
+%109java.util.List*
+2*ô2
+5®
+ùD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/kutseregister/KutseregisterService.java~6 ~(8°
+û
+®
+ùD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/kutseregister/KutseregisterService.java~6 ~(8&
+%76javax.persistence.EntityManager"__id*C*A9
+7ee.hitsa.ois.service.kutseregister.KutseregisterService"
+em™
+ß
+®
+ùD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/kutseregister/KutseregisterService.java~E (1
+%77java.lang.String"__concat*42
+0select soc from StudentOccupationCertificate soc*!
+ where soc.student.id in (?1)¬ø
+®
+ùD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/kutseregister/KutseregisterService.java~6 (V#
+%78javax.persistence.TypedQuery"njavax.persistence.EntityManager#createQuery(Ljava/lang/String;Ljava/lang/Class;)Ljavax/persistence/TypedQuery;*(
+&
+%76javax.persistence.EntityManager*
+
+%77java.lang.String*
+""20createQuery(Ljava/lang/String;Ljava/lang/Class;)∏
+µ
+™
+ùD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/kutseregister/KutseregisterService.javaÄ9 Ä(P"
+%79java.util.function.Function"__declareFunction*OM
+K__sonar_lambda_1904$ee.hitsa.ois.service.kutseregister.KutseregisterServiceù
+ö
+™
+ùD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/kutseregister/KutseregisterService.javaÄ! Ä([
+%81java.util.List"nee.hitsa.ois.util.StreamUtil#toMappedList(Ljava/util/function/Function;Ljava/util/Collection;)Ljava/util/List;* "
+ee.hitsa.ois.util.StreamUtil*$
+"
+%79java.util.function.Function*
+
+studentsjava.util.Listõò
+©
+ùD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/kutseregister/KutseregisterService.java~6 Ä(\#
+%82javax.persistence.TypedQuery"\javax.persistence.TypedQuery#setParameter(ILjava/lang/Object;)Ljavax/persistence/TypedQuery;*%
+#
+%78javax.persistence.TypedQuery*2*
+
+%81java.util.List2!setParameter(ILjava/lang/Object;)ºπ
+©
+ùD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/kutseregister/KutseregisterService.java~6 Å( 
+%83java.util.List"<javax.persistence.TypedQuery#getResultList()Ljava/util/List;*%
+#
+%82javax.persistence.TypedQuery2getResultList()Í
+Á
+©
+ùD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/kutseregister/KutseregisterService.java~ Å(!
+certDatajava.util.List"__id*
+
+%83java.util.List∞≠
+™
+ùD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/kutseregister/KutseregisterService.javaÇL Ç(]
+%84java.util.stream.Stream"6java.util.Collection#stream()Ljava/util/stream/Stream;*
+
+certDatajava.util.List2stream()∏
+µ
+™
+ùD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/kutseregister/KutseregisterService.javaÉ/ É(X"
+%85java.util.function.Function"__declareFunction*OM
+K__sonar_lambda_1905$ee.hitsa.ois.service.kutseregister.KutseregisterService∏
+µ
+™
+ùD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/kutseregister/KutseregisterService.javaÑ) Ñ(F"
+%88java.util.function.Function"__declareFunction*OM
+K__sonar_lambda_1906$ee.hitsa.ois.service.kutseregister.KutseregisterService∏
+µ
+™
+ùD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/kutseregister/KutseregisterService.javaÑH Ñ(R"
+%90java.util.function.Function"__declareFunction*OM
+K__sonar_lambda_1907$ee.hitsa.ois.service.kutseregister.KutseregisterServiceª
+∏
+™
+ùD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/kutseregister/KutseregisterService.javaÑ Ñ(S!
+%91java.util.stream.Collector"yjava.util.stream.Collectors#toMap(Ljava/util/function/Function;Ljava/util/function/Function;)Ljava/util/stream/Collector;*"
+java.util.stream.Collectors*$
+"
+%88java.util.function.Function*$
+"
+%90java.util.function.Functionæ
+ª
+™
+ùD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/kutseregister/KutseregisterService.javaÉ Ñ(T!
+%92java.util.stream.Collector"}java.util.stream.Collectors#groupingBy(Ljava/util/function/Function;Ljava/util/stream/Collector;)Ljava/util/stream/Collector;*"
+java.util.stream.Collectors*$
+"
+%85java.util.function.Function*#
+!
+%91java.util.stream.CollectorÖÇ
+™
+ùD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/kutseregister/KutseregisterService.javaÇL Ñ(U
+%93java.util.Map"Ojava.util.stream.Stream#collect(Ljava/util/stream/Collector;)Ljava/lang/Object;* 
+
+%84java.util.stream.Stream*#
+!
+%92java.util.stream.Collector2%collect(Ljava/util/stream/Collector;)Ì
+Í
+™
+ùD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/kutseregister/KutseregisterService.javaÇ Ñ(V
+certificatesjava.util.Map"__id*
+
+%93java.util.Map·ﬁ
+™
+ùD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/kutseregister/KutseregisterService.javaÜ< Ü(G
+%94java.util.ArrayList"java.util.ArrayListÙ
+Ò
+™
+ùD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/kutseregister/KutseregisterService.javaÜ8 Ü(I
+%95"java.util.ArrayList#<init>()V*
+
+%94java.util.ArrayListÚ
+Ô
+™
+ùD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/kutseregister/KutseregisterService.javaÜ Ü(J
+
+addedCertsjava.util.List"__id*
+
+%94java.util.ArrayList*
+2*Ç
+6®
+ùD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/kutseregister/KutseregisterService.javaw w(”
+–
+®
+ùD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/kutseregister/KutseregisterService.javaw w(
+rjava.lang.Object"__id*
+""Û
+
+®
+ùD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/kutseregister/KutseregisterService.javaw w(
+rjava.lang.Object"
+__arrayGet*
+
+datajava.util.List*
+""*
+5
+7*±"
+7®
+ùD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/kutseregister/KutseregisterService.javax x($ÿ
+’
+®
+ùD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/kutseregister/KutseregisterService.javax x(*
+%64java.lang.Long"Pee.hitsa.ois.util.JpaQueryUtil#resultAsLong(Ljava/lang/Object;I)Ljava/lang/Long;*"" 
+ee.hitsa.ois.util.JpaQueryUtil*
+
+rjava.lang.Object*2 Â
+‚
+®
+ùD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/kutseregister/KutseregisterService.javax x(+
+cvIdjava.lang.Long"__id*
+
+%64java.lang.Long∂
+≥
+®
+ùD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/kutseregister/KutseregisterService.javayR y(l"
+%65java.util.function.Function"__declareFunction*OM
+K__sonar_lambda_1903$ee.hitsa.ois.service.kutseregister.KutseregisterService…∆
+®
+ùD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/kutseregister/KutseregisterService.javay0 y(m
+%68java.util.List"`java.util.Map#computeIfAbsent(Ljava/lang/Object;Ljava/util/function/Function;)Ljava/lang/Object;*
+
+occupationsjava.util.Map*
+
+cvIdjava.lang.Long*$
+"
+%65java.util.function.Function2@computeIfAbsent(Ljava/lang/Object;Ljava/util/function/Function;)Ó
+Î
+®
+ùD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/kutseregister/KutseregisterService.javay y(n
+cvOccupationsjava.util.List"__id*
+
+%68java.util.List‡
+›
+®
+ùD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/kutseregister/KutseregisterService.javaz0 z(D
+%69java.lang.String"Tee.hitsa.ois.util.JpaQueryUtil#resultAsString(Ljava/lang/Object;I)Ljava/lang/String;*"" 
+ee.hitsa.ois.util.JpaQueryUtil*
+
+rjava.lang.Object*2‡
+›
+®
+ùD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/kutseregister/KutseregisterService.javazF z(Z
+%70java.lang.String"Tee.hitsa.ois.util.JpaQueryUtil#resultAsString(Ljava/lang/Object;I)Ljava/lang/String;*"" 
+ee.hitsa.ois.util.JpaQueryUtil*
+
+rjava.lang.Object*2È
+Ê
+®
+ùD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/kutseregister/KutseregisterService.javaz\ z(s
+%71java.time.LocalDate"Zee.hitsa.ois.util.JpaQueryUtil#resultAsLocalDate(Ljava/lang/Object;I)Ljava/time/LocalDate;*"" 
+ee.hitsa.ois.util.JpaQueryUtil*
+
+rjava.lang.Object*2Í
+Á
+©
+ùD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/kutseregister/KutseregisterService.javazu z(å
+%72java.time.LocalDate"Zee.hitsa.ois.util.JpaQueryUtil#resultAsLocalDate(Ljava/lang/Object;I)Ljava/time/LocalDate;*"" 
+ee.hitsa.ois.util.JpaQueryUtil*
+
+rjava.lang.Object*2√¿
+®
+ùD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/kutseregister/KutseregisterService.javaz" z(/L
+%73Eee.hitsa.ois.service.kutseregister.KutseregisterService$OccupationDto"Eee.hitsa.ois.service.kutseregister.KutseregisterService$OccupationDtoò
+ï
+©
+ùD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/kutseregister/KutseregisterService.javaz z(ç
+%74"ùee.hitsa.ois.service.kutseregister.KutseregisterService$OccupationDto#<init>(Ljava/lang/String;Ljava/lang/String;Ljava/time/LocalDate;Ljava/time/LocalDate;)V*N
+L
+%73Eee.hitsa.ois.service.kutseregister.KutseregisterService$OccupationDto*
+
+%69java.lang.String*
+
+%70java.lang.String*
+
+%71java.time.LocalDate*
+
+%72java.time.LocalDate¬
+ø
+©
+ùD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/kutseregister/KutseregisterService.javaz z(é
+%75boolean"
+__arrayAdd*!
+
+cvOccupationsjava.util.List*: *N
+L
+%73Eee.hitsa.ois.service.kutseregister.KutseregisterService$OccupationDto*
+6*ò 
+9®
+ùD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/kutseregister/KutseregisterService.javan n(°
+û
+®
+ùD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/kutseregister/KutseregisterService.javan n(&
+%53javax.persistence.EntityManager"__id*C*A9
+7ee.hitsa.ois.service.kutseregister.KutseregisterService"
+em¿
+Ω
+®
+ùD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/kutseregister/KutseregisterService.javan$ o(-
+%54java.lang.String"__concat*LJ
+Hselect cv.id, cocl.name_et, cocl.code, cocl.valid_from, cocl.valid_thru *
+from curriculum_version cv ü
+ú
+®
+ùD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/kutseregister/KutseregisterService.javan$ p(?
+%55java.lang.String"__concat*
+
+%54java.lang.String*1/
+-join curriculum c on cv.curriculum_id = c.id ´
+®
+®
+ùD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/kutseregister/KutseregisterService.javan$ q(K
+%56java.lang.String"__concat*
+
+%55java.lang.String*=;
+9join curriculum_speciality cs on cs.curriculum_id = c.id ©
+¶
+®
+ùD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/kutseregister/KutseregisterService.javan$ r(I
+%57java.lang.String"__concat*
+
+%56java.lang.String*;9
+7join classifier cocl on cs.occupation_code = cocl.code ö
+ó
+®
+ùD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/kutseregister/KutseregisterService.javan$ s(:
+%58java.lang.String"__concat*
+
+%57java.lang.String*,*
+(where c.school_id = ?1 and cv.id in (?2)öó
+®
+ùD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/kutseregister/KutseregisterService.javan s(;
+%59javax.persistence.Query"^javax.persistence.EntityManager#createNativeQuery(Ljava/lang/String;)Ljavax/persistence/Query;*(
+&
+%53javax.persistence.EntityManager*
+
+%58java.lang.String2%createNativeQuery(Ljava/lang/String;)ãà
+®
+ùD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/kutseregister/KutseregisterService.javan t(*
+%60javax.persistence.Query"Rjavax.persistence.Query#setParameter(ILjava/lang/Object;)Ljavax/persistence/Query;* 
+
+%59javax.persistence.Query*2*
+
+schoolIdjava.lang.Long2!setParameter(ILjava/lang/Object;)íè
+®
+ùD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/kutseregister/KutseregisterService.javau! u(@
+%61java.util.List"eee.hitsa.ois.web.commandobject.OccupationCertificateImportForm#getCurriculumVersion()Ljava/util/List;*L
+J
+criteria>ee.hitsa.ois.web.commandobject.OccupationCertificateImportForm2getCurriculumVersion()ÜÉ
+®
+ùD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/kutseregister/KutseregisterService.javan u(A
+%62javax.persistence.Query"Rjavax.persistence.Query#setParameter(ILjava/lang/Object;)Ljavax/persistence/Query;* 
+
+%60javax.persistence.Query*2*
+
+%61java.util.List2!setParameter(ILjava/lang/Object;)±Æ
+®
+ùD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/kutseregister/KutseregisterService.javan v( 
+%63java.util.List"7javax.persistence.Query#getResultList()Ljava/util/List;* 
+
+%62javax.persistence.Query2getResultList()Â
+‚
+®
+ùD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/kutseregister/KutseregisterService.javan v( 
+datajava.util.List"__id*
+
+%63java.util.List*
+6*Ñ
+10®
+ùD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/kutseregister/KutseregisterService.javae e(”
+–
+®
+ùD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/kutseregister/KutseregisterService.javae e(
+rjava.lang.Object"__id*
+""Û
+
+®
+ùD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/kutseregister/KutseregisterService.javae e(
+rjava.lang.Object"
+__arrayGet*
+
+datajava.util.List*
+""*
+9
+12*¢
+11®
+ùD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/kutseregister/KutseregisterService.javak k(‡
+›
+®
+ùD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/kutseregister/KutseregisterService.javakD k(X
+%47java.lang.String"Tee.hitsa.ois.util.JpaQueryUtil#resultAsString(Ljava/lang/Object;I)Ljava/lang/String;*"" 
+ee.hitsa.ois.util.JpaQueryUtil*
+
+rjava.lang.Object*2È
+Ê
+®
+ùD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/kutseregister/KutseregisterService.javakZ k(q
+%48java.time.LocalDate"Zee.hitsa.ois.util.JpaQueryUtil#resultAsLocalDate(Ljava/lang/Object;I)Ljava/time/LocalDate;*"" 
+ee.hitsa.ois.util.JpaQueryUtil*
+
+rjava.lang.Object*2Í
+Á
+©
+ùD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/kutseregister/KutseregisterService.javaks k(ä
+%49java.time.LocalDate"Zee.hitsa.ois.util.JpaQueryUtil#resultAsLocalDate(Ljava/lang/Object;I)Ljava/time/LocalDate;*"" 
+ee.hitsa.ois.util.JpaQueryUtil*
+
+rjava.lang.Object*2√¿
+®
+ùD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/kutseregister/KutseregisterService.javak& k(3L
+%50Eee.hitsa.ois.service.kutseregister.KutseregisterService$OccupationDto"Eee.hitsa.ois.service.kutseregister.KutseregisterService$OccupationDto£
+†
+©
+ùD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/kutseregister/KutseregisterService.javak" k(ã
+%51"ùee.hitsa.ois.service.kutseregister.KutseregisterService$OccupationDto#<init>(Ljava/lang/String;Ljava/lang/String;Ljava/time/LocalDate;Ljava/time/LocalDate;)V*N
+L
+%50Eee.hitsa.ois.service.kutseregister.KutseregisterService$OccupationDto*$
+"
+specialityNamejava.lang.String*
+
+%47java.lang.String*
+
+%48java.time.LocalDate*
+
+%49java.time.LocalDate¬
+ø
+©
+ùD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/kutseregister/KutseregisterService.javak k(å
+%52boolean"
+__arrayAdd*!
+
+cvOccupationsjava.util.List*: *N
+L
+%50Eee.hitsa.ois.service.kutseregister.KutseregisterService$OccupationDto*
+10*‰)
+12®
+ùD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/kutseregister/KutseregisterService.javaf f($ÿ
+’
+®
+ùD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/kutseregister/KutseregisterService.javaf f(*
+%33java.lang.Long"Pee.hitsa.ois.util.JpaQueryUtil#resultAsLong(Ljava/lang/Object;I)Ljava/lang/Long;*"" 
+ee.hitsa.ois.util.JpaQueryUtil*
+
+rjava.lang.Object*2 Â
+‚
+®
+ùD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/kutseregister/KutseregisterService.javaf f(+
+cvIdjava.lang.Long"__id*
+
+%33java.lang.Long∂
+≥
+®
+ùD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/kutseregister/KutseregisterService.javagR g(l"
+%34java.util.function.Function"__declareFunction*OM
+K__sonar_lambda_1902$ee.hitsa.ois.service.kutseregister.KutseregisterService…∆
+®
+ùD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/kutseregister/KutseregisterService.javag0 g(m
+%37java.util.List"`java.util.Map#computeIfAbsent(Ljava/lang/Object;Ljava/util/function/Function;)Ljava/lang/Object;*
+
+occupationsjava.util.Map*
+
+cvIdjava.lang.Long*$
+"
+%34java.util.function.Function2@computeIfAbsent(Ljava/lang/Object;Ljava/util/function/Function;)Ó
+Î
+®
+ùD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/kutseregister/KutseregisterService.javag g(n
+cvOccupationsjava.util.List"__id*
+
+%37java.util.List‡
+›
+®
+ùD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/kutseregister/KutseregisterService.javah0 h(D
+%38java.lang.String"Tee.hitsa.ois.util.JpaQueryUtil#resultAsString(Ljava/lang/Object;I)Ljava/lang/String;*"" 
+ee.hitsa.ois.util.JpaQueryUtil*
+
+rjava.lang.Object*2‡
+›
+®
+ùD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/kutseregister/KutseregisterService.javahF h(Z
+%39java.lang.String"Tee.hitsa.ois.util.JpaQueryUtil#resultAsString(Ljava/lang/Object;I)Ljava/lang/String;*"" 
+ee.hitsa.ois.util.JpaQueryUtil*
+
+rjava.lang.Object*2È
+Ê
+®
+ùD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/kutseregister/KutseregisterService.javah\ h(s
+%40java.time.LocalDate"Zee.hitsa.ois.util.JpaQueryUtil#resultAsLocalDate(Ljava/lang/Object;I)Ljava/time/LocalDate;*"" 
+ee.hitsa.ois.util.JpaQueryUtil*
+
+rjava.lang.Object*2Í
+Á
+©
+ùD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/kutseregister/KutseregisterService.javahu h(å
+%41java.time.LocalDate"Zee.hitsa.ois.util.JpaQueryUtil#resultAsLocalDate(Ljava/lang/Object;I)Ljava/time/LocalDate;*"" 
+ee.hitsa.ois.util.JpaQueryUtil*
+
+rjava.lang.Object*2√¿
+®
+ùD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/kutseregister/KutseregisterService.javah" h(/L
+%42Eee.hitsa.ois.service.kutseregister.KutseregisterService$OccupationDto"Eee.hitsa.ois.service.kutseregister.KutseregisterService$OccupationDtoò
+ï
+©
+ùD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/kutseregister/KutseregisterService.javah h(ç
+%43"ùee.hitsa.ois.service.kutseregister.KutseregisterService$OccupationDto#<init>(Ljava/lang/String;Ljava/lang/String;Ljava/time/LocalDate;Ljava/time/LocalDate;)V*N
+L
+%42Eee.hitsa.ois.service.kutseregister.KutseregisterService$OccupationDto*
+
+%38java.lang.String*
+
+%39java.lang.String*
+
+%40java.time.LocalDate*
+
+%41java.time.LocalDate¬
+ø
+©
+ùD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/kutseregister/KutseregisterService.javah h(é
+%44boolean"
+__arrayAdd*!
+
+cvOccupationsjava.util.List*: *N
+L
+%42Eee.hitsa.ois.service.kutseregister.KutseregisterService$OccupationDto‡
+›
+®
+ùD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/kutseregister/KutseregisterService.javai$ i(8
+%45java.lang.String"Tee.hitsa.ois.util.JpaQueryUtil#resultAsString(Ljava/lang/Object;I)Ljava/lang/String;*"" 
+ee.hitsa.ois.util.JpaQueryUtil*
+
+rjava.lang.Object*2Û
+
+®
+ùD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/kutseregister/KutseregisterService.javai i(9"
+specialityNamejava.lang.String"__id*
+
+%45java.lang.String—
+Œ
+®
+ùD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/kutseregister/KutseregisterService.javaj j(2
+%46boolean"Aorg.springframework.util.StringUtils#hasText(Ljava/lang/String;)Z*("&
+$org.springframework.util.StringUtils*$
+"
+specialityNamejava.lang.String*
+10
+11:
+schoolIdjava.lang.Long:J
+criteria>ee.hitsa.ois.web.commandobject.OccupationCertificateImportFormB;9
+7ee.hitsa.ois.service.kutseregister.KutseregisterService

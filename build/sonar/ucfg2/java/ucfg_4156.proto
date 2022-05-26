@@ -1,0 +1,91 @@
+
+±ee.hitsa.ois.service.ReportService#savedStudentQueries(Lee/hitsa/ois/service/security/HoisUserDetails;Lee/hitsa/ois/web/commandobject/report/SchoolQueryCommand;)Ljava/util/List;•
+ˆD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/ReportService.java¡$ ¡(7"1*è$
+1•
+ˆD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/ReportService.java¢ ¢(ø
+õ
+•
+ˆD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/ReportService.java¢ ¢(%
+%0javax.persistence.EntityManager"__id*.*,$
+"ee.hitsa.ois.service.ReportService"
+emçä
+–
+ˆD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/ReportService.java¢ ¢(¥
+%1javax.persistence.Query"^javax.persistence.EntityManager#createNativeQuery(Ljava/lang/String;)Ljavax/persistence/Query;*'
+%
+%0javax.persistence.EntityManager*zx
+vselect sq.id, sq.name_et from school_query sq where sq.school_id = :schoolId and sq.is_student_query = :isStudentQuery2%createNativeQuery(Ljava/lang/String;)ÆÃ
+•
+ˆD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/ReportService.java£* £(<
+%2java.lang.Long"Kee.hitsa.ois.service.security.HoisUserDetails#getSchoolId()Ljava/lang/Long;*7
+5
+user-ee.hitsa.ois.service.security.HoisUserDetails2getSchoolId()š—
+•
+ˆD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/ReportService.java¢ £(=
+%3javax.persistence.Query"cjavax.persistence.Query#setParameter(Ljava/lang/String;Ljava/lang/Object;)Ljavax/persistence/Query;*
+
+%1javax.persistence.Query*
+
+schoolId*
+
+%2java.lang.Long22setParameter(Ljava/lang/String;Ljava/lang/Object;)ñî
+•
+ˆD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/ReportService.java¤0 ¤(K
+%4java.lang.Boolean"_ee.hitsa.ois.web.commandobject.report.SchoolQueryCommand#getIsStudentQuery()Ljava/lang/Boolean;*E
+C
+command8ee.hitsa.ois.web.commandobject.report.SchoolQueryCommand2getIsStudentQuery()£ 
+•
+ˆD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/ReportService.java¢ ¤(L
+%5javax.persistence.Query"cjavax.persistence.Query#setParameter(Ljava/lang/String;Ljava/lang/Object;)Ljavax/persistence/Query;*
+
+%3javax.persistence.Query*
+isStudentQuery*
+
+%4java.lang.Boolean22setParameter(Ljava/lang/String;Ljava/lang/Object;)œ™
+•
+ˆD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/ReportService.java¢ ¥( 
+%6java.util.List"7javax.persistence.Query#getResultList()Ljava/util/List;*
+
+%5javax.persistence.Query2getResultList()Ñ
+Î
+•
+ˆD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/ReportService.java¢ ¥(!
+datajava.util.List"__id*
+
+%6java.util.List–“
+•
+ˆD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/ReportService.java¦ ¦(
+%7java.util.stream.Stream"6java.util.Collection#stream()Ljava/util/stream/Stream;*
+
+datajava.util.List2stream()Œ
+‰
+•
+ˆD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/ReportService.java¦! ¦(|!
+%8java.util.function.Function"__declareFunction*97
+5__sonar_lambda_568$ee.hitsa.ois.service.ReportServiceú÷
+•
+ˆD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/ReportService.java¦ ¦(}
+%14java.util.stream.Stream"Sjava.util.stream.Stream#map(Ljava/util/function/Function;)Ljava/util/stream/Stream;*
+
+%7java.util.stream.Stream*#
+!
+%8java.util.function.Function2"map(Ljava/util/function/Function;)£
+ 
+—
+ˆD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/ReportService.java¦† ¦(™!
+%15java.util.stream.Collector"@java.util.stream.Collectors#toList()Ljava/util/stream/Collector;*"
+java.util.stream.Collectorsòï
+–
+ˆD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/ReportService.java¦ ¦(š
+%16java.util.List"Ojava.util.stream.Stream#collect(Ljava/util/stream/Collector;)Ljava/lang/Object;* 
+
+%14java.util.stream.Stream*#
+!
+%15java.util.stream.Collector2%collect(Ljava/util/stream/Collector;)"²
+–
+ˆD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/ReportService.java¦ ¦(›
+
+%16java.util.List:5
+user-ee.hitsa.ois.service.security.HoisUserDetails:C
+command8ee.hitsa.ois.web.commandobject.report.SchoolQueryCommandB&$
+"ee.hitsa.ois.service.ReportService

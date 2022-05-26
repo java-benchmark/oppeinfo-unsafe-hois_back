@@ -1,0 +1,117 @@
+
+Åee.hitsa.ois.service.AbstractProtocolService#studentOccupationCertificates(Ljava/util/List;Ljava/util/Collection;)Ljava/util/Map;ü
+íD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/AbstractProtocolService.javaÄ< Ä(Y"4*∏ 
+2ü
+íD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/AbstractProtocolService.javaÇH Ç(Jå
+â
+ü
+íD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/AbstractProtocolService.javaÇH Ç(J%
+%2javax.persistence.EntityManager"__id*8*6.
+,ee.hitsa.ois.service.AbstractProtocolService"
+emÂ
+‚
+ü
+íD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/AbstractProtocolService.javaÇW É(z
+%3java.lang.String"__concat*42
+0select soc from StudentOccupationCertificate soc*fd
+b where soc.student.id in (?1) and (soc.occupation.code in (?2) or soc.partOccupation.code in (?2))∑¥
+†
+íD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/AbstractProtocolService.javaÇH É(ü"
+%4javax.persistence.TypedQuery"njavax.persistence.EntityManager#createQuery(Ljava/lang/String;Ljava/lang/Class;)Ljavax/persistence/TypedQuery;*'
+%
+%2javax.persistence.EntityManager*
+
+%3java.lang.String*
+""20createQuery(Ljava/lang/String;Ljava/lang/Class;)ñì
+ü
+íD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/AbstractProtocolService.javaÇH Ñ(0"
+%5javax.persistence.TypedQuery"\javax.persistence.TypedQuery#setParameter(ILjava/lang/Object;)Ljavax/persistence/TypedQuery;*$
+"
+%4javax.persistence.TypedQuery*2*
+
+
+studentIdsjava.util.List2!setParameter(ILjava/lang/Object;)ùö
+ü
+íD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/AbstractProtocolService.javaÇH Ö(1"
+%6javax.persistence.TypedQuery"\javax.persistence.TypedQuery#setParameter(ILjava/lang/Object;)Ljavax/persistence/TypedQuery;*$
+"
+%5javax.persistence.TypedQuery*2*%
+#
+occupationsjava.util.Collection2!setParameter(ILjava/lang/Object;)∞≠
+ü
+íD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/AbstractProtocolService.javaÇH Ü($
+%7java.util.List"<javax.persistence.TypedQuery#getResultList()Ljava/util/List;*$
+"
+%6javax.persistence.TypedQuery2getResultList()Ì
+Í
+ü
+íD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/AbstractProtocolService.javaÇ Ü(%(
+occupationCertificatesjava.util.List"__id*
+
+%7java.util.List≤Ø
+ü
+íD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/AbstractProtocolService.javaá á(2
+%8java.util.stream.Stream"6java.util.Collection#stream()Ljava/util/stream/Stream;**
+(
+occupationCertificatesjava.util.List2stream()°
+û
+ü
+íD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/AbstractProtocolService.javaáQ á(x!
+%9java.util.function.Function"__declareFunction*DB
+@__sonar_lambda_2173$ee.hitsa.ois.service.AbstractProtocolServiceÒ
+Ó
+ü
+íD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/AbstractProtocolService.javaá; á(y!
+%12java.util.stream.Collector"ajava.util.stream.Collectors#groupingBy(Ljava/util/function/Function;)Ljava/util/stream/Collector;*"
+java.util.stream.Collectors*#
+!
+%9java.util.function.Function˘ˆ
+ü
+íD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/AbstractProtocolService.javaá á(z
+%13java.util.Map"Ojava.util.stream.Stream#collect(Ljava/util/stream/Collector;)Ljava/lang/Object;*
+
+%8java.util.stream.Stream*#
+!
+%12java.util.stream.Collector2%collect(Ljava/util/stream/Collector;)"∫
+ü
+íD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/AbstractProtocolService.javaá á({
+
+%13java.util.Map*∑
+3ü
+íD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/AbstractProtocolService.javaÅ& Å(1áÑ
+ü
+íD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/AbstractProtocolService.javaÅ& Å(;
+%1boolean"java.util.Collection#isEmpty()Z*%
+#
+occupationsjava.util.Collection2	isEmpty()*
+2
+1*™
+4ü
+íD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/AbstractProtocolService.javaÅ Å(˙˜
+ü
+íD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/AbstractProtocolService.javaÅ Å(!
+%0boolean"java.util.List#isEmpty()Z*
+
+
+studentIdsjava.util.List2	isEmpty()*
+3
+1*£
+1ü
+íD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/AbstractProtocolService.javaâ â(“œ
+ü
+íD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/AbstractProtocolService.javaâ â(
+%14java.util.HashMap"java.util.HashMapÂ
+‚
+ü
+íD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/AbstractProtocolService.javaâ â(
+%15"java.util.HashMap#<init>()V*
+
+%14java.util.HashMap"æ
+ü
+íD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/AbstractProtocolService.javaâ â(
+
+%14java.util.HashMap:
+
+studentIdsjava.util.List:#
+occupationsjava.util.CollectionB0.
+,ee.hitsa.ois.service.AbstractProtocolService

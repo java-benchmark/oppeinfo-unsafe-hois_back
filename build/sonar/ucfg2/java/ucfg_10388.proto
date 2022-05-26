@@ -1,0 +1,155 @@
+
+’ee.hitsa.ois.web.LessonPlanController#get(Lee/hitsa/ois/service/security/HoisUserDetails;Lee/hitsa/ois/domain/teacher/Teacher;Lee/hitsa/ois/domain/StudyYear;)Lee/hitsa/ois/web/dto/timetable/LessonPlanByTeacherDto;ñ
+ãD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/web/LessonPlanController.javaS" S(%"startingBlock*”
+startingBlockñ
+ãD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/web/LessonPlanController.javaS% S(†
+ù
+ñ
+ãD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/web/LessonPlanController.javaR R(1
+%10"
+__annotate*64
+2org.springframework.web.bind.annotation.GetMapping*7
+5
+user-ee.hitsa.ois.service.security.HoisUserDetailsÍ
+Á
+ñ
+ãD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/web/LessonPlanController.javaS6 S(:5
+user-ee.hitsa.ois.service.security.HoisUserDetails"__annotation*
+
+%10ô
+ñ
+ñ
+ãD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/web/LessonPlanController.javaR R(1
+%11"
+__annotate*64
+2org.springframework.web.bind.annotation.GetMapping*0
+.
+teacher#ee.hitsa.ois.domain.teacher.TeacherÉ
+Ä
+ñ
+ãD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/web/LessonPlanController.javaS< S(G
+%12"
+__annotate* 
+ee.hitsa.ois.util.WithEntity*0
+.
+teacher#ee.hitsa.ois.domain.teacher.TeacherÏ
+È
+ñ
+ãD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/web/LessonPlanController.javaSP S(W.
+teacher#ee.hitsa.ois.domain.teacher.Teacher"__annotation*
+
+%11*
+
+%12ï
+í
+ñ
+ãD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/web/LessonPlanController.javaR R(1
+%13"
+__annotate*64
+2org.springframework.web.bind.annotation.GetMapping*,
+*
+	studyYearee.hitsa.ois.domain.StudyYearˇ
+¸
+ñ
+ãD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/web/LessonPlanController.javaSY S(j
+%14"
+__annotate* 
+ee.hitsa.ois.util.WithEntity*,
+*
+	studyYearee.hitsa.ois.domain.StudyYearË
+Â
+ñ
+ãD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/web/LessonPlanController.javaSu S(~*
+	studyYearee.hitsa.ois.domain.StudyYear"__annotation*
+
+%13*
+
+%14*
+1*œ!
+1ñ
+ãD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/web/LessonPlanController.javaT T(¸
+˘
+ñ
+ãD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/web/LessonPlanController.javaT T(C
+
+%0void"yee.hitsa.ois.util.UserUtil#assertIsSchoolAdminOrLeadingTeacherOrTeacher(Lee/hitsa/ois/service/security/HoisUserDetails;)V*"
+ee.hitsa.ois.util.UserUtil*7
+5
+user-ee.hitsa.ois.service.security.HoisUserDetailsœ
+Ã
+ñ
+ãD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/web/LessonPlanController.javaU+ U(=#
+%1ee.hitsa.ois.enums.Permission"__id*
+""’
+“
+ñ
+ãD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/web/LessonPlanController.javaU? U(k)
+%2#ee.hitsa.ois.enums.PermissionObject"__id*
+""¸
+˘
+ñ
+ãD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/web/LessonPlanController.javaU U(l
+
+%3void"§ee.hitsa.ois.util.UserUtil#assertHasPermission(Lee/hitsa/ois/service/security/HoisUserDetails;Lee/hitsa/ois/enums/Permission;Lee/hitsa/ois/enums/PermissionObject;)V*"
+ee.hitsa.ois.util.UserUtil*7
+5
+user-ee.hitsa.ois.service.security.HoisUserDetails*%
+#
+%1ee.hitsa.ois.enums.Permission*+
+)
+%2#ee.hitsa.ois.enums.PermissionObjectÿ’
+ñ
+ãD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/web/LessonPlanController.javaV( V(;'
+%4!ee.hitsa.ois.domain.school.School"Ree.hitsa.ois.domain.teacher.Teacher#getSchool()Lee/hitsa/ois/domain/school/School;*0
+.
+teacher#ee.hitsa.ois.domain.teacher.Teacher2getSchool()Ø
+¨
+ñ
+ãD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/web/LessonPlanController.javaV V(<
+
+%5void"Äee.hitsa.ois.util.UserUtil#assertSameSchool(Lee/hitsa/ois/service/security/HoisUserDetails;Lee/hitsa/ois/domain/school/School;)V*"
+ee.hitsa.ois.util.UserUtil*7
+5
+user-ee.hitsa.ois.service.security.HoisUserDetails*)
+'
+%4!ee.hitsa.ois.domain.school.SchoolŒÀ
+ñ
+ãD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/web/LessonPlanController.javaW( W(='
+%6!ee.hitsa.ois.domain.school.School"Lee.hitsa.ois.domain.StudyYear#getSchool()Lee/hitsa/ois/domain/school/School;*,
+*
+	studyYearee.hitsa.ois.domain.StudyYear2getSchool()Ø
+¨
+ñ
+ãD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/web/LessonPlanController.javaW W(>
+
+%7void"Äee.hitsa.ois.util.UserUtil#assertSameSchool(Lee/hitsa/ois/service/security/HoisUserDetails;Lee/hitsa/ois/domain/school/School;)V*"
+ee.hitsa.ois.util.UserUtil*7
+5
+user-ee.hitsa.ois.service.security.HoisUserDetails*)
+'
+%6!ee.hitsa.ois.domain.school.Schoolí
+è
+ñ
+ãD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/web/LessonPlanController.javaX X( ,
+%8&ee.hitsa.ois.service.LessonPlanService"__id*@*>'
+%ee.hitsa.ois.web.LessonPlanController"
+lessonPlanServiceàÖ
+ñ
+ãD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/web/LessonPlanController.javaX X(G;
+%95ee.hitsa.ois.web.dto.timetable.LessonPlanByTeacherDto"ﬂee.hitsa.ois.service.LessonPlanService#getByTeacher(Lee/hitsa/ois/service/security/HoisUserDetails;Lee/hitsa/ois/domain/teacher/Teacher;Lee/hitsa/ois/domain/StudyYear;)Lee/hitsa/ois/web/dto/timetable/LessonPlanByTeacherDto;*.
+,
+%8&ee.hitsa.ois.service.LessonPlanService*7
+5
+user-ee.hitsa.ois.service.security.HoisUserDetails*0
+.
+teacher#ee.hitsa.ois.domain.teacher.Teacher*,
+*
+	studyYearee.hitsa.ois.domain.StudyYear2ÅgetByTeacher(Lee/hitsa/ois/service/security/HoisUserDetails;Lee/hitsa/ois/domain/teacher/Teacher;Lee/hitsa/ois/domain/StudyYear;)"ÿ
+ñ
+ãD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/web/LessonPlanController.javaX X(H=
+;
+%95ee.hitsa.ois.web.dto.timetable.LessonPlanByTeacherDto:5
+user-ee.hitsa.ois.service.security.HoisUserDetails:.
+teacher#ee.hitsa.ois.domain.teacher.Teacher:*
+	studyYearee.hitsa.ois.domain.StudyYearB)'
+%ee.hitsa.ois.web.LessonPlanController

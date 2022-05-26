@@ -1,0 +1,74 @@
+
+åee.hitsa.ois.service.rr.PopulationRegisterLogService#hasRecentChangeLogs(Lee/hitsa/ois/service/security/HoisUserDetails;)Ljava/lang/Boolean;•
+öD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/rr/PopulationRegisterLogService.javaw w(&"1*ƒ
+1•
+öD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/rr/PopulationRegisterLogService.javax x(ö
+ó
+•
+öD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/rr/PopulationRegisterLogService.javax  x("%
+%0javax.persistence.EntityManager"__id*@*>6
+4ee.hitsa.ois.service.rr.PopulationRegisterLogService"
+emˇ¸
+¶
+öD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/rr/PopulationRegisterLogService.javax  x(µ
+%1javax.persistence.Query"^javax.persistence.EntityManager#createNativeQuery(Ljava/lang/String;)Ljavax/persistence/Query;*'
+%
+%0javax.persistence.EntityManager*Å
+}select wrcls.id from ws_rr_change_log_school wrcls where wrcls.inserted >= ?1\\:\\:timestamp and wrcls.school_id = ?2 limit 12%createNativeQuery(Ljava/lang/String;)ü
+ú
+•
+öD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/rr/PopulationRegisterLogService.javay! y(4
+%2java.time.LocalDateTime"6java.time.LocalDateTime#now()Ljava/time/LocalDateTime;*"
+java.time.LocalDateTimeæª
+•
+öD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/rr/PopulationRegisterLogService.javay! y(B
+%3java.time.LocalDateTime"=java.time.LocalDateTime#minusDays(J)Ljava/time/LocalDateTime;*
+
+%2java.time.LocalDateTime*22minusDays(J)¶£
+•
+öD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/rr/PopulationRegisterLogService.javay! y(M
+%4java.lang.String"4java.time.LocalDateTime#toString()Ljava/lang/String;*
+
+%3java.time.LocalDateTime2
+toString()Çˇ
+•
+öD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/rr/PopulationRegisterLogService.javax  y(N
+%5javax.persistence.Query"Rjavax.persistence.Query#setParameter(ILjava/lang/Object;)Ljavax/persistence/Query;*
+
+%1javax.persistence.Query*2*
+
+%4java.lang.String2!setParameter(ILjava/lang/Object;)÷”
+•
+öD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/rr/PopulationRegisterLogService.javay_ y(q
+%6java.lang.Long"Kee.hitsa.ois.service.security.HoisUserDetails#getSchoolId()Ljava/lang/Long;*7
+5
+user-ee.hitsa.ois.service.security.HoisUserDetails2getSchoolId()Ä˝
+•
+öD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/rr/PopulationRegisterLogService.javax  y(r
+%7javax.persistence.Query"Rjavax.persistence.Query#setParameter(ILjava/lang/Object;)Ljavax/persistence/Query;*
+
+%5javax.persistence.Query*2*
+
+%6java.lang.Long2!setParameter(ILjava/lang/Object;)≠™
+¶
+öD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/rr/PopulationRegisterLogService.javax  y(Ç
+%8java.util.List"7javax.persistence.Query#getResultList()Ljava/util/List;*
+
+%7javax.persistence.Query2getResultList()˘ˆ
+¶
+öD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/rr/PopulationRegisterLogService.javax  y(å
+%9boolean"java.util.List#isEmpty()Z*
+
+%8java.util.List2	isEmpty()ñ
+ì
+¶
+öD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/rr/PopulationRegisterLogService.javax y(ç
+%10java.lang.Boolean"/java.lang.Boolean#valueOf(Z)Ljava/lang/Boolean;*"
+java.lang.Boolean*
+"""≈
+¶
+öD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/rr/PopulationRegisterLogService.javax y(é
+
+%10java.lang.Boolean:5
+user-ee.hitsa.ois.service.security.HoisUserDetailsB86
+4ee.hitsa.ois.service.rr.PopulationRegisterLogService

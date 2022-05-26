@@ -1,0 +1,118 @@
+
+çee.hitsa.ois.service.AutomaticMessageService#getPersonsWithRole(Lee/hitsa/ois/domain/school/School;Lee/hitsa/ois/enums/Role;)Ljava/util/List;ü
+íD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/AutomaticMessageService.javaÿ ÿ(+"1*Î)
+1ü
+íD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/AutomaticMessageService.javaŸ= Ÿ(Mâ
+Ü
+ü
+íD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/AutomaticMessageService.javaŸ= ⁄(<
+%0java.lang.String"__concat*
+from person p *,*
+(inner join user_ u on u.person_id = p.id˝˙
+ü
+íD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/AutomaticMessageService.javaŸ' Ÿ(<-
+%1'ee.hitsa.ois.util.JpaNativeQueryBuilder"'ee.hitsa.ois.util.JpaNativeQueryBuilderª
+∏
+ü
+íD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/AutomaticMessageService.javaŸ# ⁄(=
+%2"Cee.hitsa.ois.util.JpaNativeQueryBuilder#<init>(Ljava/lang/String;)V*/
+-
+%1'ee.hitsa.ois.util.JpaNativeQueryBuilder*
+
+%0java.lang.Stringã
+à
+ü
+íD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/AutomaticMessageService.javaŸ ⁄(>-
+qb'ee.hitsa.ois.util.JpaNativeQueryBuilder"__id*/
+-
+%1'ee.hitsa.ois.util.JpaNativeQueryBuilderË
+Â
+ü
+íD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/AutomaticMessageService.java‹C ‹([
+%3java.lang.Long"Zee.hitsa.ois.util.EntityUtil#getId(Lee/hitsa/ois/domain/BaseEntityWithId;)Ljava/lang/Long;* "
+ee.hitsa.ois.util.EntityUtil*-
++
+school!ee.hitsa.ois.domain.school.Schoolﬁ€
+ü
+íD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/AutomaticMessageService.java‹ ‹(\
+
+%4void"oee.hitsa.ois.util.JpaNativeQueryBuilder#requiredCriteria(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Long;)V*/
+-
+qb'ee.hitsa.ois.util.JpaNativeQueryBuilder*
+u.school_id = :schoolId*
+
+schoolId*
+
+%3java.lang.Long2FrequiredCriteria(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Long;)ÈÊ
+ü
+íD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/AutomaticMessageService.java› ›(H
+
+%5void"oee.hitsa.ois.util.JpaNativeQueryBuilder#requiredCriteria(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Enum;)V*/
+-
+qb'ee.hitsa.ois.util.JpaNativeQueryBuilder*
+u.role_code = :roleCode*
+
+roleCode*!
+
+roleee.hitsa.ois.enums.Role2FrequiredCriteria(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Enum;)üú
+ü
+íD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/AutomaticMessageService.javaﬁ ﬁ(;
+
+%6void"_ee.hitsa.ois.util.JpaNativeQueryBuilder#validNowCriteria(Ljava/lang/String;Ljava/lang/String;)V*/
+-
+qb'ee.hitsa.ois.util.JpaNativeQueryBuilder*
+u.valid_from*
+u.valid_thru26validNowCriteria(Ljava/lang/String;Ljava/lang/String;)å
+â
+ü
+íD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/AutomaticMessageService.java‡, ‡(.%
+%7javax.persistence.EntityManager"__id*8*6.
+,ee.hitsa.ois.service.AutomaticMessageService"
+em„‡
+ü
+íD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/AutomaticMessageService.java‡ ‡(/
+%8javax.persistence.Query"|ee.hitsa.ois.util.JpaNativeQueryBuilder#select(Ljava/lang/String;Ljavax/persistence/EntityManager;)Ljavax/persistence/Query;*/
+-
+qb'ee.hitsa.ois.util.JpaNativeQueryBuilder*
+p.id*'
+%
+%7javax.persistence.EntityManager2;select(Ljava/lang/String;Ljavax/persistence/EntityManager;)¶£
+ü
+íD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/AutomaticMessageService.java‡ ‡(?
+%9java.util.List"7javax.persistence.Query#getResultList()Ljava/util/List;*
+
+%8javax.persistence.Query2getResultList()ﬁ
+€
+ü
+íD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/AutomaticMessageService.java‡ ‡(@
+resultsjava.util.List"__id*
+
+%9java.util.List¢
+ü
+ü
+íD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/AutomaticMessageService.java·' ·(]"
+%10java.util.function.Function"__declareFunction*DB
+@__sonar_lambda_2317$ee.hitsa.ois.service.AutomaticMessageServiceõ
+ò
+
+__unknown_file (D
+"
+%10java.util.function.Function"
+AutomaticMessageService.this"__id*0.
+,ee.hitsa.ois.service.AutomaticMessageServiceë
+é
+ü
+íD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/AutomaticMessageService.java· ·(g
+%14java.util.List"nee.hitsa.ois.util.StreamUtil#toMappedList(Ljava/util/function/Function;Ljava/util/Collection;)Ljava/util/List;* "
+ee.hitsa.ois.util.StreamUtil*$
+"
+%10java.util.function.Function*
+
+resultsjava.util.List"ª
+ü
+íD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/AutomaticMessageService.java· ·(h
+
+%14java.util.List:+
+school!ee.hitsa.ois.domain.school.School:
+roleee.hitsa.ois.enums.RoleB0.
+,ee.hitsa.ois.service.AutomaticMessageService

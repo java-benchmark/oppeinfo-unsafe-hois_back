@@ -1,0 +1,353 @@
+
+Óee.hitsa.ois.service.GeneralMessageService#search(Lee/hitsa/ois/service/security/HoisUserDetails;Lee/hitsa/ois/web/commandobject/GeneralMessageSearchCommand;Lorg/springframework/data/domain/Pageable;)Lorg/springframework/data/domain/Page;õ
+êD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/GeneralMessageService.javaO# O()"9*ä
+2õ
+êD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/GeneralMessageService.javak k(%ﬁ
+€
+õ
+êD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/GeneralMessageService.javak k(%-
+dto&ee.hitsa.ois.web.dto.GeneralMessageDto"__id*
+""˝
+˙
+õ
+êD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/GeneralMessageService.javak k(%-
+dto&ee.hitsa.ois.web.dto.GeneralMessageDto"
+__arrayGet*
+
+%46java.util.List*
+""*
+3
+1*ø
+3õ
+êD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/GeneralMessageService.javal l(≤Ø
+õ
+êD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/GeneralMessageService.javal+ l(6
+%47java.lang.Long">ee.hitsa.ois.web.dto.GeneralMessageDto#getId()Ljava/lang/Long;*/
+-
+dto&ee.hitsa.ois.web.dto.GeneralMessageDto2getId()˜
+Ù
+õ
+êD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/GeneralMessageService.javal l(7
+%48java.util.List"__mapGet*
+
+targetsjava.util.Map*
+
+%47java.lang.LongÁ‰
+õ
+êD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/GeneralMessageService.javal l(8
+%49void"Oee.hitsa.ois.web.commandobject.GeneralMessageForm#setTargets(Ljava/util/List;)V*/
+-
+dto&ee.hitsa.ois.web.dto.GeneralMessageDto*
+
+%48java.util.List2setTargets(Ljava/util/List;)*
+2*Á
+4õ
+êD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/GeneralMessageService.javak( k(0æª
+õ
+êD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/GeneralMessageService.javak( k(=
+%46java.util.List"Borg.springframework.data.domain.Slice#getContent()Ljava/util/List;*2
+0
+messages$org.springframework.data.domain.Page2getContent()*
+2*“$
+5õ
+êD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/GeneralMessageService.javag g(á
+Ñ
+õ
+êD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/GeneralMessageService.javag g(&
+%33javax.persistence.EntityManager"__id*6*4,
+*ee.hitsa.ois.service.GeneralMessageService"
+emÊ„
+ú
+êD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/GeneralMessageService.javag g(õ
+%34javax.persistence.Query"^javax.persistence.EntityManager#createNativeQuery(Ljava/lang/String;)Ljavax/persistence/Query;*(
+&
+%33javax.persistence.EntityManager*qo
+mselect gt.general_message_id, gt.role_code from general_message_target gt where gt.general_message_id in (?1)2%createNativeQuery(Ljava/lang/String;)Ë
+Â
+ú
+êD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/GeneralMessageService.javag g(ú
+qjavax.persistence.Query"__id* 
+
+%34javax.persistence.Query˝˙
+õ
+êD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/GeneralMessageService.javah h()
+%35javax.persistence.Query"Rjavax.persistence.Query#setParameter(ILjava/lang/Object;)Ljavax/persistence/Query;*
+
+qjavax.persistence.Query*2*
+
+
+messageIdsjava.util.Set2!setParameter(ILjava/lang/Object;)¢ü
+õ
+êD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/GeneralMessageService.javai  i(1
+%36java.util.List"7javax.persistence.Query#getResultList()Ljava/util/List;*
+
+qjavax.persistence.Query2getResultList()›
+⁄
+õ
+êD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/GeneralMessageService.javai i(2
+	receiversjava.util.List"__id*
+
+%36java.util.List¢ü
+õ
+êD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/GeneralMessageService.javaj. j(@
+%37java.util.stream.Stream"6java.util.Collection#stream()Ljava/util/stream/Stream;*
+
+	receiversjava.util.List2stream()õ
+ò
+õ
+êD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/GeneralMessageService.javaj_ j(v"
+%38java.util.function.Function"__declareFunction*A?
+=__sonar_lambda_705$ee.hitsa.ois.service.GeneralMessageServiceù
+ö
+ù
+êD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/GeneralMessageService.javajã j(§"
+%40java.util.function.Function"__declareFunction*A?
+=__sonar_lambda_706$ee.hitsa.ois.service.GeneralMessageService©
+¶
+ù
+êD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/GeneralMessageService.javaj¶ j(π!
+%42java.util.stream.Collector"@java.util.stream.Collectors#toList()Ljava/util/stream/Collector;*"
+java.util.stream.Collectors≠
+™
+ú
+êD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/GeneralMessageService.javajx j(∫!
+%43java.util.stream.Collector"zjava.util.stream.Collectors#mapping(Ljava/util/function/Function;Ljava/util/stream/Collector;)Ljava/util/stream/Collector;*"
+java.util.stream.Collectors*$
+"
+%40java.util.function.Function*#
+!
+%42java.util.stream.Collector∞
+≠
+ú
+êD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/GeneralMessageService.javajI j(ª!
+%44java.util.stream.Collector"}java.util.stream.Collectors#groupingBy(Ljava/util/function/Function;Ljava/util/stream/Collector;)Ljava/util/stream/Collector;*"
+java.util.stream.Collectors*$
+"
+%38java.util.function.Function*#
+!
+%43java.util.stream.Collector˜Ù
+ú
+êD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/GeneralMessageService.javaj. j(º
+%45java.util.Map"Ojava.util.stream.Stream#collect(Ljava/util/stream/Collector;)Ljava/lang/Object;* 
+
+%37java.util.stream.Stream*#
+!
+%44java.util.stream.Collector2%collect(Ljava/util/stream/Collector;)⁄
+◊
+ú
+êD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/GeneralMessageService.javaj j(Ω
+targetsjava.util.Map"__id*
+
+%45java.util.Map*
+4*õ6
+6õ
+êD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/GeneralMessageService.javaX X(
+ËÂ
+õ
+êD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/GeneralMessageService.javaX0 X(C
+%9java.lang.String"Wee.hitsa.ois.web.commandobject.GeneralMessageSearchCommand#getTitle()Ljava/lang/String;*H
+F
+criteria:ee.hitsa.ois.web.commandobject.GeneralMessageSearchCommand2
+getTitle()ŒÀ
+õ
+êD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/GeneralMessageService.javaX X(D
+%10void"qee.hitsa.ois.util.JpaNativeQueryBuilder#optionalContains(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V*/
+-
+qb'ee.hitsa.ois.util.JpaNativeQueryBuilder*	
+g.title*	
+title*
+
+%9java.lang.String2HoptionalContains(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)˜Ù
+õ
+êD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/GeneralMessageService.javaYa Y(x
+%11java.time.LocalDate"^ee.hitsa.ois.web.commandobject.GeneralMessageSearchCommand#getValidFrom()Ljava/time/LocalDate;*H
+F
+criteria:ee.hitsa.ois.web.commandobject.GeneralMessageSearchCommand2getValidFrom()âÜ
+õ
+êD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/GeneralMessageService.javaY Y(y
+%12void"tee.hitsa.ois.util.JpaNativeQueryBuilder#optionalCriteria(Ljava/lang/String;Ljava/lang/String;Ljava/time/LocalDate;)V*/
+-
+qb'ee.hitsa.ois.util.JpaNativeQueryBuilder*86
+4(g.valid_thru is null or g.valid_thru >= :validFrom)*
+	validFrom*
+
+%11java.time.LocalDate2KoptionalCriteria(Ljava/lang/String;Ljava/lang/String;Ljava/time/LocalDate;)˜Ù
+õ
+êD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/GeneralMessageService.javaZa Z(x
+%13java.time.LocalDate"^ee.hitsa.ois.web.commandobject.GeneralMessageSearchCommand#getValidThru()Ljava/time/LocalDate;*H
+F
+criteria:ee.hitsa.ois.web.commandobject.GeneralMessageSearchCommand2getValidThru()âÜ
+õ
+êD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/GeneralMessageService.javaZ Z(y
+%14void"tee.hitsa.ois.util.JpaNativeQueryBuilder#optionalCriteria(Ljava/lang/String;Ljava/lang/String;Ljava/time/LocalDate;)V*/
+-
+qb'ee.hitsa.ois.util.JpaNativeQueryBuilder*86
+4(g.valid_from is null or g.valid_from <= :validThru)*
+	validThru*
+
+%13java.time.LocalDate2KoptionalCriteria(Ljava/lang/String;Ljava/lang/String;Ljava/time/LocalDate;)ÎË
+ù
+êD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/GeneralMessageService.java[ú [(±
+%15java.util.List"Wee.hitsa.ois.web.commandobject.GeneralMessageSearchCommand#getTargets()Ljava/util/List;*H
+F
+criteria:ee.hitsa.ois.web.commandobject.GeneralMessageSearchCommand2getTargets()¬ø
+ú
+êD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/GeneralMessageService.java[ [(≤
+%16void"uee.hitsa.ois.util.JpaNativeQueryBuilder#optionalCriteria(Ljava/lang/String;Ljava/lang/String;Ljava/util/Collection;)V*/
+-
+qb'ee.hitsa.ois.util.JpaNativeQueryBuilder*us
+qexists(select 1 from general_message_target gt where gt.role_code in (:targets) and gt.general_message_id = g.id)*	
+targets*
+
+%15java.util.List2LoptionalCriteria(Ljava/lang/String;Ljava/lang/String;Ljava/util/Collection;)â
+Ü
+ù
+êD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/GeneralMessageService.java]Ç ](Ñ&
+%17javax.persistence.EntityManager"__id*6*4,
+*ee.hitsa.ois.service.GeneralMessageService"
+emù
+ö
+ú
+êD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/GeneralMessageService.java]+ ](è+
+%18$org.springframework.data.domain.Page"Ÿee.hitsa.ois.util.JpaQueryUtil#pagingResult(Lee/hitsa/ois/util/JpaNativeQueryBuilder;Ljava/lang/String;Ljavax/persistence/EntityManager;Lorg/springframework/data/domain/Pageable;)Lorg/springframework/data/domain/Page;*"" 
+ee.hitsa.ois.util.JpaQueryUtil*/
+-
+qb'ee.hitsa.ois.util.JpaNativeQueryBuilder*97
+5g.id, g.title, g.inserted, g.valid_from, g.valid_thru*(
+&
+%17javax.persistence.EntityManager*6
+4
+pageable(org.springframework.data.domain.Pageableµ
+≤
+ú
+êD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/GeneralMessageService.java]î b(	;
+%194org.springframework.core.convert.converter.Converter"__declareFunction*A?
+=__sonar_lambda_704$ee.hitsa.ois.service.GeneralMessageServiceÇˇ
+õ
+êD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/GeneralMessageService.java]+ b(
++
+%29$org.springframework.data.domain.Page"Üorg.springframework.data.domain.Page#map(Lorg/springframework/core/convert/converter/Converter;)Lorg/springframework/data/domain/Page;*-
++
+%18$org.springframework.data.domain.Page*=
+;
+%194org.springframework.core.convert.converter.Converter2;map(Lorg/springframework/core/convert/converter/Converter;)à
+Ö
+õ
+êD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/GeneralMessageService.java] b(0
+messages$org.springframework.data.domain.Page"__id*-
++
+%29$org.springframework.data.domain.Pageæª
+õ
+êD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/GeneralMessageService.javadP d(e
+%30java.util.List"Borg.springframework.data.domain.Slice#getContent()Ljava/util/List;*2
+0
+messages$org.springframework.data.domain.Page2getContent()Ë
+Â
+õ
+êD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/GeneralMessageService.javad d(f
+%31java.util.Set"lee.hitsa.ois.util.StreamUtil#toMappedSet(Ljava/util/function/Function;Ljava/util/Collection;)Ljava/util/Set;* "
+ee.hitsa.ois.util.StreamUtil*
+""*
+
+%30java.util.List‹
+Ÿ
+õ
+êD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/GeneralMessageService.javad d(g
+
+messageIdsjava.util.Set"__id*
+
+%31java.util.SetıÚ
+õ
+êD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/GeneralMessageService.javae e( 
+%32boolean"java.util.Set#isEmpty()Z*
+
+
+messageIdsjava.util.Set2	isEmpty()*
+5
+1*ï
+7õ
+êD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/GeneralMessageService.javaU U(Ã…
+õ
+êD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/GeneralMessageService.javaUG U(Y
+%5java.lang.Long"Kee.hitsa.ois.service.security.HoisUserDetails#getSchoolId()Ljava/lang/Long;*7
+5
+user-ee.hitsa.ois.service.security.HoisUserDetails2getSchoolId()⁄◊
+õ
+êD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/GeneralMessageService.javaU U(Z
+
+%6void"oee.hitsa.ois.util.JpaNativeQueryBuilder#requiredCriteria(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Long;)V*/
+-
+qb'ee.hitsa.ois.util.JpaNativeQueryBuilder*
+g.school_id = :schoolId*
+
+schoolId*
+
+%5java.lang.Long2FrequiredCriteria(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Long;)ÏÈ
+õ
+êD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/GeneralMessageService.javaV8 V(M
+%7java.lang.String"Yee.hitsa.ois.web.commandobject.GeneralMessageSearchCommand#getContent()Ljava/lang/String;*H
+F
+criteria:ee.hitsa.ois.web.commandobject.GeneralMessageSearchCommand2getContent()—Œ
+õ
+êD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/GeneralMessageService.javaV V(N
+
+%8void"qee.hitsa.ois.util.JpaNativeQueryBuilder#optionalContains(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V*/
+-
+qb'ee.hitsa.ois.util.JpaNativeQueryBuilder*
+	g.content*	
+content*
+
+%7java.lang.String2HoptionalContains(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)*
+6*Å
+8õ
+êD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/GeneralMessageService.javaS S(ÿ’
+õ
+êD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/GeneralMessageService.javaS S(,
+
+%4void"Cee.hitsa.ois.util.JpaNativeQueryBuilder#filter(Ljava/lang/String;)V*/
+-
+qb'ee.hitsa.ois.util.JpaNativeQueryBuilder*
+g.school_id is null2filter(Ljava/lang/String;)*
+6*ñ
+9õ
+êD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/GeneralMessageService.javaP= P(U˘ˆ
+õ
+êD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/GeneralMessageService.javaP' P(<-
+%0'ee.hitsa.ois.util.JpaNativeQueryBuilder"'ee.hitsa.ois.util.JpaNativeQueryBuilderπ
+∂
+õ
+êD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/GeneralMessageService.javaP# P(V
+%1"Cee.hitsa.ois.util.JpaNativeQueryBuilder#<init>(Ljava/lang/String;)V*/
+-
+%0'ee.hitsa.ois.util.JpaNativeQueryBuilder*
+from general_message gÔÏ
+õ
+êD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/GeneralMessageService.javaP# P(e-
+%2'ee.hitsa.ois.util.JpaNativeQueryBuilder"Åee.hitsa.ois.util.JpaNativeQueryBuilder#sort(Lorg/springframework/data/domain/Pageable;)Lee/hitsa/ois/util/JpaNativeQueryBuilder;*/
+-
+%0'ee.hitsa.ois.util.JpaNativeQueryBuilder*6
+4
+pageable(org.springframework.data.domain.Pageable20sort(Lorg/springframework/data/domain/Pageable;)á
+Ñ
+õ
+êD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/GeneralMessageService.javaP P(f-
+qb'ee.hitsa.ois.util.JpaNativeQueryBuilder"__id*/
+-
+%2'ee.hitsa.ois.util.JpaNativeQueryBuilder∂≥
+õ
+êD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/GeneralMessageService.javaR R(
+%3boolean"<ee.hitsa.ois.service.security.HoisUserDetails#isMainAdmin()Z*7
+5
+user-ee.hitsa.ois.service.security.HoisUserDetails2isMainAdmin()*
+7
+8*ˆ
+1õ
+êD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/GeneralMessageService.javap p("“
+õ
+êD:/Projects/DefensePoint/WhiteSource/WSFastScanBenchmark/oppeinfo-unsafe/hois_back/src/main/java/ee/hitsa/ois/service/GeneralMessageService.javap p(2
+0
+messages$org.springframework.data.domain.Page:5
+user-ee.hitsa.ois.service.security.HoisUserDetails:F
+criteria:ee.hitsa.ois.web.commandobject.GeneralMessageSearchCommand:4
+pageable(org.springframework.data.domain.PageableB.,
+*ee.hitsa.ois.service.GeneralMessageService
